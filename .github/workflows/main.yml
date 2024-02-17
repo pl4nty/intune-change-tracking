@@ -20,7 +20,8 @@ jobs:
           cache: pip
       - run: pip install -r requirements.txt
       # azure-identity doesn't support GitHub WIF yet
-      - run: echo "${{ github.token }}" > ../token
+      - run: echo $GITHUB_TOKEN > ../token
+      - run: cat ../token
       - run: python main.py
         env:
           AZURE_AUTHORITY_HOST: login.microsoftonline.com
