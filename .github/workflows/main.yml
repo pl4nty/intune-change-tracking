@@ -23,6 +23,7 @@ jobs:
       - run: echo "${{ github.token }}" > ../token
       - run: python main.py
         env:
+          AZURE_AUTHORITY_HOST: login.microsoftonline.com
           AZURE_TENANT_ID: ${{ vars.AZURE_TENANT_ID }}
           AZURE_CLIENT_ID: ${{ vars.AZURE_CLIENT_ID }}
           AZURE_FEDERATED_TOKEN_FILE: ../token
