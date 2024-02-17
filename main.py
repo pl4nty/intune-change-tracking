@@ -4,6 +4,7 @@ load_dotenv()
 import asyncio
 import json
 import os
+import shutil
 from pathlib import Path
 
 from azure.identity.aio import DefaultAzureCredential
@@ -27,6 +28,7 @@ async def main():
     )
     settings = await client.device_management.configuration_settings.get(request_configuration=request_config)
     
+    shutil.rmtree(output)
     os.makedirs(output, exist_ok=True)
     for setting in settings.json()['value']:
         setting.pop('version')
