@@ -13,8 +13,6 @@ jobs:
       contents: write # committing
     steps:
       - uses: actions/checkout@v4.1.1
-        with:
-          sparse-checkout: .
       # azure-identity doesn't support GitHub WIF
       - uses: azure/login@v1
         with:
@@ -27,3 +25,6 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python main.py
       - uses: EndBug/add-and-commit@v9.1.4
+        with:
+          default_author: github_actions
+          message: 'chore: refresh data'
