@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "HSS_KBSearchPolicy",
+        "Turn off Help and Support Center Microsoft Knowledge Base search",
+        "\\System\\Internet Communication Management\\Internet Communication settings",
+        "Administrative Templates\\System\\Internet Communication Management\\Internet Communication settings",
+        "Internet Communication settings"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-icm#admx-icm-hss-kbsearchpolicy"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_ICM/HSS_KBSearchPolicy",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_icm_hss_kbsearchpolicy",
+    "categoryId": "72dfdba4-e7bb-4f09-862c-e003ea763452",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_icm_hss_kbsearchpolicy",
+    "description": "This policy setting specifies whether users can perform a Microsoft Knowledge Base search from the Help and Support Center.\r\n\r\nThe Knowledge Base is an online source of technical support information and self-help tools for Microsoft products, and is searched as part of all Help and Support Center searches with the default search options.\r\n\r\nIf you enable this policy setting, it removes the Knowledge Base section from the Help and Support Center \"Set search options\" page, and only Help content on the local computer is searched. \r\n\r\nIf you disable or do not configure this policy setting, the Knowledge Base is searched if the user has a connection to the Internet and has not disabled the Knowledge Base search from the Search Options page.\r\n ",
+    "helpText": "",
+    "name": "HSS_KBSearchPolicy",
+    "displayName": "Turn off Help and Support Center Microsoft Knowledge Base search",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_icm_hss_kbsearchpolicy_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_icm_hss_kbsearchpolicy_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_icm_hss_kbsearchpolicy_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

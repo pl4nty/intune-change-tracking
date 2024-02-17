@@ -1,0 +1,96 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "POL_AdmPwd",
+        "Password Settings",
+        "\\LAPS",
+        "Administrative Templates\\LAPS",
+        "LAPS"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-admpwd#admx-admpwd-pol-admpwd"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_AdmPwd/POL_AdmPwd",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_admpwd_pol_admpwd",
+    "categoryId": "b3b2fc04-4b88-4a1c-8370-04573019eebe",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_admpwd_pol_admpwd",
+    "description": "\r\nConfigures password parameters\r\n\r\nPassword complexity: which characters are used when generating a new password\r\n  Default: Large letters + small letters + numbers + special characters\r\n\r\nPassword length\r\n  Minimum: 8 characters\r\n  Maximum: 64 characters\r\n  Default: 14 characters\r\n\r\nPassword age in days\r\n  Minimum: 1 day\r\n  Maximum: 365 days\r\n  Default: 30 days\r\n      ",
+    "helpText": "",
+    "name": "POL_AdmPwd",
+    "displayName": "Password Settings",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_admpwd_pol_admpwd_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_admpwd_pol_admpwd_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_admpwd_pol_admpwd_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_admpwd_pol_admpwd_elm_admpwd_passwordcomplexity",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_admpwd_pol_admpwd_elm_admpwd_passwordlength",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_admpwd_pol_admpwd_elm_admpwd_passwordagedays",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

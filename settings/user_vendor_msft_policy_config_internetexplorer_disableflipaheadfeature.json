@@ -1,0 +1,82 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Advanced_DisableFlipAhead",
+        "Turn off the flip ahead with page prediction feature",
+        "\\Windows Components\\Internet Explorer\\Internet Control Panel\\Advanced Page",
+        "Advanced Page"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disableflipaheadfeature"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/InternetExplorer/DisableFlipAheadFeature",
+    "rootDefinitionId": "user_vendor_msft_policy_config_internetexplorer_disableflipaheadfeature",
+    "categoryId": "3969f56d-a8b5-4509-86fb-00eb481665fa",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_internetexplorer_disableflipaheadfeature",
+    "description": "This policy setting determines whether a user can swipe across a screen or click Forward to go to the next pre-loaded page of a website.\r\n\r\nMicrosoft collects your browsing history to improve how flip ahead with page prediction works. This feature isn't available for Internet Explorer for the desktop.\r\n\r\nIf you enable this policy setting, flip ahead with page prediction is turned off and the next webpage isn't loaded into the background.\r\n\r\nIf you disable this policy setting, flip ahead with page prediction is turned on and the next webpage is loaded into the background.\r\n\r\nIf you don't configure this setting, users can turn this behavior on or off, using the Settings charm.",
+    "helpText": "",
+    "name": "Advanced_DisableFlipAhead",
+    "displayName": "Turn off the flip ahead with page prediction feature (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_internetexplorer_disableflipaheadfeature_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.15063",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_internetexplorer_disableflipaheadfeature_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_internetexplorer_disableflipaheadfeature_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

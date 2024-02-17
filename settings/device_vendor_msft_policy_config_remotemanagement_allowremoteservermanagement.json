@@ -1,0 +1,92 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "AllowAutoConfig",
+        "Allow remote server management through WinRM",
+        "\\Windows Components\\Windows Remote Management (WinRM)\\WinRM Service",
+        "Administrative Templates\\Windows Components\\Windows Remote Management (WinRM)\\WinRM Service",
+        "WinRM Service"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotemanagement#remotemanagement-allowremoteservermanagement"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/RemoteManagement/AllowRemoteServerManagement",
+    "rootDefinitionId": "device_vendor_msft_policy_config_remotemanagement_allowremoteservermanagement",
+    "categoryId": "023116df-a32c-43b0-a384-d6fe7ad9fabe",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_remotemanagement_allowremoteservermanagement",
+    "description": "This policy setting allows you to manage whether the Windows Remote Management (WinRM) service automatically listens on the network for requests on the HTTP transport over the default HTTP port.\r\n\r\nIf you enable this policy setting, the WinRM service automatically listens on the network for requests on the HTTP transport over the default HTTP port.\r\n\r\nTo allow WinRM service to receive requests over the network, configure the Windows Firewall policy setting with exceptions for Port 5985 (default port for HTTP).\r\n\r\nIf you disable or do not configure this policy setting, the WinRM service will not respond to requests from a remote computer, regardless of whether or not any WinRM listeners are configured.\r\n\r\nThe service listens on the addresses specified by the IPv4 and IPv6 filters. The IPv4 filter specifies one or more ranges of IPv4 addresses, and the IPv6 filter specifies one or more ranges of IPv6addresses. If specified, the service enumerates the available IP addresses on the computer and uses only addresses that fall within one of the filter ranges.\r\n\r\nYou should use an asterisk (*) to indicate that the service listens on all available IP addresses on the computer. When * is used, other ranges in the filter are ignored. If the filter is left blank, the service does not listen on any addresses.\r\n\r\nFor example, if you want the service to listen only on IPv4 addresses, leave the IPv6 filter empty.\r\n\r\nRanges are specified using the syntax IP1-IP2. Multiple ranges are separated using \",\" (comma) as the delimiter.\r\n\r\nExample IPv4 filters:\\n2.0.0.1-2.0.0.20, 24.0.0.1-24.0.0.22\r\nExample IPv6 filters:\\n3FFE:FFFF:7654:FEDA:1245:BA98:0000:0000-3FFE:FFFF:7654:FEDA:1245:BA98:3210:4562",
+    "helpText": "",
+    "name": "AllowAutoConfig",
+    "displayName": "Allow remote server management through WinRM",
+    "defaultOptionId": "device_vendor_msft_policy_config_remotemanagement_allowremoteservermanagement_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "6.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_remotemanagement_allowremoteservermanagement_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_remotemanagement_allowremoteservermanagement_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_remotemanagement_allowremoteservermanagement_allowautoconfig_ipv4filter",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_remotemanagement_allowremoteservermanagement_allowautoconfig_ipv6filter",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,81 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Allow User Input From Wireless Display Receiver",
+        "Wireless Display"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-WirelessDisplay#wirelessdisplay-allowuserinputfromwirelessdisplayreceiver"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/WirelessDisplay/AllowUserInputFromWirelessDisplayReceiver",
+    "rootDefinitionId": "device_vendor_msft_policy_config_wirelessdisplay_allowuserinputfromwirelessdisplayreceiver",
+    "categoryId": "a6e15085-a3a9-41dd-9a6a-65c8a26c616d",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_wirelessdisplay_allowuserinputfromwirelessdisplayreceiver",
+    "description": "Setting this policy controls whether or not the wireless display can send input—keyboard, mouse, pen, and touch input if the display supports it—back to the source device.",
+    "helpText": "",
+    "name": "AllowUserInputFromWirelessDisplayReceiver",
+    "displayName": "Allow User Input From Wireless Display Receiver",
+    "defaultOptionId": "device_vendor_msft_policy_config_wirelessdisplay_allowuserinputfromwirelessdisplayreceiver_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "4.1",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.10586",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsNXT"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_wirelessdisplay_allowuserinputfromwirelessdisplayreceiver_0",
+            "description": "Wireless display input disabled.",
+            "helpText": null,
+            "name": "Wireless display input disabled.",
+            "displayName": "Wireless display input disabled.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_wirelessdisplay_allowuserinputfromwirelessdisplayreceiver_1",
+            "description": "Wireless display input enabled.",
+            "helpText": null,
+            "name": "Wireless display input enabled.",
+            "displayName": "Wireless display input enabled.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

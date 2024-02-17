@@ -1,0 +1,81 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Allow Prompted Proximal Connections",
+        "Bluetooth"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Bluetooth#bluetooth-allowpromptedproximalconnections"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Bluetooth/AllowPromptedProximalConnections",
+    "rootDefinitionId": "device_vendor_msft_policy_config_bluetooth_allowpromptedproximalconnections",
+    "categoryId": "8d4a5b79-8399-4075-a71f-80ac3099ae78",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_bluetooth_allowpromptedproximalconnections",
+    "description": "This policy allows the IT admin to block users on these managed devices from using Swift Pair and other proximity based scenarios.",
+    "helpText": "",
+    "name": "AllowPromptedProximalConnections",
+    "displayName": "Allow Prompted Proximal Connections",
+    "defaultOptionId": "device_vendor_msft_policy_config_bluetooth_allowpromptedproximalconnections_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager,microsoftSense",
+        "configurationServiceProviderVersion": "7.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17134",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsNXT"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_bluetooth_allowpromptedproximalconnections_0",
+            "description": "Disallow. Block users on these managed devices from using Swift Pair and other proximity based scenarios",
+            "helpText": null,
+            "name": "Disallow. Block users on these managed devices from using Swift Pair and other proximity based scenarios",
+            "displayName": "Block",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_bluetooth_allowpromptedproximalconnections_1",
+            "description": "Allow. Allow users on these managed devices to use Swift Pair and other proximity based scenarios",
+            "helpText": null,
+            "name": "Allow. Allow users on these managed devices to use Swift Pair and other proximity based scenarios",
+            "displayName": "Allow",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,88 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "WerConsentCustomize_1",
+        "Customize consent settings",
+        "\\Windows Components\\Windows Error Reporting\\Consent",
+        "Administrative Templates\\Windows Components\\Windows Error Reporting\\Consent",
+        "Consent"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-errorreporting#admx-errorreporting-werconsentcustomize-1"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_ErrorReporting/WerConsentCustomize_1",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_errorreporting_werconsentcustomize_1",
+    "categoryId": "e781bfae-233f-463f-a85b-7299ce5a87c5",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_errorreporting_werconsentcustomize_1",
+    "description": "This policy setting determines the consent behavior of Windows Error Reporting for specific event types.\r\n\r\nIf you enable this policy setting, you can add specific event types to a list by clicking Show, and typing event types in the Value Name column of the Show Contents dialog box. Event types are those for generic, non-fatal errors: crash, no response, and kernel fault errors. For each specified event type, you can set a consent level of 0, 1, 2, 3, or 4.\r\n\r\n- 0 (Disable): Windows Error Reporting sends no data to Microsoft for this event type.\r\n\r\n- 1 (Always ask before sending data): Windows prompts the user for consent to send reports.\r\n\r\n- 2 (Send parameters): Windows Error Reporting automatically sends the minimum data required to check for an existing solution, and Windows prompts the user for consent to send any additional data requested by Microsoft.\r\n\r\n- 3 (Send parameters and safe additional data): Windows Error Reporting automatically sends the minimum data required to check for an existing solution, as well as data which Windows has determined (within a high probability) does not contain personally identifiable data, and prompts the user for consent to send any additional data requested by Microsoft.\r\n\r\n- 4 (Send all data): Any data requested by Microsoft is sent automatically.\r\n\r\nIf you disable or do not configure this policy setting, then the default consent settings that are applied are those specified by the user in Control Panel, or in the Configure Default Consent policy setting.\r\n ",
+    "helpText": "",
+    "name": "WerConsentCustomize_1",
+    "displayName": "Customize consent settings (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_errorreporting_werconsentcustomize_1_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_errorreporting_werconsentcustomize_1_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_errorreporting_werconsentcustomize_1_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_admx_errorreporting_werconsentcustomize_1_werconsentcustomize",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

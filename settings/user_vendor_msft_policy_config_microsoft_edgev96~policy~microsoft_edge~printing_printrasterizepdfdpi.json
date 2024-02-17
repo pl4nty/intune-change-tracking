@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "PrintRasterizePdfDpi",
+        "Print Rasterize PDF DPI",
+        "\\Microsoft Edge\\Printing",
+        "Microsoft Edge\\Printing",
+        "Printing"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev96~Policy~microsoft_edge~Printing/PrintRasterizePdfDpi",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edgev96~policy~microsoft_edge~printing_printrasterizepdfdpi",
+    "categoryId": "c6099521-a05f-480a-8562-7e71318e2cda",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_microsoft_edgev96~policy~microsoft_edge~printing_printrasterizepdfdpi",
+    "description": "Controls print image resolution when Microsoft Edge prints PDFs with rasterization.\r\n\r\nWhen printing a PDF using the Print to image option, it can be beneficial to specify a print resolution other than a device's printer setting or the PDF default.  A high resolution will significantly increase the processing and printing time while a low resolution can lead to poor imaging quality.\r\n\r\nIf you set this policy, it allows a particular resolution to be specified for use when rasterizing PDFs for printing.\r\n\r\nIf you set this policy to zero or don't configure it, the system default resolution will be used during rasterization of page images.",
+    "helpText": "",
+    "name": "PrintRasterizePdfDpi",
+    "displayName": "Print Rasterize PDF DPI (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edgev96~policy~microsoft_edge~printing_printrasterizepdfdpi_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev96~policy~microsoft_edge~printing_printrasterizepdfdpi_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev96~policy~microsoft_edge~printing_printrasterizepdfdpi_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_microsoft_edgev96~policy~microsoft_edge~printing_printrasterizepdfdpi_printrasterizepdfdpi",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

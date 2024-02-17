@@ -1,0 +1,111 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Account Logon Logoff Audit User Device Claims",
+        "Audit",
+        "Auditing"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Audit#audit-accountlogonlogoff-audituserdeviceclaims"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Audit/AccountLogonLogoff_AuditUserDeviceClaims",
+    "rootDefinitionId": "device_vendor_msft_policy_config_audit_accountlogonlogoff_audituserdeviceclaims",
+    "categoryId": "5cb7f4f0-ef00-4eb3-80f4-2c2b97b053ea",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_audit_accountlogonlogoff_audituserdeviceclaims",
+    "description": "This policy allows you to audit user and device claims information in the user's logon token. Events in this subcategory are generated on the computer on which a logon session is created. For an interactive logon, the security audit event is generated on the computer that the user logged on to. For a network logon, such as accessing a shared folder on the network, the security audit event is generated on the computer hosting the resource.  User claims are added to a logon token when claims are included with a user's account attributes in Active Directory. Device claims are added to the logon token when claims are included with a device's computer account attributes in Active Directory. In addition, compound identity must be enabled for the domain and on the computer where the user logged on.  When this setting is configured, one or more security audit events are generated for each successful logon. You must also enable the Audit Logon setting under Advanced Audit Policy Configuration\\System Audit Policies\\Logon/Logoff. Multiple events are generated if the user and device claims information cannot fit in a single security audit event.",
+    "helpText": "",
+    "name": "AccountLogonLogoff_AuditUserDeviceClaims",
+    "displayName": "Account Logon Logoff Audit User Device Claims",
+    "defaultOptionId": "device_vendor_msft_policy_config_audit_accountlogonlogoff_audituserdeviceclaims_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "7.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17134.1039",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsNXT"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_audit_accountlogonlogoff_audituserdeviceclaims_0",
+            "description": "Off/None",
+            "helpText": null,
+            "name": "Off/None",
+            "displayName": "Off/ None",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_audit_accountlogonlogoff_audituserdeviceclaims_1",
+            "description": "Success",
+            "helpText": null,
+            "name": "Success",
+            "displayName": "Success",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_audit_accountlogonlogoff_audituserdeviceclaims_2",
+            "description": "Failure",
+            "helpText": null,
+            "name": "Failure",
+            "displayName": "Failure",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_audit_accountlogonlogoff_audituserdeviceclaims_3",
+            "description": "Success+Failure",
+            "helpText": null,
+            "name": "Success+Failure",
+            "displayName": "Success+ Failure",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

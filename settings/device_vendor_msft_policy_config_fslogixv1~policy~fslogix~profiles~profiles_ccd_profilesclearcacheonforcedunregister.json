@@ -1,0 +1,73 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ProfilesClearCacheonForcedUnregister",
+        "Clear Cache on Forced Unregister",
+        "\\FSLogix\\Profile Containers\\Cloud Cache",
+        "Administrative Templates\\FSLogix\\Profile Containers\\Cloud Cache",
+        "Cloud Cache"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/FSLogixv1~Policy~FSLogix~Profiles~Profiles_CCD/ProfilesClearCacheonForcedUnregister",
+    "rootDefinitionId": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles~profiles_ccd_profilesclearcacheonforcedunregister",
+    "categoryId": "719595d8-ab5d-4418-88aa-8cd55c2964ba",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles~profiles_ccd_profilesclearcacheonforcedunregister",
+    "description": "NOTE:  Once this policy is Enabled or Disabled, setting it back to Not Configured has NO EFFECT.\r\n\r\nIf the desired behavior is for the local cache to be deleted, even if the data has not been flushed to a CCD Location, then Clear Cache On Forced Unregister should be set to Enabled.  Setting Clear Cache On Forced Unregister to Enabled may result in user data saved in the registry to be lost during the current session. It is important to understand that this data isn't recoverable if the local cache is cleared in this scenario. Verify that you understand the implications of changing the default value of this setting prior to making changes.\r\n\r\nRegistry Entry:  HKLM\\SOFTWARE\\FSLogix\\Profiles\\ClearCacheOnForcedUnregister\r\nType:  DWORD\r\nValues:  0 = Disabled, 1 = Enabled",
+    "helpText": "",
+    "name": "ProfilesClearCacheonForcedUnregister",
+    "displayName": "Clear Cache on Forced Unregister",
+    "defaultOptionId": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles~profiles_ccd_profilesclearcacheonforcedunregister_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles~profiles_ccd_profilesclearcacheonforcedunregister_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles~profiles_ccd_profilesclearcacheonforcedunregister_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

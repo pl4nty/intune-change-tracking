@@ -1,0 +1,91 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "NCSI_GlobalDns",
+        "Specify global DNS",
+        "\\Network\\Network Connectivity Status Indicator",
+        "Administrative Templates\\Network\\Network Connectivity Status Indicator",
+        "Network Connectivity Status Indicator"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_NCSI/NCSI_GlobalDns",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_ncsi_ncsi_globaldns",
+    "categoryId": "de5640ce-1975-407e-a1b6-7eaa164cd159",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_ncsi_ncsi_globaldns_ncsi_useglobaldns_checkbox",
+    "description": null,
+    "helpText": "",
+    "name": "NCSI_UseGlobalDns_Checkbox",
+    "displayName": "Use global DNS (Device)",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_ncsi_ncsi_globaldns_ncsi_useglobaldns_checkbox_0",
+            "description": null,
+            "helpText": null,
+            "name": "False",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_ncsi_ncsi_globaldns_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_ncsi_ncsi_globaldns"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_ncsi_ncsi_globaldns_ncsi_useglobaldns_checkbox_1",
+            "description": null,
+            "helpText": null,
+            "name": "True",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_ncsi_ncsi_globaldns_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_ncsi_ncsi_globaldns"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,87 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "ACHibernateTimeOut_2",
+        "Specify the system hibernate timeout (plugged in)",
+        "\\System\\Power Management\\Sleep Settings",
+        "Administrative Templates\\System\\Power Management\\Sleep Settings",
+        "Sleep Settings"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-hibernatetimeoutpluggedin"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Power/HibernateTimeoutPluggedIn",
+    "rootDefinitionId": "device_vendor_msft_policy_config_power_hibernatetimeoutpluggedin",
+    "categoryId": "4b2f3557-98e9-48d2-9b78-bcb100f72372",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_power_hibernatetimeoutpluggedin",
+    "description": "This policy setting allows you to specify the period of inactivity before Windows transitions the system to hibernate.\r\n\r\nIf you enable this policy setting, you must provide a value, in seconds, indicating how much idle time should elapse before Windows transitions to hibernate.\r\n\r\nIf you disable or do not configure this policy setting, users control this setting.\r\n\r\nIf the user has configured a slide show to run on the lock screen when the machine is locked, this can prevent the sleep transition from occuring.  The \"Prevent enabling lock screen slide show\" policy setting can be used to disable the slide show feature.",
+    "helpText": "",
+    "name": "ACHibernateTimeOut_2",
+    "displayName": "Specify the system hibernate timeout (plugged in)",
+    "defaultOptionId": "device_vendor_msft_policy_config_power_hibernatetimeoutpluggedin_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "6.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_power_hibernatetimeoutpluggedin_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_power_hibernatetimeoutpluggedin_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_power_hibernatetimeoutpluggedin_enterachibernatetimeout",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

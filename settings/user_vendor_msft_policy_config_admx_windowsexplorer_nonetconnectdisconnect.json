@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "NoNetConnectDisconnect",
+        "Remove \"Map Network Drive\" and \"Disconnect Network Drive\"",
+        "\\Windows Components\\File Explorer",
+        "Administrative Templates\\Windows Components\\File Explorer",
+        "File Explorer"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-windowsexplorer#admx-windowsexplorer-nonetconnectdisconnect"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_WindowsExplorer/NoNetConnectDisconnect",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_windowsexplorer_nonetconnectdisconnect",
+    "categoryId": "35525ba9-da99-460e-afd3-ba86506b0ba3",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_windowsexplorer_nonetconnectdisconnect",
+    "description": "Prevents users from using File Explorer or Network Locations to map or disconnect network drives.\r\n\r\nIf you enable this setting, the system removes the Map Network Drive and Disconnect Network Drive commands from the toolbar and Tools menus in File Explorer and Network Locations and from menus that appear when you right-click the File Explorer or Network Locations icons.\r\n\r\nThis setting does not prevent users from connecting to another computer by typing the name of a shared folder in the Run dialog box.\r\n\r\nNote:\r\n\r\nThis setting was documented incorrectly on the Explain tab in Group Policy for Windows 2000. The Explain tab states incorrectly that this setting prevents users from connecting and disconnecting drives.\r\n\r\nNote: It is a requirement for third-party applications with Windows 2000 or later certification to adhere to this setting.\r\n ",
+    "helpText": "",
+    "name": "NoNetConnectDisconnect",
+    "displayName": "Remove \"Map Network Drive\" and \"Disconnect Network Drive\" (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_windowsexplorer_nonetconnectdisconnect_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_windowsexplorer_nonetconnectdisconnect_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_windowsexplorer_nonetconnectdisconnect_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

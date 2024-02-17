@@ -1,0 +1,86 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_SpecifydefaultlocationofDesktopAlert",
+        "Specify default location of Desktop Alert",
+        "\\Microsoft Outlook 2016\\Outlook Options\\Preferences\\E-mail Options\\Advanced E-mail Options\\Desktop Alert",
+        "Microsoft Outlook 2016\\Outlook Options\\Preferences\\E-mail Options\\Advanced E-mail Options\\Desktop Alert",
+        "Desktop Alert"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/outlk16v2~Policy~L_MicrosoftOfficeOutlook~L_OutlookOptions~L_Preferences~L_Emailoptions~L_AdvancedEmailoptions~L_DesktopAlert/L_SpecifydefaultlocationofDesktopAlert",
+    "rootDefinitionId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_preferences~l_emailoptions~l_advancedemailoptions~l_desktopalert_l_specifydefaultlocationofdesktopalert",
+    "categoryId": "35f245bd-8d1f-424c-83de-a80be27a6a4e",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_preferences~l_emailoptions~l_advancedemailoptions~l_desktopalert_l_specifydefaultlocationofdesktopalert",
+    "description": "You can change the default location of the Desktop Alert. In the Corner field, select a number corresponding to a quadrant of the user's screen: 0 = upper left, 1 = upper right, 2 = lower left, 3 = lower right (the default). In the XOffset field, enter a number representing the horizontal distance from the corner you've specified (the default is 44). In the YOffset field, enter a number representing the vertical distance from the corner you've specified (the default is 42).",
+    "helpText": "",
+    "name": "L_SpecifydefaultlocationofDesktopAlert",
+    "displayName": "Specify default location of Desktop Alert (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_preferences~l_emailoptions~l_advancedemailoptions~l_desktopalert_l_specifydefaultlocationofdesktopalert_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_preferences~l_emailoptions~l_advancedemailoptions~l_desktopalert_l_specifydefaultlocationofdesktopalert_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_preferences~l_emailoptions~l_advancedemailoptions~l_desktopalert_l_specifydefaultlocationofdesktopalert_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_preferences~l_emailoptions~l_advancedemailoptions~l_desktopalert_l_specifydefaultlocationofdesktopalert_l_corner03",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_preferences~l_emailoptions~l_advancedemailoptions~l_desktopalert_l_specifydefaultlocationofdesktopalert_l_xoffsetdefault44",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_preferences~l_emailoptions~l_advancedemailoptions~l_desktopalert_l_specifydefaultlocationofdesktopalert_l_yoffsetdefault42",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

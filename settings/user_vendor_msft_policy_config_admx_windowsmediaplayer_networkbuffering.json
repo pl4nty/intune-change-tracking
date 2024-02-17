@@ -1,0 +1,92 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "NetworkBuffering",
+        "Configure Network Buffering",
+        "\\Windows Components\\Windows Media Player\\Networking",
+        "Administrative Templates\\Windows Components\\Windows Media Player\\Networking",
+        "Networking"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-windowsmediaplayer#admx-windowsmediaplayer-networkbuffering"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_WindowsMediaPlayer/NetworkBuffering",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_windowsmediaplayer_networkbuffering",
+    "categoryId": "c7c32942-a139-4d7e-a19e-3495d5e372e7",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_windowsmediaplayer_networkbuffering",
+    "description": "This policy setting allows you to specify whether network buffering uses the default or a specified number of seconds.\r\n\r\nIf you enable this policy setting, select one of the following options to specify the number of seconds streaming media is buffered before it is played.\r\n\r\n- Custom: the number of seconds, up to 60, that streaming media is buffered.\r\n- Default: default network buffering is used and the number of seconds that is specified is ignored.\r\n\r\nThe \"Use default buffering\" and \"Buffer\" options on the Performance tab in the Player are not available.\r\n\r\nIf you disable or do not configure this policy setting, users can change the buffering options on the Performance tab.\r\n ",
+    "helpText": "",
+    "name": "NetworkBuffering",
+    "displayName": "Configure Network Buffering (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_windowsmediaplayer_networkbuffering_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_windowsmediaplayer_networkbuffering_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_windowsmediaplayer_networkbuffering_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_admx_windowsmediaplayer_networkbuffering_bufferingtime",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_admx_windowsmediaplayer_networkbuffering_networkbuffering",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

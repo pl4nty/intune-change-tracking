@@ -1,0 +1,88 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "RecycleBinSize",
+        "Maximum allowed Recycle Bin size",
+        "\\Windows Components\\File Explorer",
+        "Administrative Templates\\Windows Components\\File Explorer",
+        "File Explorer"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-windowsexplorer#admx-windowsexplorer-recyclebinsize"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_WindowsExplorer/RecycleBinSize",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_windowsexplorer_recyclebinsize",
+    "categoryId": "35525ba9-da99-460e-afd3-ba86506b0ba3",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_windowsexplorer_recyclebinsize",
+    "description": "Limits the percentage of a volume's disk space that can be used to store deleted files.\r\n\r\nIf you enable this setting, the user has a maximum amount of disk space that may be used for the Recycle Bin on their workstation.\r\n\r\nIf you disable or do not configure this setting, users can change the total amount of disk space used by the Recycle Bin.\r\n\r\nNote: This setting is applied to all volumes.\r\n ",
+    "helpText": "",
+    "name": "RecycleBinSize",
+    "displayName": "Maximum allowed Recycle Bin size (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_windowsexplorer_recyclebinsize_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_windowsexplorer_recyclebinsize_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_windowsexplorer_recyclebinsize_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_admx_windowsexplorer_recyclebinsize_recyclebinsizespin",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

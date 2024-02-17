@@ -1,0 +1,102 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "FDVEncryptionType_Name",
+        "Enforce drive encryption type on fixed data drives",
+        "\\Windows Components\\BitLocker Drive Encryption\\Fixed Data Drives",
+        "Administrative Templates\\Windows Components\\BitLocker Drive Encryption\\Fixed Data Drives",
+        "Fixed Data Drives"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/BitLocker",
+    "offsetUri": "/FixedDrivesEncryptionType",
+    "rootDefinitionId": "device_vendor_msft_bitlocker_fixeddrivesencryptiontype",
+    "categoryId": "36aafec3-7ffb-4ab9-bef9-b8bb431bf8b3",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_bitlocker_fixeddrivesencryptiontype_fdvencryptiontypedropdown_name",
+    "description": "",
+    "helpText": "",
+    "name": "FDVEncryptionTypeDropDown_Name",
+    "displayName": "Select the encryption type: (Device)",
+    "defaultOptionId": "device_vendor_msft_bitlocker_fixeddrivesencryptiontype_fdvencryptiontypedropdown_name_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_bitlocker_fixeddrivesencryptiontype_fdvencryptiontypedropdown_name_0",
+            "description": null,
+            "helpText": null,
+            "name": "Allow user to choose (default)",
+            "displayName": "Allow user to choose (default)",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_bitlocker_fixeddrivesencryptiontype_1",
+                    "parentSettingId": "device_vendor_msft_bitlocker_fixeddrivesencryptiontype"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_bitlocker_fixeddrivesencryptiontype_fdvencryptiontypedropdown_name_1",
+            "description": null,
+            "helpText": null,
+            "name": "Full encryption",
+            "displayName": "Full encryption",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_bitlocker_fixeddrivesencryptiontype_1",
+                    "parentSettingId": "device_vendor_msft_bitlocker_fixeddrivesencryptiontype"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_bitlocker_fixeddrivesencryptiontype_fdvencryptiontypedropdown_name_2",
+            "description": null,
+            "helpText": null,
+            "name": "Used Space Only encryption",
+            "displayName": "Used Space Only encryption",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_bitlocker_fixeddrivesencryptiontype_1",
+                    "parentSettingId": "device_vendor_msft_bitlocker_fixeddrivesencryptiontype"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

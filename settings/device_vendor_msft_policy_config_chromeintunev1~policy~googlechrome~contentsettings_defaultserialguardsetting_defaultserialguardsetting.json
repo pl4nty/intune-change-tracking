@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DefaultSerialGuardSetting",
+        "Control use of the Serial API",
+        "\\Google\\Google Chrome\\Content settings",
+        "Administrative Templates\\Google\\Google Chrome\\Content settings",
+        "Content settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV1~Policy~googlechrome~ContentSettings/DefaultSerialGuardSetting",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~contentsettings_defaultserialguardsetting",
+    "categoryId": "59d29716-55b0-4014-a458-38b408ff9530",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~contentsettings_defaultserialguardsetting_defaultserialguardsetting",
+    "description": "",
+    "helpText": "",
+    "name": "DefaultSerialGuardSetting",
+    "displayName": "Control use of the Serial API (Device)",
+    "defaultOptionId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~contentsettings_defaultserialguardsetting_defaultserialguardsetting_2",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~contentsettings_defaultserialguardsetting_defaultserialguardsetting_2",
+            "description": null,
+            "helpText": null,
+            "name": "Do not allow any site to request access to serial ports via the Serial API",
+            "displayName": "Do not allow any site to request access to serial ports via the Serial API",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~contentsettings_defaultserialguardsetting_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~contentsettings_defaultserialguardsetting"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~contentsettings_defaultserialguardsetting_defaultserialguardsetting_3",
+            "description": null,
+            "helpText": null,
+            "name": "Allow sites to ask the user to grant access to a serial port",
+            "displayName": "Allow sites to ask the user to grant access to a serial port",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "3"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~contentsettings_defaultserialguardsetting_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~contentsettings_defaultserialguardsetting"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_TurnOffCustomDictionary",
+        "Turn off custom dictionary",
+        "\\Windows Components\\IME",
+        "Administrative Templates\\Windows Components\\IME",
+        "IME"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-eaime#admx-eaime-l-turnoffcustomdictionary"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_EAIME/L_TurnOffCustomDictionary",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_eaime_l_turnoffcustomdictionary",
+    "categoryId": "ba1d333c-e19b-4470-bbab-d040a633c3a3",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_eaime_l_turnoffcustomdictionary",
+    "description": "This policy setting allows you to turn off the ability to use a custom dictionary.\r\n\r\nIf you enable this policy setting, you cannot add, edit, and delete words in the custom dictionary either with GUI tools or APIs. A word registered in the custom dictionary before enabling this policy setting can continue to be used for conversion.\r\n\r\nIf you disable or do not configure this policy setting, the custom dictionary can be used by default.\r\n\r\nFor Japanese Microsoft IME, [Clear auto-tuning information] works, even if this policy setting is enabled, and it clears self-tuned words from the custom dictionary.\r\n\r\nThis policy setting is applied to Japanese Microsoft IME.\r\n\r\nNote: Changes to this setting will not take effect until the user logs off.\r\n ",
+    "helpText": "",
+    "name": "L_TurnOffCustomDictionary",
+    "displayName": "Turn off custom dictionary (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_eaime_l_turnoffcustomdictionary_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_eaime_l_turnoffcustomdictionary_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_eaime_l_turnoffcustomdictionary_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

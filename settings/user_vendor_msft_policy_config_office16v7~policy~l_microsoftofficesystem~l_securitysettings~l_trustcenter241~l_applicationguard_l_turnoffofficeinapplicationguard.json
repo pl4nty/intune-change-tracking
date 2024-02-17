@@ -1,0 +1,73 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_TurnOffOfficeInApplicationGuard",
+        "Don't use Application Guard with Office.",
+        "\\Microsoft Office 2016\\Security Settings\\Trust Center\\Application Guard",
+        "Microsoft Office 2016\\Security Settings\\Trust Center\\Application Guard",
+        "Application Guard"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/office16v7~Policy~L_MicrosoftOfficeSystem~L_SecuritySettings~L_trustcenter241~L_ApplicationGuard/L_TurnOffOfficeInApplicationGuard",
+    "rootDefinitionId": "user_vendor_msft_policy_config_office16v7~policy~l_microsoftofficesystem~l_securitysettings~l_trustcenter241~l_applicationguard_l_turnoffofficeinapplicationguard",
+    "categoryId": "517e55f5-729f-4b4d-9555-33baa95a0e5a",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_office16v7~policy~l_microsoftofficesystem~l_securitysettings~l_trustcenter241~l_applicationguard_l_turnoffofficeinapplicationguard",
+    "description": "This policy setting allows you to control whether Office apps use Application Guard to isolate untrusted documents.\r\n\r\nIf you enable this policy setting, Office apps won't use Application Guard to isolate untrusted documents even if the device is configured to use Application Guard. Instead, Office will use Protected View to isolate untrusted documents.\r\n\r\nNote: You should consider enabling this policy setting if you want to stop Office apps from using Application Guard without impacting the use of Application Guard with other applications.\r\n\r\nIf you disable or don't configure this policy settings, Office apps will use Application Guard to isolate untrusted documents. The device must be configured to use Application Guard and the user must be licensed to use Application Guard.",
+    "helpText": "",
+    "name": "L_TurnOffOfficeInApplicationGuard",
+    "displayName": "Don't use Application Guard with Office. (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_office16v7~policy~l_microsoftofficesystem~l_securitysettings~l_trustcenter241~l_applicationguard_l_turnoffofficeinapplicationguard_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v7~policy~l_microsoftofficesystem~l_securitysettings~l_trustcenter241~l_applicationguard_l_turnoffofficeinapplicationguard_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v7~policy~l_microsoftofficesystem~l_securitysettings~l_trustcenter241~l_applicationguard_l_turnoffofficeinapplicationguard_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

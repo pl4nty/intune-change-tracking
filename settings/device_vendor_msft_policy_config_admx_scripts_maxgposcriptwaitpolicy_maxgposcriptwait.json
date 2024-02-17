@@ -1,0 +1,67 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "MaxGPOScriptWaitPolicy",
+        "Specify maximum wait time for Group Policy scripts",
+        "\\System\\Scripts",
+        "Administrative Templates\\System\\Scripts",
+        "Scripts"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_Scripts/MaxGPOScriptWaitPolicy",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_scripts_maxgposcriptwaitpolicy",
+    "categoryId": "9329c2bd-9e56-4394-9c89-5726e8b76f2f",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_scripts_maxgposcriptwaitpolicy_maxgposcriptwait",
+    "description": null,
+    "helpText": "",
+    "name": "MaxGPOScriptWait",
+    "displayName": "Seconds: (Device)",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 32000,
+        "minimumValue": 0
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 600
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "device_vendor_msft_policy_config_admx_scripts_maxgposcriptwaitpolicy_1",
+            "parentSettingId": "device_vendor_msft_policy_config_admx_scripts_maxgposcriptwaitpolicy"
+        }
+    ],
+    "dependedOnBy": []
+}

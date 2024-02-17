@@ -1,0 +1,110 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Configure Open Microsoft Edge With",
+        "Browser"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Browser#browser-configureopenmicrosoftedgewith"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Browser/ConfigureOpenMicrosoftEdgeWith",
+    "rootDefinitionId": "device_vendor_msft_policy_config_browser_configureopenmicrosoftedgewith",
+    "categoryId": "5d835ac8-2e5e-4887-8e4d-0c3846d0ad9f",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_browser_configureopenmicrosoftedgewith",
+    "description": "You can configure Microsoft Edge to lock down the Start page, preventing users from changing or customizing it.  If enabled, you can choose one of the following options: - Start page: the Start page loads ignoring the Configure Start Pages policy. - New tab page: the New tab page loads ignoring the Configure Start Pages policy. - Previous pages: all tabs the user had open when Microsoft Edge last closed loads ignoring the Configure Start Pages policy. - A specific page or pages: the URL(s) specified with Configure Start Pages policy load(s). If selected, you must specify at least one URL in Configure Start Pages; otherwise, this policy is ignored.  When enabled, and you want to make changes, you must first set the Disable Lockdown of Start Pages to not configured, make the changes to the Configure Open Edge With policy, and then enable the Disable Lockdown of Start Pages policy.  If disabled or not configured, and you enable the Disable Lockdown of Start Pages policy, your users can change or customize the Start page.  Default setting: A specific page or pages (default) Related policies: -Disable Lockdown of Start Pages -Configure Start Pages",
+    "helpText": "",
+    "name": "ConfigureOpenMicrosoftEdgeWith",
+    "displayName": "Configure Open Microsoft Edge With",
+    "defaultOptionId": "device_vendor_msft_policy_config_browser_configureopenmicrosoftedgewith_3",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "8.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17763",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsNXT"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_browser_configureopenmicrosoftedgewith_0",
+            "description": "Load the Start page",
+            "helpText": null,
+            "name": "Load the Start page",
+            "displayName": "Load the Start page",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_browser_configureopenmicrosoftedgewith_1",
+            "description": "Load the New tab page",
+            "helpText": null,
+            "name": "Load the New tab page",
+            "displayName": "Load the New tab page",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_browser_configureopenmicrosoftedgewith_2",
+            "description": "Load the previous pages",
+            "helpText": null,
+            "name": "Load the previous pages",
+            "displayName": "Load the previous pages",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_browser_configureopenmicrosoftedgewith_3",
+            "description": "Load a specific page or pages",
+            "helpText": null,
+            "name": "Load a specific page or pages",
+            "displayName": "Load a specific page or pages",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

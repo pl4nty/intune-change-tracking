@@ -1,0 +1,111 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Object Access Audit Central Access Policy Staging",
+        "Audit",
+        "Auditing"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Audit#audit-objectaccess-auditcentralaccesspolicystaging"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Audit/ObjectAccess_AuditCentralAccessPolicyStaging",
+    "rootDefinitionId": "device_vendor_msft_policy_config_audit_objectaccess_auditcentralaccesspolicystaging",
+    "categoryId": "5cb7f4f0-ef00-4eb3-80f4-2c2b97b053ea",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_audit_objectaccess_auditcentralaccesspolicystaging",
+    "description": "This policy setting allows you to audit access requests where the permission granted or denied by a proposed policy differs from the current central access policy on an object.  If you configure this policy setting, an audit event is generated each time a user accesses an object and the permission granted by the current central access policy on the object differs from that granted by the proposed policy. The resulting audit event will be generated as follows: 1) Success audits, when configured, records access attempts when the current central access policy grants access but the proposed policy denies access. 2) Failure audits when configured records access attempts when:    a) The current central access policy does not grant access but the proposed policy grants access.    b) A principal requests the maximum access rights they are allowed and the access rights granted by the current central access policy are different than the access rights granted by the proposed policy.  Volume: Potentially high on a file server when the proposed policy differs significantly from the current central access policy.",
+    "helpText": "",
+    "name": "ObjectAccess_AuditCentralAccessPolicyStaging",
+    "displayName": "Object Access Audit Central Access Policy Staging",
+    "defaultOptionId": "device_vendor_msft_policy_config_audit_objectaccess_auditcentralaccesspolicystaging_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "7.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17134.1039",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsNXT"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_audit_objectaccess_auditcentralaccesspolicystaging_0",
+            "description": "Off/None",
+            "helpText": null,
+            "name": "Off/None",
+            "displayName": "Off/ None",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_audit_objectaccess_auditcentralaccesspolicystaging_1",
+            "description": "Success",
+            "helpText": null,
+            "name": "Success",
+            "displayName": "Success",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_audit_objectaccess_auditcentralaccesspolicystaging_2",
+            "description": "Failure",
+            "helpText": null,
+            "name": "Failure",
+            "displayName": "Failure",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_audit_objectaccess_auditcentralaccesspolicystaging_3",
+            "description": "Success+Failure",
+            "helpText": null,
+            "name": "Success+Failure",
+            "displayName": "Success+ Failure",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

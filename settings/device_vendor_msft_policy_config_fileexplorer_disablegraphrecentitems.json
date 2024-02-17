@@ -1,0 +1,82 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Disable Graph Recent Items",
+        "File Explorer"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-FileExplorer#fileexplorer-disablegraphrecentitems"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/FileExplorer/DisableGraphRecentItems",
+    "rootDefinitionId": "device_vendor_msft_policy_config_fileexplorer_disablegraphrecentitems",
+    "categoryId": "63b9904f-bbdf-4461-954a-c1d67fa8b357",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_fileexplorer_disablegraphrecentitems",
+    "description": "Turning off files from Office.com will prevent File Explorer from requesting recent cloud file metadata and displaying it in the Quick access view.",
+    "helpText": "",
+    "name": "DisableGraphRecentItems",
+    "displayName": "Disable Graph Recent Items",
+    "defaultOptionId": "device_vendor_msft_policy_config_fileexplorer_disablegraphrecentitems_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22621",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsNXT"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_fileexplorer_disablegraphrecentitems_0",
+            "description": "File Explorer will request cloud file metadata and display it in the Quick access view.",
+            "helpText": null,
+            "name": "File Explorer will request cloud file metadata and display it in the homepage and other views.",
+            "displayName": "File Explorer will request cloud file metadata and display it in the Quick access view.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_fileexplorer_disablegraphrecentitems_1",
+            "description": "File Explorer will not request cloud file metadata or display it in the Quick access view.",
+            "helpText": null,
+            "name": "File Explorer will not request cloud file metadata or display it in the homepage or other views.",
+            "displayName": "File Explorer will not request cloud file metadata or display it in the Quick access view.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

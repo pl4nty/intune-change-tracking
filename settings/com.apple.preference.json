@@ -1,0 +1,69 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Security Preferences"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "dontAllowLockMessageUI",
+    "rootDefinitionId": "com.apple.preference.security_com.apple.preference.security",
+    "categoryId": "8abddb23-7036-4ba8-8912-529279a849ea",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "com.apple.preference.security_dontallowlockmessageui",
+    "description": "If true, disables user changes to the lock message. ",
+    "helpText": null,
+    "name": "dontAllowLockMessageUI",
+    "displayName": "Do Not Allow Lock Message UI",
+    "defaultOptionId": "com.apple.preference.security_dontallowlockmessageui_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.preference.security_dontallowlockmessageui_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.preference.security_com.apple.preference.security",
+                    "parentSettingId": "com.apple.preference.security_com.apple.preference.security"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.preference.security_dontallowlockmessageui_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.preference.security_com.apple.preference.security",
+                    "parentSettingId": "com.apple.preference.security_com.apple.preference.security"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

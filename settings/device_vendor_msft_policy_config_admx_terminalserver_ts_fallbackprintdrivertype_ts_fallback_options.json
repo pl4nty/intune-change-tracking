@@ -1,0 +1,129 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "TS_FALLBACKPRINTDRIVERTYPE",
+        "Specify RD Session Host server fallback printer driver behavior",
+        "\\Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Printer Redirection",
+        "Administrative Templates\\Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Printer Redirection",
+        "Printer Redirection"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_TerminalServer/TS_FALLBACKPRINTDRIVERTYPE",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_terminalserver_ts_fallbackprintdrivertype",
+    "categoryId": "f3264346-fdc4-4e23-9a2a-dcfc34022e59",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_terminalserver_ts_fallbackprintdrivertype_ts_fallback_options",
+    "description": "\r\n This setting is only available to Windows Insiders.\r\n ",
+    "helpText": "",
+    "name": "TS_FALLBACK_OPTIONS",
+    "displayName": "When attempting to find a suitable driver: (Device)",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_terminalserver_ts_fallbackprintdrivertype_ts_fallback_options_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_terminalserver_ts_fallbackprintdrivertype_ts_fallback_options_1",
+            "description": null,
+            "helpText": null,
+            "name": "Do nothing if one is not found.",
+            "displayName": "Do nothing if one is not found.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_terminalserver_ts_fallbackprintdrivertype_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_terminalserver_ts_fallbackprintdrivertype"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_terminalserver_ts_fallbackprintdrivertype_ts_fallback_options_2",
+            "description": null,
+            "helpText": null,
+            "name": "Default to PCL if one is not found.",
+            "displayName": "Default to PCL if one is not found.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_terminalserver_ts_fallbackprintdrivertype_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_terminalserver_ts_fallbackprintdrivertype"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_terminalserver_ts_fallbackprintdrivertype_ts_fallback_options_3",
+            "description": null,
+            "helpText": null,
+            "name": "Default to PS if one is not found.",
+            "displayName": "Default to PS if one is not found.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "3"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_terminalserver_ts_fallbackprintdrivertype_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_terminalserver_ts_fallbackprintdrivertype"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_terminalserver_ts_fallbackprintdrivertype_ts_fallback_options_4",
+            "description": null,
+            "helpText": null,
+            "name": "Show both PCL and PS if one is not found.",
+            "displayName": "Show both PCL and PS if one is not found.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "4"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_terminalserver_ts_fallbackprintdrivertype_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_terminalserver_ts_fallbackprintdrivertype"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

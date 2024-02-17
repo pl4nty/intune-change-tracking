@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Allow Auto Accept Pairing And Privacy Consent Prompts",
+        "Privacy"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Privacy#privacy-allowautoacceptpairingandprivacyconsentprompts"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Privacy/AllowAutoAcceptPairingAndPrivacyConsentPrompts",
+    "rootDefinitionId": "device_vendor_msft_policy_config_privacy_allowautoacceptpairingandprivacyconsentprompts",
+    "categoryId": "98e76d3e-9e52-45b3-b0c7-f029023121e9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_privacy_allowautoacceptpairingandprivacyconsentprompts",
+    "description": "Allows or disallows the automatic acceptance of the pairing and privacy user consent dialog when launching apps. NoteThere were issues reported with the previous release of this policy and a fix was  Most restricted value is 0.",
+    "helpText": "",
+    "name": "AllowAutoAcceptPairingAndPrivacyConsentPrompts",
+    "displayName": "Allow Auto Accept Pairing And Privacy Consent Prompts",
+    "defaultOptionId": "device_vendor_msft_policy_config_privacy_allowautoacceptpairingandprivacyconsentprompts_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "4.1",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.14393",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsNXT"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_privacy_allowautoacceptpairingandprivacyconsentprompts_0",
+            "description": "Not allowed.",
+            "helpText": null,
+            "name": "Not allowed.",
+            "displayName": "Block",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_privacy_allowautoacceptpairingandprivacyconsentprompts_1",
+            "description": "Allowed.",
+            "helpText": null,
+            "name": "Allowed.",
+            "displayName": "Allow",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,88 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "WdiScenarioExecutionPolicy",
+        "Configure Corrupted File Recovery behavior",
+        "\\System\\Troubleshooting and Diagnostics\\Corrupted File Recovery",
+        "Administrative Templates\\System\\Troubleshooting and Diagnostics\\Corrupted File Recovery",
+        "Corrupted File Recovery"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-filerecovery#admx-filerecovery-wdiscenarioexecutionpolicy"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_FileRecovery/WdiScenarioExecutionPolicy",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_filerecovery_wdiscenarioexecutionpolicy",
+    "categoryId": "b4272e06-316f-4f9a-a198-93f4168f0c78",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_filerecovery_wdiscenarioexecutionpolicy",
+    "description": "This policy setting allows you to configure the recovery behavior for corrupted files to one of three states:\r\n\r\nRegular: Detection, troubleshooting, and recovery of corrupted files will automatically start with a minimal UI display. Windows will attempt to present you with a dialog box when a system restart is required. This is the default recovery behavior for corrupted files.\r\n\r\nSilent: Detection, troubleshooting, and recovery of corrupted files will automatically start with no UI. Windows will log an administrator event when a system restart is required. This behavior is recommended for headless operation.\r\n\r\nTroubleshooting Only: Detection and troubleshooting of corrupted files will automatically start with no UI. Recovery is not attempted automatically. Windows will log an administrator event with instructions if manual recovery is possible.\r\n\r\nIf you enable this setting, the recovery behavior for corrupted files will be set to either the regular (default), silent, or troubleshooting only state.\r\n\r\nIf you disable this setting, the recovery behavior for corrupted files will be disabled. No troubleshooting or resolution will be attempted.\r\n\r\nIf you do not configure this setting, the recovery behavior for corrupted files will be set to the regular recovery behavior.\r\n\r\nNo system or service restarts are required for changes to this policy to take immediate effect after a Group Policy refresh.\r\n\r\nNote:  This policy setting will take effect only when the Diagnostic Policy Service (DPS) is in the running state. When the service is stopped or disabled, system file recovery will not be attempted. The DPS can be configured with the Services snap-in to the Microsoft Management Console.\r\n ",
+    "helpText": "",
+    "name": "WdiScenarioExecutionPolicy",
+    "displayName": "Configure Corrupted File Recovery behavior",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_filerecovery_wdiscenarioexecutionpolicy_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_filerecovery_wdiscenarioexecutionpolicy_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_filerecovery_wdiscenarioexecutionpolicy_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_filerecovery_wdiscenarioexecutionpolicy_wdiscenarioexecutionpolicylevel",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

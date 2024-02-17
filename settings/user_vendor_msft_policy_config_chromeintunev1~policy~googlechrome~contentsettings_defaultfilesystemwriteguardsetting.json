@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DefaultFileSystemWriteGuardSetting",
+        "Control use of the File System API for writing",
+        "\\Google\\Google Chrome\\Content settings",
+        "Administrative Templates\\Google\\Google Chrome\\Content settings",
+        "Content settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV1~Policy~googlechrome~ContentSettings/DefaultFileSystemWriteGuardSetting",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~contentsettings_defaultfilesystemwriteguardsetting",
+    "categoryId": "59d29716-55b0-4014-a458-38b408ff9530",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~contentsettings_defaultfilesystemwriteguardsetting",
+    "description": "Setting the policy to 3 lets websites ask for write access to files and directories in the host operating system's file system. Setting the policy to 2 denies access.\r\n\r\nLeaving it unset lets websites ask for access, but users can change this setting.",
+    "helpText": "",
+    "name": "DefaultFileSystemWriteGuardSetting",
+    "displayName": "Control use of the File System API for writing (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~contentsettings_defaultfilesystemwriteguardsetting_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~contentsettings_defaultfilesystemwriteguardsetting_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~contentsettings_defaultfilesystemwriteguardsetting_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~contentsettings_defaultfilesystemwriteguardsetting_defaultfilesystemwriteguardsetting",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

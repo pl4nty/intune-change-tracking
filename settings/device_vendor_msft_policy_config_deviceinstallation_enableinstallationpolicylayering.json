@@ -1,0 +1,82 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DeviceInstall_Allow_Deny_Layered",
+        "Apply layered order of evaluation for Allow and Prevent device installation policies across all device match criteria",
+        "\\System\\Device Installation\\Device Installation Restrictions",
+        "Administrative Templates\\System\\Device Installation\\Device Installation Restrictions",
+        "Device Installation Restrictions"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-enableinstallationpolicylayering"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/DeviceInstallation/EnableInstallationPolicyLayering",
+    "rootDefinitionId": "device_vendor_msft_policy_config_deviceinstallation_enableinstallationpolicylayering",
+    "categoryId": "979412d7-6716-440c-9a64-5889026d73da",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_deviceinstallation_enableinstallationpolicylayering",
+    "description": "This policy setting will change the evaluation order in which Allow and Prevent policy settings are applied when more than one install policy setting is applicable for a given device. Enable this policy setting to ensure that overlapping device match criteria is applied based on an established hierarchy where more specific match criteria supersedes less specific match criteria. The hierarchical order of evaluation for policy settings that specify device match criteria is as follows:\r\n\r\nDevice instance IDs > Device IDs > Device setup class > Removable devices\r\n\r\nDevice instance IDs\r\n1. Prevent installation of devices using drivers that match these device instance IDs\r\n2. Allow installation of devices using drivers that match these device instance IDs\r\n\r\nDevice IDs\r\n3. Prevent installation of devices using drivers that match these device IDs\r\n4. Allow installation of devices using drivers that match these device IDs\r\n\r\nDevice setup class\r\n5. Prevent installation of devices using drivers that match these device setup classes\r\n6. Allow installation of devices using drivers that match these device setup classes\r\n\r\nRemovable devices\r\n7. Prevent installation of removable devices\r\n\r\nNOTE: This policy setting provides more granular control than the \"Prevent installation of devices not described by other policy settings\" policy setting. If these conflicting policy settings are enabled at the same time, the \"Apply layered order of evaluation for Allow and Prevent device installation policies across all device match criteria\" policy setting will be enabled and the other policy setting will be ignored.\r\n\r\nIf you disable or do not configure this policy setting, the default evaluation is used. By default, all \"Prevent installation...\" policy settings have precedence over any other policy setting that allows Windows to install a device.",
+    "helpText": "",
+    "name": "DeviceInstall_Allow_Deny_Layered",
+    "displayName": "Apply layered order of evaluation for Allow and Prevent device installation policies across all device match criteria",
+    "defaultOptionId": "device_vendor_msft_policy_config_deviceinstallation_enableinstallationpolicylayering_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,microsoftSense",
+        "configurationServiceProviderVersion": "8.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17763.2145",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_deviceinstallation_enableinstallationpolicylayering_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_deviceinstallation_enableinstallationpolicylayering_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,77 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "TamperProtection (Device)",
+        "Defender"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/en-us/windows/client-management/mdm/defender-csp#:~:text=Configuration/TamperProtection"
+    ],
+    "baseUri": "./Vendor/MSFT/Defender",
+    "offsetUri": "/Configuration/TamperProtection",
+    "rootDefinitionId": "vendor_msft_defender_configuration_tamperprotection_options",
+    "categoryId": "e8400c82-34c8-4d6e-bbf9-85220f3205ea",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "none",
+    "id": "vendor_msft_defender_configuration_tamperprotection_blob",
+    "description": "",
+    "helpText": "",
+    "name": "Tamper Protection Blob",
+    "displayName": "Tamper Protection Blob",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,microsoftSense",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.10586",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "unknown",
+            "windowsEducation",
+            "windowsMultiSession",
+            "surfaceHub",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1024,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "vendor_msft_defender_configuration_tamperprotection_options_0",
+            "parentSettingId": "vendor_msft_defender_configuration_tamperprotection_options"
+        },
+        {
+            "dependentOn": "vendor_msft_defender_configuration_tamperprotection_options_1",
+            "parentSettingId": "vendor_msft_defender_configuration_tamperprotection_options"
+        }
+    ],
+    "dependedOnBy": []
+}

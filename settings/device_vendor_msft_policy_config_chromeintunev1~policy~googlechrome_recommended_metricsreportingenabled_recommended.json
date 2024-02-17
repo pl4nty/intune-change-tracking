@@ -1,0 +1,74 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "MetricsReportingEnabled_recommended",
+        "Enable reporting of usage and crash-related data",
+        "\\Google\\Google Chrome - Default Settings (users can override)",
+        "Administrative Templates\\Google\\Google Chrome - Default Settings (users can override)",
+        "Google Chrome - Default Settings (users can override)",
+        "Google Chrome - Default Settings users can override"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV1~Policy~googlechrome_recommended/MetricsReportingEnabled_recommended",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_recommended_metricsreportingenabled_recommended",
+    "categoryId": "c3857f91-3df8-472f-9b5a-b10778c715c0",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_recommended_metricsreportingenabled_recommended",
+    "description": "When this policy is enabled, anonymous reporting of usage and crash-related data about Chrome to Google is enabled by default. Users will still be able to change this setting in the Chrome settings.\r\n\r\nWhen this policy is disabled, anonymous reporting is disabled and no usage or crash data is sent to Google. Users won't be able to change this setting.\r\n\r\nWhen this policy isn't set, users can choose the anonymous reporting behavior at installation or first run, and can later change the setting in the Chrome settings.\r\n\r\nThis policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain or Windows 10 Pro or Enterprise instances that are enrolled for device management, and macOS instances that are managed via MDM or joined to a domain via MCX.\r\n\r\n(For Chrome OS, see DeviceMetricsReportingEnabled.)",
+    "helpText": "",
+    "name": "MetricsReportingEnabled_recommended",
+    "displayName": "Enable reporting of usage and crash-related data",
+    "defaultOptionId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_recommended_metricsreportingenabled_recommended_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_recommended_metricsreportingenabled_recommended_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_recommended_metricsreportingenabled_recommended_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,82 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Restrict Language Packs And Features Install",
+        "Time Language Settings"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-TimeLanguageSettings#timelanguagesettings-restrictlanguagepacksandfeaturesinstall"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/TimeLanguageSettings/RestrictLanguagePacksAndFeaturesInstall",
+    "rootDefinitionId": "user_vendor_msft_policy_config_timelanguagesettings_restrictlanguagepacksandfeaturesinstall",
+    "categoryId": "4a5a066e-27af-46c1-9714-9e4542ffc1f9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_timelanguagesettings_restrictlanguagepacksandfeaturesinstall",
+    "description": "This policy setting restricts the install of language packs and language features, such as spell checkers, on a device.",
+    "helpText": "",
+    "name": "RestrictLanguagePacksAndFeaturesInstall",
+    "displayName": "Restrict Language Packs And Features Install (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_timelanguagesettings_restrictlanguagepacksandfeaturesinstall_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22000",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsNXT"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_timelanguagesettings_restrictlanguagepacksandfeaturesinstall_0",
+            "description": "Not restricted.",
+            "helpText": null,
+            "name": "Not restricted.",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_timelanguagesettings_restrictlanguagepacksandfeaturesinstall_1",
+            "description": "Restricted.",
+            "helpText": null,
+            "name": "Restricted.",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

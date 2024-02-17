@@ -1,0 +1,88 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "EnableScriptBlockLogging",
+        "Turn on PowerShell Script Block Logging",
+        "\\Windows Components\\Windows PowerShell",
+        "Administrative Templates\\Windows Components\\Windows PowerShell",
+        "Windows PowerShell"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowspowershell#windowspowershell-turnonpowershellscriptblocklogging"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/WindowsPowerShell/TurnOnPowerShellScriptBlockLogging",
+    "rootDefinitionId": "user_vendor_msft_policy_config_windowspowershell_turnonpowershellscriptblocklogging",
+    "categoryId": "5a92aaed-3c64-4074-bacf-91dc1896d6f1",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_windowspowershell_turnonpowershellscriptblocklogging",
+    "description": "\r\n        This policy setting enables logging of all PowerShell script input to the Microsoft-Windows-PowerShell/Operational event log. If you enable this policy setting,\r\n        Windows PowerShell will log the processing of commands, script blocks, functions, and scripts - whether invoked interactively, or through automation.\r\n        \r\n        If you disable this policy setting, logging of PowerShell script input is disabled.\r\n        \r\n        If you enable the Script Block Invocation Logging, PowerShell additionally logs events when invocation of a command, script block, function, or script\r\n        starts or stops. Enabling Invocation Logging generates a high volume of event logs.\r\n        \r\n        Note: This policy setting exists under both Computer Configuration and User Configuration in the Group Policy Editor. The Computer Configuration policy setting takes precedence over the User Configuration policy setting.\r\n      ",
+    "helpText": "",
+    "name": "EnableScriptBlockLogging",
+    "displayName": "Turn on PowerShell Script Block Logging (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_windowspowershell_turnonpowershellscriptblocklogging_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "7.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17134",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_windowspowershell_turnonpowershellscriptblocklogging_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_windowspowershell_turnonpowershellscriptblocklogging_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_windowspowershell_turnonpowershellscriptblocklogging_enablescriptblockinvocationlogging",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

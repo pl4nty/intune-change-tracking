@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "emitlili",
+        "Provide information about previous logons to client computers",
+        "\\System\\KDC",
+        "Administrative Templates\\System\\KDC",
+        "KDC"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-kdc#admx-kdc-emitlili"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_kdc/emitlili",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_kdc_emitlili",
+    "categoryId": "bc4f0cce-a5cc-44c9-9e50-b504e09e7eb1",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_kdc_emitlili",
+    "description": "This policy setting controls whether the domain controller provides information about previous logons to client computers.\r\n\r\nIf you enable this policy setting, the domain controller provides the information message about previous logons.\r\n\r\nFor Windows Logon to leverage this feature, the \"Display information about previous logons during user logon\" policy setting located in the Windows Logon Options node under Windows Components also needs to be enabled.\r\n\r\nIf you disable or do not configure this policy setting, the domain controller does not provide information about previous logons unless the \"Display information about previous logons during user logon\" policy setting is enabled.\r\n\r\nNote: Information about previous logons is provided only if the domain functional level is Windows Server 2008. In domains with a domain functional level of Windows Server 2003, Windows 2000 native, or Windows 2000 mixed, domain controllers cannot provide information about previous logons, and enabling this policy setting does not affect anything.\r\n\r\n ",
+    "helpText": "",
+    "name": "emitlili",
+    "displayName": "Provide information about previous logons to client computers",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_kdc_emitlili_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_kdc_emitlili_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_kdc_emitlili_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

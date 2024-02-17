@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "MicrosoftOffice2016AccessBackup",
+        "Access 2016 backup only",
+        "\\Windows Components\\Microsoft User Experience Virtualization\\Applications",
+        "Administrative Templates\\Windows Components\\Microsoft User Experience Virtualization\\Applications",
+        "Applications"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-userexperiencevirtualization#admx-userexperiencevirtualization-microsoftoffice2016accessbackup"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_UserExperienceVirtualization/MicrosoftOffice2016AccessBackup",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_userexperiencevirtualization_microsoftoffice2016accessbackup",
+    "categoryId": "3afbcb74-88c5-4a41-bdc2-82c117b4e82e",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_userexperiencevirtualization_microsoftoffice2016accessbackup",
+    "description": "\r\nThis policy setting configures the backup of certain user settings for Microsoft Access 2016.\r\nMicrosoft Access 2016 has user settings that are backed up instead of synchronizing between computers. Use the policy setting to suppress the backup of specific Microsoft Access 2016 settings.\r\nIf you enable this policy setting, certain user settings of Microsoft Access 2016 will continue to be backed up.\r\nIf you disable this policy setting, certain user settings of Microsoft Access 2016 will not be backed up.\r\nIf you do not configure this policy setting, any defined values will be deleted.\r\n      \r\n ",
+    "helpText": "",
+    "name": "MicrosoftOffice2016AccessBackup",
+    "displayName": "Access 2016 backup only",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_userexperiencevirtualization_microsoftoffice2016accessbackup_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_userexperiencevirtualization_microsoftoffice2016accessbackup_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_userexperiencevirtualization_microsoftoffice2016accessbackup_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

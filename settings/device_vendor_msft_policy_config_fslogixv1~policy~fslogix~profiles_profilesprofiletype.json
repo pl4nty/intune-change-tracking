@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ProfilesProfileType",
+        "Profile Type",
+        "\\FSLogix\\Profile Containers",
+        "Administrative Templates\\FSLogix\\Profile Containers",
+        "Profile Containers"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/FSLogixv1~Policy~FSLogix~Profiles/ProfilesProfileType",
+    "rootDefinitionId": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilesprofiletype",
+    "categoryId": "0b4f28d5-fc68-43a4-92cb-9a47c2a8ebf9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilesprofiletype",
+    "description": "NOTE:  Once this policy is Enabled, only Disable will remove the registry value. Enabled to Not Configured will have NO EFFECT.\r\n\r\nControls whether the VHD(x) file should be accessed directly, if a difference disk should be used, and if Read/Write or Read Only access should be used. The default value is Normal Profile.\r\n\r\nRegistry Entry:  HKLM\\SOFTWARE\\FSLogix\\Profiles\\ProfileType\r\nType:  DWORD\r\nValues:  0 = Normal direct-access profile, 1= Read-write profile, 2 = Read-only profile, 3 = Try for read-write profile and fallback to read-only",
+    "helpText": "",
+    "name": "ProfilesProfileType",
+    "displayName": "Profile Type",
+    "defaultOptionId": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilesprofiletype_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilesprofiletype_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilesprofiletype_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilesprofiletype_profilesprofiletype",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

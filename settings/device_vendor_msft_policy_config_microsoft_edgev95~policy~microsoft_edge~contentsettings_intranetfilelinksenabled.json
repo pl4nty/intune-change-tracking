@@ -1,0 +1,73 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "IntranetFileLinksEnabled",
+        "Allow intranet zone file URL links from Microsoft Edge to open in Windows File Explorer",
+        "\\Microsoft Edge\\Content settings",
+        "Microsoft Edge\\Content settings",
+        "Content settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev95~Policy~microsoft_edge~ContentSettings/IntranetFileLinksEnabled",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edgev95~policy~microsoft_edge~contentsettings_intranetfilelinksenabled",
+    "categoryId": "92d69c43-75ac-49b1-a3ef-9350079eef86",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_microsoft_edgev95~policy~microsoft_edge~contentsettings_intranetfilelinksenabled",
+    "description": "This setting allows file URL links to intranet zone files from intranet zone HTTPS websites to open Windows File Explorer for that file or directory.\r\n\r\nIf you enable this policy, intranet zone file URL links originating from intranet zone HTTPS pages will open Windows File Explorer for that file or directory.\r\n\r\nIf you disable or don't configure this policy, file URL links will not open.\r\n\r\nMicrosoft Edge uses the definition of intranet zone as configured for Internet Explorer. Note that https://localhost/ is specifically blocked as an exception of allowed intranet zone host, while loopback addresses (127.0.0.*, [::1]) are considered internet zone by default.\r\n\r\nUsers may opt out of prompts on a per-protocol/per-site basis unless the 'ExternalProtocolDialogShowAlwaysOpenCheckbox' (Show an \"Always open\" checkbox in external protocol dialog) policy is disabled.",
+    "helpText": "",
+    "name": "IntranetFileLinksEnabled",
+    "displayName": "Allow intranet zone file URL links from Microsoft Edge to open in Windows File Explorer",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edgev95~policy~microsoft_edge~contentsettings_intranetfilelinksenabled_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev95~policy~microsoft_edge~contentsettings_intranetfilelinksenabled_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev95~policy~microsoft_edge~contentsettings_intranetfilelinksenabled_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

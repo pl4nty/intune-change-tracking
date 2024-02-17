@@ -1,0 +1,110 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Configure Telemetry For Microsoft 365 Analytics",
+        "Browser"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Browser#browser-configuretelemetryformicrosoft365analytics"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Browser/ConfigureTelemetryForMicrosoft365Analytics",
+    "rootDefinitionId": "device_vendor_msft_policy_config_browser_configuretelemetryformicrosoft365analytics",
+    "categoryId": "5d835ac8-2e5e-4887-8e4d-0c3846d0ad9f",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_browser_configuretelemetryformicrosoft365analytics",
+    "description": "Configures what browsing data will be sent to Microsoft 365 Analytics for devices belonging to an organization.",
+    "helpText": "",
+    "name": "ConfigureTelemetryForMicrosoft365Analytics",
+    "displayName": "Configure Telemetry For Microsoft 365 Analytics",
+    "defaultOptionId": "device_vendor_msft_policy_config_browser_configuretelemetryformicrosoft365analytics_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "8.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17763",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsNXT"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_browser_configuretelemetryformicrosoft365analytics_0",
+            "description": "No data collected or sent",
+            "helpText": null,
+            "name": "No data collected or sent",
+            "displayName": "No data collected or sent",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_browser_configuretelemetryformicrosoft365analytics_1",
+            "description": "Send intranet history only",
+            "helpText": null,
+            "name": "Send intranet history only",
+            "displayName": "Send intranet history only",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_browser_configuretelemetryformicrosoft365analytics_2",
+            "description": "Send Internet history only",
+            "helpText": null,
+            "name": "Send Internet history only",
+            "displayName": "Send Internet history only",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_browser_configuretelemetryformicrosoft365analytics_3",
+            "description": "Send both intranet and Internet history",
+            "helpText": null,
+            "name": "Send both intranet and Internet history",
+            "displayName": "Send both intranet and Internet history",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

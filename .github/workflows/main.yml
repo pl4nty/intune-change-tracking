@@ -1,0 +1,31 @@
+name: Refresh data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *" # daily
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write # Graph auth
+      contents: write # committing
+    steps:
+      - uses: actions/checkout@v4.1.1
+      # azure-identity doesn't support GitHub WIF
+      - uses: azure/login@v1
+        with:
+          tenant-id: ${{ vars.AZURE_TENANT_ID }}
+          client-id: ${{ vars.AZURE_CLIENT_ID }}
+          allow-no-subscriptions: true
+      - uses: actions/setup-python@v5.0.0
+        with:
+          python-version: 3.12
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python main.py
+      - uses: EndBug/add-and-commit@v9.1.4
+        with:
+          default_author: github_actions
+          message: 'chore: refresh data'

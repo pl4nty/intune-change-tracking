@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Run_Legacy_Logon_Script_Hidden",
+        "Run legacy logon scripts hidden",
+        "\\System\\Scripts",
+        "Administrative Templates\\System\\Scripts",
+        "Scripts"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-scripts#admx-scripts-run-legacy-logon-script-hidden"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_Scripts/Run_Legacy_Logon_Script_Hidden",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_scripts_run_legacy_logon_script_hidden",
+    "categoryId": "9329c2bd-9e56-4394-9c89-5726e8b76f2f",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_scripts_run_legacy_logon_script_hidden",
+    "description": "This policy setting hides the instructions in logon scripts written for Windows NT 4.0 and earlier. \r\n\r\nLogon scripts are batch files of instructions that run when the user logs on. By default, Windows 2000 displays the instructions in logon scripts written for Windows NT 4.0 and earlier in a command window as they run, although it does not display logon scripts written for Windows 2000.\r\n\r\nIf you enable this setting, Windows 2000 does not display logon scripts written for Windows NT 4.0 and earlier.\r\n\r\nIf you disable or do not configure this policy setting, Windows 2000 displays login scripts written for Windows NT 4.0 and earlier.\r\n\r\nAlso, see the \"Run Logon Scripts Visible\" setting.\r\n ",
+    "helpText": "",
+    "name": "Run_Legacy_Logon_Script_Hidden",
+    "displayName": "Run legacy logon scripts hidden (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_scripts_run_legacy_logon_script_hidden_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_scripts_run_legacy_logon_script_hidden_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_scripts_run_legacy_logon_script_hidden_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

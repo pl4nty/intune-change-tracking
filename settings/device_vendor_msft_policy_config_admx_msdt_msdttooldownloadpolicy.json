@@ -1,0 +1,88 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "MsdtToolDownloadPolicy",
+        "Microsoft Support Diagnostic Tool: Restrict tool download",
+        "\\System\\Troubleshooting and Diagnostics\\Microsoft Support Diagnostic Tool",
+        "Administrative Templates\\System\\Troubleshooting and Diagnostics\\Microsoft Support Diagnostic Tool",
+        "Microsoft Support Diagnostic Tool"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-msdt#admx-msdt-msdttooldownloadpolicy"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_MSDT/MsdtToolDownloadPolicy",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_msdt_msdttooldownloadpolicy",
+    "categoryId": "5c1c00f2-def5-4064-925d-aedf4aa0f060",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_msdt_msdttooldownloadpolicy",
+    "description": "This policy setting restricts the tool download policy for Microsoft Support Diagnostic Tool.\r\n\r\nMicrosoft Support Diagnostic Tool (MSDT) gathers diagnostic data for analysis by support professionals.  For some problems, MSDT may prompt the user to download additional tools for troubleshooting.\r\n\r\nThese tools are required to completely troubleshoot the problem.  If tool download is restricted, it may not be possible to find the root cause of the problem.\r\n\r\nIf you enable this policy setting for remote troubleshooting, MSDT prompts the user to download additional tools to diagnose problems on remote computers only.  If you enable this policy setting for local and remote troubleshooting, MSDT always prompts for additional tool downloading.\r\n\r\nIf you disable this policy setting, MSDT never downloads tools, and is unable to diagnose problems on remote computers.\r\n\r\nIf you do not configure this policy setting, MSDT prompts the user before downloading any additional tools.\r\n\r\nNo reboots or service restarts are required for this policy setting to take effect. Changes take effect immediately.\r\n\r\nThis policy setting will take effect only when MSDT is enabled.\r\n\r\nThis policy setting will only take effect when the Diagnostic Policy Service (DPS) is in the running state.  When the service is stopped or disabled, diagnostic scenarios are not executed.  The DPS can be configured with the Services snap-in to the Microsoft Management Console.\r\n ",
+    "helpText": "",
+    "name": "MsdtToolDownloadPolicy",
+    "displayName": "Microsoft Support Diagnostic Tool: Restrict tool download",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_msdt_msdttooldownloadpolicy_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_msdt_msdttooldownloadpolicy_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_msdt_msdttooldownloadpolicy_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_msdt_msdttooldownloadpolicy_msdttooldownloadpolicylevel",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

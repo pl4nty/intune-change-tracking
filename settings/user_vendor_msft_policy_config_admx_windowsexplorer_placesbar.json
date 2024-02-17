@@ -1,0 +1,104 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "PlacesBar",
+        "Items displayed in Places Bar",
+        "\\Windows Components\\File Explorer\\Common Open File Dialog",
+        "Administrative Templates\\Windows Components\\File Explorer\\Common Open File Dialog",
+        "Common Open File Dialog"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-windowsexplorer#admx-windowsexplorer-placesbar"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_WindowsExplorer/PlacesBar",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_windowsexplorer_placesbar",
+    "categoryId": "93decccd-de24-4ec4-b21c-e08c14f13576",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_windowsexplorer_placesbar",
+    "description": "Configures the list of items displayed in the Places Bar in the Windows File/Open dialog. If enable this setting you can specify from 1 to 5 items to be displayed in the Places Bar.\r\n\r\nThe valid items you may display in the Places Bar are:\r\n\r\n1) Shortcuts to a local folders -- (ex. C:\\Windows)\r\n\r\n2) Shortcuts to remote folders -- (\\\\server\\share)\r\n\r\n3) FTP folders\r\n\r\n4) web folders\r\n\r\n5) Common Shell folders.\r\n\r\nThe list of Common Shell Folders that may be specified:\r\n\r\nDesktop, Recent Places, Documents, Pictures, Music, Recently Changed, Attachments and Saved Searches.\r\n\r\nIf you disable or do not configure this setting the default list of items will be displayed in the Places Bar.\r\n\r\nNote: In Windows Vista, this policy  setting applies only to applications that are using the Windows XP common dialog box style. This policy setting does not apply to the new Windows Vista common dialog box style.\r\n ",
+    "helpText": "",
+    "name": "PlacesBar",
+    "displayName": "Items displayed in Places Bar (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_windowsexplorer_placesbar_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_windowsexplorer_placesbar_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_windowsexplorer_placesbar_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_admx_windowsexplorer_placesbar_places0",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_admx_windowsexplorer_placesbar_places1",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_admx_windowsexplorer_placesbar_places2",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_admx_windowsexplorer_placesbar_places3",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_admx_windowsexplorer_placesbar_places4",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

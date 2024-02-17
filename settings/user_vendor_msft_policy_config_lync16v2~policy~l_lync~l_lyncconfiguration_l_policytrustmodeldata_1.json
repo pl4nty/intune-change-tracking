@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_PolicyTrustModelData_1",
+        "Trusted Domain List",
+        "\\Skype for Business 2016\\Microsoft Lync Feature Policies",
+        "Skype for Business 2016\\Microsoft Lync Feature Policies",
+        "Microsoft Lync Feature Policies"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/lync16v2~Policy~L_Lync~L_LyncConfiguration/L_PolicyTrustModelData_1",
+    "rootDefinitionId": "user_vendor_msft_policy_config_lync16v2~policy~l_lync~l_lyncconfiguration_l_policytrustmodeldata_1",
+    "categoryId": "151e95d3-64ec-424f-ba7e-4d1ba6ef5aa1",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_lync16v2~policy~l_lync~l_lyncconfiguration_l_policytrustmodeldata_1",
+    "description": "\r\nWhen Lync connects to an unknown domain, it needs explicit user consent.  A dialog is shown asking the user for confirmation on whether it should continue.\r\n\r\nThis policy gives administrators the ability to provide trusted domain names.  If a domain name is added to this list, Lync will trust that domain and will not show the dialog requesting permission.  Multiple domain addresses as comma separated values can be provided.\r\n\r\nBy setting this policy, Lync will not explicitly trust the default domains specified below.  It will exclusively trust the domain specified by the policy.\r\n\r\nSupported values:\r\n  Not Configured (Default)/Disabled:  By default the following domains will be trusted:  \"lync.com, outlook.com, lync.glbdns.microsoft.com, and microsoftonline.com.\"\r\n  Enabled:  The list of domains to be trusted.  For example: \"contoso.com, contoso.co.in\"\r\n      ",
+    "helpText": "",
+    "name": "L_PolicyTrustModelData_1",
+    "displayName": "Trusted Domain List (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_lync16v2~policy~l_lync~l_lyncconfiguration_l_policytrustmodeldata_1_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_lync16v2~policy~l_lync~l_lyncconfiguration_l_policytrustmodeldata_1_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_lync16v2~policy~l_lync~l_lyncconfiguration_l_policytrustmodeldata_1_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_lync16v2~policy~l_lync~l_lyncconfiguration_l_policytrustmodeldata_1_l_trustmodeldata_value",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

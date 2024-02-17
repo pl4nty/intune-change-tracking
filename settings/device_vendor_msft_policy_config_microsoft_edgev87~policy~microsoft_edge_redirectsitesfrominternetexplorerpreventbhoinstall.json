@@ -1,0 +1,72 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "RedirectSitesFromInternetExplorerPreventBHOInstall",
+        "Prevent install of the BHO to redirect incompatible sites from Internet Explorer to Microsoft Edge",
+        "\\Microsoft Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev87~Policy~microsoft_edge/RedirectSitesFromInternetExplorerPreventBHOInstall",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edgev87~policy~microsoft_edge_redirectsitesfrominternetexplorerpreventbhoinstall",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_microsoft_edgev87~policy~microsoft_edge_redirectsitesfrominternetexplorerpreventbhoinstall",
+    "description": "This setting lets you specify whether to block the install of the Browser Helper Object (BHO) that enables redirecting incompatible sites from Internet Explorer to Microsoft Edge for sites that require a modern browser.\r\n\r\nIf you enable this policy, the BHO will not be installed. If it is already installed it will be uninstalled on the next Microsoft Edge update.\r\n\r\nIf this policy is not configured or is disabled, the BHO will be installed.\r\n\r\nThe BHO is required for incompatible site redirection to occur, however whether redirection occurs or not is also controlled by 'RedirectSitesFromInternetExplorerRedirectMode' (Redirect incompatible sites from Internet Explorer to Microsoft Edge).\r\n\r\nFor more information about this policy see https://go.microsoft.com/fwlink/?linkid=2141715",
+    "helpText": "",
+    "name": "RedirectSitesFromInternetExplorerPreventBHOInstall",
+    "displayName": "Prevent install of the BHO to redirect incompatible sites from Internet Explorer to Microsoft Edge",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edgev87~policy~microsoft_edge_redirectsitesfrominternetexplorerpreventbhoinstall_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev87~policy~microsoft_edge_redirectsitesfrominternetexplorerpreventbhoinstall_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev87~policy~microsoft_edge_redirectsitesfrominternetexplorerpreventbhoinstall_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

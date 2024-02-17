@@ -1,0 +1,88 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Pol_ExtExclusionList",
+        "Files not cached",
+        "\\Network\\Offline Files",
+        "Administrative Templates\\Network\\Offline Files",
+        "Offline Files"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-offlinefiles#admx-offlinefiles-pol-extexclusionlist"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_OfflineFiles/Pol_ExtExclusionList",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_offlinefiles_pol_extexclusionlist",
+    "categoryId": "82a9c23f-2c09-4479-9cd3-e7f185d7676f",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_offlinefiles_pol_extexclusionlist",
+    "description": "Lists types of files that cannot be used offline.\r\n\r\nThis setting lets you exclude certain types of files from automatic and manual caching for offline use. The system does not cache files of the type specified in this setting even when they reside on a network share configured for automatic caching. Also, if users try to make a file of this type available offline, the operation will fail and the following message will be displayed in the Synchronization Manager progress dialog box: \"Files of this type cannot be made available offline.\"\r\n\r\nThis setting is designed to protect files that cannot be separated, such as database components.\r\n\r\nTo use this setting, type the file name extension in the \"Extensions\" box. To type more than one extension, separate the extensions with a semicolon (;).\r\n\r\nNote: To make changes to this setting effective, you must log off and log on again.\r\n ",
+    "helpText": "",
+    "name": "Pol_ExtExclusionList",
+    "displayName": "Files not cached",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_offlinefiles_pol_extexclusionlist_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_offlinefiles_pol_extexclusionlist_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_offlinefiles_pol_extexclusionlist_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_offlinefiles_pol_extexclusionlist_lbl_extexclusionlistedit",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

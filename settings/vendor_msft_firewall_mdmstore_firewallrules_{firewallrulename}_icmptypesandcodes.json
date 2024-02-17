@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Icmp Types And Codes",
+        "Firewall"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/Firewall-csp/"
+    ],
+    "baseUri": "./Vendor/MSFT/Firewall",
+    "offsetUri": "/MdmStore/FirewallRules/{0}/IcmpTypesAndCodes",
+    "rootDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+    "categoryId": "4a5e4714-00ac-4793-b0cc-5049041b0ed7",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "id": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_icmptypesandcodes",
+    "description": "\n                    String value. Multiple ICMP type+code pairs can be included in the string by separating each value with a \",\". If more than one ICMP type+code pair is specified, the strings must be separated by a comma.\n                    To specify all ICMP types and codes, use the \"*\" character. For specific ICMP types and codes, use the \":\" to separate the type and code.\n                    The following are valid examples: 3:4 or 1:*. The \"*\" character can be used to represent any code. The \"*\" character can't be used to specify any type, examples such as \"*:4\" or \"*:*\" are invalid.\n When setting this field in a firewall rule, the protocol field must also be set, to either 1 (ICMP) or 58 (IPv6-ICMP).",
+    "helpText": "",
+    "name": "IcmpTypesAndCodes",
+    "displayName": "ICMP Types And Codes",
+    "maximumCount": 600,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,microsoftSense",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.20348",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsNXT"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 87516,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+            "parentSettingId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}"
+        }
+    ],
+    "dependedOnBy": []
+}

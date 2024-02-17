@@ -1,0 +1,73 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Policy App Id",
+        "Firewall"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/Firewall-csp/"
+    ],
+    "baseUri": "./Vendor/MSFT/Firewall",
+    "offsetUri": "/MdmStore/FirewallRules/{0}/PolicyAppId",
+    "rootDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+    "categoryId": "4a5e4714-00ac-4793-b0cc-5049041b0ed7",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "id": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_policyappid",
+    "description": " Specifies one WDAC tag. This is a string that can contain any alphanumeric character and any of the characters \":\", \"/\", \".\", and \"_\". \r\n A PolicyAppId and ServiceName cannot be specified in the same rule.",
+    "helpText": "",
+    "name": "PolicyAppId",
+    "displayName": "Policy App Id",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,microsoftSense",
+        "configurationServiceProviderVersion": "1.1",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19045.2913",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsNXT"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "regEx",
+        "inputValidationSchema": "^[A-Za-z0-9_.:/]+$",
+        "maximumLength": 87516,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+            "parentSettingId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}"
+        }
+    ],
+    "dependedOnBy": []
+}

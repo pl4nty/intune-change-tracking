@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DQ_Enable",
+        "Enable disk quotas",
+        "\\System\\Disk Quotas",
+        "Administrative Templates\\System\\Disk Quotas",
+        "Disk Quotas"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-diskquota#admx-diskquota-dq-enable"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_DiskQuota/DQ_Enable",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_diskquota_dq_enable",
+    "categoryId": "c08e929f-742a-4cd8-a7e6-9a3d170fe020",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_diskquota_dq_enable",
+    "description": "This policy setting turns on and turns off disk quota management on all NTFS volumes of the computer, and prevents users from changing the setting.\r\n\r\nIf you enable this policy setting, disk quota management is turned on, and users cannot turn it off.\r\n\r\nIf you disable the policy setting, disk quota management is turned off, and users cannot turn it on.\r\n\r\nIf this policy setting is not configured, disk quota management is turned off by default, but administrators can turn it on.\r\n\r\nTo prevent users from changing the setting while a setting is in effect, the system disables the \"Enable quota management\" option on the Quota tab of NTFS volumes.\r\n\r\nNote: This policy setting turns on disk quota management but does not establish or enforce a particular disk quota limit. To specify a disk quota limit, use the \"Default quota limit and warning level\" policy setting. Otherwise, the system uses the physical space on the volume as the quota limit.\r\n\r\nNote: To turn on or turn off disk quota management without specifying a setting, in My Computer, right-click the name of an NTFS volume, click Properties, click the Quota tab, and then click \"Enable quota management.\"\r\n ",
+    "helpText": "",
+    "name": "DQ_Enable",
+    "displayName": "Enable disk quotas",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_diskquota_dq_enable_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_diskquota_dq_enable_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_diskquota_dq_enable_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,111 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Object Access Audit Filtering Platform Connection",
+        "Audit",
+        "Auditing"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Audit#audit-objectaccess-auditfilteringplatformconnection"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Audit/ObjectAccess_AuditFilteringPlatformConnection",
+    "rootDefinitionId": "device_vendor_msft_policy_config_audit_objectaccess_auditfilteringplatformconnection",
+    "categoryId": "5cb7f4f0-ef00-4eb3-80f4-2c2b97b053ea",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_audit_objectaccess_auditfilteringplatformconnection",
+    "description": "This policy setting allows you to audit connections that are allowed or blocked by the Windows Filtering Platform (WFP). The following events are included:     The Windows Firewall Service blocks an application from accepting incoming connections on the network.     The WFP allows a connection.     The WFP blocks a connection.     The WFP permits a bind to a local port.     The WFP blocks a bind to a local port.     The WFP allows a connection.     The WFP blocks a connection.     The WFP permits an application or service to listen on a port for incoming connections.     The WFP blocks an application or service to listen on a port for incoming connections.  If you configure this policy setting, an audit event is generated when connections are allowed or blocked by the WFP. Success audits record events generated when connections are allowed and Failure audits record events generated when connections are blocked. If you do not configure this policy setting, no audit event is generated when connected are allowed or blocked by the WFP.",
+    "helpText": "",
+    "name": "ObjectAccess_AuditFilteringPlatformConnection",
+    "displayName": "Object Access Audit Filtering Platform Connection",
+    "defaultOptionId": "device_vendor_msft_policy_config_audit_objectaccess_auditfilteringplatformconnection_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,microsoftSense",
+        "configurationServiceProviderVersion": "7.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17134.1039",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsNXT"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_audit_objectaccess_auditfilteringplatformconnection_0",
+            "description": "Off/None",
+            "helpText": null,
+            "name": "Off/None",
+            "displayName": "Off/ None",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_audit_objectaccess_auditfilteringplatformconnection_1",
+            "description": "Success",
+            "helpText": null,
+            "name": "Success",
+            "displayName": "Success",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_audit_objectaccess_auditfilteringplatformconnection_2",
+            "description": "Failure",
+            "helpText": null,
+            "name": "Failure",
+            "displayName": "Failure",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_audit_objectaccess_auditfilteringplatformconnection_3",
+            "description": "Success+Failure",
+            "helpText": null,
+            "name": "Success+Failure",
+            "displayName": "Success+ Failure",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

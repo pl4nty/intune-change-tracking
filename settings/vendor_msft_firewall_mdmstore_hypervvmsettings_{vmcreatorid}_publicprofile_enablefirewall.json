@@ -1,0 +1,106 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "replace",
+    "keywords": [
+        "Enable Firewall",
+        "Firewall"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/Firewall-csp/"
+    ],
+    "baseUri": "./Vendor/MSFT/Firewall",
+    "offsetUri": "/MdmStore/HyperVVMSettings/{0}/PublicProfile/EnableFirewall",
+    "rootDefinitionId": "vendor_msft_firewall_mdmstore_hypervvmsettings_{vmcreatorid}",
+    "categoryId": "4a5e4714-00ac-4793-b0cc-5049041b0ed7",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "vendor_msft_firewall_mdmstore_hypervvmsettings_{vmcreatorid}_publicprofile_enablefirewall",
+    "description": "This value is an on/off switch for the Hyper-V Firewall enforcement.",
+    "helpText": "",
+    "name": "EnableFirewall",
+    "displayName": "Enable Public Network Firewall",
+    "defaultOptionId": "vendor_msft_firewall_mdmstore_hypervvmsettings_{vmcreatorid}_publicprofile_enablefirewall_true",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager,microsoftSense",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22621.2352",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsNXT"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "vendor_msft_firewall_mdmstore_hypervvmsettings_{vmcreatorid}_publicprofile_enablefirewall_false",
+            "description": "Disable Hyper-V Firewall",
+            "helpText": null,
+            "name": "Disable Hyper-V Firewall",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "vendor_msft_firewall_mdmstore_hypervvmsettings_{vmcreatorid}_target_wsl",
+                    "parentSettingId": "vendor_msft_firewall_mdmstore_hypervvmsettings_{vmcreatorid}_target"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "vendor_msft_firewall_mdmstore_hypervvmsettings_{vmcreatorid}_publicprofile_enablefirewall_true",
+            "description": "Enable Hyper-V Firewall",
+            "helpText": null,
+            "name": "Enable Hyper-V Firewall",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "vendor_msft_firewall_mdmstore_hypervvmsettings_{vmcreatorid}_target_wsl",
+                    "parentSettingId": "vendor_msft_firewall_mdmstore_hypervvmsettings_{vmcreatorid}_target"
+                }
+            ],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "vendor_msft_firewall_mdmstore_hypervvmsettings_{vmcreatorid}_publicprofile_defaultoutboundaction",
+                    "required": false
+                },
+                {
+                    "dependedOnBy": "vendor_msft_firewall_mdmstore_hypervvmsettings_{vmcreatorid}_publicprofile_defaultinboundaction",
+                    "required": false
+                },
+                {
+                    "dependedOnBy": "vendor_msft_firewall_mdmstore_hypervvmsettings_{vmcreatorid}_publicprofile_allowlocalpolicymerge",
+                    "required": false
+                }
+            ]
+        }
+    ]
+}

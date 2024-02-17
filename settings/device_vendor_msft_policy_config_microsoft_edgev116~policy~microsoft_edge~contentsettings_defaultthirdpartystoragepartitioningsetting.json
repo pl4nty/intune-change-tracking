@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DefaultThirdPartyStoragePartitioningSetting",
+        "Default setting for third-party storage partitioning",
+        "\\Microsoft Edge\\Content settings",
+        "Microsoft Edge\\Content settings",
+        "Content settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev116~Policy~microsoft_edge~ContentSettings/DefaultThirdPartyStoragePartitioningSetting",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edgev116~policy~microsoft_edge~contentsettings_defaultthirdpartystoragepartitioningsetting",
+    "categoryId": "92d69c43-75ac-49b1-a3ef-9350079eef86",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_microsoft_edgev116~policy~microsoft_edge~contentsettings_defaultthirdpartystoragepartitioningsetting",
+    "description": "Third-party storage partitioning is on by default for some users starting with Microsoft Edge version 115, but it can be disabled with edge://flags.\r\n\r\nIf this policy is configured to \"AllowPartitioning\" or not configured, third-party storage partitioning can be enabled.\r\n\r\nIf this policy is set to \"BlockPartitioning\", third-party storage partitioning can't be enabled.\r\n\r\nPolicy options mapping:\r\n\r\n* AllowPartitioning (1) = Let third-party storage partitioning to be enabled.\r\n\r\n* BlockPartitioning (2) = Block third-party storage partitioning from being enabled.\r\n\r\nUse the preceding information when configuring this policy.",
+    "helpText": "",
+    "name": "DefaultThirdPartyStoragePartitioningSetting",
+    "displayName": "Default setting for third-party storage partitioning",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edgev116~policy~microsoft_edge~contentsettings_defaultthirdpartystoragepartitioningsetting_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev116~policy~microsoft_edge~contentsettings_defaultthirdpartystoragepartitioningsetting_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev116~policy~microsoft_edge~contentsettings_defaultthirdpartystoragepartitioningsetting_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_microsoft_edgev116~policy~microsoft_edge~contentsettings_defaultthirdpartystoragepartitioningsetting_defaultthirdpartystoragepartitioningsetting",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

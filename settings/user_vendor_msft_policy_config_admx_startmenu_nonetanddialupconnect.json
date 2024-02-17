@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "NoNetAndDialupConnect",
+        "Remove Network Connections from Start Menu",
+        "\\Start Menu and Taskbar",
+        "Administrative Templates\\Start Menu and Taskbar",
+        "Start Menu and Taskbar"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-startmenu#admx-startmenu-nonetanddialupconnect"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_StartMenu/NoNetAndDialupConnect",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_startmenu_nonetanddialupconnect",
+    "categoryId": "5161db41-7947-49ea-b9b3-dd92539e6783",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_startmenu_nonetanddialupconnect",
+    "description": "This policy setting allows you to remove Network Connections from the Start Menu.\r\n\r\nIf you enable this policy setting, users are prevented from running Network Connections.\r\n\r\nEnabling this policy setting prevents the Network Connections folder from opening. This policy setting also removes Network Connections from Settings on the Start menu.\r\n\r\nNetwork Connections still appears in Control Panel and in File Explorer, but if users try to start it, a message appears explaining that a setting prevents the action.\r\n\r\nIf you disable or do not configure this policy setting, Network Connections is available from the Start Menu.\r\n\r\nAlso, see the \"Disable programs on Settings menu\" and \"Disable Control Panel\" policy settings and the policy settings in the Network Connections folder (Computer Configuration and User Configuration\\Administrative Templates\\Network\\Network Connections).\r\n ",
+    "helpText": "",
+    "name": "NoNetAndDialupConnect",
+    "displayName": "Remove Network Connections from Start Menu (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_startmenu_nonetanddialupconnect_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_startmenu_nonetanddialupconnect_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_startmenu_nonetanddialupconnect_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

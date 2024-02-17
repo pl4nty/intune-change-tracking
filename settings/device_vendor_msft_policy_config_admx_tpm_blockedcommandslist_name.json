@@ -1,0 +1,88 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "BlockedCommandsList_Name",
+        "Configure the list of blocked TPM commands",
+        "\\System\\Trusted Platform Module Services",
+        "Administrative Templates\\System\\Trusted Platform Module Services",
+        "Trusted Platform Module Services"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-tpm#admx-tpm-blockedcommandslist-name"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_TPM/BlockedCommandsList_Name",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_tpm_blockedcommandslist_name",
+    "categoryId": "78d3d93f-03d0-4fa0-be56-be4bca0a7b3b",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_tpm_blockedcommandslist_name",
+    "description": "This policy setting allows you to manage the Group Policy list of Trusted Platform Module (TPM) commands blocked by Windows.\r\n\r\nIf you enable this policy setting, Windows will block the specified commands from being sent to the TPM on the computer. TPM commands are referenced by a command number. For example, command number 129 is TPM_OwnerReadInternalPub, and command number 170 is TPM_FieldUpgrade. To find the command number associated with each TPM command with TPM 1.2, run \"tpm.msc\" and navigate to the \"Command Management\" section.\r\n\r\nIf you disable or do not configure this policy setting, only those TPM commands specified through the default or local lists may be blocked by Windows. The default list of blocked TPM commands is pre-configured by Windows. You can view the default list by running \"tpm.msc\", navigating to the \"Command Management\" section, and making visible the \"On Default Block List\" column. The local list of blocked TPM commands is configured outside of Group Policy by running \"tpm.msc\" or through scripting against the Win32_Tpm interface. See related policy settings to enforce or ignore the default and local lists of blocked TPM commands.\r\n ",
+    "helpText": "",
+    "name": "BlockedCommandsList_Name",
+    "displayName": "Configure the list of blocked TPM commands",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_tpm_blockedcommandslist_name_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_tpm_blockedcommandslist_name_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_tpm_blockedcommandslist_name_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_tpm_blockedcommandslist_name_blockedcommandslist_ordinals2",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,84 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Audit Application Guard",
+        "Windows Defender Application Guard",
+        "Microsoft Defender Application Guard"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/WindowsDefenderApplicationGuard-csp/"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/WindowsDefenderApplicationGuard",
+    "offsetUri": "/Audit/AuditApplicationGuard",
+    "rootDefinitionId": "device_vendor_msft_windowsdefenderapplicationguard_audit_auditapplicationguard",
+    "categoryId": "cd55f347-a417-4fe9-83ee-8f1f40ac5eb0",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "template",
+    "id": "device_vendor_msft_windowsdefenderapplicationguard_audit_auditapplicationguard",
+    "description": "This policy setting allows you to decide whether auditing events can be collected from Microsoft Defender Application Guard. If you enable this setting, Application Guard inherits auditing policies from your device and logs system events from the Application Guard container to your host. If you disable this setting, event logs aren't collected from your Application Guard container.",
+    "helpText": "",
+    "name": "AuditApplicationGuard",
+    "displayName": "Audit Application Guard",
+    "defaultOptionId": "device_vendor_msft_windowsdefenderapplicationguard_audit_auditapplicationguard_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager",
+        "configurationServiceProviderVersion": "1.1",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsNXT"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_windowsdefenderapplicationguard_audit_auditapplicationguard_0",
+            "description": "Audit event logs aren't collected for Application Guard.",
+            "helpText": null,
+            "name": "Audit event logs aren't collected for Application Guard.",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_windowsdefenderapplicationguard_audit_auditapplicationguard_1",
+            "description": "Application Guard inherits its auditing policies from system and starts to audit security events for Application Guard container.",
+            "helpText": null,
+            "name": "Application Guard inherits its auditing policies from system and starts to audit security events for Application Guard container.",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

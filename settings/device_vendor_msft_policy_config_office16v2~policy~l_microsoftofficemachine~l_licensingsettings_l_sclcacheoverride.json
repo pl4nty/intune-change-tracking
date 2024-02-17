@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_SCLCacheOverride",
+        "Specify the location to save the licensing token used by shared computer activation",
+        "\\Microsoft Office 2016 (Machine)\\Licensing Settings",
+        "Microsoft Office 2016 (Machine)\\Licensing Settings",
+        "Licensing Settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/office16v2~Policy~L_MicrosoftOfficemachine~L_LicensingSettings/L_SCLCacheOverride",
+    "rootDefinitionId": "device_vendor_msft_policy_config_office16v2~policy~l_microsoftofficemachine~l_licensingsettings_l_sclcacheoverride",
+    "categoryId": "2e3f0407-6387-41b4-b6c2-ada4354be759",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_office16v2~policy~l_microsoftofficemachine~l_licensingsettings_l_sclcacheoverride",
+    "description": "\r\nThis policy setting allows you to specify the file folder to save the licensing token used by shared computer activation. \r\n\r\nShared computer activation is used only for situations where multiple users share the same computer. For example, when using Remote Desktop Services (RDS). \r\n\r\nBy default, the licensing token used by shared computer activation is saved in the %localappdata%\\Microsoft\\Office\\16.0\\Licensing folder. But, this location isn’t included in the user’s roaming profile, so the licensing token won’t be available if the user signs in to a different computer.\r\n\r\nIf you enable this policy setting, you need to specify a location to store the licensing token used by shared computer activation.  You should specify a folder that is specific to the user and that will be available to the user from whatever computer on the network that the user signs in to. For example, a folder that’s included in the user’s roaming profile, or a shared folder on the network, where there is a folder for each user.\r\n\r\nIf you disable or don’t configure this policy setting, Office uses the default folder to save the licensing token used by shared computer activation.\r\n\r\nNote: Shared computer activation is supported only with Office 365 subscription plans that include Office 365 ProPlus, Visio Pro for Office 365, or Project Online Desktop Client.\r\n      ",
+    "helpText": "",
+    "name": "L_SCLCacheOverride",
+    "displayName": "Specify the location to save the licensing token used by shared computer activation",
+    "defaultOptionId": "device_vendor_msft_policy_config_office16v2~policy~l_microsoftofficemachine~l_licensingsettings_l_sclcacheoverride_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_office16v2~policy~l_microsoftofficemachine~l_licensingsettings_l_sclcacheoverride_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_office16v2~policy~l_microsoftofficemachine~l_licensingsettings_l_sclcacheoverride_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_office16v2~policy~l_microsoftofficemachine~l_licensingsettings_l_sclcacheoverride_l_sclcacheoverride",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

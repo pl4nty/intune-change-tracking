@@ -1,0 +1,110 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "AM_EstimateFileHandlerRisk",
+        "Trust logic for file attachments",
+        "\\Windows Components\\Attachment Manager",
+        "Administrative Templates\\Windows Components\\Attachment Manager",
+        "Attachment Manager"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_AttachmentManager/AM_EstimateFileHandlerRisk",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_attachmentmanager_am_estimatefilehandlerrisk",
+    "categoryId": "3f8299b3-6803-4576-be08-7c311d04b8b9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_attachmentmanager_am_estimatefilehandlerrisk_am_trustlogicsetting",
+    "description": null,
+    "helpText": "",
+    "name": "AM_TrustLogicSetting",
+    "displayName": "Determine risk by (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_attachmentmanager_am_estimatefilehandlerrisk_am_trustlogicsetting_2",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_attachmentmanager_am_estimatefilehandlerrisk_am_trustlogicsetting_2",
+            "description": null,
+            "helpText": null,
+            "name": "Preferring the file handler",
+            "displayName": "Preferring the file handler",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_admx_attachmentmanager_am_estimatefilehandlerrisk_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_admx_attachmentmanager_am_estimatefilehandlerrisk"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_attachmentmanager_am_estimatefilehandlerrisk_am_trustlogicsetting_3",
+            "description": null,
+            "helpText": null,
+            "name": "Looking at the file handler and type",
+            "displayName": "Looking at the file handler and type",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "3"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_admx_attachmentmanager_am_estimatefilehandlerrisk_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_admx_attachmentmanager_am_estimatefilehandlerrisk"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_attachmentmanager_am_estimatefilehandlerrisk_am_trustlogicsetting_1",
+            "description": null,
+            "helpText": null,
+            "name": "Preferring the file type",
+            "displayName": "Preferring the file type",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_admx_attachmentmanager_am_estimatefilehandlerrisk_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_admx_attachmentmanager_am_estimatefilehandlerrisk"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

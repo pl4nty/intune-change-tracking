@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Do Not Use Web Results",
+        "Search"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Search#search-donotusewebresults"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Search/DoNotUseWebResults",
+    "rootDefinitionId": "device_vendor_msft_policy_config_search_donotusewebresults",
+    "categoryId": "794337be-8833-4b9a-bb88-8a030141578d",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_search_donotusewebresults",
+    "description": "Don't search the web or display web results in Search. This policy setting allows you to control whether or not Search can perform queries on the web, and if the web results are displayed in Search. If you enable this policy setting, queries won't be performed on the web and web results won't be displayed when a user performs a query in Search. If you disable this policy setting, queries will be performed on the web and web results will be displayed when a user performs a query in Search.",
+    "helpText": "",
+    "name": "DoNotUseWebResults",
+    "displayName": "Do Not Use Web Results",
+    "defaultOptionId": "device_vendor_msft_policy_config_search_donotusewebresults_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "7.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17134",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_search_donotusewebresults_0",
+            "description": "Not allowed. Queries won't be performed on the web and web results won't be displayed when a user performs a query in Search.",
+            "helpText": null,
+            "name": "Not allowed. Queries won't be performed on the web and web results won't be displayed when a user performs a query in Search.",
+            "displayName": "Not allowed. Queries won't be performed on the web and web results won't be displayed when a user performs a query in Search.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_search_donotusewebresults_1",
+            "description": "Allowed. Queries will be performed on the web and web results will be displayed when a user performs a query in Search.",
+            "helpText": null,
+            "name": "Allowed. Queries will be performed on the web and web results will be displayed when a user performs a query in Search.",
+            "displayName": "Allowed. Queries will be performed on the web and web results will be displayed when a user performs a query in Search.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_Encryptiontypeforirm",
+        "Encryption mode for Information Rights Management (IRM)",
+        "\\Microsoft Office 2016\\Security Settings",
+        "Microsoft Office 2016\\Security Settings",
+        "Security Settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/office16v14~Policy~L_MicrosoftOfficeSystem~L_SecuritySettings/L_Encryptiontypeforirm",
+    "rootDefinitionId": "user_vendor_msft_policy_config_office16v14~policy~l_microsoftofficesystem~l_securitysettings_l_encryptiontypeforirm",
+    "categoryId": "50b4bc60-802c-477a-9366-80e09154595f",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_office16v14~policy~l_microsoftofficesystem~l_securitysettings_l_encryptiontypeforirm",
+    "description": "If you enable this policy setting, you can choose from two options for controlling the encryption mode that Excel, PowerPoint, Word, Visio, and Outlook applications use to protect content with Information Rights Management (IRM):\r\n\r\n- Electronic Codebook (ECB) – ECB mode is always used when applying IRM encryption.\r\n- Cipher Block Chaining (CBC) – CBC mode is always used when applying IRM encryption.\r\n\r\nIf you disable or don't configure this policy setting:\r\n\r\n- For Microsoft 365 Apps (Version 2304 or later): Cipher Block Chaining (CBC) mode is used.\r\n- For earlier Microsoft 365 Apps and Office LTSC 2021, 2019, and 2016: Electronic Codebook (ECB) mode is used.",
+    "helpText": "",
+    "name": "L_Encryptiontypeforirm",
+    "displayName": "Encryption mode for Information Rights Management (IRM) (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_office16v14~policy~l_microsoftofficesystem~l_securitysettings_l_encryptiontypeforirm_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v14~policy~l_microsoftofficesystem~l_securitysettings_l_encryptiontypeforirm_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v14~policy~l_microsoftofficesystem~l_securitysettings_l_encryptiontypeforirm_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_office16v14~policy~l_microsoftofficesystem~l_securitysettings_l_encryptiontypeforirm_l_encryptiontypeforirmcolon",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

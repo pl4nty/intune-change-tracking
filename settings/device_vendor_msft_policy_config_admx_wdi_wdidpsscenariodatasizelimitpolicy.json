@@ -1,0 +1,88 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "WdiDpsScenarioDataSizeLimitPolicy",
+        "Diagnostics: Configure scenario retention",
+        "\\System\\Troubleshooting and Diagnostics",
+        "Administrative Templates\\System\\Troubleshooting and Diagnostics",
+        "Troubleshooting and Diagnostics"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-wdi#admx-wdi-wdidpsscenariodatasizelimitpolicy"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_WDI/WdiDpsScenarioDataSizeLimitPolicy",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_wdi_wdidpsscenariodatasizelimitpolicy",
+    "categoryId": "424a0e73-8002-42e3-b47d-2062fc17c3b3",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_wdi_wdidpsscenariodatasizelimitpolicy",
+    "description": "This policy setting determines the data retention limit for Diagnostic Policy Service (DPS) scenario data.\r\n\r\nIf you enable this policy setting, you must enter the maximum size of scenario data that should be retained in megabytes. Detailed troubleshooting data related to scenarios will be retained until this limit is reached.\r\n\r\nIf you disable or do not configure this policy setting, the DPS deletes scenario data once it exceeds 128 megabytes in size.\r\n\r\nNo reboots or service restarts are required for this policy setting to take effect: changes take effect immediately.\r\n\r\nThis policy setting will only take effect when the Diagnostic Policy Service is in the running state.  When the service is stopped or disabled, diagnostic scenario data will not be deleted.  The DPS can be configured with the Services snap-in to the Microsoft Management Console.\r\n ",
+    "helpText": "",
+    "name": "WdiDpsScenarioDataSizeLimitPolicy",
+    "displayName": "Diagnostics: Configure scenario retention",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_wdi_wdidpsscenariodatasizelimitpolicy_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_wdi_wdidpsscenariodatasizelimitpolicy_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_wdi_wdidpsscenariodatasizelimitpolicy_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_wdi_wdidpsscenariodatasizelimitpolicy_wdidpsscenariodatasizelimitpolicyvalue",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,92 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Client Settings",
+        "Default Elevation Response",
+        "Privilege Management",
+        "Privilege Management Elevation Client Settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "PrivilegeManagement/ElevationClientSettings/DefaultElevationResponse",
+    "rootDefinitionId": "device_vendor_msft_policy_elevationclientsettings_enableepm",
+    "categoryId": "b750fe41-33c4-4293-8dfc-42285be35752",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "id": "device_vendor_msft_policy_elevationclientsettings_defaultelevationresponse",
+    "description": "",
+    "helpText": null,
+    "name": "DefaultElevationResponse",
+    "displayName": "Default elevation response",
+    "defaultOptionId": "device_vendor_msft_policy_elevationclientsettings_defaultelevationresponse_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,endpointPrivilegeManagement",
+        "configurationServiceProviderVersion": null,
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19042",
+        "windowsSkus": [
+            "windowsProfessional",
+            "windowsEnterprise",
+            "windowsEducation",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_elevationclientsettings_defaultelevationresponse_0",
+            "description": "Deny all requests",
+            "helpText": null,
+            "name": "DenyAllRequests",
+            "displayName": "Deny all requests",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_elevationclientsettings_enableepm_1",
+                    "parentSettingId": "device_vendor_msft_policy_elevationclientsettings_enableepm"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_elevationclientsettings_defaultelevationresponse_1",
+            "description": "Require user confirmation",
+            "helpText": null,
+            "name": "RequireUserConfirmation",
+            "displayName": "Require user confirmation",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_elevationclientsettings_enableepm_1",
+                    "parentSettingId": "device_vendor_msft_policy_elevationclientsettings_enableepm"
+                }
+            ],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_privilegemanagement_elevationclientsettings_defaultelevationresponse_validation",
+                    "required": false
+                }
+            ]
+        }
+    ]
+}

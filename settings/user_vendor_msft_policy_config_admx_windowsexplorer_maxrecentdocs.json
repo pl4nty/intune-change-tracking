@@ -1,0 +1,88 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "MaxRecentDocs",
+        "Maximum number of recent documents",
+        "\\Windows Components\\File Explorer",
+        "Administrative Templates\\Windows Components\\File Explorer",
+        "File Explorer"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-windowsexplorer#admx-windowsexplorer-maxrecentdocs"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_WindowsExplorer/MaxRecentDocs",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_windowsexplorer_maxrecentdocs",
+    "categoryId": "35525ba9-da99-460e-afd3-ba86506b0ba3",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_windowsexplorer_maxrecentdocs",
+    "description": "\"This policy setting allows you to set the maximum number of shortcuts the system can display in the Recent Items menu on the Start menu.\r\n\r\nThe Recent Items menu contains shortcuts to the nonprogram files the user has most recently opened.\r\n\r\nIf you enable this policy setting, the system displays the number of shortcuts specified by the policy setting.\r\n\r\nIf you disable or do not configure this policy setting, by default, the system displays shortcuts to the 10 most recently opened documents.\"\r\n ",
+    "helpText": "",
+    "name": "MaxRecentDocs",
+    "displayName": "Maximum number of recent documents (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_windowsexplorer_maxrecentdocs_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_windowsexplorer_maxrecentdocs_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_windowsexplorer_maxrecentdocs_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_admx_windowsexplorer_maxrecentdocs_maxrecentdocs",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}
