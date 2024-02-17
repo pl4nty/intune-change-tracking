@@ -16,11 +16,11 @@ jobs:
         with:
           sparse-checkout: .
       # azure-identity doesn't support GitHub WIF
-      uses: azure/login@v1
-      with:
-        tenant-id: ${{ env.AZURE_TENANT_ID }}
-        client-id: ${{ env.AZURE_CLIENT_ID }}
-        allow-no-subscriptions: true
+      - uses: azure/login@v1
+        with:
+          tenant-id: ${{ env.AZURE_TENANT_ID }}
+          client-id: ${{ env.AZURE_CLIENT_ID }}
+          allow-no-subscriptions: true
       - uses: actions/setup-python@v5.0.0
         with:
           cache: pip
