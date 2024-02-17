@@ -12,20 +12,20 @@ jobs:
       id-token: write # Graph auth
       contents: write # committing
     steps:
-      - uses: actions/checkout@v4.1.1
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       # azure-identity doesn't support GitHub WIF
-      - uses: azure/login@v1
+      - uses: azure/login@cb79c773a3cfa27f31f25eb3f677781210c9ce3d # v1
         with:
           tenant-id: ${{ vars.AZURE_TENANT_ID }}
           client-id: ${{ vars.AZURE_CLIENT_ID }}
           allow-no-subscriptions: true
-      - uses: actions/setup-python@v5.0.0
+      - uses: actions/setup-python@0a5c61591373683505ea898e09a3ea4f39ef2b9c # v5.0.0
         with:
           python-version: 3.12
           cache: pip
       - run: pip install -r requirements.txt
       - run: python main.py
-      - uses: EndBug/add-and-commit@v9.1.4
+      - uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
         with:
           default_author: github_actions
           message: 'chore: refresh data'
