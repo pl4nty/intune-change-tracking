@@ -1,0 +1,88 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DNS_RegisterReverseLookup",
+        "Register PTR records",
+        "\\Network\\DNS Client",
+        "Administrative Templates\\Network\\DNS Client",
+        "DNS Client"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-dnsclient#admx-dnsclient-dns-registerreverselookup"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_DnsClient/DNS_RegisterReverseLookup",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_dnsclient_dns_registerreverselookup",
+    "categoryId": "bd8dacbf-ab7b-4a93-8294-7db61b9d49b4",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_dnsclient_dns_registerreverselookup",
+    "description": "Specifies if DNS client computers will register PTR resource records.\r\n\r\nBy default, DNS clients configured to perform dynamic DNS registration will attempt to register PTR resource record only if they successfully registered the corresponding A resource record.\r\n\r\nIf you enable this policy setting, registration of PTR records will be determined by the option that you choose under Register PTR records.\r\n\r\nTo use this policy setting, click Enabled, and then select one of the following options from the drop-down list:\r\n\r\nDo not register:  Computers will not attempt to register PTR resource records.\r\n\r\nRegister: Computers will attempt to register PTR resource records even if registration of the corresponding A records was not successful.\r\n\r\nRegister only if A record registration succeeds:  Computers will attempt to register PTR resource records only if registration of the corresponding A records was successful.\r\n\r\nIf you disable this policy setting, or if you do not configure this policy setting, computers will use locally configured settings.\n ",
+    "helpText": "",
+    "name": "DNS_RegisterReverseLookup",
+    "displayName": "Register PTR records",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_dnsclient_dns_registerreverselookup_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_dnsclient_dns_registerreverselookup_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_dnsclient_dns_registerreverselookup_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_dnsclient_dns_registerreverselookup_dns_registerreverselookup_box",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

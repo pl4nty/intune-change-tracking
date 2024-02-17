@@ -1,0 +1,91 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "RpcIgnoreDelegationFailure",
+        "Ignore Delegation Failure",
+        "\\System\\Remote Procedure Call",
+        "Administrative Templates\\System\\Remote Procedure Call",
+        "Remote Procedure Call"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_RPC/RpcIgnoreDelegationFailure",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_rpc_rpcignoredelegationfailure",
+    "categoryId": "73a3a483-dcba-4b34-b7cb-9c68c871864c",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_rpc_rpcignoredelegationfailure_rpcignoredelegationfailurelist",
+    "description": null,
+    "helpText": "",
+    "name": "RpcIgnoreDelegationFailureList",
+    "displayName": "Ignoring Delegation Failure: (Device)",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_rpc_rpcignoredelegationfailure_rpcignoredelegationfailurelist_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_rpc_rpcignoredelegationfailure_rpcignoredelegationfailurelist_0",
+            "description": null,
+            "helpText": null,
+            "name": "Off",
+            "displayName": "Off",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_rpc_rpcignoredelegationfailure_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_rpc_rpcignoredelegationfailure"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_rpc_rpcignoredelegationfailure_rpcignoredelegationfailurelist_1",
+            "description": null,
+            "helpText": null,
+            "name": "On",
+            "displayName": "On",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_rpc_rpcignoredelegationfailure_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_rpc_rpcignoredelegationfailure"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

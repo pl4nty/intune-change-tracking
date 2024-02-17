@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ForceClassicControlPanel",
+        "Always open All Control Panel Items when opening Control Panel",
+        "\\Control Panel",
+        "Administrative Templates\\Control Panel",
+        "Control Panel"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-controlpanel#admx-controlpanel-forceclassiccontrolpanel"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_ControlPanel/ForceClassicControlPanel",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_controlpanel_forceclassiccontrolpanel",
+    "categoryId": "7a3a7335-4837-4bc5-9282-448402a05d89",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_controlpanel_forceclassiccontrolpanel",
+    "description": "This policy setting controls the default Control Panel view, whether by category or icons. \r\n\r\nIf this policy setting is enabled, the Control Panel opens to the icon view.\r\n\r\nIf this policy setting is disabled, the Control Panel opens to the category view.\r\n\r\nIf this policy setting is not configured, the Control Panel opens to the view used in the last Control Panel session.\r\nNote: Icon size is dependent upon what the user has set it to in the previous session.\n ",
+    "helpText": "",
+    "name": "ForceClassicControlPanel",
+    "displayName": "Always open All Control Panel Items when opening Control Panel (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_controlpanel_forceclassiccontrolpanel_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_controlpanel_forceclassiccontrolpanel_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_controlpanel_forceclassiccontrolpanel_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

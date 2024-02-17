@@ -1,0 +1,88 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "PrinterDirectorySearchScope",
+        "Default Active Directory path when searching for printers",
+        "\\Control Panel\\Printers",
+        "Administrative Templates\\Control Panel\\Printers",
+        "Printers"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-printing#admx-printing-printerdirectorysearchscope"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_Printing/PrinterDirectorySearchScope",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_printing_printerdirectorysearchscope",
+    "categoryId": "684799ba-398b-4728-aa21-40c8469cbe87",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_printing_printerdirectorysearchscope",
+    "description": "Specifies the Active Directory location where searches for printers begin.\r\n\r\n          The Add Printer Wizard gives users the option of searching Active Directory for a shared printer.\r\n\r\n          If you enable this policy setting, these searches begin at the location you specify in the \"Default Active Directory path\" box. Otherwise, searches begin at the root of Active Directory.\r\n\r\n          This setting only provides a starting point for Active Directory searches for printers. It does not restrict user searches through Active Directory.\r\n ",
+    "helpText": "",
+    "name": "PrinterDirectorySearchScope",
+    "displayName": "Default Active Directory path when searching for printers (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_printing_printerdirectorysearchscope_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_printing_printerdirectorysearchscope_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_printing_printerdirectorysearchscope_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_admx_printing_printerdirectorysearchscope_printerdirectorysearchscope_name",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

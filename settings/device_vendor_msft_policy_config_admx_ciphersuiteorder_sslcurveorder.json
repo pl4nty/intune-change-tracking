@@ -1,0 +1,88 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "SSLCurveOrder",
+        "ECC Curve Order",
+        "\\Network\\SSL Configuration Settings",
+        "Administrative Templates\\Network\\SSL Configuration Settings",
+        "SSL Configuration Settings"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-ciphersuiteorder#admx-ciphersuiteorder-sslcurveorder"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_CipherSuiteOrder/SSLCurveOrder",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_ciphersuiteorder_sslcurveorder",
+    "categoryId": "b221d3c2-e05a-4210-bf9c-2d7c7c0fd35a",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_ciphersuiteorder_sslcurveorder",
+    "description": "This policy setting determines the priority order of ECC curves used with ECDHE cipher suites.\r\n\r\nIf you enable this policy setting, ECC curves are prioritized in the order specified.(Enter one Curve name per line)\r\n\r\nIf you disable or do not configure this policy setting, the default ECC curve order is used.\r\n\r\nDefault Curve Order\r\n============\r\ncurve25519\r\nNistP256\r\nNistP384\r\n\r\nTo See all the curves supported on the system, Use the following command:\r\n\r\nCertUtil.exe -DisplayEccCurve\r\n\r\n      \r\n ",
+    "helpText": "",
+    "name": "SSLCurveOrder",
+    "displayName": "ECC Curve Order",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_ciphersuiteorder_sslcurveorder_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_ciphersuiteorder_sslcurveorder_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_ciphersuiteorder_sslcurveorder_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_ciphersuiteorder_sslcurveorder_sslcurveorderlist",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

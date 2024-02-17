@@ -1,0 +1,129 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Pol_MSS_TcpMaxConnectResponseRetransmissions",
+        "MSS: (TcpMaxConnectResponseRetransmissions) SYN-ACK retransmissions when a connection request is not acknowledged",
+        "\\MSS (Legacy)",
+        "Administrative Templates\\MSS (Legacy)",
+        "MSS (Legacy)"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_MSS-legacy/Pol_MSS_TcpMaxConnectResponseRetransmissions",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_tcpmaxconnectresponseretransmissions",
+    "categoryId": "e00ff1f8-a2d1-4d3b-bb07-f58b38b8d5d7",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_tcpmaxconnectresponseretransmissions_tcpmaxconnectresponseretransmissions",
+    "description": null,
+    "helpText": "",
+    "name": "TcpMaxConnectResponseRetransmissions",
+    "displayName": "TcpMaxConnectResponseRetransmissions (Device)",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_tcpmaxconnectresponseretransmissions_tcpmaxconnectresponseretransmissions_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_tcpmaxconnectresponseretransmissions_tcpmaxconnectresponseretransmissions_0",
+            "description": null,
+            "helpText": null,
+            "name": "No retransmission, half-open connections dropped after 3 seconds",
+            "displayName": "No retransmission, half-open connections dropped after 3 seconds",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_tcpmaxconnectresponseretransmissions_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_tcpmaxconnectresponseretransmissions"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_tcpmaxconnectresponseretransmissions_tcpmaxconnectresponseretransmissions_1",
+            "description": null,
+            "helpText": null,
+            "name": "3 seconds, half-open connections dropped after 9 seconds",
+            "displayName": "3 seconds, half-open connections dropped after 9 seconds",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_tcpmaxconnectresponseretransmissions_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_tcpmaxconnectresponseretransmissions"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_tcpmaxconnectresponseretransmissions_tcpmaxconnectresponseretransmissions_2",
+            "description": null,
+            "helpText": null,
+            "name": "3 & 6 seconds, half-open connections dropped after 21 seconds",
+            "displayName": "3 & 6 seconds, half-open connections dropped after 21 seconds",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_tcpmaxconnectresponseretransmissions_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_tcpmaxconnectresponseretransmissions"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_tcpmaxconnectresponseretransmissions_tcpmaxconnectresponseretransmissions_3",
+            "description": null,
+            "helpText": null,
+            "name": "3, 6, & 9 seconds, half-open connections dropped after 45 seconds",
+            "displayName": "3, 6, & 9 seconds, half-open connections dropped after 45 seconds",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "3"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_tcpmaxconnectresponseretransmissions_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_tcpmaxconnectresponseretransmissions"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

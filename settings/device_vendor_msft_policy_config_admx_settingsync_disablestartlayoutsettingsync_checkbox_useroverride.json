@@ -1,0 +1,91 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DisableStartLayoutSettingSync",
+        "Do not sync start settings",
+        "\\Windows Components\\Sync your settings",
+        "Administrative Templates\\Windows Components\\Sync your settings",
+        "Sync your settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_SettingSync/DisableStartLayoutSettingSync",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_settingsync_disablestartlayoutsettingsync",
+    "categoryId": "7574a907-5608-491f-8011-c57d487457f4",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_settingsync_disablestartlayoutsettingsync_checkbox_useroverride",
+    "description": null,
+    "helpText": "",
+    "name": "CheckBox_UserOverride",
+    "displayName": "Allow users to turn \"start layout\" syncing on. (Device)",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_settingsync_disablestartlayoutsettingsync_checkbox_useroverride_0",
+            "description": null,
+            "helpText": null,
+            "name": "False",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_settingsync_disablestartlayoutsettingsync_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_settingsync_disablestartlayoutsettingsync"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_settingsync_disablestartlayoutsettingsync_checkbox_useroverride_1",
+            "description": null,
+            "helpText": null,
+            "name": "True",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_settingsync_disablestartlayoutsettingsync_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_settingsync_disablestartlayoutsettingsync"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

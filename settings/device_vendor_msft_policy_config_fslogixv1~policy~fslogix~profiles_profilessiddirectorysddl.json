@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ProfilesSIDDirectorySDDL",
+        "SID Directory SDDL",
+        "\\FSLogix\\Profile Containers",
+        "Administrative Templates\\FSLogix\\Profile Containers",
+        "Profile Containers"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/FSLogixv1~Policy~FSLogix~Profiles/ProfilesSIDDirectorySDDL",
+    "rootDefinitionId": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilessiddirectorysddl",
+    "categoryId": "0b4f28d5-fc68-43a4-92cb-9a47c2a8ebf9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilessiddirectorysddl",
+    "description": "NOTE:  Once this policy is Enabled, only Disable will remove the registry value. Enabled to Not Configured will have NO EFFECT.\r\n\r\nSDDL string representing the ACLs to use when creating the SID container folder.\r\n\r\nRegistry Entry:  HKLM\\SOFTWARE\\FSLogix\\Profiles\\SIDDirSDDL\r\nType:  REG_SZ",
+    "helpText": "",
+    "name": "ProfilesSIDDirectorySDDL",
+    "displayName": "SID Directory SDDL",
+    "defaultOptionId": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilessiddirectorysddl_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilessiddirectorysddl_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilessiddirectorysddl_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilessiddirectorysddl_profilessiddirectorysddl",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "CachePath",
+        "Package manifest and payload cache path",
+        "\\Visual Studio\\Install and Update Settings",
+        "Administrative Templates\\Visual Studio\\Install and Update Settings",
+        "Install and Update Settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/VisualStudiov1~Policy~VisualStudio~InstallandUpdateSettings/CachePath",
+    "rootDefinitionId": "device_vendor_msft_policy_config_visualstudiov1~policy~visualstudio~installandupdatesettings_cachepath",
+    "categoryId": "175ddbac-b0ae-4d9d-b76e-4eb1a487fc93",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_visualstudiov1~policy~visualstudio~installandupdatesettings_cachepath",
+    "description": "The directory where package manifests and, optionally, payloads are stored.\r\n\r\nThe Visual Studio Installer enforces a 50 character limit for the path.\r\n\r\nFor more information, see http://aka.ms/vs/setup/policies.",
+    "helpText": "",
+    "name": "CachePath",
+    "displayName": "Package manifest and payload cache path",
+    "defaultOptionId": "device_vendor_msft_policy_config_visualstudiov1~policy~visualstudio~installandupdatesettings_cachepath_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_visualstudiov1~policy~visualstudio~installandupdatesettings_cachepath_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_visualstudiov1~policy~visualstudio~installandupdatesettings_cachepath_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_visualstudiov1~policy~visualstudio~installandupdatesettings_cachepath_cachepath_textbox",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

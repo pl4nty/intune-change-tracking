@@ -1,0 +1,47 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Settings",
+        "Passcode",
+        "Declarative Device Management (DDM)\\Passcode"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "MaximumGracePeriodInMinutes",
+    "rootDefinitionId": "passcode_passcode",
+    "categoryId": "2cdd4a96-23c1-4419-b88c-41bbaa119e68",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "passcode_maximumgraceperiodinminutes",
+    "description": "Specifies the maximum period that a user can select, during which a device can be unlocked without entering the passcode. A value of 0 implies no grace period, and requires a passcode be entered immediately. In the absence of this key, the user can select any period.\nIn macOS, this will be translated to screensaver settings.",
+    "helpText": null,
+    "name": "MaximumGracePeriodInMinutes",
+    "displayName": "Maximum Grace Period",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 2147483647,
+        "minimumValue": 0
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 0
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "passcode_passcode",
+            "parentSettingId": "passcode_passcode"
+        }
+    ],
+    "dependedOnBy": []
+}

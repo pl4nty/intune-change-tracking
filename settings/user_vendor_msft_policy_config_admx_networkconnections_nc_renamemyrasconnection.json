@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "NC_RenameMyRasConnection",
+        "Prohibit renaming private remote access connections",
+        "\\Network\\Network Connections",
+        "Administrative Templates\\Network\\Network Connections",
+        "Network Connections"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-networkconnections#admx-networkconnections-nc-renamemyrasconnection"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_NetworkConnections/NC_RenameMyRasConnection",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_networkconnections_nc_renamemyrasconnection",
+    "categoryId": "76c8131a-62fe-4134-aeac-d999f01911ed",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_networkconnections_nc_renamemyrasconnection",
+    "description": "Determines whether users can rename their private remote access connections.\r\n\r\nPrivate connections are those that are available only to one user. To create a private connection, on the Connection Availability page in the New Connection Wizard, click the \"Only for myself\" option.\r\n\r\nIf you enable this setting (and enable the \"Enable Network Connections settings for Administrators\" setting), the Rename option is disabled for all users (including administrators).\r\n\r\nImportant: If the \"Enable Network Connections settings for Administrators\" is disabled or not configured, this setting will not apply to administrators on post-Windows 2000 computers.\r\n\r\nIf you disable this setting or do not configure it, the Rename option is enabled for all users' private remote access connections. Users can rename their private connection by clicking an icon representing the connection or by using the File menu.\r\n\r\nNote: This setting does not prevent users from using other programs, such as Internet Explorer, to bypass this setting.\r\n ",
+    "helpText": "",
+    "name": "NC_RenameMyRasConnection",
+    "displayName": "Prohibit renaming private remote access connections (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_networkconnections_nc_renamemyrasconnection_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_networkconnections_nc_renamemyrasconnection_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_networkconnections_nc_renamemyrasconnection_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,87 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "SetCost3G",
+        "Set 3G Cost",
+        "\\Network\\WWAN Service\\WWAN Media Cost",
+        "Administrative Templates\\Network\\WWAN Service\\WWAN Media Cost",
+        "WWAN Media Cost"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-datausage#datausage-setcost3g"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/DataUsage/SetCost3G",
+    "rootDefinitionId": "device_vendor_msft_policy_config_datausage_setcost3g",
+    "categoryId": "ab6aa2f6-87bf-4a06-a206-e0902af3e4bc",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_datausage_setcost3g",
+    "description": "This policy setting configures the cost of 3G connections on the local machine.\r\n\r\nIf this policy setting is enabled, a drop-down list box presenting possible cost values will be active.  Selecting one of the following values from the list will set the cost of all 3G connections on the local machine:\r\n\r\n- Unrestricted: Use of this connection is unlimited and not restricted by usage charges and capacity constraints. \r\n\r\n- Fixed: Use of this connection is not restricted by usage charges and capacity constraints up to a certain data limit. \r\n\r\n- Variable: This connection is costed on a per byte basis.\r\n\r\nIf this policy setting is disabled or is not configured, the cost of 3G connections is Fixed by default.\r\n      ",
+    "helpText": "",
+    "name": "SetCost3G",
+    "displayName": "Set 3G Cost",
+    "defaultOptionId": "device_vendor_msft_policy_config_datausage_setcost3g_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.15063",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_datausage_setcost3g_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_datausage_setcost3g_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_datausage_setcost3g_cost3g_dropdownlist",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

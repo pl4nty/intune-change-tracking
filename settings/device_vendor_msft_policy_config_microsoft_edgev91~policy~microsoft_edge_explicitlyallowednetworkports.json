@@ -1,0 +1,77 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ExplicitlyAllowedNetworkPorts",
+        "Explicitly allowed network ports",
+        "\\Microsoft Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev91~Policy~microsoft_edge/ExplicitlyAllowedNetworkPorts",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edgev91~policy~microsoft_edge_explicitlyallowednetworkports",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_microsoft_edgev91~policy~microsoft_edge_explicitlyallowednetworkports",
+    "description": "This policy allows bypassing the restricted port list built into Microsoft Edge. The set of ports is defined as a comma-separated list that outgoing connections should be permitted on.\r\n\r\nPorts are restricted to prevent Microsoft Edge from being used as a vector to exploit various network vulnerabilities. Setting this policy may expose your network to attacks. This policy is intended as a temporary workaround for error code \"ERR_UNSAFE_PORT\" while migrating a service running on a blocked port to a standard port (for example port 80 or 443).\r\n\r\nMalicious websites can easily detect that this policy is set, and for which ports, then use that information to target attacks.\r\n\r\nLeaving the value empty or unset means that all restricted ports will be blocked. Invalid port values set through this policy will be ignored while valid ones will still be applied.\r\n\r\nThis policy overrides the \"--explicitly-allowed-ports\" command-line option.\r\n\r\nPolicy options mapping:\r\n\r\n* 554 (554) = port 554 (expires 2021/10/15)\r\n\r\n* 10080 (10080) = port 10080 (expires 2022/04/01)\r\n\r\n* 6566 (6566) = port 6566 (expires 2021/10/15)\r\n\r\nUse the preceding information when configuring this policy.\r\n\r\nExample value:\r\n\r\n10080",
+    "helpText": "",
+    "name": "ExplicitlyAllowedNetworkPorts",
+    "displayName": "Explicitly allowed network ports",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edgev91~policy~microsoft_edge_explicitlyallowednetworkports_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev91~policy~microsoft_edge_explicitlyallowednetworkports_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev91~policy~microsoft_edge_explicitlyallowednetworkports_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_microsoft_edgev91~policy~microsoft_edge_explicitlyallowednetworkports_explicitlyallowednetworkportsdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

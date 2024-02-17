@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_PjFileType",
+        "Save Microsoft Project files as",
+        "\\Microsoft Project 2016\\Project Options\\Save",
+        "Microsoft Project 2016\\Project Options\\Save",
+        "Save"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/proj16v2~Policy~L_Proj~L_ProjectOptions~L_PjSave/L_PjFileType",
+    "rootDefinitionId": "user_vendor_msft_policy_config_proj16v2~policy~l_proj~l_projectoptions~l_pjsave_l_pjfiletype",
+    "categoryId": "6ad0e199-ff50-4e86-b22f-b55ef4ff2329",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_proj16v2~policy~l_proj~l_projectoptions~l_pjsave_l_pjfiletype",
+    "description": "Specifies the default file format that should be applied when any Project file is saved.\r\n\r\nIf you enable this setting, project files will be saved with the format you specified.\r\n\r\nIf you disable or do not configure this setting, the user's default setting is used.",
+    "helpText": "",
+    "name": "L_PjFileType",
+    "displayName": "Save Microsoft Project files as (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_proj16v2~policy~l_proj~l_projectoptions~l_pjsave_l_pjfiletype_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_proj16v2~policy~l_proj~l_projectoptions~l_pjsave_l_pjfiletype_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_proj16v2~policy~l_proj~l_projectoptions~l_pjsave_l_pjfiletype_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_proj16v2~policy~l_proj~l_projectoptions~l_pjsave_l_pjfiletype_l_pjfiletype30",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

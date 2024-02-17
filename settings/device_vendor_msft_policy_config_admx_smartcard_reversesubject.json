@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ReverseSubject",
+        "Reverse the subject name stored in a certificate when displaying",
+        "\\Windows Components\\Smart Card",
+        "Administrative Templates\\Windows Components\\Smart Card",
+        "Smart Card"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-smartcard#admx-smartcard-reversesubject"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_Smartcard/ReverseSubject",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_smartcard_reversesubject",
+    "categoryId": "4fc4d2f3-35ee-43ec-a033-ef78da571e70",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_smartcard_reversesubject",
+    "description": "This policy setting lets you reverse the subject name from how it is stored in the certificate when displaying it during logon.  \r\n          \r\nBy default the user principal name (UPN) is displayed in addition to the common name to help users distinguish one certificate from another.  For example, if the certificate subject was CN=User1, OU=Users, DN=example, DN=com and had an UPN of user1@example.com then \"User1\" will be displayed along with \"user1@example.com.\"  If the UPN is not present then the entire subject name will be displayed.  This setting controls the appearance of that subject name and might need to be adjusted per organization.\r\n\r\nIf you enable this policy setting or do not configure this setting, then the subject name will be reversed.  \r\n\r\nIf you disable , the subject name will be displayed as it appears in the certificate.\r\n ",
+    "helpText": "",
+    "name": "ReverseSubject",
+    "displayName": "Reverse the subject name stored in a certificate when displaying",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_smartcard_reversesubject_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_smartcard_reversesubject_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_smartcard_reversesubject_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,72 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ForceSync",
+        "Force synchronization of browser data and do not show the sync consent prompt",
+        "\\Microsoft Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev86~Policy~microsoft_edge/ForceSync",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edgev86~policy~microsoft_edge_forcesync",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_microsoft_edgev86~policy~microsoft_edge_forcesync",
+    "description": "Forces data synchronization in Microsoft Edge. This policy also prevents the user from turning sync off.\r\n\r\nIf you don't configure this policy, users will be able to turn sync on or off. If you enable this policy, users will not be able to turn sync off.\r\n\r\nFor this policy to work as intended,\r\n'BrowserSignin' (Browser sign-in settings) policy must not be configured, or must be set to enabled. If 'ForceSync' (Force synchronization of browser data and do not show the sync consent prompt) is set to disabled, then 'BrowserSignin' will not take affect.\r\n\r\n'SyncDisabled' (Disable synchronization of data using Microsoft sync services) must not be configured or must be set to False. If this is set to True, 'ForceSync' will not take affect.\r\n\r\n0 = Do not automatically start sync and show the sync consent (default)\r\n1 = Force sync to be turned on for Azure AD/Azure AD-Degraded user profile and do not show the sync consent prompt",
+    "helpText": "",
+    "name": "ForceSync",
+    "displayName": "Force synchronization of browser data and do not show the sync consent prompt (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edgev86~policy~microsoft_edge_forcesync_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev86~policy~microsoft_edge_forcesync_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev86~policy~microsoft_edge_forcesync_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

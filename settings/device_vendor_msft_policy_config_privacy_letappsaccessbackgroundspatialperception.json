@@ -1,0 +1,98 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Let Apps Access Background Spatial Perception",
+        "Privacy"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Privacy#privacy-letappsaccessbackgroundspatialperception"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Privacy/LetAppsAccessBackgroundSpatialPerception",
+    "rootDefinitionId": "device_vendor_msft_policy_config_privacy_letappsaccessbackgroundspatialperception",
+    "categoryId": "98e76d3e-9e52-45b3-b0c7-f029023121e9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_privacy_letappsaccessbackgroundspatialperception",
+    "description": "This policy setting specifies whether Windows apps can access the movement of the user's head, hands, motion controllers, and other tracked objects, while the apps are running in the background.",
+    "helpText": "",
+    "name": "LetAppsAccessBackgroundSpatialPerception",
+    "displayName": "Let Apps Access Background Spatial Perception",
+    "defaultOptionId": "device_vendor_msft_policy_config_privacy_letappsaccessbackgroundspatialperception_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "9.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.18362",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsNXT"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_privacy_letappsaccessbackgroundspatialperception_0",
+            "description": "User in control.",
+            "helpText": null,
+            "name": "User in control.",
+            "displayName": "User in control.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_privacy_letappsaccessbackgroundspatialperception_1",
+            "description": "Force allow.",
+            "helpText": null,
+            "name": "Force allow.",
+            "displayName": "Force allow.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_privacy_letappsaccessbackgroundspatialperception_2",
+            "description": "Force deny.",
+            "helpText": null,
+            "name": "Force deny.",
+            "displayName": "Force deny.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

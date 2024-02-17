@@ -1,0 +1,88 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "SkinLockDown",
+        "Set and Lock Skin",
+        "\\Windows Components\\Windows Media Player\\User Interface",
+        "Administrative Templates\\Windows Components\\Windows Media Player\\User Interface",
+        "User Interface"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-windowsmediaplayer#admx-windowsmediaplayer-skinlockdown"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_WindowsMediaPlayer/SkinLockDown",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_windowsmediaplayer_skinlockdown",
+    "categoryId": "200c575d-37d9-405b-aa92-c7a3da6f9358",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_windowsmediaplayer_skinlockdown",
+    "description": "This policy setting allows you to set and lock Windows Media Player in skin mode, using a specified skin.\r\n\r\nIf you enable this policy setting, the Player displays only in skin mode using the skin specified in the Skin box on the Setting tab.\r\n\r\nYou must use the complete file name for the skin (for example, skin_name.wmz), and the skin must be installed in the %programfiles%\\Windows Media Player\\Skins Folder on a user's computer. If the skin is not installed on a user's computer, or if the Skin box is blank, the Player opens by using the Corporate skin. The only way to specify the Corporate skin is to leave the Skin box blank.\r\n\r\nA user has access only to the Player features that are available with the specified skin. Users cannot switch the Player to full mode and cannot choose a different skin.\r\n\r\nIf you disable or do not configure this policy setting, users can display the Player in full or skin mode and have access to all available features of the Player.\r\n ",
+    "helpText": "",
+    "name": "SkinLockDown",
+    "displayName": "Set and Lock Skin (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_windowsmediaplayer_skinlockdown_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_windowsmediaplayer_skinlockdown_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_windowsmediaplayer_skinlockdown_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_admx_windowsmediaplayer_skinlockdown_lockskin",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

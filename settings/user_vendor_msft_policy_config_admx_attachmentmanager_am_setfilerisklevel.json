@@ -1,0 +1,88 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "AM_SetFileRiskLevel",
+        "Default risk level for file attachments",
+        "\\Windows Components\\Attachment Manager",
+        "Administrative Templates\\Windows Components\\Attachment Manager",
+        "Attachment Manager"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-attachmentmanager#admx-attachmentmanager-am-setfilerisklevel"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_AttachmentManager/AM_SetFileRiskLevel",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_attachmentmanager_am_setfilerisklevel",
+    "categoryId": "3f8299b3-6803-4576-be08-7c311d04b8b9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_attachmentmanager_am_setfilerisklevel",
+    "description": "This policy setting allows you to manage the default risk level for file types. To fully customize the risk level for file attachments, you may also need to configure the trust logic for file attachments.\r\n\r\nHigh Risk: If the attachment is in the list of high-risk file types and is from the restricted zone, Windows blocks the user from accessing the file. If the file is from the Internet zone, Windows prompts the user before accessing the file.\r\n\r\nModerate Risk: If the attachment is in the list of moderate-risk file types and is from the restricted or Internet zone, Windows prompts the user before accessing the file.\r\n\r\nLow Risk: If the attachment is in the list of low-risk file types, Windows will not prompt the user before accessing the file, regardless of the file's zone information.\r\n\r\nIf you enable this policy setting, you can specify the default risk level for file types.\r\n\r\nIf you disable this policy setting, Windows sets the default risk level to moderate.\r\n\r\nIf you do not configure this policy setting, Windows sets the default risk level to moderate.\r\n ",
+    "helpText": "",
+    "name": "AM_SetFileRiskLevel",
+    "displayName": "Default risk level for file attachments (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_attachmentmanager_am_setfilerisklevel_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_attachmentmanager_am_setfilerisklevel_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_attachmentmanager_am_setfilerisklevel_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_admx_attachmentmanager_am_setfilerisklevel_am_risklevel",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

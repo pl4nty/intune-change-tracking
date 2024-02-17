@@ -1,0 +1,90 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "NoFirstRunCustomise",
+        "Prevent running First Run wizard",
+        "\\Windows Components\\Internet Explorer",
+        "Internet Explorer"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/InternetExplorer/DisableFirstRunWizard",
+    "rootDefinitionId": "user_vendor_msft_policy_config_internetexplorer_disablefirstrunwizard",
+    "categoryId": "f60cd3c8-a91b-4542-b09f-129dfc7e589c",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_internetexplorer_disablefirstrunwizard_firstrunoptions",
+    "description": "",
+    "helpText": "",
+    "name": "FirstRunOptions",
+    "displayName": "Select your choice (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_internetexplorer_disablefirstrunwizard_firstrunoptions_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.15063",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_internetexplorer_disablefirstrunwizard_firstrunoptions_1",
+            "description": null,
+            "helpText": null,
+            "name": "Go directly to home page",
+            "displayName": "Go directly to home page",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_internetexplorer_disablefirstrunwizard_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_internetexplorer_disablefirstrunwizard"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_internetexplorer_disablefirstrunwizard_firstrunoptions_2",
+            "description": null,
+            "helpText": null,
+            "name": "Go directly to \"Welcome To IE\" page",
+            "displayName": "Go directly to \"Welcome To IE\" page",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_internetexplorer_disablefirstrunwizard_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_internetexplorer_disablefirstrunwizard"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

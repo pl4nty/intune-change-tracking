@@ -1,0 +1,91 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ConfigureRTSPProxySettings",
+        "Configure RTSP Proxy",
+        "\\Windows Components\\Windows Media Player\\Networking",
+        "Administrative Templates\\Windows Components\\Windows Media Player\\Networking",
+        "Networking"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_WindowsMediaPlayer/ConfigureRTSPProxySettings",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_windowsmediaplayer_configurertspproxysettings",
+    "categoryId": "c7c32942-a139-4d7e-a19e-3495d5e372e7",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_windowsmediaplayer_configurertspproxysettings_bypassproxylocal",
+    "description": null,
+    "helpText": "",
+    "name": "BypassProxyLocal",
+    "displayName": "Bypass proxy for local addresses (User)",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_windowsmediaplayer_configurertspproxysettings_bypassproxylocal_0",
+            "description": null,
+            "helpText": null,
+            "name": "False",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_admx_windowsmediaplayer_configurertspproxysettings_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_admx_windowsmediaplayer_configurertspproxysettings"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_windowsmediaplayer_configurertspproxysettings_bypassproxylocal_1",
+            "description": null,
+            "helpText": null,
+            "name": "True",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_admx_windowsmediaplayer_configurertspproxysettings_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_admx_windowsmediaplayer_configurertspproxysettings"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

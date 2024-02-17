@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "EnableScreenSaver",
+        "Allow Screen Saver",
+        "\\Windows Components\\Windows Media Player\\Playback",
+        "Administrative Templates\\Windows Components\\Windows Media Player\\Playback",
+        "Playback"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-windowsmediaplayer#admx-windowsmediaplayer-enablescreensaver"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_WindowsMediaPlayer/EnableScreenSaver",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_windowsmediaplayer_enablescreensaver",
+    "categoryId": "0b635a19-976c-4c28-a642-87ede7649bef",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_windowsmediaplayer_enablescreensaver",
+    "description": "This policy setting allows a screen saver to interrupt playback.\r\n\r\nIf you enable this policy setting, a screen saver is displayed during playback of digital media according to the options selected on the Screen Saver tab in the Display Properties dialog box in Control Panel. The Allow screen saver during playback check box on the Player tab in the Player is selected and is not available.\r\n\r\nIf you disable this policy setting, a screen saver does not interrupt playback even if users have selected a screen saver. The Allow screen saver during playback check box is cleared and is not available.\r\n\r\nIf you do not configure this policy setting, users can change the setting for the Allow screen saver during playback check box.\r\n ",
+    "helpText": "",
+    "name": "EnableScreenSaver",
+    "displayName": "Allow Screen Saver (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_windowsmediaplayer_enablescreensaver_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_windowsmediaplayer_enablescreensaver_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_windowsmediaplayer_enablescreensaver_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

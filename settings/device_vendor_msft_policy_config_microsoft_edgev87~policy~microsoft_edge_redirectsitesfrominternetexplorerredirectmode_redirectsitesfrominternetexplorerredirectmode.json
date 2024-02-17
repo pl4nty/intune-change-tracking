@@ -1,0 +1,82 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "RedirectSitesFromInternetExplorerRedirectMode",
+        "Redirect incompatible sites from Internet Explorer to Microsoft Edge",
+        "\\Microsoft Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev87~Policy~microsoft_edge/RedirectSitesFromInternetExplorerRedirectMode",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edgev87~policy~microsoft_edge_redirectsitesfrominternetexplorerredirectmode",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_microsoft_edgev87~policy~microsoft_edge_redirectsitesfrominternetexplorerredirectmode_redirectsitesfrominternetexplorerredirectmode",
+    "description": "",
+    "helpText": "",
+    "name": "RedirectSitesFromInternetExplorerRedirectMode",
+    "displayName": "Redirect incompatible sites from Internet Explorer to Microsoft Edge (Device)",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edgev87~policy~microsoft_edge_redirectsitesfrominternetexplorerredirectmode_redirectsitesfrominternetexplorerredirectmode_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev87~policy~microsoft_edge_redirectsitesfrominternetexplorerredirectmode_redirectsitesfrominternetexplorerredirectmode_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disable",
+            "displayName": "Disable",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_microsoft_edgev87~policy~microsoft_edge_redirectsitesfrominternetexplorerredirectmode_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_microsoft_edgev87~policy~microsoft_edge_redirectsitesfrominternetexplorerredirectmode"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev87~policy~microsoft_edge_redirectsitesfrominternetexplorerredirectmode_redirectsitesfrominternetexplorerredirectmode_1",
+            "description": null,
+            "helpText": null,
+            "name": "Redirect sites based on the incompatible sites sitelist",
+            "displayName": "Redirect sites based on the incompatible sites sitelist",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_microsoft_edgev87~policy~microsoft_edge_redirectsitesfrominternetexplorerredirectmode_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_microsoft_edgev87~policy~microsoft_edge_redirectsitesfrominternetexplorerredirectmode"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

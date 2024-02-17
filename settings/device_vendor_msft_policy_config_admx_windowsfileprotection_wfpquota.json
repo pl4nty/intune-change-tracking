@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "WFPQuota",
+        "Limit Windows File Protection cache size",
+        "\\System\\Windows File Protection",
+        "Administrative Templates\\System\\Windows File Protection",
+        "Windows File Protection"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-windowsfileprotection#admx-windowsfileprotection-wfpquota"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_WindowsFileProtection/WFPQuota",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_windowsfileprotection_wfpquota",
+    "categoryId": "dbb76878-34a9-4f87-bbc6-4de7ea223ff4",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_windowsfileprotection_wfpquota",
+    "description": "This policy setting specifies the maximum amount of disk space that can be used for the Windows File Protection file cache.\r\n\r\nWindows File Protection adds protected files to the cache until the cache content reaches the quota. If the quota is greater than 50 MB, Windows File Protection adds other important Windows XP files to the cache until the cache size reaches the quota.\r\n\r\nIf you enable this policy setting, enter the maximum amount of disk space to be used (in MB). To indicate that the cache size is unlimited, select \"4294967295\" as the maximum amount of disk space.\r\n\r\nIf you disable this policy setting or do not configure it, the default value is set to 50 MB on Windows XP Professional and is unlimited (4294967295 MB) on Windows Server 2003.\r\n This setting is only available to Windows Insiders",
+    "helpText": "",
+    "name": "WFPQuota",
+    "displayName": "Limit Windows File Protection cache size (Windows Insiders only)",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_windowsfileprotection_wfpquota_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "9.9",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.21322",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_windowsfileprotection_wfpquota_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_windowsfileprotection_wfpquota_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_windowsfileprotection_wfpquota_wfpquota_size",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

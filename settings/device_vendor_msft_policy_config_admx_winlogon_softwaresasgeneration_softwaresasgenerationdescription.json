@@ -1,0 +1,129 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "SoftwareSASGeneration",
+        "Disable or enable software Secure Attention Sequence",
+        "\\Windows Components\\Windows Logon Options",
+        "Administrative Templates\\Windows Components\\Windows Logon Options",
+        "Windows Logon Options"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_WinLogon/SoftwareSASGeneration",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_winlogon_softwaresasgeneration",
+    "categoryId": "e9aff162-feb0-400a-aa68-8dd8deb93275",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_winlogon_softwaresasgeneration_softwaresasgenerationdescription",
+    "description": null,
+    "helpText": "",
+    "name": "SoftwareSASGenerationDescription",
+    "displayName": "Set which software is allowed to generate the Secure Attention Sequence (Device)",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_winlogon_softwaresasgeneration_softwaresasgenerationdescription_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_winlogon_softwaresasgeneration_softwaresasgenerationdescription_0",
+            "description": null,
+            "helpText": null,
+            "name": "None",
+            "displayName": "None",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_winlogon_softwaresasgeneration_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_winlogon_softwaresasgeneration"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_winlogon_softwaresasgeneration_softwaresasgenerationdescription_1",
+            "description": null,
+            "helpText": null,
+            "name": "Services",
+            "displayName": "Services",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_winlogon_softwaresasgeneration_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_winlogon_softwaresasgeneration"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_winlogon_softwaresasgeneration_softwaresasgenerationdescription_2",
+            "description": null,
+            "helpText": null,
+            "name": "Ease of Access applications",
+            "displayName": "Ease of Access applications",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_winlogon_softwaresasgeneration_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_winlogon_softwaresasgeneration"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_winlogon_softwaresasgeneration_softwaresasgenerationdescription_3",
+            "description": null,
+            "helpText": null,
+            "name": "Services and Ease of Access applications",
+            "displayName": "Services and Ease of Access applications",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "3"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_winlogon_softwaresasgeneration_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_winlogon_softwaresasgeneration"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

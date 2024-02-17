@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DisableLockComputer",
+        "Remove Lock Computer",
+        "\\System\\Ctrl+Alt+Del Options",
+        "Administrative Templates\\System\\Ctrl+Alt+Del Options",
+        "Ctrl+Alt+Del Options"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-ctrlaltdel#admx-ctrlaltdel-disablelockcomputer"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_CtrlAltDel/DisableLockComputer",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_ctrlaltdel_disablelockcomputer",
+    "categoryId": "22086dab-6c7f-408f-bd0c-cc34b2ad086d",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_ctrlaltdel_disablelockcomputer",
+    "description": "This policy setting prevents users from locking the system.\r\n\r\nWhile locked, the desktop is hidden and the system cannot be used. Only the user who locked the system or the system administrator can unlock it.\r\n\r\nIf you enable this policy setting, users cannot lock the computer from the keyboard using Ctrl+Alt+Del.\r\n\r\nIf you disable or do not configure this policy setting, users will be able to lock the computer from the keyboard using Ctrl+Alt+Del.\r\n\r\nTip:To lock a computer without configuring a setting, press Ctrl+Alt+Delete, and then click Lock this computer.\r\n ",
+    "helpText": "",
+    "name": "DisableLockComputer",
+    "displayName": "Remove Lock Computer (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_ctrlaltdel_disablelockcomputer_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_ctrlaltdel_disablelockcomputer_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_ctrlaltdel_disablelockcomputer_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

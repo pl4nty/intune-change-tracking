@@ -1,0 +1,154 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "add,delete,get",
+    "keywords": [
+        "Tenant Id (Device)",
+        "PassportForWork",
+        "Windows Hello For Business"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/PassportForWork",
+    "offsetUri": "/{0}",
+    "rootDefinitionId": "device_vendor_msft_passportforwork_{tenantid}",
+    "categoryId": "e7ae2b99-0479-475f-af5c-96457121fcd0",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_passportforwork_{tenantid}",
+    "description": "This policy specifies the Tenant ID in the format of a Globally Unique Identifier (GUID) without curly braces ( { , } ), which will be used as part of Windows Hello for Business provisioning and management.",
+    "helpText": "",
+    "name": "{TenantId}",
+    "displayName": "Tenant Id",
+    "childIds": [
+        "device_vendor_msft_passportforwork_{tenantid}_policies_usepassportforwork",
+        "device_vendor_msft_passportforwork_{tenantid}_policies_requiresecuritydevice",
+        "device_vendor_msft_passportforwork_{tenantid}_policies_excludesecuritydevices_tpm12",
+        "device_vendor_msft_passportforwork_{tenantid}_policies_enablepinrecovery",
+        "device_vendor_msft_passportforwork_{tenantid}_policies_enablewindowshelloprovisioningforsecuritykeys",
+        "device_vendor_msft_passportforwork_{tenantid}_policies_disablepostlogonprovisioning",
+        "device_vendor_msft_passportforwork_{tenantid}_policies_disablepostlogoncredentialcaching",
+        "device_vendor_msft_passportforwork_{tenantid}_policies_usecertificateforonpremauth",
+        "device_vendor_msft_passportforwork_{tenantid}_policies_usecloudtrustforonpremauth",
+        "device_vendor_msft_passportforwork_{tenantid}_policies_pincomplexity_minimumpinlength",
+        "device_vendor_msft_passportforwork_{tenantid}_policies_pincomplexity_maximumpinlength",
+        "device_vendor_msft_passportforwork_{tenantid}_policies_pincomplexity_uppercaseletters",
+        "device_vendor_msft_passportforwork_{tenantid}_policies_pincomplexity_lowercaseletters",
+        "device_vendor_msft_passportforwork_{tenantid}_policies_pincomplexity_specialcharacters",
+        "device_vendor_msft_passportforwork_{tenantid}_policies_pincomplexity_digits",
+        "device_vendor_msft_passportforwork_{tenantid}_policies_pincomplexity_history",
+        "device_vendor_msft_passportforwork_{tenantid}_policies_pincomplexity_expiration",
+        "device_vendor_msft_passportforwork_{tenantid}_policies_remote_useremotepassport",
+        "device_vendor_msft_passportforwork_{tenantid}_policies_usehellocertificatesassmartcardcertificates"
+    ],
+    "maximumCount": 1,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager",
+        "configurationServiceProviderVersion": "1.2",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.10586",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsNXT"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 100
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "device_vendor_msft_passportforwork_{tenantid}_policies_usepassportforwork",
+            "required": false
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_passportforwork_{tenantid}_policies_requiresecuritydevice",
+            "required": false
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_passportforwork_{tenantid}_policies_excludesecuritydevices_tpm12",
+            "required": false
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_passportforwork_{tenantid}_policies_enablepinrecovery",
+            "required": false
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_passportforwork_{tenantid}_policies_enablewindowshelloprovisioningforsecuritykeys",
+            "required": false
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_passportforwork_{tenantid}_policies_disablepostlogonprovisioning",
+            "required": false
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_passportforwork_{tenantid}_policies_disablepostlogoncredentialcaching",
+            "required": false
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_passportforwork_{tenantid}_policies_usecertificateforonpremauth",
+            "required": false
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_passportforwork_{tenantid}_policies_usecloudtrustforonpremauth",
+            "required": false
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_passportforwork_{tenantid}_policies_pincomplexity_minimumpinlength",
+            "required": false
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_passportforwork_{tenantid}_policies_pincomplexity_maximumpinlength",
+            "required": false
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_passportforwork_{tenantid}_policies_pincomplexity_uppercaseletters",
+            "required": false
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_passportforwork_{tenantid}_policies_pincomplexity_lowercaseletters",
+            "required": false
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_passportforwork_{tenantid}_policies_pincomplexity_specialcharacters",
+            "required": false
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_passportforwork_{tenantid}_policies_pincomplexity_digits",
+            "required": false
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_passportforwork_{tenantid}_policies_pincomplexity_history",
+            "required": false
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_passportforwork_{tenantid}_policies_pincomplexity_expiration",
+            "required": false
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_passportforwork_{tenantid}_policies_remote_useremotepassport",
+            "required": false
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_passportforwork_{tenantid}_policies_usehellocertificatesassmartcardcertificates",
+            "required": false
+        }
+    ]
+}

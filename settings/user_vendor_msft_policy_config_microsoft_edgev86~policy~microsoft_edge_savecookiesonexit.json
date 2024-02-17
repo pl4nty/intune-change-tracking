@@ -1,0 +1,77 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "SaveCookiesOnExit",
+        "Save cookies when Microsoft Edge closes",
+        "\\Microsoft Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev86~Policy~microsoft_edge/SaveCookiesOnExit",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edgev86~policy~microsoft_edge_savecookiesonexit",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_microsoft_edgev86~policy~microsoft_edge_savecookiesonexit",
+    "description": "When this policy is enabled, the specified set of cookies is exempt from deletion when the browser closes. This policy is only effective when:\r\n- The 'Cookies and other site data' toggle is configured in Settings/Privacy and services/Clear browsing data on close or\r\n- The policy 'ClearBrowsingDataOnExit' (Clear browsing data when Microsoft Edge closes) is enabled or\r\n- The policy 'DefaultCookiesSetting' (Configure cookies) is set to 'Keep cookies for the duration of the session'.\r\n\r\nYou can define a list of sites, based on URL patterns, that will have their cookies preserved across sessions.\r\n\r\nNote: Users can still edit the cookie site list to add or remove URLs. However, they can't remove URLs that have been added by an Admin.\r\n\r\nIf you enable this policy, the list of cookies won't be cleared when the browser closes.\r\n\r\nIf you disable or don't configure this policy, the user's personal configuration is used.\r\n\r\nExample value:\r\n\r\nhttps://www.contoso.com\r\n[*.]contoso.edu",
+    "helpText": "",
+    "name": "SaveCookiesOnExit",
+    "displayName": "Save cookies when Microsoft Edge closes (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edgev86~policy~microsoft_edge_savecookiesonexit_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev86~policy~microsoft_edge_savecookiesonexit_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev86~policy~microsoft_edge_savecookiesonexit_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_microsoft_edgev86~policy~microsoft_edge_savecookiesonexit_savecookiesonexitdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

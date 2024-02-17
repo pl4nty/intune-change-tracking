@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "InsecurePrivateNetworkRequestsAllowedForUrls",
+        "Allow the listed sites to make requests to more-private network endpoints from insecure contexts",
+        "\\Microsoft Edge\\Private Network Request Settings",
+        "Microsoft Edge\\Private Network Request Settings",
+        "Private Network Request Settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev92~Policy~microsoft_edge~PrivateNetworkRequestSettings/InsecurePrivateNetworkRequestsAllowedForUrls",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edgev92~policy~microsoft_edge~privatenetworkrequestsettings_insecureprivatenetworkrequestsallowedforurls",
+    "categoryId": "43057320-7058-46d5-86f9-a56c80bbf8b9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_microsoft_edgev92~policy~microsoft_edge~privatenetworkrequestsettings_insecureprivatenetworkrequestsallowedforurls",
+    "description": "List of URL patterns. Private network requests initiated from insecure websites served by matching origins are allowed.\r\n\r\nIf this policy is not set, this policy behaves as if set to the empty list.\r\n\r\nFor origins not covered by the patterns specified here, the global default value will be used either from the 'InsecurePrivateNetworkRequestsAllowed' (Specifies whether to allow insecure websites to make requests to more-private network endpoints) policy, if it is set, or the user's personal configuration otherwise.\r\n\r\nNote that this policy only affects insecure origins, so secure origins (e.g. https://example.com) included in this list will be ignored.\r\n\r\nFor detailed information on valid URL patterns, please see https://docs.microsoft.com/en-us/DeployEdge/edge-learnmmore-url-list-filter%20format.\r\n\r\nExample value:\r\n\r\nhttp://www.example.com:8080\r\n[*.]example.edu",
+    "helpText": "",
+    "name": "InsecurePrivateNetworkRequestsAllowedForUrls",
+    "displayName": "Allow the listed sites to make requests to more-private network endpoints from insecure contexts",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edgev92~policy~microsoft_edge~privatenetworkrequestsettings_insecureprivatenetworkrequestsallowedforurls_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev92~policy~microsoft_edge~privatenetworkrequestsettings_insecureprivatenetworkrequestsallowedforurls_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev92~policy~microsoft_edge~privatenetworkrequestsettings_insecureprivatenetworkrequestsallowedforurls_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_microsoft_edgev92~policy~microsoft_edge~privatenetworkrequestsettings_insecureprivatenetworkrequestsallowedforurls_insecureprivatenetworkrequestsallowedforurlsdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

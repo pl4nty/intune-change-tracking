@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DQ_LogEventOverLimit",
+        "Log event when quota limit is exceeded",
+        "\\System\\Disk Quotas",
+        "Administrative Templates\\System\\Disk Quotas",
+        "Disk Quotas"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-diskquota#admx-diskquota-dq-logeventoverlimit"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_DiskQuota/DQ_LogEventOverLimit",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_diskquota_dq_logeventoverlimit",
+    "categoryId": "c08e929f-742a-4cd8-a7e6-9a3d170fe020",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_diskquota_dq_logeventoverlimit",
+    "description": "This policy setting determines whether the system records an event in the local Application log when users reach their disk quota limit on a volume, and prevents users from changing the logging setting.\r\n\r\nIf you enable this policy setting, the system records an event when the user reaches their limit. If you disable this policy setting, no event is recorded. Also, when you enable or disable this policy setting, the system disables the \"Log event when a user exceeds their quota limit\" option on the Quota tab, so administrators cannot change the setting while a setting is in effect.\r\n\r\nIf you do not configure this policy setting, no events are recorded, but administrators can use the Quota tab option to change the setting.\r\n\r\nThis policy setting is independent of the enforcement policy settings for disk quotas. As a result, you can direct the system to log an event, regardless of whether or not you choose to enforce the disk quota limit.\r\n\r\nAlso, this policy setting does not affect the Quota Entries window on the Quota tab. Even without the logged event, users can detect that they have reached their limit, because their status in the Quota Entries window changes.\r\n\r\nNote: To find the logging option, in My Computer, right-click the name of an NTFS file system volume, click Properties, and then click the Quota tab.\r\n ",
+    "helpText": "",
+    "name": "DQ_LogEventOverLimit",
+    "displayName": "Log event when quota limit is exceeded",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_diskquota_dq_logeventoverlimit_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_diskquota_dq_logeventoverlimit_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_diskquota_dq_logeventoverlimit_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

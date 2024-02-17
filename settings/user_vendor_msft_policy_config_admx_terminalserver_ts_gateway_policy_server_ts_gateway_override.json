@@ -1,0 +1,91 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "TS_GATEWAY_POLICY_SERVER",
+        "Set RD Gateway server address",
+        "\\Windows Components\\Remote Desktop Services\\RD Gateway",
+        "Administrative Templates\\Windows Components\\Remote Desktop Services\\RD Gateway",
+        "RD Gateway"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_TerminalServer/TS_GATEWAY_POLICY_SERVER",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_terminalserver_ts_gateway_policy_server",
+    "categoryId": "85c586a6-6b68-48b2-8050-c4fb86aff486",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_terminalserver_ts_gateway_policy_server_ts_gateway_override",
+    "description": null,
+    "helpText": "",
+    "name": "TS_GATEWAY_OVERRIDE",
+    "displayName": "Allow users to change this setting (User)",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_terminalserver_ts_gateway_policy_server_ts_gateway_override_0",
+            "description": null,
+            "helpText": null,
+            "name": "False",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_admx_terminalserver_ts_gateway_policy_server_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_admx_terminalserver_ts_gateway_policy_server"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_terminalserver_ts_gateway_policy_server_ts_gateway_override_1",
+            "description": null,
+            "helpText": null,
+            "name": "True",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_admx_terminalserver_ts_gateway_policy_server_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_admx_terminalserver_ts_gateway_policy_server"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

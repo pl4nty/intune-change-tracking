@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "PrintingPaperSizeDefault",
+        "Default printing page size",
+        "\\Microsoft Edge\\Printing",
+        "Microsoft Edge\\Printing",
+        "Printing"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev87~Policy~microsoft_edge~Printing/PrintingPaperSizeDefault",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edgev87~policy~microsoft_edge~printing_printingpapersizedefault",
+    "categoryId": "c6099521-a05f-480a-8562-7e71318e2cda",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_microsoft_edgev87~policy~microsoft_edge~printing_printingpapersizedefault",
+    "description": "Overrides default printing page size.\r\n\r\nname should contain one of the listed formats or 'custom' if required paper size is not in the list. If 'custom' value is provided custom_size property should be specified. It describes the desired height and width in micrometers. Otherwise custom_size property shouldn't be specified. Policy that violates these rules is ignored.\r\n\r\nIf the page size is unavailable on the printer chosen by the user this policy is ignored.\r\n\r\nExample value:\r\n\r\n{\r\n  \"custom_size\": {\r\n    \"width\": 210000, \r\n    \"height\": 297000\r\n  }, \r\n  \"name\": \"custom\"\r\n}\r\n\r\n\r\nCompact example value:\r\n\r\n{\"custom_size\": {\"width\": 210000, \"height\": 297000}, \"name\": \"custom\"}",
+    "helpText": "",
+    "name": "PrintingPaperSizeDefault",
+    "displayName": "Default printing page size (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edgev87~policy~microsoft_edge~printing_printingpapersizedefault_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev87~policy~microsoft_edge~printing_printingpapersizedefault_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev87~policy~microsoft_edge~printing_printingpapersizedefault_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_microsoft_edgev87~policy~microsoft_edge~printing_printingpapersizedefault_printingpapersizedefault",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

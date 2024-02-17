@@ -1,0 +1,56 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Software Update",
+        "Declarative Device Management (DDM)\\Software Update"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.apple.configuration.softwareupdate.enforcement.specific",
+    "rootDefinitionId": "enforcement_enforcement",
+    "categoryId": "42a6198f-bdec-402e-b619-315400b65488",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "enforcement_enforcement",
+    "description": "Synthetic Top Level Setting Group Collection",
+    "helpText": null,
+    "name": "com.apple.configuration.softwareupdate.enforcement.specific",
+    "displayName": "com.apple.configuration.softwareupdate.enforcement.specific",
+    "childIds": [
+        "enforcement_targetosversion",
+        "enforcement_targetbuildversion",
+        "enforcement_targetlocaldatetime",
+        "enforcement_detailsurl"
+    ],
+    "maximumCount": 1,
+    "minimumCount": 0,
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "enforcement_targetosversion",
+            "required": true
+        },
+        {
+            "dependedOnBy": "enforcement_targetbuildversion",
+            "required": false
+        },
+        {
+            "dependedOnBy": "enforcement_targetlocaldatetime",
+            "required": true
+        },
+        {
+            "dependedOnBy": "enforcement_detailsurl",
+            "required": false
+        }
+    ]
+}

@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "NoWelcomeTips_2",
+        "Do not display the Getting Started welcome screen at logon",
+        "\\System\\Logon",
+        "Administrative Templates\\System\\Logon",
+        "Logon"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-logon#admx-logon-nowelcometips-2"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_Logon/NoWelcomeTips_2",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_logon_nowelcometips_2",
+    "categoryId": "f4fd69bc-8622-411d-91bb-0e214f8fb112",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_logon_nowelcometips_2",
+    "description": "This policy setting hides the welcome screen that is displayed on Windows 2000 Professional each time the user logs on.\r\n\r\nIf you enable this policy setting, the welcome screen is hidden from the user logging on to a computer where this policy is applied.\r\n\r\nUsers can still display the welcome screen by selecting it on the Start menu or by typing \"Welcome\" in the Run dialog box.\r\n\r\nIf you disable or do not configure this policy, the welcome screen is displayed each time a user logs on to the computer.\r\n\r\nThis setting applies only to Windows 2000 Professional. It does not affect the \"Configure Your Server on a Windows 2000 Server\" screen on Windows 2000 Server.\r\n\r\nNote: This setting appears in the Computer Configuration and User Configuration folders. If both settings are configured, the setting in Computer Configuration takes precedence over the setting in User Configuration.\r\n\r\nTip: To display the welcome screen, click Start, point to Programs, point to Accessories, point to System Tools, and then click \"Getting Started.\" To suppress the welcome screen without specifying a setting, clear the \"Show this screen at startup\" check box on the welcome screen.\r\n ",
+    "helpText": "",
+    "name": "NoWelcomeTips_2",
+    "displayName": "Do not display the Getting Started welcome screen at logon",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_logon_nowelcometips_2_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_logon_nowelcometips_2_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_logon_nowelcometips_2_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

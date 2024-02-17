@@ -1,0 +1,82 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "MDM Wins Over GP",
+        "Control Policy Conflict"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-ControlPolicyConflict#controlpolicyconflict-mdmwinsovergp"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ControlPolicyConflict/MDMWinsOverGP",
+    "rootDefinitionId": "device_vendor_msft_policy_config_controlpolicyconflict_mdmwinsovergp",
+    "categoryId": "4f081af6-7b21-44fc-8dd9-d4e0a61a474d",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_controlpolicyconflict_mdmwinsovergp",
+    "description": "If set to 1 then any MDM policy that is set that has an equivalent GP policy will result in GP service blocking the setting of the policy by GP MMC. Setting the value to 0 (zero) or deleting the policy will remove the GP policy blocks restore the saved GP policies.",
+    "helpText": "",
+    "name": "MDMWinsOverGP",
+    "displayName": "MDM Wins Over GP",
+    "defaultOptionId": "device_vendor_msft_policy_config_controlpolicyconflict_mdmwinsovergp_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "7.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17134",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsNXT"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_controlpolicyconflict_mdmwinsovergp_0",
+            "description": "",
+            "helpText": null,
+            "name": "",
+            "displayName": "",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_controlpolicyconflict_mdmwinsovergp_1",
+            "description": "The MDM policy is used and the GP policy is blocked.",
+            "helpText": null,
+            "name": "The MDM policy is used and the GP policy is blocked.",
+            "displayName": "The MDM policy is used and the GP policy is blocked.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "SameOriginTabCaptureAllowedByOrigins",
+        "Allow Same Origin Tab capture by these origins",
+        "\\Google\\Google Chrome\\Allow or deny screen capture",
+        "Administrative Templates\\Google\\Google Chrome\\Allow or deny screen capture",
+        "Allow or deny screen capture"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV1~Policy~googlechrome~ScreenCapture/SameOriginTabCaptureAllowedByOrigins",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~screencapture_sameorigintabcaptureallowedbyorigins",
+    "categoryId": "4aa852ab-6269-4883-906f-0a0944fa1261",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~screencapture_sameorigintabcaptureallowedbyorigins",
+    "description": "Setting the policy lets you set a list of URL patterns that can capture tabs with their same Origin.\r\n\r\nLeaving the policy unset means that sites will not be considered for an override at this level of capture.\r\n\r\nNote that windowed Chrome Apps with the same origin as this site will still be allowed to be captured.\r\n\r\nIf a site matches a URL pattern in this policy, the following policies will not be considered: TabCaptureAllowedByOrigins, WindowCaptureAllowedByOrigins, ScreenCaptureAllowedByOrigins, ScreenCaptureAllowed.\r\n\r\nFor detailed information on valid url patterns, please see https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.  This policy only matches based on origin, so any path in the URL pattern is ignored.\r\n\r\nExample value:\r\n\r\nhttps://www.example.com\r\n[*.]example.edu",
+    "helpText": "",
+    "name": "SameOriginTabCaptureAllowedByOrigins",
+    "displayName": "Allow Same Origin Tab capture by these origins (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~screencapture_sameorigintabcaptureallowedbyorigins_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~screencapture_sameorigintabcaptureallowedbyorigins_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~screencapture_sameorigintabcaptureallowedbyorigins_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~screencapture_sameorigintabcaptureallowedbyorigins_sameorigintabcaptureallowedbyoriginsdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

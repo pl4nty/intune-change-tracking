@@ -1,0 +1,104 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "LimitSize",
+        "Limit profile size",
+        "\\System\\User Profiles",
+        "Administrative Templates\\System\\User Profiles",
+        "User Profiles"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-userprofiles#admx-userprofiles-limitsize"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_UserProfiles/LimitSize",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_userprofiles_limitsize",
+    "categoryId": "b49cb414-bdfb-49d4-af5d-176ded4f9591",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_userprofiles_limitsize",
+    "description": "This policy setting sets the maximum size of each user profile and determines the system's response when a user profile reaches the maximum size. This policy setting affects both local and roaming profiles.\r\n\r\nIf you disable this policy setting or do not configure it, the system does not limit the size of user profiles.\r\n\r\nIf you enable this policy setting, you can:\r\n\r\n-- Set a maximum permitted user profile size.\r\n-- Determine whether the registry files are included in the calculation of the profile size.\r\n-- Determine whether users are notified when the profile exceeds the permitted maximum size.\r\n-- Specify a customized message notifying users of the oversized profile.\r\n-- Determine how often the customized message is displayed.\r\n\r\nNote: In operating systems earlier than Microsoft Windows Vista, Windows will not allow users to log off until the profile size has been reduced to within the allowable limit. In Microsoft Windows Vista, Windows will not block users from logging off. Instead, if the user has a roaming user profile, Windows will not synchronize the user's profile with the roaming profile server if the maximum profile size limit specified here is exceeded.\r\n ",
+    "helpText": "",
+    "name": "LimitSize",
+    "displayName": "Limit profile size (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_userprofiles_limitsize_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_userprofiles_limitsize_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_userprofiles_limitsize_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_admx_userprofiles_limitsize_sizemessage",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_admx_userprofiles_limitsize_profilesize",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_admx_userprofiles_limitsize_includereginproquota",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_admx_userprofiles_limitsize_warnuser",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_admx_userprofiles_limitsize_warnusertimeout",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,82 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Exclude Japanese IME Except JIS0208",
+        "Text Input"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-TextInput#textinput-excludejapaneseimeexceptjis0208"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/TextInput/ExcludeJapaneseIMEExceptJIS0208",
+    "rootDefinitionId": "device_vendor_msft_policy_config_textinput_excludejapaneseimeexceptjis0208",
+    "categoryId": "cb8e8500-0336-4277-b3d9-9177cc967dcf",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_textinput_excludejapaneseimeexceptjis0208",
+    "description": "Note The policy is only enforced in Windows 10 for desktop. Allows the users to restrict character code range of conversion by setting the character filter.",
+    "helpText": "",
+    "name": "ExcludeJapaneseIMEExceptJIS0208",
+    "displayName": "Exclude Japanese IME Except JIS0208",
+    "defaultOptionId": "device_vendor_msft_policy_config_textinput_excludejapaneseimeexceptjis0208_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.10240",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsNXT"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_textinput_excludejapaneseimeexceptjis0208_0",
+            "description": "No characters are filtered.",
+            "helpText": null,
+            "name": "No characters are filtered.",
+            "displayName": "No characters are filtered.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_textinput_excludejapaneseimeexceptjis0208_1",
+            "description": "All characters except JIS0208 are filtered.",
+            "helpText": null,
+            "name": "All characters except JIS0208 are filtered.",
+            "displayName": "All characters except JIS0208 are filtered.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

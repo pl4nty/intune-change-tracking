@@ -1,0 +1,88 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ContactITDescription",
+        "Contact IT Link Text",
+        "\\Windows Components\\Microsoft User Experience Virtualization",
+        "Administrative Templates\\Windows Components\\Microsoft User Experience Virtualization",
+        "Microsoft User Experience Virtualization"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-userexperiencevirtualization#admx-userexperiencevirtualization-contactitdescription"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_UserExperienceVirtualization/ContactITDescription",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_userexperiencevirtualization_contactitdescription",
+    "categoryId": "9e857bed-81f8-4dfc-b049-c93eb68b4064",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_userexperiencevirtualization_contactitdescription",
+    "description": "This policy setting specifies the text of the Contact IT URL hyperlink in the Company Settings Center.\r\nIf you enable this policy setting, the Company Settings Center displays the specified text in the link to the Contact IT URL.\r\nIf you disable this policy setting, the Company Settings Center does not display an IT Contact link.\r\nIf you do not configure this policy setting, any defined values will be deleted.\r\n      \r\n ",
+    "helpText": "",
+    "name": "ContactITDescription",
+    "displayName": "Contact IT Link Text",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_userexperiencevirtualization_contactitdescription_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_userexperiencevirtualization_contactitdescription_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_userexperiencevirtualization_contactitdescription_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_userexperiencevirtualization_contactitdescription_contactitdescription",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

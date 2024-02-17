@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "SvchostProcessMitigationEnable",
+        "Enable svchost.exe mitigation options",
+        "\\System\\Service Control Manager Settings\\Security Settings",
+        "Administrative Templates\\System\\Service Control Manager Settings\\Security Settings",
+        "Security Settings"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-servicecontrolmanager#servicecontrolmanager-svchostprocessmitigation"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ServiceControlManager/SvchostProcessMitigation",
+    "rootDefinitionId": "device_vendor_msft_policy_config_servicecontrolmanager_svchostprocessmitigation",
+    "categoryId": "f14074a2-de74-48df-b273-48791217ef4d",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_servicecontrolmanager_svchostprocessmitigation",
+    "description": "This policy setting enables process mitigation options on svchost.exe processes.\r\n\r\nIf you enable this policy setting, built-in system services hosted in svchost.exe processes will have stricter security policies enabled on them.\r\n\r\nThis includes a policy requiring all binaries loaded in these processes to be signed by microsoft, as well as a policy disallowing dynamically-generated code.\r\n\r\nIf you disable or do not configure this policy setting, these stricter security settings will not be applied.",
+    "helpText": "",
+    "name": "SvchostProcessMitigationEnable",
+    "displayName": "Enable svchost.exe mitigation options",
+    "defaultOptionId": "device_vendor_msft_policy_config_servicecontrolmanager_svchostprocessmitigation_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "9.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.18362",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_servicecontrolmanager_svchostprocessmitigation_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_servicecontrolmanager_svchostprocessmitigation_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

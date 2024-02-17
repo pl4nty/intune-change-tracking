@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "EnableExtendedIEModeHotkeys",
+        "Enable extended hot keys in Internet Explorer mode",
+        "\\Windows Components\\Internet Explorer",
+        "Administrative Templates\\Windows Components\\Internet Explorer",
+        "Internet Explorer"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-enableextendediemodehotkeys"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/InternetExplorer/EnableExtendedIEModeHotkeys",
+    "rootDefinitionId": "user_vendor_msft_policy_config_internetexplorer_enableextendediemodehotkeys",
+    "categoryId": "f60cd3c8-a91b-4542-b09f-129dfc7e589c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_internetexplorer_enableextendediemodehotkeys",
+    "description": "This policy setting lets admins enable extended Microsoft Edge Internet Explorer mode hotkeys, such as \"Ctrl+S\" to have \"Save as\" functionality.\r\n\r\nIf you enable this policy, extended hotkey functionality is enabled in Internet Explorer mode and work the same as Internet Explorer.\r\n\r\nIf you disable, or don't configure this policy, extended hotkeys will not work in Internet Explorer mode.\r\n\r\nFor more information, see https://go.microsoft.com/fwlink/?linkid=2102115",
+    "helpText": "",
+    "name": "EnableExtendedIEModeHotkeys",
+    "displayName": "Enable extended hot keys in Internet Explorer mode (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_internetexplorer_enableextendediemodehotkeys_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "9.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.18362.1474",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_internetexplorer_enableextendediemodehotkeys_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_internetexplorer_enableextendediemodehotkeys_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

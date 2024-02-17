@@ -1,0 +1,88 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DisableStartLayoutSettingSync",
+        "Do not sync start settings",
+        "\\Windows Components\\Sync your settings",
+        "Administrative Templates\\Windows Components\\Sync your settings",
+        "Sync your settings"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-settingsync#admx-settingsync-disablestartlayoutsettingsync"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_SettingSync/DisableStartLayoutSettingSync",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_settingsync_disablestartlayoutsettingsync",
+    "categoryId": "7574a907-5608-491f-8011-c57d487457f4",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_settingsync_disablestartlayoutsettingsync",
+    "description": "\r\n        Prevent the \"Start layout\" group from syncing to and from this PC. This turns off and disables the \"Start layout\" group on the \"sync your settings\" page in PC settings.\r\n\r\n        If you enable this policy setting, the \"Start layout\" group will not be synced.\r\n\r\n        Use the option \"Allow users to turn start syncing on\" so that syncing is turned off by default but not disabled.\r\n\r\n        If you do not set or disable this setting, syncing of the \"Start layout\" group is on by default and configurable by the user.\r\n      \r\n ",
+    "helpText": "",
+    "name": "DisableStartLayoutSettingSync",
+    "displayName": "Do not sync start settings",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_settingsync_disablestartlayoutsettingsync_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_settingsync_disablestartlayoutsettingsync_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_settingsync_disablestartlayoutsettingsync_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_settingsync_disablestartlayoutsettingsync_checkbox_useroverride",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,110 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "LogonHoursPolicyDescription",
+        "Set action to take when logon hours expire",
+        "\\Windows Components\\Windows Logon Options",
+        "Administrative Templates\\Windows Components\\Windows Logon Options",
+        "Windows Logon Options"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_WinLogon/LogonHoursPolicyDescription",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_winlogon_logonhourspolicydescription",
+    "categoryId": "e9aff162-feb0-400a-aa68-8dd8deb93275",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_winlogon_logonhourspolicydescription_logonhourspolicydescription",
+    "description": null,
+    "helpText": "",
+    "name": "LogonHoursPolicyDescription",
+    "displayName": "Set action to take when logon hours expire (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_winlogon_logonhourspolicydescription_logonhourspolicydescription_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_winlogon_logonhourspolicydescription_logonhourspolicydescription_1",
+            "description": null,
+            "helpText": null,
+            "name": "Lock",
+            "displayName": "Lock",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_admx_winlogon_logonhourspolicydescription_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_admx_winlogon_logonhourspolicydescription"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_winlogon_logonhourspolicydescription_logonhourspolicydescription_2",
+            "description": null,
+            "helpText": null,
+            "name": "Disconnect",
+            "displayName": "Disconnect",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_admx_winlogon_logonhourspolicydescription_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_admx_winlogon_logonhourspolicydescription"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_winlogon_logonhourspolicydescription_logonhourspolicydescription_3",
+            "description": null,
+            "helpText": null,
+            "name": "Logoff",
+            "displayName": "Logoff",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "3"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_admx_winlogon_logonhourspolicydescription_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_admx_winlogon_logonhourspolicydescription"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "CleanupProfiles",
+        "Delete user profiles older than a specified number of days on system restart",
+        "\\System\\User Profiles",
+        "Administrative Templates\\System\\User Profiles",
+        "User Profiles"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_UserProfiles/CleanupProfiles",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_userprofiles_cleanupprofiles",
+    "categoryId": "b49cb414-bdfb-49d4-af5d-176ded4f9591",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_userprofiles_cleanupprofiles_cleanupprofiles_days",
+    "description": null,
+    "helpText": "",
+    "name": "CleanupProfiles_Days",
+    "displayName": "Delete user profiles older than (days) (Device)",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 99999,
+        "minimumValue": 1
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 30
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "device_vendor_msft_policy_config_admx_userprofiles_cleanupprofiles_1",
+            "parentSettingId": "device_vendor_msft_policy_config_admx_userprofiles_cleanupprofiles"
+        }
+    ],
+    "dependedOnBy": []
+}

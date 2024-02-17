@@ -1,0 +1,67 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "get",
+    "keywords": [
+        "Mute",
+        "Notifications",
+        "Teams",
+        "Outlook",
+        "Daily",
+        "Certain Hours"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy/QuietTime",
+    "offsetUri": "/MuteNotificationsDaily",
+    "rootDefinitionId": "device_vendor_msft_policy_config_quiettime_mutenotificationsdaily",
+    "categoryId": "3ccd987e-bfca-4838-98ea-576de34b3ebe",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "template",
+    "id": "device_vendor_msft_policy_config_quiettime_mutenotificationsdaily",
+    "description": null,
+    "helpText": null,
+    "name": "MuteNotificationsDaily",
+    "displayName": "Mute notifications daily",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationExchangeOnlineSettingApplicability",
+        "description": null,
+        "platform": "android,iOS",
+        "deviceMode": "none",
+        "technologies": "exchangeOnline"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_quiettime_mutenotificationsdaily_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enable",
+            "displayName": "Require",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_quiettime_mutenotificationsdaily_daysoftheweek",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_quiettime_mutenotificationsdaily_starttime",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_quiettime_mutenotificationsdaily_endtime",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

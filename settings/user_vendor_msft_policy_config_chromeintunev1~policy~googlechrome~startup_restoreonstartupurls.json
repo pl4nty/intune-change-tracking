@@ -1,0 +1,79 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "RestoreOnStartupURLs",
+        "URLs to open on startup",
+        "\\Google\\Google Chrome\\Startup, Home page and New Tab page",
+        "Administrative Templates\\Google\\Google Chrome\\Startup, Home page and New Tab page",
+        "Startup, Home page and New Tab page",
+        "Startup Home page and New Tab page"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV1~Policy~googlechrome~Startup/RestoreOnStartupURLs",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~startup_restoreonstartupurls",
+    "categoryId": "148a6f4e-8816-4c00-87a3-57481c85c331",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~startup_restoreonstartupurls",
+    "description": "If RestoreOnStartup is set to RestoreOnStartupIsURLs, then setting RestoreOnStartupURLs to a list of URLs specify which URLs open.\r\n\r\nIf not set, the New Tab page opens on start up.\r\n\r\nOn Microsoft® Windows®, this functionality is only available on instances that are joined to a Microsoft® Active Directory® domain domain, running on Windows 10 Pro, or enrolled in Chrome Browser Cloud Management. On macOS, this functionality is only available on instances that are managed via MDM, or joined to a domain via MCX.\r\n\r\nExample value:\r\n\r\nhttps://example.com\r\nhttps://www.chromium.org",
+    "helpText": "",
+    "name": "RestoreOnStartupURLs",
+    "displayName": "URLs to open on startup (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~startup_restoreonstartupurls_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~startup_restoreonstartupurls_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~startup_restoreonstartupurls_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~startup_restoreonstartupurls_restoreonstartupurlsdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

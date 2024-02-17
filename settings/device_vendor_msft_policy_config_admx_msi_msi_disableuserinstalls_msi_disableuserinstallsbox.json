@@ -1,0 +1,91 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "MSI_DisableUserInstalls",
+        "Prohibit User Installs",
+        "\\Windows Components\\Windows Installer",
+        "Administrative Templates\\Windows Components\\Windows Installer",
+        "Windows Installer"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_MSI/MSI_DisableUserInstalls",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_msi_msi_disableuserinstalls",
+    "categoryId": "ce0b1189-57ea-4444-a93e-e4be17160f18",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_msi_msi_disableuserinstalls_msi_disableuserinstallsbox",
+    "description": null,
+    "helpText": "",
+    "name": "MSI_DisableUserInstallsBox",
+    "displayName": "User Install Behavior: (Device)",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_msi_msi_disableuserinstalls_msi_disableuserinstallsbox_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_msi_msi_disableuserinstalls_msi_disableuserinstallsbox_0",
+            "description": null,
+            "helpText": null,
+            "name": "Allow User Installs",
+            "displayName": "Allow User Installs",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_msi_msi_disableuserinstalls_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_msi_msi_disableuserinstalls"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_msi_msi_disableuserinstalls_msi_disableuserinstallsbox_1",
+            "description": null,
+            "helpText": null,
+            "name": "Hide User Installs",
+            "displayName": "Hide User Installs",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_msi_msi_disableuserinstalls_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_msi_msi_disableuserinstalls"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

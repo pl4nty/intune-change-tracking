@@ -1,0 +1,88 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "IZ_PolicyUnsignedFrameworkComponentsURLaction_2",
+        "Run .NET Framework-reliant components not signed with Authenticode",
+        "\\Windows Components\\Internet Explorer\\Internet Control Panel\\Security Page\\Locked-Down Internet Zone",
+        "Administrative Templates\\Windows Components\\Internet Explorer\\Internet Control Panel\\Security Page\\Locked-Down Internet Zone",
+        "Locked-Down Internet Zone"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowninternetzoneallownetframeworkreliantcomponents"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/InternetExplorer/LockedDownInternetZoneAllowNETFrameworkReliantComponents",
+    "rootDefinitionId": "device_vendor_msft_policy_config_internetexplorer_lockeddowninternetzoneallownetframeworkreliantcomponents",
+    "categoryId": "b1585568-da15-41fc-a1d0-5d0b194de84c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_internetexplorer_lockeddowninternetzoneallownetframeworkreliantcomponents",
+    "description": "This policy setting allows you to manage whether .NET Framework components that are not signed with Authenticode can be executed from Internet Explorer. These components include managed controls referenced from an object tag and managed executables referenced from a link.\r\n\r\nIf you enable this policy setting, Internet Explorer will execute unsigned managed components. If you select Prompt in the drop-down box, Internet Explorer will prompt the user to determine whether to execute unsigned managed components.\r\n\r\nIf you disable this policy setting, Internet Explorer will not execute unsigned managed components.\r\n\r\nIf you do not configure this policy setting, Internet Explorer will not execute unsigned managed components.",
+    "helpText": "",
+    "name": "IZ_PolicyUnsignedFrameworkComponentsURLaction_2",
+    "displayName": "Run .NET Framework-reliant components not signed with Authenticode",
+    "defaultOptionId": "device_vendor_msft_policy_config_internetexplorer_lockeddowninternetzoneallownetframeworkreliantcomponents_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.15063",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_internetexplorer_lockeddowninternetzoneallownetframeworkreliantcomponents_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_internetexplorer_lockeddowninternetzoneallownetframeworkreliantcomponents_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_internetexplorer_lockeddowninternetzoneallownetframeworkreliantcomponents_iz_partname2004",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

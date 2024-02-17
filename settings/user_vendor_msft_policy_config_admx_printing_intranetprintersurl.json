@@ -1,0 +1,88 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "IntranetPrintersUrl",
+        "Browse a common web site to find printers",
+        "\\Control Panel\\Printers",
+        "Administrative Templates\\Control Panel\\Printers",
+        "Printers"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-printing#admx-printing-intranetprintersurl"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_Printing/IntranetPrintersUrl",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_printing_intranetprintersurl",
+    "categoryId": "684799ba-398b-4728-aa21-40c8469cbe87",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_printing_intranetprintersurl",
+    "description": "Adds a link to an Internet or intranet Web page to the Add Printer Wizard.\r\n\r\n          You can use this setting to direct users to a Web page from which they can install printers.\r\n\r\n          If you enable this setting and type an Internet or intranet address in the text box, the system adds a Browse button to the \"Specify a Printer\" page in the Add Printer Wizard. The Browse button appears beside the \"Connect to a printer on the Internet or on a home or office network\" option. When users click Browse, the system opens an Internet browser and navigates to the specified URL address to display the available printers.\r\n\r\n          This setting makes it easy for users to find the printers you want them to add.\r\n\r\n          Also, see the \"Custom support URL in the Printers folder's left pane\" and \"Activate Internet printing\" settings in \"Computer Configuration\\Administrative Templates\\Printers.\"\r\n ",
+    "helpText": "",
+    "name": "IntranetPrintersUrl",
+    "displayName": "Browse a common web site to find printers (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_printing_intranetprintersurl_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_printing_intranetprintersurl_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_printing_intranetprintersurl_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_admx_printing_intranetprintersurl_intranetprintersurl_link",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

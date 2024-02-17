@@ -1,0 +1,77 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "AutoOpenAllowedForURLs",
+        "URLs where AutoOpenFileTypes can apply",
+        "\\Microsoft Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev85diff~Policy~microsoft_edge/AutoOpenAllowedForURLs",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edgev85diff~policy~microsoft_edge_autoopenallowedforurls",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_microsoft_edgev85diff~policy~microsoft_edge_autoopenallowedforurls",
+    "description": "A list of URLs to which 'AutoOpenFileTypes' (List of file types that should be automatically opened on download) will apply to. This policy has no impact on automatically open values set by users via the download shelf ... > \"Always open files of this type\" menu entry.\r\n\r\nIf you set URLs in this policy, files will only automatically open by policy if the URL is part of this set and the file type is listed in 'AutoOpenFileTypes'. If either condition is false, the download won't automatically open by policy.\r\n\r\nIf you don't set this policy, all downloads where the file type is in 'AutoOpenFileTypes' will automatically open.\r\n\r\nA URL pattern has to be formatted according to https://go.microsoft.com/fwlink/?linkid=2095322.\r\n\r\nExample value:\r\n\r\nexample.com\r\nhttps://ssl.server.com\r\nhosting.com/good_path\r\nhttps://server:8080/path\r\n.exact.hostname.com",
+    "helpText": "",
+    "name": "AutoOpenAllowedForURLs",
+    "displayName": "URLs where AutoOpenFileTypes can apply",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edgev85diff~policy~microsoft_edge_autoopenallowedforurls_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev85diff~policy~microsoft_edge_autoopenallowedforurls_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev85diff~policy~microsoft_edge_autoopenallowedforurls_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_microsoft_edgev85diff~policy~microsoft_edge_autoopenallowedforurls_autoopenallowedforurlsdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

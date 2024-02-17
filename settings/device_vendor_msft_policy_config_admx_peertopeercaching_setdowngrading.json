@@ -1,0 +1,88 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "SetDowngrading",
+        "Configure Client BranchCache Version Support",
+        "\\Network\\BranchCache",
+        "Administrative Templates\\Network\\BranchCache",
+        "BranchCache"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-peertopeercaching#admx-peertopeercaching-setdowngrading"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_PeerToPeerCaching/SetDowngrading",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_peertopeercaching_setdowngrading",
+    "categoryId": "1cda8821-d9e2-485e-8d78-1829593d41ca",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_peertopeercaching_setdowngrading",
+    "description": "This policy setting specifies whether BranchCache-capable client computers operate in a downgraded mode in order to maintain compatibility with previous versions of BranchCache.  If client computers do not use the same BranchCache version, cache efficiency might be reduced because client computers that are using different versions of BranchCache might store cache data in incompatible formats.\r\n\r\nIf you enable this policy setting, all clients use the version of BranchCache that you specify in \"Select from the following versions.\"\r\n\r\nIf you do not configure this setting, all clients will use the version of BranchCache that matches their operating system.\r\n\r\nPolicy configuration\r\n\r\nSelect one of the following:\r\n\r\n- Not Configured. With this selection, this policy setting is not applied to client computers, and the clients run the version of BranchCache that is included with their operating system.\r\n\r\n- Enabled. With this selection, this policy setting is applied to client computers based on the value of the option setting \"Select from the following versions\" that you specify.\r\n\r\n- Disabled. With this selection, this policy setting is not applied to client computers, and the clients run the version of BranchCache that is included with their operating system.\r\n\r\nIn circumstances where this setting is enabled, you can also select and configure the following option:\r\n\r\nSelect from the following versions\r\n\r\n- Windows Vista with BITS 4.0 installed, Windows 7, or Windows Server 2008 R2. If you select this version, later versions of Windows run the version of BranchCache that is included in these operating systems rather than later versions of BranchCache.\r\n\r\n- Windows 8. If you select this version, Windows 8 will run the version of BranchCache that is included in the operating system.\r\n            \r\n ",
+    "helpText": "",
+    "name": "SetDowngrading",
+    "displayName": "Configure Client BranchCache Version Support",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_peertopeercaching_setdowngrading_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_peertopeercaching_setdowngrading_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_peertopeercaching_setdowngrading_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_peertopeercaching_setdowngrading_downgrading_version",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

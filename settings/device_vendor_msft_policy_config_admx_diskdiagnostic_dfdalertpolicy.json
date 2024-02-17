@@ -1,0 +1,88 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DfdAlertPolicy",
+        "Disk Diagnostic: Configure custom alert text",
+        "\\System\\Troubleshooting and Diagnostics\\Disk Diagnostic",
+        "Administrative Templates\\System\\Troubleshooting and Diagnostics\\Disk Diagnostic",
+        "Disk Diagnostic"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-diskdiagnostic#admx-diskdiagnostic-dfdalertpolicy"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_DiskDiagnostic/DfdAlertPolicy",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_diskdiagnostic_dfdalertpolicy",
+    "categoryId": "7bc264db-6da2-4c6b-a357-aec47c717737",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_diskdiagnostic_dfdalertpolicy",
+    "description": "This policy setting substitutes custom alert text in the disk diagnostic message shown to users when a disk reports a S.M.A.R.T. fault. \r\n\r\nIf you enable this policy setting, Windows displays custom alert text in the disk diagnostic message. The custom text may not exceed 512 characters. \r\n\r\nIf you disable or do not configure this policy setting, Windows displays the default alert text in the disk diagnostic message. \r\n\r\nNo reboots or service restarts are required for this policy setting to take effect: changes take effect immediately. \r\n\r\nThis policy setting only takes effect if the Disk Diagnostic scenario policy setting  is enabled or not configured and the Diagnostic Policy Service (DPS) is in the running state. When the service is stopped or disabled, diagnostic scenarios are not executed. The DPS can be configured with the Services snap-in to the Microsoft Management Console. \r\n\r\nNote: For Windows Server systems, this policy setting applies only if the Desktop Experience optional component is installed and the Remote Desktop Services role is not installed. \r\n      \r\n ",
+    "helpText": "",
+    "name": "DfdAlertPolicy",
+    "displayName": "Disk Diagnostic: Configure custom alert text",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_diskdiagnostic_dfdalertpolicy_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_diskdiagnostic_dfdalertpolicy_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_diskdiagnostic_dfdalertpolicy_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_diskdiagnostic_dfdalertpolicy_dfdalertpolicytitle",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

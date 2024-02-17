@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_PolicyConfiguredServerCheckValues",
+        "Additional server versions supported",
+        "\\Skype for Business 2016\\Microsoft Lync Feature Policies",
+        "Skype for Business 2016\\Microsoft Lync Feature Policies",
+        "Microsoft Lync Feature Policies"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/lync16v2~Policy~L_Lync~L_LyncConfiguration/L_PolicyConfiguredServerCheckValues",
+    "rootDefinitionId": "device_vendor_msft_policy_config_lync16v2~policy~l_lync~l_lyncconfiguration_l_policyconfiguredservercheckvalues",
+    "categoryId": "151e95d3-64ec-424f-ba7e-4d1ba6ef5aa1",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_lync16v2~policy~l_lync~l_lyncconfiguration_l_policyconfiguredservercheckvalues",
+    "description": "\r\nSpecify a semicolon separated list of server version names, e.g. RTC/2.9;RTC/3.0;RTC/4.0, to which Microsoft Lync allows logon in addition to the server versions that are supported by default. Space character is treated as part of the version string.\r\n      ",
+    "helpText": "",
+    "name": "L_PolicyConfiguredServerCheckValues",
+    "displayName": "Additional server versions supported",
+    "defaultOptionId": "device_vendor_msft_policy_config_lync16v2~policy~l_lync~l_lyncconfiguration_l_policyconfiguredservercheckvalues_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_lync16v2~policy~l_lync~l_lyncconfiguration_l_policyconfiguredservercheckvalues_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_lync16v2~policy~l_lync~l_lyncconfiguration_l_policyconfiguredservercheckvalues_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_lync16v2~policy~l_lync~l_lyncconfiguration_l_policyconfiguredservercheckvalues_l_configuredservercheckvalues_value",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

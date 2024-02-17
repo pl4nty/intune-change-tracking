@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "NoWindowsMarketplace",
+        "Hide \"Windows Marketplace\"",
+        "\\Control Panel\\Programs",
+        "Administrative Templates\\Control Panel\\Programs",
+        "Programs"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-programs#admx-programs-nowindowsmarketplace"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_Programs/NoWindowsMarketplace",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_programs_nowindowsmarketplace",
+    "categoryId": "f4eaa5be-1498-482e-abe6-de4fed7e3302",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_programs_nowindowsmarketplace",
+    "description": "This setting prevents users from access the \"Get new programs from Windows Marketplace\" task from the Programs Control Panel in Category View, Programs and Features in Classic View, and Get Programs.\r\n\r\nWindows Marketplace allows users to purchase and/or download various programs to their computer for installation.\r\n\r\nEnabling this feature does not prevent users from navigating to Windows Marketplace using other methods. \r\n\r\nIf this feature is disabled or is not configured, the \"Get new programs from Windows Marketplace\" task link will be available to all users.\r\n\r\nNote:  If the \"Hide Programs control Panel\" setting is enabled, this setting is ignored.\n ",
+    "helpText": "",
+    "name": "NoWindowsMarketplace",
+    "displayName": "Hide \"Windows Marketplace\" (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_programs_nowindowsmarketplace_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_programs_nowindowsmarketplace_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_programs_nowindowsmarketplace_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

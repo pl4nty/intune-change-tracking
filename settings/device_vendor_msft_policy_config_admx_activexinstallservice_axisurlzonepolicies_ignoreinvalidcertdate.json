@@ -1,0 +1,91 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "AxISURLZonePolicies",
+        "Establish ActiveX installation policy for sites in Trusted zones",
+        "\\Windows Components\\ActiveX Installer Service",
+        "Administrative Templates\\Windows Components\\ActiveX Installer Service",
+        "ActiveX Installer Service"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_ActiveXInstallService/AxISURLZonePolicies",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_activexinstallservice_axisurlzonepolicies",
+    "categoryId": "78906e32-f4fb-453b-939b-05717ffaae59",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_activexinstallservice_axisurlzonepolicies_ignoreinvalidcertdate",
+    "description": null,
+    "helpText": "",
+    "name": "IgnoreInvalidCertDate",
+    "displayName": "Expired certificate validation date (Device)",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_activexinstallservice_axisurlzonepolicies_ignoreinvalidcertdate_0",
+            "description": null,
+            "helpText": null,
+            "name": "False",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_activexinstallservice_axisurlzonepolicies_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_activexinstallservice_axisurlzonepolicies"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_activexinstallservice_axisurlzonepolicies_ignoreinvalidcertdate_1",
+            "description": null,
+            "helpText": null,
+            "name": "True",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_activexinstallservice_axisurlzonepolicies_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_activexinstallservice_axisurlzonepolicies"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

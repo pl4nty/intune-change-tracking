@@ -1,0 +1,91 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Certificate",
+        "Elevation",
+        "Privilege Management"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/PrivilegeManagement/ElevationRules/{0}/RuleType",
+    "rootDefinitionId": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}",
+    "categoryId": "4f3a6fca-a74c-448d-95b1-9d6d7a5d4449",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "id": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}_ruletype",
+    "description": "",
+    "helpText": null,
+    "name": "Elevationtype",
+    "displayName": "Elevation type",
+    "defaultOptionId": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}_self",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "endpointPrivilegeManagement",
+        "configurationServiceProviderVersion": null,
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19042",
+        "windowsSkus": [
+            "windowsProfessional",
+            "windowsEnterprise",
+            "windowsEducation",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}_self",
+            "description": null,
+            "helpText": null,
+            "name": "Userconfirmed",
+            "displayName": "User confirmed",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "Self"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}",
+                    "parentSettingId": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}"
+                }
+            ],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}_ruletype_validation",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "itemId": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}_automatic",
+            "description": null,
+            "helpText": null,
+            "name": "Automatic",
+            "displayName": "Automatic",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "Automatic"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}",
+                    "parentSettingId": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

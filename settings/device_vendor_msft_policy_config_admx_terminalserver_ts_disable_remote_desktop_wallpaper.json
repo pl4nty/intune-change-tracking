@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "TS_DISABLE_REMOTE_DESKTOP_WALLPAPER",
+        "Enforce Removal of Remote Desktop Wallpaper",
+        "\\Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Remote Session Environment",
+        "Administrative Templates\\Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Remote Session Environment",
+        "Remote Session Environment"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-terminalserver#admx-terminalserver-ts-disable-remote-desktop-wallpaper"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_TerminalServer/TS_DISABLE_REMOTE_DESKTOP_WALLPAPER",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_terminalserver_ts_disable_remote_desktop_wallpaper",
+    "categoryId": "ce572b49-4d47-47b6-b787-ac1252753581",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_terminalserver_ts_disable_remote_desktop_wallpaper",
+    "description": "Specifies whether desktop wallpaper is displayed to remote clients connecting via Remote Desktop Services.\r\n\r\nYou can use this setting to enforce the removal of wallpaper during a Remote Desktop Services session. By default, Windows XP Professional displays wallpaper to remote clients connecting through Remote Desktop, depending on the client configuration (see the Experience tab in the Remote Desktop Connection options for more information). Servers running Windows Server 2003 do not display wallpaper by default to Remote Desktop Services sessions.\r\n\r\nIf the status is set to Enabled, wallpaper never appears in a Remote Desktop Services session.\r\n\r\nIf the status is set to Disabled, wallpaper might appear in a Remote Desktop Services session, depending on the client configuration.\r\n\r\nIf the status is set to Not Configured, the default behavior applies.\r\n ",
+    "helpText": "",
+    "name": "TS_DISABLE_REMOTE_DESKTOP_WALLPAPER",
+    "displayName": "Enforce Removal of Remote Desktop Wallpaper",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_terminalserver_ts_disable_remote_desktop_wallpaper_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_terminalserver_ts_disable_remote_desktop_wallpaper_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_terminalserver_ts_disable_remote_desktop_wallpaper_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

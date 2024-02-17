@@ -1,0 +1,124 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Backup Directory",
+        "LAPS"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/LAPS-csp/"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/LAPS",
+    "offsetUri": "/Policies/BackupDirectory",
+    "rootDefinitionId": "device_vendor_msft_laps_policies_backupdirectory",
+    "categoryId": "f1dcf7b6-2d89-41bf-b5eb-02a879c6db5d",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "id": "device_vendor_msft_laps_policies_backupdirectory",
+    "description": "Use this setting to configure which directory the local admin account password is backed up to.\n\nThe allowable settings are:\n\n0=Disabled (password will not be backed up)\n1=Backup the password to Azure AD only\n2=Backup the password to Active Directory only\n\nIf not specified, this setting will default to 0.\r\n ",
+    "helpText": "",
+    "name": "BackupDirectory",
+    "displayName": "Backup Directory",
+    "defaultOptionId": "device_vendor_msft_laps_policies_backupdirectory_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17763.4244",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "surfaceHub",
+            "windowsEducation",
+            "holoLens",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_laps_policies_backupdirectory_0",
+            "description": "Disabled (password will not be backed up)",
+            "helpText": null,
+            "name": "Disabled (password will not be backed up)",
+            "displayName": "Disabled (password will not be backed up)",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_laps_policies_backupdirectory_1",
+            "description": "Backup the password to Azure AD only",
+            "helpText": null,
+            "name": "Backup the password to Azure AD only",
+            "displayName": "Backup the password to Azure AD only",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_laps_policies_passwordagedays_aad",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "itemId": "device_vendor_msft_laps_policies_backupdirectory_2",
+            "description": "Backup the password to Active Directory only",
+            "helpText": null,
+            "name": "Backup the password to Active Directory only",
+            "displayName": "Backup the password to Active Directory only",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_laps_policies_passwordagedays",
+                    "required": false
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_laps_policies_passwordexpirationprotectionenabled",
+                    "required": false
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_laps_policies_adpasswordencryptionenabled",
+                    "required": false
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_laps_policies_adpasswordencryptionprincipal",
+                    "required": false
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_laps_policies_adencryptedpasswordhistorysize",
+                    "required": false
+                }
+            ]
+        }
+    ]
+}

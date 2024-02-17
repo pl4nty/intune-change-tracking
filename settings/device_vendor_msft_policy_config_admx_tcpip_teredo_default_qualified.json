@@ -1,0 +1,88 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Teredo_Default_Qualified",
+        "Set Teredo Default Qualified",
+        "\\Network\\TCPIP Settings\\IPv6 Transition Technologies",
+        "Administrative Templates\\Network\\TCPIP Settings\\IPv6 Transition Technologies",
+        "IPv6 Transition Technologies"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-tcpip#admx-tcpip-teredo-default-qualified"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_tcpip/Teredo_Default_Qualified",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_tcpip_teredo_default_qualified",
+    "categoryId": "f52d9745-eaf4-4e39-84b2-6b32c3b15aa3",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_tcpip_teredo_default_qualified",
+    "description": "This policy setting allows you to set Teredo to be ready to communicate, a process referred to as qualification. By default, Teredo enters a dormant state when not in use. The qualification process brings it out of a dormant state.\r\n\r\nIf you disable or do not configure this policy setting, the local host setting is used.\r\n\r\nThis policy setting contains only one state:\r\n\r\nPolicy Enabled State: If Default Qualified is enabled, Teredo will attempt qualification immediately and remain qualified if the qualification process succeeds.\r\n\r\n ",
+    "helpText": "",
+    "name": "Teredo_Default_Qualified",
+    "displayName": "Set Teredo Default Qualified",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_tcpip_teredo_default_qualified_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_tcpip_teredo_default_qualified_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_tcpip_teredo_default_qualified_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_tcpip_teredo_default_qualified_stateselect",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

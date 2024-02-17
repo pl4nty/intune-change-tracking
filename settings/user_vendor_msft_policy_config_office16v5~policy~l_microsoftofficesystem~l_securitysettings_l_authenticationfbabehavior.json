@@ -1,0 +1,82 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_AuthenticationFBABehavior",
+        "Control how Office handles form-based sign-in prompts",
+        "\\Microsoft Office 2016\\Security Settings",
+        "Microsoft Office 2016\\Security Settings",
+        "Security Settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/office16v5~Policy~L_MicrosoftOfficeSystem~L_SecuritySettings/L_AuthenticationFBABehavior",
+    "rootDefinitionId": "user_vendor_msft_policy_config_office16v5~policy~l_microsoftofficesystem~l_securitysettings_l_authenticationfbabehavior",
+    "categoryId": "50b4bc60-802c-477a-9366-80e09154595f",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_office16v5~policy~l_microsoftofficesystem~l_securitysettings_l_authenticationfbabehavior",
+    "description": "This policy setting controls how Office applications handle form-based sign-in prompts.​\r\n\r\nIf you enable this policy setting, you must choose one of the following options:​\r\n\r\nBlock all prompts​\r\nAsk the user what to do for each new host​\r\nShow prompts only from allowed hosts​\r\n\r\nIf you select “Block all prompts” then no form-based sign-in prompts are shown to the user and the user is shown a message that the sign-in method isn’t allowed.​\r\n\r\nIf you select “Ask the user what do for each new host” then the user is asked for each new host whether the user wants to sign-in to the host. If the user has previously signed-in to a host, a form-based sign-in prompt is shown for that host. Also, form-based sign-in prompts are shown for any hosts specified by the “Specify hosts allowed to show form-based sign-in prompts to users” setting.\r\n\r\nIf you select “Show prompts only from allowed hosts” then form-based sign-in prompts are shown only from hosts that have been specified by the additional “Specify hosts allowed to show form-based sign-in prompts to users” setting. Form-based sign-in prompts from all other hosts are blocked and the user is shown a message that the sign-in method isn’t allowed.\r\n\r\nNote: If you don’t configure the “Specify hosts allowed to show form-based sign-in prompts to users” setting or don’t specify any hosts in that setting, then the behavior of the “Show prompts only from allowed hosts” option will be the same as if you selected the “Block all prompts” option.\r\n\r\nIf you disable or don’t configure this policy setting, all form-based sign-in prompts are blocked and the  user is shown a message that the sign-in method isn’t allowed. But users are able to change the behavior for form-based sign-in prompts by going to File > Options > Trust Center > Trust Center Settings > Form-based sign-in.\r\n\r\n\r\nNote: This policy setting only applies to subscription versions of Office, such as Office 365 ProPlus, and to subscription versions of Project and Visio.​",
+    "helpText": "",
+    "name": "L_AuthenticationFBABehavior",
+    "displayName": "Control how Office handles form-based sign-in prompts (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_office16v5~policy~l_microsoftofficesystem~l_securitysettings_l_authenticationfbabehavior_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v5~policy~l_microsoftofficesystem~l_securitysettings_l_authenticationfbabehavior_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v5~policy~l_microsoftofficesystem~l_securitysettings_l_authenticationfbabehavior_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_office16v5~policy~l_microsoftofficesystem~l_securitysettings_l_authenticationfbabehavior_l_authenticationfbabehaviorenum",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_office16v5~policy~l_microsoftofficesystem~l_securitysettings_l_authenticationfbabehavior_l_authenticationfbaenabledhostsid",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

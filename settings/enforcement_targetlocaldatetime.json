@@ -1,0 +1,50 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Software Update",
+        "Declarative Device Management (DDM)\\Software Update"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "TargetLocalDateTime",
+    "rootDefinitionId": "enforcement_enforcement",
+    "categoryId": "42a6198f-bdec-402e-b619-315400b65488",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "enforcement_targetlocaldatetime",
+    "description": "The local date time value that specifies when to force install the software update. Use the format 'yyyy-mm-ddThh:mm:ss0'. Note this format but doesn't include a time zone offset. If the user doesn't trigger the software update before this time, the device force installs it. For example, if you want to have an update occur on a user's devices on November 18 at 12:30pm, please enter 2023-11-18T12:30:000",
+    "helpText": null,
+    "name": "TargetLocalDateTime",
+    "displayName": "Target Local Date Time",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "dateTime",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "enforcement_enforcement",
+            "parentSettingId": "enforcement_enforcement"
+        }
+    ],
+    "dependedOnBy": []
+}

@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ExtensionAllowedTypes",
+        "Configure allowed extension types",
+        "\\Microsoft Edge\\Extensions",
+        "Microsoft Edge\\Extensions",
+        "Extensions"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edge~Policy~microsoft_edge~Extensions/ExtensionAllowedTypes",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~extensions_extensionallowedtypes",
+    "categoryId": "66615d2a-fec9-47f1-8eaf-9813e30cc023",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~extensions_extensionallowedtypes",
+    "description": "Controls which extension types can be installed and limits runtime access.\r\n\r\nThis setting defines the allowed types of extensions and which hosts they can interact with. The value is a list of strings, each of which should be one of the following: \"extension\", \"theme\", \"user_script\", and \"hosted_app\". See the Microsoft Edge extensions documentation for more information on these types.\r\n\r\nNote that this policy also affects extensions to be force-installed by using 'ExtensionInstallForcelist' (Control which extensions are installed silently) policy.\r\n\r\nIf you enable this policy, only extensions that match a type in the list are installed.\r\n\r\nIf you don't configure this policy, no restrictions on the acceptable extension types are enforced.\r\n\r\nExample value:\r\n\r\nhosted_app",
+    "helpText": "",
+    "name": "ExtensionAllowedTypes",
+    "displayName": "Configure allowed extension types",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~extensions_extensionallowedtypes_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~extensions_extensionallowedtypes_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~extensions_extensionallowedtypes_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~extensions_extensionallowedtypes_extensionallowedtypesdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

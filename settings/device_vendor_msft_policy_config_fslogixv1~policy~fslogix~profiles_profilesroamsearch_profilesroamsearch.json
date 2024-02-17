@@ -1,0 +1,102 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ProfilesRoamSearch",
+        "Roam Search",
+        "\\FSLogix\\Profile Containers",
+        "Administrative Templates\\FSLogix\\Profile Containers",
+        "Profile Containers"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/FSLogixv1~Policy~FSLogix~Profiles/ProfilesRoamSearch",
+    "rootDefinitionId": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilesroamsearch",
+    "categoryId": "0b4f28d5-fc68-43a4-92cb-9a47c2a8ebf9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilesroamsearch_profilesroamsearch",
+    "description": "",
+    "helpText": "",
+    "name": "ProfilesRoamSearch",
+    "displayName": "",
+    "defaultOptionId": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilesroamsearch_profilesroamsearch_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilesroamsearch_profilesroamsearch_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilesroamsearch_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilesroamsearch"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilesroamsearch_profilesroamsearch_1",
+            "description": null,
+            "helpText": null,
+            "name": "Single-user Search",
+            "displayName": "Single-user Search",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilesroamsearch_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilesroamsearch"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilesroamsearch_profilesroamsearch_2",
+            "description": null,
+            "helpText": null,
+            "name": "Multi-user Search",
+            "displayName": "Multi-user Search",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilesroamsearch_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilesroamsearch"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

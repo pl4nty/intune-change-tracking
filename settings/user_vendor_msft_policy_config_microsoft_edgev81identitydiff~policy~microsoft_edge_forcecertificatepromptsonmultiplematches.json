@@ -1,0 +1,72 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ForceCertificatePromptsOnMultipleMatches",
+        "Configure whether Microsoft Edge should automatically select a certificate when there are multiple certificate matches for a site configured with \"AutoSelectCertificateForUrls\"",
+        "\\Microsoft Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev81identitydiff~Policy~microsoft_edge/ForceCertificatePromptsOnMultipleMatches",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edgev81identitydiff~policy~microsoft_edge_forcecertificatepromptsonmultiplematches",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_microsoft_edgev81identitydiff~policy~microsoft_edge_forcecertificatepromptsonmultiplematches",
+    "description": "Toggles whether users are prompted to select a certificate if there are multiple certificates available and a site is configured with 'AutoSelectCertificateForUrls' (Automatically select client certificates for these sites). If you don't configure 'AutoSelectCertificateForUrls' for a site, the user will always be prompted to select a certificate.\r\n\r\nIf you set this policy to True, Microsoft Edge will prompt a user to select a certificate for sites on the list defined in 'AutoSelectCertificateForUrls' if and only if there is more than one certificate.\r\n\r\nIf you set this policy to False or don't configure it, Microsoft Edge will automatically select a certificate even if there are multiple matches for a certificate. The user will not be prompted to select a certificate for sites on the list defined in 'AutoSelectCertificateForUrls'.",
+    "helpText": "",
+    "name": "ForceCertificatePromptsOnMultipleMatches",
+    "displayName": "Configure whether Microsoft Edge should automatically select a certificate when there are multiple certificate matches for a site configured with \"AutoSelectCertificateForUrls\" (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edgev81identitydiff~policy~microsoft_edge_forcecertificatepromptsonmultiplematches_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev81identitydiff~policy~microsoft_edge_forcecertificatepromptsonmultiplematches_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev81identitydiff~policy~microsoft_edge_forcecertificatepromptsonmultiplematches_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

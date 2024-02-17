@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "NoInstalledUpdates",
+        "Hide \"Installed Updates\" page",
+        "\\Control Panel\\Programs",
+        "Administrative Templates\\Control Panel\\Programs",
+        "Programs"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-programs#admx-programs-noinstalledupdates"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_Programs/NoInstalledUpdates",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_programs_noinstalledupdates",
+    "categoryId": "f4eaa5be-1498-482e-abe6-de4fed7e3302",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_programs_noinstalledupdates",
+    "description": "This setting prevents users from accessing \"Installed Updates\" page from the \"View installed updates\" task.\r\n\r\n\"Installed Updates\" allows users to view and uninstall updates currently installed on the computer.  The updates are often downloaded directly from Windows Update or from various program publishers.\r\n\r\nIf this setting is disabled or not configured, the \"View installed updates\" task and the \"Installed Updates\" page will be available to all users.\r\n\r\nThis setting does not prevent users from using other tools and methods to install or uninstall programs.\n ",
+    "helpText": "",
+    "name": "NoInstalledUpdates",
+    "displayName": "Hide \"Installed Updates\" page (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_programs_noinstalledupdates_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_programs_noinstalledupdates_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_programs_noinstalledupdates_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}
