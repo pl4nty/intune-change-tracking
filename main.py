@@ -1,9 +1,11 @@
 from dotenv import load_dotenv
 load_dotenv()
 
+import aiohttp
 import asyncio
 import json
 import os
+import re
 import shutil
 from pathlib import Path
 
@@ -17,8 +19,41 @@ from msgraph_beta.generated.device_management.configuration_settings.configurati
 client = GraphServiceClient(DefaultAzureCredential(), ['https://graph.microsoft.com/.default'])
 
 async def main():
-    output = 'settings'
+    async with aiohttp.ClientSession() as session, session.get('https://intune.microsoft.com/signin/idpRedirect.js') as resp:
+        versions = await resp.text()
+        versions = re.search(r'\"extensionsPageVersion\":({[^}]+})', versions).group(1)
+        versions = json.loads(versions)
 
+        root = 'https://afd-v2.hosting.portal.azure.net'
+        root_devicesettings = f'{root}/intunedevicesettings/Content/{versions.get('Microsoft_Intune_DeviceSettings')[0]}/Scripts/DeviceConfiguration'
+
+        # map setting error codes to descriptions
+        async with session.get(f'{root_devicesettings}/Blades/DevicePoliciesStatus/SettingStatus.js') as resp:
+            data = await resp.text()
+            data = re.search(r'SettingStatusErrorMap = ({[^}]+})', data).group(1)
+            data = json.loads(data, strict=False) # some strings have control characters
+            with open('SettingStatusErrors.json', 'w', encoding='utf-8') as f:
+                json.dump(data, f, ensure_ascii=False, indent=4)
+
+        # DCv1 policies
+        output = 'DCv1'
+        shutil.rmtree(output)
+        for source in ['Configuration', 'Compliance']:
+            os.makedirs(Path(output, source))
+            async with session.get(f'{root_devicesettings}/Metadata/{source}Metadata.js') as resp:
+                data = await resp.text()
+                data = re.search(r'(?s)metadata = ({.+});', await resp.text()).group(1)
+                data = json.loads(data)
+                for family in data.values():
+                    for setting in family:
+                        path = Path(output, source, setting.get('id')).with_suffix('.json')
+                        with open(path, 'w', encoding='utf-8') as f:
+                            json.dump(setting, f, ensure_ascii=False, indent=4)
+
+    # DCv2 policies eg Settings Catalog
+    output = 'settings'
+    shutil.rmtree(output)
+    os.makedirs(output)
     query_params = ConfigurationSettingsRequestBuilder.ConfigurationSettingsRequestBuilderGetQueryParameters(
         top=10
     )
@@ -26,13 +61,10 @@ async def main():
         options=[ResponseHandlerOption(NativeResponseHandler())],
         # query_parameters=query_params
     )
-    settings = await client.device_management.configuration_settings.get(request_configuration=request_config)
-    
-    shutil.rmtree(output)
-    os.makedirs(output, exist_ok=True)
-    for setting in settings.json()['value']:
+    data = await client.device_management.configuration_settings.get(request_configuration=request_config)
+    for setting in data.json().get('value'):
         setting.pop('version')
-        path = Path(output, setting['id']).with_suffix('.json')
+        path = Path(output, setting.get('id')).with_suffix('.json')
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(setting, f, ensure_ascii=False, indent=4)
 
