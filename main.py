@@ -15,10 +15,19 @@ from kiota_abstractions.native_response_handler import NativeResponseHandler
 from kiota_http.middleware.options import ResponseHandlerOption
 
 from msgraph_beta.generated.device_management.configuration_settings.configuration_settings_request_builder import ConfigurationSettingsRequestBuilder
+from msgraph_beta.generated.device_app_management.device_app_management_request_builder import DeviceAppManagementRequestBuilder
 
 client = GraphServiceClient(DefaultAzureCredential(), ['https://graph.microsoft.com/.default'])
 
 async def main():
+    # Enterprise App Management catalog
+    request_config = DeviceAppManagementRequestBuilder.DeviceAppManagementRequestBuilderGetRequestConfiguration(
+        options=[ResponseHandlerOption(NativeResponseHandler())],
+    )
+    data = await client.device_app_management.with_url('https://graph.microsoft.com/beta/deviceAppManagement/mobileAppCatalogPackages').get(request_configuration=request_config)
+    with open('AppCatalog.json', 'w', encoding='utf-8') as f:
+        f.write(data.text)
+
     async with aiohttp.ClientSession() as session, session.get('https://intune.microsoft.com/signin/idpRedirect.js') as resp:
         versions = await resp.text()
         versions = re.search(r'\"extensionsPageVersion\":({[^}]+})', versions).group(1)
