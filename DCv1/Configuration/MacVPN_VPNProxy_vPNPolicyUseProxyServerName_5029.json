@@ -1,0 +1,112 @@
+{
+    "ouputAnArray": false,
+    "complexOptions": [
+        {
+            "id": "MacVPN_VPNProxy_vPNPolicyAutomaticConfigurationScriptName_5030",
+            "dataType": 20,
+            "category": 137,
+            "nameResourceKey": "vPNPolicyAutomaticConfigurationScriptName",
+            "descriptionResourceKey": "vPNPolicyAutomaticConfigurationScriptDescription",
+            "emptyValueResourceKey": "vPNScriptExample",
+            "inputControlLength": 50,
+            "validation": [
+                {
+                    "validationType": 2,
+                    "validationArguments": "^(((http|https|ftp):\\/\\/.+?)|([\\w-]+\\.?)+)$",
+                    "failureMessage": "mustBeValidAddress"
+                }
+            ],
+            "childSettings": [],
+            "options": [],
+            "isRequired": false,
+            "entityKey": "automaticConfigurationScriptUrl",
+            "booleanActions": 0,
+            "policyType": 66,
+            "flipChildrenEnabledLogic": false,
+            "readOnly": false,
+            "writeOnce": false,
+            "enabled": true,
+            "multiItemIncludeSelectAll": false
+        },
+        {
+            "id": "MacVPN_VPNProxy_vPNPolicyAddressName_5031",
+            "dataType": 20,
+            "category": 137,
+            "nameResourceKey": "vPNPolicyAddressName",
+            "descriptionResourceKey": "vPNPolicyAddressDescription",
+            "emptyValueResourceKey": "vPNAddressExample",
+            "inputControlLength": 50,
+            "validation": [
+                {
+                    "validationType": 2,
+                    "validationArguments": "^\\w+(\\-?\\w)*\\.\\w+(\\-?\\w)*(\\.\\w+)*$",
+                    "failureMessage": "mustBeValidAddress"
+                }
+            ],
+            "childSettings": [],
+            "options": [],
+            "isRequired": false,
+            "entityKey": "address",
+            "booleanActions": 0,
+            "policyType": 66,
+            "flipChildrenEnabledLogic": false,
+            "readOnly": false,
+            "writeOnce": false,
+            "enabled": true,
+            "multiItemIncludeSelectAll": false
+        },
+        {
+            "id": "MacVPN_VPNProxy_vPNPolicyPortNumberName_5032",
+            "dataType": 14,
+            "category": 137,
+            "nameResourceKey": "vPNPolicyPortNumberName",
+            "descriptionResourceKey": "empty",
+            "emptyValueResourceKey": "proxyPortExample",
+            "inputControlLength": 50,
+            "validation": [
+                {
+                    "validationType": 18,
+                    "validationArguments": [
+                        0,
+                        65535
+                    ]
+                }
+            ],
+            "childSettings": [],
+            "options": [],
+            "isRequired": false,
+            "entityKey": "port",
+            "booleanActions": 0,
+            "policyType": 66,
+            "flipChildrenEnabledLogic": false,
+            "readOnly": false,
+            "writeOnce": false,
+            "enabled": true,
+            "linkedValidation": {
+                "entityKey": "address",
+                "linkedValidationType": 4,
+                "validationMessageKey": "mustSpecifyAddress"
+            },
+            "multiItemIncludeSelectAll": false
+        }
+    ],
+    "singleSetting": false,
+    "id": "MacVPN_VPNProxy_vPNPolicyUseProxyServerName_5029",
+    "dataType": 6,
+    "category": 137,
+    "nameResourceKey": "vPNPolicyUseProxyServerName",
+    "descriptionResourceKey": "vPNPolicyUseProxyServerDescription",
+    "inputControlLength": 50,
+    "validation": [],
+    "childSettings": [],
+    "options": [],
+    "isRequired": false,
+    "entityKey": "proxyServer",
+    "booleanActions": 0,
+    "policyType": 66,
+    "flipChildrenEnabledLogic": false,
+    "readOnly": false,
+    "writeOnce": false,
+    "enabled": true,
+    "multiItemIncludeSelectAll": false
+}

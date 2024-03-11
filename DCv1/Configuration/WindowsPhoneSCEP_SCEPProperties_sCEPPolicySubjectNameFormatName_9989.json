@@ -1,0 +1,147 @@
+{
+    "id": "WindowsPhoneSCEP_SCEPProperties_sCEPPolicySubjectNameFormatName_9989",
+    "dataType": 16,
+    "category": 103,
+    "nameResourceKey": "sCEPPolicySubjectNameFormatName",
+    "descriptionResourceKey": "empty",
+    "inputControlLength": 50,
+    "validation": [],
+    "childSettings": [],
+    "options": [
+        {
+            "nameResourceKey": "notConfigured",
+            "isRequired": false,
+            "isDisabled": false,
+            "retainValuesOnDeSelection": false,
+            "deleteValuesOnDeSelection": false,
+            "hidden": false,
+            "enabled": true
+        },
+        {
+            "nameResourceKey": "sCEPPolicySubjectNameFormatCommonName",
+            "value": "commonName",
+            "isRequired": false,
+            "isDisabled": false,
+            "retainValuesOnDeSelection": false,
+            "deleteValuesOnDeSelection": false,
+            "hidden": false,
+            "enabled": true
+        },
+        {
+            "nameResourceKey": "sCEPPolicySubjectNameFormatCommonNameAndEmailAddress",
+            "value": "commonNameIncludingEmail",
+            "isRequired": false,
+            "isDisabled": false,
+            "retainValuesOnDeSelection": false,
+            "deleteValuesOnDeSelection": false,
+            "hidden": false,
+            "enabled": true
+        },
+        {
+            "nameResourceKey": "sCEPPolicySubjectNameFormatCommonNameAsEmail",
+            "value": "commonNameAsEmail",
+            "isRequired": false,
+            "isDisabled": false,
+            "retainValuesOnDeSelection": false,
+            "deleteValuesOnDeSelection": false,
+            "hidden": false,
+            "enabled": true
+        },
+        {
+            "nameResourceKey": "sCEPPolicySubjectNameFormatCommonNameAsIMEI",
+            "value": "commonNameAsIMEI",
+            "isRequired": false,
+            "isDisabled": false,
+            "retainValuesOnDeSelection": false,
+            "deleteValuesOnDeSelection": false,
+            "hidden": false,
+            "enabled": true
+        },
+        {
+            "nameResourceKey": "sCEPPolicySubjectNameFormatCommonNameAsSerialNumber",
+            "value": "commonNameAsSerialNumber",
+            "isRequired": false,
+            "isDisabled": false,
+            "retainValuesOnDeSelection": false,
+            "deleteValuesOnDeSelection": false,
+            "hidden": false,
+            "enabled": true
+        },
+        {
+            "nameResourceKey": "sCEPPolicySubjectNameFormatCustom",
+            "value": "custom",
+            "children": [
+                {
+                    "id": "WindowsPhoneSCEP_SCEPProperties_sCEPPolicySubjectNameFormatCustom_9990",
+                    "dataType": 20,
+                    "category": 103,
+                    "nameResourceKey": "sCEPPolicySubjectNameFormatCustom",
+                    "descriptionResourceKey": "sCEPPolicyCustomSubjectNameWithAadFormatDescription",
+                    "inputControlLength": 50,
+                    "validation": [
+                        {
+                            "validationType": 2,
+                            "validationArguments": "^CN=[^=,\\s]*(\\{\\{UserName\\}\\}|\\{\\{EmailAddress\\}\\}|\\{\\{SERIALNUMBER\\}\\}|\\{\\{IMEINumber\\}\\}|\\{\\{UserPrincipalName\\}\\}|\\$?\\w+\\.?\\w*)[^=,\\s]*(,E=(\\{\\{EmailAddress\\}\\}|\\$?\\w+\\.?\\w*))?((,OU=[\\w-]+\\s?\\w*)?(,O=[\\w-]+(\\s?\\w+)*)?(,L=[\\w-]+\\s?\\w*)?(,ST=[\\w-]+\\s?\\w*)?(,C=[\\w-]+\\s?\\w*)?)*$|^CN=[^=,\\s]*(\\{\\{AAD_Device_ID\\}\\}|\\{\\{EmailAddress\\}\\}|\\{\\{SERIALNUMBER\\}\\}|\\{\\{IMEINumber\\}\\}|\\{\\{OnPrem_Distinguished_Name\\}\\}|\\{\\{onPremisesSamAccountName\\}\\}|\\{\\{UserPrincipalName\\}\\}|\\$?\\w+\\.?\\w*)[^=,\\s]*(,E=(\\{\\{EmailAddress\\}\\}|\\$?\\w+\\.?\\w*))?((,OU=[\\w-]+\\s?\\w*)?(,O=[\\w-]+(\\s?\\w+)*)?(,L=[\\w-]+\\s?\\w*)?(,ST=[\\w-]+\\s?\\w*)?(,C=[\\w-]+\\s?\\w*)?)*$|\\w*\\{\\{OnPrem_Distinguished_Name\\}\\}\\w*",
+                            "failureMessage": "sCEPPolicyCustomSubjectNameWithAadFormatDescription"
+                        }
+                    ],
+                    "childSettings": [],
+                    "options": [],
+                    "isRequired": true,
+                    "entityKey": "subjectNameFormatString",
+                    "booleanActions": 0,
+                    "defaultValue": "CN={{UserName}},E={{EmailAddress}}",
+                    "policyType": 103,
+                    "flipChildrenEnabledLogic": false,
+                    "readOnly": false,
+                    "writeOnce": false,
+                    "enabled": false,
+                    "multiItemIncludeSelectAll": false
+                },
+                {
+                    "id": "WindowsPhoneSCEP_SCEPProperties_sCEPPolicySubjectNameFormatCustom_9991",
+                    "dataType": 20,
+                    "category": 103,
+                    "nameResourceKey": "sCEPPolicySubjectNameFormatCustom",
+                    "descriptionResourceKey": "sCEPPolicyCustomSubjectNameWithAadFormatDescription",
+                    "inputControlLength": 50,
+                    "validation": [
+                        {
+                            "validationType": 2,
+                            "validationArguments": "(?:^\\{\\{OnPrem_Distinguished_Name\\}\\}$)|(?:^CN=(?:[^\\{\\},=]+?(?=,*)|[^\\{\\}=,]*?(?:\\{\\{(?:UserName|EmailAddress|OnPrem_Distinguished_Name|onPremisesSamAccountName|UserPrincipalName|Department|AAD_Device_ID|Device_Serial|Device_IMEI|SerialNumber|IMEINumber|AzureADDeviceId|WiFiMacAddress|IMEI|DeviceName|DeviceId|MEID)\\}\\}[^\\{\\}=,]*?)+(?=,*))(?:,(?:L|O|OU|E|Email|C|S|ST|STREET|T|Title|G|GivenName|Initials|SN|DC)=(?:[^\\{\\}=,]+?(?=,*)|[^\\{\\}=,]*?(?:\\{\\{(?:UserName|EmailAddress|OnPrem_Distinguished_Name|onPremisesSamAccountName|UserPrincipalName|Department|AAD_Device_ID|Device_Serial|Device_IMEI|SerialNumber|IMEINumber|AzureADDeviceId|WiFiMacAddress|IMEI|DeviceName|DeviceId|MEID)\\}\\}[^\\{\\}=,]*?)+(?=,*)))*$)",
+                            "failureMessage": "sCEPPolicyCustomSubjectNameWithAadFormatDescription"
+                        }
+                    ],
+                    "childSettings": [],
+                    "options": [],
+                    "isRequired": true,
+                    "entityKey": "subjectNameFormatString",
+                    "booleanActions": 0,
+                    "defaultValue": "CN={{UserName}},E={{EmailAddress}}",
+                    "policyType": 103,
+                    "flipChildrenEnabledLogic": false,
+                    "readOnly": false,
+                    "writeOnce": false,
+                    "enabled": true,
+                    "multiItemIncludeSelectAll": false
+                }
+            ],
+            "isRequired": false,
+            "isDisabled": false,
+            "retainValuesOnDeSelection": false,
+            "deleteValuesOnDeSelection": false,
+            "hidden": false,
+            "enabled": true
+        }
+    ],
+    "isRequired": true,
+    "entityKey": "subjectNameFormat",
+    "booleanActions": 0,
+    "policyType": 103,
+    "flipChildrenEnabledLogic": false,
+    "readOnly": false,
+    "writeOnce": false,
+    "enabled": true,
+    "flightingFeatureReverseLogic": true,
+    "multiItemIncludeSelectAll": false
+}

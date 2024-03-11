@@ -1,0 +1,167 @@
+{
+    "disableTopPadding": false,
+    "isSettingDescription": false,
+    "showAsSectionHeader": true,
+    "id": "AndroidDeviceOwnerGeneral_VPNConnectivity_allAndroidCorpEnrollmentTypesHeaderName_1189",
+    "dataType": 8,
+    "category": 131,
+    "nameResourceKey": "allAndroidCorpEnrollmentTypesHeaderName",
+    "descriptionResourceKey": "allAndroidCorpEnrollmentTypesHeaderDescription",
+    "inputControlLength": 0,
+    "validation": [],
+    "childSettings": [
+        {
+            "id": "AndroidDeviceOwnerGeneral_VPNConnectivity_androidEnterpriseAlwaysOnVpnEnabledNameWorkProfile_1190",
+            "dataType": 0,
+            "category": 131,
+            "nameResourceKey": "androidEnterpriseAlwaysOnVpnEnabledNameWorkProfile",
+            "descriptionResourceKey": "androidDeviceOwnerAlwaysOnVpnEnabledDescription",
+            "inputControlLength": 0,
+            "validation": [],
+            "childSettings": [
+                {
+                    "id": "AndroidDeviceOwnerGeneral_VPNConnectivity_androidEnterpriseAlwaysOnVpnClientName_1191",
+                    "dataType": 16,
+                    "category": 131,
+                    "nameResourceKey": "androidEnterpriseAlwaysOnVpnClientName",
+                    "descriptionResourceKey": "androidEnterpriseDeviceOwnerAlwaysOnVpnClientDescription",
+                    "inputControlLength": 0,
+                    "validation": [],
+                    "childSettings": [],
+                    "options": [
+                        {
+                            "nameResourceKey": "CiscoAnyConnectAlwaysOnOption",
+                            "value": "com.cisco.anyconnect.vpn.android.avf",
+                            "isRequired": false,
+                            "isDisabled": false,
+                            "retainValuesOnDeSelection": false,
+                            "deleteValuesOnDeSelection": false,
+                            "hidden": false,
+                            "enabled": true
+                        },
+                        {
+                            "nameResourceKey": "F5NetworksF5AccessOption",
+                            "value": "com.f5.edge.client_ics",
+                            "isRequired": false,
+                            "isDisabled": false,
+                            "retainValuesOnDeSelection": false,
+                            "deleteValuesOnDeSelection": false,
+                            "hidden": false,
+                            "enabled": true
+                        },
+                        {
+                            "nameResourceKey": "PaloAltoNetworksGlobalProtectOption",
+                            "value": "com.paloaltonetworks.globalprotect",
+                            "isRequired": false,
+                            "isDisabled": false,
+                            "retainValuesOnDeSelection": false,
+                            "deleteValuesOnDeSelection": false,
+                            "hidden": false,
+                            "enabled": true
+                        },
+                        {
+                            "nameResourceKey": "PulseSecureAlwaysOnOption",
+                            "value": "net.pulsesecure.pulsesecure",
+                            "isRequired": false,
+                            "isDisabled": false,
+                            "retainValuesOnDeSelection": false,
+                            "deleteValuesOnDeSelection": false,
+                            "hidden": false,
+                            "enabled": true
+                        },
+                        {
+                            "nameResourceKey": "CustomAlwaysOnVpnClientPackageIdentifierOption",
+                            "value": "custom",
+                            "children": [
+                                {
+                                    "id": "AndroidDeviceOwnerGeneral_VPNConnectivity_androidEnterpriseAlwaysOnVpnClientPackageIdentifierName_1192",
+                                    "dataType": 20,
+                                    "category": 131,
+                                    "nameResourceKey": "androidEnterpriseAlwaysOnVpnClientPackageIdentifierName",
+                                    "descriptionResourceKey": "androidEnterpriseAlwaysOnVpnClientPackageIdentifierDescription",
+                                    "inputControlLength": 0,
+                                    "validation": [
+                                        {
+                                            "validationType": 2,
+                                            "validationArguments": "^[a-zA-Z][a-zA-Z_0-9]*([\\.][a-zA-Z][a-zA-Z_0-9]*)+?$",
+                                            "failureMessage": "mustBeValidAndroidPackageName"
+                                        }
+                                    ],
+                                    "childSettings": [],
+                                    "options": [],
+                                    "isRequired": false,
+                                    "entityKey": "vpnAlwaysOnPackageIdentifier",
+                                    "booleanActions": 0,
+                                    "defaultValue": "",
+                                    "policyType": 2,
+                                    "flipChildrenEnabledLogic": false,
+                                    "readOnly": false,
+                                    "writeOnce": false,
+                                    "enabled": true,
+                                    "multiItemIncludeSelectAll": false
+                                }
+                            ],
+                            "isRequired": false,
+                            "isDisabled": false,
+                            "retainValuesOnDeSelection": false,
+                            "deleteValuesOnDeSelection": false,
+                            "hidden": false,
+                            "enabled": true
+                        }
+                    ],
+                    "isRequired": false,
+                    "entityKey": "vpnAlwaysOnPackageIdentifierSelector",
+                    "booleanActions": 0,
+                    "policyType": 2,
+                    "flipChildrenEnabledLogic": false,
+                    "readOnly": false,
+                    "writeOnce": false,
+                    "enabled": true,
+                    "multiItemIncludeSelectAll": false
+                },
+                {
+                    "id": "AndroidDeviceOwnerGeneral_VPNConnectivity_androidEnterpriseAlwaysOnVpnLockdownModeEnabledName_1193",
+                    "dataType": 0,
+                    "category": 131,
+                    "nameResourceKey": "androidEnterpriseAlwaysOnVpnLockdownModeEnabledName",
+                    "descriptionResourceKey": "androidEnterpriseDeviceOwnerAlwaysOnVpnLockdownModeEnabledDescription",
+                    "inputControlLength": 0,
+                    "validation": [],
+                    "childSettings": [],
+                    "options": [],
+                    "isRequired": false,
+                    "entityKey": "vpnAlwaysOnLockdownMode",
+                    "booleanActions": 2,
+                    "defaultValue": false,
+                    "policyType": 2,
+                    "flipChildrenEnabledLogic": false,
+                    "readOnly": false,
+                    "writeOnce": false,
+                    "enabled": true,
+                    "multiItemIncludeSelectAll": false
+                }
+            ],
+            "options": [],
+            "isRequired": false,
+            "entityKey": "vpnAlwaysOnEnabled",
+            "booleanActions": 2,
+            "defaultValue": false,
+            "policyType": 2,
+            "flipChildrenEnabledLogic": false,
+            "readOnly": false,
+            "writeOnce": false,
+            "enabled": true,
+            "multiItemIncludeSelectAll": false,
+            "clearChildrenWhenValueDefault": true
+        }
+    ],
+    "options": [],
+    "isRequired": false,
+    "booleanActions": 0,
+    "policyType": 2,
+    "flipChildrenEnabledLogic": false,
+    "readOnly": false,
+    "writeOnce": false,
+    "enabled": true,
+    "multiItemIncludeSelectAll": false
+}
