@@ -2,8 +2,7 @@
     "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
     "accessTypes": "none",
     "keywords": [
-        "Software Update",
-        "Declarative Device Management (DDM)\\Software Update"
+        "Software Update"
     ],
     "infoUrls": [],
     "occurrence": null,
@@ -15,10 +14,10 @@
     "uxBehavior": "default",
     "visibility": "settingsCatalog,template",
     "id": "enforcement_targetlocaldatetime",
-    "description": "The local date time value that specifies when to force install the software update. Use the format 'yyyy-mm-ddThh:mm:ss0'. Note this format but doesn't include a time zone offset. If the user doesn't trigger the software update before this time, the device force installs it. For example, if you want to have an update occur on a user's devices on November 18 at 12:30pm, please enter 2023-11-18T12:30:000",
+    "description": "The date time value that specifies when to force install the software update. If the user doesn’t trigger the software update before this time, the device force installs it. The time specified in the console will be converted to UTC based on the tenant location. For example, if the desired install time is 5:00 PM and the person configuring the policy is based in the eastern US, specify 12:00 PM as the install time to configure a 5:00 PM policy.",
     "helpText": null,
     "name": "TargetLocalDateTime",
-    "displayName": "Target Local Date Time",
+    "displayName": "Target Date Time (UTC)",
     "applicability": {
         "description": null,
         "platform": "iOS,macOS",

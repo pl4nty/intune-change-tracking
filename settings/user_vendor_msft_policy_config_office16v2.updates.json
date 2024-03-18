@@ -2,26 +2,26 @@
     "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
     "accessTypes": "none",
     "keywords": [
-        "L_ConnectedOfficeExperiences",
-        "Allow the use of connected experiences in Office",
-        "\\Microsoft Office 2016\\Privacy\\Trust Center",
-        "Microsoft Office 2016\\Privacy\\Trust Center",
-        "Trust Center"
+        "L_OnlineStorageFilter",
+        "Hide Microsoft cloud-based file locations in the Backstage view",
+        "\\Microsoft Office 2016\\Miscellaneous",
+        "Microsoft Office 2016\\Miscellaneous",
+        "Miscellaneous"
     ],
     "infoUrls": [],
     "baseUri": "./User/Vendor/MSFT/Policy",
-    "offsetUri": "/Config/office16v2.Updates.2~Policy~L_MicrosoftOfficeSystem~L_Privacy~L_TrustCenter/L_ConnectedOfficeExperiences",
-    "rootDefinitionId": "user_vendor_msft_policy_config_office16v2.updates.2~policy~l_microsoftofficesystem~l_privacy~l_trustcenter_l_connectedofficeexperiences",
-    "categoryId": "59c9b1c4-1757-4cf3-9b27-954dafe016d5",
+    "offsetUri": "/Config/office16v2.Updates.2~Policy~L_MicrosoftOfficeSystem~L_miscellaneous437/L_OnlineStorageFilter",
+    "rootDefinitionId": "user_vendor_msft_policy_config_office16v2.updates.2~policy~l_microsoftofficesystem~l_miscellaneous437_l_onlinestoragefilter",
+    "categoryId": "9b2ad6d8-8837-4c50-89d5-7507b69c7dec",
     "settingUsage": "configuration",
     "uxBehavior": "toggle",
     "visibility": "settingsCatalog,template",
-    "id": "user_vendor_msft_policy_config_office16v2.updates.2~policy~l_microsoftofficesystem~l_privacy~l_trustcenter_l_connectedofficeexperiences",
-    "description": "This policy setting allows you to control whether connected experiences are available to your users when they're using Office.\r\n\r\nConnected experiences include experiences that analyze content, such as Editor in Word, experiences that download online content, such as PowerPoint QuickStarter, and other connected experiences, such as document co-authoring and online file storage. It also includes additional optional connected experiences, such as inserting an online video into a PowerPoint presentation or the 3D Maps feature in Excel, which uses Bing. See the Note at the end for more information about other policy settings that you can use to control these connected experiences.\r\n\r\nIf you enable this policy setting, these connected experiences will be available to your users.\r\n\r\nIf you disable this policy setting, these connected experiences won't be available to your users.\r\n\r\nNote: If you disable this policy setting, nearly all connected experiences will be turned off.  However, limited Office functionality will remain available, such as synching a mailbox in Outlook. Essential services, such as the licensing service that confirms that you’re properly licensed to use Office, will also remain available.\r\n\r\nIf you don't configure this policy setting, these connected experiences will be available to your users.\r\n\r\nNote: You can use these other policy settings if you want to disable just a certain group of connected experiences: \"Allow the use of connected experiences in Office that analyze content\", \"Allow the use of connected experiences in Office that download online content\", and \"Allow the use of additional optional connected experiences in Office\".\r\n\r\nFor more information, see https://go.microsoft.com/fwlink/p/?linkid=2085689",
+    "id": "user_vendor_msft_policy_config_office16v2.updates.2~policy~l_microsoftofficesystem~l_miscellaneous437_l_onlinestoragefilter",
+    "description": "This policy setting allows you to hide Microsoft cloud-based file locations in the Backstage view in Office. This helps prevent users from opening, saving, or sharing cloud-based files to locations such as: OneDrive, SharePoint, or Third Party Services.\r\n\r\nThis policy setting only applies to Word, PowerPoint, and Excel.\r\n\r\nTo filter specific services, add the values for all services to be disabled:\r\n    1 - OneDrive Personal\r\n    4 - ThisPC\r\n    8 - SharePoint OnPrem\r\n    16 - Recent Places\r\n    32 - SharePoint\r\n    64 - OneDrive for Business\r\n    128 - Third Party Services\r\n\r\nSpecial Values:\r\n    0 - (Default) All services enabled.\r\n    2 - (Legacy Value) Disable SharePoint and OneDrive for Business.\r\n\t4294967295 - All optional services disabled.\r\n\r\nFor example, OneDrive Personal (1), This PC (4) and Third Party Services (128) can all be disabled with a value of 133.\r\n\r\nThis value is calculated as follows: 1 + 4 + 128 = 133\r\n\r\nCommon Setting Values:\r\n 1 - Disable OneDrive Personal\r\n 2 - Disable SharePoint Online and OneDrive for Business\r\n 3 - Disable SharePoint Online, OneDrive for Business, and OneDrive Personal\r\n\r\nIf you disable or don’t configure this policy setting, users can use any configured Microsoft cloud-based file location to open, save, and share files.",
     "helpText": "",
-    "name": "L_ConnectedOfficeExperiences",
-    "displayName": "Allow the use of connected experiences in Office (User)",
-    "defaultOptionId": "user_vendor_msft_policy_config_office16v2.updates.2~policy~l_microsoftofficesystem~l_privacy~l_trustcenter_l_connectedofficeexperiences_0",
+    "name": "L_OnlineStorageFilter",
+    "displayName": "Hide Microsoft cloud-based file locations in the Backstage view (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_office16v2.updates.2~policy~l_microsoftofficesystem~l_miscellaneous437_l_onlinestoragefilter_0",
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
         "description": null,
@@ -42,7 +42,7 @@
     "referredSettingInformationList": [],
     "options": [
         {
-            "itemId": "user_vendor_msft_policy_config_office16v2.updates.2~policy~l_microsoftofficesystem~l_privacy~l_trustcenter_l_connectedofficeexperiences_0",
+            "itemId": "user_vendor_msft_policy_config_office16v2.updates.2~policy~l_microsoftofficesystem~l_miscellaneous437_l_onlinestoragefilter_0",
             "description": null,
             "helpText": null,
             "name": "Disabled",
@@ -56,7 +56,7 @@
             "dependedOnBy": []
         },
         {
-            "itemId": "user_vendor_msft_policy_config_office16v2.updates.2~policy~l_microsoftofficesystem~l_privacy~l_trustcenter_l_connectedofficeexperiences_1",
+            "itemId": "user_vendor_msft_policy_config_office16v2.updates.2~policy~l_microsoftofficesystem~l_miscellaneous437_l_onlinestoragefilter_1",
             "description": null,
             "helpText": null,
             "name": "Enabled",
@@ -67,7 +67,12 @@
                 "value": 1
             },
             "dependentOn": [],
-            "dependedOnBy": []
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_office16v2.updates.2~policy~l_microsoftofficesystem~l_miscellaneous437_l_onlinestoragefilter_l_onlinestoragefilterid",
+                    "required": true
+                }
+            ]
         }
     ]
 }

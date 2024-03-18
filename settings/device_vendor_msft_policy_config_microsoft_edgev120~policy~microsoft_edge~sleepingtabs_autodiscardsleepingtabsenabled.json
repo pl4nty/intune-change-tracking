@@ -1,0 +1,73 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "AutoDiscardSleepingTabsEnabled",
+        "Configure auto discard sleeping tabs",
+        "\\Microsoft Edge\\Sleeping tabs settings",
+        "Microsoft Edge\\Sleeping tabs settings",
+        "Sleeping Tabs settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev120~Policy~microsoft_edge~SleepingTabs/AutoDiscardSleepingTabsEnabled",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edgev120~policy~microsoft_edge~sleepingtabs_autodiscardsleepingtabsenabled",
+    "categoryId": "ae78ab75-2d0d-418c-be6f-9e64642de4e2",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_microsoft_edgev120~policy~microsoft_edge~sleepingtabs_autodiscardsleepingtabsenabled",
+    "description": "Setting this policy enables inactive (sleeping) tabs to be automatically discarded after 1.5 days of inactivity. This is done to save memory. When the user switches back to a discarded tab, the tab will need to be reloaded.\r\n\r\nIf the 'SleepingTabsEnabled' (Configure sleeping tabs) policy is enabled, then this feature will be enabled by default.\r\n\r\nIf the 'SleepingTabsEnabled' is disabled, then this feature will be disabled by default and cannot be enabled.\r\n\r\nIf enabled, idle background tabs will be discarded after 1.5 days.\r\n\r\nIf disabled, idle background tab will not be discarded after 1.5 days. Tabs can still be discarded for other reasons if this policy is disabled.",
+    "helpText": "",
+    "name": "AutoDiscardSleepingTabsEnabled",
+    "displayName": "Configure auto discard sleeping tabs",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edgev120~policy~microsoft_edge~sleepingtabs_autodiscardsleepingtabsenabled_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev120~policy~microsoft_edge~sleepingtabs_autodiscardsleepingtabsenabled_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev120~policy~microsoft_edge~sleepingtabs_autodiscardsleepingtabsenabled_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

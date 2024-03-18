@@ -87,6 +87,25 @@
                     "required": false
                 }
             ]
+        },
+        {
+            "itemId": "device_vendor_msft_policy_elevationclientsettings_defaultelevationresponse_2",
+            "description": "Require support approval",
+            "helpText": null,
+            "name": "RequireSupportApproval",
+            "displayName": "Require support approval",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_elevationclientsettings_enableepm_1",
+                    "parentSettingId": "device_vendor_msft_policy_elevationclientsettings_enableepm"
+                }
+            ],
+            "dependedOnBy": []
         }
     ]
 }
