@@ -76,13 +76,13 @@
                     "dataType": 20,
                     "category": 103,
                     "nameResourceKey": "sCEPPolicySubjectNameFormatCustom",
-                    "descriptionResourceKey": "sCEPPolicyCustomSubjectNameFormatDescription",
+                    "descriptionResourceKey": "sCEPPolicyCustomSubjectNameWithAadFormatDescription",
                     "inputControlLength": 50,
                     "validation": [
                         {
                             "validationType": 2,
-                            "validationArguments": "^CN=[^=,\\s]*(\\{\\{UserName\\}\\}|\\{\\{EmailAddress\\}\\}|\\{\\{SERIALNUMBER\\}\\}|\\{\\{IMEINumber\\}\\}|\\{\\{UserPrincipalName\\}\\}|\\$?\\w+\\.?\\w*)[^=,\\s]*(,E=(\\{\\{EmailAddress\\}\\}|\\$?\\w+\\.?\\w*))?((,OU=[\\w-]+\\s?\\w*)?(,O=[\\w-]+(\\s?\\w+)*)?(,L=[\\w-]+\\s?\\w*)?(,ST=[\\w-]+\\s?\\w*)?(,C=[\\w-]+\\s?\\w*)?)*$",
-                            "failureMessage": "sCEPPolicyCustomSubjectNameFormatDescription"
+                            "validationArguments": "^CN=[^=,\\s]*(\\{\\{UserName\\}\\}|\\{\\{EmailAddress\\}\\}|\\{\\{SERIALNUMBER\\}\\}|\\{\\{IMEINumber\\}\\}|\\{\\{UserPrincipalName\\}\\}|\\$?\\w+\\.?\\w*)[^=,\\s]*(,E=(\\{\\{EmailAddress\\}\\}|\\$?\\w+\\.?\\w*))?((,OU=[\\w-]+\\s?\\w*)?(,O=[\\w-]+(\\s?\\w+)*)?(,L=[\\w-]+\\s?\\w*)?(,ST=[\\w-]+\\s?\\w*)?(,C=[\\w-]+\\s?\\w*)?)*$|^CN=[^=,\\s]*(\\{\\{AAD_Device_ID\\}\\}|\\{\\{EmailAddress\\}\\}|\\{\\{SERIALNUMBER\\}\\}|\\{\\{IMEINumber\\}\\}|\\{\\{OnPrem_Distinguished_Name\\}\\}|\\{\\{onPremisesSamAccountName\\}\\}|\\{\\{UserPrincipalName\\}\\}|\\$?\\w+\\.?\\w*)[^=,\\s]*(,E=(\\{\\{EmailAddress\\}\\}|\\$?\\w+\\.?\\w*))?((,OU=[\\w-]+\\s?\\w*)?(,O=[\\w-]+(\\s?\\w+)*)?(,L=[\\w-]+\\s?\\w*)?(,ST=[\\w-]+\\s?\\w*)?(,C=[\\w-]+\\s?\\w*)?)*$|\\w*\\{\\{OnPrem_Distinguished_Name\\}\\}\\w*",
+                            "failureMessage": "sCEPPolicyCustomSubjectNameWithAadFormatDescription"
                         }
                     ],
                     "childSettings": [],
@@ -95,7 +95,7 @@
                     "flipChildrenEnabledLogic": false,
                     "readOnly": false,
                     "writeOnce": false,
-                    "enabled": false,
+                    "enabled": true,
                     "multiItemIncludeSelectAll": false
                 }
             ],
@@ -114,6 +114,8 @@
     "flipChildrenEnabledLogic": false,
     "readOnly": false,
     "writeOnce": false,
-    "enabled": false,
+    "enabled": true,
+    "flightingFeatureName": "iosMachineSCEPCertificate",
+    "flightingFeatureReverseLogic": true,
     "multiItemIncludeSelectAll": false
 }

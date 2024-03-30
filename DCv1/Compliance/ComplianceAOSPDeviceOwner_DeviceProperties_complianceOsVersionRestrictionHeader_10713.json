@@ -1,0 +1,110 @@
+{
+    "disableTopPadding": false,
+    "isSettingDescription": false,
+    "showAsSectionHeader": false,
+    "id": "ComplianceAOSPDeviceOwner_DeviceProperties_complianceOsVersionRestrictionHeader_10713",
+    "dataType": 8,
+    "category": 43,
+    "nameResourceKey": "complianceOsVersionRestrictionHeader",
+    "inputControlLength": 0,
+    "validation": [],
+    "childSettings": [
+        {
+            "id": "ComplianceAOSPDeviceOwner_DeviceProperties_complianceOsVersionRestrictionMinimumName_10714",
+            "dataType": 20,
+            "category": 43,
+            "nameResourceKey": "complianceOsVersionRestrictionMinimumName",
+            "descriptionResourceKey": "complianceOsVersionRestrictionMinimumAndroidDescription",
+            "inputControlLength": 0,
+            "validation": [
+                {
+                    "validationType": 2,
+                    "validationArguments": "^(([0-9]{0,4}|[0-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])\\.){0,3}([0-9]{0,4}|[0-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])$",
+                    "failureMessage": "mustBeValidVersionFormat"
+                }
+            ],
+            "childSettings": [],
+            "options": [],
+            "isRequired": false,
+            "entityKey": "osMinimumVersion",
+            "booleanActions": 0,
+            "policyType": 32,
+            "flipChildrenEnabledLogic": false,
+            "readOnly": false,
+            "writeOnce": false,
+            "enabled": true,
+            "linkedValidation": {
+                "entityKey": "osMaximumVersion",
+                "linkedValidationType": 1,
+                "validationMessageKey": "mustBeSmallerThanOsMaximumVersion"
+            },
+            "multiItemIncludeSelectAll": false
+        },
+        {
+            "id": "ComplianceAOSPDeviceOwner_DeviceProperties_complianceOsVersionRestrictionMaximumName_10715",
+            "dataType": 20,
+            "category": 43,
+            "nameResourceKey": "complianceOsVersionRestrictionMaximumName",
+            "descriptionResourceKey": "complianceOsVersionRestrictionMaximumAndroidDescription",
+            "inputControlLength": 0,
+            "validation": [
+                {
+                    "validationType": 2,
+                    "validationArguments": "^(([0-9]{0,4}|[0-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])\\.){0,3}([0-9]{0,4}|[0-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])$",
+                    "failureMessage": "mustBeValidVersionFormat"
+                }
+            ],
+            "childSettings": [],
+            "options": [],
+            "isRequired": false,
+            "entityKey": "osMaximumVersion",
+            "booleanActions": 0,
+            "policyType": 32,
+            "flipChildrenEnabledLogic": false,
+            "readOnly": false,
+            "writeOnce": false,
+            "enabled": true,
+            "linkedValidation": {
+                "entityKey": "osMinimumVersion",
+                "linkedValidationType": 2,
+                "validationMessageKey": "mustBeGreaterThanOsMinimumVersion"
+            },
+            "multiItemIncludeSelectAll": false
+        },
+        {
+            "id": "ComplianceAOSPDeviceOwner_DeviceProperties_complianceMinimumSecurityPatchLevelName_10716",
+            "dataType": 20,
+            "category": 43,
+            "nameResourceKey": "complianceMinimumSecurityPatchLevelName",
+            "descriptionResourceKey": "complianceMinimumSecurityPatchLevelDescription",
+            "inputControlLength": 0,
+            "validation": [
+                {
+                    "validationType": 2,
+                    "validationArguments": "^([0-9]{4}[-/]?((0[13-9]|1[012])[-/]?(0[1-9]|[12][0-9]|30)|(0[13578]|1[02])[-/]?31|02[-/]?(0[1-9]|1[0-9]|2[0-8]))|([0-9]{2}(([2468][048]|[02468][48])|[13579][26])|([13579][26]|[02468][048]|0[0-9]|1[0-6])00)[-/]?02[-/]?29)$",
+                    "failureMessage": "mustBeValidDateFormat"
+                }
+            ],
+            "childSettings": [],
+            "options": [],
+            "isRequired": false,
+            "entityKey": "minAndroidSecurityPatchLevel",
+            "booleanActions": 0,
+            "policyType": 32,
+            "flipChildrenEnabledLogic": false,
+            "readOnly": false,
+            "writeOnce": false,
+            "enabled": true,
+            "multiItemIncludeSelectAll": false
+        }
+    ],
+    "options": [],
+    "isRequired": false,
+    "booleanActions": 0,
+    "policyType": 32,
+    "flipChildrenEnabledLogic": false,
+    "readOnly": false,
+    "writeOnce": false,
+    "enabled": true,
+    "multiItemIncludeSelectAll": false
+}

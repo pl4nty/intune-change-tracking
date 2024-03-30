@@ -1,0 +1,85 @@
+{
+    "disableTopPadding": false,
+    "isSettingDescription": false,
+    "showAsSectionHeader": false,
+    "id": "ComplianceWindowsPhone_DeviceProperties_complianceOsVersionRestrictionHeader_10949",
+    "dataType": 8,
+    "category": 43,
+    "nameResourceKey": "complianceOsVersionRestrictionHeader",
+    "descriptionResourceKey": "complianceWindowsOsVersionRestrictionHeaderDescription",
+    "inputControlLength": 0,
+    "validation": [],
+    "childSettings": [
+        {
+            "id": "ComplianceWindowsPhone_DeviceProperties_complianceMobileOsVersionRestrictionMinimumName_10950",
+            "dataType": 20,
+            "category": 43,
+            "nameResourceKey": "complianceMobileOsVersionRestrictionMinimumName",
+            "descriptionResourceKey": "complianceWindowsMobileOsVersionRestrictionMinimumDescription",
+            "inputControlLength": 0,
+            "validation": [
+                {
+                    "validationType": 2,
+                    "validationArguments": "^\\d+(\\.\\d+)*$",
+                    "failureMessage": "mustBeValidVersionFormat"
+                }
+            ],
+            "childSettings": [],
+            "options": [],
+            "isRequired": false,
+            "entityKey": "osMinimumVersion",
+            "booleanActions": 0,
+            "policyType": 38,
+            "flipChildrenEnabledLogic": false,
+            "readOnly": false,
+            "writeOnce": false,
+            "enabled": true,
+            "linkedValidation": {
+                "entityKey": "osMaximumVersion",
+                "linkedValidationType": 1,
+                "validationMessageKey": "mustBeSmallerThanMobileOsMaximumVersion"
+            },
+            "multiItemIncludeSelectAll": false
+        },
+        {
+            "id": "ComplianceWindowsPhone_DeviceProperties_complianceMobileOsVersionRestrictionMaximumName_10951",
+            "dataType": 20,
+            "category": 43,
+            "nameResourceKey": "complianceMobileOsVersionRestrictionMaximumName",
+            "descriptionResourceKey": "complianceWindowsMobileOsVersionRestrictionMaximumDescription",
+            "inputControlLength": 0,
+            "validation": [
+                {
+                    "validationType": 2,
+                    "validationArguments": "^\\d+(\\.\\d+)*$",
+                    "failureMessage": "mustBeValidVersionFormat"
+                }
+            ],
+            "childSettings": [],
+            "options": [],
+            "isRequired": false,
+            "entityKey": "osMaximumVersion",
+            "booleanActions": 0,
+            "policyType": 38,
+            "flipChildrenEnabledLogic": false,
+            "readOnly": false,
+            "writeOnce": false,
+            "enabled": true,
+            "linkedValidation": {
+                "entityKey": "osMinimumVersion",
+                "linkedValidationType": 2,
+                "validationMessageKey": "mustBeGreaterThanMobileOsMinimumVersion"
+            },
+            "multiItemIncludeSelectAll": false
+        }
+    ],
+    "options": [],
+    "isRequired": false,
+    "booleanActions": 0,
+    "policyType": 38,
+    "flipChildrenEnabledLogic": false,
+    "readOnly": false,
+    "writeOnce": false,
+    "enabled": true,
+    "multiItemIncludeSelectAll": false
+}
