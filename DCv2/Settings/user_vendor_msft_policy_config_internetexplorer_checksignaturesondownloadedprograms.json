@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Advanced_DownloadSignatures",
+        "Check for signatures on downloaded programs",
+        "\\Windows Components\\Internet Explorer\\Internet Control Panel\\Advanced Page",
+        "Advanced Page"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-checksignaturesondownloadedprograms"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/InternetExplorer/CheckSignaturesOnDownloadedPrograms",
+    "rootDefinitionId": "user_vendor_msft_policy_config_internetexplorer_checksignaturesondownloadedprograms",
+    "categoryId": "3969f56d-a8b5-4509-86fb-00eb481665fa",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_internetexplorer_checksignaturesondownloadedprograms",
+    "description": "This policy setting allows you to manage whether Internet Explorer checks for digital signatures (which identifies the publisher of signed software and verifies it hasn't been modified or tampered with) on user computers before downloading executable programs.\r\n\r\nIf you enable this policy setting, Internet Explorer will check the digital signatures of executable programs and display their identities before downloading them to user computers.\r\n\r\nIf you disable this policy setting, Internet Explorer will not check the digital signatures of executable programs or display their identities before downloading them to user computers.\r\n\r\nIf you do not configure this policy, Internet Explorer will not check the digital signatures of executable programs or display their identities before downloading them to user computers.",
+    "helpText": "",
+    "name": "Advanced_DownloadSignatures",
+    "displayName": "Check for signatures on downloaded programs (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_internetexplorer_checksignaturesondownloadedprograms_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "6.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_internetexplorer_checksignaturesondownloadedprograms_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_internetexplorer_checksignaturesondownloadedprograms_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

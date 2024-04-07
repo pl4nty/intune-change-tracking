@@ -1,0 +1,82 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Enable Low CPU Priority",
+        "Defender"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-defender"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Defender/EnableLowCPUPriority",
+    "rootDefinitionId": "device_vendor_msft_policy_config_defender_enablelowcpupriority",
+    "categoryId": "e8400c82-34c8-4d6e-bbf9-85220f3205ea",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_defender_enablelowcpupriority",
+    "description": "This policy setting allows you to enable or disable low CPU priority for scheduled scans. If you enable this setting, low CPU priority will be used during scheduled scans. If you disable or do not configure this setting, not changes will be made to CPU priority for scheduled scans. Supported values:0 - Disabled (default)1 - Enabled",
+    "helpText": "",
+    "name": "EnableLowCPUPriority",
+    "displayName": "Enable Low CPU Priority",
+    "defaultOptionId": "device_vendor_msft_policy_config_defender_enablelowcpupriority_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager,microsoftSense",
+        "configurationServiceProviderVersion": "8.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17763",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_defender_enablelowcpupriority_0",
+            "description": "Disabled",
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_defender_enablelowcpupriority_1",
+            "description": "Enabled",
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,92 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "get,replace",
+    "keywords": [
+        "Auth Apps Allow User Pref Merge",
+        "Firewall"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/en-us/windows/client-management/mdm/firewall-csp"
+    ],
+    "baseUri": "./Vendor/MSFT/Firewall",
+    "offsetUri": "/MdmStore/PrivateProfile/AuthAppsAllowUserPrefMerge",
+    "rootDefinitionId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall",
+    "categoryId": "4a5e4714-00ac-4793-b0cc-5049041b0ed7",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "vendor_msft_firewall_mdmstore_privateprofile_authappsallowuserprefmerge",
+    "description": "This value is used as an on/off switch. If this value is false, authorized application firewall rules in the local store are ignored and not enforced.  The merge law for this option is to let the value of the GroupPolicyRSoPStore win if it is configured; otherwise, the local store value is used.",
+    "helpText": "",
+    "name": "AuthAppsAllowUserPrefMerge",
+    "displayName": "Auth Apps Allow User Pref Merge",
+    "defaultOptionId": "vendor_msft_firewall_mdmstore_privateprofile_authappsallowuserprefmerge_true",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager,microsoftSense",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "vendor_msft_firewall_mdmstore_privateprofile_authappsallowuserprefmerge_false",
+            "description": "AuthAppsAllowUserPrefMerge Off",
+            "helpText": null,
+            "name": "AuthAppsAllowUserPrefMerge Off",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+                    "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "vendor_msft_firewall_mdmstore_privateprofile_authappsallowuserprefmerge_true",
+            "description": "AuthAppsAllowUserPrefMerge On",
+            "helpText": null,
+            "name": "AuthAppsAllowUserPrefMerge On",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+                    "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

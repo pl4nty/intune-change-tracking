@@ -1,0 +1,82 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Metered Connection Updates",
+        "Defender"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/Defender-csp/"
+    ],
+    "baseUri": "./Vendor/MSFT/Defender",
+    "offsetUri": "/Configuration/MeteredConnectionUpdates",
+    "rootDefinitionId": "device_vendor_msft_defender_configuration_meteredconnectionupdates",
+    "categoryId": "e8400c82-34c8-4d6e-bbf9-85220f3205ea",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_defender_configuration_meteredconnectionupdates",
+    "description": "Allow managed devices to update through metered connections. Default is 0 - not allowed, 1 - allowed",
+    "helpText": "",
+    "name": "MeteredConnectionUpdates",
+    "displayName": "Metered Connection Updates",
+    "defaultOptionId": "device_vendor_msft_defender_configuration_meteredconnectionupdates_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,microsoftSense",
+        "configurationServiceProviderVersion": "1.3",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.14393",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_defender_configuration_meteredconnectionupdates_1",
+            "description": "Allowed",
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "Allowed",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_defender_configuration_meteredconnectionupdates_0",
+            "description": "Not Allowed",
+            "helpText": null,
+            "name": "Not Allowed",
+            "displayName": "Not Allowed",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

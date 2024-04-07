@@ -1,0 +1,90 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DisableMSI",
+        "Turn off Windows Installer",
+        "\\Windows Components\\Windows Installer",
+        "Administrative Templates\\Windows Components\\Windows Installer",
+        "Windows Installer"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-msi#admx-msi-disablemsi"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_MSI/DisableMSI",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_msi_disablemsi",
+    "categoryId": "ce0b1189-57ea-4444-a93e-e4be17160f18",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_msi_disablemsi",
+    "description": "This policy setting restricts the use of Windows Installer.\r\n\r\nIf you enable this policy setting, you can prevent users from installing software on their systems or permit users to install only those programs offered by a system administrator. You can use the options in the Disable Windows Installer box to establish an installation setting.\r\n\r\n--   The \"Never\" option indicates Windows Installer is fully enabled. Users can install and upgrade software. This is the default behavior for Windows Installer on Windows 2000 Professional, Windows XP Professional and Windows Vista when the policy is not configured.\r\n\r\n--   The \"For non-managed applications only\" option permits users to install only those programs that a system administrator assigns (offers on the desktop) or publishes (adds them to Add or Remove Programs). This is the default behavior of Windows Installer on Windows Server 2003 family when the policy is not configured.\r\n\r\n--   The \"Always\" option indicates that Windows Installer is disabled.\r\n\r\nThis policy setting affects Windows Installer only. It does not prevent users from using other methods to install and upgrade programs.\r\n ",
+    "helpText": "",
+    "name": "DisableMSI",
+    "displayName": "Turn off Windows Installer",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_msi_disablemsi_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_msi_disablemsi_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_msi_disablemsi_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_msi_disablemsi_disablemsi",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

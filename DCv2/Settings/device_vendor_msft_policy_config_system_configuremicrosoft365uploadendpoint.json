@@ -1,0 +1,66 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Configure Microsoft 365 Upload Endpoint",
+        "System"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-System#system-configuremicrosoft365uploadendpoint"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/System/ConfigureMicrosoft365UploadEndpoint",
+    "rootDefinitionId": "device_vendor_msft_policy_config_system_configuremicrosoft365uploadendpoint",
+    "categoryId": "f62e0f2a-4363-4246-8057-1dc811fe4360",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_system_configuremicrosoft365uploadendpoint",
+    "description": "This policy sets the upload endpoint for this device’s diagnostic data as part of the Microsoft 365 Update Readiness program. If your organization is participating in the program and has been instructed to configure a custom upload endpoint, then use this setting to define that endpoint. The value for this setting will be provided by Microsoft as part of the onboarding process for the program. Value type is string.",
+    "helpText": "",
+    "name": "ConfigureMicrosoft365UploadEndpoint",
+    "displayName": "Configure Microsoft 365 Upload Endpoint",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "8.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17763",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 87516,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

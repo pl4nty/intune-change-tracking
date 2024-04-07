@@ -1,0 +1,82 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Default Enforcement",
+        "Defender"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/Defender-csp/"
+    ],
+    "baseUri": "./Vendor/MSFT/Defender",
+    "offsetUri": "/Configuration/DefaultEnforcement",
+    "rootDefinitionId": "device_vendor_msft_defender_configuration_defaultenforcement",
+    "categoryId": "e8400c82-34c8-4d6e-bbf9-85220f3205ea",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_defender_configuration_defaultenforcement",
+    "description": "Control Device Control default enforcement. This is the enforcement applied if there are no policy rules present or at the end of the policy rules evaluation none were matched.",
+    "helpText": "",
+    "name": "DefaultEnforcement",
+    "displayName": "Default Enforcement",
+    "defaultOptionId": "device_vendor_msft_defender_configuration_defaultenforcement_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,microsoftSense",
+        "configurationServiceProviderVersion": "1.3",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17763",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_defender_configuration_defaultenforcement_1",
+            "description": "Default Allow Enforcement",
+            "helpText": null,
+            "name": "Default Allow Enforcement",
+            "displayName": "Default Allow Enforcement",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_defender_configuration_defaultenforcement_2",
+            "description": "Default Deny Enforcement",
+            "helpText": null,
+            "name": "Default Deny Enforcement",
+            "displayName": "Default Deny Enforcement",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

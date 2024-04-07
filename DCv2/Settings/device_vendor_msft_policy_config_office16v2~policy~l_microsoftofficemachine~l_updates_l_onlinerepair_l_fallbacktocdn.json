@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_OnlineRepair",
+        "Online Repair",
+        "\\Microsoft Office 2016 (Machine)\\Updates",
+        "Microsoft Office 2016 (Machine)\\Updates",
+        "Updates"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/office16v2~Policy~L_MicrosoftOfficemachine~L_Updates/L_OnlineRepair",
+    "rootDefinitionId": "device_vendor_msft_policy_config_office16v2~policy~l_microsoftofficemachine~l_updates_l_onlinerepair",
+    "categoryId": "86dae9f9-7eb1-4566-8558-b63fa2e20fee",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_office16v2~policy~l_microsoftofficemachine~l_updates_l_onlinerepair_l_fallbacktocdn",
+    "description": "",
+    "helpText": "",
+    "name": "L_FallBackToCDN",
+    "displayName": "Use Office CDN (if needed) (Device)",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_office16v2~policy~l_microsoftofficemachine~l_updates_l_onlinerepair_l_fallbacktocdn_0",
+            "description": null,
+            "helpText": null,
+            "name": "False",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_office16v2~policy~l_microsoftofficemachine~l_updates_l_onlinerepair_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_office16v2~policy~l_microsoftofficemachine~l_updates_l_onlinerepair"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_office16v2~policy~l_microsoftofficemachine~l_updates_l_onlinerepair_l_fallbacktocdn_1",
+            "description": null,
+            "helpText": null,
+            "name": "True",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_office16v2~policy~l_microsoftofficemachine~l_updates_l_onlinerepair_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_office16v2~policy~l_microsoftofficemachine~l_updates_l_onlinerepair"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

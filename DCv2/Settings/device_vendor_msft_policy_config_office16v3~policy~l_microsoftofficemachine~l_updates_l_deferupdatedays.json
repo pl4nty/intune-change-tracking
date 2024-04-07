@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_DeferUpdateDays",
+        "Delay downloading and installing updates for Office",
+        "\\Microsoft Office 2016 (Machine)\\Updates",
+        "Microsoft Office 2016 (Machine)\\Updates",
+        "Updates"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/office16v3~Policy~L_MicrosoftOfficemachine~L_Updates/L_DeferUpdateDays",
+    "rootDefinitionId": "device_vendor_msft_policy_config_office16v3~policy~l_microsoftofficemachine~l_updates_l_deferupdatedays",
+    "categoryId": "86dae9f9-7eb1-4566-8558-b63fa2e20fee",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_office16v3~policy~l_microsoftofficemachine~l_updates_l_deferupdatedays",
+    "description": "This policy setting allows you to delay downloading and installing updates for Office by a specified number of days.\r\n\r\nNote: This policy setting won’t apply if you are using some other method to manage updates. For example, if you use System Center Configuration Manager to deploy Office updates or if you use Group Policy to specify a target version. Also, updates won’t be delayed if you are switching Office to a different update channel.\r\n\r\nIf you enable this policy setting, Office will delay downloading and applying updates by the number of days specified. The maximum value that you can specify is 14. If you specify 0, Office will download and apply updates as soon as Office detects that updates are available.\r\n\r\nNote: If you have also specified a deadline for updates to be installed, the deadline won't be considered until after the delay that you specify with this policy setting.\r\n\r\nIf you disable or don’t configure this policy setting, Office will download and apply updates as soon as Office detects that updates are available.\r\n\r\nNote: This policy setting only applies to subscription versions of Office, such as Office 365 ProPlus, as well as subscription versions of Visio and Project.",
+    "helpText": "",
+    "name": "L_DeferUpdateDays",
+    "displayName": "Delay downloading and installing updates for Office",
+    "defaultOptionId": "device_vendor_msft_policy_config_office16v3~policy~l_microsoftofficemachine~l_updates_l_deferupdatedays_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_office16v3~policy~l_microsoftofficemachine~l_updates_l_deferupdatedays_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_office16v3~policy~l_microsoftofficemachine~l_updates_l_deferupdatedays_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_office16v3~policy~l_microsoftofficemachine~l_updates_l_deferupdatedays_l_deferupdatedaysid",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

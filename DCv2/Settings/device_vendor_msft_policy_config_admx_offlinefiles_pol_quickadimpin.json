@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Pol_QuickAdimPin",
+        "Turn on economical application of administratively assigned Offline Files",
+        "\\Network\\Offline Files",
+        "Administrative Templates\\Network\\Offline Files",
+        "Offline Files"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-offlinefiles#admx-offlinefiles-pol-quickadimpin"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_OfflineFiles/Pol_QuickAdimPin",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_offlinefiles_pol_quickadimpin",
+    "categoryId": "82a9c23f-2c09-4479-9cd3-e7f185d7676f",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_offlinefiles_pol_quickadimpin",
+    "description": "This policy setting allows you to turn on economical application of administratively assigned Offline Files.\r\n\r\nIf you enable or do not configure this policy setting, only new files and folders in administratively assigned folders are synchronized at logon. Files and folders that are already available offline are skipped and are synchronized later.\r\n\r\nIf you disable this policy setting, all administratively assigned folders are synchronized at logon.\r\n ",
+    "helpText": "",
+    "name": "Pol_QuickAdimPin",
+    "displayName": "Turn on economical application of administratively assigned Offline Files",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_offlinefiles_pol_quickadimpin_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_offlinefiles_pol_quickadimpin_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_offlinefiles_pol_quickadimpin_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

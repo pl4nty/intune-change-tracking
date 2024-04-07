@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "RemoteAccessHostClientDomainList",
+        "Configure the required domain names for remote access clients",
+        "\\Google\\Google Chrome\\Remote access",
+        "Administrative Templates\\Google\\Google Chrome\\Remote access",
+        "Remote access"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV1~Policy~googlechrome~RemoteAccess/RemoteAccessHostClientDomainList",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~remoteaccess_remoteaccesshostclientdomainlist",
+    "categoryId": "098942c3-afe3-40c8-823f-37f0b5b13ad4",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~remoteaccess_remoteaccesshostclientdomainlist",
+    "description": "Setting the policy specifies the client domain names that are imposed on remote access clients, and users can't change them. Only clients from one of the specified domains can connect to the host.\r\n\r\nSetting the policy to an empty list or leaving it unset applies the default policy for the connection type. For remote assistance, this allows clients from any domain to connect to the host. For anytime remote access, only the host owner can connect.\r\n\r\nSee also RemoteAccessHostDomainList.\r\n\r\nNote: This setting overrides RemoteAccessHostClientDomain, if present.\r\n\r\nExample value:\r\n\r\nmy-awesome-domain.com\r\nmy-auxiliary-domain.com",
+    "helpText": "",
+    "name": "RemoteAccessHostClientDomainList",
+    "displayName": "Configure the required domain names for remote access clients",
+    "defaultOptionId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~remoteaccess_remoteaccesshostclientdomainlist_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~remoteaccess_remoteaccesshostclientdomainlist_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~remoteaccess_remoteaccesshostclientdomainlist_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~remoteaccess_remoteaccesshostclientdomainlist_remoteaccesshostclientdomainlistdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

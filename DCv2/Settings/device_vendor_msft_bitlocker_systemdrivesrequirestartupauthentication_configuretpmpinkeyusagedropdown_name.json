@@ -1,0 +1,104 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "ConfigureAdvancedStartup_Name",
+        "Require additional authentication at startup",
+        "\\Windows Components\\BitLocker Drive Encryption\\Operating System Drives",
+        "Administrative Templates\\Windows Components\\BitLocker Drive Encryption\\Operating System Drives",
+        "Operating System Drives"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/en-us/windows/client-management/mdm/bitlocker-csp"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/BitLocker",
+    "offsetUri": "/SystemDrivesRequireStartupAuthentication",
+    "rootDefinitionId": "device_vendor_msft_bitlocker_systemdrivesrequirestartupauthentication",
+    "categoryId": "27e0674a-ea53-4f63-9c2e-fe76aa1021d0",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_bitlocker_systemdrivesrequirestartupauthentication_configuretpmpinkeyusagedropdown_name",
+    "description": "",
+    "helpText": "",
+    "name": "ConfigureTPMPINKeyUsageDropDown_Name",
+    "displayName": "Configure TPM startup key and PIN:",
+    "defaultOptionId": "device_vendor_msft_bitlocker_systemdrivesrequirestartupauthentication_configuretpmpinkeyusagedropdown_name_2",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.15063",
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_bitlocker_systemdrivesrequirestartupauthentication_configuretpmpinkeyusagedropdown_name_2",
+            "description": null,
+            "helpText": null,
+            "name": "Allow startup key and PIN with TPM",
+            "displayName": "Allow startup key and PIN with TPM",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_bitlocker_systemdrivesrequirestartupauthentication_1",
+                    "parentSettingId": "device_vendor_msft_bitlocker_systemdrivesrequirestartupauthentication"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_bitlocker_systemdrivesrequirestartupauthentication_configuretpmpinkeyusagedropdown_name_1",
+            "description": null,
+            "helpText": null,
+            "name": "Require startup key and PIN with TPM",
+            "displayName": "Require startup key and PIN with TPM",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_bitlocker_systemdrivesrequirestartupauthentication_1",
+                    "parentSettingId": "device_vendor_msft_bitlocker_systemdrivesrequirestartupauthentication"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_bitlocker_systemdrivesrequirestartupauthentication_configuretpmpinkeyusagedropdown_name_0",
+            "description": null,
+            "helpText": null,
+            "name": "Do not allow startup key and PIN with TPM",
+            "displayName": "Do not allow startup key and PIN with TPM",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_bitlocker_systemdrivesrequirestartupauthentication_1",
+                    "parentSettingId": "device_vendor_msft_bitlocker_systemdrivesrequirestartupauthentication"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

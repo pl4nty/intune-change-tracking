@@ -1,0 +1,112 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "TS_SERVER_AUTH",
+        "Configure server authentication for client",
+        "\\Windows Components\\Remote Desktop Services\\Remote Desktop Connection Client",
+        "Administrative Templates\\Windows Components\\Remote Desktop Services\\Remote Desktop Connection Client",
+        "Remote Desktop Connection Client"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_TerminalServer/TS_SERVER_AUTH",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_terminalserver_ts_server_auth",
+    "categoryId": "a4877a42-7e62-4216-a477-0b35357ab313",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_terminalserver_ts_server_auth_ts_server_auth_level",
+    "description": null,
+    "helpText": "",
+    "name": "TS_SERVER_AUTH_LEVEL",
+    "displayName": "Authentication setting: (Device)",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_terminalserver_ts_server_auth_ts_server_auth_level_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_terminalserver_ts_server_auth_ts_server_auth_level_0",
+            "description": null,
+            "helpText": null,
+            "name": "Always connect, even if authentication fails",
+            "displayName": "Always connect, even if authentication fails",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_terminalserver_ts_server_auth_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_terminalserver_ts_server_auth"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_terminalserver_ts_server_auth_ts_server_auth_level_2",
+            "description": null,
+            "helpText": null,
+            "name": "Warn me if authentication fails",
+            "displayName": "Warn me if authentication fails",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_terminalserver_ts_server_auth_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_terminalserver_ts_server_auth"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_terminalserver_ts_server_auth_ts_server_auth_level_1",
+            "description": null,
+            "helpText": null,
+            "name": "Do not connect if authentication fails",
+            "displayName": "Do not connect if authentication fails",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_terminalserver_ts_server_auth_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_terminalserver_ts_server_auth"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

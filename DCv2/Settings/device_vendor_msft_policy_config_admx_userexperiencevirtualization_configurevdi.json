@@ -1,0 +1,90 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ConfigureVdi",
+        "VDI Configuration",
+        "\\Windows Components\\Microsoft User Experience Virtualization",
+        "Administrative Templates\\Windows Components\\Microsoft User Experience Virtualization",
+        "Microsoft User Experience Virtualization"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-userexperiencevirtualization#admx-userexperiencevirtualization-configurevdi"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_UserExperienceVirtualization/ConfigureVdi",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_userexperiencevirtualization_configurevdi",
+    "categoryId": "9e857bed-81f8-4dfc-b049-c93eb68b4064",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_userexperiencevirtualization_configurevdi",
+    "description": "This policy setting configures the synchronization of User Experience Virtualization (UE-V) rollback information for computers running in a non-persistent, pooled VDI environment. UE-V settings rollback data and checkpoints are normally stored only on the local computer. With this policy setting enabled, the rollback information is copied to the settings storage location when the user logs off or shuts down their VDI session. Enable this setting to register a VDI-specific settings location template and restore data on computers in pooled VDI environments that reset to a clean state on logout. With this policy enabled you can roll settings back to the state when UE-V was installed or to “last-known-good” configurations. Only enable this policy setting on computers running in a non-persistent VDI environment. The VDI Collection Name defines the name of the virtual desktop collection containing the virtual computers. \r\nIf you enable this policy setting, the UE-V rollback state is copied to the settings storage location on logout and restored on login.\r\nIf you disable this policy setting, no UE-V rollback state is copied to the settings storage location.\r\nIf you do not configure this policy, no UE-V rollback state is copied to the settings storage location.\r\n      \r\n ",
+    "helpText": "",
+    "name": "ConfigureVdi",
+    "displayName": "VDI Configuration",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_userexperiencevirtualization_configurevdi_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_userexperiencevirtualization_configurevdi_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_userexperiencevirtualization_configurevdi_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_userexperiencevirtualization_configurevdi_vdicollectionname",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

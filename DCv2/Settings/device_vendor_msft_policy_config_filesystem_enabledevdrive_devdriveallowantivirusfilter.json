@@ -1,0 +1,92 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "EnableDevDrive",
+        "Enable dev drive",
+        "\\System\\Filesystem",
+        "Administrative Templates\\System\\Filesystem",
+        "Filesystem"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/FileSystem/EnableDevDrive",
+    "rootDefinitionId": "device_vendor_msft_policy_config_filesystem_enabledevdrive",
+    "categoryId": "50fb9f56-84f1-4fa9-83f5-0aa0bca8ff49",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_filesystem_enabledevdrive_devdriveallowantivirusfilter",
+    "description": "",
+    "helpText": "",
+    "name": "DevDriveAllowAntivirusFilter",
+    "displayName": "Let antivirus filter protect dev drives (Device)",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22621.2338",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_filesystem_enabledevdrive_devdriveallowantivirusfilter_0",
+            "description": null,
+            "helpText": null,
+            "name": "False",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_filesystem_enabledevdrive_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_filesystem_enabledevdrive"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_filesystem_enabledevdrive_devdriveallowantivirusfilter_1",
+            "description": null,
+            "helpText": null,
+            "name": "True",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_filesystem_enabledevdrive_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_filesystem_enabledevdrive"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

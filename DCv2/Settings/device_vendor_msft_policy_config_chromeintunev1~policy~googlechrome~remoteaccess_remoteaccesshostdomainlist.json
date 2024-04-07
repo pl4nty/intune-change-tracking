@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "RemoteAccessHostDomainList",
+        "Configure the required domain names for remote access hosts",
+        "\\Google\\Google Chrome\\Remote access",
+        "Administrative Templates\\Google\\Google Chrome\\Remote access",
+        "Remote access"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV1~Policy~googlechrome~RemoteAccess/RemoteAccessHostDomainList",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~remoteaccess_remoteaccesshostdomainlist",
+    "categoryId": "098942c3-afe3-40c8-823f-37f0b5b13ad4",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~remoteaccess_remoteaccesshostdomainlist",
+    "description": "Setting the policy specifies the host domain names that are imposed on remote access hosts, and users can't change them. Hosts can be shared only using accounts registered on one of the specified domain names.\r\n\r\nSetting the policy to an empty list or leaving it unset means hosts can be shared using any account.\r\n\r\nSee also RemoteAccessHostClientDomainList.\r\n\r\nNote: This setting will override RemoteAccessHostDomain, if present.\r\n\r\nExample value:\r\n\r\nmy-awesome-domain.com\r\nmy-auxiliary-domain.com",
+    "helpText": "",
+    "name": "RemoteAccessHostDomainList",
+    "displayName": "Configure the required domain names for remote access hosts",
+    "defaultOptionId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~remoteaccess_remoteaccesshostdomainlist_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~remoteaccess_remoteaccesshostdomainlist_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~remoteaccess_remoteaccesshostdomainlist_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~remoteaccess_remoteaccesshostdomainlist_remoteaccesshostdomainlistdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

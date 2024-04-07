@@ -1,0 +1,138 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "DO Download Mode",
+        "Delivery Optimization"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-DeliveryOptimization#deliveryoptimization-dodownloadmode"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/DeliveryOptimization/DODownloadMode",
+    "rootDefinitionId": "device_vendor_msft_policy_config_deliveryoptimization_dodownloadmode",
+    "categoryId": "e2ec9af6-6143-4cd8-952c-1b3e849ee0dc",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_deliveryoptimization_dodownloadmode",
+    "description": "Specifies the download method that Delivery Optimization can use in downloads of Windows Updates, Apps and App updates.",
+    "helpText": "",
+    "name": "DODownloadMode",
+    "displayName": "DO Download Mode",
+    "defaultOptionId": "device_vendor_msft_policy_config_deliveryoptimization_dodownloadmode_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.10240",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_deliveryoptimization_dodownloadmode_0",
+            "description": "HTTP only, no peering.",
+            "helpText": null,
+            "name": "HTTP only, no peering.",
+            "displayName": "HTTP only, no peering.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_deliveryoptimization_dodownloadmode_1",
+            "description": "HTTP blended with peering behind the same NAT.",
+            "helpText": null,
+            "name": "HTTP blended with peering behind the same NAT.",
+            "displayName": "HTTP blended with peering behind the same NAT.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_deliveryoptimization_dodownloadmode_2",
+            "description": "When this option is selected, peering will cross NATs. To create a custom group use Group ID in combination with Mode 2.",
+            "helpText": null,
+            "name": "When this option is selected, peering will cross NATs. To create a custom group use Group ID in combination with Mode 2.",
+            "displayName": "When this option is selected, peering will cross NATs. To create a custom group use Group ID in combination with Mode 2.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_deliveryoptimization_dodownloadmode_3",
+            "description": "HTTP blended with Internet peering.",
+            "helpText": null,
+            "name": "HTTP blended with Internet peering.",
+            "displayName": "HTTP blended with Internet peering.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_deliveryoptimization_dodownloadmode_99",
+            "description": "9 - Simple download mode with no peering. Delivery Optimization downloads using HTTP only and does not attempt to contact the Delivery Optimization cloud services. Added in Windows 10, version 1607.",
+            "helpText": null,
+            "name": "Simple download mode with no peering. Delivery Optimization downloads using HTTP only and does not attempt to contact the Delivery Optimization cloud services. Added in Windows 10, version 1607.",
+            "displayName": "9 - Simple download mode with no peering. Delivery Optimization downloads using HTTP only and does not attempt to contact the Delivery Optimization cloud services. Added in Windows 10, version 1607.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 99
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_deliveryoptimization_dodownloadmode_100",
+            "description": "Bypass mode. Windows 10: Do not use Delivery Optimization and use BITS instead. Windows 11: Deprecated, use Simple mode instead.",
+            "helpText": null,
+            "name": "Bypass mode. Windows 10: Do not use Delivery Optimization and use BITS instead. Windows 11: Deprecated, use Simple mode instead.",
+            "displayName": "Bypass mode. Windows 10: Do not use Delivery Optimization and use BITS instead. Windows 11: Deprecated, use Simple mode instead.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 100
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

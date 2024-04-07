@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Windows_Scaling_Heuristics_State",
+        "Set Window Scaling Heuristics State",
+        "\\Network\\TCPIP Settings\\Parameters",
+        "Administrative Templates\\Network\\TCPIP Settings\\Parameters",
+        "Parameters"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-tcpip#admx-tcpip-windows-scaling-heuristics-state"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_tcpip/Windows_Scaling_Heuristics_State",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_tcpip_windows_scaling_heuristics_state",
+    "categoryId": "d512207c-854d-482d-8e52-26637eef24e3",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_tcpip_windows_scaling_heuristics_state",
+    "description": "This policy setting allows you to configure Window Scaling Heuristics. Window Scaling Heuristics is an algorithm to identify connectivity and throughput problems caused by many Firewalls and other middle boxes that don't interpret Window Scaling option correctly.\r\n\r\nIf you do not configure this policy setting, the local host settings are used.\r\n\r\nIf you enable this policy setting, Window Scaling Heuristics will be enabled and system will try to identify connectivity and throughput problems and take appropriate measures.\r\n\r\nIf you disable this policy setting, Window Scaling Heuristics will be disabled and system will not try to identify connectivity and throughput problems casued by Firewalls or other middle boxes.\r\n\r\n\r\n ",
+    "helpText": "",
+    "name": "Windows_Scaling_Heuristics_State",
+    "displayName": "Set Window Scaling Heuristics State",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_tcpip_windows_scaling_heuristics_state_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_tcpip_windows_scaling_heuristics_state_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_tcpip_windows_scaling_heuristics_state_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

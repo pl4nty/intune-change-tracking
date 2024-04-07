@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "MMC_ExtendView",
+        "Extended View (Web View)",
+        "\\Windows Components\\Microsoft Management Console\\Restricted/Permitted snap-ins\\Extension snap-ins",
+        "Administrative Templates\\Windows Components\\Microsoft Management Console\\Restricted/Permitted snap-ins\\Extension snap-ins",
+        "Extension snap-ins"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-mmc#admx-mmc-mmc-extendview"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_MMC/MMC_ExtendView",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_mmc_mmc_extendview",
+    "categoryId": "6355e85b-aeef-49e8-b8c9-5d6cd9a39985",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_mmc_mmc_extendview",
+    "description": "Permits or prohibits use of this snap-in.\r\n\r\nIf you enable this setting, the snap-in is permitted. If you disable the setting, the snap-in is prohibited.\r\n\r\nIf this setting is not configured, the setting of the \"Restrict users to the explicitly permitted list of snap-ins\" setting determines whether this snap-in is permitted or prohibited.\r\n\r\n--  If \"Restrict users to the explicitly permitted list of snap-ins\" is enabled, users cannot use any snap-in except those explicitly permitted.\r\n\r\n    To explicitly permit use of this snap-in, enable this setting. If this setting is not configured (or disabled), this snap-in is prohibited.\r\n\r\n--  If \"Restrict users to the explicitly permitted list of snap-ins\" is disabled or not configured, users can use any snap-in except those explicitly prohibited.\r\n\r\n    To explicitly prohibit use of this snap-in, disable this setting. If this setting is not configured (or enabled), the snap-in is permitted.\r\n\r\nWhen a snap-in is prohibited, it does not appear in the Add/Remove Snap-in window in MMC. Also, when a user opens a console file that includes a prohibited snap-in, the console file opens, but the prohibited snap-in does not appear.",
+    "helpText": "",
+    "name": "MMC_ExtendView",
+    "displayName": "Extended View (Web View) (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_mmc_mmc_extendview_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_mmc_mmc_extendview_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_mmc_mmc_extendview_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

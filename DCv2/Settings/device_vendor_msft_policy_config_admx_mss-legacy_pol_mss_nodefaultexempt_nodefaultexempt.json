@@ -1,0 +1,131 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Pol_MSS_NoDefaultExempt",
+        "MSS: (NoDefaultExempt) Configure IPSec exemptions for various types of network traffic. ",
+        "\\MSS (Legacy)",
+        "Administrative Templates\\MSS (Legacy)",
+        "MSS (Legacy)"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_MSS-legacy/Pol_MSS_NoDefaultExempt",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_nodefaultexempt",
+    "categoryId": "e00ff1f8-a2d1-4d3b-bb07-f58b38b8d5d7",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_nodefaultexempt_nodefaultexempt",
+    "description": null,
+    "helpText": "",
+    "name": "NoDefaultExempt",
+    "displayName": "NoDefaultExempt (Device)",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_nodefaultexempt_nodefaultexempt_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_nodefaultexempt_nodefaultexempt_0",
+            "description": null,
+            "helpText": null,
+            "name": "Allow all exemptions.",
+            "displayName": "Allow all exemptions.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_nodefaultexempt_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_nodefaultexempt"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_nodefaultexempt_nodefaultexempt_1",
+            "description": null,
+            "helpText": null,
+            "name": "Multicast, broadcast, & ISAKMP exempt.",
+            "displayName": "Multicast, broadcast, & ISAKMP exempt.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_nodefaultexempt_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_nodefaultexempt"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_nodefaultexempt_nodefaultexempt_2",
+            "description": null,
+            "helpText": null,
+            "name": "RSVP, Kerberos, and ISAKMP are exempt.",
+            "displayName": "RSVP, Kerberos, and ISAKMP are exempt.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_nodefaultexempt_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_nodefaultexempt"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_nodefaultexempt_nodefaultexempt_3",
+            "description": null,
+            "helpText": null,
+            "name": "Only ISAKMP is exempt.",
+            "displayName": "Only ISAKMP is exempt.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "3"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_nodefaultexempt_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_mss-legacy_pol_mss_nodefaultexempt"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

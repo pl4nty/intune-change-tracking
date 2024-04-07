@@ -1,0 +1,93 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "WerCER",
+        "Configure Corporate Windows Error Reporting",
+        "\\Windows Components\\Windows Error Reporting\\Advanced Error Reporting Settings",
+        "Administrative Templates\\Windows Components\\Windows Error Reporting\\Advanced Error Reporting Settings",
+        "Advanced Error Reporting Settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_ErrorReporting/WerCER",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_errorreporting_wercer",
+    "categoryId": "23e93393-4a75-44e6-9693-208eedb06976",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_errorreporting_wercer_werceruploadonfreenetworksonly",
+    "description": null,
+    "helpText": "",
+    "name": "WerCerUploadOnFreeNetworksOnly",
+    "displayName": "Only upload on free networks (Device)",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_errorreporting_wercer_werceruploadonfreenetworksonly_0",
+            "description": null,
+            "helpText": null,
+            "name": "False",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_errorreporting_wercer_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_errorreporting_wercer"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_errorreporting_wercer_werceruploadonfreenetworksonly_1",
+            "description": null,
+            "helpText": null,
+            "name": "True",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_errorreporting_wercer_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_errorreporting_wercer"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

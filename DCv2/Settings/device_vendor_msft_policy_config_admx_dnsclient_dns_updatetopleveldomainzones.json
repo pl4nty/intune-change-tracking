@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DNS_UpdateTopLevelDomainZones",
+        "Update top level domain zones",
+        "\\Network\\DNS Client",
+        "Administrative Templates\\Network\\DNS Client",
+        "DNS Client"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-dnsclient#admx-dnsclient-dns-updatetopleveldomainzones"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_DnsClient/DNS_UpdateTopLevelDomainZones",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_dnsclient_dns_updatetopleveldomainzones",
+    "categoryId": "bd8dacbf-ab7b-4a93-8294-7db61b9d49b4",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_dnsclient_dns_updatetopleveldomainzones",
+    "description": "Specifies if computers may send dynamic updates to zones with a single label name. These zones are also known as top-level domain zones, for example: \"com.\"\r\n\r\nBy default, a DNS client that is configured to perform dynamic DNS update will update the DNS zone that is authoritative for its DNS resource records unless the authoritative zone is a top-level domain or root zone.\r\n\r\nIf you enable this policy setting, computers send dynamic updates to any zone that is authoritative for the resource records that the computer needs to update, except the root zone.\r\n\r\nIf you disable this policy setting, or if you do not configure this policy setting, computers do not send dynamic updates to the root zone or top-level domain zones that are authoritative for the resource records that the computer needs to update.\n ",
+    "helpText": "",
+    "name": "DNS_UpdateTopLevelDomainZones",
+    "displayName": "Update top level domain zones",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_dnsclient_dns_updatetopleveldomainzones_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_dnsclient_dns_updatetopleveldomainzones_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_dnsclient_dns_updatetopleveldomainzones_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

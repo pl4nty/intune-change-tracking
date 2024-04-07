@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ProxyPacUrl",
+        "Set the proxy .pac file URL",
+        "\\Microsoft Edge\\Proxy server",
+        "Microsoft Edge\\Proxy server",
+        "Proxy server"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edge~Policy~microsoft_edge~Proxy/ProxyPacUrl",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~proxy_proxypacurl",
+    "categoryId": "fe845e81-5993-4a65-b22a-decfc5928c65",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~proxy_proxypacurl",
+    "description": "Specifies the URL for a proxy auto-config (PAC) file.\r\n\r\nThis policy is applied only if you selected 'Use a .pac proxy script' in the 'ProxyMode' (Configure proxy server settings) policy. If you selected any other mode for configuring proxy policies, don't enable or configure this policy.\r\n\r\nIf you enable this policy, you can specify the URL for a PAC file, which defines how the browser automatically chooses the appropriate proxy server for fetching a particular website.\r\n\r\nIf you disable or don't configure this policy, no PAC file is specified. Leave this policy unconfigured if you've specified any other method for setting proxy policies.\r\n\r\nFor detailed examples, see https://go.microsoft.com/fwlink/?linkid=2094936.\r\n\r\nExample value: https://internal.contoso.com/example.pac",
+    "helpText": "",
+    "name": "ProxyPacUrl",
+    "displayName": "Set the proxy .pac file URL (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~proxy_proxypacurl_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~proxy_proxypacurl_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~proxy_proxypacurl_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~proxy_proxypacurl_proxypacurl",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

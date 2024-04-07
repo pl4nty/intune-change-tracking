@@ -1,0 +1,74 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Manual Down Direction Disabled",
+        "Mixed Reality"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-MixedReality#mixedreality-manualdowndirectiondisabled"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/MixedReality/ManualDownDirectionDisabled",
+    "rootDefinitionId": "device_vendor_msft_policy_config_mixedreality_manualdowndirectiondisabled",
+    "categoryId": "f10138ba-123a-43bc-8031-4458ba327374",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_mixedreality_manualdowndirectiondisabled",
+    "description": "This policy controls whether the user can change down direction manually or not. If no down direction is set by the user, then an automatically calculated down direction is used by the system. This policy has no dependency on ConfigureMovingPlatform policy and they can be set independently.",
+    "helpText": "",
+    "name": "ManualDownDirectionDisabled",
+    "displayName": "Manual Down Direction Disabled",
+    "defaultOptionId": "device_vendor_msft_policy_config_mixedreality_manualdowndirectiondisabled_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.20348",
+        "windowsSkus": [
+            "holographicForBusiness"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_mixedreality_manualdowndirectiondisabled_0",
+            "description": "User is allowed to manually change down direction.",
+            "helpText": null,
+            "name": "User is allowed to manually change down direction.",
+            "displayName": "User is allowed to manually change down direction.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_mixedreality_manualdowndirectiondisabled_1",
+            "description": "User is not allowed to manually change down direction.",
+            "helpText": null,
+            "name": "User is not allowed to manually change down direction.",
+            "displayName": "User is not allowed to manually change down direction.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

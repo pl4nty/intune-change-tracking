@@ -1,0 +1,73 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ProfilesClearCacheonLogoff",
+        "Clear Cache on Logoff",
+        "\\FSLogix\\Profile Containers\\Cloud Cache",
+        "Administrative Templates\\FSLogix\\Profile Containers\\Cloud Cache",
+        "Cloud Cache"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/FSLogixv1~Policy~FSLogix~Profiles~Profiles_CCD/ProfilesClearCacheonLogoff",
+    "rootDefinitionId": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles~profiles_ccd_profilesclearcacheonlogoff",
+    "categoryId": "719595d8-ab5d-4418-88aa-8cd55c2964ba",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles~profiles_ccd_profilesclearcacheonlogoff",
+    "description": "NOTE:  Once this policy is Enabled or Disabled, setting it back to Not Configured has NO EFFECT.\r\n\r\nClears the local cache during user sign out.\r\n\r\nRegistry Entry:  HKLM\\SOFTWARE\\FSLogix\\Profiles\\ClearCacheOnLogoff\r\nType:  DWORD\r\nValues:  0 = Disabled, 1 = Enabled",
+    "helpText": "",
+    "name": "ProfilesClearCacheonLogoff",
+    "displayName": "Clear Cache on Logoff",
+    "defaultOptionId": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles~profiles_ccd_profilesclearcacheonlogoff_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles~profiles_ccd_profilesclearcacheonlogoff_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles~profiles_ccd_profilesclearcacheonlogoff_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

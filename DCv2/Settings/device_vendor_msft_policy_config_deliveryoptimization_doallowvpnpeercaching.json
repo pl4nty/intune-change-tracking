@@ -1,0 +1,82 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "DO Allow VPN Peer Caching",
+        "Delivery Optimization"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-DeliveryOptimization#deliveryoptimization-doallowvpnpeercaching"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/DeliveryOptimization/DOAllowVPNPeerCaching",
+    "rootDefinitionId": "device_vendor_msft_policy_config_deliveryoptimization_doallowvpnpeercaching",
+    "categoryId": "e2ec9af6-6143-4cd8-952c-1b3e849ee0dc",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_deliveryoptimization_doallowvpnpeercaching",
+    "description": "Specifies whether the device is allowed to participate in Peer Caching while connected via VPN to the domain network. This means the device can download from or upload to other domain network devices, either on VPN or on the corporate domain network.",
+    "helpText": "",
+    "name": "DOAllowVPNPeerCaching",
+    "displayName": "DO Allow VPN Peer Caching",
+    "defaultOptionId": "device_vendor_msft_policy_config_deliveryoptimization_doallowvpnpeercaching_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.15063",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_deliveryoptimization_doallowvpnpeercaching_0",
+            "description": "Not allowed.",
+            "helpText": null,
+            "name": "Not allowed.",
+            "displayName": "Block",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_deliveryoptimization_doallowvpnpeercaching_1",
+            "description": "Allowed.",
+            "helpText": null,
+            "name": "Allowed.",
+            "displayName": "Allow",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

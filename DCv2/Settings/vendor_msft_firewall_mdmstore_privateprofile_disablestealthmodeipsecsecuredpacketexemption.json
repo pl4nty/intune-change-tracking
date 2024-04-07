@@ -1,0 +1,92 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "get,replace",
+    "keywords": [
+        "Disable Stealth Mode Ipsec Secured Packet Exemption",
+        "Firewall"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/en-us/windows/client-management/mdm/firewall-csp"
+    ],
+    "baseUri": "./Vendor/MSFT/Firewall",
+    "offsetUri": "/MdmStore/PrivateProfile/DisableStealthModeIpsecSecuredPacketExemption",
+    "rootDefinitionId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall",
+    "categoryId": "4a5e4714-00ac-4793-b0cc-5049041b0ed7",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "vendor_msft_firewall_mdmstore_privateprofile_disablestealthmodeipsecsecuredpacketexemption",
+    "description": "This value is an on/off switch. This option is ignored if DisableStealthMode is on. Otherwise, when this option is true, the firewall's stealth mode rules MUST NOT prevent the host computer from responding to unsolicited network traffic if that traffic is secured by IPsec.  The merge law for this option is to let the value of the GroupPolicyRSoPStore win if it is configured; otherwise, the local store value is used. For schema versions 0x0200, 0x0201, and 0x020A, this value is invalid and MUST NOT be used.",
+    "helpText": "",
+    "name": "DisableStealthModeIpsecSecuredPacketExemption",
+    "displayName": "Disable Stealth Mode Ipsec Secured Packet Exemption",
+    "defaultOptionId": "vendor_msft_firewall_mdmstore_privateprofile_disablestealthmodeipsecsecuredpacketexemption_true",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager,microsoftSense",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "vendor_msft_firewall_mdmstore_privateprofile_disablestealthmodeipsecsecuredpacketexemption_false",
+            "description": "FALSE",
+            "helpText": null,
+            "name": "FALSE",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+                    "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "vendor_msft_firewall_mdmstore_privateprofile_disablestealthmodeipsecsecuredpacketexemption_true",
+            "description": "TRUE",
+            "helpText": null,
+            "name": "TRUE",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall_true",
+                    "parentSettingId": "vendor_msft_firewall_mdmstore_privateprofile_enablefirewall"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

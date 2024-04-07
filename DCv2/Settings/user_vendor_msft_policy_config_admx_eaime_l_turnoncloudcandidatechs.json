@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_TurnOnCloudCandidateCHS",
+        "Turn on cloud candidate for CHS",
+        "\\Windows Components\\IME",
+        "Administrative Templates\\Windows Components\\IME",
+        "IME"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-eaime#admx-eaime-l-turnoncloudcandidatechs"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_EAIME/L_TurnOnCloudCandidateCHS",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_eaime_l_turnoncloudcandidatechs",
+    "categoryId": "ba1d333c-e19b-4470-bbab-d040a633c3a3",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_eaime_l_turnoncloudcandidatechs",
+    "description": "This policy setting controls the cloud candidates feature, which uses an online service to provide input suggestions that don't exist in a PC's local dictionary.\r\n\r\nIf you enable this policy setting, the functionality associated with this feature is turned on, the user's keyboard input is sent to Microsoft to generate the suggestions, and the user won't be able to turn it off.\r\n\r\nIf you disable this policy setting, the functionality associated with this feature is turned off, and the user won't be able to turn it on.\r\n\r\nIf you don't configure this policy setting, it will be turned off by default, and the user can turn on and turn off the cloud candidates feature.\r\n\r\nThis Policy setting applies only to Microsoft CHS Pinyin IME.\r\n ",
+    "helpText": "",
+    "name": "L_TurnOnCloudCandidateCHS",
+    "displayName": "Turn on cloud candidate for CHS (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_eaime_l_turnoncloudcandidatechs_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_eaime_l_turnoncloudcandidatechs_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_eaime_l_turnoncloudcandidatechs_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

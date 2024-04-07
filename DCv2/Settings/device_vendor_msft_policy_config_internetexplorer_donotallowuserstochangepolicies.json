@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Security_options_edit",
+        "Security Zones: Do not allow users to change policies",
+        "\\Windows Components\\Internet Explorer",
+        "Internet Explorer"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-donotallowuserstochangepolicies"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/InternetExplorer/DoNotAllowUsersToChangePolicies",
+    "rootDefinitionId": "device_vendor_msft_policy_config_internetexplorer_donotallowuserstochangepolicies",
+    "categoryId": "f60cd3c8-a91b-4542-b09f-129dfc7e589c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_internetexplorer_donotallowuserstochangepolicies",
+    "description": "Prevents users from changing security zone settings. A security zone is a group of Web sites with the same security level.\r\n\r\nIf you enable this policy, the Custom Level button and security-level slider on the Security tab in the Internet Options dialog box are disabled.\r\n\r\nIf you disable this policy or do not configure it, users can change the settings for security zones.\r\n\r\nThis policy prevents users from changing security zone settings established by the administrator.\r\n\r\nNote: The \"Disable the Security page\" policy (located in \\User Configuration\\Administrative Templates\\Windows Components\\Internet Explorer\\Internet Control Panel), which removes the Security tab from Internet Explorer in Control Panel, takes precedence over this policy. If it is enabled, this policy is ignored.\r\n\r\nAlso, see the \"Security zones: Use only machine settings\" policy.",
+    "helpText": "",
+    "name": "Security_options_edit",
+    "displayName": "Security Zones: Do not allow users to change policies",
+    "defaultOptionId": "device_vendor_msft_policy_config_internetexplorer_donotallowuserstochangepolicies_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.15063",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_internetexplorer_donotallowuserstochangepolicies_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_internetexplorer_donotallowuserstochangepolicies_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

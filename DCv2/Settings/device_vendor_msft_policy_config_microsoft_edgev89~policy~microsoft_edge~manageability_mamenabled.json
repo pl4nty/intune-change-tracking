@@ -1,0 +1,73 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "MAMEnabled",
+        "Mobile App Management Enabled",
+        "\\Microsoft Edge\\Manageability",
+        "Microsoft Edge\\Manageability",
+        "Manageability"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev89~Policy~microsoft_edge~Manageability/MAMEnabled",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edgev89~policy~microsoft_edge~manageability_mamenabled",
+    "categoryId": "dfab5866-1712-4bbf-8edf-5b080b315b9b",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_microsoft_edgev89~policy~microsoft_edge~manageability_mamenabled",
+    "description": "Allows the Microsoft Edge browser to retrieve policies from the Intune application management services and apply them to users' profiles.\r\n\r\nIf you enable this policy or don't configure it, Mobile App Management (MAM) Policies can be applied.\r\n\r\nIf you disable this policy, Microsoft Edge will not communicate with Intune to request MAM Policies.",
+    "helpText": "",
+    "name": "MAMEnabled",
+    "displayName": "Mobile App Management Enabled",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edgev89~policy~microsoft_edge~manageability_mamenabled_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev89~policy~microsoft_edge~manageability_mamenabled_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev89~policy~microsoft_edge~manageability_mamenabled_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

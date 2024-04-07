@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "NC_RenameLanConnection",
+        "Ability to rename LAN connections",
+        "\\Network\\Network Connections",
+        "Administrative Templates\\Network\\Network Connections",
+        "Network Connections"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-networkconnections#admx-networkconnections-nc-renamelanconnection"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_NetworkConnections/NC_RenameLanConnection",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_networkconnections_nc_renamelanconnection",
+    "categoryId": "76c8131a-62fe-4134-aeac-d999f01911ed",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_networkconnections_nc_renamelanconnection",
+    "description": "Determines whether nonadministrators can rename a LAN connection.\r\n\r\nIf you enable this setting, the Rename option is enabled for LAN connections. Nonadministrators can rename LAN connections by clicking an icon representing the connection or by using the File menu.\r\n\r\nIf you disable this setting, the Rename option is disabled for nonadministrators only.\r\n\r\nIf you do not configure this setting, only Administrators and Network Configuration Operators can rename LAN connections\r\n\r\nNote: This setting does not apply to Administrators.\r\n\r\nNote: When the \"Ability to rename LAN connections or remote access connections available to all users\" setting is configured (set to either enabled or disabled), this setting does not apply.\r\n ",
+    "helpText": "",
+    "name": "NC_RenameLanConnection",
+    "displayName": "Ability to rename LAN connections (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_networkconnections_nc_renamelanconnection_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_networkconnections_nc_renamelanconnection_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_networkconnections_nc_renamelanconnection_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

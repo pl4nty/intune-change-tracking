@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ApplicationDriverIsolation",
+        "Isolate print drivers from applications",
+        "\\Printers",
+        "Administrative Templates\\Printers",
+        "Printers"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-printing#admx-printing-applicationdriverisolation"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_Printing/ApplicationDriverIsolation",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_printing_applicationdriverisolation",
+    "categoryId": "2becddf1-d8ea-49ec-8560-c8c401faa9bb",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_printing_applicationdriverisolation",
+    "description": "Determines if print driver components are isolated from applications instead of normally loading them into applications. Isolating print drivers greatly reduces the risk of a print driver failure causing an application crash.\r\n\r\nNot all applications support driver isolation. By default, Microsoft Excel 2007, Excel 2010, Word 2007, Word 2010 and certain other applications are configured to support it. Other applications may also be capable of isolating print drivers, depending on whether they are configured for it.\r\n\r\nIf you enable or do not configure this policy setting, then applications that are configured to support driver isolation will be isolated.\r\n\r\nIf you disable this policy setting, then print drivers will be loaded within all associated application processes.\r\n\r\nNotes:\r\n-This policy setting applies only to applications opted into isolation.\r\n-This policy setting applies only to print drivers loaded by applications. Print drivers loaded by the print spooler are not affected.\r\n-This policy setting is only checked once during the lifetime of a process. After changing the policy, a running application must be relaunched before settings take effect.\r\n ",
+    "helpText": "",
+    "name": "ApplicationDriverIsolation",
+    "displayName": "Isolate print drivers from applications",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_printing_applicationdriverisolation_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_printing_applicationdriverisolation_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_printing_applicationdriverisolation_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

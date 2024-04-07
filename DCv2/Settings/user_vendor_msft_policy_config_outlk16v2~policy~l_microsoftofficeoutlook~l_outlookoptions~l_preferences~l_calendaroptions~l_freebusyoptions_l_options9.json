@@ -1,0 +1,86 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_options9",
+        "Options",
+        "\\Microsoft Outlook 2016\\Outlook Options\\Preferences\\Calendar Options\\Free/Busy Options",
+        "Microsoft Outlook 2016\\Outlook Options\\Preferences\\Calendar Options\\Free/Busy Options",
+        "Free/Busy Options"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/outlk16v2~Policy~L_MicrosoftOfficeOutlook~L_OutlookOptions~L_Preferences~L_Calendaroptions~L_FreeBusyOptions/L_options9",
+    "rootDefinitionId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_preferences~l_calendaroptions~l_freebusyoptions_l_options9",
+    "categoryId": "c6b72060-8ecb-41d8-8625-2984dd756d4a",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_preferences~l_calendaroptions~l_freebusyoptions_l_options9",
+    "description": "Sets the value in the option \"Publish [] month(s) of Calendar free/busy information on the server\".",
+    "helpText": "",
+    "name": "L_options9",
+    "displayName": "Options (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_preferences~l_calendaroptions~l_freebusyoptions_l_options9_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_preferences~l_calendaroptions~l_freebusyoptions_l_options9_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_preferences~l_calendaroptions~l_freebusyoptions_l_options9_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_preferences~l_calendaroptions~l_freebusyoptions_l_options9_l_monthsoffreebusyinformationpublished",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_preferences~l_calendaroptions~l_freebusyoptions_l_options9_l_preventusersfromchangingmonthsoffreebusyinformation1",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_preferences~l_calendaroptions~l_freebusyoptions_l_options9_l_freebusyupdatedontheservereveryxxxseconds",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Allow Projection To PC",
+        "Wireless Display"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-WirelessDisplay#wirelessdisplay-allowprojectiontopc"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/WirelessDisplay/AllowProjectionToPC",
+    "rootDefinitionId": "device_vendor_msft_policy_config_wirelessdisplay_allowprojectiontopc",
+    "categoryId": "a6e15085-a3a9-41dd-9a6a-65c8a26c616d",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_wirelessdisplay_allowprojectiontopc",
+    "description": "This policy setting allows you to turn off projection to a PC                             If you set it to 0, your PC can't be discoverable or projected to over Wi-Fi Direct.                              If you set it to 1, your PC can be discoverable and projected to over Wi-Fi Direct. The user has an option to turn it always on or off except for manual launch, too.",
+    "helpText": "",
+    "name": "AllowProjectionToPC",
+    "displayName": "Allow Projection To PC",
+    "defaultOptionId": "device_vendor_msft_policy_config_wirelessdisplay_allowprojectiontopc_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "4.1",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.14393",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_wirelessdisplay_allowprojectiontopc_0",
+            "description": "Projection to PC is not allowed. Always off and the user cannot enable it.",
+            "helpText": null,
+            "name": "Projection to PC is not allowed. Always off and the user cannot enable it.",
+            "displayName": "Projection to PC is not allowed. Always off and the user cannot enable it.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_wirelessdisplay_allowprojectiontopc_1",
+            "description": "Projection to PC is allowed. Enabled only above the lock screen.",
+            "helpText": null,
+            "name": "Projection to PC is allowed. Enabled only above the lock screen.",
+            "displayName": "Projection to PC is allowed. Enabled only above the lock screen.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

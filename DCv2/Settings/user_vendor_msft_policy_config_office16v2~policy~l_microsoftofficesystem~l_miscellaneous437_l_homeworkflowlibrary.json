@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_HomeWorkflowLibrary",
+        "Home Workflow Library",
+        "\\Microsoft Office 2016\\Miscellaneous",
+        "Microsoft Office 2016\\Miscellaneous",
+        "Miscellaneous"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/office16v2~Policy~L_MicrosoftOfficeSystem~L_miscellaneous437/L_HomeWorkflowLibrary",
+    "rootDefinitionId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_miscellaneous437_l_homeworkflowlibrary",
+    "categoryId": "9b2ad6d8-8837-4c50-89d5-7507b69c7dec",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_miscellaneous437_l_homeworkflowlibrary",
+    "description": "Allows administrators to make workflows from a specified list or library available within the workflow enabled Office applications.  The value of this key should be the URL to the list or library where the workflows have been made available.",
+    "helpText": "",
+    "name": "L_HomeWorkflowLibrary",
+    "displayName": "Home Workflow Library (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_miscellaneous437_l_homeworkflowlibrary_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_miscellaneous437_l_homeworkflowlibrary_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_miscellaneous437_l_homeworkflowlibrary_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_miscellaneous437_l_homeworkflowlibrary_l_path2504",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

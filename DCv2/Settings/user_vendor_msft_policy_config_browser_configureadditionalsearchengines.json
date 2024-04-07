@@ -1,0 +1,66 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Configure Additional Search Engines",
+        "Browser"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Browser#browser-configureadditionalsearchengines"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Browser/ConfigureAdditionalSearchEngines",
+    "rootDefinitionId": "user_vendor_msft_policy_config_browser_configureadditionalsearchengines",
+    "categoryId": "5d835ac8-2e5e-4887-8e4d-0c3846d0ad9f",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_browser_configureadditionalsearchengines",
+    "description": "Allows you to add up to 5 additional search engines for MDM-enrolled devices.  If this setting is turned on, you can add up to 5 additional search engines for your employee. For each additional search engine you wish to add, you must specify a link to the OpenSearch XML file that contains, at minimum, the short name and the URL to the search engine. This policy does not affect the default search engine. Employees will not be able to remove these search engines, but they can set any one of these as the default.  If this setting is not configured, the search engines are the ones specified in the App settings. If this setting is disabled, the search engines you had added will be deleted from your employee's machine.  Due to Protected Settings (aka.ms/browserpolicy), this policy will only apply on domain-joined machines or when the device is MDM-enrolled.",
+    "helpText": "",
+    "name": "ConfigureAdditionalSearchEngines",
+    "displayName": "Configure Additional Search Engines (User)",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.15063",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 87516,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

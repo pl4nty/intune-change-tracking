@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DLT_AllowDomainMode",
+        "Allow Distributed Link Tracking clients to use domain resources",
+        "\\System",
+        "Administrative Templates\\System",
+        "System"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-distributedlinktracking#admx-distributedlinktracking-dlt-allowdomainmode"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_DistributedLinkTracking/DLT_AllowDomainMode",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_distributedlinktracking_dlt_allowdomainmode",
+    "categoryId": "fd66cd4e-474b-4d6c-8dec-65a6a49e75d7",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_distributedlinktracking_dlt_allowdomainmode",
+    "description": "Specifies that Distributed Link Tracking clients in this domain may use the Distributed Link Tracking (DLT) server, which runs on domain controllers.  The DLT client enables programs to track linked  files that are moved within an NTFS volume, to another NTFS volume on the same computer, or to an NTFS volume on  another computer.   The DLT client can more reliably track links when allowed to use the DLT server.  This policy should not be set unless the DLT server is running on all domain controllers in the domain.\r\n ",
+    "helpText": "",
+    "name": "DLT_AllowDomainMode",
+    "displayName": "Allow Distributed Link Tracking clients to use domain resources",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_distributedlinktracking_dlt_allowdomainmode_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_distributedlinktracking_dlt_allowdomainmode_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_distributedlinktracking_dlt_allowdomainmode_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

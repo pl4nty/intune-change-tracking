@@ -1,0 +1,110 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "System_AuditSecuritySystemExtension",
+        "Audit",
+        "Auditing"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Audit#audit-system-auditsecuritysystemextension"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Audit/System_AuditSecuritySystemExtension",
+    "rootDefinitionId": "device_vendor_msft_policy_config_audit_system_auditsecuritysystemextension",
+    "categoryId": "5cb7f4f0-ef00-4eb3-80f4-2c2b97b053ea",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_audit_system_auditsecuritysystemextension",
+    "description": "This policy setting allows you to audit events related to security system extensions or services such as the following:     A security system extension, such as an authentication, notification, or security package is loaded and is registered with the Local Security Authority (LSA). It is used to authenticate logon attempts, submit logon requests, and any account or password changes. Examples of security system extensions are Kerberos and NTLM.     A service is installed and registered with the Service Control Manager. The audit log contains information about the service name, binary, type, start type, and service account. If you configure this policy setting, an audit event is generated when an attempt is made to load a security system extension. Success audits record successful attempts and Failure audits record unsuccessful attempts. If you do not configure this policy setting, no audit event is generated when an attempt is made to load a security system extension.",
+    "helpText": "",
+    "name": "System_AuditSecuritySystemExtension",
+    "displayName": "Audit Security System Extension",
+    "defaultOptionId": "device_vendor_msft_policy_config_audit_system_auditsecuritysystemextension_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "7.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17134.1039",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_audit_system_auditsecuritysystemextension_0",
+            "description": "Off/None",
+            "helpText": null,
+            "name": "Off/None",
+            "displayName": "Off/None",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_audit_system_auditsecuritysystemextension_1",
+            "description": "Success",
+            "helpText": null,
+            "name": "Success",
+            "displayName": "Success",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_audit_system_auditsecuritysystemextension_2",
+            "description": "Failure",
+            "helpText": null,
+            "name": "Failure",
+            "displayName": "Failure",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_audit_system_auditsecuritysystemextension_3",
+            "description": "Success+Failure",
+            "helpText": null,
+            "name": "Success+Failure",
+            "displayName": "Success+Failure",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "AppCompatRemoveProgramCompatPropPage",
+        "Remove Program Compatibility Property Page",
+        "\\Windows Components\\Application Compatibility",
+        "Administrative Templates\\Windows Components\\Application Compatibility",
+        "Application Compatibility"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-appcompat#admx-appcompat-appcompatremoveprogramcompatproppage"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_AppCompat/AppCompatRemoveProgramCompatPropPage",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_appcompat_appcompatremoveprogramcompatproppage",
+    "categoryId": "0cc63077-26e9-4fbd-a343-fd88102efd7e",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_appcompat_appcompatremoveprogramcompatproppage",
+    "description": "This policy controls the visibility of the Program Compatibility property page shell extension.  This shell extension is visible on the property context-menu of any program shortcut or executable file.\r\n\r\nThe compatibility property page displays a list of options that can be selected and applied to the application to resolve the most common issues affecting legacy applications.  Enabling this policy setting removes the property page from the context-menus, but does not affect previous compatibility settings applied to application using this interface.\r\n ",
+    "helpText": "",
+    "name": "AppCompatRemoveProgramCompatPropPage",
+    "displayName": "Remove Program Compatibility Property Page",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_appcompat_appcompatremoveprogramcompatproppage_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_appcompat_appcompatremoveprogramcompatproppage_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_appcompat_appcompatremoveprogramcompatproppage_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

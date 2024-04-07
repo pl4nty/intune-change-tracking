@@ -1,0 +1,84 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "TamperProtection (Device)",
+        "Defender"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Vendor/MSFT/Defender",
+    "offsetUri": "/Configuration/TamperProtection",
+    "rootDefinitionId": "vendor_msft_defender_configuration_tamperprotection",
+    "categoryId": "e8400c82-34c8-4d6e-bbf9-85220f3205ea",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "vendor_msft_defender_configuration_tamperprotection",
+    "description": "Enable tamper protection to prevent Microsoft Defender being disabled.\r\nNot Configured state is default and will have no impact.\r\nEnabled will enable the Tamper Protection restrictions.\r\nDisabled will disable the Tamper Protection restrictions.\r\nWhen the Enabled or Disabled state exists on a client, deploying Not configured will have no impact on the setting. To change the state from currently Enabled/Disabled, you must deploy the opposite setting to have effect.",
+    "helpText": null,
+    "name": "TamperProtection",
+    "displayName": "TamperProtection",
+    "defaultOptionId": "vendor_msft_defender_configuration_tamperprotection_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "configManager",
+        "configurationServiceProviderVersion": "1.3",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.18362.904",
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "vendor_msft_defender_configuration_tamperprotection_0",
+            "description": null,
+            "helpText": null,
+            "name": "Not configured",
+            "displayName": "Not configured",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "vendor_msft_defender_configuration_tamperprotection_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "vendor_msft_defender_configuration_tamperprotection_2",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

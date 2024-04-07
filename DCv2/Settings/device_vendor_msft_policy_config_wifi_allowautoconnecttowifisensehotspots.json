@@ -1,0 +1,81 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Allow Auto Connect To Wi Fi Sense Hotspots",
+        "Wifi",
+        "Wi-Fi Settings"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-wifi#wifi-allowautoconnecttowifisensehotspots"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Wifi/AllowAutoConnectToWiFiSenseHotspots",
+    "rootDefinitionId": "device_vendor_msft_policy_config_wifi_allowautoconnecttowifisensehotspots",
+    "categoryId": "0a803a48-789a-48b0-b928-e52d56ab17f1",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_wifi_allowautoconnecttowifisensehotspots",
+    "description": "Allow or disallow the device to automatically connect to Wi-Fi hotspots. Most restricted value is 0.",
+    "helpText": "",
+    "name": "AllowAutoConnectToWiFiSenseHotspots",
+    "displayName": "Allow Auto Connect To Wi Fi Sense Hotspots",
+    "defaultOptionId": "device_vendor_msft_policy_config_wifi_allowautoconnecttowifisensehotspots_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.10240",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_wifi_allowautoconnecttowifisensehotspots_0",
+            "description": "Not allowed.",
+            "helpText": null,
+            "name": "Not allowed.",
+            "displayName": "Block",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_wifi_allowautoconnecttowifisensehotspots_1",
+            "description": "Allowed.",
+            "helpText": null,
+            "name": "Allowed.",
+            "displayName": "Allow",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

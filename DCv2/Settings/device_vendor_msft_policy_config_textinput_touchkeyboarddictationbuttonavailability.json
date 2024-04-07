@@ -1,0 +1,95 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Touch Keyboard Dictation Button Availability",
+        "Text Input"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-TextInput#textinput-touchkeyboarddictationbuttonavailability"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/TextInput/TouchKeyboardDictationButtonAvailability",
+    "rootDefinitionId": "device_vendor_msft_policy_config_textinput_touchkeyboarddictationbuttonavailability",
+    "categoryId": "cb8e8500-0336-4277-b3d9-9177cc967dcf",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_textinput_touchkeyboarddictationbuttonavailability",
+    "description": "Specifies whether the dictation input button is enabled or disabled for the touch keyboard. When this policy is set to disabled, the dictation input button on touch keyboard is disabled.",
+    "helpText": "",
+    "name": "TouchKeyboardDictationButtonAvailability",
+    "displayName": "Touch Keyboard Dictation Button Availability",
+    "defaultOptionId": "device_vendor_msft_policy_config_textinput_touchkeyboarddictationbuttonavailability_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "7.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17134",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_textinput_touchkeyboarddictationbuttonavailability_0",
+            "description": "The OS determines when it's most appropriate to be available.",
+            "helpText": null,
+            "name": "The OS determines when it's most appropriate to be available.",
+            "displayName": "The OS determines when it's most appropriate to be available.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_textinput_touchkeyboarddictationbuttonavailability_1",
+            "description": "Dictation button on the keyboard is always available.",
+            "helpText": null,
+            "name": "Dictation button on the keyboard is always available.",
+            "displayName": "Dictation button on the keyboard is always available.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_textinput_touchkeyboarddictationbuttonavailability_2",
+            "description": "Dictation button on the keyboard is always disabled.",
+            "helpText": null,
+            "name": "Dictation button on the keyboard is always disabled.",
+            "displayName": "Dictation button on the keyboard is always disabled.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

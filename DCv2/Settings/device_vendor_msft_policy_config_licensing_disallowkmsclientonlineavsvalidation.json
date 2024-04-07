@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Disallow KMS Client Online AVS Validation",
+        "Licensing"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Licensing#licensing-disallowkmsclientonlineavsvalidation"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Licensing/DisallowKMSClientOnlineAVSValidation",
+    "rootDefinitionId": "device_vendor_msft_policy_config_licensing_disallowkmsclientonlineavsvalidation",
+    "categoryId": "c0204a51-a73c-46a6-8626-deeadcabe6ac",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_licensing_disallowkmsclientonlineavsvalidation",
+    "description": "Enabling this setting prevents this computer from sending data to Microsoft regarding its activation state.",
+    "helpText": "",
+    "name": "DisallowKMSClientOnlineAVSValidation",
+    "displayName": "Disallow KMS Client Online AVS Validation",
+    "defaultOptionId": "device_vendor_msft_policy_config_licensing_disallowkmsclientonlineavsvalidation_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "4.1",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.14393",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_licensing_disallowkmsclientonlineavsvalidation_0",
+            "description": "Disabled.",
+            "helpText": null,
+            "name": "Disabled.",
+            "displayName": "Block",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_licensing_disallowkmsclientonlineavsvalidation_1",
+            "description": "Enabled.",
+            "helpText": null,
+            "name": "Enabled.",
+            "displayName": "Allow",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

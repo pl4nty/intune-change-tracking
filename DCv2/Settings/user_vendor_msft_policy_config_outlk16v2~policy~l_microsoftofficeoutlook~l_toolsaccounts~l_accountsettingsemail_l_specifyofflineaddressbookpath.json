@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_SpecifyOfflineAddressBookPath",
+        "Specify Offline Address Book path",
+        "\\Microsoft Outlook 2016\\Account Settings\\E-mail",
+        "Microsoft Outlook 2016\\Account Settings\\E-mail",
+        "E-mail"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/outlk16v2~Policy~L_MicrosoftOfficeOutlook~L_ToolsAccounts~L_AccountSettingsEmail/L_SpecifyOfflineAddressBookPath",
+    "rootDefinitionId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_toolsaccounts~l_accountsettingsemail_l_specifyofflineaddressbookpath",
+    "categoryId": "ff87ffcb-a827-4d2b-90fc-e5789ef6d3e0",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_toolsaccounts~l_accountsettingsemail_l_specifyofflineaddressbookpath",
+    "description": "This policy setting allows you to specify a path to save the Offline Address Book.  This policy setting will apply to all Microsoft Exchange accounts.\r\n\r\nIf you enable this policy setting, you may specify a path to save the Offline Address Book.\r\n\r\nIf you disable or do not configure this policy setting, Outlook will save the Offline Address Book in %LOCALAPPDATA%\\Microsoft\\Outlook.",
+    "helpText": "",
+    "name": "L_SpecifyOfflineAddressBookPath",
+    "displayName": "Specify Offline Address Book path (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_toolsaccounts~l_accountsettingsemail_l_specifyofflineaddressbookpath_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_toolsaccounts~l_accountsettingsemail_l_specifyofflineaddressbookpath_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_toolsaccounts~l_accountsettingsemail_l_specifyofflineaddressbookpath_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_toolsaccounts~l_accountsettingsemail_l_specifyofflineaddressbookpath_l_specifyofflineaddressbookpathid",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

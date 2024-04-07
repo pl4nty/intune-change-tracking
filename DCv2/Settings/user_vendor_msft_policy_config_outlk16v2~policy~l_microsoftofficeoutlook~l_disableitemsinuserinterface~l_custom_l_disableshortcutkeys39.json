@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_disableshortcutkeys39",
+        "Disable shortcut keys",
+        "\\Microsoft Outlook 2016\\Disable Items in User Interface\\Custom",
+        "Microsoft Outlook 2016\\Disable Items in User Interface\\Custom",
+        "Custom"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/outlk16v2~Policy~L_MicrosoftOfficeOutlook~L_Disableitemsinuserinterface~L_Custom/L_disableshortcutkeys39",
+    "rootDefinitionId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_disableitemsinuserinterface~l_custom_l_disableshortcutkeys39",
+    "categoryId": "8184df77-410e-41a6-b687-88de05769977",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_disableitemsinuserinterface~l_custom_l_disableshortcutkeys39",
+    "description": "Specify the virtual key code and modifier for the shortcut key to disable.",
+    "helpText": "",
+    "name": "L_disableshortcutkeys39",
+    "displayName": "Disable shortcut keys (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_disableitemsinuserinterface~l_custom_l_disableshortcutkeys39_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_disableitemsinuserinterface~l_custom_l_disableshortcutkeys39_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_disableitemsinuserinterface~l_custom_l_disableshortcutkeys39_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_disableitemsinuserinterface~l_custom_l_disableshortcutkeys39_l_enterakeyandmodifiertodisable",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

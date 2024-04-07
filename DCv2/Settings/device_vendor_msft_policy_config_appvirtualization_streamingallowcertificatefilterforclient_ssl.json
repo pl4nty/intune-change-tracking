@@ -1,0 +1,86 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Streaming_Certificate_Filter_For_Client_SSL",
+        "Certificate Filter For Client SSL",
+        "\\System\\App-V\\Streaming",
+        "AppVirtualization",
+        "App Virtualization",
+        "Streaming"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-streamingallowcertificatefilterforclient-ssl"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/AppVirtualization/StreamingAllowCertificateFilterForClient_SSL",
+    "rootDefinitionId": "device_vendor_msft_policy_config_appvirtualization_streamingallowcertificatefilterforclient_ssl",
+    "categoryId": "3800661e-5841-4499-8d4e-914527435f59",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_appvirtualization_streamingallowcertificatefilterforclient_ssl",
+    "description": "Specifies the path to a valid certificate in the certificate store.",
+    "helpText": "",
+    "name": "Streaming_Certificate_Filter_For_Client_SSL",
+    "displayName": "Certificate Filter For Client SSL",
+    "defaultOptionId": "device_vendor_msft_policy_config_appvirtualization_streamingallowcertificatefilterforclient_ssl_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.15063",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsEducation",
+            "iotEnterprise",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_appvirtualization_streamingallowcertificatefilterforclient_ssl_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_appvirtualization_streamingallowcertificatefilterforclient_ssl_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_appvirtualization_streamingallowcertificatefilterforclient_ssl_streaming_certificate_filter_for_client_ssl_prompt",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

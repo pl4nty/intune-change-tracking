@@ -1,0 +1,66 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Provision Favorites",
+        "Browser"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Browser#browser-provisionfavorites"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Browser/ProvisionFavorites",
+    "rootDefinitionId": "user_vendor_msft_policy_config_browser_provisionfavorites",
+    "categoryId": "5d835ac8-2e5e-4887-8e4d-0c3846d0ad9f",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_browser_provisionfavorites",
+    "description": "This policy setting allows you to configure a default set of favorites, which will appear for employees. Employees cannot modify, sort, move, export or delete these provisioned favorites.  If you enable this setting, you can set favorite URL's and favorite folders to appear on top of users' favorites list (either in the Hub or Favorites Bar). The user favorites will appear after these provisioned favorites.  Important Don't enable both this setting and the Keep favorites in sync between Internet Explorer and Microsoft Edge setting. Enabling both settings stops employees from syncing their favorites between Internet Explorer and Microsoft Edge.  If you disable or don't configure this setting, employees will see the favorites they set in the Hub and Favorites Bar.",
+    "helpText": "",
+    "name": "ProvisionFavorites",
+    "displayName": "Provision Favorites (User)",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "6.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 87516,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

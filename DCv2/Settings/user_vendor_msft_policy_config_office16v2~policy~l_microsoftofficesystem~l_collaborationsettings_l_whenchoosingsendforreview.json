@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_WhenchoosingSendforReview",
+        "When choosing 'Send for Review...'",
+        "\\Microsoft Office 2016\\Collaboration Settings",
+        "Microsoft Office 2016\\Collaboration Settings",
+        "Collaboration Settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/office16v2~Policy~L_MicrosoftOfficeSystem~L_CollaborationSettings/L_WhenchoosingSendforReview",
+    "rootDefinitionId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_collaborationsettings_l_whenchoosingsendforreview",
+    "categoryId": "cc29afc6-309c-4a0d-86f6-60081ae7cd4c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_collaborationsettings_l_whenchoosingsendforreview",
+    "description": "\"Send link and attachment\": When choosing Send for Review for a document on a server, send both a link and an attachment. | \"Only send link\": When choosing Send for Review for a document on a server, send only a link. | \"Prompt user\": When choosing Send for Review for a document on a server, prompt the user for what to send.",
+    "helpText": "",
+    "name": "L_WhenchoosingSendforReview",
+    "displayName": "When choosing 'Send for Review...' (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_collaborationsettings_l_whenchoosingsendforreview_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_collaborationsettings_l_whenchoosingsendforreview_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_collaborationsettings_l_whenchoosingsendforreview_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_collaborationsettings_l_whenchoosingsendforreview_l_empty392",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "DO Percentage Max Background Bandwidth",
+        "Delivery Optimization"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-DeliveryOptimization#deliveryoptimization-dopercentagemaxbackgroundbandwidth"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/DeliveryOptimization/DOPercentageMaxBackgroundBandwidth",
+    "rootDefinitionId": "device_vendor_msft_policy_config_deliveryoptimization_dopercentagemaxbackgroundbandwidth",
+    "categoryId": "e2ec9af6-6143-4cd8-952c-1b3e849ee0dc",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_deliveryoptimization_dopercentagemaxbackgroundbandwidth",
+    "description": "Specifies the maximum background download bandwidth that Delivery Optimization uses across all concurrent download activities as a percentage of available download bandwidth. The default value 0 (zero) means that Delivery Optimization dynamically adjusts to use the available bandwidth for background downloads. Note that downloads from LAN peers will not be throttled even when this policy is set.",
+    "helpText": "",
+    "name": "DOPercentageMaxBackgroundBandwidth",
+    "displayName": "DO Percentage Max Background Bandwidth",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "7.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17134",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 100,
+        "minimumValue": 0
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 0
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

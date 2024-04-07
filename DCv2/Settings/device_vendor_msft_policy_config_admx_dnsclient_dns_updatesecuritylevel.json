@@ -1,0 +1,90 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DNS_UpdateSecurityLevel",
+        "Update security level",
+        "\\Network\\DNS Client",
+        "Administrative Templates\\Network\\DNS Client",
+        "DNS Client"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-dnsclient#admx-dnsclient-dns-updatesecuritylevel"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_DnsClient/DNS_UpdateSecurityLevel",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_dnsclient_dns_updatesecuritylevel",
+    "categoryId": "bd8dacbf-ab7b-4a93-8294-7db61b9d49b4",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_dnsclient_dns_updatesecuritylevel",
+    "description": "Specifies the security level for dynamic DNS updates.\r\n\r\nTo use this policy setting, click Enabled and then select one of the following values:\r\n\r\nUnsecure followed by secure - computers send secure dynamic updates only when nonsecure dynamic updates are refused.\r\n\r\nOnly unsecure - computers send only nonsecure dynamic updates.\r\n\r\nOnly secure - computers send only secure dynamic updates.\r\n\r\nIf you enable this policy setting, computers that attempt to send dynamic DNS updates will use the security level that you specify in this policy setting.\r\n\r\nIf you disable this policy setting, or if you do not configure this policy setting, computers will use local settings. By default, DNS clients attempt to use unsecured dynamic update first. If an unsecured update is refused, clients try to use secure update.\n ",
+    "helpText": "",
+    "name": "DNS_UpdateSecurityLevel",
+    "displayName": "Update security level",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_dnsclient_dns_updatesecuritylevel_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_dnsclient_dns_updatesecuritylevel_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_dnsclient_dns_updatesecuritylevel_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_dnsclient_dns_updatesecuritylevel_dns_updatesecuritylevel_box",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

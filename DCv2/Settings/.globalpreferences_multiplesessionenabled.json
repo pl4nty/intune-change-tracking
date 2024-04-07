@@ -1,0 +1,69 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Global Preferences"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "MultipleSessionEnabled",
+    "rootDefinitionId": ".globalpreferences_.globalpreferences",
+    "categoryId": "1829cdc1-1bed-4058-9aba-9b778cd3d955",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": ".globalpreferences_multiplesessionenabled",
+    "description": "If false, disables fast user switching.",
+    "helpText": null,
+    "name": "MultipleSessionEnabled",
+    "displayName": "Multiple Session Enabled",
+    "defaultOptionId": ".globalpreferences_multiplesessionenabled_true",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": ".globalpreferences_multiplesessionenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": ".globalpreferences_.globalpreferences",
+                    "parentSettingId": ".globalpreferences_.globalpreferences"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": ".globalpreferences_multiplesessionenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": ".globalpreferences_.globalpreferences",
+                    "parentSettingId": ".globalpreferences_.globalpreferences"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

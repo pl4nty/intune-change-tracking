@@ -1,0 +1,93 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,get,replace",
+    "keywords": [
+        "Auto Enable",
+        "e UIC Cs",
+        "eSIM"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/eUICCs-csp/"
+    ],
+    "baseUri": "./Vendor/MSFT/eUICCs",
+    "offsetUri": "/Default/DownloadServers/{0}/AutoEnable",
+    "rootDefinitionId": "device_vendor_msft_euiccs_{euicc}_downloadservers_{servername}",
+    "categoryId": "3c46dc04-e649-41b9-be99-04b771303fdd",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_euiccs_{euicc}_downloadservers_{servername}_autoenable",
+    "description": "Indicates whether the discovered profile must be enabled automatically after install. This must be set by the MDM when the ServerName subtree is created.",
+    "helpText": "",
+    "name": "AutoEnable",
+    "displayName": "Auto Enable",
+    "defaultOptionId": "device_vendor_msft_euiccs_{euicc}_downloadservers_{servername}_autoenable_true",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22000",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_euiccs_{euicc}_downloadservers_{servername}_autoenable_false",
+            "description": "Disable",
+            "helpText": null,
+            "name": "Disable",
+            "displayName": "Disable",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_euiccs_{euicc}_downloadservers_{servername}",
+                    "parentSettingId": "device_vendor_msft_euiccs_{euicc}_downloadservers_{servername}"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_euiccs_{euicc}_downloadservers_{servername}_autoenable_true",
+            "description": "Enable",
+            "helpText": null,
+            "name": "Enable",
+            "displayName": "Enable",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_euiccs_{euicc}_downloadservers_{servername}",
+                    "parentSettingId": "device_vendor_msft_euiccs_{euicc}_downloadservers_{servername}"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

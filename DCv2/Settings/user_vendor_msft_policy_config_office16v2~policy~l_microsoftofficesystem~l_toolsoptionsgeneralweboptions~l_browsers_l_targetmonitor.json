@@ -1,0 +1,82 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_Targetmonitor",
+        "Target monitor",
+        "\\Microsoft Office 2016\\Tools | Options | General | Web Options...\\Browsers",
+        "Microsoft Office 2016\\Tools | Options | General | Web Options...\\Browsers",
+        "Browsers"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/office16v2~Policy~L_MicrosoftOfficeSystem~L_ToolsOptionsGeneralWebOptions~L_Browsers/L_Targetmonitor",
+    "rootDefinitionId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_toolsoptionsgeneralweboptions~l_browsers_l_targetmonitor",
+    "categoryId": "8ee1d8d2-582f-401b-927a-993016f4290d",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_toolsoptionsgeneralweboptions~l_browsers_l_targetmonitor",
+    "description": "Sets the value in the UI.",
+    "helpText": "",
+    "name": "L_Targetmonitor",
+    "displayName": "Target monitor (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_toolsoptionsgeneralweboptions~l_browsers_l_targetmonitor_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_toolsoptionsgeneralweboptions~l_browsers_l_targetmonitor_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_toolsoptionsgeneralweboptions~l_browsers_l_targetmonitor_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_toolsoptionsgeneralweboptions~l_browsers_l_targetmonitor_l_screensize",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_toolsoptionsgeneralweboptions~l_browsers_l_targetmonitor_l_pixelsperinch",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,72 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "InsecureFormsWarningsEnabled",
+        "Enable warnings for insecure forms",
+        "\\Microsoft Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev86~Policy~microsoft_edge/InsecureFormsWarningsEnabled",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edgev86~policy~microsoft_edge_insecureformswarningsenabled",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_microsoft_edgev86~policy~microsoft_edge_insecureformswarningsenabled",
+    "description": "This policy controls the handling of insecure forms (forms submitted over HTTP) embedded in secure (HTTPS) sites in the browser.\r\nIf you enable this policy or don't set it, a full page warning will be shown when an insecure form is submitted. Additionally, a warning bubble will be shown next to the form fields when they are focused, and autofill will be disabled for those forms.\r\nIf you disable this policy, warnings will not be shown for insecure forms, and autofill will work normally.",
+    "helpText": "",
+    "name": "InsecureFormsWarningsEnabled",
+    "displayName": "Enable warnings for insecure forms (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edgev86~policy~microsoft_edge_insecureformswarningsenabled_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev86~policy~microsoft_edge_insecureformswarningsenabled_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev86~policy~microsoft_edge_insecureformswarningsenabled_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

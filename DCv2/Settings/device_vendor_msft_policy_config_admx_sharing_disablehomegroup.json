@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DisableHomeGroup",
+        "Prevent the computer from joining a homegroup",
+        "\\Windows Components\\HomeGroup",
+        "Administrative Templates\\Windows Components\\HomeGroup",
+        "HomeGroup"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-sharing#admx-sharing-disablehomegroup"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_Sharing/DisableHomeGroup",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_sharing_disablehomegroup",
+    "categoryId": "b3282777-8e27-4029-b153-6f6e5b86b53c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_sharing_disablehomegroup",
+    "description": "This policy setting specifies whether users can add computers to a homegroup. By default, users can add their computer to a homegroup on a private network.\r\n\r\nIf you enable this policy setting, users cannot add computers to a homegroup. This policy setting does not affect other network sharing features.\r\n\r\nIf you disable or do not configure this policy setting, users can add computers to a homegroup. However, data on a domain-joined computer is not shared with the homegroup.\r\n\r\nThis policy setting is not configured by default.\r\n\r\nYou must restart the computer for this policy setting to take effect.\r\n ",
+    "helpText": "",
+    "name": "DisableHomeGroup",
+    "displayName": "Prevent the computer from joining a homegroup",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_sharing_disablehomegroup_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_sharing_disablehomegroup_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_sharing_disablehomegroup_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

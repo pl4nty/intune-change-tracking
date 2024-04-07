@@ -1,0 +1,182 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Allow Windows Defender Application Guard",
+        "Windows Defender Application Guard",
+        "Microsoft Defender Application Guard"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/WindowsDefenderApplicationGuard-csp/"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/WindowsDefenderApplicationGuard",
+    "offsetUri": "/Settings/AllowWindowsDefenderApplicationGuard",
+    "rootDefinitionId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard",
+    "categoryId": "cd55f347-a417-4fe9-83ee-8f1f40ac5eb0",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "id": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard",
+    "description": "This policy setting enables application isolation through Microsoft Defender Application Guard.",
+    "helpText": "",
+    "name": "AllowWindowsDefenderApplicationGuard",
+    "displayName": "Turn on Microsoft Defender Application Guard",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager",
+        "configurationServiceProviderVersion": "1.1",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard_0",
+            "description": "Disable Microsoft Defender Application Guard",
+            "helpText": null,
+            "name": "Disable Microsoft Defender Application Guard",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard_1",
+            "description": "Enable Microsoft Defender Application Guard for Microsoft Edge ONLY",
+            "helpText": null,
+            "name": "Enable Microsoft Defender Application Guard for Microsoft Edge ONLY",
+            "displayName": "Enabled for Microsoft Edge ONLY",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_windowsdefenderapplicationguard_settings_clipboardfiletype",
+                    "required": false
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_windowsdefenderapplicationguard_settings_clipboardsettings",
+                    "required": false
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_windowsdefenderapplicationguard_settings_printingsettings",
+                    "required": false
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowpersistence",
+                    "required": false
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowvirtualgpu",
+                    "required": false
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_windowsdefenderapplicationguard_settings_savefilestohost",
+                    "required": false
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowcameramicrophoneredirection",
+                    "required": false
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_windowsdefenderapplicationguard_installwindowsdefenderapplicationguard",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "itemId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard_2",
+            "description": "Enable Microsoft Defender Application Guard for isolated Windows environments ONLY",
+            "helpText": null,
+            "name": "Enable Microsoft Defender Application Guard for isolated Windows environments ONLY",
+            "displayName": "Enabled for isolated Windows environments ONLY",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_windowsdefenderapplicationguard_installwindowsdefenderapplicationguard",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "itemId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard_3",
+            "description": "Enable Microsoft Defender Application Guard for Microsoft Edge AND isolated Windows environments",
+            "helpText": null,
+            "name": "Enable Microsoft Defender Application Guard for Microsoft Edge AND isolated Windows environments",
+            "displayName": "Enabled for Microsoft Edge AND isolated Windows environments",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_windowsdefenderapplicationguard_settings_clipboardfiletype",
+                    "required": false
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_windowsdefenderapplicationguard_settings_clipboardsettings",
+                    "required": false
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_windowsdefenderapplicationguard_settings_printingsettings",
+                    "required": false
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowpersistence",
+                    "required": false
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowvirtualgpu",
+                    "required": false
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_windowsdefenderapplicationguard_settings_savefilestohost",
+                    "required": false
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowcameramicrophoneredirection",
+                    "required": false
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_windowsdefenderapplicationguard_installwindowsdefenderapplicationguard",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

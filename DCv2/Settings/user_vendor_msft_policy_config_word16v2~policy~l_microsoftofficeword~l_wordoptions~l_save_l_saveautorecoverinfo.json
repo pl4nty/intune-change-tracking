@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_SaveAutoRecoverinfo",
+        "Save AutoRecover info",
+        "\\Microsoft Word 2016\\Word Options\\Save",
+        "Microsoft Word 2016\\Word Options\\Save",
+        "Save"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/word16v2~Policy~L_MicrosoftOfficeWord~L_WordOptions~L_Save/L_SaveAutoRecoverinfo",
+    "rootDefinitionId": "user_vendor_msft_policy_config_word16v2~policy~l_microsoftofficeword~l_wordoptions~l_save_l_saveautorecoverinfo",
+    "categoryId": "89be4acb-fdf9-447b-ad16-9a5af1d68b8b",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_word16v2~policy~l_microsoftofficeword~l_wordoptions~l_save_l_saveautorecoverinfo",
+    "description": "If you enable this policy setting, you can specify the number of minutes that Word will wait between saving AutoRecover information for the file. To prevent Word from ever saving AutoRecover information for the file, enable this policy and set the value to '0'.\r\n\r\nIf you disable or do not configure this policy setting, this policy will have no effect on the number of minutes that Word will wait between saving AutoRecover information for the file. By default, Word saves AutoRecover information for the file every 10 minutes.",
+    "helpText": "",
+    "name": "L_SaveAutoRecoverinfo",
+    "displayName": "Save AutoRecover info (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_word16v2~policy~l_microsoftofficeword~l_wordoptions~l_save_l_saveautorecoverinfo_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_word16v2~policy~l_microsoftofficeword~l_wordoptions~l_save_l_saveautorecoverinfo_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_word16v2~policy~l_microsoftofficeword~l_wordoptions~l_save_l_saveautorecoverinfo_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_word16v2~policy~l_microsoftofficeword~l_wordoptions~l_save_l_saveautorecoverinfo_l_saveautorecoverinfoeveryminutes",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

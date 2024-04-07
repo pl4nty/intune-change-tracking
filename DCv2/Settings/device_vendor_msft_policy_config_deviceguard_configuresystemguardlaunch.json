@@ -1,0 +1,96 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Configure System Guard Launch",
+        "Device Guard"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-deviceguard#deviceguard-configuresystemguardlaunch"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/DeviceGuard/ConfigureSystemGuardLaunch",
+    "rootDefinitionId": "device_vendor_msft_policy_config_deviceguard_configuresystemguardlaunch",
+    "categoryId": "992a8a1e-428e-41cb-948e-4e5da86105fa",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_deviceguard_configuresystemguardlaunch",
+    "description": "Secure Launch configuration: 0 - Unmanaged, configurable by Administrative user, 1 - Enables Secure Launch if supported by hardware, 2 - Disables Secure Launch.",
+    "helpText": "",
+    "name": "ConfigureSystemGuardLaunch",
+    "displayName": "Configure System Guard Launch",
+    "defaultOptionId": "device_vendor_msft_policy_config_deviceguard_configuresystemguardlaunch_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "8.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17763",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_deviceguard_configuresystemguardlaunch_0",
+            "description": "Unmanaged Configurable by Administrative user",
+            "helpText": null,
+            "name": "Unmanaged Configurable by Administrative user",
+            "displayName": "Unmanaged Configurable by Administrative user",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_deviceguard_configuresystemguardlaunch_1",
+            "description": "Unmanaged Enables Secure Launch if supported by hardware",
+            "helpText": null,
+            "name": "Unmanaged Enables Secure Launch if supported by hardware",
+            "displayName": "Unmanaged Enables Secure Launch if supported by hardware",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_deviceguard_configuresystemguardlaunch_2",
+            "description": "Unmanaged Disables Secure Launch",
+            "helpText": null,
+            "name": "Unmanaged Disables Secure Launch",
+            "displayName": "Unmanaged Disables Secure Launch",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

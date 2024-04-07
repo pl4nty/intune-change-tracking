@@ -1,0 +1,68 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Removable Drives Excluded From Encryption",
+        "BitLocker"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/BitLocker-csp/"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/BitLocker",
+    "offsetUri": "/RemovableDrivesExcludedFromEncryption",
+    "rootDefinitionId": "device_vendor_msft_bitlocker_removabledrivesexcludedfromencryption",
+    "categoryId": "0a1347d2-90c0-407a-baa0-e4859260532a",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_bitlocker_removabledrivesexcludedfromencryption",
+    "description": "When enabled, allows you to exclude removable drives and devices connected over USB interface from BitLocker Device Encryption. Excluded devices cannot be encrypted, even manually. Additionally, if \"Deny write access to removable drives not protected by BitLocker\" is configured, user will not be prompted for encryption and drive will be mounted in read/write mode. Provide a comma separated list of excluded removable drives\\devices, using the Hardware ID of the disk device. Example USBSTOR\\SEAGATE_ST39102LW_______0004.\r\n ",
+    "helpText": "",
+    "name": "RemovableDrivesExcludedFromEncryption",
+    "displayName": "Removable Drives Excluded From Encryption",
+    "maximumCount": 600,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22579.100",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 87516,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

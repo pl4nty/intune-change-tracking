@@ -1,0 +1,102 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "IncognitoModeAvailability",
+        "Incognito mode availability",
+        "\\Google\\Google Chrome",
+        "Administrative Templates\\Google\\Google Chrome",
+        "Google Chrome"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV1~Policy~googlechrome/IncognitoModeAvailability",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_incognitomodeavailability",
+    "categoryId": "36c83fb3-c18c-472b-b39e-617c2f8a7fbd",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_incognitomodeavailability_incognitomodeavailability",
+    "description": "",
+    "helpText": "",
+    "name": "IncognitoModeAvailability",
+    "displayName": "Incognito mode availability (Device)",
+    "defaultOptionId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_incognitomodeavailability_incognitomodeavailability_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_incognitomodeavailability_incognitomodeavailability_0",
+            "description": null,
+            "helpText": null,
+            "name": "Incognito mode available",
+            "displayName": "Incognito mode available",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_incognitomodeavailability_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_incognitomodeavailability"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_incognitomodeavailability_incognitomodeavailability_1",
+            "description": null,
+            "helpText": null,
+            "name": "Incognito mode disabled",
+            "displayName": "Incognito mode disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_incognitomodeavailability_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_incognitomodeavailability"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_incognitomodeavailability_incognitomodeavailability_2",
+            "description": null,
+            "helpText": null,
+            "name": "Incognito mode forced",
+            "displayName": "Incognito mode forced",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_incognitomodeavailability_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_incognitomodeavailability"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DoNotLaunchInitialConfigurationTasks",
+        "Do not display Initial Configuration Tasks window automatically at logon",
+        "\\System\\Server Manager",
+        "Administrative Templates\\System\\Server Manager",
+        "Server Manager"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-servermanager#admx-servermanager-donotlaunchinitialconfigurationtasks"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_ServerManager/DoNotLaunchInitialConfigurationTasks",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_servermanager_donotlaunchinitialconfigurationtasks",
+    "categoryId": "1526dde4-6726-470e-aebf-3272ae70a99c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_servermanager_donotlaunchinitialconfigurationtasks",
+    "description": "This policy setting allows you to turn off the automatic display of the Initial Configuration Tasks window at logon on Windows Server 2008 and Windows Server 2008 R2. \r\n\r\nIf you enable this policy setting, the Initial Configuration Tasks window is not displayed when an administrator logs on to the server. \r\n\r\nIf you disable this policy setting, the Initial Configuration Tasks window is displayed when an administrator logs on to the server.\r\n\r\nIf you do not configure this policy setting, the Initial Configuration Tasks window is displayed when an administrator logs on to the server. However, if an administrator selects the \"Do not show this window at logon\" option, the window is not displayed on subsequent logons.\r\n\r\n ",
+    "helpText": "",
+    "name": "DoNotLaunchInitialConfigurationTasks",
+    "displayName": "Do not display Initial Configuration Tasks window automatically at logon",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_servermanager_donotlaunchinitialconfigurationtasks_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_servermanager_donotlaunchinitialconfigurationtasks_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_servermanager_donotlaunchinitialconfigurationtasks_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

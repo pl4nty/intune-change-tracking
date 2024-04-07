@@ -1,0 +1,108 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Defender - Antivirus engine",
+        "Antivirus engine"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "PayloadContent/antivirusEngine",
+    "offsetUri": "exclusions/[{0}]/$type",
+    "rootDefinitionId": "linux_mdatp_managed_antivirusengine_exclusions",
+    "categoryId": "13467142-14e7-4380-8573-4866e842c7f6",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "linux_mdatp_managed_antivirusengine_exclusions_item_$type",
+    "description": null,
+    "helpText": null,
+    "name": "exclusions_item_$type",
+    "displayName": "Type",
+    "defaultOptionId": "linux_mdatp_managed_antivirusengine_exclusions_item_$type_0",
+    "applicability": {
+        "description": null,
+        "platform": "linux",
+        "deviceMode": "none",
+        "technologies": "microsoftSense"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "linux_mdatp_managed_antivirusengine_exclusions_item_$type_0",
+            "description": null,
+            "helpText": null,
+            "name": "Path",
+            "displayName": "Path",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "excludedPath"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "linux_mdatp_managed_antivirusengine_exclusions",
+                    "parentSettingId": "linux_mdatp_managed_antivirusengine_exclusions"
+                }
+            ],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "linux_mdatp_managed_antivirusengine_exclusions_item_isdirectory",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "linux_mdatp_managed_antivirusengine_exclusions_item_path",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "itemId": "linux_mdatp_managed_antivirusengine_exclusions_item_$type_1",
+            "description": null,
+            "helpText": null,
+            "name": "File extension",
+            "displayName": "File extension",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "excludedFileExtension"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "linux_mdatp_managed_antivirusengine_exclusions",
+                    "parentSettingId": "linux_mdatp_managed_antivirusengine_exclusions"
+                }
+            ],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "linux_mdatp_managed_antivirusengine_exclusions_item_extension",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "itemId": "linux_mdatp_managed_antivirusengine_exclusions_item_$type_2",
+            "description": null,
+            "helpText": null,
+            "name": "Process name",
+            "displayName": "Process name",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "excludedFileName"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "linux_mdatp_managed_antivirusengine_exclusions",
+                    "parentSettingId": "linux_mdatp_managed_antivirusengine_exclusions"
+                }
+            ],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "linux_mdatp_managed_antivirusengine_exclusions_item_name",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

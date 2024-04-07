@@ -1,0 +1,65 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "PrebootRecoveryInfo_Name",
+        "Configure pre-boot recovery message and URL",
+        "\\Windows Components\\BitLocker Drive Encryption\\Operating System Drives",
+        "Administrative Templates\\Windows Components\\BitLocker Drive Encryption\\Operating System Drives",
+        "Operating System Drives"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/en-us/windows/client-management/mdm/bitlocker-csp"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/BitLocker",
+    "offsetUri": "/SystemDrivesRecoveryMessage",
+    "rootDefinitionId": "device_vendor_msft_bitlocker_systemdrivesrecoverymessage",
+    "categoryId": "27e0674a-ea53-4f63-9c2e-fe76aa1021d0",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_bitlocker_systemdrivesrecoverymessage_recoveryurl_input",
+    "description": "",
+    "helpText": "",
+    "name": "RecoveryUrl_Input",
+    "displayName": "Custom recovery URL option:",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.15063",
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 500,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "device_vendor_msft_bitlocker_systemdrivesrecoverymessage_1",
+            "parentSettingId": "device_vendor_msft_bitlocker_systemdrivesrecoverymessage"
+        }
+    ],
+    "dependedOnBy": []
+}

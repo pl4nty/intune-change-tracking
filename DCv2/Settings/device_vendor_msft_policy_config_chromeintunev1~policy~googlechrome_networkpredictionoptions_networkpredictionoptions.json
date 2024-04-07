@@ -1,0 +1,102 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "NetworkPredictionOptions",
+        "Enable network prediction",
+        "\\Google\\Google Chrome",
+        "Administrative Templates\\Google\\Google Chrome",
+        "Google Chrome"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV1~Policy~googlechrome/NetworkPredictionOptions",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_networkpredictionoptions",
+    "categoryId": "36c83fb3-c18c-472b-b39e-617c2f8a7fbd",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_networkpredictionoptions_networkpredictionoptions",
+    "description": "",
+    "helpText": "",
+    "name": "NetworkPredictionOptions",
+    "displayName": "Enable network prediction (Device)",
+    "defaultOptionId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_networkpredictionoptions_networkpredictionoptions_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_networkpredictionoptions_networkpredictionoptions_0",
+            "description": null,
+            "helpText": null,
+            "name": "Predict network actions on any network connection",
+            "displayName": "Predict network actions on any network connection",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_networkpredictionoptions_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_networkpredictionoptions"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_networkpredictionoptions_networkpredictionoptions_1",
+            "description": null,
+            "helpText": null,
+            "name": "Predict network actions on any network that is not cellular.\r\n(Deprecated in 50, removed in 52. After 52, if value 1 is set, it will be treated as 0 - predict network actions on any network connection.)",
+            "displayName": "Predict network actions on any network that is not cellular.\r\n(Deprecated in 50, removed in 52. After 52, if value 1 is set, it will be treated as 0 - predict network actions on any network connection.)",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_networkpredictionoptions_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_networkpredictionoptions"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_networkpredictionoptions_networkpredictionoptions_2",
+            "description": null,
+            "helpText": null,
+            "name": "Do not predict network actions on any network connection",
+            "displayName": "Do not predict network actions on any network connection",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_networkpredictionoptions_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_networkpredictionoptions"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

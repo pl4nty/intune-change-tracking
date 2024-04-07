@@ -1,0 +1,81 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Allow Configuration Update For Books Library",
+        "Browser"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Browser#browser-allowconfigurationupdateforbookslibrary"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Browser/AllowConfigurationUpdateForBooksLibrary",
+    "rootDefinitionId": "user_vendor_msft_policy_config_browser_allowconfigurationupdateforbookslibrary",
+    "categoryId": "5d835ac8-2e5e-4887-8e4d-0c3846d0ad9f",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_browser_allowconfigurationupdateforbookslibrary",
+    "description": "This policy setting lets you decide whether Microsoft Edge can automatically update the configuration data for the Books Library.",
+    "helpText": "",
+    "name": "AllowConfigurationUpdateForBooksLibrary",
+    "displayName": "Allow Configuration Update For Books Library (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_browser_allowconfigurationupdateforbookslibrary_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "7.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17134",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_browser_allowconfigurationupdateforbookslibrary_0",
+            "description": "Prevented/Not allowed.",
+            "helpText": null,
+            "name": "Prevented/Not allowed.",
+            "displayName": "Block",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_browser_allowconfigurationupdateforbookslibrary_1",
+            "description": "Allowed. Microsoft Edge updates the configuration data for the Books Library automatically.",
+            "helpText": null,
+            "name": "Allowed. Microsoft Edge updates the configuration data for the Books Library automatically.",
+            "displayName": "Allow",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

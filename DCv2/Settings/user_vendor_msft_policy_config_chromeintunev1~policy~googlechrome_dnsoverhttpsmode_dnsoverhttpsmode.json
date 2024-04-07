@@ -1,0 +1,102 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DnsOverHttpsMode",
+        "Controls the mode of DNS-over-HTTPS",
+        "\\Google\\Google Chrome",
+        "Administrative Templates\\Google\\Google Chrome",
+        "Google Chrome"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV1~Policy~googlechrome/DnsOverHttpsMode",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_dnsoverhttpsmode",
+    "categoryId": "36c83fb3-c18c-472b-b39e-617c2f8a7fbd",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_dnsoverhttpsmode_dnsoverhttpsmode",
+    "description": "",
+    "helpText": "",
+    "name": "DnsOverHttpsMode",
+    "displayName": "Controls the mode of DNS-over-HTTPS (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_dnsoverhttpsmode_dnsoverhttpsmode_off",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_dnsoverhttpsmode_dnsoverhttpsmode_off",
+            "description": null,
+            "helpText": null,
+            "name": "Disable DNS-over-HTTPS",
+            "displayName": "Disable DNS-over-HTTPS",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "off"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_dnsoverhttpsmode_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_dnsoverhttpsmode"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_dnsoverhttpsmode_dnsoverhttpsmode_automatic",
+            "description": null,
+            "helpText": null,
+            "name": "Enable DNS-over-HTTPS with insecure fallback",
+            "displayName": "Enable DNS-over-HTTPS with insecure fallback",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "automatic"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_dnsoverhttpsmode_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_dnsoverhttpsmode"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_dnsoverhttpsmode_dnsoverhttpsmode_secure",
+            "description": null,
+            "helpText": null,
+            "name": "Enable DNS-over-HTTPS without insecure fallback",
+            "displayName": "Enable DNS-over-HTTPS without insecure fallback",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "secure"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_dnsoverhttpsmode_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_dnsoverhttpsmode"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

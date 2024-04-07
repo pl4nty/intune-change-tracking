@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "DBHDisableDeleteHistory",
+        "Prevent deleting websites that the user has visited",
+        "\\Windows Components\\Internet Explorer\\Delete Browsing History",
+        "Delete Browsing History"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disabledeletinguservisitedwebsites"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/InternetExplorer/DisableDeletingUserVisitedWebsites",
+    "rootDefinitionId": "user_vendor_msft_policy_config_internetexplorer_disabledeletinguservisitedwebsites",
+    "categoryId": "dea96bde-003b-46fa-a960-baf62289c57d",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_internetexplorer_disabledeletinguservisitedwebsites",
+    "description": "This policy setting prevents the user from deleting the history of websites that he or she has visited. This feature is available in the Delete Browsing History dialog box.\r\n\r\nIf you enable this policy setting, websites that the user has visited are preserved when he or she clicks Delete.\r\n\r\nIf you disable this policy setting, websites that the user has visited are deleted when he or she clicks Delete.\r\n\r\nIf you do not configure this policy setting, the user can choose whether to delete or preserve visited websites when he or she clicks Delete.\r\n\r\nIf the \"Prevent access to Delete Browsing History\" policy setting is enabled, this policy setting is enabled by default.",
+    "helpText": "",
+    "name": "DBHDisableDeleteHistory",
+    "displayName": "Prevent deleting websites that the user has visited (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_internetexplorer_disabledeletinguservisitedwebsites_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "6.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_internetexplorer_disabledeletinguservisitedwebsites_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_internetexplorer_disabledeletinguservisitedwebsites_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

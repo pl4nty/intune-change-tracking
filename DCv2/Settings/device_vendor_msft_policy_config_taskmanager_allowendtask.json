@@ -1,0 +1,81 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Allow End Task",
+        "Task Manager"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-TaskManager#taskmanager-allowendtask"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/TaskManager/AllowEndTask",
+    "rootDefinitionId": "device_vendor_msft_policy_config_taskmanager_allowendtask",
+    "categoryId": "d2f1d28a-682d-49e9-bb71-0782e4a06c1b",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_taskmanager_allowendtask",
+    "description": "This setting determines whether non-administrators can use Task Manager to end tasks - enabled (1) or disabled (0). Default: enabled",
+    "helpText": "",
+    "name": "AllowEndTask",
+    "displayName": "Allow End Task",
+    "defaultOptionId": "device_vendor_msft_policy_config_taskmanager_allowendtask_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "8.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17763",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_taskmanager_allowendtask_0",
+            "description": "Disabled. EndTask functionality is blocked in TaskManager.",
+            "helpText": null,
+            "name": "Disabled. EndTask functionality is blocked in TaskManager.",
+            "displayName": "Block",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_taskmanager_allowendtask_1",
+            "description": "Enabled. Users can perform EndTask in TaskManager.",
+            "helpText": null,
+            "name": "Enabled. Users can perform EndTask in TaskManager.",
+            "displayName": "Allow",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

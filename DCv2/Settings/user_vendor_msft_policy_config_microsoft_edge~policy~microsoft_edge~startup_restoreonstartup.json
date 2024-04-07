@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "RestoreOnStartup",
+        "Action to take on startup",
+        "\\Microsoft Edge\\Startup, home page and new tab page",
+        "Microsoft Edge\\Startup, home page and new tab page",
+        "Startup, home page and new tab page"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edge~Policy~microsoft_edge~Startup/RestoreOnStartup",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~startup_restoreonstartup",
+    "categoryId": "00d7396c-cadc-4d29-86ba-fe4df2ecb110",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~startup_restoreonstartup",
+    "description": "Specify how Microsoft Edge behaves when it starts.\r\n\r\nIf you want a new tab to always open on startup, choose 'Open new tab' (5).\r\n\r\nIf you want to reopen URLs that were open the last time Microsoft Edge closed, choose 'Restore the last session' (1). The browsing session will be restored as it was. Note that this option disables some settings that rely on sessions or that perform actions on exit (such as Clear browsing data on exit or session-only cookies).\r\n\r\nIf you want to open a specific set of URLs, choose 'Open a list of URLs' (4).\r\n\r\nDisabling this setting is equivalent to leaving it not configured. Users will be able to change it in Microsoft Edge.\r\n\r\nThis policy is available only on Windows instances that are joined to a Microsoft Active Directory domain or Windows 10 Pro or Enterprise instances enrolled for device management.\r\n\r\n* 1 = Restore the last session\r\n\r\n* 4 = Open a list of URLs\r\n\r\n* 5 = Open a new tab",
+    "helpText": "",
+    "name": "RestoreOnStartup",
+    "displayName": "Action to take on startup (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~startup_restoreonstartup_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~startup_restoreonstartup_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~startup_restoreonstartup_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~startup_restoreonstartup_restoreonstartup",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

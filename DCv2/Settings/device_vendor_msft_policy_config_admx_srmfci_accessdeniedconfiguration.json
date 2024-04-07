@@ -1,0 +1,122 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "AccessDeniedConfiguration",
+        "Customize message for Access Denied errors",
+        "\\System\\Access-Denied Assistance",
+        "Administrative Templates\\System\\Access-Denied Assistance",
+        "Access-Denied Assistance"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-srmfci#admx-srmfci-accessdeniedconfiguration"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_srmfci/AccessDeniedConfiguration",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_srmfci_accessdeniedconfiguration",
+    "categoryId": "734bed4f-be52-46ef-ae60-8fd195dc8f4d",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_srmfci_accessdeniedconfiguration",
+    "description": "This policy setting specifies the message that users see when they are denied access to a file or folder. You can customize the Access Denied message to include additional text and links. You can also provide users with the ability to send an email to request access to the file or folder to which they were denied access.\r\n\r\nIf you enable this policy setting, users receive a customized Access Denied message from the file servers on which this policy setting is applied. \r\n\r\nIf you disable this policy setting, users see a standard Access Denied message that doesn't provide any of the functionality controlled by this policy setting, regardless of the file server configuration.\r\n\r\nIf you do not configure this policy setting, users see a standard Access Denied message unless the file server is configured to display the customized Access Denied message. By default, users see the standard Access Denied message.\r\n\r\n ",
+    "helpText": "",
+    "name": "AccessDeniedConfiguration",
+    "displayName": "Customize message for Access Denied errors",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_srmfci_accessdeniedconfiguration_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_srmfci_accessdeniedconfiguration_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_srmfci_accessdeniedconfiguration_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_srmfci_accessdeniedconfiguration_errormessagetext",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_srmfci_accessdeniedconfiguration_allowemailrequestscheck",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_srmfci_accessdeniedconfiguration_emailmessagetext",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_srmfci_accessdeniedconfiguration_putdataownerontocheck",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_srmfci_accessdeniedconfiguration_putadminontocheck",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_srmfci_accessdeniedconfiguration_additonalemailtotext",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_srmfci_accessdeniedconfiguration_includedeviceclaimscheck",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_srmfci_accessdeniedconfiguration_includeuserclaimscheck",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_srmfci_accessdeniedconfiguration_generatelogcheck",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

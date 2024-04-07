@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "SpellcheckLanguageBlacklist",
+        "Force disable spellcheck languages",
+        "\\Google\\Google Chrome\\Deprecated policies",
+        "Administrative Templates\\Google\\Google Chrome\\Deprecated policies",
+        "Deprecated policies"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV1~Policy~googlechrome~DeprecatedPolicies/SpellcheckLanguageBlacklist",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~deprecatedpolicies_spellchecklanguageblacklist",
+    "categoryId": "5900ac65-f656-459c-bd82-1329a862544d",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~deprecatedpolicies_spellchecklanguageblacklist",
+    "description": "This policy is deprecated. Its usage is discouraged. Read more at https://support.google.com/chrome/a/answer/7643500\r\n\r\nExample value:\r\n\r\nfr\r\nes",
+    "helpText": "",
+    "name": "SpellcheckLanguageBlacklist",
+    "displayName": "Force disable spellcheck languages",
+    "defaultOptionId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~deprecatedpolicies_spellchecklanguageblacklist_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~deprecatedpolicies_spellchecklanguageblacklist_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~deprecatedpolicies_spellchecklanguageblacklist_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~deprecatedpolicies_spellchecklanguageblacklist_spellchecklanguageblacklistdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,90 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "WdiDpsScenarioExecutionPolicy",
+        "Diagnostics: Configure scenario execution level",
+        "\\System\\Troubleshooting and Diagnostics",
+        "Administrative Templates\\System\\Troubleshooting and Diagnostics",
+        "Troubleshooting and Diagnostics"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-wdi#admx-wdi-wdidpsscenarioexecutionpolicy"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_WDI/WdiDpsScenarioExecutionPolicy",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_wdi_wdidpsscenarioexecutionpolicy",
+    "categoryId": "424a0e73-8002-42e3-b47d-2062fc17c3b3",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_wdi_wdidpsscenarioexecutionpolicy",
+    "description": "This policy setting determines the execution level for Diagnostic Policy Service (DPS) scenarios.\r\n\r\nIf you enable this policy setting, you must select an execution level from the drop-down menu. If you select problem detection and troubleshooting only, the DPS will detect problems and attempt to determine their root causes. These root causes will be logged to the event log when detected, but no corrective action will be taken.  If you select detection, troubleshooting and resolution, the DPS will attempt to automatically fix problems it detects or indicate to the user that assisted resolution is available.\r\n\r\nIf you disable this policy setting, Windows cannot detect, troubleshoot, or resolve any problems that are handled by the DPS.\r\n\r\nIf you do not configure this policy setting, the DPS enables all scenarios for resolution by default, unless you configure separate scenario-specific policy settings.\r\n\r\nThis policy setting takes precedence over any scenario-specific policy settings when it is enabled or disabled.  Scenario-specific policy settings only take effect if this policy setting is not configured.\r\n\r\nNo reboots or service restarts are required for this policy setting to take effect: changes take effect immediately.\r\n ",
+    "helpText": "",
+    "name": "WdiDpsScenarioExecutionPolicy",
+    "displayName": "Diagnostics: Configure scenario execution level",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_wdi_wdidpsscenarioexecutionpolicy_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_wdi_wdidpsscenarioexecutionpolicy_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_wdi_wdidpsscenarioexecutionpolicy_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_wdi_wdidpsscenarioexecutionpolicy_wdidpsscenarioexecutionpolicylevel",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

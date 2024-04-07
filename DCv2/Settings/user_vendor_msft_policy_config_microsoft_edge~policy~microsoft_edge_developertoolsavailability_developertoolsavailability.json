@@ -1,0 +1,101 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DeveloperToolsAvailability",
+        "Control where developer tools can be used",
+        "\\Microsoft Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edge~Policy~microsoft_edge/DeveloperToolsAvailability",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_developertoolsavailability",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_developertoolsavailability_developertoolsavailability",
+    "description": "",
+    "helpText": "",
+    "name": "DeveloperToolsAvailability",
+    "displayName": "Control where developer tools can be used (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_developertoolsavailability_developertoolsavailability_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_developertoolsavailability_developertoolsavailability_0",
+            "description": null,
+            "helpText": null,
+            "name": "Block the developer tools on extensions installed by enterprise policy, allow in other contexts",
+            "displayName": "Block the developer tools on extensions installed by enterprise policy, allow in other contexts",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_developertoolsavailability_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_developertoolsavailability"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_developertoolsavailability_developertoolsavailability_1",
+            "description": null,
+            "helpText": null,
+            "name": "Allow using the developer tools",
+            "displayName": "Allow using the developer tools",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_developertoolsavailability_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_developertoolsavailability"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_developertoolsavailability_developertoolsavailability_2",
+            "description": null,
+            "helpText": null,
+            "name": "Don't allow using the developer tools",
+            "displayName": "Don't allow using the developer tools",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_developertoolsavailability_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_developertoolsavailability"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

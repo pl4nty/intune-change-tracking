@@ -1,0 +1,101 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ExperimentationAndConfigurationServiceControl",
+        "Control communication with the Experimentation and Configuration Service",
+        "\\Microsoft Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edge~Policy~microsoft_edge/ExperimentationAndConfigurationServiceControl",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_experimentationandconfigurationservicecontrol",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_experimentationandconfigurationservicecontrol_experimentationandconfigurationservicecontrol",
+    "description": "",
+    "helpText": "",
+    "name": "ExperimentationAndConfigurationServiceControl",
+    "displayName": "Control communication with the Experimentation and Configuration Service (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_experimentationandconfigurationservicecontrol_experimentationandconfigurationservicecontrol_2",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_experimentationandconfigurationservicecontrol_experimentationandconfigurationservicecontrol_2",
+            "description": null,
+            "helpText": null,
+            "name": "Retrieve configurations and experiments",
+            "displayName": "Retrieve configurations and experiments",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_experimentationandconfigurationservicecontrol_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_experimentationandconfigurationservicecontrol"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_experimentationandconfigurationservicecontrol_experimentationandconfigurationservicecontrol_1",
+            "description": null,
+            "helpText": null,
+            "name": "Retrieve configurations only",
+            "displayName": "Retrieve configurations only",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_experimentationandconfigurationservicecontrol_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_experimentationandconfigurationservicecontrol"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_experimentationandconfigurationservicecontrol_experimentationandconfigurationservicecontrol_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disable communication with the Experimentation and Configuration Service",
+            "displayName": "Disable communication with the Experimentation and Configuration Service",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_experimentationandconfigurationservicecontrol_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_experimentationandconfigurationservicecontrol"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

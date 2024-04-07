@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "SerialAllowAllPortsForUrls",
+        "Automatically grant sites permission to connect all serial ports",
+        "\\Microsoft Edge\\Content settings",
+        "Microsoft Edge\\Content settings",
+        "Content settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev97~Policy~microsoft_edge~ContentSettings/SerialAllowAllPortsForUrls",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edgev97~policy~microsoft_edge~contentsettings_serialallowallportsforurls",
+    "categoryId": "92d69c43-75ac-49b1-a3ef-9350079eef86",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_microsoft_edgev97~policy~microsoft_edge~contentsettings_serialallowallportsforurls",
+    "description": "Setting the policy allows you to list sites which are automatically granted permission to access all available serial ports.\r\n\r\nThe URLs must be valid, or the policy is ignored. Only the origin (scheme, host, and port) of the URL is considered.\r\n\r\nThis policy overrides 'DefaultSerialGuardSetting' (Control use of the Serial API), 'SerialAskForUrls' (Allow the Serial API on specific sites), 'SerialBlockedForUrls' (Block the Serial API on specific sites) and the user's preferences.\r\n\r\nExample value:\r\n\r\nhttps://www.example.com",
+    "helpText": "",
+    "name": "SerialAllowAllPortsForUrls",
+    "displayName": "Automatically grant sites permission to connect all serial ports",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edgev97~policy~microsoft_edge~contentsettings_serialallowallportsforurls_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev97~policy~microsoft_edge~contentsettings_serialallowallportsforurls_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev97~policy~microsoft_edge~contentsettings_serialallowallportsforurls_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_microsoft_edgev97~policy~microsoft_edge~contentsettings_serialallowallportsforurls_serialallowallportsforurlsdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

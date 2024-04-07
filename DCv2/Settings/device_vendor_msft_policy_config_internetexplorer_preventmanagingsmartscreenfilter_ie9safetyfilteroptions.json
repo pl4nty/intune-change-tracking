@@ -1,0 +1,91 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Disable_Managing_Safety_Filter_IE9",
+        "Prevent managing SmartScreen Filter",
+        "\\Windows Components\\Internet Explorer",
+        "Internet Explorer"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/InternetExplorer/PreventManagingSmartScreenFilter",
+    "rootDefinitionId": "device_vendor_msft_policy_config_internetexplorer_preventmanagingsmartscreenfilter",
+    "categoryId": "f60cd3c8-a91b-4542-b09f-129dfc7e589c",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_internetexplorer_preventmanagingsmartscreenfilter_ie9safetyfilteroptions",
+    "description": "",
+    "helpText": "",
+    "name": "IE9SafetyFilterOptions",
+    "displayName": "Select SmartScreen Filter mode",
+    "defaultOptionId": "device_vendor_msft_policy_config_internetexplorer_preventmanagingsmartscreenfilter_ie9safetyfilteroptions_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "6.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_internetexplorer_preventmanagingsmartscreenfilter_ie9safetyfilteroptions_0",
+            "description": null,
+            "helpText": null,
+            "name": "Off",
+            "displayName": "Off",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_internetexplorer_preventmanagingsmartscreenfilter_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_internetexplorer_preventmanagingsmartscreenfilter"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_internetexplorer_preventmanagingsmartscreenfilter_ie9safetyfilteroptions_1",
+            "description": null,
+            "helpText": null,
+            "name": "On",
+            "displayName": "On",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_internetexplorer_preventmanagingsmartscreenfilter_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_internetexplorer_preventmanagingsmartscreenfilter"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

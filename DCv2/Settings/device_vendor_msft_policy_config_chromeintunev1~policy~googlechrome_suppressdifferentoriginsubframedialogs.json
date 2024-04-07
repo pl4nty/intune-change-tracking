@@ -1,0 +1,73 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "SuppressDifferentOriginSubframeDialogs",
+        "Suppress JavaScript Dialogs triggered from different origin subframes",
+        "\\Google\\Google Chrome",
+        "Administrative Templates\\Google\\Google Chrome",
+        "Google Chrome"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV1~Policy~googlechrome/SuppressDifferentOriginSubframeDialogs",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_suppressdifferentoriginsubframedialogs",
+    "categoryId": "36c83fb3-c18c-472b-b39e-617c2f8a7fbd",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_suppressdifferentoriginsubframedialogs",
+    "description": "As described in https://www.chromestatus.com/feature/5148698084376576 , JavaScript modal dialogs, triggered by window.alert, window.confirm, and window.prompt, will be blocked in Google Chrome if triggered from a subframe whose origin is different from the main frame origin.\r\nThis policy allows overriding that change.\r\nIf the policy is set to enabled or unset, JavaScript dialogs triggered from a different origin subframe will be blocked.\r\nIf the policy is set to disabled, JavaScript dialogs triggered from a different origin subframe will not be blocked.\r\n\r\nThis policy will be removed in Google Chrome version 95.",
+    "helpText": "",
+    "name": "SuppressDifferentOriginSubframeDialogs",
+    "displayName": "Suppress JavaScript Dialogs triggered from different origin subframes",
+    "defaultOptionId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_suppressdifferentoriginsubframedialogs_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_suppressdifferentoriginsubframedialogs_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_suppressdifferentoriginsubframedialogs_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

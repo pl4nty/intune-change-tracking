@@ -1,0 +1,81 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Limit Enhanced Diagnostic Data Windows Analytics",
+        "System"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-System#system-limitenhanceddiagnosticdatawindowsanalytics"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/System/LimitEnhancedDiagnosticDataWindowsAnalytics",
+    "rootDefinitionId": "device_vendor_msft_policy_config_system_limitenhanceddiagnosticdatawindowsanalytics",
+    "categoryId": "f62e0f2a-4363-4246-8057-1dc811fe4360",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_system_limitenhanceddiagnosticdatawindowsanalytics",
+    "description": "This policy setting, in combination with the Allow Telemetry policy setting, enables organizations to send Microsoft a specific set of diagnostic data for IT insights via Windows Analytics services. By configuring this setting, you're not stopping people from changing their Telemetry Settings; however, you are stopping them from choosing a higher level than you've set for the organization. To enable this behavior, you must complete two steps: 1. Enable this policy setting 2. Set Allow Telemetry to level 2 (Enhanced).If you configure these policy settings together, you'll send the Basic level of diagnostic data plus any additional events that are required for Windows Analytics, to Microsoft. The additional events are documented here: https://go.Microsoft.com/fwlink/?linked=847594. If you enable Enhanced diagnostic data in the Allow Telemetry policy setting, but you don't configure this policy setting, you'll send the required events for Windows Analytics, plus any additional Enhanced level telemetry data to Microsoft. This setting has no effect on computers configured to send Full, Basic, or Security level diagnostic data to Microsoft. If you disable or don't configure this policy setting, then the level of diagnostic data sent to Microsoft is determined by the Allow Telemetry policy setting.",
+    "helpText": "",
+    "name": "LimitEnhancedDiagnosticDataWindowsAnalytics",
+    "displayName": "Limit Enhanced Diagnostic Data Windows Analytics",
+    "defaultOptionId": "device_vendor_msft_policy_config_system_limitenhanceddiagnosticdatawindowsanalytics_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "6.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_system_limitenhanceddiagnosticdatawindowsanalytics_0",
+            "description": "Disabled.",
+            "helpText": null,
+            "name": "Disabled.",
+            "displayName": "Disabled.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_system_limitenhanceddiagnosticdatawindowsanalytics_1",
+            "description": "Enabled.",
+            "helpText": null,
+            "name": "Enabled.",
+            "displayName": "Enabled.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,172 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingCollectionDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Printing Settings",
+        "Windows Defender Application Guard",
+        "Microsoft Defender Application Guard"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/WindowsDefenderApplicationGuard-csp/"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/WindowsDefenderApplicationGuard",
+    "offsetUri": "/Settings/PrintingSettings",
+    "rootDefinitionId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard",
+    "categoryId": "cd55f347-a417-4fe9-83ee-8f1f40ac5eb0",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "id": "device_vendor_msft_windowsdefenderapplicationguard_settings_printingsettings",
+    "description": "This policy setting allows you to decide how the print functionality behaves while in Microsoft Defender Application Guard.",
+    "helpText": "",
+    "name": "PrintingSettings",
+    "displayName": "Print Settings",
+    "defaultOptionId": "device_vendor_msft_windowsdefenderapplicationguard_settings_printingsettings_0",
+    "maximumCount": 0,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager",
+        "configurationServiceProviderVersion": "1.1",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_windowsdefenderapplicationguard_settings_printingsettings_0",
+            "description": "Disables all print functionality.",
+            "helpText": null,
+            "name": "Disables all print functionality.",
+            "displayName": "Disable all print functionality",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard_1",
+                    "parentSettingId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard"
+                },
+                {
+                    "dependentOn": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard_3",
+                    "parentSettingId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_windowsdefenderapplicationguard_settings_printingsettings_1",
+            "description": "Enables only XPS printing.",
+            "helpText": null,
+            "name": "Enables only XPS printing.",
+            "displayName": "Enable XPS printing",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard_1",
+                    "parentSettingId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard"
+                },
+                {
+                    "dependentOn": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard_3",
+                    "parentSettingId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_windowsdefenderapplicationguard_settings_printingsettings_2",
+            "description": "Enables only PDF printing.",
+            "helpText": null,
+            "name": "Enables only PDF printing.",
+            "displayName": "Enable PDF printing",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard_1",
+                    "parentSettingId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard"
+                },
+                {
+                    "dependentOn": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard_3",
+                    "parentSettingId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_windowsdefenderapplicationguard_settings_printingsettings_4",
+            "description": "Enables only local printing.",
+            "helpText": null,
+            "name": "Enables only local printing.",
+            "displayName": "Enable local printing",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 4
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard_1",
+                    "parentSettingId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard"
+                },
+                {
+                    "dependentOn": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard_3",
+                    "parentSettingId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_windowsdefenderapplicationguard_settings_printingsettings_8",
+            "description": "Enables only network printing.",
+            "helpText": null,
+            "name": "Enables only network printing.",
+            "displayName": "Enable network printing",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 8
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard_1",
+                    "parentSettingId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard"
+                },
+                {
+                    "dependentOn": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard_3",
+                    "parentSettingId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

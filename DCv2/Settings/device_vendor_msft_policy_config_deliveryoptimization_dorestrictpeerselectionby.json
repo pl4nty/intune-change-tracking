@@ -1,0 +1,96 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "DO Restrict Peer Selection By",
+        "Delivery Optimization"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-DeliveryOptimization#deliveryoptimization-dorestrictpeerselectionby"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/DeliveryOptimization/DORestrictPeerSelectionBy",
+    "rootDefinitionId": "device_vendor_msft_policy_config_deliveryoptimization_dorestrictpeerselectionby",
+    "categoryId": "e2ec9af6-6143-4cd8-952c-1b3e849ee0dc",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_deliveryoptimization_dorestrictpeerselectionby",
+    "description": "Set this policy to restrict peer selection via selected option. Options available are: 1=Subnet mask (more options will be added in a future release). Option 1 (Subnet mask) applies to both Download Mode LAN (1) and Group (2).",
+    "helpText": "",
+    "name": "DORestrictPeerSelectionBy",
+    "displayName": "DO Restrict Peer Selection By",
+    "defaultOptionId": "device_vendor_msft_policy_config_deliveryoptimization_dorestrictpeerselectionby_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "7.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17134",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_deliveryoptimization_dorestrictpeerselectionby_0",
+            "description": "None.",
+            "helpText": null,
+            "name": "None.",
+            "displayName": "None.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_deliveryoptimization_dorestrictpeerselectionby_1",
+            "description": "Subnet mask.",
+            "helpText": null,
+            "name": "Subnet mask.",
+            "displayName": "Subnet mask.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_deliveryoptimization_dorestrictpeerselectionby_2",
+            "description": "Local peer discovery (DNS-SD).",
+            "helpText": null,
+            "name": "Local peer discovery (DNS-SD).",
+            "displayName": "Local peer discovery (DNS-SD).",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,74 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Local User Authorized List",
+        "Firewall"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/Firewall-csp/"
+    ],
+    "baseUri": "./Vendor/MSFT/Firewall",
+    "offsetUri": "/MdmStore/FirewallRules/{0}/LocalUserAuthorizedList",
+    "rootDefinitionId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+    "categoryId": "4a5e4714-00ac-4793-b0cc-5049041b0ed7",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "id": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}_localuserauthorizedlist",
+    "description": "Specifies the list of authorized local users for this rule. A list of authorized users cannot be specified if the rule being authored is targeting a Windows service. If not specified, the default is all users.",
+    "helpText": "",
+    "name": "LocalUserAuthorizedList",
+    "displayName": "Local User Authorized List",
+    "maximumCount": 600,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager,microsoftSense",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "sddl",
+        "inputValidationSchema": null,
+        "maximumLength": 87516,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}",
+            "parentSettingId": "vendor_msft_firewall_mdmstore_firewallrules_{firewallrulename}"
+        }
+    ],
+    "dependedOnBy": []
+}

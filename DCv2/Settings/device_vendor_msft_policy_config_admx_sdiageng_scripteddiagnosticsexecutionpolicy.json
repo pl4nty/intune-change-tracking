@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ScriptedDiagnosticsExecutionPolicy",
+        "Troubleshooting: Allow users to access and run Troubleshooting Wizards",
+        "\\System\\Troubleshooting and Diagnostics\\Scripted Diagnostics",
+        "Administrative Templates\\System\\Troubleshooting and Diagnostics\\Scripted Diagnostics",
+        "Scripted Diagnostics"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-sdiageng#admx-sdiageng-scripteddiagnosticsexecutionpolicy"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_sdiageng/ScriptedDiagnosticsExecutionPolicy",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_sdiageng_scripteddiagnosticsexecutionpolicy",
+    "categoryId": "78b3d753-d84d-496b-a93c-d577ab5865bd",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_sdiageng_scripteddiagnosticsexecutionpolicy",
+    "description": "This policy setting allows users to access and run the troubleshooting tools that are available in the Troubleshooting Control Panel and to run the troubleshooting wizard to troubleshoot problems on their computers.\r\n\r\nIf you enable or do not configure this policy setting, users can access and run the troubleshooting tools from the Troubleshooting Control Panel.\r\n\r\nIf you disable this policy setting, users cannot access or run the troubleshooting tools from the Control Panel.\r\n\r\nNote that this setting also controls a user's ability to launch standalone troubleshooting packs such as those found in .diagcab files.\r\n    \r\n ",
+    "helpText": "",
+    "name": "ScriptedDiagnosticsExecutionPolicy",
+    "displayName": "Troubleshooting: Allow users to access and run Troubleshooting Wizards",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_sdiageng_scripteddiagnosticsexecutionpolicy_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_sdiageng_scripteddiagnosticsexecutionpolicy_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_sdiageng_scripteddiagnosticsexecutionpolicy_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

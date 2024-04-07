@@ -1,0 +1,69 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Login Window Login Items"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "DisableLoginItemsSuppression",
+    "rootDefinitionId": "loginwindow_loginwindow",
+    "categoryId": "0e937777-d01a-4180-a937-c2010451a529",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "loginwindow_disableloginitemssuppression",
+    "description": "If true, prevents the user from disabling login item launches by using the Shift key.",
+    "helpText": null,
+    "name": "DisableLoginItemsSuppression",
+    "displayName": "Disable Login Items Suppression",
+    "defaultOptionId": "loginwindow_disableloginitemssuppression_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "loginwindow_disableloginitemssuppression_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "loginwindow_loginwindow",
+                    "parentSettingId": "loginwindow_loginwindow"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "loginwindow_disableloginitemssuppression_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "loginwindow_loginwindow",
+                    "parentSettingId": "loginwindow_loginwindow"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

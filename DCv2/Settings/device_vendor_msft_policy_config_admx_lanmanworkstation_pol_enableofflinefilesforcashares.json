@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Pol_EnableOfflineFilesforCAShares",
+        "Offline Files Availability on Continuous Availability Shares",
+        "\\Network\\Lanman Workstation",
+        "Administrative Templates\\Network\\Lanman Workstation",
+        "Lanman Workstation"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-lanmanworkstation#admx-lanmanworkstation-pol-enableofflinefilesforcashares"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_LanmanWorkstation/Pol_EnableOfflineFilesforCAShares",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_lanmanworkstation_pol_enableofflinefilesforcashares",
+    "categoryId": "c95a5920-ad56-4668-a6ad-19c3eb428557",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_lanmanworkstation_pol_enableofflinefilesforcashares",
+    "description": "\r\n        This policy setting determines the behavior of Offline Files on clients connecting to an SMB share where the Continuous Availability (CA) flag is enabled.\r\n\r\n        If you enable this policy setting, the \"Always Available offline\" option will appear in the File Explorer menu on a Windows computer when connecting to a CA-enabled share. Pinning of files on CA-enabled shares using client-side caching will also be possible.\r\n\r\n        If you disable or do not configure this policy setting, Windows will prevent use of Offline Files with CA-enabled shares.\r\n\r\n        Note: Microsoft does not recommend enabling this group policy. Use of CA with Offline Files will lead to very long transition times between the online and offline states.\r\n      \r\n ",
+    "helpText": "",
+    "name": "Pol_EnableOfflineFilesforCAShares",
+    "displayName": "Offline Files Availability on Continuous Availability Shares",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_lanmanworkstation_pol_enableofflinefilesforcashares_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_lanmanworkstation_pol_enableofflinefilesforcashares_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_lanmanworkstation_pol_enableofflinefilesforcashares_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

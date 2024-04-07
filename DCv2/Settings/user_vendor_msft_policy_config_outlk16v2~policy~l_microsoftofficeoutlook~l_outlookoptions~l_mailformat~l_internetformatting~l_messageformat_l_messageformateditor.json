@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_Messageformateditor",
+        "Set message format",
+        "\\Microsoft Outlook 2016\\Outlook Options\\Mail Format\\Internet Formatting\\Message Format",
+        "Microsoft Outlook 2016\\Outlook Options\\Mail Format\\Internet Formatting\\Message Format",
+        "Message Format"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/outlk16v2~Policy~L_MicrosoftOfficeOutlook~L_OutlookOptions~L_MailFormat~L_InternetFormatting~L_Messageformat/L_Messageformateditor",
+    "rootDefinitionId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_mailformat~l_internetformatting~l_messageformat_l_messageformateditor",
+    "categoryId": "25df12bc-5ebd-4db2-8930-5d27690f3e60",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_mailformat~l_internetformatting~l_messageformat_l_messageformateditor",
+    "description": "This policy setting controls the default message format in Outlook. \r\n\r\nIf you do not configure this policy setting, new e-mail messages in Outlook are formatted as HTML. \r\n\r\nIf you enable this policy setting, you can set the default e-mail format in Outlook to HTML, Rich Text, or plain text. Users can choose a format other than the default when composing messages. \r\n\r\nIf you disable this policy setting, Outlook uses HTML as the default e-mail format and users will not be able to change it. \r\n\r\nIf you do not configure this policy setting, Outlook uses HTML as the default e-mail format, but users can choose a format other than the default when composing messages.",
+    "helpText": "",
+    "name": "L_Messageformateditor",
+    "displayName": "Set message format (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_mailformat~l_internetformatting~l_messageformat_l_messageformateditor_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_mailformat~l_internetformatting~l_messageformat_l_messageformateditor_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_mailformat~l_internetformatting~l_messageformat_l_messageformateditor_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_mailformat~l_internetformatting~l_messageformat_l_messageformateditor_l_usethefollowingformateditorforemailmessages",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

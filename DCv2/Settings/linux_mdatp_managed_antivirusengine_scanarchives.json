@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Antivirus engine"
+    ],
+    "infoUrls": [
+        "https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/linux-preferences?view=o365-worldwide#scan-archives-on-demand-antivirus-scans-only"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/antivirusEngine",
+    "offsetUri": "scanArchives",
+    "rootDefinitionId": "linux_mdatp_managed_antivirusengine_scanarchives",
+    "categoryId": "13467142-14e7-4380-8573-4866e842c7f6",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "linux_mdatp_managed_antivirusengine_scanarchives",
+    "description": "Specifies whether to scan archives during on-demand antivirus scans.",
+    "helpText": null,
+    "name": "scanArchives",
+    "displayName": "Enable scanning of archives",
+    "defaultOptionId": "linux_mdatp_managed_antivirusengine_scanarchives_true",
+    "applicability": {
+        "description": null,
+        "platform": "linux",
+        "deviceMode": "none",
+        "technologies": "microsoftSense"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "linux_mdatp_managed_antivirusengine_scanarchives_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "linux_mdatp_managed_antivirusengine_scanarchives_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}
