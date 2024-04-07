@@ -1,0 +1,88 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "EnableAdditionalSources",
+        "Enable App Installer Additional Sources",
+        "\\Windows Components\\Desktop App Installer",
+        "Administrative Templates\\Windows Components\\Desktop App Installer",
+        "Desktop App Installer"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-desktopappinstaller#desktopappinstaller-enableadditionalsources"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/DesktopAppInstaller/EnableAdditionalSources",
+    "rootDefinitionId": "device_vendor_msft_policy_config_desktopappinstaller_enableadditionalsources",
+    "categoryId": "70063d93-03f0-462e-9943-b0241b88d54d",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_desktopappinstaller_enableadditionalsources",
+    "description": "This policy controls additional sources provided by the enterprise IT administrator.\r\n\r\nIf you do not configure this policy, no additional sources will be configured for the Windows Package Manager.\r\n\r\nIf you enable this policy, the additional sources will be added to the Windows Package Manager and cannot be removed. The representation for each additional source can be obtained from installed sources using 'winget source export'.\r\n\r\nIf you disable this policy, no additional sources can be configured for the Windows Package Manager.",
+    "helpText": "",
+    "name": "EnableAdditionalSources",
+    "displayName": "Enable App Installer Additional Sources",
+    "defaultOptionId": "device_vendor_msft_policy_config_desktopappinstaller_enableadditionalsources_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22621",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_desktopappinstaller_enableadditionalsources_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_desktopappinstaller_enableadditionalsources_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_desktopappinstaller_enableadditionalsources_additionalsources",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

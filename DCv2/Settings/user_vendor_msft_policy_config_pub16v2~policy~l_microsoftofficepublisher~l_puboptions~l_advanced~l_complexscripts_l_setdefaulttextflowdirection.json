@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_SetDefaultTextFlowDirection",
+        "Set default text flow direction",
+        "\\Microsoft Publisher 2016\\Publisher Options\\Advanced\\Complex scripts",
+        "Microsoft Publisher 2016\\Publisher Options\\Advanced\\Complex scripts",
+        "Complex scripts"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/pub16v2~Policy~L_MicrosoftOfficePublisher~L_PubOptions~L_Advanced~L_ComplexScripts/L_SetDefaultTextFlowDirection",
+    "rootDefinitionId": "user_vendor_msft_policy_config_pub16v2~policy~l_microsoftofficepublisher~l_puboptions~l_advanced~l_complexscripts_l_setdefaulttextflowdirection",
+    "categoryId": "77b0357b-412e-4a81-9469-e20a5f1345fd",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_pub16v2~policy~l_microsoftofficepublisher~l_puboptions~l_advanced~l_complexscripts_l_setdefaulttextflowdirection",
+    "description": "This policy setting allows you to set the default text flow between Right-to-Left (RTL) and Left-to-Right (LTR). \r\n\r\nIf you enable this policy setting, you may choose whether text will flow RTL or LTR.\r\n\r\nIf you disable or not configure this policy setting, the default text flow setting is used.",
+    "helpText": "",
+    "name": "L_SetDefaultTextFlowDirection",
+    "displayName": "Set default text flow direction (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_pub16v2~policy~l_microsoftofficepublisher~l_puboptions~l_advanced~l_complexscripts_l_setdefaulttextflowdirection_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_pub16v2~policy~l_microsoftofficepublisher~l_puboptions~l_advanced~l_complexscripts_l_setdefaulttextflowdirection_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_pub16v2~policy~l_microsoftofficepublisher~l_puboptions~l_advanced~l_complexscripts_l_setdefaulttextflowdirection_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_pub16v2~policy~l_microsoftofficepublisher~l_puboptions~l_advanced~l_complexscripts_l_setdefaulttextflowdirection_l_setdefaulttextflowdirectiondropid",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

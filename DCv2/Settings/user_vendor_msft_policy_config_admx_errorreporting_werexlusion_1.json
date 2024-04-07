@@ -1,0 +1,90 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "WerExlusion_1",
+        "List of applications to be excluded",
+        "\\Windows Components\\Windows Error Reporting\\Advanced Error Reporting Settings",
+        "Administrative Templates\\Windows Components\\Windows Error Reporting\\Advanced Error Reporting Settings",
+        "Advanced Error Reporting Settings"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-errorreporting#admx-errorreporting-werexlusion-1"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_ErrorReporting/WerExlusion_1",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_errorreporting_werexlusion_1",
+    "categoryId": "23e93393-4a75-44e6-9693-208eedb06976",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_errorreporting_werexlusion_1",
+    "description": "This policy setting limits Windows Error Reporting behavior for errors in general applications when Windows Error Reporting is turned on.\r\n\r\nIf you enable this policy setting, you can create a list of applications that are never included in error reports. To create a list of applications for which Windows Error Reporting never reports errors, click Show, and then add or remove applications from the list of application file names in the Show Contents dialog box (example: notepad.exe). File names must always include the .exe file name extension. To remove an application from the list, click the name, and then press DELETE. If this policy setting is enabled, the Exclude errors for applications on this list setting takes precedence.\r\n\r\nIf you disable or do not configure this policy setting, errors are reported on all Microsoft and Windows applications by default.\r\n ",
+    "helpText": "",
+    "name": "WerExlusion_1",
+    "displayName": "List of applications to be excluded (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_errorreporting_werexlusion_1_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_errorreporting_werexlusion_1_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_errorreporting_werexlusion_1_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_admx_errorreporting_werexlusion_1_werexlusionlist",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

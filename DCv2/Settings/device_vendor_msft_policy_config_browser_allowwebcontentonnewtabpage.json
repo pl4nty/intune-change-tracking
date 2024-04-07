@@ -1,0 +1,81 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Allow Web Content On New Tab Page",
+        "Browser"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Browser#browser-allowwebcontentonnewtabpage"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Browser/AllowWebContentOnNewTabPage",
+    "rootDefinitionId": "device_vendor_msft_policy_config_browser_allowwebcontentonnewtabpage",
+    "categoryId": "5d835ac8-2e5e-4887-8e4d-0c3846d0ad9f",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_browser_allowwebcontentonnewtabpage",
+    "description": "This policy setting lets you configure what appears when Microsoft Edge opens a new tab. By default, Microsoft Edge opens the New Tab page.  If you enable this setting, Microsoft Edge opens a new tab with the New Tab page.  If you disable this setting, Microsoft Edge opens a new tab with a blank page. If you use this setting, employees can't change it.  If you don't configure this setting, employees can choose how new tabs appears.",
+    "helpText": "",
+    "name": "AllowWebContentOnNewTabPage",
+    "displayName": "Allow Web Content On New Tab Page",
+    "defaultOptionId": "device_vendor_msft_policy_config_browser_allowwebcontentonnewtabpage_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "8.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17763",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_browser_allowwebcontentonnewtabpage_0",
+            "description": "Load a blank page instead of the default New tab page and prevent users from changing it.",
+            "helpText": null,
+            "name": "Load a blank page instead of the default New tab page and prevent users from changing it.",
+            "displayName": "Block",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_browser_allowwebcontentonnewtabpage_1",
+            "description": "Load the default New tab page.",
+            "helpText": null,
+            "name": "Load the default New tab page.",
+            "displayName": "Allow",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Allow Message Sync",
+        "Messaging"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Messaging#messaging-allowmessagesync"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Messaging/AllowMessageSync",
+    "rootDefinitionId": "device_vendor_msft_policy_config_messaging_allowmessagesync",
+    "categoryId": "5261c543-0bf4-49a8-9657-45e2044420d1",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_messaging_allowmessagesync",
+    "description": "This policy setting allows backup and restore of cellular text messages to Microsoft's cloud services.",
+    "helpText": "",
+    "name": "AllowMessageSync",
+    "displayName": "Allow Message Sync",
+    "defaultOptionId": "device_vendor_msft_policy_config_messaging_allowmessagesync_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "4.1",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.14393",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_messaging_allowmessagesync_0",
+            "description": "message sync is not allowed and cannot be changed by the user.",
+            "helpText": null,
+            "name": "message sync is not allowed and cannot be changed by the user.",
+            "displayName": "message sync is not allowed and cannot be changed by the user.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_messaging_allowmessagesync_1",
+            "description": "message sync is allowed. The user can change this setting.",
+            "helpText": null,
+            "name": "message sync is allowed. The user can change this setting.",
+            "displayName": "message sync is allowed. The user can change this setting.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

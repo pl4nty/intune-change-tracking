@@ -1,0 +1,147 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Clipboard Settings",
+        "Windows Defender Application Guard",
+        "Microsoft Defender Application Guard"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/WindowsDefenderApplicationGuard-csp/"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/WindowsDefenderApplicationGuard",
+    "offsetUri": "/Settings/ClipboardSettings",
+    "rootDefinitionId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard",
+    "categoryId": "cd55f347-a417-4fe9-83ee-8f1f40ac5eb0",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "id": "device_vendor_msft_windowsdefenderapplicationguard_settings_clipboardsettings",
+    "description": "This policy setting allows you to decide how the clipboard behaves while in Microsoft Defender Application Guard.",
+    "helpText": "",
+    "name": "ClipboardSettings",
+    "displayName": "Clipboard behavior settings",
+    "defaultOptionId": "device_vendor_msft_windowsdefenderapplicationguard_settings_clipboardsettings_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager",
+        "configurationServiceProviderVersion": "1.1",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_windowsdefenderapplicationguard_settings_clipboardsettings_0",
+            "description": "Completely turns Off the clipboard functionality for the Application Guard.",
+            "helpText": null,
+            "name": "Completely turns Off the clipboard functionality for the Application Guard.",
+            "displayName": "Disable clipboard functionality completely",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard_1",
+                    "parentSettingId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard"
+                },
+                {
+                    "dependentOn": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard_3",
+                    "parentSettingId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_windowsdefenderapplicationguard_settings_clipboardsettings_1",
+            "description": "Turns On clipboard operation from an isolated session to the host.",
+            "helpText": null,
+            "name": "Turns On clipboard operation from an isolated session to the host.",
+            "displayName": "Enable clipboard operation from Application Guard to the host",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard_1",
+                    "parentSettingId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard"
+                },
+                {
+                    "dependentOn": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard_3",
+                    "parentSettingId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_windowsdefenderapplicationguard_settings_clipboardsettings_2",
+            "description": "Turns On clipboard operation from the host to an isolated session.",
+            "helpText": null,
+            "name": "Turns On clipboard operation from the host to an isolated session.",
+            "displayName": "Enable clipboard operation from the host to Application Guard",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard_1",
+                    "parentSettingId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard"
+                },
+                {
+                    "dependentOn": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard_3",
+                    "parentSettingId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_windowsdefenderapplicationguard_settings_clipboardsettings_3",
+            "description": "Turns On clipboard operation in both the directions.",
+            "helpText": null,
+            "name": "Turns On clipboard operation in both the directions.",
+            "displayName": "Enable clipboard operation in both directions",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard_1",
+                    "parentSettingId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard"
+                },
+                {
+                    "dependentOn": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard_3",
+                    "parentSettingId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

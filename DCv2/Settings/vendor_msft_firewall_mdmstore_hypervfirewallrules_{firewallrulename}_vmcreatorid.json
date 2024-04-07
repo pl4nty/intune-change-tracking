@@ -1,0 +1,73 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "VM Creator Id",
+        "Target",
+        "Firewall"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/Firewall-csp/"
+    ],
+    "baseUri": "./Vendor/MSFT/Firewall",
+    "offsetUri": "/MdmStore/HyperVFirewallRules/{0}/VMCreatorId",
+    "rootDefinitionId": "vendor_msft_firewall_mdmstore_hypervfirewallrules_{firewallrulename}",
+    "categoryId": "4a5e4714-00ac-4793-b0cc-5049041b0ed7",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "id": "vendor_msft_firewall_mdmstore_hypervfirewallrules_{firewallrulename}_vmcreatorid",
+    "description": "This field specifies the VM Creator ID that this rule is applicable to. Not configuring this setting will result in this rule applying to all VM creators.\n                  ",
+    "helpText": "",
+    "name": "VMCreatorId",
+    "displayName": "Target",
+    "defaultOptionId": "vendor_msft_firewall_mdmstore_hypervfirewallrules_{firewallrulename}_vmcreatorid_wsl",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,microsoftSense",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22621",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "vendor_msft_firewall_mdmstore_hypervfirewallrules_{firewallrulename}_vmcreatorid_wsl",
+            "description": "Windows Subsystem for Linux",
+            "helpText": null,
+            "name": "WSL",
+            "displayName": "Windows Subsystem for Linux",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "{40E0AC32-46A5-438A-A0B2-2B479E8F2E90}"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "vendor_msft_firewall_mdmstore_hypervfirewallrules_{firewallrulename}",
+                    "parentSettingId": "vendor_msft_firewall_mdmstore_hypervfirewallrules_{firewallrulename}"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

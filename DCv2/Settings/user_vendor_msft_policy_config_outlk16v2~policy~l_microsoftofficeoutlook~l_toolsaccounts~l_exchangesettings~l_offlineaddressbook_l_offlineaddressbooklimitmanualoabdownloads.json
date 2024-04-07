@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_OfflineAddressBookLimitmanualOABdownloads",
+        "Offline Address Book: Limit manual OAB downloads",
+        "\\Microsoft Outlook 2016\\Account Settings\\Exchange\\Offline Address Book",
+        "Microsoft Outlook 2016\\Account Settings\\Exchange\\Offline Address Book",
+        "Offline Address Book"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/outlk16v2~Policy~L_MicrosoftOfficeOutlook~L_ToolsAccounts~L_Exchangesettings~L_OfflineAddressBook/L_OfflineAddressBookLimitmanualOABdownloads",
+    "rootDefinitionId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_toolsaccounts~l_exchangesettings~l_offlineaddressbook_l_offlineaddressbooklimitmanualoabdownloads",
+    "categoryId": "e35a83ff-7c5b-48d4-9ba3-a57849c6b5f5",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_toolsaccounts~l_exchangesettings~l_offlineaddressbook_l_offlineaddressbooklimitmanualoabdownloads",
+    "description": "This policy setting allows you to specify the number of manual downloads of the offline address book (OAB) allowed in a 13 hour period.\r\n\r\nIf you enable this policy setting, you may specify the number of manual downloads of the offline address book (OAB) allowed in a 13 hour period.  If you set the value to 0, then no manual OAB downloads are allowed.  If you set the value to the maximum of 65535, then that will allow an unlimited number of manual downloads of the OAB.\r\n\r\nIf you disable or do not configure this policy setting, an unlimited number of  manual downloads of the OAB will be allowed.",
+    "helpText": "",
+    "name": "L_OfflineAddressBookLimitmanualOABdownloads",
+    "displayName": "Offline Address Book: Limit manual OAB downloads (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_toolsaccounts~l_exchangesettings~l_offlineaddressbook_l_offlineaddressbooklimitmanualoabdownloads_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_toolsaccounts~l_exchangesettings~l_offlineaddressbook_l_offlineaddressbooklimitmanualoabdownloads_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_toolsaccounts~l_exchangesettings~l_offlineaddressbook_l_offlineaddressbooklimitmanualoabdownloads_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_toolsaccounts~l_exchangesettings~l_offlineaddressbook_l_offlineaddressbooklimitmanualoabdownloads_l_allowxxmanualoabdownloadsper13hrperiod",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_StationeryFonts",
+        "Stationery Fonts",
+        "\\Microsoft Outlook 2016\\Outlook Options\\Mail Format\\Stationery and Fonts",
+        "Microsoft Outlook 2016\\Outlook Options\\Mail Format\\Stationery and Fonts",
+        "Stationery and Fonts"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/outlk16v2~Policy~L_MicrosoftOfficeOutlook~L_OutlookOptions~L_MailFormat~L_StationeryandFonts/L_StationeryFonts",
+    "rootDefinitionId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_mailformat~l_stationeryandfonts_l_stationeryfonts",
+    "categoryId": "88b16683-81f2-450a-9bf2-42f582e0b748",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_mailformat~l_stationeryandfonts_l_stationeryfonts",
+    "description": "This policy setting allows you to choose a Stationery font option.\r\n\r\nIf you enable this policy setting, a Stationery font option from the dropdown list will be enforced.\r\n\r\nIf you disable or do not configure this policy setting, the default setting (use theme's font) will be used.",
+    "helpText": "",
+    "name": "L_StationeryFonts",
+    "displayName": "Stationery Fonts (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_mailformat~l_stationeryandfonts_l_stationeryfonts_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_mailformat~l_stationeryandfonts_l_stationeryfonts_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_mailformat~l_stationeryandfonts_l_stationeryfonts_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_mailformat~l_stationeryandfonts_l_stationeryfonts_l_stationeryfontoptions",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

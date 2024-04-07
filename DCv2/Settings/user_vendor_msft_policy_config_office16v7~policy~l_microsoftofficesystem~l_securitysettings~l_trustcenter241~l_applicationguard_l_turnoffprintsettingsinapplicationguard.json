@@ -1,0 +1,90 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_TurnOffPrintSettingsInApplicationGuard",
+        "Restrict printing from Office of documents opened in Application Guard.",
+        "\\Microsoft Office 2016\\Security Settings\\Trust Center\\Application Guard",
+        "Microsoft Office 2016\\Security Settings\\Trust Center\\Application Guard",
+        "Application Guard"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/office16v7~Policy~L_MicrosoftOfficeSystem~L_SecuritySettings~L_trustcenter241~L_ApplicationGuard/L_TurnOffPrintSettingsInApplicationGuard",
+    "rootDefinitionId": "user_vendor_msft_policy_config_office16v7~policy~l_microsoftofficesystem~l_securitysettings~l_trustcenter241~l_applicationguard_l_turnoffprintsettingsinapplicationguard",
+    "categoryId": "517e55f5-729f-4b4d-9555-33baa95a0e5a",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_office16v7~policy~l_microsoftofficesystem~l_securitysettings~l_trustcenter241~l_applicationguard_l_turnoffprintsettingsinapplicationguard",
+    "description": "This policy setting allows you to control how users can print from Office documents opened in Application Guard. \r\nIf you enable this policy setting, you can choose to selectively retrict one or more of the following printing options.\r\n- Don't allow printing to XPS, prevents users from printing as XPS and saving the resulting file on the host. \r\n- Don't allow printing to PDF, prevents users from printing as PDF and saving the resulting file on the host. \r\n- Don't allow printing to local printers, prevents users from printing to locally attached printers. \r\n- Don't allow printing to existing network printers, prevents users from printing to previously connected network printers. Also, users can't search for additional printers.\r\nNote: if you select all the choices or don’t select any of the choices, then printing isn’t allowed in Application Guard.\r\n\r\nIf you disable or don’t configure this policy setting, users can print to all printers configured on their device.\r\n\r\nNote: This policy setting only applies to Microsoft 365 Apps for enterprise.",
+    "helpText": "",
+    "name": "L_TurnOffPrintSettingsInApplicationGuard",
+    "displayName": "Restrict printing from Office of documents opened in Application Guard. (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_office16v7~policy~l_microsoftofficesystem~l_securitysettings~l_trustcenter241~l_applicationguard_l_turnoffprintsettingsinapplicationguard_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v7~policy~l_microsoftofficesystem~l_securitysettings~l_trustcenter241~l_applicationguard_l_turnoffprintsettingsinapplicationguard_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v7~policy~l_microsoftofficesystem~l_securitysettings~l_trustcenter241~l_applicationguard_l_turnoffprintsettingsinapplicationguard_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_office16v7~policy~l_microsoftofficesystem~l_securitysettings~l_trustcenter241~l_applicationguard_l_turnoffprintsettingsinapplicationguard_l_turnoffxpsprintinginapplicationguard",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_office16v7~policy~l_microsoftofficesystem~l_securitysettings~l_trustcenter241~l_applicationguard_l_turnoffprintsettingsinapplicationguard_l_turnoffpdfprintinginapplicationguard",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_office16v7~policy~l_microsoftofficesystem~l_securitysettings~l_trustcenter241~l_applicationguard_l_turnoffprintsettingsinapplicationguard_l_turnofflocalprintinginapplicationguard",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_office16v7~policy~l_microsoftofficesystem~l_securitysettings~l_trustcenter241~l_applicationguard_l_turnoffprintsettingsinapplicationguard_l_turnoffnetworkprintinginapplicationguard",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

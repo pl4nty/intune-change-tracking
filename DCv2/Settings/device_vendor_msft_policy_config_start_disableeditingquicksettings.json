@@ -1,0 +1,81 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Disable Editing Quick Settings",
+        "Start"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Start#start-disableeditingquicksettings"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Start/DisableEditingQuickSettings",
+    "rootDefinitionId": "device_vendor_msft_policy_config_start_disableeditingquicksettings",
+    "categoryId": "311e1dac-a77c-4bc0-a376-35ad55923b7d",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_start_disableeditingquicksettings",
+    "description": "Allows admin to disable editing Quick Settings, such as by accessing the 'Edit quick settings' context through right-clicking on Quick Settings buttons.\r\n ",
+    "helpText": "",
+    "name": "DisableEditingQuickSettings",
+    "displayName": "Disable Editing Quick Settings",
+    "defaultOptionId": "device_vendor_msft_policy_config_start_disableeditingquicksettings_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22621",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_start_disableeditingquicksettings_0",
+            "description": "Enable editing Quick Settings.",
+            "helpText": null,
+            "name": "Enable editing Quick Settings.",
+            "displayName": "Enable editing Quick Settings.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_start_disableeditingquicksettings_1",
+            "description": "Disable editing Quick Settings.",
+            "helpText": null,
+            "name": "Disable editing Quick Settings.",
+            "displayName": "Disable editing Quick Settings.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

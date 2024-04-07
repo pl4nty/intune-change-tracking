@@ -1,0 +1,90 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DriverSearchPlaces_SearchOrderConfiguration",
+        "Specify search order for device driver source locations",
+        "\\System\\Device Installation",
+        "Administrative Templates\\System\\Device Installation",
+        "Device Installation"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-devicesetup#admx-devicesetup-driversearchplaces-searchorderconfiguration"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_DeviceSetup/DriverSearchPlaces_SearchOrderConfiguration",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_devicesetup_driversearchplaces_searchorderconfiguration",
+    "categoryId": "486dc66e-960c-4622-b3cb-3ff9a2d434eb",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_devicesetup_driversearchplaces_searchorderconfiguration",
+    "description": "This policy setting allows you to specify the order in which Windows searches source locations for device drivers. \r\n\r\nIf you enable this policy setting, you can select whether Windows searches for drivers on Windows Update unconditionally, only if necessary, or not at all.\r\n\r\nNote that searching always implies that Windows will attempt to search Windows Update exactly one time. With this setting, Windows will not continually search for updates. This setting is used to ensure that the best software will be found for the device, even if the network is temporarily available.\r\n\r\nIf the setting for searching only if needed is specified, then Windows will search for a driver only if a driver is not locally available on the system.\r\n\r\nIf you disable or do not configure this policy setting, members of the Administrators group can determine the priority order in which Windows searches source locations for device drivers.\r\n ",
+    "helpText": "",
+    "name": "DriverSearchPlaces_SearchOrderConfiguration",
+    "displayName": "Specify search order for device driver source locations",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_devicesetup_driversearchplaces_searchorderconfiguration_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_devicesetup_driversearchplaces_searchorderconfiguration_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_devicesetup_driversearchplaces_searchorderconfiguration_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_devicesetup_driversearchplaces_searchorderconfiguration_driversearchplaces_searchorderconfiguration_dropdown",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

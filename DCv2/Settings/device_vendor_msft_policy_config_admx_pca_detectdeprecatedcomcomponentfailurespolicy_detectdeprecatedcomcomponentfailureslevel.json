@@ -1,0 +1,93 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DetectDeprecatedCOMComponentFailuresPolicy",
+        "Detect application failures caused by deprecated COM objects",
+        "\\System\\Troubleshooting and Diagnostics\\Application Compatibility Diagnostics",
+        "Administrative Templates\\System\\Troubleshooting and Diagnostics\\Application Compatibility Diagnostics",
+        "Application Compatibility Diagnostics"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_pca/DetectDeprecatedCOMComponentFailuresPolicy",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_pca_detectdeprecatedcomcomponentfailurespolicy",
+    "categoryId": "439f1603-5241-40c7-a5fe-44ae6744543f",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_pca_detectdeprecatedcomcomponentfailurespolicy_detectdeprecatedcomcomponentfailureslevel",
+    "description": null,
+    "helpText": "",
+    "name": "DetectDeprecatedCOMComponentFailuresLevel",
+    "displayName": "Scenario Execution Level (Device)",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_pca_detectdeprecatedcomcomponentfailurespolicy_detectdeprecatedcomcomponentfailureslevel_2",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_pca_detectdeprecatedcomcomponentfailurespolicy_detectdeprecatedcomcomponentfailureslevel_1",
+            "description": null,
+            "helpText": null,
+            "name": "Detection and Troubleshooting Only",
+            "displayName": "Detection and Troubleshooting Only",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_pca_detectdeprecatedcomcomponentfailurespolicy_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_pca_detectdeprecatedcomcomponentfailurespolicy"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_pca_detectdeprecatedcomcomponentfailurespolicy_detectdeprecatedcomcomponentfailureslevel_2",
+            "description": null,
+            "helpText": null,
+            "name": "Detection, Troubleshooting and Resolution",
+            "displayName": "Detection, Troubleshooting and Resolution",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_pca_detectdeprecatedcomcomponentfailurespolicy_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_pca_detectdeprecatedcomcomponentfailurespolicy"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

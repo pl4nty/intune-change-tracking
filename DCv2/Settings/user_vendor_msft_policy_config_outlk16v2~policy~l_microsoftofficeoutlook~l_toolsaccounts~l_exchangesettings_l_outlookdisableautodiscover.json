@@ -1,0 +1,98 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_OutlookDisableAutoDiscover",
+        "Disable AutoDiscover",
+        "\\Microsoft Outlook 2016\\Account Settings\\Exchange",
+        "Microsoft Outlook 2016\\Account Settings\\Exchange",
+        "Exchange"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/outlk16v2~Policy~L_MicrosoftOfficeOutlook~L_ToolsAccounts~L_Exchangesettings/L_OutlookDisableAutoDiscover",
+    "rootDefinitionId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_toolsaccounts~l_exchangesettings_l_outlookdisableautodiscover",
+    "categoryId": "c4dbc05f-da1e-440d-8beb-91bf9dad1875",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_toolsaccounts~l_exchangesettings_l_outlookdisableautodiscover",
+    "description": "This policy setting allows you to disable AutoDiscover.\r\n\r\nIf you enable this policy setting, you can select one or more of the following options to disable in the AutoDiscover feature.\r\n\r\n\"Exclude the last known good URL” – Outlook does not use the last known good Autodiscover URL.\r\n\r\n\"Exclude the SCP object lookup\" – Outlook does not perform Active Directory queries for Service Connection Point (SCP) objects with Autodiscover information.\r\n\r\n\"Exclude the root domain query based on your primary SMTP address\" - Outlook does not use the root domain of your primary SMTP address to locate the AutoDiscover service. For example, you select this optionOutlook does not use the following URL: https://<smtp-address-domain>/autodiscover/autodiscover.xml.\r\n\r\n\"Exclude the query for the AutoDiscover domain\" - Outlook does not use the Autodiscover domain to locate the Autodiscover service. For example, Outlook does not use the following URL: https://autodiscover.<smtp-address-domain>/autodiscover/autodiscover.xml\r\n\r\n\"Exclude the HTTP redirect method\" - Outlook does not use the HTTP redirect method in the event it is unable to reach the AutoDiscover service via either of the HTTPS URLs: https://<smtp-address-domain>/autodiscover/autodiscover.xml or https://autodiscover.<smtp-address-domain>/autodiscover/autodiscover.xml.\r\n\r\n\"Exclude the SRV record query in DNS\" - Outlook does not use an SRV record lookup in DNS to locate the AutoDiscover service.",
+    "helpText": "",
+    "name": "L_OutlookDisableAutoDiscover",
+    "displayName": "Disable AutoDiscover (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_toolsaccounts~l_exchangesettings_l_outlookdisableautodiscover_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_toolsaccounts~l_exchangesettings_l_outlookdisableautodiscover_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_toolsaccounts~l_exchangesettings_l_outlookdisableautodiscover_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_toolsaccounts~l_exchangesettings_l_outlookdisableautodiscover_l_outlookdisableautodiscoverlkgurl",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_toolsaccounts~l_exchangesettings_l_outlookdisableautodiscover_l_outlookdisableautodiscoverscplookup",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_toolsaccounts~l_exchangesettings_l_outlookdisableautodiscover_l_outlookdisableautodiscoverrootdomain",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_toolsaccounts~l_exchangesettings_l_outlookdisableautodiscover_l_outlookdisableautodiscoverautodiscoversubdomain",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_toolsaccounts~l_exchangesettings_l_outlookdisableautodiscover_l_outlookdisableautodiscoverhttpredirect",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_toolsaccounts~l_exchangesettings_l_outlookdisableautodiscover_l_outlookdisableautodiscoversrvrecord",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

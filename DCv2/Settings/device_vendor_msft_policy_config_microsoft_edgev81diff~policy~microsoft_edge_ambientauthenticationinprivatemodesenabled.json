@@ -1,0 +1,77 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "AmbientAuthenticationInPrivateModesEnabled",
+        "Enable Ambient Authentication for InPrivate and Guest profiles",
+        "\\Microsoft Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev81diff~Policy~microsoft_edge/AmbientAuthenticationInPrivateModesEnabled",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edgev81diff~policy~microsoft_edge_ambientauthenticationinprivatemodesenabled",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_microsoft_edgev81diff~policy~microsoft_edge_ambientauthenticationinprivatemodesenabled",
+    "description": "Configure this policy to allow/disallow ambient authentication for InPrivate and Guest profiles in Microsoft Edge.\r\n\r\nAmbient Authentication is http authentication with default credentials when explicit credentials aren't provided via NTLM/Kerberos/Negotiate challenge/response schemes.\r\n\r\nIf you set the policy to RegularOnly (value 0), it allows ambient authentication for Regular sessions only. InPrivate and Guest sessions won't be allowed to ambiently authenticate.\r\n\r\nIf you set the policy to InPrivateAndRegular (value 1), it allows ambient authentication for InPrivate and Regular sessions. Guest sessions won't be allowed to ambiently authenticate.\r\n\r\nIf you set the policy to GuestAndRegular (value 2), it allows ambient authentication for Guest and Regular sessions. InPrivate sessions won't be allowed to ambiently authenticate\r\n\r\nIf you set the policy to All (value 3), it allows ambient authentication for all sessions.\r\n\r\nNote that ambient authentication is always allowed on regular profiles.\r\n\r\nIn Microsoft Edge version 81 and later, if the policy is left not set, ambient authentication will be enabled in regular sessions only.\r\n\r\n* 0 = Enable ambient authentication in regular sessions only\r\n\r\n* 1 = Enable ambient authentication in InPrivate and regular sessions\r\n\r\n* 2 = Enable ambient authentication in guest and regular sessions\r\n\r\n* 3 = Enable ambient authentication in regular, InPrivate and guest sessions",
+    "helpText": "",
+    "name": "AmbientAuthenticationInPrivateModesEnabled",
+    "displayName": "Enable Ambient Authentication for InPrivate and Guest profiles",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edgev81diff~policy~microsoft_edge_ambientauthenticationinprivatemodesenabled_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev81diff~policy~microsoft_edge_ambientauthenticationinprivatemodesenabled_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev81diff~policy~microsoft_edge_ambientauthenticationinprivatemodesenabled_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_microsoft_edgev81diff~policy~microsoft_edge_ambientauthenticationinprivatemodesenabled_ambientauthenticationinprivatemodesenabled",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

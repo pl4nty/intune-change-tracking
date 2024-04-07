@@ -1,0 +1,74 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Allow Launch Uri In Single App Kiosk",
+        "Mixed Reality"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-MixedReality#mixedreality-allowlaunchuriinsingleappkiosk"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/MixedReality/AllowLaunchUriInSingleAppKiosk",
+    "rootDefinitionId": "device_vendor_msft_policy_config_mixedreality_allowlaunchuriinsingleappkiosk",
+    "categoryId": "f10138ba-123a-43bc-8031-4458ba327374",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_mixedreality_allowlaunchuriinsingleappkiosk",
+    "description": "By default, launching applications via Launcher API (Launcher Class (Windows.System) - Windows UWP applications | Microsoft Docs) is disabled in single app kiosk mode. To enable applications to launch in single app kiosk mode on HoloLens devices, set the policy value to true.",
+    "helpText": "",
+    "name": "AllowLaunchUriInSingleAppKiosk",
+    "displayName": "Allow Launch Uri In Single App Kiosk",
+    "defaultOptionId": "device_vendor_msft_policy_config_mixedreality_allowlaunchuriinsingleappkiosk_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.20348",
+        "windowsSkus": [
+            "holographicForBusiness"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_mixedreality_allowlaunchuriinsingleappkiosk_0",
+            "description": "Applications are not allowed to be launched with Launcher API, when in single app kiosk mode.",
+            "helpText": null,
+            "name": "Applications are not allowed to be launched with Launcher API, when in single app kiosk mode.",
+            "displayName": "Applications are not allowed to be launched with Launcher API, when in single app kiosk mode.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_mixedreality_allowlaunchuriinsingleappkiosk_1",
+            "description": "Applications are allowed to be launched with Launcher API, when in single app kiosk mode.",
+            "helpText": null,
+            "name": "Applications are allowed to be launched with Launcher API, when in single app kiosk mode.",
+            "displayName": "Applications are allowed to be launched with Launcher API, when in single app kiosk mode.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

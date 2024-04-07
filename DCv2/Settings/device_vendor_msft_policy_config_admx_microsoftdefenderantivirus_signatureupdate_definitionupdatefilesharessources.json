@@ -1,0 +1,90 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "SignatureUpdate_DefinitionUpdateFileSharesSources",
+        "Define file shares for downloading security intelligence updates",
+        "\\Windows Components\\Microsoft Defender Antivirus\\Security Intelligence Updates",
+        "Administrative Templates\\Windows Components\\Microsoft Defender Antivirus\\Security Intelligence Updates",
+        "Security Intelligence Updates"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus#admx-microsoftdefenderantivirus-signatureupdate-definitionupdatefilesharessources"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_MicrosoftDefenderAntivirus/SignatureUpdate_DefinitionUpdateFileSharesSources",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_microsoftdefenderantivirus_signatureupdate_definitionupdatefilesharessources",
+    "categoryId": "ad100c6c-9a9a-42cf-8f42-b31c406c1a56",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_microsoftdefenderantivirus_signatureupdate_definitionupdatefilesharessources",
+    "description": "This policy setting allows you to configure UNC file share sources for downloading security intelligence updates. Sources will be contacted in the order specified. The value of this setting should be entered as a pipe-separated string enumerating the security intelligence update sources. For example: \"{\\\\unc1 | \\\\unc2 }\". The list is empty by default.\r\n\r\n    If you enable this setting, the specified sources will be contacted for security intelligence updates. Once security intelligence updates have been successfully downloaded from one specified source, the remaining sources in the list will not be contacted.\r\n\r\n    If you disable or do not configure this setting, the list will remain empty by default and no sources will be contacted.\r\n ",
+    "helpText": "",
+    "name": "SignatureUpdate_DefinitionUpdateFileSharesSources",
+    "displayName": "Define file shares for downloading security intelligence updates",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_microsoftdefenderantivirus_signatureupdate_definitionupdatefilesharessources_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_microsoftdefenderantivirus_signatureupdate_definitionupdatefilesharessources_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_microsoftdefenderantivirus_signatureupdate_definitionupdatefilesharessources_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_microsoftdefenderantivirus_signatureupdate_definitionupdatefilesharessources_signatureupdate_definitionupdatefilesharessources",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,81 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Require Provisioning Package Signature",
+        "Security"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Security#security-requireprovisioningpackagesignature"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Security/RequireProvisioningPackageSignature",
+    "rootDefinitionId": "device_vendor_msft_policy_config_security_requireprovisioningpackagesignature",
+    "categoryId": "62cb63bd-d3ef-4cff-9b4a-e7bbf4657173",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_security_requireprovisioningpackagesignature",
+    "description": "Specifies whether provisioning packages must have a certificate signed by a device trusted authority.",
+    "helpText": "",
+    "name": "RequireProvisioningPackageSignature",
+    "displayName": "Require Provisioning Package Signature",
+    "defaultOptionId": "device_vendor_msft_policy_config_security_requireprovisioningpackagesignature_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.10240",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_security_requireprovisioningpackagesignature_0",
+            "description": "Not required.",
+            "helpText": null,
+            "name": "Not required.",
+            "displayName": "Not required.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_security_requireprovisioningpackagesignature_1",
+            "description": "Required.",
+            "helpText": null,
+            "name": "Required.",
+            "displayName": "Required.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

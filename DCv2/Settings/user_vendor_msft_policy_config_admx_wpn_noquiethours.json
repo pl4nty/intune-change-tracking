@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "NoQuietHours",
+        "Turn off Quiet Hours",
+        "\\Start Menu and Taskbar\\Notifications",
+        "Administrative Templates\\Start Menu and Taskbar\\Notifications",
+        "Notifications"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-wpn#admx-wpn-noquiethours"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_WPN/NoQuietHours",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_wpn_noquiethours",
+    "categoryId": "cb98f9d4-d921-4a8b-a763-cf69ce2ada62",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_wpn_noquiethours",
+    "description": "\r\n        This policy setting turns off Quiet Hours functionality.\r\n        \r\n        If you enable this policy setting, toast notifications will not be suppressed and some background tasks will not be deferred during the designated Quiet Hours time window each day.\r\n        \r\n        If you disable this policy setting, toast notifications will be suppressed and some background task deferred during the designated Quiet Hours time window.  Users will not be able to change this or any other Quiet Hours settings.\r\n        \r\n        If you do not configure this policy setting, Quiet Hours are enabled by default but can be turned off or by the administrator or user.\r\n      \r\n ",
+    "helpText": "",
+    "name": "NoQuietHours",
+    "displayName": "Turn off Quiet Hours (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_wpn_noquiethours_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_wpn_noquiethours_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_wpn_noquiethours_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

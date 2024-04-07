@@ -1,0 +1,110 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "WCN_EnableRegistrar",
+        "Configuration of wireless settings using Windows Connect Now",
+        "\\Network\\Windows Connect Now",
+        "Administrative Templates\\Network\\Windows Connect Now",
+        "Windows Connect Now"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-windowsconnectnow#admx-windowsconnectnow-wcn-enableregistrar"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_WindowsConnectNow/WCN_EnableRegistrar",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_windowsconnectnow_wcn_enableregistrar",
+    "categoryId": "bd7d2b68-118d-40ee-9dfd-39b2a22a2082",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_windowsconnectnow_wcn_enableregistrar",
+    "description": "This policy setting allows the configuration of wireless settings using Windows Connect Now (WCN). The WCN Registrar enables the discovery and configuration of devices over Ethernet (UPnP), over In-band 802.11 WLAN, through the Windows Portable Device API (WPD), and via USB Flash drives.\r\n\r\nAdditional options are available to allow discovery and configuration over a specific medium. \r\n\r\nIf you enable this policy setting, additional choices are available to turn off the operations over a specific medium. \r\n\r\nIf you disable this policy setting, operations are disabled over all media. \r\n\r\nIf you do not configure this policy setting, operations are enabled over all media. \r\n\r\nThe default for this policy setting allows operations over all media.\r\n ",
+    "helpText": "",
+    "name": "WCN_EnableRegistrar",
+    "displayName": "Configuration of wireless settings using Windows Connect Now",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_windowsconnectnow_wcn_enableregistrar_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_windowsconnectnow_wcn_enableregistrar_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_windowsconnectnow_wcn_enableregistrar_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_windowsconnectnow_wcn_enableregistrar_wcn_enableregistrar_disableupnp",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_windowsconnectnow_wcn_enableregistrar_wcn_enableregistrar_disableinband802dot11",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_windowsconnectnow_wcn_enableregistrar_wcn_enableregistrar_disableflashconfig",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_windowsconnectnow_wcn_enableregistrar_wcn_enableregistrar_disablewpd",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_windowsconnectnow_wcn_enableregistrar_wcn_enableregistrar_maxwcndevicenumber",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_windowsconnectnow_wcn_enableregistrar_wcn_higher_precedence_registrar",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

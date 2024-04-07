@@ -1,0 +1,82 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_PlacesBarLocationPolicy4",
+        "Places Bar Location 4",
+        "\\Microsoft Office 2016\\File Open/Save dialog box\\Places Bar Locations",
+        "Microsoft Office 2016\\File Open/Save dialog box\\Places Bar Locations",
+        "Places Bar Locations"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/office16v2~Policy~L_MicrosoftOfficeSystem~L_FileOpenSave~L_PlacesBarLocations/L_PlacesBarLocationPolicy4",
+    "rootDefinitionId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_fileopensave~l_placesbarlocations_l_placesbarlocationpolicy4",
+    "categoryId": "4a832199-a841-4b6a-84fa-51365902a742",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_fileopensave~l_placesbarlocations_l_placesbarlocationpolicy4",
+    "description": "This setting configures the list of items displayed in the Places Bar of the Common File dialog boxes. Valid items include browseable paths and environment variables of the form %...%. Items will be displayed in the Places Bar in the order in which they are entered into the template.",
+    "helpText": "",
+    "name": "L_PlacesBarLocationPolicy4",
+    "displayName": "Places Bar Location 4 (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_fileopensave~l_placesbarlocations_l_placesbarlocationpolicy4_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_fileopensave~l_placesbarlocations_l_placesbarlocationpolicy4_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_fileopensave~l_placesbarlocations_l_placesbarlocationpolicy4_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_fileopensave~l_placesbarlocations_l_placesbarlocationpolicy4_l_placesbarname215",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_fileopensave~l_placesbarlocations_l_placesbarlocationpolicy4_l_placesbarpath216",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

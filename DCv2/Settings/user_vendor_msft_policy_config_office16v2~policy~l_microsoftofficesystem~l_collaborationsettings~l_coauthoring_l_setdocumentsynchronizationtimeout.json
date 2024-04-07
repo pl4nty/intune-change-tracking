@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_SetDocumentSynchronizationTimeout",
+        "Set document synchronization timeout",
+        "\\Microsoft Office 2016\\Collaboration Settings\\Co-authoring",
+        "Microsoft Office 2016\\Collaboration Settings\\Co-authoring",
+        "Co-authoring"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/office16v2~Policy~L_MicrosoftOfficeSystem~L_CollaborationSettings~L_Coauthoring/L_SetDocumentSynchronizationTimeout",
+    "rootDefinitionId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_collaborationsettings~l_coauthoring_l_setdocumentsynchronizationtimeout",
+    "categoryId": "a5aea816-9c1d-4a85-a2ab-33e3d1c26a8c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_collaborationsettings~l_coauthoring_l_setdocumentsynchronizationtimeout",
+    "description": "This policy setting specifies the server timeout value in milliseconds for document synchronization. This policy setting does not apply when synchronizing documents on SharePoint servers. \r\n\r\nIf you enable this policy setting, you may specify the server timeout value in milliseconds for document synchronization.\r\n\r\nIf you disable or do not configure this policy setting, the server timeout will default to the Windows timeout value.\r\n",
+    "helpText": "",
+    "name": "L_SetDocumentSynchronizationTimeout",
+    "displayName": "Set document synchronization timeout (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_collaborationsettings~l_coauthoring_l_setdocumentsynchronizationtimeout_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_collaborationsettings~l_coauthoring_l_setdocumentsynchronizationtimeout_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_collaborationsettings~l_coauthoring_l_setdocumentsynchronizationtimeout_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_collaborationsettings~l_coauthoring_l_setdocumentsynchronizationtimeout_l_setdocumentsynchronizationtimeoutspinid",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

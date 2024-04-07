@@ -1,0 +1,89 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "IZ_PolicyNotificationBarActiveXURLaction_5",
+        "Automatic prompting for ActiveX controls",
+        "\\Windows Components\\Internet Explorer\\Internet Control Panel\\Security Page\\Trusted Sites Zone",
+        "Administrative Templates\\Windows Components\\Internet Explorer\\Internet Control Panel\\Security Page\\Trusted Sites Zone",
+        "Trusted Sites Zone"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-trustedsiteszoneallowautomaticpromptingforactivexcontrols"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/InternetExplorer/TrustedSitesZoneAllowAutomaticPromptingForActiveXControls",
+    "rootDefinitionId": "device_vendor_msft_policy_config_internetexplorer_trustedsiteszoneallowautomaticpromptingforactivexcontrols",
+    "categoryId": "cd16477e-7cff-4c24-ba7a-cc4342779f4b",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_internetexplorer_trustedsiteszoneallowautomaticpromptingforactivexcontrols",
+    "description": "This policy setting manages whether users will be automatically prompted for ActiveX control installations.\r\n\r\nIf you enable this policy setting, users will receive a prompt when a site instantiates an ActiveX control they do not have installed.\r\n\r\nIf you disable this policy setting, ActiveX control installations will be blocked using the Notification bar. Users can click on the Notification bar to allow the ActiveX control prompt.\r\n\r\nIf you do not configure this policy setting, users will receive a prompt when a site instantiates an ActiveX control they do not have installed.",
+    "helpText": "",
+    "name": "IZ_PolicyNotificationBarActiveXURLaction_5",
+    "displayName": "Automatic prompting for ActiveX controls",
+    "defaultOptionId": "device_vendor_msft_policy_config_internetexplorer_trustedsiteszoneallowautomaticpromptingforactivexcontrols_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.15063",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_internetexplorer_trustedsiteszoneallowautomaticpromptingforactivexcontrols_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_internetexplorer_trustedsiteszoneallowautomaticpromptingforactivexcontrols_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_internetexplorer_trustedsiteszoneallowautomaticpromptingforactivexcontrols_iz_partname2201",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

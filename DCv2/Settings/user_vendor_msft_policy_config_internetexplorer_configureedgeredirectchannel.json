@@ -1,0 +1,97 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "NeedEdgeBrowser",
+        "Configure which channel of Microsoft Edge to use for opening redirected sites",
+        "\\Windows Components\\Internet Explorer",
+        "Administrative Templates\\Windows Components\\Internet Explorer",
+        "Internet Explorer"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-configureedgeredirectchannel"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/InternetExplorer/ConfigureEdgeRedirectChannel",
+    "rootDefinitionId": "user_vendor_msft_policy_config_internetexplorer_configureedgeredirectchannel",
+    "categoryId": "f60cd3c8-a91b-4542-b09f-129dfc7e589c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_internetexplorer_configureedgeredirectchannel",
+    "description": "Enables you to configure up to three versions of Microsoft Edge to open a redirected site (in order of preference). Use this policy if your environment is configured to redirect sites from Internet Explorer 11 to Microsoft Edge. If any of the chosen versions are not installed on the device, that preference will be bypassed.\r\n\r\nIf both the Windows Update for the next version of Microsoft Edge* and Microsoft Edge Stable channel are installed, the following behaviors occur:\r\n- If you disable or don't configure this policy, Microsoft Edge Stable channel is used. This is the default behavior.\r\n- If you enable this policy, you can configure redirected sites to open in up to three of the following channels where:\r\n    1 = Microsoft Edge Stable\r\n    2 = Microsoft Edge Beta version 77 or later\r\n    3 = Microsoft Edge Dev version 77 or later\r\n    4 = Microsoft Edge Canary version 77 or later\r\n\r\nIf the Windows Update for the next version of Microsoft Edge* or Microsoft Edge Stable channel are not installed, the following behaviors occur:\r\n- If you disable or don't configure this policy, Microsoft Edge version 45 or earlier is automatically used. This is the default behavior.\r\n- If you enable this policy, you can configure redirected sites to open in up to three of the following channels where:\r\n    0 = Microsoft Edge version 45 or earlier\r\n    1 = Microsoft Edge Stable\r\n    2 = Microsoft Edge Beta version 77 or later\r\n    3 = Microsoft Edge Dev version 77 or later\r\n    4 = Microsoft Edge Canary version 77 or later\r\n\r\n*For more information about the Windows update for the next version of Microsoft Edge including how to disable it, see https://go.microsoft.com/fwlink/?linkid=2102115. This update applies only to Windows 10 version 1709 and higher.",
+    "helpText": "",
+    "name": "NeedEdgeBrowser",
+    "displayName": "Configure which channel of Microsoft Edge to use for opening redirected sites (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_internetexplorer_configureedgeredirectchannel_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "9.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.18362.1350",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_internetexplorer_configureedgeredirectchannel_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_internetexplorer_configureedgeredirectchannel_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_internetexplorer_configureedgeredirectchannel_neededgebrowser",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_internetexplorer_configureedgeredirectchannel_neededgebrowser2",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_internetexplorer_configureedgeredirectchannel_neededgebrowser3",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

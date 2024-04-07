@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_Specifynumberofchannelstorecord",
+        "Specify number of channels to record",
+        "\\Microsoft OneNote 2016\\OneNote Options\\Audio and Video",
+        "Microsoft OneNote 2016\\OneNote Options\\Audio and Video",
+        "Audio and Video"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/onent16v2~Policy~L_MicrosoftOfficeOneNote~L_OneNoteOptions~L_AudioandVideo/L_Specifynumberofchannelstorecord",
+    "rootDefinitionId": "user_vendor_msft_policy_config_onent16v2~policy~l_microsoftofficeonenote~l_onenoteoptions~l_audioandvideo_l_specifynumberofchannelstorecord",
+    "categoryId": "ffe3b0a1-62e6-4a31-ad9a-a213472fb7ef",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_onent16v2~policy~l_microsoftofficeonenote~l_onenoteoptions~l_audioandvideo_l_specifynumberofchannelstorecord",
+    "description": "Specifies whether 1 or 2 channels are used when recording audio. If the appropriate codec is found, then this is the default number of channels used in the Format setting for Linked Audio found under File tab | Options | Audio & Video.",
+    "helpText": "",
+    "name": "L_Specifynumberofchannelstorecord",
+    "displayName": "Specify number of channels to record (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_onent16v2~policy~l_microsoftofficeonenote~l_onenoteoptions~l_audioandvideo_l_specifynumberofchannelstorecord_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_onent16v2~policy~l_microsoftofficeonenote~l_onenoteoptions~l_audioandvideo_l_specifynumberofchannelstorecord_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_onent16v2~policy~l_microsoftofficeonenote~l_onenoteoptions~l_audioandvideo_l_specifynumberofchannelstorecord_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_onent16v2~policy~l_microsoftofficeonenote~l_onenoteoptions~l_audioandvideo_l_specifynumberofchannelstorecord_l_channels12",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

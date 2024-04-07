@@ -1,0 +1,82 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_RelyonCSSforfontformatting",
+        "Rely on CSS for font formatting",
+        "\\Microsoft Office 2016\\Tools | Options | General | Web Options...\\General",
+        "Microsoft Office 2016\\Tools | Options | General | Web Options...\\General",
+        "General"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/office16v2~Policy~L_MicrosoftOfficeSystem~L_ToolsOptionsGeneralWebOptions~L_General/L_RelyonCSSforfontformatting",
+    "rootDefinitionId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_toolsoptionsgeneralweboptions~l_general_l_relyoncssforfontformatting",
+    "categoryId": "eef9e433-0ca1-40b0-9a5d-c0ba1f8f0510",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_toolsoptionsgeneralweboptions~l_general_l_relyoncssforfontformatting",
+    "description": "This policy setting allows you to rely on CSS for font formatting.\r\n\r\nIf you enable this policy setting, you may select configure these options:\r\n- Enforce CSS: If checked, enforce CSS is on.  If not checked, enforce CSS is off.\r\n- CSS setting for Word: If checked, the CSS setting for Word as an email editor is used.\r\n\r\nIf you disable or do not configure this policy setting, the options will not be configured.",
+    "helpText": "",
+    "name": "L_RelyonCSSforfontformatting",
+    "displayName": "Rely on CSS for font formatting (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_toolsoptionsgeneralweboptions~l_general_l_relyoncssforfontformatting_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_toolsoptionsgeneralweboptions~l_general_l_relyoncssforfontformatting_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_toolsoptionsgeneralweboptions~l_general_l_relyoncssforfontformatting_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_toolsoptionsgeneralweboptions~l_general_l_relyoncssforfontformatting_l_checktoenforcecssonunchecktoenforcecssoff",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_toolsoptionsgeneralweboptions~l_general_l_relyoncssforfontformatting_l_usethecsssettingforwordasanemaileditor",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

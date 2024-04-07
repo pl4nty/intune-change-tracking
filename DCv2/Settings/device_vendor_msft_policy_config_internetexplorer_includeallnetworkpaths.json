@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "IZ_UNCAsIntranet",
+        "Intranet Sites: Include all network paths (UNCs)",
+        "\\Windows Components\\Internet Explorer\\Internet Control Panel\\Security Page",
+        "Security Page"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-includeallnetworkpaths"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/InternetExplorer/IncludeAllNetworkPaths",
+    "rootDefinitionId": "device_vendor_msft_policy_config_internetexplorer_includeallnetworkpaths",
+    "categoryId": "d2da164d-dd77-4489-b67f-d7fbdb19cde2",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_internetexplorer_includeallnetworkpaths",
+    "description": "This policy setting controls whether URLs representing UNCs are mapped into the local Intranet security zone.\r\n\r\nIf you enable this policy setting, all network paths are mapped into the Intranet Zone.\r\n\r\nIf you disable this policy setting, network paths are not necessarily mapped into the Intranet Zone (other rules might map one there).\r\n\r\nIf you do not configure this policy setting, users choose whether network paths are mapped into the Intranet Zone.",
+    "helpText": "",
+    "name": "IZ_UNCAsIntranet",
+    "displayName": "Intranet Sites: Include all network paths (UNCs)",
+    "defaultOptionId": "device_vendor_msft_policy_config_internetexplorer_includeallnetworkpaths_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.15063",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_internetexplorer_includeallnetworkpaths_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_internetexplorer_includeallnetworkpaths_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

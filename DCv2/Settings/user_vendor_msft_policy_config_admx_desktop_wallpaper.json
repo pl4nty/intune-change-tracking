@@ -1,0 +1,94 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Wallpaper",
+        "Desktop Wallpaper",
+        "\\Desktop\\Desktop",
+        "Administrative Templates\\Desktop\\Desktop",
+        "Desktop"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-desktop#admx-desktop-wallpaper"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_Desktop/Wallpaper",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_desktop_wallpaper",
+    "categoryId": "a69e7a98-5af7-4834-bae1-2a1047663a71",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_desktop_wallpaper",
+    "description": "Specifies the desktop background (\"wallpaper\") displayed on all users' desktops.\r\n\r\nThis setting lets you specify the wallpaper on users' desktops and prevents users from changing the image or its presentation. The wallpaper you specify can be stored in a bitmap (*.bmp) or JPEG (*.jpg) file.\r\n\r\nTo use this setting, type the fully qualified path and name of the file that stores the wallpaper image. You can type a local path, such as C:\\Windows\\web\\wallpaper\\home.jpg or a UNC path, such as \\\\Server\\Share\\Corp.jpg. If the specified file is not available when the user logs on, no wallpaper is displayed. Users cannot specify alternative wallpaper. You can also use this setting to specify that the wallpaper image be centered, tiled, or stretched. Users cannot change this specification.\r\n\r\nIf you disable this setting or do not configure it, no wallpaper is displayed. However, users can select the wallpaper of their choice.\r\n\r\nAlso, see the \"Allow only bitmapped wallpaper\" in the same location, and the \"Prevent changing wallpaper\" setting in User Configuration\\Administrative Templates\\Control Panel.\r\n\r\nNote: This setting does not apply to remote desktop server sessions.\n ",
+    "helpText": "",
+    "name": "Wallpaper",
+    "displayName": "Desktop Wallpaper (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_desktop_wallpaper_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_desktop_wallpaper_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_desktop_wallpaper_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_admx_desktop_wallpaper_wallpapername",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_admx_desktop_wallpaper_wallpaperstyle",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

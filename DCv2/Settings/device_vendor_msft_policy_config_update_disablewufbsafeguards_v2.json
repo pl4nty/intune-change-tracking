@@ -1,0 +1,81 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Disable WUfB Safeguards",
+        "Update",
+        "Windows Update For Business"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Update#update-disablewufbsafeguards"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Update/DisableWUfBSafeguards",
+    "rootDefinitionId": "device_vendor_msft_policy_config_update_disablewufbsafeguards_v2",
+    "categoryId": "0e6c9053-73d6-4c56-9147-53513f6eefd8",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_update_disablewufbsafeguards_v2",
+    "description": "This policy setting specifies that a Windows Update for Business device should skip safeguards.",
+    "helpText": "",
+    "name": "DisableWUfBSafeguards",
+    "displayName": "Disable WUfB Safeguards",
+    "defaultOptionId": "device_vendor_msft_policy_config_update_disablewufbsafeguards_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "8.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17763.1490",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_update_disablewufbsafeguards_0",
+            "description": "Safeguards are enabled and devices may be blocked for upgrades until the safeguard is cleared.",
+            "helpText": null,
+            "name": "Safeguards are enabled and devices may be blocked for upgrades until the safeguard is cleared.",
+            "displayName": "Safeguards are enabled and devices may be blocked for upgrades until the safeguard is cleared.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_update_disablewufbsafeguards_1",
+            "description": "Safeguards are not enabled and upgrades will be deployed without blocking on safeguards.",
+            "helpText": null,
+            "name": "Safeguards are not enabled and upgrades will be deployed without blocking on safeguards.",
+            "displayName": "Safeguards are not enabled and upgrades will be deployed without blocking on safeguards.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

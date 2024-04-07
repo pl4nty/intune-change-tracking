@@ -1,0 +1,73 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ProfilesAccessNetworkasComputer",
+        "Access Network as Computer Object",
+        "\\FSLogix\\Profile Containers",
+        "Administrative Templates\\FSLogix\\Profile Containers",
+        "Profile Containers"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/FSLogixv1~Policy~FSLogix~Profiles/ProfilesAccessNetworkasComputer",
+    "rootDefinitionId": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilesaccessnetworkascomputer",
+    "categoryId": "0b4f28d5-fc68-43a4-92cb-9a47c2a8ebf9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilesaccessnetworkascomputer",
+    "description": "NOTE:  Once this policy is Enabled or Disabled, setting it back to Not Configured has NO EFFECT.\r\n\r\nAttach as computer - folder must have permissions for computer objects\r\n\r\nCAUTION:  Do not use this configuration setting unless your storage provider or architecture will NOT work with user-level permissions to the VHD(x) container locations. This setting will allow the virtual machine to access all the VHD(x) files on the storage provider creating a potential security risk.\r\n\r\nRegistry Entry:  HKLM\\SOFTWARE\\FSLogix\\Profiles\\AccessNetworkAsComputerObject\r\nType:  DWORD\r\nValues:  0 = Disabled, 1 = Enabled",
+    "helpText": "",
+    "name": "ProfilesAccessNetworkasComputer",
+    "displayName": "Access Network as Computer Object",
+    "defaultOptionId": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilesaccessnetworkascomputer_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilesaccessnetworkascomputer_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_fslogixv1~policy~fslogix~profiles_profilesaccessnetworkascomputer_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

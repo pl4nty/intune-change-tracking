@@ -1,0 +1,90 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DCBatteryDischargeAction0_2",
+        "Critical battery notification action",
+        "\\System\\Power Management\\Notification Settings",
+        "Administrative Templates\\System\\Power Management\\Notification Settings",
+        "Notification Settings"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-power#admx-power-dcbatterydischargeaction0-2"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_Power/DCBatteryDischargeAction0_2",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_power_dcbatterydischargeaction0_2",
+    "categoryId": "d5585700-13a0-4ab4-9b19-4c15c1ead170",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_power_dcbatterydischargeaction0_2",
+    "description": "This policy setting specifies the action that Windows takes when battery capacity reaches the critical battery notification level.\r\n\r\nIf you enable this policy setting, select one of the following actions:\r\n-Take no action\r\n-Sleep\r\n-Hibernate\r\n-Shut down\r\n\r\nIf you disable or do not configure this policy setting, users control this setting.\r\n ",
+    "helpText": "",
+    "name": "DCBatteryDischargeAction0_2",
+    "displayName": "Critical battery notification action",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_power_dcbatterydischargeaction0_2_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_power_dcbatterydischargeaction0_2_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_power_dcbatterydischargeaction0_2_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_power_dcbatterydischargeaction0_2_selectdcbatterydischargeaction0",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

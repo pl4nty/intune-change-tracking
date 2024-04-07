@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "AuthNegotiateDelegateAllowlist",
+        "Specifies a list of servers that Microsoft Edge can delegate user credentials to",
+        "\\Microsoft Edge\\HTTP authentication",
+        "Microsoft Edge\\HTTP authentication",
+        "HTTP authentication"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edge~Policy~microsoft_edge~HTTPAuthentication/AuthNegotiateDelegateAllowlist",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~httpauthentication_authnegotiatedelegateallowlist",
+    "categoryId": "d17b08e6-de3b-445b-ab14-1d47e62efdcf",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~httpauthentication_authnegotiatedelegateallowlist",
+    "description": "Configure the list of servers that Microsoft Edge can delegate to.\r\n\r\nSeparate multiple server names with commas. Wildcards (*) are allowed.\r\n\r\nIf you don't configure this policy Microsoft Edge won't delegate user credentials even if a server is detected as Intranet.\r\n\r\nExample value: contoso.com",
+    "helpText": "",
+    "name": "AuthNegotiateDelegateAllowlist",
+    "displayName": "Specifies a list of servers that Microsoft Edge can delegate user credentials to (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~httpauthentication_authnegotiatedelegateallowlist_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~httpauthentication_authnegotiatedelegateallowlist_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~httpauthentication_authnegotiatedelegateallowlist_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~httpauthentication_authnegotiatedelegateallowlist_authnegotiatedelegateallowlist",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

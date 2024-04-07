@@ -1,0 +1,90 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "QosServiceTypeControlledLoad_C",
+        "Controlled load service type",
+        "\\Network\\QoS Packet Scheduler\\DSCP value of conforming packets",
+        "Administrative Templates\\Network\\QoS Packet Scheduler\\DSCP value of conforming packets",
+        "DSCP value of conforming packets"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-qos#admx-qos-qosservicetypecontrolledload-c"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_QOS/QosServiceTypeControlledLoad_C",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_qos_qosservicetypecontrolledload_c",
+    "categoryId": "3426ef3d-40f5-474e-a493-4a1545c62348",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_qos_qosservicetypecontrolledload_c",
+    "description": "Specifies an alternate Layer-3 Differentiated Services Code Point (DSCP) value for packets with the Controlled Load service type (ServiceTypeControlledLoad). The Packet Scheduler inserts the corresponding DSCP value in the IP header of the packets.\r\n\r\nThis setting applies only to packets that conform to the flow specification.\r\n\r\nIf you enable this setting, you can change the default DSCP value associated with the Controlled Load service type.\r\n\r\nIf you disable this setting, the system uses the default DSCP value of 24 (0x18).\r\n\r\nImportant: If the DSCP value for this service type is specified in the registry for a particular network adapter, this setting is ignored when configuring that network adapter.\r\n ",
+    "helpText": "",
+    "name": "QosServiceTypeControlledLoad_C",
+    "displayName": "Controlled load service type",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_qos_qosservicetypecontrolledload_c_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_qos_qosservicetypecontrolledload_c_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_qos_qosservicetypecontrolledload_c_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_qos_qosservicetypecontrolledload_c_qosdscpvalue",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

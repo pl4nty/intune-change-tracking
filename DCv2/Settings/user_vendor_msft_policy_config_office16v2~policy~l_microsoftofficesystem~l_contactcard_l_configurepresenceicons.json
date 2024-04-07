@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_ConfigurePresenceIcons",
+        "Configure presence icons",
+        "\\Microsoft Office 2016\\Contact Card",
+        "Microsoft Office 2016\\Contact Card",
+        "Contact Card"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/office16v2~Policy~L_MicrosoftOfficeSystem~L_ContactCard/L_ConfigurePresenceIcons",
+    "rootDefinitionId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_contactcard_l_configurepresenceicons",
+    "categoryId": "5cd6dc4f-b231-449f-bc10-16041b73356a",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_contactcard_l_configurepresenceicons",
+    "description": "This policy setting allows you to specify whether Microsoft Office applications display presence icons in the user interface (UI).\r\n\r\nIf you enable this policy setting, you may specify when applications display presence icons:\r\n\r\n- Display all: Presence icons are displayed in the UI.\r\n- Display some: Presence icons are displayed only in the Contact Card, Quick Contacts and SharePoint.\r\n- Display none: Presence icons are not displayed in the UI.\r\n\r\nIf you disable or you do not configure this policy setting, presence icons are displayed in the UI.",
+    "helpText": "",
+    "name": "L_ConfigurePresenceIcons",
+    "displayName": "Configure presence icons (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_contactcard_l_configurepresenceicons_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_contactcard_l_configurepresenceicons_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_contactcard_l_configurepresenceicons_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_contactcard_l_configurepresenceicons_l_configurepresenceiconsdropid",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

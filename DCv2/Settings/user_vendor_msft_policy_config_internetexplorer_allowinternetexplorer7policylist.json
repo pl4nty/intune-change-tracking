@@ -1,0 +1,89 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "CompatView_UsePolicyList",
+        "Use Policy List of Internet Explorer 7 sites",
+        "\\Windows Components\\Internet Explorer\\Compatibility View",
+        "Administrative Templates\\Windows Components\\Internet Explorer\\Compatibility View",
+        "Compatibility View"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowinternetexplorer7policylist"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/InternetExplorer/AllowInternetExplorer7PolicyList",
+    "rootDefinitionId": "user_vendor_msft_policy_config_internetexplorer_allowinternetexplorer7policylist",
+    "categoryId": "c26b2f10-f2c0-45f2-955c-5379dd12f206",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_internetexplorer_allowinternetexplorer7policylist",
+    "description": "This policy setting allows you to add specific sites that must be viewed in Internet Explorer 7 Compatibility View.\r\n\r\nIf you enable this policy setting, the user can add and remove sites from the list, but the user cannot remove the entries that you specify.\r\n\r\nIf you disable or do not configure this policy setting, the user can add and remove sites from the list.",
+    "helpText": "",
+    "name": "CompatView_UsePolicyList",
+    "displayName": "Use Policy List of Internet Explorer 7 sites (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_internetexplorer_allowinternetexplorer7policylist_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "6.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_internetexplorer_allowinternetexplorer7policylist_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_internetexplorer_allowinternetexplorer7policylist_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_internetexplorer_allowinternetexplorer7policylist_compatview_sitelist",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

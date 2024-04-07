@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "POL_AdmPwd_DontAllowPwdExpirationBehindPolicy",
+        "Do not allow password expiration time longer than required by policy",
+        "\\LAPS",
+        "Administrative Templates\\LAPS",
+        "LAPS"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-admpwd#admx-admpwd-pol-admpwd-dontallowpwdexpirationbehindpolicy"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_AdmPwd/POL_AdmPwd_DontAllowPwdExpirationBehindPolicy",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_admpwd_pol_admpwd_dontallowpwdexpirationbehindpolicy",
+    "categoryId": "b3b2fc04-4b88-4a1c-8370-04573019eebe",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_admpwd_pol_admpwd_dontallowpwdexpirationbehindpolicy",
+    "description": "\r\nWhen you enable this setting, planned password expiration longer than password age dictated by \"Password Settings\" policy is NOT allowed. When such expiration is detected, password is changed immediately and password expiration is set according to policy.\r\n\r\nWhen you disable or not configure this setting, password expiration time may be longer than required by \"Password Settings\" policy.\r\n      ",
+    "helpText": "",
+    "name": "POL_AdmPwd_DontAllowPwdExpirationBehindPolicy",
+    "displayName": "Do not allow password expiration time longer than required by policy",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_admpwd_pol_admpwd_dontallowpwdexpirationbehindpolicy_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_admpwd_pol_admpwd_dontallowpwdexpirationbehindpolicy_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_admpwd_pol_admpwd_dontallowpwdexpirationbehindpolicy_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

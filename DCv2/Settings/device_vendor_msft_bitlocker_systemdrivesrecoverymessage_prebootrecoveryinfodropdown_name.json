@@ -1,0 +1,123 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "PrebootRecoveryInfo_Name",
+        "Configure pre-boot recovery message and URL",
+        "\\Windows Components\\BitLocker Drive Encryption\\Operating System Drives",
+        "Administrative Templates\\Windows Components\\BitLocker Drive Encryption\\Operating System Drives",
+        "Operating System Drives"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/en-us/windows/client-management/mdm/bitlocker-csp"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/BitLocker",
+    "offsetUri": "/SystemDrivesRecoveryMessage",
+    "rootDefinitionId": "device_vendor_msft_bitlocker_systemdrivesrecoverymessage",
+    "categoryId": "27e0674a-ea53-4f63-9c2e-fe76aa1021d0",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_bitlocker_systemdrivesrecoverymessage_prebootrecoveryinfodropdown_name",
+    "description": "",
+    "helpText": "",
+    "name": "PrebootRecoveryInfoDropDown_Name",
+    "displayName": "Select an option for the pre-boot recovery message:",
+    "defaultOptionId": "device_vendor_msft_bitlocker_systemdrivesrecoverymessage_prebootrecoveryinfodropdown_name_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.15063",
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_bitlocker_systemdrivesrecoverymessage_prebootrecoveryinfodropdown_name_0",
+            "description": null,
+            "helpText": null,
+            "name": "",
+            "displayName": "",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_bitlocker_systemdrivesrecoverymessage_1",
+                    "parentSettingId": "device_vendor_msft_bitlocker_systemdrivesrecoverymessage"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_bitlocker_systemdrivesrecoverymessage_prebootrecoveryinfodropdown_name_1",
+            "description": null,
+            "helpText": null,
+            "name": "Use default recovery message and URL",
+            "displayName": "Use default recovery message and URL",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_bitlocker_systemdrivesrecoverymessage_1",
+                    "parentSettingId": "device_vendor_msft_bitlocker_systemdrivesrecoverymessage"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_bitlocker_systemdrivesrecoverymessage_prebootrecoveryinfodropdown_name_2",
+            "description": null,
+            "helpText": null,
+            "name": "Use custom recovery message",
+            "displayName": "Use custom recovery message",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_bitlocker_systemdrivesrecoverymessage_1",
+                    "parentSettingId": "device_vendor_msft_bitlocker_systemdrivesrecoverymessage"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_bitlocker_systemdrivesrecoverymessage_prebootrecoveryinfodropdown_name_3",
+            "description": null,
+            "helpText": null,
+            "name": "Use custom recovery URL",
+            "displayName": "Use custom recovery URL",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "3"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_bitlocker_systemdrivesrecoverymessage_1",
+                    "parentSettingId": "device_vendor_msft_bitlocker_systemdrivesrecoverymessage"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

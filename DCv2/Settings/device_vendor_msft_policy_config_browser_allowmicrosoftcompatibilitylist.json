@@ -1,0 +1,81 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Allow Microsoft Compatibility List",
+        "Browser"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Browser#browser-allowmicrosoftcompatibilitylist"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Browser/AllowMicrosoftCompatibilityList",
+    "rootDefinitionId": "device_vendor_msft_policy_config_browser_allowmicrosoftcompatibilitylist",
+    "categoryId": "5d835ac8-2e5e-4887-8e4d-0c3846d0ad9f",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_browser_allowmicrosoftcompatibilitylist",
+    "description": "This policy setting lets you decide whether the Microsoft Compatibility List is enabled or disabled in Microsoft Edge. This feature uses a Microsoft-provided list to ensure that any sites with known compatibility issues are displayed correctly when a user navigates to them. By default, the Microsoft Compatibility List is enabled and can be viewed by navigating to about:compat.  If you enable or don’t configure this setting, Microsoft Edge will periodically download the latest version of the list from Microsoft and will apply the configurations specified there during browser navigation. If a user visits a site on the Microsoft Compatibility List, he or she will be prompted to open the site in Internet Explorer 11. Once in Internet Explorer, the site will automatically be rendered as if the user is viewing it in the previous version of Internet Explorer it requires to display correctly.  If you disable this setting, the Microsoft Compatibility List will not be used during browser navigation.",
+    "helpText": "",
+    "name": "AllowMicrosoftCompatibilityList",
+    "displayName": "Allow Microsoft Compatibility List",
+    "defaultOptionId": "device_vendor_msft_policy_config_browser_allowmicrosoftcompatibilitylist_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "4.1",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.14393",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_browser_allowmicrosoftcompatibilitylist_0",
+            "description": "Prevented/Not allowed.",
+            "helpText": null,
+            "name": "Prevented/Not allowed.",
+            "displayName": "Block",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_browser_allowmicrosoftcompatibilitylist_1",
+            "description": "Allowed.",
+            "helpText": null,
+            "name": "Allowed.",
+            "displayName": "Allow",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

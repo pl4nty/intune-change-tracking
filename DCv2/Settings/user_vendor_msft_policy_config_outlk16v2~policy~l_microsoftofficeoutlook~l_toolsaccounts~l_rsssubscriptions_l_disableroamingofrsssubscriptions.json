@@ -1,0 +1,73 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_DisableRoamingofRSSSubscriptions",
+        "Do not roam users' RSS Feeds",
+        "\\Microsoft Outlook 2016\\Account Settings\\RSS Feeds",
+        "Microsoft Outlook 2016\\Account Settings\\RSS Feeds",
+        "RSS Feeds"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/outlk16v2~Policy~L_MicrosoftOfficeOutlook~L_ToolsAccounts~L_RSSSubscriptions/L_DisableRoamingofRSSSubscriptions",
+    "rootDefinitionId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_toolsaccounts~l_rsssubscriptions_l_disableroamingofrsssubscriptions",
+    "categoryId": "4e349e4a-dd0b-4175-8974-a2a0f5e35b4d",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_toolsaccounts~l_rsssubscriptions_l_disableroamingofrsssubscriptions",
+    "description": "This policy setting allows you to change the default delivery location of RSS Feeds to a local PST.\r\n\r\nIf you enable this setting, the default delivery location will be changed to a local PST.  When RSS Feeds are delivered to a local PST, they will not roam from client to client and will only be available on the computer where the user originally subscribed to the RSS Feed.\r\n\r\nIf you disable or do not configure this policy setting, subscriptions to RSS Feeds are delivered to the user's mailbox and roam from client to client via Exchange.  This setting does not affect RSS Feeds that were subscribed before the policy setting was enabled.  This setting also does not prevent the user from manually directing an RSS Feed to deliver to the user's mailbox, which allows the RSS Feed to roam from client to client.",
+    "helpText": "",
+    "name": "L_DisableRoamingofRSSSubscriptions",
+    "displayName": "Do not roam users' RSS Feeds (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_toolsaccounts~l_rsssubscriptions_l_disableroamingofrsssubscriptions_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_toolsaccounts~l_rsssubscriptions_l_disableroamingofrsssubscriptions_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_toolsaccounts~l_rsssubscriptions_l_disableroamingofrsssubscriptions_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

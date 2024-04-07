@@ -1,0 +1,88 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "RestrictFormSuggestPW",
+        "Turn on the auto-complete feature for user names and passwords on forms",
+        "\\Windows Components\\Internet Explorer",
+        "Internet Explorer"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowautocomplete"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/InternetExplorer/AllowAutoComplete",
+    "rootDefinitionId": "user_vendor_msft_policy_config_internetexplorer_allowautocomplete",
+    "categoryId": "f60cd3c8-a91b-4542-b09f-129dfc7e589c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_internetexplorer_allowautocomplete",
+    "description": "This AutoComplete feature can remember and suggest User names and passwords on Forms.\r\n\r\nIf you enable this setting, the user cannot change \"User name and passwords on forms\" or \"prompt me to save passwords\". The Auto Complete feature for User names and passwords on Forms will be turned on. You have to decide whether to select \"prompt me to save passwords\".\r\n\r\nIf you disable this setting the user cannot change \"User name and passwords on forms\" or \"prompt me to save passwords\". The Auto Complete feature for User names and passwords on Forms is turned off. The user also cannot opt to be prompted to save passwords.\r\n\r\nIf you do not configure this setting, the user has the freedom of turning on Auto complete for User name and passwords on forms and the option of prompting to save passwords. To display this option, the users open the Internet Options dialog box, click the Contents Tab and click the Settings button.",
+    "helpText": "",
+    "name": "RestrictFormSuggestPW",
+    "displayName": "Turn on the auto-complete feature for user names and passwords on forms (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_internetexplorer_allowautocomplete_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "6.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_internetexplorer_allowautocomplete_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_internetexplorer_allowautocomplete_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_internetexplorer_allowautocomplete_chkbox_passwordask",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

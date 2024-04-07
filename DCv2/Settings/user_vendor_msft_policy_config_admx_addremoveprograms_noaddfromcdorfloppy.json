@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "NoAddFromCDorFloppy",
+        "Hide the \"Add a program from CD-ROM or floppy disk\" option",
+        "\\Control Panel\\Add or Remove Programs",
+        "Administrative Templates\\Control Panel\\Add or Remove Programs",
+        "Add or Remove Programs"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-addremoveprograms#admx-addremoveprograms-noaddfromcdorfloppy"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_AddRemovePrograms/NoAddFromCDorFloppy",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_addremoveprograms_noaddfromcdorfloppy",
+    "categoryId": "a809df26-b5db-4af9-b247-a539ada4e869",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_addremoveprograms_noaddfromcdorfloppy",
+    "description": "Removes the \"Add a program from CD-ROM or floppy disk\" section from the Add New Programs page. This prevents users from using Add or Remove Programs to install programs from removable media.\r\n\r\nIf you disable this setting or do not configure it, the \"Add a program from CD-ROM or floppy disk\" option is available to all users.\r\n\r\nThis setting does not prevent users from using other tools and methods to add or remove program components.\r\n\r\nNote: If the \"Hide Add New Programs page\" setting is enabled, this setting is ignored. Also, if the \"Prevent removable media source for any install\" setting (located in User Configuration\\Administrative Templates\\Windows Components\\Windows Installer) is enabled, users cannot add programs from removable media, regardless of this setting.\r\n ",
+    "helpText": "",
+    "name": "NoAddFromCDorFloppy",
+    "displayName": "Hide the \"Add a program from CD-ROM or floppy disk\" option (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_addremoveprograms_noaddfromcdorfloppy_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_addremoveprograms_noaddfromcdorfloppy_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_addremoveprograms_noaddfromcdorfloppy_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,92 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "get,replace",
+    "keywords": [
+        "Default Inbound Action",
+        "Firewall"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/Firewall-csp/"
+    ],
+    "baseUri": "./Vendor/MSFT/Firewall",
+    "offsetUri": "/MdmStore/HyperVVMSettings/{0}/PrivateProfile/DefaultInboundAction",
+    "rootDefinitionId": "vendor_msft_firewall_mdmstore_hypervvmsettings_{vmcreatorid}",
+    "categoryId": "4a5e4714-00ac-4793-b0cc-5049041b0ed7",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "vendor_msft_firewall_mdmstore_hypervvmsettings_{vmcreatorid}_privateprofile_defaultinboundaction",
+    "description": "This value is the action that the Hyper-V Firewall does by default (and evaluates at the very end) on inbound connections. The allow action is represented by 0x00000000; 0x00000001 represents a block action. Default value is 1 [Block].",
+    "helpText": "",
+    "name": "DefaultInboundAction",
+    "displayName": "Default Inbound Action",
+    "defaultOptionId": "vendor_msft_firewall_mdmstore_hypervvmsettings_{vmcreatorid}_privateprofile_defaultinboundaction_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager,microsoftSense",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22621.2352",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "vendor_msft_firewall_mdmstore_hypervvmsettings_{vmcreatorid}_privateprofile_defaultinboundaction_0",
+            "description": "Allow Inbound By Default",
+            "helpText": null,
+            "name": "Allow Inbound By Default",
+            "displayName": "Allow Inbound By Default",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "vendor_msft_firewall_mdmstore_hypervvmsettings_{vmcreatorid}_privateprofile_enablefirewall_true",
+                    "parentSettingId": "vendor_msft_firewall_mdmstore_hypervvmsettings_{vmcreatorid}_privateprofile_enablefirewall"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "vendor_msft_firewall_mdmstore_hypervvmsettings_{vmcreatorid}_privateprofile_defaultinboundaction_1",
+            "description": "Block Inbound By Default",
+            "helpText": null,
+            "name": "Block Inbound By Default",
+            "displayName": "Block Inbound By Default",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "vendor_msft_firewall_mdmstore_hypervvmsettings_{vmcreatorid}_privateprofile_enablefirewall_true",
+                    "parentSettingId": "vendor_msft_firewall_mdmstore_hypervvmsettings_{vmcreatorid}_privateprofile_enablefirewall"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

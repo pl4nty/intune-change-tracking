@@ -1,0 +1,89 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "IZ_PolicyActiveScripting_7",
+        "Allow active scripting",
+        "\\Windows Components\\Internet Explorer\\Internet Control Panel\\Security Page\\Restricted Sites Zone",
+        "Administrative Templates\\Windows Components\\Internet Explorer\\Internet Control Panel\\Security Page\\Restricted Sites Zone",
+        "Restricted Sites Zone"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowactivescripting"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/InternetExplorer/RestrictedSitesZoneAllowActiveScripting",
+    "rootDefinitionId": "user_vendor_msft_policy_config_internetexplorer_restrictedsiteszoneallowactivescripting",
+    "categoryId": "a4bffc2b-76af-48d3-acdf-8566e51ef163",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_internetexplorer_restrictedsiteszoneallowactivescripting",
+    "description": "This policy setting allows you to manage whether script code on pages in the zone is run.\r\n\r\nIf you enable this policy setting, script code on pages in the zone can run automatically. If you select Prompt in the drop-down box, users are queried to choose whether to allow script code on pages in the zone to run.\r\n\r\nIf you disable this policy setting, script code on pages in the zone is prevented from running.\r\n\r\nIf you do not configure this policy setting, script code on pages in the zone is prevented from running.",
+    "helpText": "",
+    "name": "IZ_PolicyActiveScripting_7",
+    "displayName": "Allow active scripting (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_internetexplorer_restrictedsiteszoneallowactivescripting_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "6.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_internetexplorer_restrictedsiteszoneallowactivescripting_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_internetexplorer_restrictedsiteszoneallowactivescripting_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_internetexplorer_restrictedsiteszoneallowactivescripting_iz_partname1400",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,112 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DriverSearchPlaces_SearchOrderConfiguration",
+        "Specify search order for device driver source locations",
+        "\\System\\Device Installation",
+        "Administrative Templates\\System\\Device Installation",
+        "Device Installation"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_DeviceSetup/DriverSearchPlaces_SearchOrderConfiguration",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_devicesetup_driversearchplaces_searchorderconfiguration",
+    "categoryId": "486dc66e-960c-4622-b3cb-3ff9a2d434eb",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_devicesetup_driversearchplaces_searchorderconfiguration_driversearchplaces_searchorderconfiguration_dropdown",
+    "description": null,
+    "helpText": "",
+    "name": "DriverSearchPlaces_SearchOrderConfiguration_dropdown",
+    "displayName": "Select search order: (Device)",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_devicesetup_driversearchplaces_searchorderconfiguration_driversearchplaces_searchorderconfiguration_dropdown_2",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_devicesetup_driversearchplaces_searchorderconfiguration_driversearchplaces_searchorderconfiguration_dropdown_1",
+            "description": null,
+            "helpText": null,
+            "name": "Always search Windows Update",
+            "displayName": "Always search Windows Update",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_devicesetup_driversearchplaces_searchorderconfiguration_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_devicesetup_driversearchplaces_searchorderconfiguration"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_devicesetup_driversearchplaces_searchorderconfiguration_driversearchplaces_searchorderconfiguration_dropdown_2",
+            "description": null,
+            "helpText": null,
+            "name": "Search Windows Update only if needed",
+            "displayName": "Search Windows Update only if needed",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_devicesetup_driversearchplaces_searchorderconfiguration_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_devicesetup_driversearchplaces_searchorderconfiguration"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_devicesetup_driversearchplaces_searchorderconfiguration_driversearchplaces_searchorderconfiguration_dropdown_0",
+            "description": null,
+            "helpText": null,
+            "name": "Do not search Windows Update",
+            "displayName": "Do not search Windows Update",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_devicesetup_driversearchplaces_searchorderconfiguration_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_devicesetup_driversearchplaces_searchorderconfiguration"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

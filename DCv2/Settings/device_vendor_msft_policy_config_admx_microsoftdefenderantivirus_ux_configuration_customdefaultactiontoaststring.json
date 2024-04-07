@@ -1,0 +1,90 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "UX_Configuration_CustomDefaultActionToastString",
+        "Display additional text to clients when they need to perform an action",
+        "\\Windows Components\\Microsoft Defender Antivirus\\Client Interface",
+        "Administrative Templates\\Windows Components\\Microsoft Defender Antivirus\\Client Interface",
+        "Client Interface"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus#admx-microsoftdefenderantivirus-ux-configuration-customdefaultactiontoaststring"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_MicrosoftDefenderAntivirus/UX_Configuration_CustomDefaultActionToastString",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_microsoftdefenderantivirus_ux_configuration_customdefaultactiontoaststring",
+    "categoryId": "e06fb472-94c1-4dd9-afdf-6bb2ddaa3dc6",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_microsoftdefenderantivirus_ux_configuration_customdefaultactiontoaststring",
+    "description": "This policy setting allows you to configure whether or not to display additional text to clients when they need to perform an action. The text displayed is a custom administrator-defined string. For example, the phone number to call the company help desk. The client interface will only display a maximum of 1024 characters. Longer strings will be truncated before display.\r\n\r\n    If you enable this setting, the additional text specified will be displayed.\r\n\r\n    If you disable or do not configure this setting, there will be no additional text displayed.\r\n ",
+    "helpText": "",
+    "name": "UX_Configuration_CustomDefaultActionToastString",
+    "displayName": "Display additional text to clients when they need to perform an action",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_microsoftdefenderantivirus_ux_configuration_customdefaultactiontoaststring_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_microsoftdefenderantivirus_ux_configuration_customdefaultactiontoaststring_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_microsoftdefenderantivirus_ux_configuration_customdefaultactiontoaststring_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_microsoftdefenderantivirus_ux_configuration_customdefaultactiontoaststring_ux_configuration_customdefaultactiontoaststring",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

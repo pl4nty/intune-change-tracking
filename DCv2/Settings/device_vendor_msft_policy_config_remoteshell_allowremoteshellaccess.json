@@ -1,0 +1,84 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "AllowRemoteShellAccess",
+        "Allow Remote Shell Access",
+        "\\Windows Components\\Windows Remote Shell",
+        "Administrative Templates\\Windows Components\\Windows Remote Shell",
+        "Windows Remote Shell"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remoteshell#remoteshell-allowremoteshellaccess"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/RemoteShell/AllowRemoteShellAccess",
+    "rootDefinitionId": "device_vendor_msft_policy_config_remoteshell_allowremoteshellaccess",
+    "categoryId": "1219a9c2-dccb-445f-9f90-8e86e2de22d6",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_remoteshell_allowremoteshellaccess",
+    "description": "This policy setting configures access to remote shells.\r\n\r\nIf you enable or do not configure this policy setting, new remote shell connections are accepted by the server.\r\n\r\nIf you set this policy to ‘disabled’, new remote shell connections are rejected by the server.",
+    "helpText": "",
+    "name": "AllowRemoteShellAccess",
+    "displayName": "Allow Remote Shell Access",
+    "defaultOptionId": "device_vendor_msft_policy_config_remoteshell_allowremoteshellaccess_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "6.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_remoteshell_allowremoteshellaccess_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_remoteshell_allowremoteshellaccess_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

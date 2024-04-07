@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Allow TLS13",
+        "Eap"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Eap#eap-allowtls1-3"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Eap/AllowTLS1_3",
+    "rootDefinitionId": "device_vendor_msft_policy_config_eap_allowtls1_3",
+    "categoryId": "8d9eaa88-a2b4-42e7-83e5-8dc12f51d36b",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_eap_allowtls1_3",
+    "description": "Added in Windows 10, version 21H1. Allow or disallow use of TLS 1.3 during EAP client authentication.",
+    "helpText": "",
+    "name": "AllowTLS1_3",
+    "displayName": "Allow TLS13",
+    "defaultOptionId": "device_vendor_msft_policy_config_eap_allowtls1_3_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22000",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_eap_allowtls1_3_0",
+            "description": "Use of TLS version 1.3 is not allowed for authentication.",
+            "helpText": null,
+            "name": "Use of TLS version 1.3 is not allowed for authentication.",
+            "displayName": "Use of TLS version 1.3 is not allowed for authentication.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_eap_allowtls1_3_1",
+            "description": "Use of TLS version 1.3 is allowed for authentication.",
+            "helpText": null,
+            "name": "Use of TLS version 1.3 is allowed for authentication.",
+            "displayName": "Use of TLS version 1.3 is allowed for authentication.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

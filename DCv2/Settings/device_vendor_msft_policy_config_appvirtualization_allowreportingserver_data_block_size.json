@@ -1,0 +1,65 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Reporting_Server_Policy",
+        "Reporting Server",
+        "\\System\\App-V\\Reporting",
+        "AppVirtualization",
+        "App Virtualization",
+        "Reporting"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/AppVirtualization/AllowReportingServer",
+    "rootDefinitionId": "device_vendor_msft_policy_config_appvirtualization_allowreportingserver",
+    "categoryId": "48f508a5-5a2c-4d20-8d89-2d352a209907",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_appvirtualization_allowreportingserver_data_block_size",
+    "description": "",
+    "helpText": "",
+    "name": "Data_Block_Size",
+    "displayName": "Data Block Size",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.15063",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsEducation",
+            "iotEnterprise",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 4294967295,
+        "minimumValue": 1024
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 65536
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "device_vendor_msft_policy_config_appvirtualization_allowreportingserver_1",
+            "parentSettingId": "device_vendor_msft_policy_config_appvirtualization_allowreportingserver"
+        }
+    ],
+    "dependedOnBy": []
+}

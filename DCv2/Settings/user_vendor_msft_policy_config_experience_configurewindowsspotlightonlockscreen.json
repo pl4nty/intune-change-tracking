@@ -1,0 +1,125 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Configure Windows Spotlight On Lock Screen",
+        "Experience"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Experience#experience-configurewindowsspotlightonlockscreen"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Experience/ConfigureWindowsSpotlightOnLockScreen",
+    "rootDefinitionId": "user_vendor_msft_policy_config_experience_allowwindowsspotlight",
+    "categoryId": "139974ad-f615-442b-b3dc-84a44e3ec663",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_experience_configurewindowsspotlightonlockscreen",
+    "description": "Allows IT admins to specify whether spotlight should be used on the user's lock screen. If your organization does not have an Enterprise spotlight content service, then this policy will behave the same as a setting of 1.",
+    "helpText": "",
+    "name": "ConfigureWindowsSpotlightOnLockScreen",
+    "displayName": "Configure Windows Spotlight On Lock Screen (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_experience_configurewindowsspotlightonlockscreen_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "4.1",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.14393",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsEducation",
+            "iotEnterprise",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_experience_configurewindowsspotlightonlockscreen_0",
+            "description": "Windows spotlight disabled.",
+            "helpText": null,
+            "name": "Windows spotlight disabled.",
+            "displayName": "Windows spotlight disabled.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_experience_allowwindowsspotlight_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_experience_allowwindowsspotlight"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_experience_configurewindowsspotlightonlockscreen_1",
+            "description": "Windows spotlight enabled.",
+            "helpText": null,
+            "name": "Windows spotlight enabled.",
+            "displayName": "Windows spotlight enabled.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_experience_allowwindowsspotlight_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_experience_allowwindowsspotlight"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_experience_configurewindowsspotlightonlockscreen_2",
+            "description": "Windows spotlight is always enabled, the user cannot disable it",
+            "helpText": null,
+            "name": "Windows spotlight is always enabled, the user cannot disable it",
+            "displayName": "Windows spotlight is always enabled, the user cannot disable it",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_experience_allowwindowsspotlight_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_experience_allowwindowsspotlight"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_experience_configurewindowsspotlightonlockscreen_3",
+            "description": "Windows spotlight is always enabled, the user cannot disable it. For special configurations only",
+            "helpText": null,
+            "name": "Windows spotlight is always enabled, the user cannot disable it. For special configurations only",
+            "displayName": "Windows spotlight is always enabled, the user cannot disable it. For special configurations only",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_experience_allowwindowsspotlight_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_experience_allowwindowsspotlight"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

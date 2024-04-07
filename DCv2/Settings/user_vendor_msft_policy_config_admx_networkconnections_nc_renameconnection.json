@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "NC_RenameConnection",
+        "Ability to rename LAN connections or remote access connections available to all users",
+        "\\Network\\Network Connections",
+        "Administrative Templates\\Network\\Network Connections",
+        "Network Connections"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-networkconnections#admx-networkconnections-nc-renameconnection"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_NetworkConnections/NC_RenameConnection",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_networkconnections_nc_renameconnection",
+    "categoryId": "76c8131a-62fe-4134-aeac-d999f01911ed",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_networkconnections_nc_renameconnection",
+    "description": "Determines whether users can rename LAN or all user remote access connections.\r\n\r\nIf you enable this setting, the Rename option is enabled for all users. Users can rename connections by clicking the icon representing a connection or by using the File menu.\r\n\r\nIf you disable this setting (and enable the \"Enable Network Connections settings for Administrators\" setting), the Rename option for LAN and all user remote access connections is disabled for all users (including Administrators and Network Configuration Operators).\r\n\r\nImportant: If the \"Enable Network Connections settings for Administrators\" is disabled or not configured, this setting will not apply to administrators on post-Windows 2000 computers.\r\n\r\nIf this setting is not configured, only Administrators and Network Configuration Operators have the right to rename LAN or all user remote access connections.\r\n\r\nNote: When configured, this setting always takes precedence over the \"Ability to rename LAN connections\" and \"Ability to rename all user remote access connections\" settings.\r\n\r\nNote: This setting does not prevent users from using other programs, such as Internet Explorer, to rename remote access connections.\r\n ",
+    "helpText": "",
+    "name": "NC_RenameConnection",
+    "displayName": "Ability to rename LAN connections or remote access connections available to all users (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_networkconnections_nc_renameconnection_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_networkconnections_nc_renameconnection_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_networkconnections_nc_renameconnection_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

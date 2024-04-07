@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DisallowPlaintextPin",
+        "Prevent plaintext PINs from being returned by Credential Manager",
+        "\\Windows Components\\Smart Card",
+        "Administrative Templates\\Windows Components\\Smart Card",
+        "Smart Card"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-smartcard#admx-smartcard-disallowplaintextpin"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_Smartcard/DisallowPlaintextPin",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_smartcard_disallowplaintextpin",
+    "categoryId": "4fc4d2f3-35ee-43ec-a033-ef78da571e70",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_smartcard_disallowplaintextpin",
+    "description": "This policy setting prevents plaintext PINs from being returned by Credential Manager. \r\n\r\nIf you enable this policy setting, Credential Manager does not return a plaintext PIN. \r\n\r\nIf you disable or do not configure this policy setting, plaintext PINs can be returned by Credential Manager.\r\n\r\nNote: Enabling this policy setting could prevent certain smart cards from working on Windows. Please consult your smart card manufacturer to find out whether you will be affected by this policy setting.\r\n\r\n ",
+    "helpText": "",
+    "name": "DisallowPlaintextPin",
+    "displayName": "Prevent plaintext PINs from being returned by Credential Manager",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_smartcard_disallowplaintextpin_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_smartcard_disallowplaintextpin_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_smartcard_disallowplaintextpin_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ExtensionInstallSources",
+        "Configure extension, app, and user script install sources",
+        "\\Google\\Google Chrome\\Extensions",
+        "Administrative Templates\\Google\\Google Chrome\\Extensions",
+        "Extensions"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV1~Policy~googlechrome~Extensions/ExtensionInstallSources",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~extensions_extensioninstallsources",
+    "categoryId": "216de445-a80d-4981-b151-3b4466edc808",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~extensions_extensioninstallsources",
+    "description": "Setting the policy specifies which URLs may install extensions, apps, and themes. Before Google Chrome 21, users could click on a link to a *.crx file, and Google Chrome would offer to install the file after a few warnings. Afterwards, such files must be downloaded and dragged to the Google Chrome settings page. This setting allows specific URLs to have the old, easier installation flow.\r\n\r\nEach item in this list is an extension-style match pattern (see https://developer.chrome.com/extensions/match_patterns). Users can easily install items from any URL that matches an item in this list. Both the location of the *.crx file and the page where the download is started from (the referrer) must be allowed by these patterns.\r\n\r\nExtensionInstallBlocklist takes precedence over this policy. That is, an extension on the blocklist won't be installed, even if it happens from a site on this list.\r\n\r\nExample value:\r\n\r\nhttps://corp.mycompany.com/*",
+    "helpText": "",
+    "name": "ExtensionInstallSources",
+    "displayName": "Configure extension, app, and user script install sources (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~extensions_extensioninstallsources_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~extensions_extensioninstallsources_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~extensions_extensioninstallsources_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~extensions_extensioninstallsources_extensioninstallsourcesdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

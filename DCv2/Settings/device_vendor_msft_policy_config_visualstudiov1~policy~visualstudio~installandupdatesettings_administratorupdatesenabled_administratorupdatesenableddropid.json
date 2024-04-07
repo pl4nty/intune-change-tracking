@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "AdministratorUpdatesEnabled",
+        "Enable administrator updates",
+        "\\Visual Studio\\Install and Update Settings",
+        "Administrative Templates\\Visual Studio\\Install and Update Settings",
+        "Install and Update Settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/VisualStudiov1~Policy~VisualStudio~InstallandUpdateSettings/AdministratorUpdatesEnabled",
+    "rootDefinitionId": "device_vendor_msft_policy_config_visualstudiov1~policy~visualstudio~installandupdatesettings_administratorupdatesenabled",
+    "categoryId": "175ddbac-b0ae-4d9d-b76e-4eb1a487fc93",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_visualstudiov1~policy~visualstudio~installandupdatesettings_administratorupdatesenabled_administratorupdatesenableddropid",
+    "description": "",
+    "helpText": "",
+    "name": "AdministratorUpdatesEnabledDropID",
+    "displayName": "Microsoft Update Channel",
+    "defaultOptionId": "device_vendor_msft_policy_config_visualstudiov1~policy~visualstudio~installandupdatesettings_administratorupdatesenabled_administratorupdatesenableddropid_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_visualstudiov1~policy~visualstudio~installandupdatesettings_administratorupdatesenabled_administratorupdatesenableddropid_1",
+            "description": null,
+            "helpText": null,
+            "name": "WSUS/SCCM",
+            "displayName": "WSUS/SCCM",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_visualstudiov1~policy~visualstudio~installandupdatesettings_administratorupdatesenabled_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_visualstudiov1~policy~visualstudio~installandupdatesettings_administratorupdatesenabled"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_visualstudiov1~policy~visualstudio~installandupdatesettings_administratorupdatesenabled_administratorupdatesenableddropid_2",
+            "description": null,
+            "helpText": null,
+            "name": "WSUS/SCCM and Microsoft Updates/Intune",
+            "displayName": "WSUS/SCCM and Microsoft Updates/Intune",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_visualstudiov1~policy~visualstudio~installandupdatesettings_administratorupdatesenabled_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_visualstudiov1~policy~visualstudio~installandupdatesettings_administratorupdatesenabled"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

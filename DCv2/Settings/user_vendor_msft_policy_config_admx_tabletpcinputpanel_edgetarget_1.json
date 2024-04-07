@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "EdgeTarget_1",
+        "Prevent Input Panel tab from appearing",
+        "\\Windows Components\\Tablet PC\\Input Panel",
+        "Administrative Templates\\Windows Components\\Tablet PC\\Input Panel",
+        "Input Panel"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-tabletpcinputpanel#admx-tabletpcinputpanel-edgetarget-1"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_TabletPCInputPanel/EdgeTarget_1",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_tabletpcinputpanel_edgetarget_1",
+    "categoryId": "575369a6-17a2-435e-81d4-71772e7d55b5",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_tabletpcinputpanel_edgetarget_1",
+    "description": "Prevents Input Panel tab from appearing on the edge of the Tablet PC screen.\r\n\r\nTablet PC Input Panel is a Tablet PC accessory that enables you to use handwriting or an on-screen keyboard to enter text, symbols, numbers, or keyboard shortcuts.\r\n\r\nIf you enable this policy, Input Panel tab will not appear on the edge of the Tablet PC screen. Users will not be able to configure this setting in the Input Panel Options dialog box.\r\n\r\nIf you disable this policy, Input Panel tab will appear on the edge of the Tablet PC screen. Users will not be able to configure this setting in the Input Panel Options dialog box.\r\n\r\nIf you do not configure this policy, Input Panel tab will appear on the edge of the Tablet PC screen. Users will be able to configure this setting on the Opening tab in Input Panel Options.\r\n\r\nCaution: If you enable both the “Prevent Input Panel from appearing next to text entry areas” policy and the “Prevent Input Panel tab from appearing” policy, and disable the “Show Input Panel taskbar icon” policy, the user will then have no way to access Input Panel.\r\n ",
+    "helpText": "",
+    "name": "EdgeTarget_1",
+    "displayName": "Prevent Input Panel tab from appearing (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_tabletpcinputpanel_edgetarget_1_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_tabletpcinputpanel_edgetarget_1_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_tabletpcinputpanel_edgetarget_1_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}
