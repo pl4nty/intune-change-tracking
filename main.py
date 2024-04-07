@@ -46,14 +46,15 @@ async def main():
                 data = json.loads(data)
                 for family in data.values():
                     for setting in family:
-                        path = Path(output, source, setting.get('id')).with_suffix('.json')
+                        # id_10699 -> id
+                        id = '_'.join(setting.get('id').split('_')[:-1])
+                        path = Path(output, source, id).with_suffix('.json')
                         with open(path, 'w', encoding='utf-8') as f:
                             json.dump(setting, f, ensure_ascii=False, indent=4)
 
     # DCv2 policies eg Settings Catalog
-    output = 'settings'
+    output = 'DCv2'
     shutil.rmtree(output)
-    os.makedirs(output)
     query_params = ConfigurationSettingsRequestBuilder.ConfigurationSettingsRequestBuilderGetQueryParameters(
         top=10
     )
@@ -61,11 +62,26 @@ async def main():
         options=[ResponseHandlerOption(NativeResponseHandler())],
         # query_parameters=query_params
     )
+
+    source = 'Settings'
+    os.makedirs(Path(output, source))
     data = await client.device_management.configuration_settings.get(request_configuration=request_config)
-    for setting in data.json().get('value'):
-        setting.pop('version')
-        path = Path(output, setting.get('id')).with_suffix('.json')
+    for item in data.json().get('value'):
+        item.pop('version')
+        path = Path(output, source, item.get('id')).with_suffix('.json')
         with open(path, 'w', encoding='utf-8') as f:
-            json.dump(setting, f, ensure_ascii=False, indent=4)
+            json.dump(item, f, ensure_ascii=False, indent=4)
+
+    # backwards compat
+    shutil.rmtree('settings')
+    shutil.copytree(Path(output, source), 'settings')
+
+    source = 'Templates'
+    os.makedirs(Path(output, source))
+    data = await client.device_management.configuration_policy_templates.get(request_configuration=request_config)
+    for item in data.json().get('value'):
+        path = Path(output, source, item.get('id')).with_suffix('.json')
+        with open(path, 'w', encoding='utf-8') as f:
+            json.dump(item, f, ensure_ascii=False, indent=4)
 
 asyncio.run(main())
