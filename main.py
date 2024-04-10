@@ -52,9 +52,6 @@ async def main():
                         with open(path, 'w', encoding='utf-8') as f:
                             json.dump(setting, f, ensure_ascii=False, indent=4)
 
-    # DCv2 policies eg Settings Catalog
-    output = 'DCv2'
-    shutil.rmtree(output)
     query_params = ConfigurationSettingsRequestBuilder.ConfigurationSettingsRequestBuilderGetQueryParameters(
         top=10
     )
@@ -63,6 +60,13 @@ async def main():
         # query_parameters=query_params
     )
 
+    data = await client.service_principals.with_url('https://graph.microsoft.com/beta/servicePrincipals/appId=0000000a-0000-0000-c000-000000000000/endpoints').get(request_configuration=request_config)
+    with open('Endpoints.json', 'w', encoding='utf-8') as f:
+        json.dump(data.json(), f, ensure_ascii=False, indent=4)
+
+    # DCv2 policies eg Settings Catalog
+    output = 'DCv2'
+    shutil.rmtree(output)
     source = 'Settings'
     os.makedirs(Path(output, source))
     data = await client.device_management.configuration_settings.get(request_configuration=request_config)
