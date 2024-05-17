@@ -1,0 +1,71 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "ADE profile",
+        "enrollment",
+        "Management settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "./enrollment/ade",
+    "offsetUri": "/authenticationMethod",
+    "rootDefinitionId": "ade_useraffinity",
+    "categoryId": "75e27534-3163-45b1-b34e-ca79b077b286",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "id": "ade_authenticationmethod",
+    "description": "If your organization uses multifactor authentication, select Company Portal or Setup Assistant with modern authentication, which prompts users to authenticate based on settings in Azure AD.",
+    "helpText": "",
+    "name": "AuthenticationMethod",
+    "displayName": "Intune authentication method",
+    "defaultOptionId": "ade_authenticationmethod_2",
+    "applicability": {
+        "description": null,
+        "platform": "iOS",
+        "deviceMode": "none",
+        "technologies": "enrollment"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "ade_authenticationmethod_2",
+            "description": null,
+            "helpText": null,
+            "name": "SetupAssistantLegacyModernAuth",
+            "displayName": "Setup Assistant with modern authentication",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "ade_useraffinity_1",
+                    "parentSettingId": "ade_useraffinity"
+                }
+            ],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "ade_modernauth_awaitfinalconfiguration",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "itemId": "ade_authenticationmethod_0",
+            "description": null,
+            "helpText": null,
+            "name": "CompanyPortal",
+            "displayName": "Company Portal",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

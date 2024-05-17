@@ -1,0 +1,71 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "ADE profile",
+        "enrollment",
+        "Management settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "./enrollment/ade",
+    "offsetUri": "/modernAuth_awaitfinalconfiguration",
+    "rootDefinitionId": "ade_useraffinity",
+    "categoryId": "75e27534-3163-45b1-b34e-ca79b077b286",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "template",
+    "id": "ade_modernauth_awaitfinalconfiguration",
+    "description": "Keeps the device in Setup Assistant until the first sync between the device and Intune installs policies.",
+    "helpText": "",
+    "name": "ModernAuth_Awaitfinalconfiguration",
+    "displayName": "Await final configuration",
+    "defaultOptionId": "ade_modernauth_awaitfinalconfiguration_1",
+    "applicability": {
+        "description": null,
+        "platform": "iOS",
+        "deviceMode": "none",
+        "technologies": "enrollment"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "ade_modernauth_awaitfinalconfiguration_0",
+            "description": null,
+            "helpText": null,
+            "name": "No",
+            "displayName": "No",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "ade_authenticationmethod_2",
+                    "parentSettingId": "ade_authenticationmethod"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "ade_modernauth_awaitfinalconfiguration_1",
+            "description": null,
+            "helpText": null,
+            "name": "Yes",
+            "displayName": "Yes",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "ade_authenticationmethod_2",
+                    "parentSettingId": "ade_authenticationmethod"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}
