@@ -3,8 +3,7 @@
     "accessTypes": "add,delete,get,replace",
     "keywords": [
         "Enabled",
-        "DM Client",
-        "Config Refresh"
+        "DM Client"
     ],
     "infoUrls": [
         "https://docs.microsoft.com/windows/client-management/mdm/DMClient-csp/"
@@ -12,15 +11,15 @@
     "baseUri": "./Device/Vendor/MSFT/DMClient",
     "offsetUri": "/Provider/{0}/ConfigRefresh/Enabled",
     "rootDefinitionId": "device_vendor_msft_dmclient_provider_{providerid}",
-    "categoryId": "80b21376-0e9a-4e5b-8a74-b672adbe94a8",
+    "categoryId": "bff4b0f4-15cd-47ad-98a9-e50c9cd9a96e",
     "settingUsage": "configuration",
     "uxBehavior": "toggle",
     "visibility": "settingsCatalog,template",
     "id": "device_vendor_msft_dmclient_provider_{providerid}_configrefresh_enabled",
-    "description": "This node determines whether or not a periodic settings refresh for MDM policies will occur.\r\n ",
+    "description": "This node determines whether or not a periodic settings refresh for MDM policies will occur.",
     "helpText": "",
     "name": "Enabled",
-    "displayName": "Enable config refresh",
+    "displayName": "Config refresh",
     "defaultOptionId": "device_vendor_msft_dmclient_provider_{providerid}_configrefresh_enabled_false",
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
@@ -53,15 +52,15 @@
     "referredSettingInformationList": [],
     "options": [
         {
-            "itemId": "device_vendor_msft_dmclient_provider_{providerid}_configrefresh_enabled_true",
-            "description": "ConfigRefresh is enabled.",
+            "itemId": "device_vendor_msft_dmclient_provider_{providerid}_configrefresh_enabled_false",
+            "description": "Disabled.",
             "helpText": null,
-            "name": "ConfigRefresh is enabled.",
-            "displayName": "ConfigRefresh is enabled.",
+            "name": "ConfigRefresh is disabled.",
+            "displayName": "Disabled.",
             "optionValue": {
                 "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
                 "settingValueTemplateReference": null,
-                "value": "true"
+                "value": "false"
             },
             "dependentOn": [
                 {
@@ -72,15 +71,15 @@
             "dependedOnBy": []
         },
         {
-            "itemId": "device_vendor_msft_dmclient_provider_{providerid}_configrefresh_enabled_false",
-            "description": "ConfigRefresh is disabled.",
+            "itemId": "device_vendor_msft_dmclient_provider_{providerid}_configrefresh_enabled_true",
+            "description": "Enabled.",
             "helpText": null,
-            "name": "ConfigRefresh is disabled.",
-            "displayName": "ConfigRefresh is disabled.",
+            "name": "ConfigRefresh is enabled.",
+            "displayName": "Enabled.",
             "optionValue": {
                 "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
                 "settingValueTemplateReference": null,
-                "value": "false"
+                "value": "true"
             },
             "dependentOn": [
                 {
