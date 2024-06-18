@@ -1,0 +1,73 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ZstdContentEncodingEnabled",
+        "Enable zstd content encoding support",
+        "\\Microsoft Edge\\Network settings",
+        "Microsoft Edge\\Network settings",
+        "Network settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev125~Policy~microsoft_edge~Network/ZstdContentEncodingEnabled",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edgev125~policy~microsoft_edge~network_zstdcontentencodingenabled",
+    "categoryId": "3fbd3b29-bafd-4adf-89e4-3be612dee275",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_microsoft_edgev125~policy~microsoft_edge~network_zstdcontentencodingenabled",
+    "description": "This feature enables advertising \"zstd\" support in the Accept-Encoding request header and support for decompressing zstd web content.\r\n\r\nIf you enable or don't configure this policy, Microsoft Edge will accept server responses compressed with zstd.\r\n\r\nIf you disable this policy, the zstd content encoding feature will not be advertised or supported when processing server responses.\r\n\r\nThis policy is temporary and will be removed in the future.",
+    "helpText": "",
+    "name": "ZstdContentEncodingEnabled",
+    "displayName": "Enable zstd content encoding support",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edgev125~policy~microsoft_edge~network_zstdcontentencodingenabled_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev125~policy~microsoft_edge~network_zstdcontentencodingenabled_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev125~policy~microsoft_edge~network_zstdcontentencodingenabled_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}
