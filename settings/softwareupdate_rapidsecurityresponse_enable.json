@@ -1,0 +1,69 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Software Update Settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "RapidSecurityResponse/Enable",
+    "rootDefinitionId": "softwareupdate_softwareupdate",
+    "categoryId": "b382d980-7459-4850-a45e-75dd99488972",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "softwareupdate_rapidsecurityresponse_enable",
+    "description": "If 'false', Rapid Security Responses are not offered for user installation. Rapid Security Responses can still be installed via 'com.apple.configuration.softwareupdate.enforcement.specific' configurations. If 'true', Rapid Security Responses are offered to the user.",
+    "helpText": null,
+    "name": "RapidSecurityResponse_Enable",
+    "displayName": "Enable",
+    "defaultOptionId": "softwareupdate_rapidsecurityresponse_enable_true",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "softwareupdate_rapidsecurityresponse_enable_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "softwareupdate_rapidsecurityresponse",
+                    "parentSettingId": "softwareupdate_rapidsecurityresponse"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "softwareupdate_rapidsecurityresponse_enable_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "softwareupdate_rapidsecurityresponse",
+                    "parentSettingId": "softwareupdate_rapidsecurityresponse"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}
