@@ -1,0 +1,69 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Math Settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "Calculator/BasicMode/AddSquareRoot",
+    "rootDefinitionId": "mathsettings_mathsettings",
+    "categoryId": "6b83806b-eb3e-4224-b082-d6f2c8ab3eb9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "mathsettings_calculator_basicmode_addsquareroot",
+    "description": "Add the square root button to the basic calculator by replacing the +/- button. Normally, the square root button is available in scientific mode, so this key can be used to make it available when the scientific mode is restricted.",
+    "helpText": null,
+    "name": "Calculator_BasicMode_AddSquareRoot",
+    "displayName": "Add Square Root",
+    "defaultOptionId": "mathsettings_calculator_basicmode_addsquareroot_false",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "mathsettings_calculator_basicmode_addsquareroot_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "mathsettings_calculator_basicmode",
+                    "parentSettingId": "mathsettings_calculator_basicmode"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "mathsettings_calculator_basicmode_addsquareroot_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "mathsettings_calculator_basicmode",
+                    "parentSettingId": "mathsettings_calculator_basicmode"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

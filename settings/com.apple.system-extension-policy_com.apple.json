@@ -23,7 +23,9 @@
         "com.apple.system-extension-policy_allowedteamidentifiers",
         "com.apple.system-extension-policy_allowedsystemextensiontypes",
         "com.apple.system-extension-policy_allowedsystemextensions",
-        "com.apple.system-extension-policy_removablesystemextensions"
+        "com.apple.system-extension-policy_removablesystemextensions",
+        "com.apple.system-extension-policy_nonremovablesystemextensions",
+        "com.apple.system-extension-policy_nonremovablefromuisystemextensions"
     ],
     "maximumCount": 1,
     "minimumCount": 0,
@@ -54,6 +56,14 @@
         },
         {
             "dependedOnBy": "com.apple.system-extension-policy_removablesystemextensions",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.system-extension-policy_nonremovablesystemextensions",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.system-extension-policy_nonremovablefromuisystemextensions",
             "required": false
         }
     ]
