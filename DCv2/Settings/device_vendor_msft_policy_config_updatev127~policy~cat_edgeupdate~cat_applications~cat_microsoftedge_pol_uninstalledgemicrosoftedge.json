@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Pol_UninstallEdgeMicrosoftEdge",
+        "Specify uninstall behavior for Microsoft Edge",
+        "\\Microsoft Edge Update\\Applications\\Microsoft Edge",
+        "Microsoft Edge Update\\Applications\\Microsoft Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/updatev127~Policy~Cat_EdgeUpdate~Cat_Applications~Cat_MicrosoftEdge/Pol_UninstallEdgeMicrosoftEdge",
+    "rootDefinitionId": "device_vendor_msft_policy_config_updatev127~policy~cat_edgeupdate~cat_applications~cat_microsoftedge_pol_uninstalledgemicrosoftedge",
+    "categoryId": "3bb9ca38-645e-479c-ac5f-01959aec9c30",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_updatev127~policy~cat_edgeupdate~cat_applications~cat_microsoftedge_pol_uninstalledgemicrosoftedge",
+    "description": "You can specify whether Microsoft Edge (stable channel) is uninstalled, or is blocked from being uninstalled, on domain-joined devices in the European Economic Area (EEA).\r\n\r\nIf this policy is set to 'Enabled', Microsoft Edge will be automatically uninstalled on all devices in the EEA where this policy is deployed. User data will be kept on the device. Microsoft Edge will be uninstalled the next time Microsoft Edge Update automatically checks for updates. If Microsoft Edge is uninstalled from the devices, applications, widgets (for example, News, Search, and Weather) or any other Progressive Web Applications (PWAs) that depend on Microsoft Edge will no longer be available.\r\n\r\nIf this policy is set to 'Enabled and delete user data' (Setting '2'), Microsoft Edge will be automatically uninstalled on all devices in the EEA where this policy is deployed, and user data will be deleted from the device.\r\n\r\nIf this policy is set to 'Disabled' (Setting '3'), all users in the EEA are prevented from uninstalling Microsoft Edge where this policy is deployed.\r\n\r\nIf the policy is 'Not configured' (default setting), a user's Windows region setting determines whether they can uninstall Microsoft Edge on a domain-joined device. Only users in EEA countries will be able to uninstall Microsoft Edge if they choose to do so. Users outside of this area will not be able to uninstall Microsoft Edge. \r\n\r\nThis policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain.\r\n\r\nIf Microsoft Edge needs to be reinstalled:\r\n- You can set the 'Install' Policy to Force Installs (Machine-Wide) to reinstall Microsoft Edge.\r\n- If you set the Install policy to Force Installs (Machine-Wide), and also set the Uninstall policy to Enabled, the Force Installs (Machine-Wide) policy will override the Uninstall policy.",
+    "helpText": "",
+    "name": "Pol_UninstallEdgeMicrosoftEdge",
+    "displayName": "Specify uninstall behavior for Microsoft Edge",
+    "defaultOptionId": "device_vendor_msft_policy_config_updatev127~policy~cat_edgeupdate~cat_applications~cat_microsoftedge_pol_uninstalledgemicrosoftedge_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_updatev127~policy~cat_edgeupdate~cat_applications~cat_microsoftedge_pol_uninstalledgemicrosoftedge_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_updatev127~policy~cat_edgeupdate~cat_applications~cat_microsoftedge_pol_uninstalledgemicrosoftedge_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_updatev127~policy~cat_edgeupdate~cat_applications~cat_microsoftedge_pol_uninstalledgemicrosoftedge_part_uninstalledgepolicy",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}
