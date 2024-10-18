@@ -17,7 +17,7 @@
     "uxBehavior": "toggle",
     "visibility": "settingsCatalog,template",
     "id": "device_vendor_msft_policy_config_wifi_allowmanualwificonfiguration",
-    "description": "Allow or disallow connecting to Wi-Fi outside of MDM server-installed networks. Most restricted value is 0. Note Setting this policy deletes any previously installed user-configured and Wi-Fi sense Wi-Fi profiles from the device. Certain Wi-Fi profiles that are not user configured nor Wi-Fi sense might not be deleted. In addition, not all non-MDM profiles are completely deleted.",
+    "description": "Allow or block connections to Wi-Fi outside of MDM server-installed networks. If you change this setting to Block, you must deploy enterprise Wi-Fi profiles to the device using the Wi-Fi CSP before you apply this setting. Otherwise, the device will go offline since it won't be able to connect to Wi-Fi. Note that choosing to block Wi-Fi connections will delete any previously installed user-configured Wi-Fi profiles from the device, though not all non-MDM profiles will be deleted.",
     "helpText": "",
     "name": "AllowManualWiFiConfiguration",
     "displayName": "Allow Manual Wi Fi Configuration",
