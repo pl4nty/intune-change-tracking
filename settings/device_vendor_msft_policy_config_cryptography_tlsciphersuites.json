@@ -1,5 +1,5 @@
 {
-    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
     "accessTypes": "add,delete,get,replace",
     "keywords": [
         "TLS Cipher Suites",
@@ -16,10 +16,12 @@
     "uxBehavior": "default",
     "visibility": "settingsCatalog,template",
     "id": "device_vendor_msft_policy_config_cryptography_tlsciphersuites",
-    "description": "Lists the Cryptographic Cipher Algorithms allowed for SSL connections. Format is a semicolon delimited list. Last write win.",
+    "description": "Lists the Cryptographic Cipher Algorithms allowed for SSL connections. Format is a semicolon delimited list. Last write wins.",
     "helpText": "",
     "name": "TLSCipherSuites",
     "displayName": "TLS Cipher Suites",
+    "maximumCount": 600,
+    "minimumCount": 0,
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
         "description": null,
