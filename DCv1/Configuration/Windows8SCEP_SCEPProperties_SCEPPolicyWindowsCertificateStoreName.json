@@ -167,7 +167,7 @@
                                 "validation": [
                                     {
                                         "validationType": 2,
-                                        "validationArguments": "^(?:(?:(?:(?:{{(?:UserName|EmailAddress|OnPrem_Distinguished_Name|onPremisesSamAccountName|UserPrincipalName|Department|AAD_Device_ID|Device_Serial|Device_IMEI|SerialNumber|IMEINumber|AzureADDeviceId|WiFiMacAddress|IMEI|DeviceName|DeviceId|FullyQualifiedDomainName|MEID)}}))|(?:[^{}|;]))+)$",
+                                        "validationArguments": "\\w*\\{\\{OnPremisesSecurityIdentifier\\}\\}\\w*|^(?:(?:(?:(?:{{(?:UserName|EmailAddress|OnPrem_Distinguished_Name|onPremisesSamAccountName|UserPrincipalName|Department|AAD_Device_ID|Device_Serial|Device_IMEI|SerialNumber|IMEINumber|AzureADDeviceId|WiFiMacAddress|IMEI|DeviceName|DeviceId|FullyQualifiedDomainName|MEID)}}))|(?:[^{}|;]))+)$",
                                         "failureMessage": "sCEPPolicyCustomSubjectAlternativeNameForUserDescription"
                                     }
                                 ],
@@ -378,8 +378,8 @@
                                 "validation": [
                                     {
                                         "validationType": 2,
-                                        "validationArguments": "^(?:(?:(?:(?:{{(?:AAD_Device_ID|Device_Serial|Device_IMEI|SerialNumber|IMEINumber|AzureADDeviceId|WiFiMacAddress|IMEI|DeviceName|DeviceId|FullyQualifiedDomainName|MEID)}}))|(?:[^{}|;]))+)$",
-                                        "failureMessage": "sCEPPolicyCustomSubjectAlternativeNameForMachineDescription"
+                                        "validationArguments": "\\w*\\{\\{OnPremisesSecurityIdentifier\\}\\}\\w*|^(?:(?:(?:(?:{{(?:AAD_Device_ID|Device_Serial|Device_IMEI|SerialNumber|IMEINumber|AzureADDeviceId|WiFiMacAddress|IMEI|DeviceName|DeviceId|FullyQualifiedDomainName|MEID)}}))|(?:[^{}|;]))+)$",
+                                        "failureMessage": "sCEPPolicyCustomSubjectAlternativeNameForWindowsMachineDescription"
                                     }
                                 ],
                                 "childSettings": [],
