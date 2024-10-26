@@ -15,6 +15,8 @@ from kiota_abstractions.native_response_handler import NativeResponseHandler
 from kiota_http.middleware.options import ResponseHandlerOption
 
 from msgraph_beta.generated.device_management.configuration_settings.configuration_settings_request_builder import ConfigurationSettingsRequestBuilder
+from msgraph_beta.generated.security.microsoft_graph_security_run_hunting_query.microsoft_graph_security_run_hunting_query_request_builder import MicrosoftGraphSecurityRunHuntingQueryRequestBuilder
+from msgraph_beta.generated.security.microsoft_graph_security_run_hunting_query.run_hunting_query_post_request_body import RunHuntingQueryPostRequestBody
 
 client = GraphServiceClient(DefaultAzureCredential(), ['https://graph.microsoft.com/.default'])
 
@@ -59,10 +61,41 @@ async def main():
         options=[ResponseHandlerOption(NativeResponseHandler())],
         # query_parameters=query_params
     )
-
     data = await client.service_principals.with_url('https://graph.microsoft.com/beta/servicePrincipals/appId=0000000a-0000-0000-c000-000000000000/endpoints').get(request_configuration=request_config)
     with open('Endpoints.json', 'w', encoding='utf-8') as f:
         json.dump(data.json(), f, ensure_ascii=False, indent=4)
+
+    # Defender schemas
+    request_config = MicrosoftGraphSecurityRunHuntingQueryRequestBuilder.MicrosoftGraphSecurityRunHuntingQueryRequestBuilderPostRequestConfiguration(
+        options=[ResponseHandlerOption(NativeResponseHandler())],
+    )
+    for table in [
+        'AlertEvidence',
+        'AlertInfo',
+        'BehaviorEntities',
+        'BehaviorInfo',
+
+        'AADSignInEventsBeta',
+        'AADSpnSignInEventsBeta',
+        'CloudAppEvents',
+        'IdentityInfo',
+        'IdentityLogonEvents',
+
+        'EmailAttachmentInfo',
+        'EmailEvents',
+        'EmailPostDeliveryEvents',
+        'EmailUrlInfo',
+        'UrlClickEvents',
+
+        'ExposureGraphEdges',
+        'ExposureGraphNodes',
+    ]:
+        data = await client.security.microsoft_graph_security_run_hunting_query.post(request_configuration=request_config, body=RunHuntingQueryPostRequestBody(
+            # match columns of 1P schema endpoint
+            query=f'{table} | getschema | project Description="", Type=split(DataType, ".")[1], Entity="", Name=ColumnName'
+        ))
+        with open(f'Defender/{table}.json', 'w', encoding='utf-8') as f:
+            json.dump(data.json().get('results'), f, ensure_ascii=False, indent=4)
 
     # DCv2 policies eg Settings Catalog
     output = 'DCv2'
