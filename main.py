@@ -20,6 +20,13 @@ from msgraph_beta.generated.security.microsoft_graph_security_run_hunting_query.
 
 client = GraphServiceClient(DefaultAzureCredential(), ['https://graph.microsoft.com/.default'])
 
+# id_10699 -> id
+def cleanDCv1Ids(setting):
+    id = '_'.join(setting.get('id').split('_')[:-1])
+    setting['id'] = id
+    for child in setting.get('childSettings', []):
+        cleanDCv1Ids(child)
+
 async def main():
     async with aiohttp.ClientSession() as session, session.get('https://intune.microsoft.com/signin/idpRedirect.js') as resp:
         versions = await resp.text()
@@ -50,6 +57,7 @@ async def main():
                     for setting in family:
                         # id_10699 -> id
                         id = '_'.join(setting.get('id').split('_')[:-1])
+                        cleanDCv1Ids(setting)
                         path = Path(output, source, id).with_suffix('.json')
                         with open(path, 'w', encoding='utf-8') as f:
                             json.dump(setting, f, ensure_ascii=False, indent=4)
