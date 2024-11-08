@@ -70,8 +70,10 @@ async def main():
         # query_parameters=query_params
     )
     data = await client.service_principals.with_url('https://graph.microsoft.com/beta/servicePrincipals/appId=0000000a-0000-0000-c000-000000000000/endpoints').get(request_configuration=request_config)
+    value_array = data.json().get('value')
+    sorted_value_array = sorted(value_array, key=lambda x: x['capability'])
     with open('Endpoints.json', 'w', encoding='utf-8') as f:
-        json.dump(data.json(), f, ensure_ascii=False, indent=4)
+        json.dump(sorted_value_array, f, ensure_ascii=False, indent=4)
 
     # Defender schemas
     request_config = MicrosoftGraphSecurityRunHuntingQueryRequestBuilder.MicrosoftGraphSecurityRunHuntingQueryRequestBuilderPostRequestConfiguration(
