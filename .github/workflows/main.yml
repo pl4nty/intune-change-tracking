@@ -4,6 +4,8 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 0 * * *" # daily
+  pull_request:
+    types: [opened, synchronize, reopened]
 
 jobs:
   main:
