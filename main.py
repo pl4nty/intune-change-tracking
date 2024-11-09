@@ -75,6 +75,16 @@ async def main():
     with open('Endpoints.json', 'w', encoding='utf-8') as f:
         json.dump(sorted_value_array, f, ensure_ascii=False, indent=4)
 
+    if os.path.exists('ServicePrincipals'):
+        shutil.rmtree('ServicePrincipals')
+    os.makedirs('ServicePrincipals')
+    data = await client.service_principals.get()
+    for sp in data.json().get('value'):
+        app_id = sp.get('appId')
+        if app_id:
+            with open(f'ServicePrincipals/{app_id}.json', 'w', encoding='utf-8') as f:
+                json.dump(sp, f, ensure_ascii=False, indent=4)
+
     # Defender schemas
     request_config = MicrosoftGraphSecurityRunHuntingQueryRequestBuilder.MicrosoftGraphSecurityRunHuntingQueryRequestBuilderPostRequestConfiguration(
         options=[ResponseHandlerOption(NativeResponseHandler())],
