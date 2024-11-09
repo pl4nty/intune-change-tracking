@@ -11,14 +11,19 @@ from pathlib import Path
 
 from azure.identity.aio import DefaultAzureCredential
 from msgraph_beta import GraphServiceClient
-from kiota_abstractions.native_response_handler import NativeResponseHandler
+
+from kiota_abstractions.base_request_configuration import RequestConfiguration
 from kiota_http.middleware.options import ResponseHandlerOption
+from kiota_abstractions.native_response_handler import NativeResponseHandler
 
 from msgraph_beta.generated.device_management.configuration_settings.configuration_settings_request_builder import ConfigurationSettingsRequestBuilder
 from msgraph_beta.generated.security.microsoft_graph_security_run_hunting_query.microsoft_graph_security_run_hunting_query_request_builder import MicrosoftGraphSecurityRunHuntingQueryRequestBuilder
 from msgraph_beta.generated.security.microsoft_graph_security_run_hunting_query.run_hunting_query_post_request_body import RunHuntingQueryPostRequestBody
 
 client = GraphServiceClient(DefaultAzureCredential(), ['https://graph.microsoft.com/.default'])
+request_config = RequestConfiguration(
+    options=[ResponseHandlerOption(NativeResponseHandler())],
+)
 
 # id_10699 -> id
 def cleanDCv1Ids(setting):
@@ -28,6 +33,7 @@ def cleanDCv1Ids(setting):
         cleanDCv1Ids(child)
 
 async def main():
+    # Setting status errors
     async with aiohttp.ClientSession() as session, session.get('https://intune.microsoft.com/signin/idpRedirect.js') as resp:
         versions = await resp.text()
         versions = re.search(r'\"extensionsPageVersion\":({[^}]+})', versions).group(1)
@@ -62,23 +68,26 @@ async def main():
                         with open(path, 'w', encoding='utf-8') as f:
                             json.dump(setting, f, ensure_ascii=False, indent=4)
 
-    query_params = ConfigurationSettingsRequestBuilder.ConfigurationSettingsRequestBuilderGetQueryParameters(
-        top=10
-    )
-    request_config = ConfigurationSettingsRequestBuilder.ConfigurationSettingsRequestBuilderGetRequestConfiguration(
-        options=[ResponseHandlerOption(NativeResponseHandler())],
-        # query_parameters=query_params
-    )
     data = await client.service_principals.with_url('https://graph.microsoft.com/beta/servicePrincipals/appId=0000000a-0000-0000-c000-000000000000/endpoints').get(request_configuration=request_config)
     value_array = data.json().get('value')
     sorted_value_array = sorted(value_array, key=lambda x: x['capability'])
     with open('Endpoints.json', 'w', encoding='utf-8') as f:
         json.dump(sorted_value_array, f, ensure_ascii=False, indent=4)
 
-    # Defender schemas
-    request_config = MicrosoftGraphSecurityRunHuntingQueryRequestBuilder.MicrosoftGraphSecurityRunHuntingQueryRequestBuilderPostRequestConfiguration(
-        options=[ResponseHandlerOption(NativeResponseHandler())],
-    )
+    # Service principals (Enterprise Apps)
+    if os.path.exists('ServicePrincipals'):
+        shutil.rmtree('ServicePrincipals')
+    os.makedirs('ServicePrincipals')
+    next = 'https://graph.microsoft.com/beta/servicePrincipals'
+    while next is not None:
+        data = await client.service_principals.with_url(next).get(request_configuration=request_config)
+        data = data.json()
+        for sp in data.get('value'):
+            app_id = sp.get('appId')
+            with open(f'ServicePrincipals/{app_id}.json', 'w', encoding='utf-8') as f:
+                json.dump(sp, f, ensure_ascii=False, indent=4)
+        next = data.get('@odata.nextLink')
+
     for table in [
         'AlertEvidence',
         'AlertInfo',
