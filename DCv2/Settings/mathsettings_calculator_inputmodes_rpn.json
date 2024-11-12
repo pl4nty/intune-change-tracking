@@ -2,23 +2,23 @@
     "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
     "accessTypes": "none",
     "keywords": [
-        "Software Update Settings"
+        "Math Settings"
     ],
     "infoUrls": [],
     "occurrence": null,
     "baseUri": "",
-    "offsetUri": "AllowStandardUserOSUpdates",
-    "rootDefinitionId": "softwareupdate_softwareupdate",
-    "categoryId": "b382d980-7459-4850-a45e-75dd99488972",
+    "offsetUri": "Calculator/InputModes/RPN",
+    "rootDefinitionId": "mathsettings_mathsettings",
+    "categoryId": "6b83806b-eb3e-4224-b082-d6f2c8ab3eb9",
     "settingUsage": "configuration",
     "uxBehavior": "toggle",
     "visibility": "settingsCatalog,template",
-    "id": "softwareupdate_allowstandarduserosupdates",
-    "description": "If 'true', a standard user can perform Major and Minor Software Updates. If 'false', only administrators can perform Major and Minor Software Updates. Only applicable on Supervised devices with iOS 18+ and MacOS 15+",
+    "id": "mathsettings_calculator_inputmodes_rpn",
+    "description": "Configures whether RPN input is enabled.",
     "helpText": null,
-    "name": "AllowStandardUserOSUpdates",
-    "displayName": "Allow Standard User OS Updates",
-    "defaultOptionId": "softwareupdate_allowstandarduserosupdates_true",
+    "name": "Calculator_InputModes_RPN",
+    "displayName": "RPN",
+    "defaultOptionId": "mathsettings_calculator_inputmodes_rpn_false",
     "applicability": {
         "description": null,
         "platform": "macOS",
@@ -28,11 +28,11 @@
     "referredSettingInformationList": [],
     "options": [
         {
-            "itemId": "softwareupdate_allowstandarduserosupdates_false",
+            "itemId": "mathsettings_calculator_inputmodes_rpn_false",
             "description": null,
             "helpText": null,
-            "name": "Blocked",
-            "displayName": "Blocked",
+            "name": "Disabled",
+            "displayName": "Disabled",
             "optionValue": {
                 "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
                 "settingValueTemplateReference": null,
@@ -40,18 +40,18 @@
             },
             "dependentOn": [
                 {
-                    "dependentOn": "softwareupdate_softwareupdate",
-                    "parentSettingId": "softwareupdate_softwareupdate"
+                    "dependentOn": "mathsettings_calculator_inputmodes",
+                    "parentSettingId": "mathsettings_calculator_inputmodes"
                 }
             ],
             "dependedOnBy": []
         },
         {
-            "itemId": "softwareupdate_allowstandarduserosupdates_true",
+            "itemId": "mathsettings_calculator_inputmodes_rpn_true",
             "description": null,
             "helpText": null,
-            "name": "Allowed",
-            "displayName": "Allowed",
+            "name": "Enabled",
+            "displayName": "Enabled",
             "optionValue": {
                 "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
                 "settingValueTemplateReference": null,
@@ -59,8 +59,8 @@
             },
             "dependentOn": [
                 {
-                    "dependentOn": "softwareupdate_softwareupdate",
-                    "parentSettingId": "softwareupdate_softwareupdate"
+                    "dependentOn": "mathsettings_calculator_inputmodes",
+                    "parentSettingId": "mathsettings_calculator_inputmodes"
                 }
             ],
             "dependedOnBy": []

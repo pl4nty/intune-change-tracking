@@ -32,6 +32,8 @@
         "com.apple.applicationaccess_allowappinstallation",
         "com.apple.applicationaccess_allowapplepersonalizedadvertising",
         "com.apple.applicationaccess_allowappremoval",
+        "com.apple.applicationaccess_allowappstobehidden",
+        "com.apple.applicationaccess_allowappstobelocked",
         "com.apple.applicationaccess_allowardremotemanagementmodification",
         "com.apple.applicationaccess_allowassistant",
         "com.apple.applicationaccess_allowassistantusergeneratedcontent",
@@ -45,6 +47,7 @@
         "com.apple.applicationaccess_allowbluetoothsharingmodification",
         "com.apple.applicationaccess_allowbookstore",
         "com.apple.applicationaccess_allowbookstoreerotica",
+        "com.apple.applicationaccess_allowcallrecording",
         "com.apple.applicationaccess_allowcamera",
         "com.apple.applicationaccess_allowcellularplanmodification",
         "com.apple.applicationaccess_allowchat",
@@ -104,9 +107,11 @@
         "com.apple.applicationaccess_allowlockscreennotificationsview",
         "com.apple.applicationaccess_allowlockscreentodayview",
         "com.apple.applicationaccess_allowmailprivacyprotection",
+        "com.apple.applicationaccess_allowmailsummary",
         "com.apple.applicationaccess_allowmanagedappscloudsync",
         "com.apple.applicationaccess_allowmanagedtowriteunmanagedcontacts",
         "com.apple.applicationaccess_allowmarketplaceappinstallation",
+        "com.apple.applicationaccess_allowmediasharingmodification",
         "com.apple.applicationaccess_allowmultiplayergaming",
         "com.apple.applicationaccess_allowmusicservice",
         "com.apple.applicationaccess_allownews",
@@ -131,6 +136,7 @@
         "com.apple.applicationaccess_allowradioservice",
         "com.apple.applicationaccess_allowrapidsecurityresponseinstallation",
         "com.apple.applicationaccess_allowrapidsecurityresponseremoval",
+        "com.apple.applicationaccess_allowrcsmessaging",
         "com.apple.applicationaccess_allowremoteappleeventsmodification",
         "com.apple.applicationaccess_allowremotescreenobservation",
         "com.apple.applicationaccess_allowsafari",
@@ -150,7 +156,6 @@
         "com.apple.applicationaccess_allowuntrustedtlsprompt",
         "com.apple.applicationaccess_allowusbrestrictedmode",
         "com.apple.applicationaccess_allowvideoconferencing",
-        "com.apple.applicationaccess_allowvideoconferencingremotecontrol",
         "com.apple.applicationaccess_allowvoicedialing",
         "com.apple.applicationaccess_allowvpncreation",
         "com.apple.applicationaccess_allowwallpapermodification",
@@ -192,7 +197,8 @@
         "com.apple.applicationaccess_safariallowautofill",
         "com.apple.applicationaccess_safariallowjavascript",
         "com.apple.applicationaccess_safariallowpopups",
-        "com.apple.applicationaccess_safariforcefraudwarning"
+        "com.apple.applicationaccess_safariforcefraudwarning",
+        "com.apple.applicationaccess_allowvideoconferencingremotecontrol"
     ],
     "maximumCount": 1,
     "minimumCount": 0,
@@ -258,6 +264,14 @@
             "required": false
         },
         {
+            "dependedOnBy": "com.apple.applicationaccess_allowappstobehidden",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.applicationaccess_allowappstobelocked",
+            "required": false
+        },
+        {
             "dependedOnBy": "com.apple.applicationaccess_allowardremotemanagementmodification",
             "required": false
         },
@@ -307,6 +321,10 @@
         },
         {
             "dependedOnBy": "com.apple.applicationaccess_allowbookstoreerotica",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.applicationaccess_allowcallrecording",
             "required": false
         },
         {
@@ -546,6 +564,10 @@
             "required": false
         },
         {
+            "dependedOnBy": "com.apple.applicationaccess_allowmailsummary",
+            "required": false
+        },
+        {
             "dependedOnBy": "com.apple.applicationaccess_allowmanagedappscloudsync",
             "required": false
         },
@@ -555,6 +577,10 @@
         },
         {
             "dependedOnBy": "com.apple.applicationaccess_allowmarketplaceappinstallation",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.applicationaccess_allowmediasharingmodification",
             "required": false
         },
         {
@@ -654,6 +680,10 @@
             "required": false
         },
         {
+            "dependedOnBy": "com.apple.applicationaccess_allowrcsmessaging",
+            "required": false
+        },
+        {
             "dependedOnBy": "com.apple.applicationaccess_allowremoteappleeventsmodification",
             "required": false
         },
@@ -727,10 +757,6 @@
         },
         {
             "dependedOnBy": "com.apple.applicationaccess_allowvideoconferencing",
-            "required": false
-        },
-        {
-            "dependedOnBy": "com.apple.applicationaccess_allowvideoconferencingremotecontrol",
             "required": false
         },
         {
@@ -899,6 +925,10 @@
         },
         {
             "dependedOnBy": "com.apple.applicationaccess_safariforcefraudwarning",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.applicationaccess_allowvideoconferencingremotecontrol",
             "required": false
         }
     ]
