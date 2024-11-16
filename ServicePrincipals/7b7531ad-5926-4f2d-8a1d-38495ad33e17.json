@@ -43,7 +43,34 @@
     "api": {
         "resourceSpecificApplicationPermissions": []
     },
-    "appRoles": [],
+    "appRoles": [
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to send which accounts are managed by the PAM solution for all AD and Entra identities for MDI customers.",
+            "displayName": "Send which accounts are managed by the PAM solution",
+            "id": "850e8a94-5d16-40ff-9167-cfda8c7f9ea8",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "Identity.PrivilegeAccountTagging",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to get a list of actions required on AD and Entra identities and update on the status of said actions for MDI customers.",
+            "displayName": "get a list of actions and update on the status of said actions",
+            "id": "c613cf81-75fb-4201-a32b-7a58d1fe4dff",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "Identity.PrivilegeAccountActions",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        }
+    ],
     "info": {
         "termsOfServiceUrl": null,
         "supportUrl": null,
@@ -52,7 +79,30 @@
         "logoUrl": null
     },
     "keyCredentials": [],
-    "publishedPermissionScopes": [],
+    "publishedPermissionScopes": [
+        {
+            "adminConsentDescription": "Allows the app to get a list of actions required on AD and Entra identities and update on the status of said actions for MDI customers.",
+            "adminConsentDisplayName": "get a list of actions and update on the status of said actions",
+            "id": "1f479d02-0183-4852-8264-464546fd8f52",
+            "isEnabled": true,
+            "type": "User",
+            "userConsentDescription": "Allows the app to get a list of actions required on AD and Entra identities and update on the status of said actions for MDI customers.",
+            "userConsentDisplayName": "get a list of actions and update on the status of said actions",
+            "value": "Identity.PrivilegeAccountActions",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to send which accounts are managed by the PAM solution for all AD and Entra identities for MDI customers.",
+            "adminConsentDisplayName": "Send which accounts are managed by the PAM solution",
+            "id": "9bba0ae2-fc9b-4c22-b607-b6afdf6601cb",
+            "isEnabled": true,
+            "type": "User",
+            "userConsentDescription": "Allows the app to send which accounts are managed by the PAM solution for all AD and Entra identities for MDI customers.",
+            "userConsentDisplayName": "Send which accounts are managed by the PAM solution",
+            "value": "Identity.PrivilegeAccountTagging",
+            "isPrivate": false
+        }
+    ],
     "passwordCredentials": [],
     "resourceSpecificApplicationPermissions": [],
     "verifiedPublisher": {
