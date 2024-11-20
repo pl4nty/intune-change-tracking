@@ -167,8 +167,8 @@
                                 "validation": [
                                     {
                                         "validationType": 2,
-                                        "validationArguments": "^(?:(?:(?:(?:{{(?:UserName|EmailAddress|OnPrem_Distinguished_Name|onPremisesSamAccountName|UserPrincipalName|Department|AAD_Device_ID|Device_Serial|Device_IMEI|SerialNumber|IMEINumber|AzureADDeviceId|WiFiMacAddress|IMEI|DeviceName|DeviceId|MEID)}}))|(?:[^{}|;]))+)$",
-                                        "failureMessage": "sCEPPolicyCustomSubjectAlternativeNameForAndroidUserDescription"
+                                        "validationArguments": "\\w*\\{\\{OnPremisesSecurityIdentifier\\}\\}\\w*|^(?:(?:(?:(?:{{(?:UserName|EmailAddress|OnPrem_Distinguished_Name|onPremisesSamAccountName|UserPrincipalName|Department|AAD_Device_ID|Device_Serial|Device_IMEI|SerialNumber|IMEINumber|AzureADDeviceId|WiFiMacAddress|IMEI|DeviceName|DeviceId|MEID)}}))|(?:[^{}|;]))+)$",
+                                        "failureMessage": "sCEPPolicyCustomSubjectAlternativeNameForUserDescription"
                                     }
                                 ],
                                 "childSettings": [],

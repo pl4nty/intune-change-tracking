@@ -1,16 +1,16 @@
 {
-    "id": "MacSCEP_SCEPProperties_sCEPPolicyKeyUsageName",
-    "dataType": 13,
-    "category": 103,
-    "nameResourceKey": "sCEPPolicyKeyUsageName",
-    "descriptionResourceKey": "sCEPPolicyKeyUsageDescription",
+    "id": "MacTrustedCertificate_TrustedCert_MacOSDeploymentChannelName",
+    "dataType": 16,
+    "category": 115,
+    "nameResourceKey": "MacOSDeploymentChannelName",
+    "descriptionResourceKey": "empty",
     "inputControlLength": 50,
     "validation": [],
     "childSettings": [],
     "options": [
         {
-            "nameResourceKey": "sCEPPolicyUseAsDigitialSignature",
-            "value": "digitalSignature",
+            "nameResourceKey": "MacOSDeploymentChannelUserChannel",
+            "value": "userChannel",
             "isRequired": false,
             "isDisabled": false,
             "retainValuesOnDeSelection": false,
@@ -19,8 +19,8 @@
             "enabled": true
         },
         {
-            "nameResourceKey": "sCEPPolicyUseForKeyEncipherment",
-            "value": "keyEncipherment",
+            "nameResourceKey": "MacOSDeploymentChannelDeviceChannel",
+            "value": "deviceChannel",
             "isRequired": false,
             "isDisabled": false,
             "retainValuesOnDeSelection": false,
@@ -30,12 +30,13 @@
         }
     ],
     "isRequired": true,
-    "entityKey": "keyUsage",
+    "entityKey": "deploymentChannel",
     "booleanActions": 0,
-    "policyType": 63,
+    "defaultValue": "deviceChannel",
+    "policyType": 65,
     "flipChildrenEnabledLogic": false,
     "readOnly": false,
-    "writeOnce": false,
+    "writeOnce": true,
     "enabled": true,
     "multiItemIncludeSelectAll": false
 }
