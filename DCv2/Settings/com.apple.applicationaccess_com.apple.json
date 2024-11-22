@@ -66,6 +66,7 @@
         "com.apple.applicationaccess_allowcloudreminders",
         "com.apple.applicationaccess_allowcontentcaching",
         "com.apple.applicationaccess_allowcontinuouspathkeyboard",
+        "com.apple.applicationaccess_allowdefaultbrowsermodification",
         "com.apple.applicationaccess_allowdefinitionlookup",
         "com.apple.applicationaccess_allowdevicenamemodification",
         "com.apple.applicationaccess_allowdiagnosticsubmission",
@@ -79,6 +80,8 @@
         "com.apple.applicationaccess_allowesimmodification",
         "com.apple.applicationaccess_allowesimoutgoingtransfers",
         "com.apple.applicationaccess_allowexplicitcontent",
+        "com.apple.applicationaccess_allowexternalintelligenceintegrations",
+        "com.apple.applicationaccess_allowexternalintelligenceintegrationssignin",
         "com.apple.applicationaccess_allowfilesharingmodification",
         "com.apple.applicationaccess_allowfilesnetworkdriveaccess",
         "com.apple.applicationaccess_allowfilesusbdriveaccess",
@@ -174,6 +177,7 @@
         "com.apple.applicationaccess_forceassistantprofanityfilter",
         "com.apple.applicationaccess_forceauthenticationbeforeautofill",
         "com.apple.applicationaccess_forceautomaticdateandtime",
+        "com.apple.applicationaccess_forcebypassscreencapturealert",
         "com.apple.applicationaccess_forceclassroomautomaticallyjoinclasses",
         "com.apple.applicationaccess_forceclassroomrequestpermissiontoleaveclasses",
         "com.apple.applicationaccess_forceclassroomunpromptedappanddevicelock",
@@ -400,6 +404,10 @@
             "required": false
         },
         {
+            "dependedOnBy": "com.apple.applicationaccess_allowdefaultbrowsermodification",
+            "required": false
+        },
+        {
             "dependedOnBy": "com.apple.applicationaccess_allowdefinitionlookup",
             "required": false
         },
@@ -449,6 +457,14 @@
         },
         {
             "dependedOnBy": "com.apple.applicationaccess_allowexplicitcontent",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.applicationaccess_allowexternalintelligenceintegrations",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.applicationaccess_allowexternalintelligenceintegrationssignin",
             "required": false
         },
         {
@@ -829,6 +845,10 @@
         },
         {
             "dependedOnBy": "com.apple.applicationaccess_forceautomaticdateandtime",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.applicationaccess_forcebypassscreencapturealert",
             "required": false
         },
         {
