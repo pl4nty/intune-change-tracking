@@ -31,6 +31,9 @@ def cleanDCv1Ids(setting):
     setting['id'] = id
     for child in setting.get('childSettings', []):
         cleanDCv1Ids(child)
+    for option in setting.get('options', []):
+        for child in option.get('children', []):
+            cleanDCv1Ids(child)
 
 async def main():
     # Setting status errors
