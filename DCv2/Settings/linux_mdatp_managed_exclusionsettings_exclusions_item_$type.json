@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Exclusion Settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "PayloadContent/exclusionSettings",
+    "offsetUri": "exclusions/[{0}]/$type",
+    "rootDefinitionId": "linux_mdatp_managed_exclusionsettings_exclusions",
+    "categoryId": "d2191717-e304-46f7-bcc0-55e6477026c9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "linux_mdatp_managed_exclusionsettings_exclusions_item_$type",
+    "description": null,
+    "helpText": null,
+    "name": "exclusions_item_$type",
+    "displayName": "Type",
+    "defaultOptionId": "linux_mdatp_managed_exclusionsettings_exclusions_item_$type_0",
+    "applicability": {
+        "description": null,
+        "platform": "linux",
+        "deviceMode": "none",
+        "technologies": "microsoftSense"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "linux_mdatp_managed_exclusionsettings_exclusions_item_$type_0",
+            "description": null,
+            "helpText": null,
+            "name": "Path",
+            "displayName": "Path",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "excludedPath"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "linux_mdatp_managed_exclusionsettings_exclusions",
+                    "parentSettingId": "linux_mdatp_managed_exclusionsettings_exclusions"
+                }
+            ],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "linux_mdatp_managed_exclusionsettings_exclusions_item_isdirectory",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "linux_mdatp_managed_exclusionsettings_exclusions_item_path",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "itemId": "linux_mdatp_managed_exclusionsettings_exclusions_item_$type_1",
+            "description": null,
+            "helpText": null,
+            "name": "Process name",
+            "displayName": "Process name",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "excludedFileName"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "linux_mdatp_managed_exclusionsettings_exclusions",
+                    "parentSettingId": "linux_mdatp_managed_exclusionsettings_exclusions"
+                }
+            ],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "linux_mdatp_managed_exclusionsettings_exclusions_item_name",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}
