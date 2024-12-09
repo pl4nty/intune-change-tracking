@@ -127,7 +127,7 @@ async def main():
             with open(f'Defender/{table}.json', 'w', encoding='utf-8') as f:
                 json.dump(data.json().get('results'), f, ensure_ascii=False, indent=4)
 
-    # DCv2 policies eg Settings Catalog
+    # DCv2 configurationSettings eg Settings Catalog
     output = 'DCv2'
     shutil.rmtree(output)
     source = 'Settings'
@@ -154,11 +154,27 @@ async def main():
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(item, f, ensure_ascii=False, indent=4)
 
+    # DCv2 templates eg security baselines
     source = 'Templates'
     os.makedirs(Path(output, source))
     # kiota 1.9.1 started dropping deviceManagement from endpoint
     data = await client.device_management.with_url('https://graph.microsoft.com/beta/deviceManagement/configurationPolicyTemplates').get(request_configuration=request_config)
     for item in data.json().get('value'):
+        path = Path(output, source, item.get('id')).with_suffix('.json')
+        with open(path, 'w', encoding='utf-8') as f:
+            json.dump(item, f, ensure_ascii=False, indent=4)
+
+    # DCv2 inventorySettings eg Properties catalog
+    client = GraphServiceClient(IbizaTokenCredential(
+        os.environ['AZURE_INTUNEPORTAL_RT'],
+        'Microsoft_Intune_DeviceSettings',
+        'microsoft.graph'
+    ), ['https://graph.microsoft.com/.default'])
+    source = 'Inventory'
+    os.makedirs(Path(output, source))
+    data = await client.device_management.with_url('https://graph.microsoft.com/beta/deviceManagement/inventorySettings').get(request_configuration=request_config)
+    for item in data.json().get('value'):
+        item.pop('version')
         path = Path(output, source, item.get('id')).with_suffix('.json')
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(item, f, ensure_ascii=False, indent=4)
@@ -180,6 +196,23 @@ async def main():
         next = data.get('@odata.nextLink')
     with open('IdentityProductChanges.json', 'w', encoding='utf-8') as f:
         json.dump(changes, f, ensure_ascii=False, indent=4)
+
+class IbizaTokenCredential(object):
+    def __init__(self, portalAuthorization, extensionName, resourceName):
+        self._body = {
+            'portalAuthorization': portalAuthorization,
+            'extensionName': extensionName,
+            'resourceName': resourceName,
+            'tenant': os.environ["AZURE_TENANT_ID"]
+        }
+
+    def get_token(self, *scopes: str, claims=None, tenant_id=None, **kwargs):
+        data = requests.post('https://intune.microsoft.com/api/DelegationToken', json=self._body,
+                             cookies={'portalId': 'f4a17c62-20c9-44b4-bde0-9206b1578bd2'}).json() # authHeader is null without portalId 
+        subprocess.run(['gh', 'secret', 'set', 'AZURE_INTUNEPORTAL_RT', '--body', data['portalAuthorization'], '--repo', os.environ['REPO']])
+
+        token = data['value']['authHeader'].split()[1]
+        return AccessToken(token, expires_on=data['value']['expiresAt'])
 
 class RefreshTokenCredential(object):
     def __init__(self, client_id, refresh_token, brk_client_id = None, redirect_uri = None):

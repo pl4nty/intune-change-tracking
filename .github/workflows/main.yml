@@ -35,6 +35,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_PAT }} # permissions.secrets doesn't exist, so use a fine-grained PAT
           AZURE_TENANT_ID: ${{ vars.AZURE_TENANT_ID }}
           AZURE_CHANGEMGMT_RT: ${{ secrets.AZURE_CHANGEMGMT_RT }}
+          AZURE_INTUNEPORTAL_RT: ${{ secrets.AZURE_INTUNEPORTAL_RT }}
       - uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
         with:
           default_author: github_actions
