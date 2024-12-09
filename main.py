@@ -138,7 +138,7 @@ async def main():
     # DCv2 inventorySettings eg Properties catalog
     source = 'Inventory'
     os.makedirs(Path(output, source))
-    data = await client.device_management.with_url('https://graph.microsoft.com/beta/inventorySettings').get(request_configuration=request_config)
+    data = await client.device_management.with_url('https://graph.microsoft.com/beta/deviceManagement/inventorySettings').get(request_configuration=request_config)
     for item in data.json().get('value'):
         item.pop('version')
         path = Path(output, source, item.get('id')).with_suffix('.json')
