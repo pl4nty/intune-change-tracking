@@ -2195,6 +2195,32 @@
             "allowedMemberTypes": [
                 "Application"
             ],
+            "description": "Allows the app to read all device templates, without a signed-in user.",
+            "displayName": "Read all device templates",
+            "id": "dd9febb5-0c6d-419f-b256-3afe12c6adeb",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "DeviceTemplate.Read.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to create, read, update and delete any device template, without a signed-in user. It also allows the app to add or remove owners on any device template.",
+            "displayName": "Read and write all device templates",
+            "id": "9fadb66e-6421-4744-aede-4ab6fb98a884",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "DeviceTemplate.ReadWrite.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
             "description": "Allows the app to read data in your organization's directory, such as users, groups and apps, without a signed-in user.",
             "displayName": "Read directory data",
             "id": "7ab1d382-f21e-4acd-a863-ba3e13f7da61",
@@ -3605,6 +3631,32 @@
             "isEnabled": true,
             "origin": "Application",
             "value": "MultiTenantOrganization.ReadWrite.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to read configuration used for OAuth 2.0 mutual-TLS client authentication, without a signed-in user. This includes reading trusted certificate authorities.",
+            "displayName": "Read all configurations used for mutual-TLS client authentication.",
+            "id": "6daaff82-2880-496d-9d80-57e8e31195e2",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "MutualTlsOauthConfiguration.Read.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to read and update configuration used for OAuth 2.0 mutual-TLS client authentication, without a signed-in user. This includes reading and updating trusted certificate authorities.",
+            "displayName": "Read and write all configurations used for mutual-TLS client authentication.",
+            "id": "78bbf8cf-07d8-45ba-b0eb-1a7b48efbcf1",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "MutualTlsOauthConfiguration.ReadWrite.All",
             "isPreAuthorizationRequired": false,
             "isPrivate": false
         },
@@ -8440,6 +8492,17 @@
             "isPrivate": false
         },
         {
+            "adminConsentDescription": "Allows the app to create device objects based on device templates owned by the signed-in user, on behalf of the signed in user.",
+            "adminConsentDisplayName": "Create devices based on owned device templates",
+            "id": "edc92e89-a987-48a9-911a-a7b1967dd7b1",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to create device objects based on device templates you own, on your behalf.",
+            "userConsentDisplayName": "Create devices based on device templates you own",
+            "value": "Device.CreateFromOwnedTemplate",
+            "isPrivate": false
+        },
+        {
             "adminConsentDescription": "Allows the app to read a user's list of devices on behalf of the signed-in user.",
             "adminConsentDisplayName": "Read user devices",
             "id": "11d4cd79-5ba5-460f-803f-e22c8ab85ccd",
@@ -8624,6 +8687,28 @@
             "userConsentDescription": "Allows the app to read and write Microsoft Intune service properties including device enrollment and third party service connection configuration.",
             "userConsentDisplayName": "Read and write Microsoft Intune configuration",
             "value": "DeviceManagementServiceConfig.ReadWrite.All",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to read all device templates, on behalf of the signed in user.",
+            "adminConsentDisplayName": "Read all device templates",
+            "id": "2bcae0b0-aa93-48e4-a9e4-855482dffdcd",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to read all device templates, on your behalf.",
+            "userConsentDisplayName": "Read all device templates",
+            "value": "DeviceTemplate.Read.All",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to create, read, update and delete the device template, on behalf of the signed in user. It also allows the app to add or remove owners on any device template.",
+            "adminConsentDisplayName": "Read and write all device templates",
+            "id": "2d372e98-f1ae-406c-a157-2ea83f6f5e4a",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to create, read, update and delete any device template, on your behalf. It also allows the app to add or remove owners on any device template.",
+            "userConsentDisplayName": "Read and write all device templates",
+            "value": "DeviceTemplate.ReadWrite.All",
             "isPrivate": false
         },
         {
@@ -9944,6 +10029,28 @@
             "userConsentDescription": "Allows the app to read and write multi-tenant organization details and tenants on your behalf.",
             "userConsentDisplayName": "Read and write multi-tenant organization details and tenants",
             "value": "MultiTenantOrganization.ReadWrite.All",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to read configuration used for OAuth 2.0 mutual-TLS client authentication, on behalf of the signed-in user. This includes reading trusted certificate authorities.",
+            "adminConsentDisplayName": "Read all configurations used for mutual-TLS client authentication.",
+            "id": "51ae584e-e736-4718-897b-10af70f8e3cc",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to read configuration used for OAuth 2.0 mutual-TLS client authentication, on your behalf. This includes reading trusted certificate authorities.",
+            "userConsentDisplayName": "Read all configurations used for mutual-TLS client authentication.",
+            "value": "MutualTlsOauthConfiguration.Read.All",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to read and update configuration used for OAuth 2.0 mutual-TLS client authentication, on behalf of the signed-in user. This includes adding and updating trusted certificate authorities.",
+            "adminConsentDisplayName": "Read and write all configurations used for mutual-TLS client authentication.",
+            "id": "a51115bc-f64f-498f-bcee-00dcd28f4a03",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to read and update configuration used for OAuth 2.0 mutual-TLS client authentication, on your behalf. This includes adding and updating trusted certificate authorities.",
+            "userConsentDisplayName": "Read and write all configurations used for mutual-TLS client authentication.",
+            "value": "MutualTlsOauthConfiguration.ReadWrite.All",
             "isPrivate": false
         },
         {
