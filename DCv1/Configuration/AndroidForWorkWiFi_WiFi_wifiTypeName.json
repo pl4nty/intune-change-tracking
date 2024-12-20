@@ -237,7 +237,7 @@
                                             "hideFromGrid": false,
                                             "isEditableInline": false,
                                             "metadata": {
-                                                "id": "AndroidForWorkWiFi_WiFi_empty_811",
+                                                "id": "AndroidForWorkWiFi_WiFi_empty_816",
                                                 "dataType": 20,
                                                 "category": 121,
                                                 "nameResourceKey": "empty",
@@ -565,7 +565,7 @@
                                             "hideFromGrid": false,
                                             "isEditableInline": false,
                                             "metadata": {
-                                                "id": "AndroidForWorkWiFi_WiFi_empty_811",
+                                                "id": "AndroidForWorkWiFi_WiFi_empty_816",
                                                 "dataType": 20,
                                                 "category": 121,
                                                 "nameResourceKey": "empty",
@@ -1009,7 +1009,7 @@
                                             "hideFromGrid": false,
                                             "isEditableInline": false,
                                             "metadata": {
-                                                "id": "AndroidForWorkWiFi_WiFi_empty_811",
+                                                "id": "AndroidForWorkWiFi_WiFi_empty_816",
                                                 "dataType": 20,
                                                 "category": 121,
                                                 "nameResourceKey": "empty",
@@ -1477,6 +1477,198 @@
                     "writeOnce": false,
                     "enabled": true,
                     "multiItemIncludeSelectAll": false
+                },
+                {
+                    "id": "AndroidForWorkWiFi_WiFi_wiFiPolicySecurityTypeName",
+                    "dataType": 16,
+                    "category": 121,
+                    "nameResourceKey": "wiFiPolicySecurityTypeName",
+                    "descriptionResourceKey": "wiFiPolicySecurityTypeDescription",
+                    "inputControlLength": 50,
+                    "validation": [],
+                    "childSettings": [],
+                    "options": [
+                        {
+                            "nameResourceKey": "notConfigured",
+                            "isRequired": false,
+                            "isDisabled": false,
+                            "retainValuesOnDeSelection": false,
+                            "deleteValuesOnDeSelection": false,
+                            "hidden": false,
+                            "enabled": true
+                        },
+                        {
+                            "nameResourceKey": "openOption",
+                            "value": "open",
+                            "isRequired": false,
+                            "isDisabled": false,
+                            "retainValuesOnDeSelection": false,
+                            "deleteValuesOnDeSelection": false,
+                            "hidden": false,
+                            "enabled": true
+                        },
+                        {
+                            "nameResourceKey": "wEPPSKOption",
+                            "value": "wep",
+                            "children": [
+                                {
+                                    "id": "AndroidForWorkWiFi_WiFi_preSharedKeyName",
+                                    "dataType": 20,
+                                    "category": 121,
+                                    "nameResourceKey": "preSharedKeyName",
+                                    "descriptionResourceKey": "preSharedKeyDescription",
+                                    "emptyValueResourceKey": "wifiPasswordExample",
+                                    "inputControlLength": 50,
+                                    "validation": [
+                                        {
+                                            "validationType": 2,
+                                            "validationArguments": "^.{5}$|^.{13}$|^[0-9a-fA-F]{10}$|^[0-9a-fA-F]{26}$|^\\*{8}$",
+                                            "failureMessage": "MustBeAValidLengthWEPPassword"
+                                        }
+                                    ],
+                                    "childSettings": [],
+                                    "options": [],
+                                    "isRequired": true,
+                                    "entityKey": "preSharedKey",
+                                    "booleanActions": 0,
+                                    "policyType": 19,
+                                    "flipChildrenEnabledLogic": false,
+                                    "readOnly": false,
+                                    "writeOnce": false,
+                                    "enabled": true,
+                                    "multiItemIncludeSelectAll": false
+                                }
+                            ],
+                            "isRequired": false,
+                            "isDisabled": false,
+                            "retainValuesOnDeSelection": false,
+                            "deleteValuesOnDeSelection": false,
+                            "hidden": false,
+                            "enabled": true
+                        },
+                        {
+                            "nameResourceKey": "wPAPSKOption",
+                            "value": "wpaPersonal",
+                            "children": [
+                                {
+                                    "id": "AndroidForWorkWiFi_WiFi_preSharedKeyName",
+                                    "dataType": 20,
+                                    "category": 121,
+                                    "nameResourceKey": "preSharedKeyName",
+                                    "descriptionResourceKey": "preSharedKeyDescription",
+                                    "emptyValueResourceKey": "wifiPasswordExample",
+                                    "inputControlLength": 50,
+                                    "validation": [
+                                        {
+                                            "validationType": 14,
+                                            "validationArguments": [
+                                                8,
+                                                64
+                                            ]
+                                        }
+                                    ],
+                                    "childSettings": [],
+                                    "options": [],
+                                    "isRequired": true,
+                                    "entityKey": "preSharedKey",
+                                    "booleanActions": 0,
+                                    "policyType": 19,
+                                    "flipChildrenEnabledLogic": false,
+                                    "readOnly": false,
+                                    "writeOnce": false,
+                                    "enabled": true,
+                                    "multiItemIncludeSelectAll": false
+                                }
+                            ],
+                            "isRequired": false,
+                            "isDisabled": false,
+                            "retainValuesOnDeSelection": false,
+                            "deleteValuesOnDeSelection": false,
+                            "hidden": false,
+                            "enabled": true
+                        }
+                    ],
+                    "isRequired": true,
+                    "entityKey": "wiFiSecurityType",
+                    "booleanActions": 0,
+                    "policyType": 19,
+                    "flipChildrenEnabledLogic": false,
+                    "readOnly": false,
+                    "writeOnce": false,
+                    "enabled": true,
+                    "multiItemIncludeSelectAll": false
+                },
+                {
+                    "id": "AndroidForWorkWiFi_WiFi_wiFiPolicyProxySettingsName",
+                    "dataType": 16,
+                    "category": 121,
+                    "nameResourceKey": "wiFiPolicyProxySettingsName",
+                    "descriptionResourceKey": "wiFiPolicyProxySettingsDescription",
+                    "inputControlLength": 50,
+                    "validation": [],
+                    "childSettings": [],
+                    "options": [
+                        {
+                            "nameResourceKey": "noneOption",
+                            "value": "none",
+                            "isRequired": false,
+                            "isDisabled": false,
+                            "retainValuesOnDeSelection": false,
+                            "deleteValuesOnDeSelection": false,
+                            "hidden": false,
+                            "enabled": true
+                        },
+                        {
+                            "nameResourceKey": "automaticOption",
+                            "value": "automatic",
+                            "children": [
+                                {
+                                    "id": "AndroidForWorkWiFi_WiFi_proxyServerURLName",
+                                    "dataType": 20,
+                                    "category": 121,
+                                    "nameResourceKey": "proxyServerURLName",
+                                    "descriptionResourceKey": "proxyServerURLDescription",
+                                    "emptyValueResourceKey": "proxyUrlExample",
+                                    "inputControlLength": 50,
+                                    "validation": [
+                                        {
+                                            "validationType": 2,
+                                            "validationArguments": "^(((http|https|ftp):\\/\\/.+?)|([\\w-]+\\.?)+)$",
+                                            "failureMessage": "mustBeValidAddress"
+                                        }
+                                    ],
+                                    "childSettings": [],
+                                    "options": [],
+                                    "isRequired": true,
+                                    "entityKey": "proxyAutomaticConfigurationUrl",
+                                    "booleanActions": 0,
+                                    "policyType": 19,
+                                    "flipChildrenEnabledLogic": false,
+                                    "readOnly": false,
+                                    "writeOnce": false,
+                                    "enabled": true,
+                                    "multiItemIncludeSelectAll": false
+                                }
+                            ],
+                            "isRequired": false,
+                            "isDisabled": false,
+                            "retainValuesOnDeSelection": false,
+                            "deleteValuesOnDeSelection": false,
+                            "hidden": false,
+                            "enabled": true
+                        }
+                    ],
+                    "isRequired": false,
+                    "entityKey": "proxySettings",
+                    "booleanActions": 0,
+                    "defaultValue": "none",
+                    "unconfiguredValue": "none",
+                    "policyType": 19,
+                    "flipChildrenEnabledLogic": false,
+                    "readOnly": false,
+                    "writeOnce": false,
+                    "enabled": true,
+                    "multiItemIncludeSelectAll": false
                 }
             ],
             "isRequired": false,
@@ -1626,7 +1818,7 @@
                                             "hideFromGrid": false,
                                             "isEditableInline": false,
                                             "metadata": {
-                                                "id": "AndroidForWorkWiFi_WiFi_empty_811",
+                                                "id": "AndroidForWorkWiFi_WiFi_empty_816",
                                                 "dataType": 20,
                                                 "category": 121,
                                                 "nameResourceKey": "empty",
@@ -1681,7 +1873,7 @@
                                                 18
                                             ],
                                             "linkedCert": true,
-                                            "id": "AndroidForWorkWiFi_WiFi_selectCertificateProfile_787",
+                                            "id": "AndroidForWorkWiFi_WiFi_selectCertificateProfile_792",
                                             "dataType": 4,
                                             "category": 121,
                                             "nameResourceKey": "selectCertificateProfile",
@@ -1710,7 +1902,7 @@
                                                 18
                                             ],
                                             "linkedCert": true,
-                                            "id": "AndroidForWorkWiFi_WiFi_selectCertificateProfile_788",
+                                            "id": "AndroidForWorkWiFi_WiFi_selectCertificateProfile_793",
                                             "dataType": 4,
                                             "category": 121,
                                             "nameResourceKey": "selectCertificateProfile",
@@ -1804,7 +1996,7 @@
                                                 17
                                             ],
                                             "linkedCert": true,
-                                            "id": "AndroidForWorkWiFi_WiFi_certificatesOption_792",
+                                            "id": "AndroidForWorkWiFi_WiFi_certificatesOption_797",
                                             "dataType": 4,
                                             "category": 121,
                                             "nameResourceKey": "certificatesOption",
@@ -1833,7 +2025,7 @@
                                                 17
                                             ],
                                             "linkedCert": true,
-                                            "id": "AndroidForWorkWiFi_WiFi_certificatesOption_793",
+                                            "id": "AndroidForWorkWiFi_WiFi_certificatesOption_798",
                                             "dataType": 4,
                                             "category": 121,
                                             "nameResourceKey": "certificatesOption",
@@ -1954,7 +2146,7 @@
                                             "hideFromGrid": false,
                                             "isEditableInline": false,
                                             "metadata": {
-                                                "id": "AndroidForWorkWiFi_WiFi_empty_811",
+                                                "id": "AndroidForWorkWiFi_WiFi_empty_816",
                                                 "dataType": 20,
                                                 "category": 121,
                                                 "nameResourceKey": "empty",
@@ -2009,7 +2201,7 @@
                                                 18
                                             ],
                                             "linkedCert": true,
-                                            "id": "AndroidForWorkWiFi_WiFi_selectCertificateProfile_799",
+                                            "id": "AndroidForWorkWiFi_WiFi_selectCertificateProfile_804",
                                             "dataType": 4,
                                             "category": 121,
                                             "nameResourceKey": "selectCertificateProfile",
@@ -2038,7 +2230,7 @@
                                                 18
                                             ],
                                             "linkedCert": true,
-                                            "id": "AndroidForWorkWiFi_WiFi_selectCertificateProfile_800",
+                                            "id": "AndroidForWorkWiFi_WiFi_selectCertificateProfile_805",
                                             "dataType": 4,
                                             "category": 121,
                                             "nameResourceKey": "selectCertificateProfile",
@@ -2229,7 +2421,7 @@
                                                                 17
                                                             ],
                                                             "linkedCert": true,
-                                                            "id": "AndroidForWorkWiFi_WiFi_certificatesOption_806",
+                                                            "id": "AndroidForWorkWiFi_WiFi_certificatesOption_811",
                                                             "dataType": 4,
                                                             "category": 121,
                                                             "nameResourceKey": "certificatesOption",
@@ -2258,7 +2450,7 @@
                                                                 17
                                                             ],
                                                             "linkedCert": true,
-                                                            "id": "AndroidForWorkWiFi_WiFi_certificatesOption_807",
+                                                            "id": "AndroidForWorkWiFi_WiFi_certificatesOption_812",
                                                             "dataType": 4,
                                                             "category": 121,
                                                             "nameResourceKey": "certificatesOption",
@@ -2398,7 +2590,7 @@
                                             "hideFromGrid": false,
                                             "isEditableInline": false,
                                             "metadata": {
-                                                "id": "AndroidForWorkWiFi_WiFi_empty_811",
+                                                "id": "AndroidForWorkWiFi_WiFi_empty_816",
                                                 "dataType": 20,
                                                 "category": 121,
                                                 "nameResourceKey": "empty",
@@ -2453,7 +2645,7 @@
                                                 18
                                             ],
                                             "linkedCert": true,
-                                            "id": "AndroidForWorkWiFi_WiFi_selectCertificateProfile_813",
+                                            "id": "AndroidForWorkWiFi_WiFi_selectCertificateProfile_818",
                                             "dataType": 4,
                                             "category": 121,
                                             "nameResourceKey": "selectCertificateProfile",
@@ -2482,7 +2674,7 @@
                                                 18
                                             ],
                                             "linkedCert": true,
-                                            "id": "AndroidForWorkWiFi_WiFi_selectCertificateProfile_814",
+                                            "id": "AndroidForWorkWiFi_WiFi_selectCertificateProfile_819",
                                             "dataType": 4,
                                             "category": 121,
                                             "nameResourceKey": "selectCertificateProfile",
@@ -2656,7 +2848,7 @@
                                                                 17
                                                             ],
                                                             "linkedCert": true,
-                                                            "id": "AndroidForWorkWiFi_WiFi_certificatesOption_820",
+                                                            "id": "AndroidForWorkWiFi_WiFi_certificatesOption_825",
                                                             "dataType": 4,
                                                             "category": 121,
                                                             "nameResourceKey": "certificatesOption",
@@ -2685,7 +2877,7 @@
                                                                 17
                                                             ],
                                                             "linkedCert": true,
-                                                            "id": "AndroidForWorkWiFi_WiFi_certificatesOption_821",
+                                                            "id": "AndroidForWorkWiFi_WiFi_certificatesOption_826",
                                                             "dataType": 4,
                                                             "category": 121,
                                                             "nameResourceKey": "certificatesOption",
