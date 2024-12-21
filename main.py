@@ -34,6 +34,9 @@ def cleanDCv1Ids(setting):
     for option in setting.get('options', []):
         for child in option.get('children', []):
             cleanDCv1Ids(child)
+    for column in setting.get('columns', []):
+        if metadata := column.get('metadata'):
+            cleanDCv1Ids(metadata)
 
 async def main():
     # Setting status errors
