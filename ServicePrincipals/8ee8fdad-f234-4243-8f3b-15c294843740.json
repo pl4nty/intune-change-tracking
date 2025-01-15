@@ -61,25 +61,12 @@
             "allowedMemberTypes": [
                 "Application"
             ],
-            "description": "Allows the app to create or update any custom detection rule",
-            "displayName": "Read and write all custom detection rules",
-            "id": "a7deff90-e2f5-4e4e-83a3-2c74e7002e28",
+            "description": "Allows the app to run advanced hunting queries",
+            "displayName": "Run advanced hunting queries",
+            "id": "7734e8e5-8dde-42fc-b5ae-6eafea078693",
             "isEnabled": true,
             "origin": "Application",
-            "value": "CustomDetections.ReadWrite.All",
-            "isPreAuthorizationRequired": false,
-            "isPrivate": false
-        },
-        {
-            "allowedMemberTypes": [
-                "Application"
-            ],
-            "description": "Allows the app to read any incident",
-            "displayName": "Read all incidents",
-            "id": "a9790345-4595-42e4-971a-ccdc79f19b7c",
-            "isEnabled": true,
-            "origin": "Application",
-            "value": "Incident.Read.All",
+            "value": "AdvancedHunting.Read.All",
             "isPreAuthorizationRequired": false,
             "isPrivate": false
         },
@@ -100,12 +87,25 @@
             "allowedMemberTypes": [
                 "Application"
             ],
-            "description": "Allows the app to run advanced hunting queries",
-            "displayName": "Run advanced hunting queries",
-            "id": "7734e8e5-8dde-42fc-b5ae-6eafea078693",
+            "description": "Allows the app to read any incident",
+            "displayName": "Read all incidents",
+            "id": "a9790345-4595-42e4-971a-ccdc79f19b7c",
             "isEnabled": true,
             "origin": "Application",
-            "value": "AdvancedHunting.Read.All",
+            "value": "Incident.Read.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to create or update any custom detection rule",
+            "displayName": "Read and write all custom detection rules",
+            "id": "a7deff90-e2f5-4e4e-83a3-2c74e7002e28",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "CustomDetections.ReadWrite.All",
             "isPreAuthorizationRequired": false,
             "isPrivate": false
         }
@@ -120,25 +120,14 @@
     "keyCredentials": [],
     "publishedPermissionScopes": [
         {
-            "adminConsentDescription": "Allows the app to create or update any custom detection rule that the signed in user can",
-            "adminConsentDisplayName": "Read and write custom detection rules",
-            "id": "ddbb8d0c-c86b-4ece-bcb7-0f031a9cf103",
+            "adminConsentDescription": "Allows the app to create, read or update any incident that the signed in user can create, read or update",
+            "adminConsentDisplayName": "Read and write incidents",
+            "id": "2af415cc-88cf-4146-a0c8-444c3a80d5db",
             "isEnabled": true,
             "type": "Admin",
-            "userConsentDescription": "Allows the app to create or update any custom detection rule that the signed in user can",
-            "userConsentDisplayName": "Read and write custom detection rules",
-            "value": "CustomDetections.ReadWrite",
-            "isPrivate": false
-        },
-        {
-            "adminConsentDescription": "Allows the app to run advanced hunting queries, that the signed-in user can execute.",
-            "adminConsentDisplayName": "Run advanced hunting queries",
-            "id": "15f11de4-5113-4268-a2d1-0bad43d781f9",
-            "isEnabled": true,
-            "type": "Admin",
-            "userConsentDescription": "Allows the app to run advanced hunting queries, that the signed-in user can execute.",
-            "userConsentDisplayName": "Run advanced hunting queries",
-            "value": "AdvancedHunting.Read",
+            "userConsentDescription": "Allows the app to create, read or update any incident that the signed in user can create, read or update",
+            "userConsentDisplayName": "Read and write incidents",
+            "value": "Incident.ReadWrite",
             "isPrivate": false
         },
         {
@@ -153,14 +142,25 @@
             "isPrivate": false
         },
         {
-            "adminConsentDescription": "Allows the app to create, read or update any incident that the signed in user can create, read or update",
-            "adminConsentDisplayName": "Read and write incidents",
-            "id": "2af415cc-88cf-4146-a0c8-444c3a80d5db",
+            "adminConsentDescription": "Allows the app to run advanced hunting queries, that the signed-in user can execute.",
+            "adminConsentDisplayName": "Run advanced hunting queries",
+            "id": "15f11de4-5113-4268-a2d1-0bad43d781f9",
             "isEnabled": true,
             "type": "Admin",
-            "userConsentDescription": "Allows the app to create, read or update any incident that the signed in user can create, read or update",
-            "userConsentDisplayName": "Read and write incidents",
-            "value": "Incident.ReadWrite",
+            "userConsentDescription": "Allows the app to run advanced hunting queries, that the signed-in user can execute.",
+            "userConsentDisplayName": "Run advanced hunting queries",
+            "value": "AdvancedHunting.Read",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to create or update any custom detection rule that the signed in user can",
+            "adminConsentDisplayName": "Read and write custom detection rules",
+            "id": "ddbb8d0c-c86b-4ece-bcb7-0f031a9cf103",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to create or update any custom detection rule that the signed in user can",
+            "userConsentDisplayName": "Read and write custom detection rules",
+            "value": "CustomDetections.ReadWrite",
             "isPrivate": false
         }
     ],
