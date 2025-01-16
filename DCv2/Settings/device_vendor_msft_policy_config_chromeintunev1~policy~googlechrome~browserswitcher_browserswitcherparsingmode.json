@@ -16,6 +16,7 @@
     "settingUsage": "configuration",
     "uxBehavior": "toggle",
     "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
     "id": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~browserswitcher_browserswitcherparsingmode",
     "description": "This policy controls how Google Chrome interprets sitelist/greylist policies for the Legacy Browser Support feature. It affects the following policies: BrowserSwitcherUrlList, BrowserSwitcherUrlGreylist, BrowserSwitcherUseIeSitelist, BrowserSwitcherExternalSitelistUrl, and BrowserSwitcherExternalGreylistUrl.\r\n\r\nIf 'Default' (0) or unset, URL matching is less strict. Rules that do not contain \"/\" look for a substring anywhere in the URL's hostname. Matching the path component of a URL is case-sensitive.\r\n\r\nIf 'IESiteListMode' (1), URL matching is more strict. Rules that do not contain \"/\" only match at the end of the hostname. They must also be at a domain name boundary. Matching the path component of a URL is case-insensitive. This is more compatible with Microsoft® Internet Explorer® and Microsoft® Edge®.\r\n\r\nFor example, with the rules \"example.com\" and \"acme.com/abc\":\r\n\r\n\"http://example.com/\", \"http://subdomain.example.com/\" and \"http://acme.com/abc\" match regardless of parsing mode.\r\n\r\n\"http://notexample.com/\", \"http://example.com.invalid.com/\", \"http://example.comabc/\" only match in 'Default' mode.\r\n\r\n\"http://acme.com/ABC\" only matches in 'IESiteListMode'.",
     "helpText": "",
