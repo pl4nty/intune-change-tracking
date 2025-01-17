@@ -130,7 +130,7 @@ async def main():
     data = await client.device_management.configuration_settings.get(request_configuration=request_config)
     for item in data.json().get('value'):
         item.pop('version')
-        item.pop('riskLevel')
+        item.pop('riskLevel', None)
         path = Path(output, source, item.get('id')).with_suffix('.json')
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(item, f, ensure_ascii=False, indent=4)
