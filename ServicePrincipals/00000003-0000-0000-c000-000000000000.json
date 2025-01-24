@@ -2170,6 +2170,32 @@
             "allowedMemberTypes": [
                 "Application"
             ],
+            "description": "Allows the app to read Microsoft Intune device compliance scripts, device management scripts, device shell scripts, device custom attribute shell scripts and device health scripts, without a signed-in user.",
+            "displayName": "Read Microsoft Intune Scripts",
+            "id": "c7a5be92-2b3d-4540-8a67-c96dcaae8b43",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "DeviceManagementScripts.Read.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to read and write Microsoft Intune device compliance scripts, device management scripts, device shell scripts, device custom attribute shell scripts and device health scripts, without a signed-in user.",
+            "displayName": "Read and write Microsoft Intune Scripts",
+            "id": "9255e99d-faf5-445e-bbf7-cb71482737c4",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "DeviceManagementScripts.ReadWrite.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
             "description": "Allows the app to read Microsoft Intune service properties including device enrollment and third party service connection configuration, without a signed-in user.",
             "displayName": "Read Microsoft Intune configuration",
             "id": "06a5fe6d-c49d-46a7-b082-56b1b14103c7",
@@ -2189,6 +2215,19 @@
             "isEnabled": true,
             "origin": "Application",
             "value": "DeviceManagementServiceConfig.ReadWrite.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to create device templates. The app is marked as owner of the created device template. As a member of owners, the app will be allowed to manage devices created from the template.",
+            "displayName": "Create device template",
+            "id": "abf6441f-0772-4932-96e7-0191478dd73a",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "DeviceTemplate.Create",
             "isPreAuthorizationRequired": false,
             "isPrivate": false
         },
@@ -8838,6 +8877,28 @@
             "isPrivate": false
         },
         {
+            "adminConsentDescription": "Allows the app to read Microsoft Intune device compliance scripts, device management scripts, device shell scripts, device custom attribute shell scripts and device health scripts on behalf of the signed in user.",
+            "adminConsentDisplayName": "Read Microsoft Intune Scripts",
+            "id": "d32381d8-ee89-4220-9c83-b672aa68d404",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to read Microsoft Intune device compliance scripts, device management scripts, device shell scripts, device custom attripute shell scripts and device health scripts.",
+            "userConsentDisplayName": "Read Microsoft Intune Scripts",
+            "value": "DeviceManagementScripts.Read.All",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to read and write Microsoft Intune device compliance scripts, device management scripts, device shell scripts, device custom attribute shell scripts and device health scripts on behalf of the signed in user.",
+            "adminConsentDisplayName": "Read and write Microsoft Intune Scripts",
+            "id": "8b9d79d0-ad75-4566-8619-f7500ecfcebe",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to read and write Microsoft Intune device compliance scripts, device management scripts, device shell scripts, device custom attripute shell scripts and device health scripts.",
+            "userConsentDisplayName": "Read and write Microsoft Intune Scripts",
+            "value": "DeviceManagementScripts.ReadWrite.All",
+            "isPrivate": false
+        },
+        {
             "adminConsentDescription": "Allows the app to read Microsoft Intune service properties including device enrollment and third party service connection configuration.",
             "adminConsentDisplayName": "Read Microsoft Intune configuration",
             "id": "8696daa5-bce5-4b2e-83f9-51b6defc4e1e",
@@ -8857,6 +8918,17 @@
             "userConsentDescription": "Allows the app to read and write Microsoft Intune service properties including device enrollment and third party service connection configuration.",
             "userConsentDisplayName": "Read and write Microsoft Intune configuration",
             "value": "DeviceManagementServiceConfig.ReadWrite.All",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to create device templates on behalf of the signed in user. The user is marked as owners of the created device template. As a member of owners, the user will be allowed to manage devices created from the template.",
+            "adminConsentDisplayName": "Create device templates",
+            "id": "0b1717ff-3e42-4a73-8c29-e6b2e1093960",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to create device templates on your behalf. You will be marked as owners of the created device template. As a member of owners, you will be allowed to manage devices created from the template.",
+            "userConsentDisplayName": "Create device templates",
+            "value": "DeviceTemplate.Create",
             "isPrivate": false
         },
         {
