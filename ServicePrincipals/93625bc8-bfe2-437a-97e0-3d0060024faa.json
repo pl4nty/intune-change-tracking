@@ -44,7 +44,34 @@
     "api": {
         "resourceSpecificApplicationPermissions": []
     },
-    "appRoles": [],
+    "appRoles": [
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to register a newer version of on-premises Microsoft Entra Connect Sync Agent.",
+            "displayName": "Read, write and manage Microsoft Entra Connect Sync Agent",
+            "id": "e006e431-a65b-4f3e-8808-77d29d4c5f1a",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "PasswordWriteback.RegisterClientVersion.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to refresh and recreate on-premises configuration for Microsoft self-service password reset.",
+            "displayName": "Read, write and manage self-service password reset writeback configuration",
+            "id": "fc7e8088-95b5-453e-8bef-b17ecfec5ba3",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "PasswordWriteback.RefreshClient.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        }
+    ],
     "info": {
         "termsOfServiceUrl": null,
         "supportUrl": null,
