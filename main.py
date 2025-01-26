@@ -119,8 +119,9 @@ async def main():
             # match columns of 1P schema endpoint
             query=f'{table} | getschema | project Description="", Type=split(DataType, ".")[1], Entity="", Name=ColumnName'
         ))
-        with open(f'Defender/{table}.json', 'w', encoding='utf-8') as f:
-            json.dump(data.json().get('results'), f, ensure_ascii=False, indent=4)
+        if data.json().get('results') is not None:
+            with open(f'Defender/{table}.json', 'w', encoding='utf-8') as f:
+                json.dump(data.json().get('results'), f, ensure_ascii=False, indent=4)
 
     # DCv2 policies eg Settings Catalog
     output = 'DCv2'
