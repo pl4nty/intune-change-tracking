@@ -128,7 +128,8 @@ async def main():
     shutil.rmtree(output)
     source = 'Settings'
     os.makedirs(Path(output, source))
-    data = await client.device_management.configuration_settings.get(request_configuration=request_config)
+    # kiota 1.9.1 started dropping deviceManagement from endpoint
+    data = await client.device_management.with_url('https://graph.microsoft.com/beta/deviceManagement/configurationSettings').get(request_configuration=request_config)
     for item in data.json().get('value'):
         item.pop('version')
         item.pop('riskLevel', None)
@@ -142,7 +143,8 @@ async def main():
 
     source = 'Templates'
     os.makedirs(Path(output, source))
-    data = await client.device_management.configuration_policy_templates.get(request_configuration=request_config)
+    # kiota 1.9.1 started dropping deviceManagement from endpoint
+    data = await client.device_management.with_url('https://graph.microsoft.com/beta/deviceManagement/configurationPolicyTemplates').get(request_configuration=request_config)
     for item in data.json().get('value'):
         path = Path(output, source, item.get('id')).with_suffix('.json')
         with open(path, 'w', encoding='utf-8') as f:
