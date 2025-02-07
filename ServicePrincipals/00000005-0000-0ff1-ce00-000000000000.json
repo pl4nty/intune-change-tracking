@@ -11,6 +11,7 @@
     "applicationTemplateId": null,
     "appOwnerOrganizationId": "f8cdef31-a31e-4b4a-93e4-5f571e91255a",
     "appRoleAssignmentRequired": false,
+    "assignmentRequiredForPrincipalTypes": null,
     "description": null,
     "disabledByMicrosoftStatus": null,
     "displayName": "Viva Engage",
@@ -73,6 +74,45 @@
         "resourceSpecificApplicationPermissions": []
     },
     "appRoles": [
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to list Viva Engage roles without a signed-in user.",
+            "displayName": "Read Viva Engage roles",
+            "id": "e52ccd5f-74f3-45ef-bb4c-0464d43522cf",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "EngagementRole.Read",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to assign Viva Engage role to a user, and remove a Viva Engage role from a user without a signed-in user.",
+            "displayName": "Modify Viva Engage role membership",
+            "id": "4897f557-5d68-4827-8b0e-c7b983e911f1",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "EngagementRole.ReadWrite.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to list all Viva Engage roles and role memberships without a signed-in user.",
+            "displayName": "Read all Viva Engage roles and role memberships",
+            "id": "0f511994-a49f-440f-9834-7eb89fec8cc7",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "EngagementRole.Read.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
         {
             "allowedMemberTypes": [
                 "Application"
