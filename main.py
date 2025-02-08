@@ -123,7 +123,7 @@ async def main():
             with open(f'Defender/{table}.json', 'w', encoding='utf-8') as f:
                 json.dump(data.json().get('results'), f, ensure_ascii=False, indent=4)
 
-    # DCv2 policies eg Settings Catalog
+    # DCv2 configurationSettings eg Settings Catalog
     output = 'DCv2'
     shutil.rmtree(output)
     source = 'Settings'
@@ -140,6 +140,16 @@ async def main():
     # backwards compat
     shutil.rmtree('settings')
     shutil.copytree(Path(output, source), 'settings')
+
+    # DCv2 inventorySettings eg Properties catalog
+    source = 'Inventory'
+    os.makedirs(Path(output, source))
+    data = await client.device_management.with_url('https://graph.microsoft.com/beta/deviceManagement/inventorySettings').get(request_configuration=request_config)
+    for item in data.json().get('value'):
+        item.pop('version')
+        path = Path(output, source, item.get('id')).with_suffix('.json')
+        with open(path, 'w', encoding='utf-8') as f:
+            json.dump(item, f, ensure_ascii=False, indent=4)
 
     source = 'Templates'
     os.makedirs(Path(output, source))
