@@ -17,7 +17,9 @@ jobs:
         with:
           python-version: 3.x
           cache: pip
-      - run: pip install beautifulsoup4==4.13.3
+      - run: |
+          pip install -r requirements.txt
+          pip install beautifulsoup4==4.13.3
       - run: python ests-errors.py
       - uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
         with:
