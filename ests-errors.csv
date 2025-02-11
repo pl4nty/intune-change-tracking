@@ -1,0 +1,122 @@
+Code,Message,Remediation
+7000011,Requested SAML 2.0 assertion has invalid SubjectConfirmation Method: {method}.,
+7000012,The grant was obtained for a different tenant.,
+7000013,The grant is not supported by API version {apiVersion}.,
+7000014,The provided value for the input parameter 'device_code' is not valid.,
+7000015,The grant was obtained for a different tenant.,
+7000016,Primary refresh token is not signed with session key.,
+7000017,Broker restricted refresh token can't be used as credential.,
+7000018,Token binding header is empty.,
+7000019,Token binding hash does not match.,
+7000020,SAML 2.0 Bearer assertion must be a valid Base64Url encoded value.,
+7000021,Unrecognized grant type {type}.,
+7000022,VSM Binding Key missing from Ticket Granting Ticket request.,
+7000023,VSM Binding key mismatch.,
+7000024,Inconsistent broker application IDs asserted by incoming credentials.,
+7000025,Ambiguous request. The grant contains duplicate claims.,
+7000026,"Provided grant is invalid or malformed. The grant requires an encrypted response, but the client is not indicating it understands encrypted responses.",
+7000027,An emergency refresh token is present but rejected.,
+7000028,Attestation key is required for this request but it doesn't exist in the device. Please consider re-enrolling the device.,
+7000029,The token binding claim is invalid because it was not generated on the same device as attestation key. Please verify the legitimacy of the device.,
+7000030,The token binding claim is invalid because the thumbprint of binding key does not match the thumbprint in the binding claim or the thumbprint in the binding claim is missing. Please verify the legitimacy of the device.,
+7000031,The signing algorithm {algorithm} of attestation key is not supported. Please consider re-enrolling the device and update the attestation key.,
+7000032,The security enclave type {enclave} of the token binding key is unknown. Please consider re-enrolling the device.,
+7000033,Token doesn't contain expected claim: '{claim}'.,
+7000034,The token binding claim is malformatted. Please consider re-enrolling the device.,
+7000035,The token binding data header is malformatted. Please consider re-enrolling the device.,
+7000036,The token binding key parameter (tbid/tbidv2) is not properly base64-encoded. Please contact you administrator.,
+7000040,Application {appid} is not authorized to override Fabric resource IDs and trust mode claims.,
+7000041,Fabric claims overrides are only supported for Azure AD Federated Identity Credentials issued by the same cloud.,
+7000042,The audience in the client assertion with Application Id {appid} is not allowed to override Fabric resource IDs and trust mode claims.,
+7000043,The issuer in the client assertion {issuer} is not allowed to override Fabric resource IDs and trust mode claims.,
+7000110,"Request is ambiguous, multiple application identifiers found.",https://learn.microsoft.com/troubleshoot/azure/entra/entra-id/app-integration/error-code-aadsts7000110-request-is-ambiguous
+7000112,Application '{appIdentifier}'({appName}) is disabled.,
+7000113,Application '{appIdentifier}' is not authorized to make application on-behalf-of calls.,
+7000114,Application '{appIdentifier}' is not allowed to make application on-behalf-of calls.,
+7000115,This grant is reedemable only by broker application.,
+7000116,Client application '{appIdentifier}'({appName}) is disabled in tenant {tenant}. Please review the documentation: https://go.microsoft.com/fwlink/?linkid=2167553,
+7000117,Resource application '{appIdentifier}'({appName}) is disabled in tenant {tenant}. Please review the documentation: https://go.microsoft.com/fwlink/?linkid=2167553,
+7000210,Unable to find source of Trusted Certificate Authority policy.,
+7000211,Trusted Certificate Authority policy is not configured on the tenant '{tenantId}'.,
+7000212,No matching Trusted Certificate Authority policy found for authorized subject name.,
+7000213,Invalid certificate chain.,
+7000214,Certificate has been revoked.,
+7000215,"Invalid client secret provided. Ensure the secret being sent in the request is the client secret value, not the client secret ID, for a secret added to app '{identifier}'.",Developer error - the app is attempting to sign in without the necessary or correct authentication parameters.
+7000216,"'client_assertion', 'client_secret' or 'request' is required for the 'client_credentials' grant type.",Developer error - the app is attempting to sign in without the necessary or correct authentication parameters.
+7000217,The service principal named {appPhrase} was not found in the tenant named {tenant_name}. This can happen if the application has not been installed by the administrator of the tenant.,
+7000218,The request body must contain the following parameter: 'client_assertion' or 'client_secret'.,Developer error - the app is attempting to sign in without the necessary or correct authentication parameters.
+7000219,'client_assertion' or 'client_secret' is required for the '{type}' grant type.,
+7000220,Client application identifier in the provided grant doesn't match 'client_id' parameter.,
+7000221,Certificate Subject must match Issuer claim in the client assertion.,
+7000222,"The provided client secret keys for app '{identifier}' are expired. Visit the Azure portal to create new keys for your app: https://aka.ms/NewClientSecret, or consider using certificate credentials for added security: https://aka.ms/certCreds.",Developer error - the app is attempting to sign in without the necessary or correct authentication parameters.
+7000223,Application {brokerAppId} is not authorized to broker tokens.,
+7000224,Application {childAppId} is not authorized to have tokens brokered on its behalf.,
+7000225,"Invalid credentials: An MSI certificate was included in the request for the app, but the app (object ID: {oid}, application id: {clientId}) is not an MSI. Ensure that your code is matching MSI identities and certificates appropriately.","This is a platform error, and cannot be remediated by the app developer or admin. Consider filing a support ticket against the Azure service that is failing."
+7000226,"No federated identity credential policy found on application ({appid}). The client_assertion used to authenticate the request does not match the subject or application being requested.  Ensure that the application ID in the request is correct, that the app has a policy applied to it, and that the correct client_assertion is being provided in the request.","The request attempted to use a credential from one service to authenticate as another service, which requires a federated identity credential to be in place. The application ID in the request does not have a federated credentials policy applied to it, so the request was rejected. Ensure that the app has a policy applied to it, and that the developer intended to perform a cross-service authentication."
+7000227,"No Federated Identity Credential policy found on application that matched the presented MSI-signed client assertion. Expecting a Federated Identity Credential with subject: '{msiSpid}', issuer: '{expectedIssuer}' and audience: '{expectedAudience}'.",Ensure that the federated identity credential policy on the application matches the expected values.
+7000228,Application {brokerAppId} is not authorized to broker tokens.,
+7000229,The client application {appId} is missing service principal in the tenant {tenantId}. See instructions here: https://go.microsoft.com/fwlink/?linkid=2225119,
+7000230,Underlying Federated Identity Credential has been revoked for issuer {issuer} and subject {subject}.,
+7000231,Unsupported issuer configured in the trusted certificate authority policy on the application tenant '{tenantId}'.,https://identitydivision.visualstudio.com/IdentityWiki/_wiki/wikis/IdentityWiki.wiki/59891/Subject-Name-and-Issuer-Authentication
+7000232,MSI identity ({clientId}) should not use {credentialType}.,
+7000241,"Client assertion is not within its valid time range. Current time: {curTime}, not before time of assertion {nbfTime}. Review the documentation at https://learn.microsoft.com/entra/identity-platform/certificate-credentials .",
+7000242,"Client assertion exceeds its maximum allowed lifetime of {lifetimeLimit}. Issued at of assertion {iatTime}, not before time of assertion {nbfTime}, expiry time of assertion {expTime}.",
+7000271,The certificate with identifier {certIdentifier} in the client assertion header does not match the certificate in the header.,Developer error - the app is attempting to sign in without the necessary or correct authentication parameters.
+7000272,The certificate with identifier {certIdentifier} used to sign the federated credential could not be found in the metadata of identity provider {idpIssuer}. Please validate that your Identity Provider's metadata exposes the key used to sign the incoming token.,Developer error - the app is attempting to sign in without the necessary or correct authentication parameters.
+7000273,Client assertion failed signature validation with certificate identifier {certIdentifier},Developer error - the app is attempting to sign in without the necessary or correct authentication parameters.
+7000274,"Key {certIdentifier} was found, but use of the key to verify the signature failed.",Developer error - the app is attempting to sign in without the necessary or correct authentication parameters.
+7000275,Key {certIdentifier} is either less than or equal to 512 bits or using weak signature algorithm.,
+7000281,Certificate with thumbprint {thumbprint} is not authorized.,Developer error - the app is attempting to sign in without the necessary or correct authentication parameters.
+7000282,Client assertion JWT should not contain 'response_type' claim.,
+7000283,Certificate with issuer certificate's subject key identifier {ski} and serial number {serialNumber} is not authorized.,
+7000284,Certificate with serial number {serialNumber} is not authorized.,
+7000301,Invalid certificate - the issuer of the certificate is from a different cloud instance.,
+7000302,SubjectName+Issuer Authentication is locked down to the existing set of tenants.,
+7000303,Invalid certificate - A certificate registered in the production tenant is used by a non-production application '{appId}' registered in tenant '{appTid}'. Please consider requesting a new client certificate.,
+7000304,Invalid certificate - A certificate registered in non-production tenant is used by a production application '{appId}' registered in tenant '{appTid}'. Please consider requesting a new client certificate.,
+7000305,"Invalid certificate - Certificate issued by the tenant '{certTid}' is not allowed to be used in the application '{appId}', which is owned by a different tenant '{appTid}'. Please consider requesting a new client certificate, or migrating your application to the correct tenant.",
+7000361,Client assertion claim '{claimName}' can only contain a maximum of '{maxItems}' items.,
+7000362,Client assertion claim '{claimName}' value is not allowed.,
+7000363,Custom claim override is forbidden for the given audience.,
+7000471,"A reply address scheme starting with 'brk-' was seen on a request that wasn't for brokering. This scheme is reserved for brokered application requests. Use a valid reply URI instead, either a native app reply URI or an https:// uri.",The app sent an inappropriate reply URI on this request. The app should be updated to provide a reply URI that is supported for their flow (https:// or a native app URI)
+7000472,Invalid Reply Address. Broker must use Single-Page Application or Installed Client Reply Address.,
+7000473,Invalid Reply Address. Broker must specify its redirect URI.,
+7002101,Symmetric secrets may not be used to authenticate this Service Principal.,
+7002102,Symmetric secrets may not be used to authenticate this application.,
+7002103,Service Principal Keys may not be used to authenticate this application in this tenant.,
+7002104,Symmetric secrets may not be set on Service Principals to authenticate this application.,
+7002111,No matching federated identity record found for presented assertion issuer '{issuer}'. Please make sure the federated identity credential Issuer is '{expectedIssuer}'.,"Configuration issue. Ensure that the federated identity record on the application registration or the managed identity is correct, and ensure that the submitted token complies with the policy requirements. See documentation at https://learn.microsoft.com/entra/workload-id/workload-identity-federation."
+7002112,"No matching federated identity record found for presented assertion issuer '{issuer}'. The issuer matches with case-insensitive comparison, but not with case-sensitive comparison. Please check your federated identity credential Subject, Audience and Issuer against the presented assertion. See documentation at: https://learn.microsoft.com/entra/workload-id/workload-identity-federation. See breaking change notification and remediation at: https://learn.microsoft.com/en-us/entra/identity-platform/reference-breaking-changes#august-2024.","Configuration issue. Update the federated identity record Issuer on the application registration or the managed identity to match the presented assertion issuer, using a case-sensitive comparison."
+7002121,"No matching federated identity record found for presented assertion audience '{audience}'. The Audience for the federated identity credential for this issuer must be '{tokenExchangeUri}'. Please check your federated identity credential Subject, Audience and Issuer against the presented assertion. https://learn.microsoft.com/entra/workload-id/workload-identity-federation","Configuration issue. Ensure that the federated identity record on the application registration or the managed identity is correct, and ensure that the submitted token complies with the policy requirements. See documentation at https://learn.microsoft.com/entra/workload-id/workload-identity-federation."
+7002122,"No matching federated identity record found for presented assertion audience '{audience}'. The audience matches with case-insensitive comparison, but not with case-sensitive comparison. Please check your federated identity credential Subject, Audience and Issuer against the presented assertion. See documentation at: https://learn.microsoft.com/entra/workload-id/workload-identity-federation. See breaking change notification and remediation at: https://learn.microsoft.com/en-us/entra/identity-platform/reference-breaking-changes#august-2024.","Configuration issue. Update the federated identity record Audience on the application registration or the managed identity to match the presented assertion issuer, using a case-sensitive comparison."
+7002123,"No matching federated identity record found for presented assertion audience '{audience}'. The audience matches with case-insensitive comparison, but not with case-sensitive comparison. The Audience for the federated identity credential for this issuer must be '{tokenExchangeUri}'. Please check your federated identity credential Subject, Audience and Issuer against the presented assertion. See documentation at: https://learn.microsoft.com/entra/workload-id/workload-identity-federation. See breaking change notification and remediation at: https://learn.microsoft.com/en-us/entra/identity-platform/reference-breaking-changes#august-2024.","Configuration issue. Update the federated identity record Audience on the application registration or the managed identity to match the presented assertion issuer, using a case-sensitive comparison."
+7002131,"No matching federated identity record found for presented assertion subject '{subject}' or no federated identity credential expression matched. Please check your federated identity credential Subject, Expression, Audience and Issuer against the presented assertion. https://learn.microsoft.com/entra/workload-id/workload-identity-federation",
+7002132,The token expiry time is greater than the allowed limit.,
+7002133,An unexpected error occurred during token reminting.,
+7002136,Configuring the multi-factor authentication method failed because SMS sign-in is enabled and the phone number is not unique within the tenant.,
+7002137,No matching federated identity record found for presented assertion subject '{subject}'. Please make sure the federated identity credential Subject is '{expectedSubject}'.,
+7002138,"No matching federated identity record found for presented assertion subject '{subject}'. The subject matches with case-insensitive comparison, but not with case-sensitive comparison. Check your federated identity credential Subject, Audience and Issuer against the presented assertion. See documentation at: https://learn.microsoft.com/entra/workload-id/workload-identity-federation. See breaking change notification and remediation at: https://learn.microsoft.com/en-us/entra/identity-platform/reference-breaking-changes#august-2024.","Configuration issue. Update the federated identity record Subject on the application registration or the managed identity to match the presented assertion subject, using a case-sensitive comparison."
+7002139,An invalid property was read in the policy. This can occur if there is a malformed property in a claims collection.,
+7002140,A duplicate entry was found in the include and exclude region sets of the handler policy.,
+7002141,New stk_jwk is not allowed,
+7002198,The underlying credential invalidated due to internal error for app id: {appId}.,
+7002199,The underlying credential invalidated due to token revocation for app id: {appId}.,
+7002200,User does not have a matching federated identity credential configured.,
+7002201,Your federated identity credential is invalid. Contact your administrator to resolve this issue.,
+7002202,"No matching federated identity record found for presented assertion issuer '{issuer}'. Please note that the matching is done using a case-sensitive comparison. Please check your federated identity credential Subject, Audience and Issuer against the presented assertion.",
+7002203,"No matching federated identity record found for presented assertion subject '{subject}'. Please note that the matching is done using a case-sensitive comparison. Check your federated identity credential Subject, Audience and Issuer against the presented assertion.",
+7002205,Federated identity credential sign in was blocked due to User Credential Policy.,
+7002206,Forbidden token audience. Token audience must be {aadTokenExchangeAppUri}.,Obtain token for {aadTokenExchangeAppUri}.
+7002241,Issuer '{issuer}' may not use credentials matching via expression.,
+7002341,Resource forbidden. The target resource must not be {aadTokenExchangeAppUri} (app ID {aadTokenExchangeAppId}).,
+7002381,Federated identity credentials issued by 'https://token.actions.githubusercontent.com/' for applications or managed identities registered in this tenant must contain the 'enterprise' claim and its value must be 'microsoft'.,The Federated Identity Credential must be obtained from a GitHub repoo that belongs to the Microsoft GitHub enterprise.
+7005000,The client requested to authenticate with a credential that is not available.,
+7005001,The security principal does not exist in the directory.,
+7005002,The lookup property provided doesn't uniquely identify a single security principal in the directory.,
+7005003,The provided client secret keys for app '{identifier}' are revoked. Please specify a valid client secret.,Developer error - the app is attempting to sign in without the necessary or correct authentication parameters.
+7005004,The provided client assertion for '{identifier}' is using a key which is revoked on the '{type}'. Please specify a valid client assertion.,Developer error - the app is attempting to sign in without the necessary or correct authentication parameters.
+7005050,The application requested a token from a location that is disallowed by the app configuration.,
+7005100,The risk verification challenge was not successfully solved. Please reload the page and try again.,
+7005101,Unexpected response received from the challenge verification service.,
+7005102,Request client for fraud protection provider received invalid policy configuration.,
+7005103,ChallengeType {type} specified in the request is invalid.,
