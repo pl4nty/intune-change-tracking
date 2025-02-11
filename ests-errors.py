@@ -28,7 +28,7 @@ async def main():
 
     results = []
 
-    async with aiohttp.TCPConnector(limit_per_host=50) as connector, aiohttp.ClientSession(connector=connector) as session:
+    async with aiohttp.TCPConnector(limit_per_host=25) as connector, aiohttp.ClientSession(connector=connector) as session:
         tasks = [fetch_error_message(code, session) for code in ERROR_CODE_RANGE]
         for result in await asyncio.gather(*tasks):
             if result:
