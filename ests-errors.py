@@ -26,15 +26,18 @@ async def fetch_error_message(code, session):
 async def main():
     ERROR_CODE_RANGE = range(0, 10000000)
     OUTPUT_FILENAME = 'ests-errors.csv'
+    BATCH_SIZE = 10000  # Adjust this value based on your available memory
 
     results = []
 
     async with aiohttp.TCPConnector(limit_per_host=50) as connector, aiohttp.ClientSession(connector=connector) as session:
-        tasks = [fetch_error_message(code, session) for code in ERROR_CODE_RANGE]
-        for result in await asyncio.gather(*tasks):
-            if result:
-                error_code, message, remediation = result
-                results.append((error_code, message, remediation))
+        for i in range(0, len(ERROR_CODE_RANGE), BATCH_SIZE):
+            batch = ERROR_CODE_RANGE[i:i + BATCH_SIZE]
+            tasks = [fetch_error_message(code, session) for code in batch]
+            for result in await asyncio.gather(*tasks):
+                if result:
+                    error_code, message, remediation = result
+                    results.append((error_code, message, remediation))
 
     # Sort the results by error code
     results.sort(key=lambda x: x[0])
