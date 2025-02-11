@@ -1,0 +1,25 @@
+name: eSTS errors
+
+on:
+  workflow_dispatch:
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    environment: dev
+    permissions:
+      contents: write # committing
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.head_ref }}
+      - uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38 # v5.4.0
+        with:
+          python-version: 3.x
+          cache: pip
+      - run: pip install beautifulsoup4==4.13.3
+      - run: python ests-errors.py
+      - uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
+        with:
+          default_author: github_actions
+          message: Change detected
