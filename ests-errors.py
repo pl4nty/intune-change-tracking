@@ -1,6 +1,7 @@
 import asyncio
 import aiohttp
 import csv
+import resource
 from bs4 import BeautifulSoup
 
 async def fetch_error_message(code, session):
@@ -28,13 +29,12 @@ async def main():
 
     results = []
 
-    async with aiohttp.TCPConnector(limit_per_host=25) as connector, aiohttp.ClientSession(connector=connector) as session:
+    async with aiohttp.TCPConnector(limit_per_host=50) as connector, aiohttp.ClientSession(connector=connector) as session:
         tasks = [fetch_error_message(code, session) for code in ERROR_CODE_RANGE]
         for result in await asyncio.gather(*tasks):
             if result:
                 error_code, message, remediation = result
                 results.append((error_code, message, remediation))
-                print(f"Processed code {error_code}")
 
     # Sort the results by error code
     results.sort(key=lambda x: x[0])
@@ -46,4 +46,6 @@ async def main():
         writer.writerows(results)
 
 if __name__ == '__main__':
+    # 7GB RAM limit to avoid runner OOM
+    resource.setrlimit(resource.RLIMIT_AS, (7*pow(1000, 3), 7*pow(1000, 3)))
     asyncio.run(main())
