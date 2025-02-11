@@ -28,12 +28,13 @@ async def main():
 
     results = []
 
-    async with aiohttp.ClientSession() as session:
+    async with aiohttp.TCPConnector(limit_per_host=50) as connector, aiohttp.ClientSession(connector=connector) as session:
         tasks = [fetch_error_message(code, session) for code in ERROR_CODE_RANGE]
         for result in await asyncio.gather(*tasks):
             if result:
                 error_code, message, remediation = result
                 results.append((error_code, message, remediation))
+                print(f"Processed code {error_code}")
 
     # Sort the results by error code
     results.sort(key=lambda x: x[0])
