@@ -23,7 +23,7 @@ async def fetch_error_message(code, session):
         return None
 
 async def main():
-    ERROR_CODE_RANGE = range(7000000, 7006000)
+    ERROR_CODE_RANGE = range(0, 10000000)
     OUTPUT_FILENAME = 'ests-errors.csv'
 
     results = []
