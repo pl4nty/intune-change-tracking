@@ -1,0 +1,129 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "PK Init Hash Algorithm SHA512",
+        "Kerberos"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Kerberos#pkinithashalgorithmsha512"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Kerberos/PKInitHashAlgorithmSHA512",
+    "rootDefinitionId": "device_vendor_msft_policy_config_kerberos_pkinithashalgorithmconfiguration",
+    "categoryId": "14df2cb2-fc75-43af-87f8-a1fbd56a64e3",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_kerberos_pkinithashalgorithmsha512",
+    "description": "Configure SHA-512 hash algorithm for certificate logon",
+    "helpText": "",
+    "name": "PKInitHashAlgorithmSHA512",
+    "displayName": "PK Init Hash Algorithm SHA512",
+    "defaultOptionId": "device_vendor_msft_policy_config_kerberos_pkinithashalgorithmsha512_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22621",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_kerberos_pkinithashalgorithmsha512_0",
+            "description": "Not Supported",
+            "helpText": null,
+            "name": "Not Supported",
+            "displayName": "Not Supported",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_kerberos_pkinithashalgorithmconfiguration_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_kerberos_pkinithashalgorithmconfiguration"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_kerberos_pkinithashalgorithmsha512_1",
+            "description": "Default",
+            "helpText": null,
+            "name": "Default",
+            "displayName": "Default",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_kerberos_pkinithashalgorithmconfiguration_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_kerberos_pkinithashalgorithmconfiguration"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_kerberos_pkinithashalgorithmsha512_2",
+            "description": "Audited",
+            "helpText": null,
+            "name": "Audited",
+            "displayName": "Audited",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_kerberos_pkinithashalgorithmconfiguration_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_kerberos_pkinithashalgorithmconfiguration"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_kerberos_pkinithashalgorithmsha512_3",
+            "description": "Supported",
+            "helpText": null,
+            "name": "Supported",
+            "displayName": "Supported",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_kerberos_pkinithashalgorithmconfiguration_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_kerberos_pkinithashalgorithmconfiguration"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}
