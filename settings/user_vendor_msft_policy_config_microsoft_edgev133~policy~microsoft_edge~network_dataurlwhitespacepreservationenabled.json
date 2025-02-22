@@ -1,0 +1,73 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DataURLWhitespacePreservationEnabled",
+        "DataURL Whitespace Preservation for all media types",
+        "\\Microsoft Edge\\Network settings",
+        "Microsoft Edge\\Network settings",
+        "Network settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev133~Policy~microsoft_edge~Network/DataURLWhitespacePreservationEnabled",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edgev133~policy~microsoft_edge~network_dataurlwhitespacepreservationenabled",
+    "categoryId": "3fbd3b29-bafd-4adf-89e4-3be612dee275",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_microsoft_edgev133~policy~microsoft_edge~network_dataurlwhitespacepreservationenabled",
+    "description": "This policy provides a temporary opt-out for changes to how Edge handles whitepsace in data URLS.\r\nPreviously, whitespace would be kept only if the top level media type was text or contained the media type string xml.\r\nNow, whitespace will be preserved in all data URLs, regardless of media type.\r\n\r\nIf this policy is left unset or is set to True, the new behavior is enabled.\r\n\r\nWhen this policy is set to False, the old behavior is enabled.",
+    "helpText": "",
+    "name": "DataURLWhitespacePreservationEnabled",
+    "displayName": "DataURL Whitespace Preservation for all media types (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edgev133~policy~microsoft_edge~network_dataurlwhitespacepreservationenabled_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev133~policy~microsoft_edge~network_dataurlwhitespacepreservationenabled_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev133~policy~microsoft_edge~network_dataurlwhitespacepreservationenabled_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}
