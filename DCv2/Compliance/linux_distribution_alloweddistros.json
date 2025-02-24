@@ -1,0 +1,54 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "get",
+    "keywords": [
+        "Linux - Allowed Distributions",
+        "Allowed Distributions"
+    ],
+    "infoUrls": [
+        "https://go.microsoft.com/fwlink/?linkid=2210210"
+    ],
+    "occurrence": null,
+    "baseUri": "com.microsoft.manage.LinuxMdm",
+    "offsetUri": "/Distribution/AllowedDistros",
+    "rootDefinitionId": "linux_distribution_alloweddistros",
+    "categoryId": "f2c81665-b10b-4fa2-b177-7781b8650292",
+    "settingUsage": "compliance",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "linux_distribution_alloweddistros",
+    "description": "Specifies which Linux distributions and versions are considered compliant.",
+    "helpText": null,
+    "name": "AllowedDistros",
+    "displayName": "Allowed Distros",
+    "childIds": [
+        "linux_distribution_alloweddistros_item_$type",
+        "linux_distribution_alloweddistros_item_minimumversion",
+        "linux_distribution_alloweddistros_item_maximumversion"
+    ],
+    "maximumCount": 2147483647,
+    "minimumCount": 0,
+    "applicability": {
+        "description": null,
+        "platform": "linux",
+        "deviceMode": "none",
+        "technologies": "linuxMdm"
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "linux_distribution_alloweddistros_item_$type",
+            "required": true
+        },
+        {
+            "dependedOnBy": "linux_distribution_alloweddistros_item_minimumversion",
+            "required": false
+        },
+        {
+            "dependedOnBy": "linux_distribution_alloweddistros_item_maximumversion",
+            "required": false
+        }
+    ]
+}
