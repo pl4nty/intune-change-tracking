@@ -1,0 +1,89 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "IZ_PolicyNavigateSubframesAcrossDomains_4",
+        "Navigate windows and frames across different domains",
+        "\\Windows Components\\Internet Explorer\\Internet Control Panel\\Security Page\\Locked-Down Intranet Zone",
+        "Administrative Templates\\Windows Components\\Internet Explorer\\Internet Control Panel\\Security Page\\Locked-Down Intranet Zone",
+        "Locked-Down Intranet Zone"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownintranetzonenavigatewindowsandframes"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/InternetExplorer/LockedDownIntranetZoneNavigateWindowsAndFrames",
+    "rootDefinitionId": "device_vendor_msft_policy_config_internetexplorer_lockeddownintranetzonenavigatewindowsandframes",
+    "categoryId": "9bad0513-ac85-431c-86d9-9e3167f9b403",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_internetexplorer_lockeddownintranetzonenavigatewindowsandframes",
+    "description": "This policy setting allows you to manage the opening of windows and frames and access of applications across different domains.\r\n\r\nIf you enable this policy setting, users can open windows and frames from othe domains and access applications from other domains. If you select Prompt in the drop-down box, users are queried whether to allow windows and frames to access applications from other domains.\r\n\r\nIf you disable this policy setting, users cannot open windows and frames to access applications from different domains.\r\n\r\nIf you do not configure this policy setting, users can open windows and frames from othe domains and access applications from other domains.",
+    "helpText": "",
+    "name": "IZ_PolicyNavigateSubframesAcrossDomains_4",
+    "displayName": "Navigate windows and frames across different domains",
+    "defaultOptionId": "device_vendor_msft_policy_config_internetexplorer_lockeddownintranetzonenavigatewindowsandframes_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.15063",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_internetexplorer_lockeddownintranetzonenavigatewindowsandframes_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_internetexplorer_lockeddownintranetzonenavigatewindowsandframes_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_internetexplorer_lockeddownintranetzonenavigatewindowsandframes_iz_partname1607",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

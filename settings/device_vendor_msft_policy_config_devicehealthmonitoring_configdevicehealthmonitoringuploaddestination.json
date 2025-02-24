@@ -1,0 +1,71 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Config Device Health Monitoring Upload Destination",
+        "Device Health Monitoring"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-DeviceHealthMonitoring#configdevicehealthmonitoringuploaddestination"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/DeviceHealthMonitoring/ConfigDeviceHealthMonitoringUploadDestination",
+    "rootDefinitionId": "device_vendor_msft_policy_config_devicehealthmonitoring_allowdevicehealthmonitoring",
+    "categoryId": "55c888df-44ff-49d1-808e-ad9cb8429aff",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_devicehealthmonitoring_configdevicehealthmonitoringuploaddestination",
+    "description": "If the device is not opted-in to the DeviceHealthMonitoring service via the AllowDeviceHealthMonitoring then this policy has no meaning. For devices which are opted in, the value of this policy modifies which destinations are in-scope for monitored events to be uploaded.",
+    "helpText": "",
+    "name": "ConfigDeviceHealthMonitoringUploadDestination",
+    "displayName": "[Deprecated] Config Device Health Monitoring Upload Destination",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "9.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "88.8.88888",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 87516,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "device_vendor_msft_policy_config_devicehealthmonitoring_allowdevicehealthmonitoring_1",
+            "parentSettingId": "device_vendor_msft_policy_config_devicehealthmonitoring_allowdevicehealthmonitoring"
+        }
+    ],
+    "dependedOnBy": []
+}

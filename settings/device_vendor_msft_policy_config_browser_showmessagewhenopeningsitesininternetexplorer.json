@@ -1,0 +1,95 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Show Message When Opening Sites In Internet Explorer",
+        "Browser"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Browser#showmessagewhenopeningsitesininternetexplorer"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Browser/ShowMessageWhenOpeningSitesInInternetExplorer",
+    "rootDefinitionId": "device_vendor_msft_policy_config_browser_showmessagewhenopeningsitesininternetexplorer",
+    "categoryId": "5d835ac8-2e5e-4887-8e4d-0c3846d0ad9f",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_browser_showmessagewhenopeningsitesininternetexplorer",
+    "description": "You can configure Microsoft Edge to open a site automatically in Internet Explorer 11 and choose to display a notification before the site opens. If you want to display a notification, you must enable Configure the Enterprise Mode Site List or Send all intranets sites to Internet Explorer 11 or both.  If enabled, the notification appears on a new page. If you want users to continue in Microsoft Edge, select the Show Keep going in Microsoft Edge option from the drop-down list under Options.  If disabled or not configured, the default app behavior occurs and no additional page displays.  Default setting: Disabled or not configured Related policies: -Configure the Enterprise Mode Site List -Send all intranet sites to Internet Explorer 11",
+    "helpText": "",
+    "name": "ShowMessageWhenOpeningSitesInInternetExplorer",
+    "displayName": "Show Message When Opening Sites In Internet Explorer",
+    "defaultOptionId": "device_vendor_msft_policy_config_browser_showmessagewhenopeningsitesininternetexplorer_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "4.1",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.14393",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_browser_showmessagewhenopeningsitesininternetexplorer_0",
+            "description": "No additional message displays.",
+            "helpText": null,
+            "name": "No additional message displays.",
+            "displayName": "No additional message displays.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_browser_showmessagewhenopeningsitesininternetexplorer_1",
+            "description": "Show an additional message stating that a site has opened in IE11.",
+            "helpText": null,
+            "name": "Show an additional message stating that a site has opened in IE11.",
+            "displayName": "Show an additional message stating that a site has opened in IE11.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_browser_showmessagewhenopeningsitesininternetexplorer_2",
+            "description": "Show an additional message with a \"Keep going in Microsoft Edge\" link.",
+            "helpText": null,
+            "name": "Show an additional message with a \"Keep going in Microsoft Edge\" link.",
+            "displayName": "Show an additional message with a \"Keep going in Microsoft Edge\" link.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

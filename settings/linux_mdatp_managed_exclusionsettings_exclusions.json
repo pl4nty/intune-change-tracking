@@ -1,0 +1,57 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Exclusion Settings"
+    ],
+    "infoUrls": [
+        "https://learn.microsoft.com/en-us/defender-endpoint/linux-preferences#exclusion-setting-preferences"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/exclusionSettings",
+    "offsetUri": "exclusions",
+    "rootDefinitionId": "linux_mdatp_managed_exclusionsettings_exclusions",
+    "categoryId": "d2191717-e304-46f7-bcc0-55e6477026c9",
+    "settingUsage": "configuration",
+    "uxBehavior": "contextPane",
+    "visibility": "settingsCatalog,template",
+    "id": "linux_mdatp_managed_exclusionsettings_exclusions",
+    "description": "Global exclusions apply to both Antivirus and Endpoint detection and response to exclude at a much lower level closer to sensors. Usage: Tackling performance issues. Risk: Significantly risks protection",
+    "helpText": null,
+    "name": "exclusions",
+    "displayName": "Global Exclusions",
+    "childIds": [
+        "linux_mdatp_managed_exclusionsettings_exclusions_item_$type",
+        "linux_mdatp_managed_exclusionsettings_exclusions_item_isdirectory",
+        "linux_mdatp_managed_exclusionsettings_exclusions_item_name",
+        "linux_mdatp_managed_exclusionsettings_exclusions_item_path"
+    ],
+    "maximumCount": 600,
+    "minimumCount": 0,
+    "applicability": {
+        "description": null,
+        "platform": "linux",
+        "deviceMode": "none",
+        "technologies": "microsoftSense"
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "linux_mdatp_managed_exclusionsettings_exclusions_item_$type",
+            "required": true
+        },
+        {
+            "dependedOnBy": "linux_mdatp_managed_exclusionsettings_exclusions_item_isdirectory",
+            "required": false
+        },
+        {
+            "dependedOnBy": "linux_mdatp_managed_exclusionsettings_exclusions_item_name",
+            "required": false
+        },
+        {
+            "dependedOnBy": "linux_mdatp_managed_exclusionsettings_exclusions_item_path",
+            "required": false
+        }
+    ]
+}

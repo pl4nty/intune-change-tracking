@@ -1,0 +1,58 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Autopilot",
+        "Device Preparation",
+        "Join type",
+        "Deployment settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./enrollment/autopilot/DevicePreparation",
+    "offsetUri": "/DeploymentSettings/JoinType",
+    "rootDefinitionId": "enrollment_autopilot_dpp_jointype",
+    "categoryId": "47b863f6-8116-432b-9fc1-9e487fdaa203",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "template",
+    "id": "enrollment_autopilot_dpp_jointype",
+    "description": "Specify how devices join an identity provider in your organization.",
+    "helpText": "",
+    "name": "JoinType",
+    "displayName": "Join type",
+    "defaultOptionId": "enrollment_autopilot_dpp_jointype_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "enrollment",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "enrollment_autopilot_dpp_jointype_0",
+            "description": "Cloud-only without an on-premises Windows Server Active Directory",
+            "helpText": null,
+            "name": "EntraIdJoined",
+            "displayName": "Microsoft Entra joined",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

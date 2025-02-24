@@ -1,0 +1,66 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "ADE profile",
+        "enrollment",
+        "Management settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "./enrollment/ade",
+    "offsetUri": "/deviceNameTemplateChoices",
+    "rootDefinitionId": "ade_devicenametemplatechoices",
+    "categoryId": "75e27534-3163-45b1-b34e-ca79b077b286",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "template",
+    "id": "ade_devicenametemplatechoices",
+    "description": "You can create a standard naming format to make it easier to name devices as they enroll in Intune. By default, Apple uses the device type (such as iPad or iPhone) and serial number to name ADE devices.",
+    "helpText": "",
+    "name": "AppleDeivceNameTemplateChoices",
+    "displayName": "Apple device name template",
+    "defaultOptionId": "ade_devicenametemplatechoices_0",
+    "applicability": {
+        "description": null,
+        "platform": "iOS, visionOS",
+        "deviceMode": "none",
+        "technologies": "enrollment"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "ade_devicenametemplatechoices_0",
+            "description": null,
+            "helpText": null,
+            "name": "No",
+            "displayName": "No",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "ade_devicenametemplatechoices_1",
+            "description": null,
+            "helpText": null,
+            "name": "Yes",
+            "displayName": "Yes",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "ade_appledevicenametemplate",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

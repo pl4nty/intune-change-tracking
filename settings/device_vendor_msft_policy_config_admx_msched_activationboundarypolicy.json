@@ -1,0 +1,90 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ActivationBoundaryPolicy",
+        "Automatic Maintenance Activation Boundary",
+        "\\Windows Components\\Maintenance Scheduler",
+        "Administrative Templates\\Windows Components\\Maintenance Scheduler",
+        "Maintenance Scheduler"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-msched#admx-msched-activationboundarypolicy"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_msched/ActivationBoundaryPolicy",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_msched_activationboundarypolicy",
+    "categoryId": "c20ba4a5-483d-417c-bd96-de3cd83303e1",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_msched_activationboundarypolicy",
+    "description": "\r\n          This policy setting allows you to configure Automatic Maintenance activation boundary.\r\n\r\n          The maintenance activation boundary is the daily schduled time at which Automatic Maintenance starts\r\n\r\n          If you enable this policy setting, this will override the default daily scheduled time as specified in Security and Maintenance/Automatic Maintenance Control Panel.\r\n\r\n          If you disable or do not configure this policy setting, the daily scheduled time as specified in Security and Maintenance/Automatic Maintenance Control Panel will apply.\r\n      \r\n ",
+    "helpText": "",
+    "name": "ActivationBoundaryPolicy",
+    "displayName": "Automatic Maintenance Activation Boundary",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_msched_activationboundarypolicy_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_msched_activationboundarypolicy_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_msched_activationboundarypolicy_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_msched_activationboundarypolicy_activationboundary",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

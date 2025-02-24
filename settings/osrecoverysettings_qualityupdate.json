@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Os recovery settings",
+        "Quality update only",
+        "Operating system"
+    ],
+    "infoUrls": [],
+    "baseUri": "./osrecoverysettings",
+    "offsetUri": "/qualityupdate",
+    "rootDefinitionId": "osrecoverysettings_qualityupdate",
+    "categoryId": "b92241c7-e419-4dc7-b373-08e595c1db1d",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "osrecoverysettings_qualityupdate",
+    "description": "By default, the qualaity update will be included",
+    "helpText": "",
+    "name": "Qualityupdate",
+    "displayName": "Quality update only",
+    "defaultOptionId": "osrecoverysettings_qualityupdate_current",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "windowsOsRecovery",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "osrecoverysettings_qualityupdate_current",
+            "description": null,
+            "helpText": null,
+            "name": "Current",
+            "displayName": "Current",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "Current"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "osrecoverysettings_qualityupdate_lastmonth",
+            "description": null,
+            "helpText": null,
+            "name": "Last month",
+            "displayName": "Last month",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "Last month"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "osrecoverysettings_qualityupdate_monthbeforelast",
+            "description": null,
+            "helpText": null,
+            "name": "Month before last",
+            "displayName": "Month before last",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "Month before last"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

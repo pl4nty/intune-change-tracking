@@ -1,0 +1,95 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Configure Japanese IME Version",
+        "Text Input"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-TextInput#configurejapaneseimeversion"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/TextInput/ConfigureJapaneseIMEVersion",
+    "rootDefinitionId": "device_vendor_msft_policy_config_textinput_configurejapaneseimeversion",
+    "categoryId": "cb8e8500-0336-4277-b3d9-9177cc967dcf",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_textinput_configurejapaneseimeversion",
+    "description": "This policy allows the IT admin to configure the Microsoft Japanese IME version in the desktop. The following list shows the supported values: 0 (default) – The new Microsoft Japanese IME is on by default. Allow to control Microsoft Japanese IME version to use. 1 - The previous version of Microsoft Japanese IME is always selected.  Not allowed to control Microsoft Japanese IME version to use. 2 - The new Microsoft Japanese IME is always selected.  Not allowed to control Microsoft Japanese IME version to use.",
+    "helpText": "",
+    "name": "ConfigureJapaneseIMEVersion",
+    "displayName": "Configure Japanese IME Version",
+    "defaultOptionId": "device_vendor_msft_policy_config_textinput_configurejapaneseimeversion_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_textinput_configurejapaneseimeversion_0",
+            "description": "Allows you to configure which Microsoft Japanese IME version to use. The new Microsoft Japanese IME version is configured by default.",
+            "helpText": null,
+            "name": "Allows you to configure which Microsoft Japanese IME version to use. The new Microsoft Japanese IME version is configured by default.",
+            "displayName": "Allows you to configure which Microsoft Japanese IME version to use. The new Microsoft Japanese IME version is configured by default.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_textinput_configurejapaneseimeversion_1",
+            "description": "Does not allow you to configure which Microsoft Japanese IME version to use. The previous version of Microsoft Japanese IME is always selected.",
+            "helpText": null,
+            "name": "Does not allow you to configure which Microsoft Japanese IME version to use. The previous version of Microsoft Japanese IME is always selected.",
+            "displayName": "Does not allow you to configure which Microsoft Japanese IME version to use. The previous version of Microsoft Japanese IME is always selected.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_textinput_configurejapaneseimeversion_2",
+            "description": "Does not allow you to configure which Microsoft Japanese IME version to use. The new Microsoft Japanese IME version is always selected.",
+            "helpText": null,
+            "name": "Does not allow you to configure which Microsoft Japanese IME version to use. The new Microsoft Japanese IME version is always selected.",
+            "displayName": "Does not allow you to configure which Microsoft Japanese IME version to use. The new Microsoft Japanese IME version is always selected.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

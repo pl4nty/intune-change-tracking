@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "SolidStatePolicy",
+        "Turn off solid state mode",
+        "\\System\\Disk NV Cache",
+        "Administrative Templates\\System\\Disk NV Cache",
+        "Disk NV Cache"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-disknvcache#admx-disknvcache-solidstatepolicy"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_DiskNVCache/SolidStatePolicy",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_disknvcache_solidstatepolicy",
+    "categoryId": "297f09f9-0a48-4058-81b8-66a630a3c0ea",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_disknvcache_solidstatepolicy",
+    "description": "This policy setting turns off the solid state mode for the hybrid hard disks. \r\n\r\nIf you enable this policy setting, frequently written files such as the file system metadata and registry may not be stored in the NV cache.\r\n\r\nIf you disable this policy setting, the system will store frequently written data into the non-volatile (NV) cache. This allows the system to exclusively run out of the NV cache and power down the disk for longer periods to save power. Note that this can cause increased wear of the NV cache.\r\n\r\nIf you do not configure this policy setting, the default behavior of the system is observed and frequently written files will be stored in the NV cache.\r\n\r\nNote: This policy setting is applicable only if the NV cache feature is on.\r\n ",
+    "helpText": "",
+    "name": "SolidStatePolicy",
+    "displayName": "Turn off solid state mode",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_disknvcache_solidstatepolicy_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_disknvcache_solidstatepolicy_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_disknvcache_solidstatepolicy_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

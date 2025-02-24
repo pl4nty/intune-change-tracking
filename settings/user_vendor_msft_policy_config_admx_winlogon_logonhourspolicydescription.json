@@ -1,0 +1,90 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "LogonHoursPolicyDescription",
+        "Set action to take when logon hours expire",
+        "\\Windows Components\\Windows Logon Options",
+        "Administrative Templates\\Windows Components\\Windows Logon Options",
+        "Windows Logon Options"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-winlogon#admx-winlogon-logonhourspolicydescription"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_WinLogon/LogonHoursPolicyDescription",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_winlogon_logonhourspolicydescription",
+    "categoryId": "e9aff162-feb0-400a-aa68-8dd8deb93275",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_winlogon_logonhourspolicydescription",
+    "description": "This policy controls which action will be taken when the logon hours expire for the logged on user. The actions include lock the workstation, disconnect the user, or log the user off completely.\r\n\r\nIf you choose to lock or disconnect a session, the user cannot unlock the session or reconnect except during permitted logon hours.\r\n\r\nIf you choose to log off a user, the user cannot log on again except during permitted logon hours. If you choose to log off a user, the user might lose unsaved data.\r\n\r\nIf you enable this setting, the system will perform the action you specify when the user’s logon hours expire.\r\n\r\nIf you disable or do not configure this setting, the system takes no action when the user’s logon hours expire. The user can continue the existing session, but cannot log on to a new session.\r\n\r\nNote: If you configure this setting, you might want to examine and appropriately configure the “Remove logon hours expiration warnings” setting\r\n ",
+    "helpText": "",
+    "name": "LogonHoursPolicyDescription",
+    "displayName": "Set action to take when logon hours expire (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_winlogon_logonhourspolicydescription_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_winlogon_logonhourspolicydescription_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_winlogon_logonhourspolicydescription_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_admx_winlogon_logonhourspolicydescription_logonhourspolicydescription",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

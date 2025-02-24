@@ -1,0 +1,68 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "VideoPowerDownTimeOutDC_2",
+        "Turn off the display (on battery)",
+        "\\System\\Power Management\\Video and Display Settings",
+        "Power",
+        "Video and Display Settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Power/DisplayOffTimeoutOnBattery",
+    "rootDefinitionId": "device_vendor_msft_policy_config_power_displayofftimeoutonbattery",
+    "categoryId": "01bbe7c3-10eb-40a3-8387-c74c33c294b1",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_power_displayofftimeoutonbattery_entervideodcpowerdowntimeout",
+    "description": "",
+    "helpText": "",
+    "name": "EnterVideoDCPowerDownTimeOut",
+    "displayName": "On battery power, turn display off after (seconds)",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "6.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 4294967295,
+        "minimumValue": 0
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 1
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "device_vendor_msft_policy_config_power_displayofftimeoutonbattery_1",
+            "parentSettingId": "device_vendor_msft_policy_config_power_displayofftimeoutonbattery"
+        }
+    ],
+    "dependedOnBy": []
+}

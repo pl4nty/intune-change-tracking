@@ -1,0 +1,58 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Autopilot",
+        "Device Preparation",
+        "Deployment mode",
+        "Deployment settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./enrollment/autopilot/DevicePreparation",
+    "offsetUri": "/DeploymentSettings/DeploymentMode",
+    "rootDefinitionId": "enrollment_autopilot_dpp_deploymentmode",
+    "categoryId": "47b863f6-8116-432b-9fc1-9e487fdaa203",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "template",
+    "id": "enrollment_autopilot_dpp_deploymentmode",
+    "description": "Deployment mode controls if a user needs to provide credentials in order to provision the device.",
+    "helpText": "",
+    "name": "DeploymentMode",
+    "displayName": "Deployment mode",
+    "defaultOptionId": "enrollment_autopilot_dpp_deploymentmode_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "enrollment",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "enrollment_autopilot_dpp_deploymentmode_0",
+            "description": "Devices are associated with the user enrolling the device and user credentials are required to provision the device",
+            "helpText": null,
+            "name": "UserDriven",
+            "displayName": "User-driven",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,101 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Save Files To Host",
+        "Windows Defender Application Guard",
+        "Microsoft Defender Application Guard"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/WindowsDefenderApplicationGuard-csp/"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/WindowsDefenderApplicationGuard",
+    "offsetUri": "/Settings/SaveFilesToHost",
+    "rootDefinitionId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard",
+    "categoryId": "cd55f347-a417-4fe9-83ee-8f1f40ac5eb0",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "template",
+    "id": "device_vendor_msft_windowsdefenderapplicationguard_settings_savefilestohost",
+    "description": "This policy setting determines whether to save downloaded files to the host operating system from the Microsoft Defender Application Guard container. If you enable this setting, people can save downloaded files from the Microsoft Defender Application Guard container to the host operating system.",
+    "helpText": "",
+    "name": "SaveFilesToHost",
+    "displayName": "Allow files to download and save to the host operating system",
+    "defaultOptionId": "device_vendor_msft_windowsdefenderapplicationguard_settings_savefilestohost_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager",
+        "configurationServiceProviderVersion": "1.2",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17134",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_windowsdefenderapplicationguard_settings_savefilestohost_0",
+            "description": "The user cannot download files from Edge in the container to the host file system. When the policy is not configured, it is the same as disabled (0).",
+            "helpText": null,
+            "name": "The user cannot download files from Edge in the container to the host file system. When the policy is not configured, it is the same as disabled (0).",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard_1",
+                    "parentSettingId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard"
+                },
+                {
+                    "dependentOn": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard_3",
+                    "parentSettingId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_windowsdefenderapplicationguard_settings_savefilestohost_1",
+            "description": "Turns on the functionality to allow users to download files from Edge in the container to the host file system.",
+            "helpText": null,
+            "name": "Turns on the functionality to allow users to download files from Edge in the container to the host file system.",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard_1",
+                    "parentSettingId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard"
+                },
+                {
+                    "dependentOn": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard_3",
+                    "parentSettingId": "device_vendor_msft_windowsdefenderapplicationguard_settings_allowwindowsdefenderapplicationguard"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

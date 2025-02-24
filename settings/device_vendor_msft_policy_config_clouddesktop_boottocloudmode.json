@@ -1,0 +1,76 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Boot To Cloud Mode",
+        "Cloud Desktop"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-CloudDesktop#boottocloudmode"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/CloudDesktop/BootToCloudMode",
+    "rootDefinitionId": "device_vendor_msft_policy_config_clouddesktop_boottocloudmode",
+    "categoryId": "39e4c352-be9c-4e75-8111-8236279c7f1e",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_clouddesktop_boottocloudmode",
+    "description": "This policy is used by IT admin to set the configuration mode of cloud PC.\r\n ",
+    "helpText": "",
+    "name": "BootToCloudMode",
+    "displayName": "Boot To Cloud Mode",
+    "defaultOptionId": "device_vendor_msft_policy_config_clouddesktop_boottocloudmode_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22621.2338",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "iotEnterprise"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_clouddesktop_boottocloudmode_0",
+            "description": "Not Configured",
+            "helpText": null,
+            "name": "Not Configured",
+            "displayName": "Not Configured",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_clouddesktop_boottocloudmode_1",
+            "description": "Enable Boot to Cloud Desktop",
+            "helpText": null,
+            "name": "Enable Boot to Cloud Desktop",
+            "displayName": "Enable Boot to Cloud Desktop",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

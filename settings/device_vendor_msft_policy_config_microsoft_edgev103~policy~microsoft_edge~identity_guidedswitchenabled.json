@@ -1,0 +1,73 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "GuidedSwitchEnabled",
+        "Guided Switch Enabled",
+        "\\Microsoft Edge\\Identity and sign-in",
+        "Microsoft Edge\\Identity and sign-in",
+        "Identity and sign-in"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev103~Policy~microsoft_edge~Identity/GuidedSwitchEnabled",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edgev103~policy~microsoft_edge~identity_guidedswitchenabled",
+    "categoryId": "45a89c1f-0a34-4f78-b28f-d30b623fa423",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_microsoft_edgev103~policy~microsoft_edge~identity_guidedswitchenabled",
+    "description": "Allows Microsoft Edge to prompt the user to switch to the appropriate profile when Microsoft Edge detects that a link is a personal or work link.\r\n\r\nIf you enable this policy, you'll be prompted to switch to another account if the current profile doesn't work for the requesting link.\r\n\r\nIf you disable this policy, you won't be prompted to switch to another account when there's a profile and link mismatch.\r\n\r\nIf this policy isn't configured, guided switch is turned on by default. A user can override this value in the browser settings.",
+    "helpText": "",
+    "name": "GuidedSwitchEnabled",
+    "displayName": "Guided Switch Enabled",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edgev103~policy~microsoft_edge~identity_guidedswitchenabled_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev103~policy~microsoft_edge~identity_guidedswitchenabled_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev103~policy~microsoft_edge~identity_guidedswitchenabled_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

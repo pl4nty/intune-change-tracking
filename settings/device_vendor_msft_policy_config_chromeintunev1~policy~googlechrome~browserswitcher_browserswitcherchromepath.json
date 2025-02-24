@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "BrowserSwitcherChromePath",
+        "Path to Chrome for switching from the alternative browser.",
+        "\\Google\\Google Chrome\\Legacy Browser Support",
+        "Administrative Templates\\Google\\Google Chrome\\Legacy Browser Support",
+        "Legacy Browser Support"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV1~Policy~googlechrome~BrowserSwitcher/BrowserSwitcherChromePath",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~browserswitcher_browserswitcherchromepath",
+    "categoryId": "10247787-95ea-4507-93de-dbd166df12b5",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~browserswitcher_browserswitcherchromepath",
+    "description": "This policy controls the command to use to open URLs in Google Chrome when switching from Internet Explorer®. This policy can be set to an executable file path or ${chrome} to autodetect the location of Google Chrome.\r\n\r\nLeaving the policy unset means Internet Explorer® autodetects Google Chrome's own executable path when launching Google Chrome from Internet Explorer.\r\n\r\nNote: If the Legacy Browser Support add-in for Internet Explorer® isn't installed, this policy has no effect.\r\n\r\nExample value: ${chrome}",
+    "helpText": "",
+    "name": "BrowserSwitcherChromePath",
+    "displayName": "Path to Chrome for switching from the alternative browser.",
+    "defaultOptionId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~browserswitcher_browserswitcherchromepath_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~browserswitcher_browserswitcherchromepath_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~browserswitcher_browserswitcherchromepath_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~browserswitcher_browserswitcherchromepath_browserswitcherchromepath",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,72 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "PromptOnMultipleMatchingCertificates",
+        "Prompt the user to select a certificate when multiple certificates match",
+        "\\Microsoft Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev100~Policy~microsoft_edge/PromptOnMultipleMatchingCertificates",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edgev100~policy~microsoft_edge_promptonmultiplematchingcertificates",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_microsoft_edgev100~policy~microsoft_edge_promptonmultiplematchingcertificates",
+    "description": "This policy controls whether the user is prompted to select a client certificate when more than one certificate matches 'AutoSelectCertificateForUrls' (Automatically select client certificates for these sites).\r\nIf this policy is set to True, the user is prompted to select a client certificate whenever the auto-selection policy matches multiple certificates.\r\nIf this policy is set to False or not set, the user may only be prompted when no certificate matches the auto-selection.",
+    "helpText": "",
+    "name": "PromptOnMultipleMatchingCertificates",
+    "displayName": "Prompt the user to select a certificate when multiple certificates match (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edgev100~policy~microsoft_edge_promptonmultiplematchingcertificates_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev100~policy~microsoft_edge_promptonmultiplematchingcertificates_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev100~policy~microsoft_edge_promptonmultiplematchingcertificates_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

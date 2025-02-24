@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Enable End Session Button",
+        "Kiosk Browser"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-KioskBrowser#enableendsessionbutton"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/KioskBrowser/EnableEndSessionButton",
+    "rootDefinitionId": "user_vendor_msft_policy_config_kioskbrowser_enableendsessionbutton",
+    "categoryId": "26c1af84-7c09-4910-8b2f-486072fef710",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_kioskbrowser_enableendsessionbutton",
+    "description": "Enable/disable kiosk browser's end session button.",
+    "helpText": "",
+    "name": "EnableEndSessionButton",
+    "displayName": "Enable End Session Button (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_kioskbrowser_enableendsessionbutton_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "7.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17134",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_kioskbrowser_enableendsessionbutton_1",
+            "description": "Enable",
+            "helpText": null,
+            "name": "Enable",
+            "displayName": "Enable",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_kioskbrowser_enableendsessionbutton_0",
+            "description": "Disable",
+            "helpText": null,
+            "name": "Disable",
+            "displayName": "Disable",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

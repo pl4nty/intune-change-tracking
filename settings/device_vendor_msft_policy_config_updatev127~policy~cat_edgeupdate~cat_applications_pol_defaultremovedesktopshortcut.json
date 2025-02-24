@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Pol_DefaultRemoveDesktopShortcut",
+        "Remove Desktop Shortcuts upon update default",
+        "\\Microsoft Edge Update\\Applications",
+        "Microsoft Edge Update\\Applications",
+        "Applications"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/updatev127~Policy~Cat_EdgeUpdate~Cat_Applications/Pol_DefaultRemoveDesktopShortcut",
+    "rootDefinitionId": "device_vendor_msft_policy_config_updatev127~policy~cat_edgeupdate~cat_applications_pol_defaultremovedesktopshortcut",
+    "categoryId": "2c7e8e8e-47fe-48ba-8cb4-55ce296edced",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_updatev127~policy~cat_edgeupdate~cat_applications_pol_defaultremovedesktopshortcut",
+    "description": "Lets you specify the default behavior for all channels for creating a desktop shortcut when Microsoft Edge is installed.\r\n\r\n  If you set this policy to \"Force delete system-level Desktop Shortcuts\" (1), any existing system-level Microsoft Edge desktop shortcuts will be deleted when the browser updates or the machine reboots.\r\n  If you set this policy to \"Force delete system-level and user-level Desktop Shortcuts\" (2), any existing system-level Microsoft Edge desktop shortcuts will be deleted when the browser updates or the machine reboots and any existing user-level desktop shortcuts will be deleted when the browser updates. This includes user-level desktop shortcuts that users might have made themselves.\r\n  If you don't configure this policy or disable it (0), nothing will happen to existing Microsoft Edge desktop shortcuts.",
+    "helpText": "",
+    "name": "Pol_DefaultRemoveDesktopShortcut",
+    "displayName": "Remove Desktop Shortcuts upon update default",
+    "defaultOptionId": "device_vendor_msft_policy_config_updatev127~policy~cat_edgeupdate~cat_applications_pol_defaultremovedesktopshortcut_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_updatev127~policy~cat_edgeupdate~cat_applications_pol_defaultremovedesktopshortcut_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_updatev127~policy~cat_edgeupdate~cat_applications_pol_defaultremovedesktopshortcut_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_updatev127~policy~cat_edgeupdate~cat_applications_pol_defaultremovedesktopshortcut_part_removedesktopshortcut",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,89 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "IdleTimeout",
+        "Specify idle Timeout",
+        "\\Windows Components\\Windows Remote Shell",
+        "Administrative Templates\\Windows Components\\Windows Remote Shell",
+        "Windows Remote Shell"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remoteshell#remoteshell-specifyidletimeout"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/RemoteShell/SpecifyIdleTimeout",
+    "rootDefinitionId": "device_vendor_msft_policy_config_remoteshell_specifyidletimeout",
+    "categoryId": "1219a9c2-dccb-445f-9f90-8e86e2de22d6",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_remoteshell_specifyidletimeout",
+    "description": "This policy setting configures the maximum time in milliseconds remote shell will stay open without any user activity until it is automatically deleted.\r\n\r\nAny value from 0 to 0x7FFFFFFF can be set. A minimum of 60000 milliseconds (1 minute) is used for smaller values.\r\n\r\nIf you enable this policy setting, the server will wait for the specified amount of time since the last received message from the client before terminating the open shell.\r\n\r\nIf you do not configure or disable this policy setting, the default value of 900000 or 15 min will be used.",
+    "helpText": "",
+    "name": "IdleTimeout",
+    "displayName": "Specify idle Timeout",
+    "defaultOptionId": "device_vendor_msft_policy_config_remoteshell_specifyidletimeout_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "6.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_remoteshell_specifyidletimeout_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_remoteshell_specifyidletimeout_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_remoteshell_specifyidletimeout_idletimeout",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

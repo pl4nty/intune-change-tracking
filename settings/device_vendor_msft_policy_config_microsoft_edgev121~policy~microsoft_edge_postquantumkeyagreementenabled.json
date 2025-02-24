@@ -1,0 +1,72 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "PostQuantumKeyAgreementEnabled",
+        "Enable post-quantum key agreement for TLS",
+        "\\Microsoft Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev121~Policy~microsoft_edge/PostQuantumKeyAgreementEnabled",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edgev121~policy~microsoft_edge_postquantumkeyagreementenabled",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_microsoft_edgev121~policy~microsoft_edge_postquantumkeyagreementenabled",
+    "description": "This policy configures whether Microsoft Edge will offer a post-quantum key agreement algorithm in TLS. This lets supporting servers protect user traffic from being decrypted by quantum computers.\r\n\r\nIf you enable this policy, Microsoft Edge will offer a post-quantum key agreement in TLS connections. TLS connections will be protected from quantum computers when communicating with compatible servers.\r\n\r\nIf you disable this policy, Microsoft Edge will not offer a post-quantum key agreement in TLS connections. User traffic will be unprotected from decryption by quantum computers.\r\n\r\nIf you don't configure this policy, Microsoft Edge will follow the default rollout process for offering a post-quantum key agreement.\r\n\r\nOffering a post-quantum key agreement is backwards-compatible. Existing TLS servers and networking middleware are expected to ignore the new option and continue selecting previous options.\r\n\r\nHowever, devices that don't implement TLS correctly may malfunction when offered the new option. For example, they might disconnect in response to unrecognized options or the resulting larger messages. These devices are not post-quantum-ready and will interfere with an enterprise's post-quantum transition. If this issue is encountered, administrators should contact the vendor for a fix.\r\n\r\nThis policy is a temporary measure and will be removed in future versions of Microsoft Edge. You can enable it to test for issues and you can disable it while you resolve issues.",
+    "helpText": "",
+    "name": "PostQuantumKeyAgreementEnabled",
+    "displayName": "Enable post-quantum key agreement for TLS",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edgev121~policy~microsoft_edge_postquantumkeyagreementenabled_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev121~policy~microsoft_edge_postquantumkeyagreementenabled_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev121~policy~microsoft_edge_postquantumkeyagreementenabled_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "String_Teams_SignInRestriction_Policy",
+        "Restrict sign in to Teams to accounts in specific tenants",
+        "\\Microsoft Teams",
+        "Administrative Templates\\Microsoft Teams",
+        "Microsoft Teams"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Teamsv3~Policy~L_Teams/String_Teams_SignInRestriction_Policy",
+    "rootDefinitionId": "user_vendor_msft_policy_config_teamsv3~policy~l_teams_string_teams_signinrestriction_policy",
+    "categoryId": "501b5a30-253c-48b7-ab40-de1d100e4358",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_teamsv3~policy~l_teams_string_teams_signinrestriction_policy",
+    "description": "This policy setting allows you to control the accounts that can be used in Teams on managed devices running Windows.  \r\n\r\nIf you enable this policy setting, users will only be allowed to sign in with accounts from Azure Active Directory (Azure AD) tenants that you specify. You can enter a comma separated list of tenant IDs.  \r\n \r\nThe policy setting applies to all ways that the user signs in, including first and additional accounts on versions of Teams that support multiple accounts side by side. \r\n\r\nThe policy setting is also enforced when users sign out and sign back in. \r\n\r\nIf you disable or don't configure this policy setting, Teams will continue to allow users to sign in with work or school accounts, or personal Microsoft accounts. \r\n\r\nImportant: This policy setting only restricts which users can sign in. It does not restrict the ability for users to be invited as a guest in other Azure AD tenants, or switch to tenants they were invited to.\r\n\r\nNote: This policy does not apply to Teams web app.",
+    "helpText": "",
+    "name": "String_Teams_SignInRestriction_Policy",
+    "displayName": "Restrict sign in to Teams to accounts in specific tenants (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_teamsv3~policy~l_teams_string_teams_signinrestriction_policy_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_teamsv3~policy~l_teams_string_teams_signinrestriction_policy_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_teamsv3~policy~l_teams_string_teams_signinrestriction_policy_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_teamsv3~policy~l_teams_string_teams_signinrestriction_policy_restrictteamssignintoaccountsfromtenantlist",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Autopilot",
+        "Device Preparation",
+        "Timeout",
+        "Out-of-box experience settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "./enrollment/autopilot/DevicePreparation",
+    "offsetUri": "/OobeSettings/Timeout",
+    "rootDefinitionId": "enrollment_autopilot_dpp_timeout",
+    "categoryId": "72e4d72b-e01e-427c-a3b6-05bdcf04ef8d",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "template",
+    "id": "enrollment_autopilot_dpp_timeout",
+    "description": "",
+    "helpText": "",
+    "name": "Timeout",
+    "displayName": "Minutes allowed before showing installation error",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "enrollment",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 720,
+        "minimumValue": 15
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 60
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

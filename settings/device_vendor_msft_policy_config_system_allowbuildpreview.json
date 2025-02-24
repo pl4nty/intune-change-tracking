@@ -1,0 +1,95 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Allow Build Preview",
+        "System"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-System#allowbuildpreview"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/System/AllowBuildPreview",
+    "rootDefinitionId": "device_vendor_msft_policy_config_system_allowbuildpreview",
+    "categoryId": "f62e0f2a-4363-4246-8057-1dc811fe4360",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_system_allowbuildpreview",
+    "description": "Note This policy setting applies only to devices running Windows 10 Pro, Windows 10 Enterprise, and Windows 10 Education, Windows 10 Mobile, and Windows 10 Mobile Enterprise. This policy setting determines whether users can access the Insider build controls in the Advanced Options for Windows Update. These controls are located under Get Insider builds, and enable users to make their devices available for downloading and installing Windows preview software. If you enable or do not configure this policy setting, users can download and install Windows preview software on their devices. If you disable this policy setting, the item Get Insider builds will be unavailable.",
+    "helpText": "",
+    "name": "AllowBuildPreview",
+    "displayName": "Allow Build Preview",
+    "defaultOptionId": "device_vendor_msft_policy_config_system_allowbuildpreview_2",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.10240",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_system_allowbuildpreview_0",
+            "description": "Not allowed. The item \"Get Insider builds\" is unavailable, users are unable to make their devices available for preview software.",
+            "helpText": null,
+            "name": "Not allowed. The item \"Get Insider builds\" is unavailable, users are unable to make their devices available for preview software.",
+            "displayName": "Not allowed. The item \"Get Insider builds\" is unavailable, users are unable to make their devices available for preview software.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_system_allowbuildpreview_1",
+            "description": "Allowed. Users can make their devices available for downloading and installing preview software.",
+            "helpText": null,
+            "name": "Allowed. Users can make their devices available for downloading and installing preview software.",
+            "displayName": "Allowed. Users can make their devices available for downloading and installing preview software.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_system_allowbuildpreview_2",
+            "description": "Not configured. Users can make their devices available for downloading and installing preview software.",
+            "helpText": null,
+            "name": "Not configured. Users can make their devices available for downloading and installing preview software.",
+            "displayName": "Not configured. Users can make their devices available for downloading and installing preview software.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

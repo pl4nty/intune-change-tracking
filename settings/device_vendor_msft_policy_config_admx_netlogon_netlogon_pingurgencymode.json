@@ -1,0 +1,90 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Netlogon_PingUrgencyMode",
+        "Use urgent mode when pinging domain controllers",
+        "\\System\\Net Logon",
+        "Administrative Templates\\System\\Net Logon",
+        "Net Logon"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-netlogon#admx-netlogon-netlogon-pingurgencymode"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_Netlogon/Netlogon_PingUrgencyMode",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_netlogon_netlogon_pingurgencymode",
+    "categoryId": "bedf20d1-1f5a-4840-8458-6d0fa974b664",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_netlogon_netlogon_pingurgencymode",
+    "description": "This policy setting configures whether the computers to which this setting is applied are more aggressive when trying to locate a domain controller (DC).\r\n\r\nWhen an environment has a large number of DCs running both old and new operating systems, the default DC locator discovery behavior may be insufficient to find DCs running a newer operating system.  This policy setting can be enabled to configure DC locator to be more aggressive about trying to locate a DC in such an environment, by pinging DCs at a higher frequency.  Enabling this setting may result in additional network traffic and increased load on DCs.  You should disable this setting once all DCs are running the same OS version.\r\n\r\nThe allowable values for this setting result in the following behaviors:\r\n\r\n1 - Computers will ping DCs at the normal frequency.\r\n2 - Computers will ping DCs at the higher frequency.\r\n\r\nTo specify this behavior, click Enabled and then enter a value. The range of values is from 1 to 2.\r\n\r\nIf you do not configure this policy setting, it is not applied to any computers, and computers use their local configuration.\r\n ",
+    "helpText": "",
+    "name": "Netlogon_PingUrgencyMode",
+    "displayName": "Use urgent mode when pinging domain controllers",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_netlogon_netlogon_pingurgencymode_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_netlogon_netlogon_pingurgencymode_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_netlogon_netlogon_pingurgencymode_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_netlogon_netlogon_pingurgencymode_netlogon_pingurgencymodelabel",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,82 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Hide Ransomware Data Recovery",
+        "Windows Defender Security Center"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-WindowsDefenderSecurityCenter#hideransomwaredatarecovery"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/WindowsDefenderSecurityCenter/HideRansomwareDataRecovery",
+    "rootDefinitionId": "device_vendor_msft_policy_config_windowsdefendersecuritycenter_hideransomwaredatarecovery",
+    "categoryId": "f72e61e9-7e84-4c6d-8057-fa0a4f79cbea",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_windowsdefendersecuritycenter_hideransomwaredatarecovery",
+    "description": "Use this policy setting to hide the Ransomware data recovery area in Windows Defender Security Center.",
+    "helpText": "",
+    "name": "HideRansomwareDataRecovery",
+    "displayName": "Hide Ransomware Data Recovery",
+    "defaultOptionId": "device_vendor_msft_policy_config_windowsdefendersecuritycenter_hideransomwaredatarecovery_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager,microsoftSense",
+        "configurationServiceProviderVersion": "7.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17134",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_windowsdefendersecuritycenter_hideransomwaredatarecovery_0",
+            "description": "(Disable or not configured) The Ransomware data recovery area will be visible.",
+            "helpText": null,
+            "name": "(Disable or not configured) The Ransomware data recovery area will be visible.",
+            "displayName": "(Disable or not configured) The Ransomware data recovery area will be visible.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_windowsdefendersecuritycenter_hideransomwaredatarecovery_1",
+            "description": "(Enable) The Ransomware data recovery area is hidden.",
+            "helpText": null,
+            "name": "(Enable) The Ransomware data recovery area is hidden.",
+            "displayName": "(Enable) The Ransomware data recovery area is hidden.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

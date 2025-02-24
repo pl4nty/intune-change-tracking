@@ -1,0 +1,112 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "SamNGCKeyROCAValidation",
+        "Configure validation of ROCA-vulnerable WHfB keys during authentication",
+        "\\System\\Security Account Manager",
+        "Administrative Templates\\System\\Security Account Manager",
+        "Security Account Manager"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_sam/SamNGCKeyROCAValidation",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_sam_samngckeyrocavalidation",
+    "categoryId": "65873bfe-2798-42fc-ae33-02295b23b3d3",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_sam_samngckeyrocavalidation_samngckeyrocavalidation_settings",
+    "description": "",
+    "helpText": "",
+    "name": "SamNGCKeyROCAValidation_Settings",
+    "displayName": "Options for handling ROCA-vulnerable WHfB keys: (Device)",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_sam_samngckeyrocavalidation_samngckeyrocavalidation_settings_2",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_sam_samngckeyrocavalidation_samngckeyrocavalidation_settings_0",
+            "description": null,
+            "helpText": null,
+            "name": "Ignore ROCA-vulnerable WHfB keys",
+            "displayName": "Ignore ROCA-vulnerable WHfB keys",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_sam_samngckeyrocavalidation_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_sam_samngckeyrocavalidation"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_sam_samngckeyrocavalidation_samngckeyrocavalidation_settings_1",
+            "description": null,
+            "helpText": null,
+            "name": "Audit ROCA-vulnerable WHfB keys on use",
+            "displayName": "Audit ROCA-vulnerable WHfB keys on use",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_sam_samngckeyrocavalidation_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_sam_samngckeyrocavalidation"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_sam_samngckeyrocavalidation_samngckeyrocavalidation_settings_2",
+            "description": null,
+            "helpText": null,
+            "name": "Block ROCA-vulnerable WHfB keys on use",
+            "displayName": "Block ROCA-vulnerable WHfB keys on use",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_sam_samngckeyrocavalidation_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_sam_samngckeyrocavalidation"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

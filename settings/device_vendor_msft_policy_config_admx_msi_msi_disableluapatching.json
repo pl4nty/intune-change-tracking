@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "MSI_DisableLUAPatching",
+        "Prohibit non-administrators from applying vendor signed updates",
+        "\\Windows Components\\Windows Installer",
+        "Administrative Templates\\Windows Components\\Windows Installer",
+        "Windows Installer"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-msi#admx-msi-msi-disableluapatching"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_MSI/MSI_DisableLUAPatching",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_msi_msi_disableluapatching",
+    "categoryId": "ce0b1189-57ea-4444-a93e-e4be17160f18",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_msi_msi_disableluapatching",
+    "description": "This policy setting controls the ability of non-administrators to install updates that have been digitally signed by the application vendor.\r\n\r\nNon-administrator updates provide a mechanism for the author of an application to create digitally signed updates that can be applied by non-privileged users.\r\n\r\nIf you enable this policy setting, only administrators or users with administrative privileges can apply updates to Windows Installer based applications.\r\n\r\nIf you disable or do not configure this policy setting, users without administrative privileges can install non-administrator updates.\r\n ",
+    "helpText": "",
+    "name": "MSI_DisableLUAPatching",
+    "displayName": "Prohibit non-administrators from applying vendor signed updates",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_msi_msi_disableluapatching_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_msi_msi_disableluapatching_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_msi_msi_disableluapatching_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

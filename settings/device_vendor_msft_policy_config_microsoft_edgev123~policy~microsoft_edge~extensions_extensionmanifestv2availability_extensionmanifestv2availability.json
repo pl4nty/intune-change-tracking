@@ -1,0 +1,121 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ExtensionManifestV2Availability",
+        "Control Manifest v2 extension availability",
+        "\\Microsoft Edge\\Extensions",
+        "Microsoft Edge\\Extensions",
+        "Extensions"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev123~Policy~microsoft_edge~Extensions/ExtensionManifestV2Availability",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edgev123~policy~microsoft_edge~extensions_extensionmanifestv2availability",
+    "categoryId": "66615d2a-fec9-47f1-8eaf-9813e30cc023",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_microsoft_edgev123~policy~microsoft_edge~extensions_extensionmanifestv2availability_extensionmanifestv2availability",
+    "description": "",
+    "helpText": "",
+    "name": "ExtensionManifestV2Availability",
+    "displayName": "Control Manifest v2 extension availability (Device)",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edgev123~policy~microsoft_edge~extensions_extensionmanifestv2availability_extensionmanifestv2availability_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev123~policy~microsoft_edge~extensions_extensionmanifestv2availability_extensionmanifestv2availability_0",
+            "description": null,
+            "helpText": null,
+            "name": "Default browser behavior",
+            "displayName": "Default browser behavior",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_microsoft_edgev123~policy~microsoft_edge~extensions_extensionmanifestv2availability_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_microsoft_edgev123~policy~microsoft_edge~extensions_extensionmanifestv2availability"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev123~policy~microsoft_edge~extensions_extensionmanifestv2availability_extensionmanifestv2availability_1",
+            "description": null,
+            "helpText": null,
+            "name": "Manifest v2 is disabled",
+            "displayName": "Manifest v2 is disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_microsoft_edgev123~policy~microsoft_edge~extensions_extensionmanifestv2availability_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_microsoft_edgev123~policy~microsoft_edge~extensions_extensionmanifestv2availability"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev123~policy~microsoft_edge~extensions_extensionmanifestv2availability_extensionmanifestv2availability_2",
+            "description": null,
+            "helpText": null,
+            "name": "Manifest v2 is enabled",
+            "displayName": "Manifest v2 is enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_microsoft_edgev123~policy~microsoft_edge~extensions_extensionmanifestv2availability_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_microsoft_edgev123~policy~microsoft_edge~extensions_extensionmanifestv2availability"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev123~policy~microsoft_edge~extensions_extensionmanifestv2availability_extensionmanifestv2availability_3",
+            "description": null,
+            "helpText": null,
+            "name": "Manifest v2 is enabled for forced extensions only",
+            "displayName": "Manifest v2 is enabled for forced extensions only",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "3"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_microsoft_edgev123~policy~microsoft_edge~extensions_extensionmanifestv2availability_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_microsoft_edgev123~policy~microsoft_edge~extensions_extensionmanifestv2availability"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

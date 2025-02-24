@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "DBHDisableDeleteOnExit",
+        "Allow deleting browsing history on exit",
+        "\\Windows Components\\Internet Explorer\\Delete Browsing History",
+        "Delete Browsing History"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowdeletingbrowsinghistoryonexit"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/InternetExplorer/AllowDeletingBrowsingHistoryOnExit",
+    "rootDefinitionId": "user_vendor_msft_policy_config_internetexplorer_allowdeletingbrowsinghistoryonexit",
+    "categoryId": "dea96bde-003b-46fa-a960-baf62289c57d",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_internetexplorer_allowdeletingbrowsinghistoryonexit",
+    "description": "This policy setting allows the automatic deletion of specified items when the last browser window closes. The preferences selected in the Delete Browsing History dialog box (such as deleting temporary Internet files, cookies, history, form data, and passwords) are applied, and those items are deleted.\r\n\r\nIf you enable this policy setting, deleting browsing history on exit is turned on.\r\n\r\nIf you disable this policy setting, deleting browsing history on exit is turned off.\r\n\r\nIf you do not configure this policy setting, it can be configured on the General tab in Internet Options.\r\n\r\nIf the \"Prevent access to Delete Browsing History\" policy setting is enabled, this policy setting has no effect.",
+    "helpText": "",
+    "name": "DBHDisableDeleteOnExit",
+    "displayName": "Allow deleting browsing history on exit (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_internetexplorer_allowdeletingbrowsinghistoryonexit_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "6.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_internetexplorer_allowdeletingbrowsinghistoryonexit_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_internetexplorer_allowdeletingbrowsinghistoryonexit_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

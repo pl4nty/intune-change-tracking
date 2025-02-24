@@ -1,0 +1,73 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "EdgeManagementUserPolicyOverridesCloudMachinePolicy",
+        "Allow Microsoft Edge management service user policies to override policies set through an enrollment token.",
+        "\\Microsoft Edge\\Manageability",
+        "Microsoft Edge\\Manageability",
+        "Manageability"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev119~Policy~microsoft_edge~Manageability/EdgeManagementUserPolicyOverridesCloudMachinePolicy",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edgev119~policy~microsoft_edge~manageability_edgemanagementuserpolicyoverridescloudmachinepolicy",
+    "categoryId": "dfab5866-1712-4bbf-8edf-5b080b315b9b",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_microsoft_edgev119~policy~microsoft_edge~manageability_edgemanagementuserpolicyoverridescloudmachinepolicy",
+    "description": "If you enable this policy, cloud-based Microsoft Edge management service user policies takes precedence if it conflicts with local user policy.\r\n\r\nIf you disable or don't configure this policy, Microsoft Edge management service user policies will take precedence.\r\n\r\nThe policy can be combined with 'EdgeManagementPolicyOverridesPlatformPolicy' (Microsoft Edge management service policy overrides platform policy.). If both policies are enabled, all cloud-based Microsoft Edge management service policies will take precedence over conflicting local service policies.",
+    "helpText": "",
+    "name": "EdgeManagementUserPolicyOverridesCloudMachinePolicy",
+    "displayName": "Allow cloud-based Microsoft Edge management service user policies to override local user policies.",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edgev119~policy~microsoft_edge~manageability_edgemanagementuserpolicyoverridescloudmachinepolicy_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev119~policy~microsoft_edge~manageability_edgemanagementuserpolicyoverridescloudmachinepolicy_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev119~policy~microsoft_edge~manageability_edgemanagementuserpolicyoverridescloudmachinepolicy_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

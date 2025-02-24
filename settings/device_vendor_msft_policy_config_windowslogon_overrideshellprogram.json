@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Override Shell Program",
+        "Windows Logon"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-WindowsLogon#overrideshellprogram"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/WindowsLogon/OverrideShellProgram",
+    "rootDefinitionId": "device_vendor_msft_policy_config_windowslogon_overrideshellprogram",
+    "categoryId": "500d2bb1-5186-447c-818f-401f2d9065ce",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_windowslogon_overrideshellprogram",
+    "description": "This policy is used by IT admin to override the registry based shell program.\r\n ",
+    "helpText": "",
+    "name": "OverrideShellProgram",
+    "displayName": "Override Shell Program",
+    "defaultOptionId": "device_vendor_msft_policy_config_windowslogon_overrideshellprogram_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22621.2338",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_windowslogon_overrideshellprogram_0",
+            "description": "Not Configured",
+            "helpText": null,
+            "name": "Not Configured",
+            "displayName": "Not Configured",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_windowslogon_overrideshellprogram_1",
+            "description": "Apply Lightweight shell",
+            "helpText": null,
+            "name": "Apply Lightweight shell",
+            "displayName": "Apply Lightweight shell",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

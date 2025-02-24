@@ -1,0 +1,93 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "RA_Options",
+        "Customize warning messages",
+        "\\System\\Remote Assistance",
+        "Administrative Templates\\System\\Remote Assistance",
+        "Remote Assistance"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remoteassistance#remoteassistance-customizewarningmessages"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/RemoteAssistance/CustomizeWarningMessages",
+    "rootDefinitionId": "device_vendor_msft_policy_config_remoteassistance_customizewarningmessages",
+    "categoryId": "12a1b259-a0d5-4505-aedf-b8ca811cd5f9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_remoteassistance_customizewarningmessages",
+    "description": "This policy setting lets you customize warning messages.\r\n\r\nThe \"Display warning message before sharing control\" policy setting allows you to specify a custom message to display before a user shares control of his or her computer.\r\n\r\nThe \"Display warning message before connecting\" policy setting allows you to specify a custom message to display before a user allows a connection to his or her computer.\r\n\r\nIf you enable this policy setting, the warning message you specify overrides the default message that is seen by the novice.\r\n\r\nIf you disable this policy setting, the user sees the default warning message.\r\n\r\nIf you do not configure this policy setting, the user sees the default warning message.",
+    "helpText": "",
+    "name": "RA_Options",
+    "displayName": "Customize warning messages",
+    "defaultOptionId": "device_vendor_msft_policy_config_remoteassistance_customizewarningmessages_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.15063",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_remoteassistance_customizewarningmessages_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_remoteassistance_customizewarningmessages_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_remoteassistance_customizewarningmessages_ra_options_share_control_message",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_remoteassistance_customizewarningmessages_ra_options_connect_message",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

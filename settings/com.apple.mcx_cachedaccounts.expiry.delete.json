@@ -1,0 +1,45 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Mobile Accounts"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "cachedaccounts.expiry.delete.disusedSeconds",
+    "rootDefinitionId": "com.apple.mcx_com.apple.mcx-mobileaccounts",
+    "categoryId": "ccea1cb0-55cd-4597-bfb1-e2d38b8a53ac",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "com.apple.mcx_cachedaccounts.expiry.delete.disusedseconds",
+    "description": "The minimum number of seconds a mobile account can exist before an automatic attempt is made to remove the mobile account. Set to 0 to try to remove it at next login or logout time. Set to -1 to never try to remove the mobile account.",
+    "helpText": null,
+    "name": "cachedaccounts.expiry.delete.disusedSeconds",
+    "displayName": "Expiry Delete Disused Seconds",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 2147483647,
+        "minimumValue": 0
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": -1
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "com.apple.mcx_com.apple.mcx-mobileaccounts",
+            "parentSettingId": "com.apple.mcx_com.apple.mcx-mobileaccounts"
+        }
+    ],
+    "dependedOnBy": []
+}

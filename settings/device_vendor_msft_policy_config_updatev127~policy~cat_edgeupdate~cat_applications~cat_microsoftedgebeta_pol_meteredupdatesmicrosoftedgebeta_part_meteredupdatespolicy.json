@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Pol_MeteredUpdatesMicrosoftEdgeBeta",
+        "Let users update on metered connections",
+        "\\Microsoft Edge Update\\Applications\\Microsoft Edge Beta",
+        "Microsoft Edge Update\\Applications\\Microsoft Edge Beta",
+        "Microsoft Edge Beta"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/updatev127~Policy~Cat_EdgeUpdate~Cat_Applications~Cat_MicrosoftEdgeBeta/Pol_MeteredUpdatesMicrosoftEdgeBeta",
+    "rootDefinitionId": "device_vendor_msft_policy_config_updatev127~policy~cat_edgeupdate~cat_applications~cat_microsoftedgebeta_pol_meteredupdatesmicrosoftedgebeta",
+    "categoryId": "7b91ab31-7ed5-4de9-bd49-d04303fd3c74",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_updatev127~policy~cat_edgeupdate~cat_applications~cat_microsoftedgebeta_pol_meteredupdatesmicrosoftedgebeta_part_meteredupdatespolicy",
+    "description": "",
+    "helpText": "",
+    "name": "Part_MeteredUpdatesPolicy",
+    "displayName": "Metered Updates Policy (Device)",
+    "defaultOptionId": "device_vendor_msft_policy_config_updatev127~policy~cat_edgeupdate~cat_applications~cat_microsoftedgebeta_pol_meteredupdatesmicrosoftedgebeta_part_meteredupdatespolicy_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_updatev127~policy~cat_edgeupdate~cat_applications~cat_microsoftedgebeta_pol_meteredupdatesmicrosoftedgebeta_part_meteredupdatespolicy_1",
+            "description": null,
+            "helpText": null,
+            "name": "Metered Disable updates",
+            "displayName": "Metered Disable updates",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_updatev127~policy~cat_edgeupdate~cat_applications~cat_microsoftedgebeta_pol_meteredupdatesmicrosoftedgebeta_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_updatev127~policy~cat_edgeupdate~cat_applications~cat_microsoftedgebeta_pol_meteredupdatesmicrosoftedgebeta"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_updatev127~policy~cat_edgeupdate~cat_applications~cat_microsoftedgebeta_pol_meteredupdatesmicrosoftedgebeta_part_meteredupdatespolicy_2",
+            "description": null,
+            "helpText": null,
+            "name": "Metered Updates Allowed",
+            "displayName": "Metered Updates Allowed",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_updatev127~policy~cat_edgeupdate~cat_applications~cat_microsoftedgebeta_pol_meteredupdatesmicrosoftedgebeta_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_updatev127~policy~cat_edgeupdate~cat_applications~cat_microsoftedgebeta_pol_meteredupdatesmicrosoftedgebeta"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DefaultSearchProviderSearchURL_recommended",
+        "Default search provider search URL",
+        "\\Microsoft Edge - Default Settings (users can override)\\Default search provider",
+        "Microsoft Edge - Default Settings (users can override)\\Default search provider",
+        "Default search provider"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev84diff~Policy~microsoft_edge_recommended~DefaultSearchProvider_recommended/DefaultSearchProviderSearchURL_recommended",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edgev84diff~policy~microsoft_edge_recommended~defaultsearchprovider_recommended_defaultsearchprovidersearchurl_recommended",
+    "categoryId": "6f1386e5-148d-4dc3-84d1-79df721e3233",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_microsoft_edgev84diff~policy~microsoft_edge_recommended~defaultsearchprovider_recommended_defaultsearchprovidersearchurl_recommended",
+    "description": "Specifies the URL of the search engine used for a default search. The URL contains the string '{searchTerms}', which is replaced at query time by the terms the user is searching for.\r\n\r\nSpecify Bing's search URL as:\r\n\r\n'{bing:baseURL}search?q={searchTerms}'.\r\n\r\nSpecify Google's search URL as: '{google:baseURL}search?q={searchTerms}&{google:RLZ}{google:originalQueryForSuggestion}{google:assistedQueryStats}{google:searchFieldtrialParameter}{google:searchClient}{google:sourceId}ie={inputEncoding}'.\r\n\r\nThis policy is required when you enable the 'DefaultSearchProviderEnabled' (Enable the default search provider) policy; if you don't enable the latter policy, this policy is ignored.\r\n\r\nStarting in Microsoft Edge 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the 'ManagedSearchEngines' (Manage Search Engines) policy.\r\n\r\nExample value: https://search.contoso.com/search?q={searchTerms}",
+    "helpText": "",
+    "name": "DefaultSearchProviderSearchURL_recommended",
+    "displayName": "Default search provider search URL",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edgev84diff~policy~microsoft_edge_recommended~defaultsearchprovider_recommended_defaultsearchprovidersearchurl_recommended_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev84diff~policy~microsoft_edge_recommended~defaultsearchprovider_recommended_defaultsearchprovidersearchurl_recommended_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev84diff~policy~microsoft_edge_recommended~defaultsearchprovider_recommended_defaultsearchprovidersearchurl_recommended_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_microsoft_edgev84diff~policy~microsoft_edge_recommended~defaultsearchprovider_recommended_defaultsearchprovidersearchurl_recommended_defaultsearchprovidersearchurl",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

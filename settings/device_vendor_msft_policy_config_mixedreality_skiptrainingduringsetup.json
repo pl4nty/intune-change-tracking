@@ -1,0 +1,74 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Skip Training During Setup",
+        "Mixed Reality"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-MixedReality#skiptrainingduringsetup"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/MixedReality/SkipTrainingDuringSetup",
+    "rootDefinitionId": "device_vendor_msft_policy_config_mixedreality_skiptrainingduringsetup",
+    "categoryId": "f10138ba-123a-43bc-8031-4458ba327374",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_mixedreality_skiptrainingduringsetup",
+    "description": "This policy configures whether the device will take the user through a training process during device setup and first time user setup. If this policy is enabled, the device will not show the training process during device setup and first time user setup. If the user wishes to go through that training process, the user can launch the Tips app.",
+    "helpText": "",
+    "name": "SkipTrainingDuringSetup",
+    "displayName": "Skip Training During Setup",
+    "defaultOptionId": "device_vendor_msft_policy_config_mixedreality_skiptrainingduringsetup_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.20348",
+        "windowsSkus": [
+            "holographicForBusiness"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_mixedreality_skiptrainingduringsetup_0",
+            "description": "Training process will be shown during device setup and first time user setup.",
+            "helpText": null,
+            "name": "Training process will be shown during device setup and first time user setup.",
+            "displayName": "Training process will be shown during device setup and first time user setup.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_mixedreality_skiptrainingduringsetup_1",
+            "description": "Training process will not be shown during device setup and first time user setup.",
+            "helpText": null,
+            "name": "Training process will not be shown during device setup and first time user setup.",
+            "displayName": "Training process will not be shown during device setup and first time user setup.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

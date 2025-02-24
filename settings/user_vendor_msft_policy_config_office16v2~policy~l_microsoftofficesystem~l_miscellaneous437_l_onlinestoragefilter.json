@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_OnlineStorageFilter",
+        "Hide file locations when opening or saving files",
+        "\\Microsoft Office 2016\\Miscellaneous",
+        "Microsoft Office 2016\\Miscellaneous",
+        "Miscellaneous"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/office16v2~Policy~L_MicrosoftOfficeSystem~L_miscellaneous437/L_OnlineStorageFilter",
+    "rootDefinitionId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_miscellaneous437_l_onlinestoragefilter",
+    "categoryId": "9b2ad6d8-8837-4c50-89d5-7507b69c7dec",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_miscellaneous437_l_onlinestoragefilter",
+    "description": "\r\nThis policy setting allows you to hide specific file locations when the user opens or saves a file. This helps prevent users from using either the local PC, SharePointServer, or Microsoft Office 365 cloud-based file locations such as OneDrive or SharePoint Online, to open, save, or share files.\r\n\r\nNote: This policy setting only applies to Word, PowerPoint, and Excel.\r\n\r\nIf you enable this policy setting, you can specify which file locations are hidden when the user opens or saves a file.\r\n\r\nIf you disable or don’t configure this policy setting, users can use the local PC, SharePoint Server or any configured Microsoft cloud-based file location to open, save, and share files.",
+    "helpText": "",
+    "name": "L_OnlineStorageFilter",
+    "displayName": "Hide file locations when opening or saving files (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_miscellaneous437_l_onlinestoragefilter_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_miscellaneous437_l_onlinestoragefilter_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_miscellaneous437_l_onlinestoragefilter_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_miscellaneous437_l_onlinestoragefilter_l_onlinestoragefilterid",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

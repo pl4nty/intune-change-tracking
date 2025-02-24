@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_EquivalentCOMAddin",
+        "Deactivate Outlook web add-ins whose equivalent COM or VSTO add-in is installed",
+        "\\Microsoft Outlook 2016\\Miscellaneous",
+        "Microsoft Outlook 2016\\Miscellaneous",
+        "Miscellaneous"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/outlk16v9~Policy~L_MicrosoftOfficeOutlook~L_Miscellaneous/L_EquivalentCOMAddin",
+    "rootDefinitionId": "user_vendor_msft_policy_config_outlk16v9~policy~l_microsoftofficeoutlook~l_miscellaneous_l_equivalentcomaddin",
+    "categoryId": "f5a1a387-6665-4527-b532-88a64a76e732",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_outlk16v9~policy~l_microsoftofficeoutlook~l_miscellaneous_l_equivalentcomaddin",
+    "description": "This policy setting allows you to deactivate Outlook web add-ins if the associated COM or VSTO add-in is installed.\r\n\r\nIf you enable this policy setting, users will not be able to use Outlook web add-ins where the corresponding COM or VSTO add-in is installed and you have provided the following information for each add-in.\r\n    \"Value name\": Specify the Id of the Outlook web add-in, as noted in its manifest. Note: Do not add {} around the Id.\r\n    \"Value\": Specify the programmatic ID (ProgID) for the Outlook COM or VSTO add-in.\r\n\r\nIf you disable or don't configure this policy setting, users will continue to be able to use any versions of the add-in that are installed.\r\n\r\nFor more information about when to use this setting, see https://go.microsoft.com/fwlink/p/?linkid=2156690",
+    "helpText": "",
+    "name": "L_EquivalentCOMAddin",
+    "displayName": "Deactivate Outlook web add-ins whose equivalent COM or VSTO add-in is installed (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_outlk16v9~policy~l_microsoftofficeoutlook~l_miscellaneous_l_equivalentcomaddin_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_outlk16v9~policy~l_microsoftofficeoutlook~l_miscellaneous_l_equivalentcomaddin_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_outlk16v9~policy~l_microsoftofficeoutlook~l_miscellaneous_l_equivalentcomaddin_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_outlk16v9~policy~l_microsoftofficeoutlook~l_miscellaneous_l_equivalentcomaddin_l_equivalentcomaddin2",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

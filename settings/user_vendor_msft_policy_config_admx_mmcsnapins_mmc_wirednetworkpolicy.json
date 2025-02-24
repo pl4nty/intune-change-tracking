@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "MMC_WiredNetworkPolicy",
+        "Wired Network (IEEE 802.3) Policies",
+        "\\Windows Components\\Microsoft Management Console\\Restricted/Permitted snap-ins\\Group Policy\\Group Policy snap-in extensions",
+        "Administrative Templates\\Windows Components\\Microsoft Management Console\\Restricted/Permitted snap-ins\\Group Policy\\Group Policy snap-in extensions",
+        "Group Policy snap-in extensions"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-mmcsnapins#admx-mmcsnapins-mmc-wirednetworkpolicy"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_MMCSnapins/MMC_WiredNetworkPolicy",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_mmcsnapins_mmc_wirednetworkpolicy",
+    "categoryId": "814e9e4d-b838-4747-a257-72390a535d56",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_mmcsnapins_mmc_wirednetworkpolicy",
+    "description": "This policy setting permits or prohibits the use of this snap-in. \r\n\r\nIf you enable this policy setting, the snap-in is permitted and can be added into the Microsoft Management Console or run from the command line as a standalone console. \r\n\r\nIf you disable this policy setting, the snap-in is prohibited and cannot be added into the Microsoft Management Console or run from the command line as a standalone console. An error message is displayed stating that policy is prohibiting the use of this snap-in. \r\n\r\nIf this policy setting is not configured, the setting of the \"Restrict users to the explicitly permitted list of snap-ins\" setting determines whether this snap-in is permitted or prohibited. \r\n\r\n--  If the policy setting \"Restrict users to the explicitly permitted list of snap-ins\" is enabled, users cannot use any snap-in except those explicitly permitted. To explicitly permit use of this snap-in, enable this policy setting. If this policy setting is not configured or disabled, this snap-in is prohibited. \r\n\r\n--  If the policy setting \"Restrict users to the explicitly permitted list of snap-ins\" is disabled or not configured, users can use any snap-in except those explicitly prohibited. To explicitly prohibit use of this snap-in, disable this policy setting. If this policy setting is not configured or enabled, the snap-in is permitted. \r\n\r\nWhen a snap-in is prohibited, it does not appear in the Add/Remove Snap-in window in MMC. Also, when a user opens a console file that includes a prohibited snap-in, the console file opens, but the prohibited snap-in does not appear.",
+    "helpText": "",
+    "name": "MMC_WiredNetworkPolicy",
+    "displayName": "Wired Network (IEEE 802.3) Policies (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_mmcsnapins_mmc_wirednetworkpolicy_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_mmcsnapins_mmc_wirednetworkpolicy_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_mmcsnapins_mmc_wirednetworkpolicy_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

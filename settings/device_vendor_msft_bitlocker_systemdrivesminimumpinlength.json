@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "MinimumPINLength_Name",
+        "Configure minimum PIN length for startup",
+        "\\Windows Components\\BitLocker Drive Encryption\\Operating System Drives",
+        "Administrative Templates\\Windows Components\\BitLocker Drive Encryption\\Operating System Drives",
+        "Operating System Drives"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/en-us/windows/client-management/mdm/bitlocker-csp"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/BitLocker",
+    "offsetUri": "/SystemDrivesMinimumPINLength",
+    "rootDefinitionId": "device_vendor_msft_bitlocker_systemdrivesminimumpinlength",
+    "categoryId": "27e0674a-ea53-4f63-9c2e-fe76aa1021d0",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_bitlocker_systemdrivesminimumpinlength",
+    "description": "\r\n          This policy setting allows you to configure a minimum length for a Trusted Platform Module (TPM) startup PIN. This policy setting is applied when you turn on BitLocker. The startup PIN must have a minimum length of 4 digits and can have a maximum length of 20 digits.\r\n\r\n          If you enable this policy setting, you can require a minimum number of digits to be used when setting the startup PIN.\r\n\r\n          If you disable or do not configure this policy setting, users can configure a startup PIN of any length between 6 and 20 digits.\r\n\r\n          NOTE: If minimum PIN length is set below 6 digits, Windows will attempt to update the TPM 2.0 lockout period to be greater than the default when a PIN is changed. If successful, Windows will only reset the TPM lockout period back to default if the TPM is reset.\r\n\r\n      ",
+    "helpText": "",
+    "name": "MinimumPINLength_Name",
+    "displayName": "Configure minimum PIN length for startup",
+    "defaultOptionId": "device_vendor_msft_bitlocker_systemdrivesminimumpinlength_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.15063",
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_bitlocker_systemdrivesminimumpinlength_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_bitlocker_systemdrivesminimumpinlength_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_bitlocker_systemdrivesminimumpinlength_minpinlength",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

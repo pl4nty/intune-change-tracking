@@ -1,0 +1,81 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Machine UI Language Overwrite",
+        "Time Language Settings"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-TimeLanguageSettings#machineuilanguageoverwrite"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/TimeLanguageSettings/MachineUILanguageOverwrite",
+    "rootDefinitionId": "device_vendor_msft_policy_config_timelanguagesettings_machineuilanguageoverwrite",
+    "categoryId": "4a5a066e-27af-46c1-9714-9e4542ffc1f9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_timelanguagesettings_machineuilanguageoverwrite",
+    "description": "This policy setting controls which UI language is used for computers with more than one UI language installed. If you enable this setting, the UI language of Windows menus and dialogs for systems with more than one language is restricted to the machine language.",
+    "helpText": "",
+    "name": "MachineUILanguageOverwrite",
+    "displayName": "Machine UI Language Overwrite",
+    "defaultOptionId": "device_vendor_msft_policy_config_timelanguagesettings_machineuilanguageoverwrite_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22000",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_timelanguagesettings_machineuilanguageoverwrite_0",
+            "description": "Disabled.",
+            "helpText": null,
+            "name": "Disabled.",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_timelanguagesettings_machineuilanguageoverwrite_1",
+            "description": "Enabled.",
+            "helpText": null,
+            "name": "Enabled.",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

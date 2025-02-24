@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Pol_SyncOnCostedNetwork",
+        "Enable file synchronization on costed networks",
+        "\\Network\\Offline Files",
+        "Administrative Templates\\Network\\Offline Files",
+        "Offline Files"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-offlinefiles#admx-offlinefiles-pol-synconcostednetwork"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_OfflineFiles/Pol_SyncOnCostedNetwork",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_offlinefiles_pol_synconcostednetwork",
+    "categoryId": "82a9c23f-2c09-4479-9cd3-e7f185d7676f",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_offlinefiles_pol_synconcostednetwork",
+    "description": "This policy setting determines whether offline files are synchronized in the background when it could result in extra charges on cell phone or broadband plans.\r\n\r\nIf you enable this setting, synchronization can occur in the background when the user's network is roaming, near, or over the plan's data limit.  This may result in extra charges on cell phone or broadband plans.\r\n\r\nIf this setting is disabled or not configured, synchronization will not run in the background on network folders when the user's network is roaming, near, or over the plan's data limit. The network folder must also be in \"slow-link\" mode, as specified by the \"Configure slow-link mode\" policy to avoid network usage.\r\n ",
+    "helpText": "",
+    "name": "Pol_SyncOnCostedNetwork",
+    "displayName": "Enable file synchronization on costed networks",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_offlinefiles_pol_synconcostednetwork_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_offlinefiles_pol_synconcostednetwork_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_offlinefiles_pol_synconcostednetwork_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

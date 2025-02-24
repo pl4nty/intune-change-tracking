@@ -1,0 +1,122 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Set Maximum Storage Duration For Recall Snapshots",
+        "Windows AI"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-WindowsAI#setmaximumstoragedurationforrecallsnapshots"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/WindowsAI/SetMaximumStorageDurationForRecallSnapshots",
+    "rootDefinitionId": "user_vendor_msft_policy_config_windowsai_setmaximumstoragedurationforrecallsnapshots",
+    "categoryId": "33a43c22-104b-4683-995b-5652cfd5b490",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_windowsai_setmaximumstoragedurationforrecallsnapshots",
+    "description": "This policy setting allows you to control the maximum amount of time (in days) that Windows saves snapshots for Recall. The default value for this setting is '0' which doesn't set a time frame to delete snapshots. When the default is used, snapshots aren't deleted until the maximum storage allocation for Recall is reached and the oldest snapshots are deleted first. You can configure the maximum storage duration to be 30, 60, 90, or 180 days.\r\n This setting is only available to Windows Insiders",
+    "helpText": "",
+    "name": "SetMaximumStorageDurationForRecallSnapshots",
+    "displayName": "Set Maximum Storage Duration For Recall Snapshots (User) (Windows Insiders only)",
+    "defaultOptionId": "user_vendor_msft_policy_config_windowsai_setmaximumstoragedurationforrecallsnapshots_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.25272",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_windowsai_setmaximumstoragedurationforrecallsnapshots_0",
+            "description": "Let the OS define the maximum amount of time the snapshots will be saved",
+            "helpText": null,
+            "name": "Let the OS define the maximum amount of time the snapshots will be saved",
+            "displayName": "Let the OS define the maximum amount of time the snapshots will be saved",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_windowsai_setmaximumstoragedurationforrecallsnapshots_30",
+            "description": "30 days",
+            "helpText": null,
+            "name": "30 days",
+            "displayName": "30 days",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 30
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_windowsai_setmaximumstoragedurationforrecallsnapshots_60",
+            "description": "60 days",
+            "helpText": null,
+            "name": "60 days",
+            "displayName": "60 days",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 60
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_windowsai_setmaximumstoragedurationforrecallsnapshots_90",
+            "description": "90 days",
+            "helpText": null,
+            "name": "90 days",
+            "displayName": "90 days",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 90
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_windowsai_setmaximumstoragedurationforrecallsnapshots_180",
+            "description": "180 days",
+            "helpText": null,
+            "name": "180 days",
+            "displayName": "180 days",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 180
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

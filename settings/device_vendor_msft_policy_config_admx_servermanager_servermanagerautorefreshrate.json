@@ -1,0 +1,90 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ServerManagerAutoRefreshRate",
+        "Configure the refresh interval for Server Manager",
+        "\\System\\Server Manager",
+        "Administrative Templates\\System\\Server Manager",
+        "Server Manager"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-servermanager#admx-servermanager-servermanagerautorefreshrate"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_ServerManager/ServerManagerAutoRefreshRate",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_servermanager_servermanagerautorefreshrate",
+    "categoryId": "1526dde4-6726-470e-aebf-3272ae70a99c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_servermanager_servermanagerautorefreshrate",
+    "description": "This policy setting allows you to set the refresh interval for Server Manager. Each refresh provides Server Manager with updated information about which roles and features are installed on servers that you are managing by using Server Manager. Server Manager also monitors the status of roles and features installed on managed servers.\r\n\r\nIf you enable this policy setting, Server Manager uses the refresh interval specified in the policy setting instead of the “Configure Refresh Interval” setting (in Windows Server 2008 and Windows Server 2008 R2), or the “Refresh the data shown in Server Manager every [x] [minutes/hours/days]” setting (in Windows Server 2012) that is configured in the Server Manager console.\r\n\r\nIf you disable this policy setting, Server Manager does not refresh automatically. If you do not configure this policy setting, Server Manager uses the refresh interval settings that are specified in the Server Manager console.\r\n\r\nNote: The default refresh interval for Server Manager is two minutes in Windows Server 2008 and Windows Server 2008 R2, or 10 minutes in Windows Server 2012.\r\n\r\n ",
+    "helpText": "",
+    "name": "ServerManagerAutoRefreshRate",
+    "displayName": "Configure the refresh interval for Server Manager",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_servermanager_servermanagerautorefreshrate_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_servermanager_servermanagerautorefreshrate_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_servermanager_servermanagerautorefreshrate_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_servermanager_servermanagerautorefreshrate_refreshrate",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

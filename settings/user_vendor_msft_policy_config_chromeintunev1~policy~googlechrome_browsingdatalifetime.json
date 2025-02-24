@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "BrowsingDataLifetime",
+        "Browsing Data Lifetime Settings",
+        "\\Google\\Google Chrome",
+        "Administrative Templates\\Google\\Google Chrome",
+        "Google Chrome"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV1~Policy~googlechrome/BrowsingDataLifetime",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_browsingdatalifetime",
+    "categoryId": "36c83fb3-c18c-472b-b39e-617c2f8a7fbd",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_browsingdatalifetime",
+    "description": "Configures browsing data lifetime settings for Google Chrome. This policy allows admins to configure (per data-type) when data is deleted by the browser. This is useful for customers that work with sensitive customer data. The policy will only take effect if SyncDisabled is set to true.\r\n\r\nThe available data types are 'browsing_history', 'download_history', 'cookies_and_other_site_data', 'cached_images_and_files', 'password_signin', 'autofill', 'site_settings' and 'hosted_app_data'.\r\n\r\nThe browser will automatically remove data of selected types that is older than 'time_to_live_in_hours'. The minimum value that can be set is 1 hour.\r\n\r\nThe deletion of expired data will happen 15 seconds after the browser starts then every hour while the browser is running.\r\nSee https://cloud.google.com/docs/chrome-enterprise/policies/?policy=BrowsingDataLifetime for more information about schema and formatting.\r\n\r\n\r\nExample value:\r\n\r\n[\r\n  {\r\n    \"time_to_live_in_hours\": 24,\r\n    \"data_types\": [\r\n      \"browsing_history\"\r\n    ]\r\n  },\r\n  {\r\n    \"time_to_live_in_hours\": 12,\r\n    \"data_types\": [\r\n      \"password_signin\",\r\n      \"autofill\"\r\n    ]\r\n  }\r\n]",
+    "helpText": "",
+    "name": "BrowsingDataLifetime",
+    "displayName": "Browsing Data Lifetime Settings (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_browsingdatalifetime_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_browsingdatalifetime_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_browsingdatalifetime_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome_browsingdatalifetime_browsingdatalifetime",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

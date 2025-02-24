@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "TS_RDSAppX_WaitForRegistration",
+        "Suspend user sign-in to complete app registration",
+        "\\Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Connections",
+        "Administrative Templates\\Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Connections",
+        "Connections"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-terminalserver#admx-terminalserver-ts-rdsappx-waitforregistration"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_TerminalServer/TS_RDSAppX_WaitForRegistration",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_terminalserver_ts_rdsappx_waitforregistration",
+    "categoryId": "0c2613c9-a7c7-4458-8b0d-2fff13e2beeb",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_terminalserver_ts_rdsappx_waitforregistration",
+    "description": "This policy setting allows you to specify whether the app registration is completed before showing the Start screen to the user. \r\n\r\nBy default, when a new user signs in to a computer, the Start screen is shown and apps are registered in the background. However, some apps may not work until app registration is complete.\r\n\r\nIf you enable this policy setting, user sign-in is blocked for up to 6 minutes to complete the app registration. You can use this policy setting when customizing the Start screen on Remote Desktop Session Host servers. \r\n\r\nIf you disable or do not configure this policy setting, the Start screen is shown and apps are registered in the background.\r\n ",
+    "helpText": "",
+    "name": "TS_RDSAppX_WaitForRegistration",
+    "displayName": "Suspend user sign-in to complete app registration",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_terminalserver_ts_rdsappx_waitforregistration_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_terminalserver_ts_rdsappx_waitforregistration_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_terminalserver_ts_rdsappx_waitforregistration_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

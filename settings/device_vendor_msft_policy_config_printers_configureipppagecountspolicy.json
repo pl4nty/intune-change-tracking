@@ -1,0 +1,84 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ConfigureIppPageCountsPolicy",
+        "Always send job page count information for IPP printers",
+        "\\Printers",
+        "Administrative Templates\\Printers",
+        "Printers"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-printers#printers-configureipppagecountspolicy"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Printers/ConfigureIppPageCountsPolicy",
+    "rootDefinitionId": "device_vendor_msft_policy_config_printers_configureipppagecountspolicy",
+    "categoryId": "2becddf1-d8ea-49ec-8560-c8c401faa9bb",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_printers_configureipppagecountspolicy",
+    "description": "\r\nDetermines whether to always send page count information for accounting purposes for printers using the Microsoft IPP Class Driver.\r\n\r\nBy default, pages are sent to the printer as soon as they are rendered and page count information is not sent to the printer unless pages must be reordered.\r\n\r\nIf you enable this setting the system will render all print job pages up front and send the printer the total page count for the print job.\r\n\r\nIf you disable this setting or do not configure it, pages are printed as soon as they are rendered and page counts are only sent when page reordering is required to process the job.\r\n      ",
+    "helpText": "",
+    "name": "ConfigureIppPageCountsPolicy",
+    "displayName": "Always send job page count information for IPP printers",
+    "defaultOptionId": "device_vendor_msft_policy_config_printers_configureipppagecountspolicy_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22621",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_printers_configureipppagecountspolicy_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_printers_configureipppagecountspolicy_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

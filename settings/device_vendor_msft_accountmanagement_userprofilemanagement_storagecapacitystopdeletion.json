@@ -1,0 +1,55 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Storage Capacity Stop Deletion",
+        "Account Management"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/AccountManagement-csp/"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/AccountManagement",
+    "offsetUri": "/UserProfileManagement/StorageCapacityStopDeletion",
+    "rootDefinitionId": "device_vendor_msft_accountmanagement_userprofilemanagement_storagecapacitystopdeletion",
+    "categoryId": "3b384fc5-5906-4dc4-bc48-a52b52fb054b",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_accountmanagement_userprofilemanagement_storagecapacitystopdeletion",
+    "description": "Stop deleting profiles when available storage capacity is brought up to this threshold, given as percent of total storage available for profiles.",
+    "helpText": "",
+    "name": "StorageCapacityStopDeletion",
+    "displayName": "Storage Capacity Stop Deletion",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041",
+        "windowsSkus": [
+            "holographicForBusiness"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 2147483647,
+        "minimumValue": 0
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 50
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

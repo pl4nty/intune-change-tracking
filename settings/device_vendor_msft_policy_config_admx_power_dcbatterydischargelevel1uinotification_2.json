@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DCBatteryDischargeLevel1UINotification_2",
+        "Turn off low battery user notification",
+        "\\System\\Power Management\\Notification Settings",
+        "Administrative Templates\\System\\Power Management\\Notification Settings",
+        "Notification Settings"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-power#admx-power-dcbatterydischargelevel1uinotification-2"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_Power/DCBatteryDischargeLevel1UINotification_2",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_power_dcbatterydischargelevel1uinotification_2",
+    "categoryId": "d5585700-13a0-4ab4-9b19-4c15c1ead170",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_power_dcbatterydischargelevel1uinotification_2",
+    "description": "This policy setting turns off the user notification when the battery capacity remaining equals the low battery notification level.\r\n\r\nIf you enable this policy setting, Windows shows a notification when the battery capacity remaining equals the low battery notification level.  To configure the low battery notification level, see the \"Low Battery Notification Level\" policy setting.\r\n\r\nThe notification will only be shown if the \"Low Battery Notification Action\" policy setting is configured to \"No Action\".\r\n\r\nIf you disable or do not configure this policy setting, users can control this setting.\r\n ",
+    "helpText": "",
+    "name": "DCBatteryDischargeLevel1UINotification_2",
+    "displayName": "Turn off low battery user notification",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_power_dcbatterydischargelevel1uinotification_2_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_power_dcbatterydischargelevel1uinotification_2_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_power_dcbatterydischargelevel1uinotification_2_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

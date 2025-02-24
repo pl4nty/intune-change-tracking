@@ -1,0 +1,88 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Protect Documents",
+        "Personal Data Encryption"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/personaldataencryption-csp/"
+    ],
+    "baseUri": "./User/Vendor/MSFT/PDE",
+    "offsetUri": "/ProtectFolders/ProtectDocuments",
+    "rootDefinitionId": "user_vendor_msft_pde_enablepersonaldataencryption",
+    "categoryId": "1d5e7986-870c-444b-bf09-78bbf82a53fa",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_pde_protectfolders_protectdocuments",
+    "description": "Allows the Admin to enable Personal Data Encryption on Documents folder. Set to '1' to set this policy.\r\n This setting is only available to Windows Insiders",
+    "helpText": "",
+    "name": "ProtectDocuments",
+    "displayName": "Protect Documents (User) (Windows Insiders only)",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.25272",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsEducation",
+            "holographicForBusiness",
+            "iotEnterprise",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_pde_protectfolders_protectdocuments_0",
+            "description": "Disable Personal Data Encryption on the folder. If the folder is currently protected by Personal Data Encryption, this will result in unprotecting the folder.",
+            "helpText": null,
+            "name": "Disable PDE on the folder. If the folder is currently protected by PDE, this will result in unprotecting the folder.",
+            "displayName": "Disable Personal Data Encryption on the folder. If the folder is currently protected by Personal Data Encryption, this will result in unprotecting the folder.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_pde_enablepersonaldataencryption_1",
+                    "parentSettingId": "user_vendor_msft_pde_enablepersonaldataencryption"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_pde_protectfolders_protectdocuments_1",
+            "description": "Enable Personal Data Encryption on the folder.",
+            "helpText": null,
+            "name": "Enable PDE on the folder.",
+            "displayName": "Enable Personal Data Encryption on the folder.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_pde_enablepersonaldataencryption_1",
+                    "parentSettingId": "user_vendor_msft_pde_enablepersonaldataencryption"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

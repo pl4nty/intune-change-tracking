@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "MpEngine_EnableFileHashComputation",
+        "Enable file hash computation feature",
+        "\\Windows Components\\Microsoft Defender Antivirus\\MpEngine",
+        "Administrative Templates\\Windows Components\\Microsoft Defender Antivirus\\MpEngine",
+        "MpEngine"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus#admx-microsoftdefenderantivirus-mpengine-enablefilehashcomputation"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_MicrosoftDefenderAntivirus/MpEngine_EnableFileHashComputation",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_microsoftdefenderantivirus_mpengine_enablefilehashcomputation",
+    "categoryId": "a0f1f801-7fce-427c-b5e2-6c6b30065fa5",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_microsoftdefenderantivirus_mpengine_enablefilehashcomputation",
+    "description": "\r\n        Enable or disable file hash computation feature.\r\n\r\n        Enabled:\r\n        When this feature is enabled Microsoft Defender will compute hash value for files it scans.\r\n\r\n        Disabled:\r\n        File hash value is not computed\r\n        \r\n        Not configured:\r\n        Same as Disabled.\r\n    \r\n ",
+    "helpText": "",
+    "name": "MpEngine_EnableFileHashComputation",
+    "displayName": "Enable file hash computation feature",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_microsoftdefenderantivirus_mpengine_enablefilehashcomputation_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_microsoftdefenderantivirus_mpengine_enablefilehashcomputation_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_microsoftdefenderantivirus_mpengine_enablefilehashcomputation_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

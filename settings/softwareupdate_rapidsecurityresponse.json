@@ -1,0 +1,50 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Software Update Settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "RapidSecurityResponse",
+    "rootDefinitionId": "softwareupdate_softwareupdate",
+    "categoryId": "b382d980-7459-4850-a45e-75dd99488972",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "softwareupdate_rapidsecurityresponse",
+    "description": "These configurations allow for setting user access to interacting with Rapid Security Responses (RSRs). Only applicable on Supervised devices with iOS 18+ and MacOS 15+",
+    "helpText": null,
+    "name": "RapidSecurityResponse",
+    "displayName": "Rapid Security Response",
+    "childIds": [
+        "softwareupdate_rapidsecurityresponse_enable",
+        "softwareupdate_rapidsecurityresponse_enablerollback"
+    ],
+    "maximumCount": 1,
+    "minimumCount": 0,
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [
+        {
+            "dependentOn": "softwareupdate_softwareupdate",
+            "parentSettingId": "softwareupdate_softwareupdate"
+        }
+    ],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "softwareupdate_rapidsecurityresponse_enable",
+            "required": false
+        },
+        {
+            "dependedOnBy": "softwareupdate_rapidsecurityresponse_enablerollback",
+            "required": false
+        }
+    ]
+}

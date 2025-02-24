@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DefaultSearchProviderAlternateURLs",
+        "List of alternate URLs for the default search provider",
+        "\\Google\\Google Chrome\\Default search provider",
+        "Administrative Templates\\Google\\Google Chrome\\Default search provider",
+        "Default search provider"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV1~Policy~googlechrome~DefaultSearchProvider/DefaultSearchProviderAlternateURLs",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~defaultsearchprovider_defaultsearchprovideralternateurls",
+    "categoryId": "70498fad-5ddb-4730-8130-d755ff675760",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~defaultsearchprovider_defaultsearchprovideralternateurls",
+    "description": "If DefaultSearchProviderEnabled is on, then setting DefaultSearchProviderAlternateURLs specifies a list of alternate URLs for extracting search terms from the search engine. The URLs should include the string '{searchTerms}'.\r\n\r\nLeaving DefaultSearchProviderAlternateURLs unset means no alternate URLs are used to extract search terms.\r\n\r\nExample value:\r\n\r\nhttps://search.my.company/suggest#q={searchTerms}\r\nhttps://search.my.company/suggest/search#q={searchTerms}",
+    "helpText": "",
+    "name": "DefaultSearchProviderAlternateURLs",
+    "displayName": "List of alternate URLs for the default search provider (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~defaultsearchprovider_defaultsearchprovideralternateurls_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~defaultsearchprovider_defaultsearchprovideralternateurls_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~defaultsearchprovider_defaultsearchprovideralternateurls_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~defaultsearchprovider_defaultsearchprovideralternateurls_defaultsearchprovideralternateurlsdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

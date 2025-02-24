@@ -1,0 +1,90 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DevicePKInitEnabled",
+        "Support device authentication using certificate",
+        "\\System\\Kerberos",
+        "Administrative Templates\\System\\Kerberos",
+        "Kerberos"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-kerberos#admx-kerberos-devicepkinitenabled"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_Kerberos/DevicePKInitEnabled",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_kerberos_devicepkinitenabled",
+    "categoryId": "9b0b8f3b-8e08-4083-9e2b-2e6bfeb01f83",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_kerberos_devicepkinitenabled",
+    "description": "Support for device authentication using certificate will require connectivity to a DC in the device account domain which supports certificate authentication for computer accounts. \r\n\r\nThis policy setting allows you to set support for Kerberos to attempt authentication using the certificate for the device to the domain.\r\n\r\nIf you enable this policy setting, the devices credentials will be selected based on the following options:\r\n\r\nAutomatic: Device will attempt to authenticate using its certificate. If the DC does not support computer account authentication using certificates then authentication with password will be attempted.\r\n\r\nForce: Device will always authenticate using its certificate. If a DC cannot be found which support computer account authentication using certificates then authentication will fail.\r\n\r\nIf you disable this policy setting, certificates will never be used.\r\nIf you do not configure this policy setting, Automatic will be used.\r\n\r\n ",
+    "helpText": "",
+    "name": "DevicePKInitEnabled",
+    "displayName": "Support device authentication using certificate",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_kerberos_devicepkinitenabled_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_kerberos_devicepkinitenabled_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_kerberos_devicepkinitenabled_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_kerberos_devicepkinitenabled_devicepkinitbehavior",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,72 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "U2fSecurityKeyApiEnabled",
+        "Allow using the deprecated U2F Security Key API (deprecated)",
+        "\\Microsoft Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev98~Policy~microsoft_edge/U2fSecurityKeyApiEnabled",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edgev98~policy~microsoft_edge_u2fsecuritykeyapienabled",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_microsoft_edgev98~policy~microsoft_edge_u2fsecuritykeyapienabled",
+    "description": "OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 103.\r\n\r\nThis policy is obsolete because it was intended to be a short-term mechanism to give enterprises more time to update their web content when it's found to be incompatible with the change to remove the U2F Security Key API. It doesn't work in Microsoft Edge after version 103.\r\n\r\nIf you enable this policy, the deprecated U2F Security Key API can be used and the deprecation reminder prompt shown for U2F API requests is suppressed.\r\n\r\nIf you disable this policy or don't configure it, the U2F Security Key API is disabled by default and can only be used by sites that register for and use the U2FSecurityKeyAPI origin trial which ended after Microsoft Edge version 103.",
+    "helpText": "",
+    "name": "U2fSecurityKeyApiEnabled",
+    "displayName": "Allow using the deprecated U2F Security Key API (obsolete)",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edgev98~policy~microsoft_edge_u2fsecuritykeyapienabled_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev98~policy~microsoft_edge_u2fsecuritykeyapienabled_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev98~policy~microsoft_edge_u2fsecuritykeyapienabled_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

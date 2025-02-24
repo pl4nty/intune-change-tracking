@@ -1,0 +1,90 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Pol_CustomGoOfflineActions_2",
+        "Non-default server disconnect actions",
+        "\\Network\\Offline Files",
+        "Administrative Templates\\Network\\Offline Files",
+        "Offline Files"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-offlinefiles#admx-offlinefiles-pol-customgoofflineactions-2"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_OfflineFiles/Pol_CustomGoOfflineActions_2",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_offlinefiles_pol_customgoofflineactions_2",
+    "categoryId": "82a9c23f-2c09-4479-9cd3-e7f185d7676f",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_offlinefiles_pol_customgoofflineactions_2",
+    "description": "Determines how computers respond when they are disconnected from particular offline file servers. This setting overrides the default response, a user-specified response, and the response specified in the \"Action on server disconnect\" setting.\r\n\r\nTo use this setting, click Show. In the Show Contents dialog box in the Value Name column box, type the server's computer name. Then, in the Value column box, type \"0\" if users can work offline when they are disconnected from this server, or type \"1\" if they cannot.\r\n\r\nThis setting appears in the Computer Configuration and User Configuration folders.  If both settings are configured for a particular server, the setting in Computer Configuration takes precedence over the setting in User Configuration.  Both Computer and User configuration take precedence over a user's setting.  This setting does not prevent users from setting custom actions through the Offline Files tab.  However, users are unable to change any custom actions established via this setting.\r\n\r\nTip: To configure this setting without establishing a setting, in Windows Explorer, on the Tools menu, click Folder Options, click the Offline Files tab, and then click Advanced. This setting corresponds to the settings in the \"Exception list\" section.\r\n ",
+    "helpText": "",
+    "name": "Pol_CustomGoOfflineActions_2",
+    "displayName": "Non-default server disconnect actions",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_offlinefiles_pol_customgoofflineactions_2_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_offlinefiles_pol_customgoofflineactions_2_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_offlinefiles_pol_customgoofflineactions_2_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_offlinefiles_pol_customgoofflineactions_2_lbl_customgoofflineactionslist",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

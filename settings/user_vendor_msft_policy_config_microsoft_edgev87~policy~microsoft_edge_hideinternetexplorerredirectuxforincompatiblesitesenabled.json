@@ -1,0 +1,72 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "HideInternetExplorerRedirectUXForIncompatibleSitesEnabled",
+        "Hide the one-time redirection dialog and the banner on Microsoft Edge",
+        "\\Microsoft Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev87~Policy~microsoft_edge/HideInternetExplorerRedirectUXForIncompatibleSitesEnabled",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edgev87~policy~microsoft_edge_hideinternetexplorerredirectuxforincompatiblesitesenabled",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_microsoft_edgev87~policy~microsoft_edge_hideinternetexplorerredirectuxforincompatiblesitesenabled",
+    "description": "This policy gives an option to disable one-time redirection dialog and the banner. When this policy is enabled, users will not see both the one-time dialog and the banner.\r\nUsers will continue to be redirected to Microsoft Edge when they encounter an incompatible website on Internet Explorer, but their browsing data will not be imported.\r\n\r\n- If you enable this policy the one-time redirection dialog and banner will never be shown to users. Users' browsing data will not be imported when a redirection happens.\r\n\r\n- If you disable or don't set this policy, the redirection dialog will be shown on the first redirection and the persistent redirection banner will be shown to users on sessions that begin with a redirection. Users' browsing data will be imported every time user encounters such redirection (ONLY IF user consents to it on the one-time dialog).",
+    "helpText": "",
+    "name": "HideInternetExplorerRedirectUXForIncompatibleSitesEnabled",
+    "displayName": "Hide the one-time redirection dialog and the banner on Microsoft Edge (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edgev87~policy~microsoft_edge_hideinternetexplorerredirectuxforincompatiblesitesenabled_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev87~policy~microsoft_edge_hideinternetexplorerredirectuxforincompatiblesitesenabled_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev87~policy~microsoft_edge_hideinternetexplorerredirectuxforincompatiblesitesenabled_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

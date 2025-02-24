@@ -1,0 +1,91 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Hide Sign Out",
+        "Start"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Start#hidesignout"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Start/HideSignOut",
+    "rootDefinitionId": "device_vendor_msft_policy_config_start_hideusertile",
+    "categoryId": "311e1dac-a77c-4bc0-a376-35ad55923b7d",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_start_hidesignout",
+    "description": "Enabling this policy hides \"Sign out\" from appearing in the user tile in the start menu.",
+    "helpText": "",
+    "name": "HideSignOut",
+    "displayName": "Hide Sign Out",
+    "defaultOptionId": "device_vendor_msft_policy_config_start_hidesignout_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.15063",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_start_hidesignout_0",
+            "description": "Do not hide.",
+            "helpText": null,
+            "name": "Do not hide.",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_start_hideusertile_0",
+                    "parentSettingId": "device_vendor_msft_policy_config_start_hideusertile"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_start_hidesignout_1",
+            "description": "Hide.",
+            "helpText": null,
+            "name": "Hide.",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_start_hideusertile_0",
+                    "parentSettingId": "device_vendor_msft_policy_config_start_hideusertile"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,73 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_AllowVbaIntranetRefs",
+        "Allow VBA to load typelib references by path from untrusted intranet locations",
+        "\\Microsoft Office 2016\\Security Settings",
+        "Microsoft Office 2016\\Security Settings",
+        "Security Settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/office16v6~Policy~L_MicrosoftOfficeSystem~L_SecuritySettings/L_AllowVbaIntranetRefs",
+    "rootDefinitionId": "user_vendor_msft_policy_config_office16v6~policy~l_microsoftofficesystem~l_securitysettings_l_allowvbaintranetrefs",
+    "categoryId": "50b4bc60-802c-477a-9366-80e09154595f",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_office16v6~policy~l_microsoftofficesystem~l_securitysettings_l_allowvbaintranetrefs",
+    "description": "This policy setting permits VBA to load typelib references by explicit path read from the project data if that path points to an intranet location that is not explicitly in the system trusted sites list.\r\n\r\nBy default, VBA will attempt to load typelibs referenced in a project by searching for the library GUID in the registry. If it is not found in the registry, VBA will attempt to load the typelib or project reference using the path stored in the project for the reference as long as the reference does not point to an internet or intranet location that is not in the trusted sites list.\r\n\r\nIf you enable this policy setting, VBA will treat intranet paths like local machine paths, and therefore VBA will attempt to search for unregistered references in intranet locations that are not local machine or in the system's trusted sites list.\r\n\r\nIf you disable or don’t configure this policy setting, VBA maintains its default behavior and will refuse to load typelibs on intranet paths if it does not find the typelib registered in HKEY_CLASSES_ROOT.\r\n      ",
+    "helpText": "",
+    "name": "L_AllowVbaIntranetRefs",
+    "displayName": "Allow VBA to load typelib references by path from untrusted intranet locations (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_office16v6~policy~l_microsoftofficesystem~l_securitysettings_l_allowvbaintranetrefs_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v6~policy~l_microsoftofficesystem~l_securitysettings_l_allowvbaintranetrefs_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v6~policy~l_microsoftofficesystem~l_securitysettings_l_allowvbaintranetrefs_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

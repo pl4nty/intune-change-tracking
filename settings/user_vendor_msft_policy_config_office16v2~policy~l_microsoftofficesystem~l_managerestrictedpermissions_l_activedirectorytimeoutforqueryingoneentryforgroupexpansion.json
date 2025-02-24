@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_ActiveDirectorytimeoutforqueryingoneentryforgroupexpansion",
+        "Active Directory timeout for querying one entry for group expansion",
+        "\\Microsoft Office 2016\\Manage Restricted Permissions",
+        "Microsoft Office 2016\\Manage Restricted Permissions",
+        "Manage Restricted Permissions"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/office16v2~Policy~L_MicrosoftOfficeSystem~L_ManageRestrictedPermissions/L_ActiveDirectorytimeoutforqueryingoneentryforgroupexpansion",
+    "rootDefinitionId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_managerestrictedpermissions_l_activedirectorytimeoutforqueryingoneentryforgroupexpansion",
+    "categoryId": "042ab9cf-9524-4dd4-b049-4d5f4ff7053f",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_managerestrictedpermissions_l_activedirectorytimeoutforqueryingoneentryforgroupexpansion",
+    "description": "Specifies the timeout value for querying one Active Directory entry for group expansion.",
+    "helpText": "",
+    "name": "L_ActiveDirectorytimeoutforqueryingoneentryforgroupexpansion",
+    "displayName": "Active Directory timeout for querying one entry for group expansion (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_managerestrictedpermissions_l_activedirectorytimeoutforqueryingoneentryforgroupexpansion_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_managerestrictedpermissions_l_activedirectorytimeoutforqueryingoneentryforgroupexpansion_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_managerestrictedpermissions_l_activedirectorytimeoutforqueryingoneentryforgroupexpansion_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_office16v2~policy~l_microsoftofficesystem~l_managerestrictedpermissions_l_activedirectorytimeoutforqueryingoneentryforgroupexpansion_l_entertimeoutinseconds",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

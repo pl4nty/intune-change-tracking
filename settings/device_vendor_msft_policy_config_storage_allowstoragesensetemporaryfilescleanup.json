@@ -1,0 +1,82 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Allow Storage Sense Temporary Files Cleanup",
+        "Storage"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Storage#allowstoragesensetemporaryfilescleanup"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Storage/AllowStorageSenseTemporaryFilesCleanup",
+    "rootDefinitionId": "device_vendor_msft_policy_config_storage_allowstoragesensetemporaryfilescleanup",
+    "categoryId": "94fd7e7e-2a0f-4b5e-903a-28868a2e7e3c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_storage_allowstoragesensetemporaryfilescleanup",
+    "description": "When Storage Sense runs, it can delete the user’s temporary files that are not in use. If the Storage/AllowStorageSenseGlobal policy is disabled, then this policy does not have any effect. If you enable this policy setting, Storage Sense will delete the user’s temporary files that are not in use. Users cannot disable this setting in Storage settings. If you disable this policy setting, Storage Sense will not delete the user’s temporary files. Users cannot enable this setting in Storage settings. If you do not configure this policy setting, Storage Sense will delete the user’s temporary files by default. Users can configure this setting in Storage settings.",
+    "helpText": "",
+    "name": "AllowStorageSenseTemporaryFilesCleanup",
+    "displayName": "Allow Storage Sense Temporary Files Cleanup",
+    "defaultOptionId": "device_vendor_msft_policy_config_storage_allowstoragesensetemporaryfilescleanup_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "9.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.18362",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_storage_allowstoragesensetemporaryfilescleanup_1",
+            "description": "Allow",
+            "helpText": null,
+            "name": "Allow",
+            "displayName": "Allow",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_storage_allowstoragesensetemporaryfilescleanup_0",
+            "description": "Block",
+            "helpText": null,
+            "name": "Block",
+            "displayName": "Block",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

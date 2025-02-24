@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "SlowlinkDefaultToAsync",
+        "Change Group Policy processing to run asynchronously when a slow network connection is detected.",
+        "\\System\\Group Policy",
+        "Administrative Templates\\System\\Group Policy",
+        "Group Policy"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-grouppolicy#admx-grouppolicy-slowlinkdefaulttoasync"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_GroupPolicy/SlowlinkDefaultToAsync",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_grouppolicy_slowlinkdefaulttoasync",
+    "categoryId": "deadde1d-7e7f-4577-bd6e-fc237c3854c5",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_grouppolicy_slowlinkdefaulttoasync",
+    "description": "This policy directs Group Policy processing to skip processing any client side extension that requires synchronous processing (that is, whether computers wait for the network to be fully initialized during computer startup and user logon) when a slow network connection is detected.\r\n\r\nIf you enable this policy setting, when a slow network connection is detected, Group Policy processing will always run in an asynchronous manner.\r\nClient computers will not wait for the network to be fully initialized at startup and logon. Existing users will be logged on using cached credentials,\r\nwhich will result in shorter logon times. Group Policy will be applied in the background after the network becomes available.\r\nNote that because this is a background refresh, extensions requiring synchronous processing such as Software Installation, Folder Redirection\r\nand Drive Maps preference extension will not be applied.\r\n\r\nNote: There are two conditions that will cause Group Policy to be processed synchronously even if this policy setting is enabled:\r\n1 - At the first computer startup after the client computer has joined the domain.\r\n2 - If the policy setting \"Always wait for the network at computer startup and logon\" is enabled.\r\n\r\nIf you disable or do not configure this policy setting, detecting a slow network connection will not affect whether Group Policy processing will be synchronous or asynchronous.\r\n\r\n      \r\n ",
+    "helpText": "",
+    "name": "SlowlinkDefaultToAsync",
+    "displayName": "Change Group Policy processing to run asynchronously when a slow network connection is detected.",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_grouppolicy_slowlinkdefaulttoasync_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_grouppolicy_slowlinkdefaulttoasync_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_grouppolicy_slowlinkdefaulttoasync_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

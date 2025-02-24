@@ -1,0 +1,77 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "InternetExplorerIntegrationSiteListRefreshInterval",
+        "Configure how frequently the Enterprise Mode Site List is refreshed",
+        "\\Microsoft Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev93~Policy~microsoft_edge/InternetExplorerIntegrationSiteListRefreshInterval",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edgev93~policy~microsoft_edge_internetexplorerintegrationsitelistrefreshinterval",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_microsoft_edgev93~policy~microsoft_edge_internetexplorerintegrationsitelistrefreshinterval",
+    "description": "This setting lets you specify a custom refresh interval for the Enterprise Mode Site List. The refresh interval is specified in minutes. The minimum refresh interval is 30 minutes.\r\n\r\nThis setting is applicable only when the 'InternetExplorerIntegrationSiteList' (Configure the Enterprise Mode Site List) or 'InternetExplorerIntegrationCloudSiteList' (Configure the Enterprise Mode Cloud Site List) setting is configured.\r\n\r\nIf you configure this policy, Microsoft Edge will attempt to retrieve an updated version of the configured Enterprise Mode Site List using the specified refresh interval.\r\n\r\nIf you disable or don't configure this policy, Microsoft Edge will use a default refresh interval, it is 10080 minutes (7 days) starting from version 110 or later, 120 minutes from version 93 to 110, and 30 minutes before version 93.",
+    "helpText": "",
+    "name": "InternetExplorerIntegrationSiteListRefreshInterval",
+    "displayName": "Configure how frequently the Enterprise Mode Site List is refreshed",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edgev93~policy~microsoft_edge_internetexplorerintegrationsitelistrefreshinterval_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev93~policy~microsoft_edge_internetexplorerintegrationsitelistrefreshinterval_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev93~policy~microsoft_edge_internetexplorerintegrationsitelistrefreshinterval_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_microsoft_edgev93~policy~microsoft_edge_internetexplorerintegrationsitelistrefreshinterval_internetexplorerintegrationsitelistrefreshinterval",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

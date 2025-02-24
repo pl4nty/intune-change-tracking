@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Allow Projection From PC Over Infrastructure",
+        "Wireless Display"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-WirelessDisplay#allowprojectionfrompcoverinfrastructure"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/WirelessDisplay/AllowProjectionFromPCOverInfrastructure",
+    "rootDefinitionId": "device_vendor_msft_policy_config_wirelessdisplay_allowprojectionfrompcoverinfrastructure",
+    "categoryId": "a6e15085-a3a9-41dd-9a6a-65c8a26c616d",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_wirelessdisplay_allowprojectionfrompcoverinfrastructure",
+    "description": "This policy allows you to turn off projection from a PC over infrastructure.                             If you set it to 0, your PC cannot discover or project to other infrastructure devices, though it may still be possible to discover and project over WiFi Direct.                             If you set it to 1, your PC can discover and project to other devices over infrastructure.",
+    "helpText": "",
+    "name": "AllowProjectionFromPCOverInfrastructure",
+    "displayName": "Allow Projection From PC Over Infrastructure",
+    "defaultOptionId": "device_vendor_msft_policy_config_wirelessdisplay_allowprojectionfrompcoverinfrastructure_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.15063",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_wirelessdisplay_allowprojectionfrompcoverinfrastructure_0",
+            "description": "Your PC cannot discover or project to other infrastructure devices, although it is possible to discover and project over WiFi Direct.",
+            "helpText": null,
+            "name": "Your PC cannot discover or project to other infrastructure devices, although it is possible to discover and project over WiFi Direct.",
+            "displayName": "Your PC cannot discover or project to other infrastructure devices, although it is possible to discover and project over WiFi Direct.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_wirelessdisplay_allowprojectionfrompcoverinfrastructure_1",
+            "description": "Your PC can discover and project to other devices over infrastructure.",
+            "helpText": null,
+            "name": "Your PC can discover and project to other devices over infrastructure.",
+            "displayName": "Your PC can discover and project to other devices over infrastructure.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,87 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Client Settings",
+        "Automatically detect elevations",
+        "Privilege Management",
+        "Privilege management elevation client settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "PrivilegeManagement/ElevationClientSettings/AllowElevationDetection",
+    "rootDefinitionId": "device_vendor_msft_policy_elevationclientsettings_enableepm",
+    "categoryId": "b750fe41-33c4-4293-8dfc-42285be35752",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "id": "device_vendor_msft_policy_elevationclientsettings_allowelevationdetection",
+    "description": "",
+    "helpText": "When set to Yes, applications that need elevated permissions to run will automatically be elevated (based on the rules you set). Otherwise, the system only evaluates requests through the right-click menu or if they are set for automatic elevation.",
+    "name": "AllowElevationDetection",
+    "displayName": "(Preview) Automatically detect elevations",
+    "defaultOptionId": "device_vendor_msft_policy_elevationclientsettings_allowelevationdetection_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,endpointPrivilegeManagement",
+        "configurationServiceProviderVersion": null,
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19042",
+        "windowsSkus": [
+            "windowsProfessional",
+            "windowsEnterprise",
+            "windowsEducation",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_elevationclientsettings_allowelevationdetection_0",
+            "description": "No",
+            "helpText": null,
+            "name": "No",
+            "displayName": "No",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_elevationclientsettings_enableepm_1",
+                    "parentSettingId": "device_vendor_msft_policy_elevationclientsettings_enableepm"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_elevationclientsettings_allowelevationdetection_1",
+            "description": "Yes",
+            "helpText": null,
+            "name": "Yes",
+            "displayName": "Yes",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_elevationclientsettings_enableepm_1",
+                    "parentSettingId": "device_vendor_msft_policy_elevationclientsettings_enableepm"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

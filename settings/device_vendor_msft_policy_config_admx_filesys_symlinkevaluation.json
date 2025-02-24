@@ -1,0 +1,102 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "SymlinkEvaluation",
+        "Selectively allow the evaluation of a symbolic link",
+        "\\System\\Filesystem",
+        "Administrative Templates\\System\\Filesystem",
+        "Filesystem"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-filesys#admx-filesys-symlinkevaluation"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_FileSys/SymlinkEvaluation",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_filesys_symlinkevaluation",
+    "categoryId": "50fb9f56-84f1-4fa9-83f5-0aa0bca8ff49",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_filesys_symlinkevaluation",
+    "description": "Symbolic links can introduce vulnerabilities in certain applications. To mitigate this issue, you can selectively enable or disable the evaluation of these types of symbolic links:\r\n\r\nLocal Link to a Local Target\r\nLocal Link to a Remote Target\r\nRemote Link to Remote Target\r\nRemote Link to Local Target\r\n\r\nFor further information please refer to the Windows Help section\r\n\r\nNOTE: If this policy is Disabled or Not Configured, local administrators may select the types of symbolic links to be evaluated.\r\n ",
+    "helpText": "",
+    "name": "SymlinkEvaluation",
+    "displayName": "Selectively allow the evaluation of a symbolic link",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_filesys_symlinkevaluation_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_filesys_symlinkevaluation_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_filesys_symlinkevaluation_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_filesys_symlinkevaluation_symlinkclassl2l",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_filesys_symlinkevaluation_symlinkclassl2r",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_filesys_symlinkevaluation_symlinkclassr2r",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_filesys_symlinkevaluation_symlinkclassr2l",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

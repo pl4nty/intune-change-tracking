@@ -1,0 +1,90 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ShortNameCreationSettings",
+        "Short name creation options",
+        "\\System\\Filesystem\\NTFS",
+        "Administrative Templates\\System\\Filesystem\\NTFS",
+        "NTFS"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-filesys#admx-filesys-shortnamecreationsettings"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_FileSys/ShortNameCreationSettings",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_filesys_shortnamecreationsettings",
+    "categoryId": "2e71c6fd-dafa-444d-9542-55d838331939",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_filesys_shortnamecreationsettings",
+    "description": "These settings provide control over whether or not short names are generated during file creation.  Some applications require short names for compatibility, but short names have a negative performance impact on the system.\r\n\r\nIf you enable short names on all volumes then short names will always be generated.  If you disable them on all volumes then they will never be generated.  If you set short name creation to be configurable on a per volume basis then an on-disk flag will determine whether or not short names are created on a given volume.  If you disable short name creation on all data volumes then short names will only be generated for files created on the system volume.\r\n ",
+    "helpText": "",
+    "name": "ShortNameCreationSettings",
+    "displayName": "Short name creation options",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_filesys_shortnamecreationsettings_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_filesys_shortnamecreationsettings_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_filesys_shortnamecreationsettings_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_filesys_shortnamecreationsettings_shortnamecreationsetting_levels",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

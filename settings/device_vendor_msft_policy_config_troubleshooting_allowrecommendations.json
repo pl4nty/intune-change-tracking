@@ -1,0 +1,137 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Allow Recommendations",
+        "Troubleshooting"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Troubleshooting#allowrecommendations"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Troubleshooting/AllowRecommendations",
+    "rootDefinitionId": "device_vendor_msft_policy_config_troubleshooting_allowrecommendations",
+    "categoryId": "63e167a4-65be-4d34-9e9c-186466f2b064",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_troubleshooting_allowrecommendations",
+    "description": "This policy setting applies recommended troubleshooting for known problems on the device and lets administrators configure how it's applied to their domains/IT environments. Not configuring this policy setting will allow the user to configure if and how recommended troubleshooting is applied. Enabling this policy allows you to configure how recommended troubleshooting is applied on the user's device. You can select from one of the following values: 0 = Turn this feature off. 1 = Turn this feature off but still apply critical troubleshooting. 2 = Notify users when recommended troubleshooting is available, then allow the user to run or ignore it. 3 = Run recommended troubleshooting automatically and notify the user after it's been successfully run. 4 = Run recommended troubleshooting automatically without notifying the user. 5 = Allow the user to choose their own recommended troubleshooting settings.",
+    "helpText": "",
+    "name": "AllowRecommendations",
+    "displayName": "Allow Recommendations",
+    "defaultOptionId": "device_vendor_msft_policy_config_troubleshooting_allowrecommendations_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "9.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.18362",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_troubleshooting_allowrecommendations_0",
+            "description": "Turn this feature off.",
+            "helpText": null,
+            "name": "Off - Do not allow users, system features, or Microsoft to apply troubleshooting.",
+            "displayName": "Turn this feature off.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_troubleshooting_allowrecommendations_1",
+            "description": "Turn this feature off but still apply critical troubleshooting.",
+            "helpText": null,
+            "name": "Critical - Automatically apply troubleshooting for critical problems detected by system features and Microsoft. Do not notify users when troubleshooting has solved a problem.",
+            "displayName": "Turn this feature off but still apply critical troubleshooting.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_troubleshooting_allowrecommendations_2",
+            "description": "Notify users when recommended troubleshooting is available, then allow the user to run or ignore it.",
+            "helpText": null,
+            "name": "Prompt - Automatically apply troubleshooting for critical problems detected by system features and Microsoft. Prompt users when troubleshooting for other problems is available and allow the user to choose to apply or ignore.",
+            "displayName": "Notify users when recommended troubleshooting is available, then allow the user to run or ignore it.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_troubleshooting_allowrecommendations_3",
+            "description": "Run recommended troubleshooting automatically and notify the user after it's been successfully run.",
+            "helpText": null,
+            "name": "Notify - Automatically apply troubleshooting for critical and other problems detected by system features and Microsoft. Notify users when troubleshooting has solved a problem.",
+            "displayName": "Run recommended troubleshooting automatically and notify the user after it's been successfully run.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_troubleshooting_allowrecommendations_4",
+            "description": "Run recommended troubleshooting automatically without notifying the user.",
+            "helpText": null,
+            "name": "Silent - Automatically apply troubleshooting for critical and other problems detected by system features and Microsoft. Do not notify users when troubleshooting has solved a problem.",
+            "displayName": "Run recommended troubleshooting automatically without notifying the user.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 4
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_troubleshooting_allowrecommendations_5",
+            "description": "Allow the user to choose their own recommended troubleshooting settings.",
+            "helpText": null,
+            "name": "Configurable - Allow the user to choose their own troubleshooting settings.",
+            "displayName": "Allow the user to choose their own recommended troubleshooting settings.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 5
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,82 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Hide TPM Troubleshooting",
+        "Windows Defender Security Center"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-WindowsDefenderSecurityCenter#hidetpmtroubleshooting"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/WindowsDefenderSecurityCenter/HideTPMTroubleshooting",
+    "rootDefinitionId": "device_vendor_msft_policy_config_windowsdefendersecuritycenter_hidetpmtroubleshooting",
+    "categoryId": "f72e61e9-7e84-4c6d-8057-fa0a4f79cbea",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_windowsdefendersecuritycenter_hidetpmtroubleshooting",
+    "description": "Use this policy to hide the Security processor (TPM) troubleshooting area in the Windows Defender Security Center.",
+    "helpText": "",
+    "name": "HideTPMTroubleshooting",
+    "displayName": "Hide TPM Troubleshooting",
+    "defaultOptionId": "device_vendor_msft_policy_config_windowsdefendersecuritycenter_hidetpmtroubleshooting_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager",
+        "configurationServiceProviderVersion": "7.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17134",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_windowsdefendersecuritycenter_hidetpmtroubleshooting_0",
+            "description": "(Disable or not configured) The Security processor (TPM) troubleshooting area is displayed.",
+            "helpText": null,
+            "name": "(Disable or not configured) The Security processor (TPM) troubleshooting area is displayed.",
+            "displayName": "(Disable or not configured) The Security processor (TPM) troubleshooting area is displayed.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_windowsdefendersecuritycenter_hidetpmtroubleshooting_1",
+            "description": "(Enable) The Security processor (TPM) troubleshooting area is hidden.",
+            "helpText": null,
+            "name": "(Enable) The Security processor (TPM) troubleshooting area is hidden.",
+            "displayName": "(Enable) The Security processor (TPM) troubleshooting area is hidden.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

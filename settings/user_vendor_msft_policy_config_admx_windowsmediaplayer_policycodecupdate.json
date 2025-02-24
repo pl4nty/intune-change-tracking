@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "PolicyCodecUpdate",
+        "Prevent Codec Download",
+        "\\Windows Components\\Windows Media Player\\Playback",
+        "Administrative Templates\\Windows Components\\Windows Media Player\\Playback",
+        "Playback"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-windowsmediaplayer#admx-windowsmediaplayer-policycodecupdate"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_WindowsMediaPlayer/PolicyCodecUpdate",
+    "rootDefinitionId": "user_vendor_msft_policy_config_admx_windowsmediaplayer_policycodecupdate",
+    "categoryId": "0b635a19-976c-4c28-a642-87ede7649bef",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_admx_windowsmediaplayer_policycodecupdate",
+    "description": "This policy setting allows you to prevent Windows Media Player from downloading codecs.\r\n\r\nIf you enable this policy setting, the Player is prevented from automatically downloading codecs to your computer. In addition, the Download codecs automatically check box on the Player tab in the Player is not available.\r\n\r\nIf you disable this policy setting, codecs are automatically downloaded and the Download codecs automatically check box is not available.\r\n\r\nIf you do not configure this policy setting, users can change the setting for the Download codecs automatically check box.\r\n ",
+    "helpText": "",
+    "name": "PolicyCodecUpdate",
+    "displayName": "Prevent Codec Download (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_admx_windowsmediaplayer_policycodecupdate_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_windowsmediaplayer_policycodecupdate_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_admx_windowsmediaplayer_policycodecupdate_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

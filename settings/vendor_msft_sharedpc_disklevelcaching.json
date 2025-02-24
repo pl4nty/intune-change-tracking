@@ -1,0 +1,52 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Disk Level Caching",
+        "SharedPC",
+        "Shared PC"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Vendor/MSFT/SharedPC",
+    "offsetUri": "/DiskLevelCaching",
+    "rootDefinitionId": "vendor_msft_sharedpc_disklevelcaching",
+    "categoryId": "891d2958-5a8c-479c-aa68-69b1b6c735e1",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "vendor_msft_sharedpc_disklevelcaching",
+    "description": "Stop deleting accounts when available disk space reaches this threshold, given as percent of total disk capacity.",
+    "helpText": null,
+    "name": "DiskLevelCaching",
+    "displayName": "Disk Level Caching",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 100,
+        "minimumValue": 0
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 25
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "CADistrustedCertificates",
+        "TLS certificates that should be distrusted by Microsoft Edge for server authentication",
+        "\\Microsoft Edge\\Certificate management settings",
+        "Microsoft Edge\\Certificate management settings",
+        "Certificate management settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev133~Policy~microsoft_edge~CertificateManagement/CADistrustedCertificates",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edgev133~policy~microsoft_edge~certificatemanagement_cadistrustedcertificates",
+    "categoryId": "3abaf4c2-d5db-4b3b-a461-b1a208231b36",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_microsoft_edgev133~policy~microsoft_edge~certificatemanagement_cadistrustedcertificates",
+    "description": "This policy enables defining a list of certificate public keys that should be distrusted by Microsoft Edge for TLS server\r\nauthentication.\r\n\r\nThe policy value is a list of base64-encoded X.509 certificates. Any\r\ncertificate with a matching SPKI (SubjectPublicKeyInfo) will be distrusted.\r\n\r\nExample value:\r\n\r\nMIIB/TCCAaOgAwIBAgIUQthnWVsd1jWpUCNBf/uILjXC+t4wCgYIKoZIzj0EAwIwVDELMAkGA1UEBhMCVVMxETAPBgNVBAgMCFZpcmdpbmlhMQ8wDQYDVQQHDAZSZXN0b24xITAfBgNVBAoMGEludGVybmV0IFdpZGdpdHMgUHR5IEx0ZDAeFw0yMzEyMDcxNjE5NTVaFw0yMzEyMjExNjE5NTVaMFQxCzAJBgNVBAYTAlVTMREwDwYDVQQIDAhWaXJnaW5pYTEPMA0GA1UEBwwGUmVzdG9uMSEwHwYDVQQKDBhJbnRlcm5ldCBXaWRnaXRzIFB0eSBMdGQwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAQ9Akav/KB0aVA9FM1QK4J1CEHn5rFOyY/nxcr5HG3+Fom0Kwu5zTR/kz9eOYgtG/1NmCzbiEKaULDfzA8V9aJ7o1MwUTAdBgNVHQ4EFgQUq37bLKiuw8Y/G+rurMf46hw7EekwHwYDVR0jBBgwFoAUq37bLKiuw8Y/G+rurMf46hw7EekwDwYDVR0TAQH/BAUwAwEB/zAKBggqhkjOPQQDAgNIADBFAiEA/JhtLSgtVOcXkgFJ9V5Vb6lhGdiKQFfzO9wTxPeCxCECIFePYPucys2n/r9MOBMHiX/8068ssv+uceqokzUg0mAb",
+    "helpText": "",
+    "name": "CADistrustedCertificates",
+    "displayName": "TLS certificates that should be distrusted by Microsoft Edge for server authentication (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edgev133~policy~microsoft_edge~certificatemanagement_cadistrustedcertificates_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev133~policy~microsoft_edge~certificatemanagement_cadistrustedcertificates_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev133~policy~microsoft_edge~certificatemanagement_cadistrustedcertificates_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_microsoft_edgev133~policy~microsoft_edge~certificatemanagement_cadistrustedcertificates_cadistrustedcertificatesdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

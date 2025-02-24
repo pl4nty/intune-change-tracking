@@ -1,0 +1,92 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Lsa Cfg Flags",
+        "Device Guard"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-deviceguard#lsacfgflags"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/DeviceGuard/LsaCfgFlags",
+    "rootDefinitionId": "device_vendor_msft_policy_config_deviceguard_lsacfgflags",
+    "categoryId": "992a8a1e-428e-41cb-948e-4e5da86105fa",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_deviceguard_lsacfgflags",
+    "description": "Credential Guard Configuration: 0 - Turns off CredentialGuard remotely if configured previously without UEFI Lock, 1 - Turns on CredentialGuard with UEFI lock. 2 - Turns on CredentialGuard without UEFI lock.",
+    "helpText": "",
+    "name": "LsaCfgFlags",
+    "displayName": "Credential Guard",
+    "defaultOptionId": "device_vendor_msft_policy_config_deviceguard_lsacfgflags_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,configManager",
+        "configurationServiceProviderVersion": "6.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_deviceguard_lsacfgflags_0",
+            "description": "(Disabled) Turns off Credential Guard remotely if configured previously without UEFI Lock.",
+            "helpText": null,
+            "name": "(Disabled) Turns off Credential Guard remotely if configured previously without UEFI Lock.",
+            "displayName": "(Disabled) Turns off Credential Guard remotely if configured previously without UEFI Lock.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_deviceguard_lsacfgflags_1",
+            "description": "(Enabled with UEFI lock) Turns on Credential Guard with UEFI lock.",
+            "helpText": null,
+            "name": "(Enabled with UEFI lock) Turns on Credential Guard with UEFI lock.",
+            "displayName": "(Enabled with UEFI lock) Turns on Credential Guard with UEFI lock.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_deviceguard_lsacfgflags_2",
+            "description": "(Enabled without lock) Turns on Credential Guard without UEFI lock.",
+            "helpText": null,
+            "name": "(Enabled without lock) Turns on Credential Guard without UEFI lock.",
+            "displayName": "(Enabled without lock) Turns on Credential Guard without UEFI lock.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

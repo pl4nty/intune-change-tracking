@@ -1,0 +1,82 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Restrict App To System Volume",
+        "Application Management",
+        "Microsoft App Store"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-ApplicationManagement#restrictapptosystemvolume"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ApplicationManagement/RestrictAppToSystemVolume",
+    "rootDefinitionId": "device_vendor_msft_policy_config_applicationmanagement_restrictapptosystemvolume",
+    "categoryId": "a0c9f0b7-aa25-4e9c-a393-516145847b8b",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_applicationmanagement_restrictapptosystemvolume",
+    "description": "Specifies whether the installation of applications is restricted to the system drive. Most restricted value is 1.",
+    "helpText": "",
+    "name": "RestrictAppToSystemVolume",
+    "displayName": "Restrict App To System Volume",
+    "defaultOptionId": "device_vendor_msft_policy_config_applicationmanagement_restrictapptosystemvolume_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.10240",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_applicationmanagement_restrictapptosystemvolume_0",
+            "description": "Not restricted.",
+            "helpText": null,
+            "name": "Not restricted.",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_applicationmanagement_restrictapptosystemvolume_1",
+            "description": "Restricted.",
+            "helpText": null,
+            "name": "Restricted.",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

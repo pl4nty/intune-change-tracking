@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "EnumerateECCCerts",
+        "Allow ECC certificates to be used for logon and authentication",
+        "\\Windows Components\\Smart Card",
+        "Administrative Templates\\Windows Components\\Smart Card",
+        "Smart Card"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-smartcard#admx-smartcard-enumerateecccerts"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_Smartcard/EnumerateECCCerts",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_smartcard_enumerateecccerts",
+    "categoryId": "4fc4d2f3-35ee-43ec-a033-ef78da571e70",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_smartcard_enumerateecccerts",
+    "description": "This policy setting allows you to control whether elliptic curve cryptography (ECC) certificates on a smart card can be used to log on to a domain.\r\n\r\nIf you enable this policy setting, ECC certificates on a smart card can be used to log on to a domain.\r\n\r\nIf you disable or do not configure this policy setting, ECC certificates on a smart card cannot be used to log on to a domain. \r\n\r\nNote: This policy setting only affects a user's ability to log on to a domain. ECC certificates on a smart card that are used for other applications, such as document signing, are not affected by this policy setting. \r\nNote: If you use an ECDSA key to log on, you must also have an associated ECDH key to permit logons when you are not connected to the network.\r\n ",
+    "helpText": "",
+    "name": "EnumerateECCCerts",
+    "displayName": "Allow ECC certificates to be used for logon and authentication",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_smartcard_enumerateecccerts_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_smartcard_enumerateecccerts_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_smartcard_enumerateecccerts_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "NativeMessagingBlocklist",
+        "Configure native messaging blocklist",
+        "\\Google\\Google Chrome\\Native Messaging",
+        "Administrative Templates\\Google\\Google Chrome\\Native Messaging",
+        "Native Messaging"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV1~Policy~googlechrome~NativeMessaging/NativeMessagingBlocklist",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~nativemessaging_nativemessagingblocklist",
+    "categoryId": "895e0884-6b60-4bb0-b2ab-3a1642103db7",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~nativemessaging_nativemessagingblocklist",
+    "description": "Setting the policy specifies which native messaging hosts shouldn't be loaded. A deny list value of * means all native messaging hosts are denied, unless they're explicitly allowed.\r\n\r\nLeaving the policy unset means Google Chrome loads all installed native messaging hosts.\r\n\r\nExample value:\r\n\r\ncom.native.messaging.host.name1\r\ncom.native.messaging.host.name2",
+    "helpText": "",
+    "name": "NativeMessagingBlocklist",
+    "displayName": "Configure native messaging blocklist",
+    "defaultOptionId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~nativemessaging_nativemessagingblocklist_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~nativemessaging_nativemessagingblocklist_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~nativemessaging_nativemessagingblocklist_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_chromeintunev1~policy~googlechrome~nativemessaging_nativemessagingblocklist_nativemessagingblocklistdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,154 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "BITS_MaxBandwidthV2_Work",
+        "Set up a work schedule to limit the maximum network bandwidth used for BITS background transfers",
+        "\\Network\\Background Intelligent Transfer Service (BITS)",
+        "Administrative Templates\\Network\\Background Intelligent Transfer Service (BITS)",
+        "Background Intelligent Transfer Service (BITS)"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-bits#admx-bits-bits-maxbandwidthv2-work"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_Bits/BITS_MaxBandwidthV2_Work",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_bits_bits_maxbandwidthv2_work",
+    "categoryId": "f2345e03-bcd9-48fc-9c52-11ae06ba625a",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_bits_bits_maxbandwidthv2_work",
+    "description": "This policy setting limits the network bandwidth that Background Intelligent Transfer Service (BITS) uses for background transfers during the work and nonwork days and hours. The work schedule is defined using a weekly calendar, which consists of days of the week and hours of the day. All hours and days that are not defined in a work schedule are considered non-work hours.\r\n\r\n          If you enable this policy setting, you can set up a schedule for limiting network bandwidth during both work and nonwork hours. After the work schedule is defined, you can set the bandwidth usage limits for each of the three BITS background priority levels: high, normal, and low.\r\n\r\n          You can specify a limit to use for background jobs during a work schedule. For example, you can limit the network bandwidth of low priority jobs to 128 Kbps from 8:00 A.M. to 5:00 P.M. on Monday through Friday, and then set the limit to 512 Kbps for nonwork hours.\r\n\r\n          If you disable or do not configure this policy setting, BITS uses all available unused bandwidth for background job transfers.\r\n      \r\n ",
+    "helpText": "",
+    "name": "BITS_MaxBandwidthV2_Work",
+    "displayName": "Set up a work schedule to limit the maximum network bandwidth used for BITS background transfers",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_bits_bits_maxbandwidthv2_work_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_bits_bits_maxbandwidthv2_work_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_bits_bits_maxbandwidthv2_work_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_bits_bits_maxbandwidthv2_work_bits_ignorelimitsonlan",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_bits_bits_maxbandwidthv2_work_bits_workdaysfrom",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_bits_bits_maxbandwidthv2_work_bits_workdaysto",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_bits_bits_maxbandwidthv2_work_bits_workhoursfrom",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_bits_bits_maxbandwidthv2_work_bits_workhoursto",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_bits_bits_maxbandwidthv2_work_bits_workhighprioritylimit",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_bits_bits_maxbandwidthv2_work_bits_workhighpriorityunit",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_bits_bits_maxbandwidthv2_work_bits_worknormalprioritylimit",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_bits_bits_maxbandwidthv2_work_bits_worknormalpriorityunit",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_bits_bits_maxbandwidthv2_work_bits_worklowprioritylimit",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_bits_bits_maxbandwidthv2_work_bits_worklowpriorityunit",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_bits_bits_maxbandwidthv2_work_bits_nonworkhighprioritylimit",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_bits_bits_maxbandwidthv2_work_bits_nonworkhighpriorityunit",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_bits_bits_maxbandwidthv2_work_bits_nonworknormalprioritylimit",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_bits_bits_maxbandwidthv2_work_bits_nonworknormalpriorityunit",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_bits_bits_maxbandwidthv2_work_bits_nonworklowprioritylimit",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_bits_bits_maxbandwidthv2_work_bits_nonworklowpriorityunit",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

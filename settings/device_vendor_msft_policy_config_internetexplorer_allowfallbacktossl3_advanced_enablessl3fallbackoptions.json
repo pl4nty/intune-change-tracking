@@ -1,0 +1,110 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Advanced_EnableSSL3Fallback",
+        "Allow fallback to SSL 3.0 (Internet Explorer)",
+        "\\Windows Components\\Internet Explorer\\Security Features",
+        "Security Features"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/InternetExplorer/AllowFallbackToSSL3",
+    "rootDefinitionId": "device_vendor_msft_policy_config_internetexplorer_allowfallbacktossl3",
+    "categoryId": "6776f6fa-8836-408c-b91c-1e444e0cba5c",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_internetexplorer_allowfallbacktossl3_advanced_enablessl3fallbackoptions",
+    "description": "",
+    "helpText": "",
+    "name": "Advanced_EnableSSL3FallbackOptions",
+    "displayName": "Allow insecure fallback for:",
+    "defaultOptionId": "device_vendor_msft_policy_config_internetexplorer_allowfallbacktossl3_advanced_enablessl3fallbackoptions_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "6.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_internetexplorer_allowfallbacktossl3_advanced_enablessl3fallbackoptions_0",
+            "description": null,
+            "helpText": null,
+            "name": "No Sites",
+            "displayName": "No Sites",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_internetexplorer_allowfallbacktossl3_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_internetexplorer_allowfallbacktossl3"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_internetexplorer_allowfallbacktossl3_advanced_enablessl3fallbackoptions_1",
+            "description": null,
+            "helpText": null,
+            "name": "Non-Protected Mode Sites",
+            "displayName": "Non-Protected Mode Sites",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_internetexplorer_allowfallbacktossl3_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_internetexplorer_allowfallbacktossl3"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_internetexplorer_allowfallbacktossl3_advanced_enablessl3fallbackoptions_3",
+            "description": null,
+            "helpText": null,
+            "name": "All Sites",
+            "displayName": "All Sites",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "3"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_internetexplorer_allowfallbacktossl3_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_internetexplorer_allowfallbacktossl3"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

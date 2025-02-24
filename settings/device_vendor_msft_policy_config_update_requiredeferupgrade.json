@@ -1,0 +1,81 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Require Defer Upgrade",
+        "Update",
+        "Windows Update For Business"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Update#requiredeferupgrade"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Update/RequireDeferUpgrade",
+    "rootDefinitionId": "device_vendor_msft_policy_config_update_requiredeferupgrade",
+    "categoryId": "0e6c9053-73d6-4c56-9147-53513f6eefd8",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_update_requiredeferupgrade",
+    "description": "NoteDon't use this policy in Windows 10, version 1607 devices, instead use the new policies listed in Changes in Windows 10, version 1607 for update management. You can continue to use RequireDeferUpgrade for Windows 10, version 1511 devices. Allows the IT admin to set a device to Semi-Annual Channel train.",
+    "helpText": "",
+    "name": "RequireDeferUpgrade",
+    "displayName": "Require Defer Upgrade",
+    "defaultOptionId": "device_vendor_msft_policy_config_update_requiredeferupgrade_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "4.1",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.14393",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_update_requiredeferupgrade_0",
+            "description": "User gets upgrades from Semi-Annual Channel (Targeted).",
+            "helpText": null,
+            "name": "User gets upgrades from Semi-Annual Channel (Targeted).",
+            "displayName": "User gets upgrades from Semi-Annual Channel (Targeted).",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_update_requiredeferupgrade_1",
+            "description": "User gets upgrades from Semi-Annual Channel.",
+            "helpText": null,
+            "name": "User gets upgrades from Semi-Annual Channel.",
+            "displayName": "User gets upgrades from Semi-Annual Channel.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

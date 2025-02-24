@@ -1,0 +1,73 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_DisableHybridSearch",
+        "Disable Hybrid Searching",
+        "\\Microsoft Outlook 2016\\Outlook Options\\Preferences\\Search Options",
+        "Microsoft Outlook 2016\\Outlook Options\\Preferences\\Search Options",
+        "Search Options"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/outlk16v2~Policy~L_MicrosoftOfficeOutlook~L_OutlookOptions~L_Preferences~L_SearchOptions/L_DisableHybridSearch",
+    "rootDefinitionId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_preferences~l_searchoptions_l_disablehybridsearch",
+    "categoryId": "d0a1763a-5cdf-4672-8596-435ec1d94b54",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_preferences~l_searchoptions_l_disablehybridsearch",
+    "description": "This policy setting controls whether searches in Cached Exchange Mode can also be run on the Exchange server. This policy does not affect either Online Mode or non-Exchange accounts. \r\n\r\nIf you enable this policy setting, Outlook runs searches locally in Cached Exchange Mode and “hybrid” (on the Exchange Server also) modes. It should be noted that if the sync slider is enabled and all mail is not locally cached, you may not see all available results.\r\n\r\nIf you disable or do not configure this policy setting, Outlook first runs searches locally, but then allows the user to search on the Exchange server by clicking “More” link at the bottom of searches, or uses the equivalent ribbon button.",
+    "helpText": "",
+    "name": "L_DisableHybridSearch",
+    "displayName": "Disable Hybrid Searching (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_preferences~l_searchoptions_l_disablehybridsearch_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_preferences~l_searchoptions_l_disablehybridsearch_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_outlk16v2~policy~l_microsoftofficeoutlook~l_outlookoptions~l_preferences~l_searchoptions_l_disablehybridsearch_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,93 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "MsdtToolDownloadPolicy",
+        "Microsoft Support Diagnostic Tool: Restrict tool download",
+        "\\System\\Troubleshooting and Diagnostics\\Microsoft Support Diagnostic Tool",
+        "Administrative Templates\\System\\Troubleshooting and Diagnostics\\Microsoft Support Diagnostic Tool",
+        "Microsoft Support Diagnostic Tool"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_MSDT/MsdtToolDownloadPolicy",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_msdt_msdttooldownloadpolicy",
+    "categoryId": "5c1c00f2-def5-4064-925d-aedf4aa0f060",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_msdt_msdttooldownloadpolicy_msdttooldownloadpolicylevel",
+    "description": null,
+    "helpText": "",
+    "name": "MsdtToolDownloadPolicyLevel",
+    "displayName": "Tool downloads allowed (Device)",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_msdt_msdttooldownloadpolicy_msdttooldownloadpolicylevel_2",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_msdt_msdttooldownloadpolicy_msdttooldownloadpolicylevel_1",
+            "description": null,
+            "helpText": null,
+            "name": "Remote troubleshooting only",
+            "displayName": "Remote troubleshooting only",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_msdt_msdttooldownloadpolicy_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_msdt_msdttooldownloadpolicy"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_msdt_msdttooldownloadpolicy_msdttooldownloadpolicylevel_2",
+            "description": null,
+            "helpText": null,
+            "name": "Local and remote troubleshooting",
+            "displayName": "Local and remote troubleshooting",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_msdt_msdttooldownloadpolicy_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_msdt_msdttooldownloadpolicy"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

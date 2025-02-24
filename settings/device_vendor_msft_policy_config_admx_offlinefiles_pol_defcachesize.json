@@ -1,0 +1,90 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Pol_DefCacheSize",
+        "Default cache size",
+        "\\Network\\Offline Files",
+        "Administrative Templates\\Network\\Offline Files",
+        "Offline Files"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-offlinefiles#admx-offlinefiles-pol-defcachesize"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_OfflineFiles/Pol_DefCacheSize",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_offlinefiles_pol_defcachesize",
+    "categoryId": "82a9c23f-2c09-4479-9cd3-e7f185d7676f",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_offlinefiles_pol_defcachesize",
+    "description": "Limits the percentage of the computer's disk space that can be used to store automatically cached offline files.\r\n\r\nThis setting also disables the \"Amount of disk space to use for temporary offline files\" option on the Offline Files tab. This prevents users from trying to change the option while a setting controls it.\r\n\r\nAutomatic caching can be set on any network share. When a user opens a file on the share, the system automatically stores a copy of the file on the user's computer.\r\n\r\nThis setting does not limit the disk space available for files that user's make available offline manually.\r\n\r\nIf you enable this setting, you can specify an automatic-cache disk space limit.\r\n\r\nIf you disable this setting, the system limits the space that automatically cached files occupy to 10 percent of the space on the system drive.\r\n\r\nIf you do not configure this setting, disk space for automatically cached files is limited to 10 percent of the system drive by default, but users can change it.\r\n\r\nTip: To change the amount of disk space used for automatic caching without specifying a setting, in Windows Explorer, on the Tools menu, click Folder Options, click the Offline Files tab, and then use the slider bar associated with the \"Amount of disk space to use for temporary offline files\" option.\r\n ",
+    "helpText": "",
+    "name": "Pol_DefCacheSize",
+    "displayName": "Default cache size",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_offlinefiles_pol_defcachesize_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_offlinefiles_pol_defcachesize_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_offlinefiles_pol_defcachesize_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_offlinefiles_pol_defcachesize_lbl_defcachesizespin",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

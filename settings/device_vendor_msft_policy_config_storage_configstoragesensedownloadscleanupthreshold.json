@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Config Storage Sense Downloads Cleanup Threshold",
+        "Storage"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Storage#configstoragesensedownloadscleanupthreshold"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Storage/ConfigStorageSenseDownloadsCleanupThreshold",
+    "rootDefinitionId": "device_vendor_msft_policy_config_storage_configstoragesensedownloadscleanupthreshold",
+    "categoryId": "94fd7e7e-2a0f-4b5e-903a-28868a2e7e3c",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_storage_configstoragesensedownloadscleanupthreshold",
+    "description": "When Storage Sense runs, it can delete files in the user’s Downloads folder if they haven’t been opened for more than a certain number of days. If the Storage/AllowStorageSenseGlobal policy is disabled, then this policy does not have any effect. If you enable this policy setting, you must provide the minimum number of days a file can remain unopened before Storage Sense deletes it from the Downloads folder. Supported values are: 0-365. If you set this value to zero, Storage Sense will not delete files in the user’s Downloads folder. The default is 0, or never deleting files in the Downloads folder. If you disable or do not configure this policy setting, then Storage Sense will not delete files in the user’s Downloads folder by default. Users can configure this setting in Storage settings.",
+    "helpText": "",
+    "name": "ConfigStorageSenseDownloadsCleanupThreshold",
+    "displayName": "Config Storage Sense Downloads Cleanup Threshold",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "9.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.18362",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 365,
+        "minimumValue": 0
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 0
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

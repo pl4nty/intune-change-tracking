@@ -1,0 +1,81 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Block Cleanup Of Unused Preinstalled Lang Packs",
+        "Time Language Settings"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-TimeLanguageSettings#blockcleanupofunusedpreinstalledlangpacks"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/TimeLanguageSettings/BlockCleanupOfUnusedPreinstalledLangPacks",
+    "rootDefinitionId": "device_vendor_msft_policy_config_timelanguagesettings_blockcleanupofunusedpreinstalledlangpacks",
+    "categoryId": "4a5a066e-27af-46c1-9714-9e4542ffc1f9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_timelanguagesettings_blockcleanupofunusedpreinstalledlangpacks",
+    "description": "This policy setting controls whether the LPRemove or Language Packs Uninstaller task will run to clean up language packs installed on a machine but are not used by any users on that machine.",
+    "helpText": "",
+    "name": "BlockCleanupOfUnusedPreinstalledLangPacks",
+    "displayName": "Block Cleanup Of Unused Preinstalled Lang Packs",
+    "defaultOptionId": "device_vendor_msft_policy_config_timelanguagesettings_blockcleanupofunusedpreinstalledlangpacks_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22000",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_timelanguagesettings_blockcleanupofunusedpreinstalledlangpacks_0",
+            "description": "Not blocked.",
+            "helpText": null,
+            "name": "Not blocked.",
+            "displayName": "Block",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_timelanguagesettings_blockcleanupofunusedpreinstalledlangpacks_1",
+            "description": "Blocked.",
+            "helpText": null,
+            "name": "Blocked.",
+            "displayName": "Allow",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

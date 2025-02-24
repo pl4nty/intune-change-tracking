@@ -1,0 +1,96 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "DisableAdvertisingID",
+        "Privacy"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Privacy#disableadvertisingid"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Privacy/DisableAdvertisingId",
+    "rootDefinitionId": "device_vendor_msft_policy_config_privacy_disableadvertisingid",
+    "categoryId": "98e76d3e-9e52-45b3-b0c7-f029023121e9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_privacy_disableadvertisingid",
+    "description": "Enables or disables the Advertising ID. Most restricted value is 0.",
+    "helpText": "",
+    "name": "DisableAdvertisingId",
+    "displayName": "Disable Advertising ID",
+    "defaultOptionId": "device_vendor_msft_policy_config_privacy_disableadvertisingid_65535",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "4.1",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.14393",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_privacy_disableadvertisingid_0",
+            "description": "Disabled",
+            "helpText": null,
+            "name": "Disabled.",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_privacy_disableadvertisingid_1",
+            "description": "Enabled",
+            "helpText": null,
+            "name": "Enabled.",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_privacy_disableadvertisingid_65535",
+            "description": "Not Configured",
+            "helpText": null,
+            "name": "Not configured.",
+            "displayName": "Not Configured",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 65535
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

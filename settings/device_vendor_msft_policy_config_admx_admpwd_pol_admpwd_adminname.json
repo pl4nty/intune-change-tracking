@@ -1,0 +1,90 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "POL_AdmPwd_AdminName",
+        "Name of administrator account to manage",
+        "\\LAPS",
+        "Administrative Templates\\LAPS",
+        "LAPS"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-admpwd#admx-admpwd-pol-admpwd-adminname"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_AdmPwd/POL_AdmPwd_AdminName",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_admpwd_pol_admpwd_adminname",
+    "categoryId": "b3b2fc04-4b88-4a1c-8370-04573019eebe",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_admpwd_pol_admpwd_adminname",
+    "description": "\r\nAdministrator account name: name of the local account you want to manage password for.\r\n  DO NOT configure when you use built-in admin account. Built-in admin account is auto-detected by well-known SID, even when renamed\r\n\r\n  DO configure when you use custom local admin account\r\n      ",
+    "helpText": "",
+    "name": "POL_AdmPwd_AdminName",
+    "displayName": "Name of administrator account to manage",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_admpwd_pol_admpwd_adminname_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_admpwd_pol_admpwd_adminname_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_admpwd_pol_admpwd_adminname_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_admx_admpwd_pol_admpwd_adminname_txt_adminaccountname",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

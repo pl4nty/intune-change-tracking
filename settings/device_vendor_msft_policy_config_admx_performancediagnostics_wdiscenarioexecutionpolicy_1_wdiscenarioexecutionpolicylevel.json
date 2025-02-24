@@ -1,0 +1,93 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "WdiScenarioExecutionPolicy_1",
+        "Configure Scenario Execution Level",
+        "\\System\\Troubleshooting and Diagnostics\\Windows Boot Performance Diagnostics",
+        "Administrative Templates\\System\\Troubleshooting and Diagnostics\\Windows Boot Performance Diagnostics",
+        "Windows Boot Performance Diagnostics"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ADMX_PerformanceDiagnostics/WdiScenarioExecutionPolicy_1",
+    "rootDefinitionId": "device_vendor_msft_policy_config_admx_performancediagnostics_wdiscenarioexecutionpolicy_1",
+    "categoryId": "94f6e868-1296-4811-b404-1afa2d50bc7c",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_admx_performancediagnostics_wdiscenarioexecutionpolicy_1_wdiscenarioexecutionpolicylevel",
+    "description": null,
+    "helpText": "",
+    "name": "WdiScenarioExecutionPolicyLevel",
+    "displayName": "Scenario Execution Level (Device)",
+    "defaultOptionId": "device_vendor_msft_policy_config_admx_performancediagnostics_wdiscenarioexecutionpolicy_1_wdiscenarioexecutionpolicylevel_2",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.1202",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_performancediagnostics_wdiscenarioexecutionpolicy_1_wdiscenarioexecutionpolicylevel_1",
+            "description": null,
+            "helpText": null,
+            "name": "Detection and Troubleshooting Only",
+            "displayName": "Detection and Troubleshooting Only",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_performancediagnostics_wdiscenarioexecutionpolicy_1_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_performancediagnostics_wdiscenarioexecutionpolicy_1"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_admx_performancediagnostics_wdiscenarioexecutionpolicy_1_wdiscenarioexecutionpolicylevel_2",
+            "description": null,
+            "helpText": null,
+            "name": "Detection, Troubleshooting and Resolution",
+            "displayName": "Detection, Troubleshooting and Resolution",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_admx_performancediagnostics_wdiscenarioexecutionpolicy_1_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_admx_performancediagnostics_wdiscenarioexecutionpolicy_1"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

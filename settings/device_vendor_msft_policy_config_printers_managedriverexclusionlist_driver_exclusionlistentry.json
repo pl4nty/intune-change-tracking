@@ -1,0 +1,73 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ManageDriverExclusionList",
+        "Manage Print Driver exclusion list",
+        "\\Printers",
+        "Administrative Templates\\Printers",
+        "Printers"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Printers/ManageDriverExclusionList",
+    "rootDefinitionId": "device_vendor_msft_policy_config_printers_managedriverexclusionlist",
+    "categoryId": "2becddf1-d8ea-49ec-8560-c8c401faa9bb",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "id": "device_vendor_msft_policy_config_printers_managedriverexclusionlist_driver_exclusionlistentry",
+    "description": "",
+    "helpText": "",
+    "name": "Driver_ExclusionListEntry",
+    "displayName": "File Hash   File Name: (Device)",
+    "childIds": [
+        "device_vendor_msft_policy_config_printers_managedriverexclusionlist_driver_exclusionlistentry_key",
+        "device_vendor_msft_policy_config_printers_managedriverexclusionlist_driver_exclusionlistentry_value"
+    ],
+    "maximumCount": 600,
+    "minimumCount": 1,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22621",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [
+        {
+            "dependentOn": "device_vendor_msft_policy_config_printers_managedriverexclusionlist_1",
+            "parentSettingId": "device_vendor_msft_policy_config_printers_managedriverexclusionlist"
+        }
+    ],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "device_vendor_msft_policy_config_printers_managedriverexclusionlist_driver_exclusionlistentry_key",
+            "required": true
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_policy_config_printers_managedriverexclusionlist_driver_exclusionlistentry_value",
+            "required": true
+        }
+    ]
+}

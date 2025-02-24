@@ -1,0 +1,69 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Diagnostic Submission"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "Settings/[{0}]/DiagnosticSubmission/Enabled",
+    "rootDefinitionId": "settings_item_diagnosticsubmission",
+    "categoryId": "99d68d97-63b7-4f49-83dd-1ad3b3281d0d",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "settings_item_diagnosticsubmission_enabled",
+    "description": "If 'true', enables diagnostic submission. If 'false', disables diagnostic submission.",
+    "helpText": null,
+    "name": "Settings_item_DiagnosticSubmission_Enabled",
+    "displayName": "Enabled",
+    "defaultOptionId": "settings_item_diagnosticsubmission_enabled_false",
+    "applicability": {
+        "description": null,
+        "platform": "iOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "settings_item_diagnosticsubmission_enabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "settings_item_diagnosticsubmission",
+                    "parentSettingId": "settings_item_diagnosticsubmission"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "settings_item_diagnosticsubmission_enabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "settings_item_diagnosticsubmission",
+                    "parentSettingId": "settings_item_diagnosticsubmission"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

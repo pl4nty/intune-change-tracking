@@ -1,0 +1,77 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ConfigureViewInFileExplorer",
+        "Configure the View in File Explorer feature for SharePoint pages in Microsoft Edge",
+        "\\Microsoft Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev93~Policy~microsoft_edge/ConfigureViewInFileExplorer",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edgev93~policy~microsoft_edge_configureviewinfileexplorer",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "id": "user_vendor_msft_policy_config_microsoft_edgev93~policy~microsoft_edge_configureviewinfileexplorer",
+    "description": "This setting allows you to configure the View in File Explorer capability for file management in SharePoint Online while using Microsoft Edge.\r\n\r\nYou will need to list the specific domains where this is allowed and list cookies needed for SharePoint authentication (rtFa and FedAuth).\r\n\r\nBehind the scenes, the policy allows URLs with the viewinfileexplorer: scheme to open WebDAV URLs in Windows File Explorer on pages matching the list of domains and uses the cookies you specified for WebDAV authentication.\r\n\r\nIf you enable this policy, you can use the \"View in File Explorer\" feature on the SharePoint document libraries you list. You will need to specify the SharePoint domain and authentication cookies. See example value below.\r\n\r\nIf you disable or don't configure this policy, you cannot use the \"View in File Explorer\" feature on SharePoint document libraries.\r\n\r\nNote that while this is an available option through Microsoft Edge, rather than use the View in File Explorer option, the recommended approach to managing files and folders outside of SharePoint is to sync your SharePoint files or move or copy files in SharePoint.\r\nSync your SharePoint files: https://go.microsoft.com/fwlink/p/?linkid=2166983\r\nMove or copy files in SharePoint: https://go.microsoft.com/fwlink/p/?linkid=2167123\r\n\r\nThis policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, or Windows 10 Pro or Enterprise instances enrolled for device management.\r\n\r\nExample value:\r\n\r\n[\r\n  {\r\n    \"cookies\": [\r\n      \"rtFa\",\r\n      \"FedAuth\"\r\n    ],\r\n    \"domain\": \"contoso.sharepoint.com\"\r\n  },\r\n  {\r\n    \"cookies\": [\r\n      \"rtFa\",\r\n      \"FedAuth\"\r\n    ],\r\n    \"domain\": \"contoso2.sharepoint.com\"\r\n  }\r\n]",
+    "helpText": "",
+    "name": "ConfigureViewInFileExplorer",
+    "displayName": "Configure the View in File Explorer feature for SharePoint pages in Microsoft Edge (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edgev93~policy~microsoft_edge_configureviewinfileexplorer_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev93~policy~microsoft_edge_configureviewinfileexplorer_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev93~policy~microsoft_edge_configureviewinfileexplorer_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_microsoft_edgev93~policy~microsoft_edge_configureviewinfileexplorer_configureviewinfileexplorer",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}
