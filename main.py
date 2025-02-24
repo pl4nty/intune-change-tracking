@@ -137,6 +137,16 @@ async def main():
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(item, f, ensure_ascii=False, indent=4)
 
+    # DCv2 compliance
+    source = 'Compliance'
+    os.makedirs(Path(output, source))
+    data = await client.device_management.with_url('https://graph.microsoft.com/beta/deviceManagement/complianceSettings').get(request_configuration=request_config)
+    for item in data.json().get('value'):
+        item.pop('version')
+        path = Path(output, source, item.get('id')).with_suffix('.json')
+        with open(path, 'w', encoding='utf-8') as f:
+            json.dump(item, f, ensure_ascii=False, indent=4)
+
     # backwards compat
     shutil.rmtree('settings')
     shutil.copytree(Path(output, source), 'settings')
