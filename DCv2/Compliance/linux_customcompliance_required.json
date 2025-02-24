@@ -1,0 +1,76 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "get",
+    "keywords": [
+        "CustomCompliance",
+        "Custom Compliance"
+    ],
+    "infoUrls": [
+        "https://go.microsoft.com/fwlink/?linkid=2210013"
+    ],
+    "occurrence": null,
+    "baseUri": "com.microsoft.manage.LinuxMdm",
+    "offsetUri": "/CustomCompliance/Required",
+    "rootDefinitionId": "linux_customcompliance_required",
+    "categoryId": "9f52aad9-53cb-4f92-b21f-7f4a6721a623",
+    "settingUsage": "compliance",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "linux_customcompliance_required",
+    "description": "CustomCompliance",
+    "helpText": null,
+    "name": "CustomCompliance",
+    "displayName": "Require Custom Compliance",
+    "defaultOptionId": "linux_customcompliance_required_true",
+    "applicability": {
+        "description": null,
+        "platform": "linux",
+        "deviceMode": "none",
+        "technologies": "linuxMdm"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "linux_customcompliance_required_false",
+            "description": null,
+            "helpText": null,
+            "name": "False",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "linux_customcompliance_required_true",
+            "description": null,
+            "helpText": null,
+            "name": "True",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "linux_customcompliance_rules",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "linux_customcompliance_discoveryscript",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "linux_customcompliance_executioncontext",
+                    "required": false
+                }
+            ]
+        }
+    ]
+}
