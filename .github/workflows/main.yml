@@ -34,3 +34,10 @@ jobs:
         with:
           default_author: github_actions
           message: Change detected
+      - uses: di-sukharev/opencommit@github-action-v1.0.4
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          OCO_API_URL: https://models.inference.ai.azure.com
+          OCO_API_KEY: ${{ secrets.OCO_API_KEY }}
+          OCO_MODEL: gpt-4o
