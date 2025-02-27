@@ -37,6 +37,7 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         env:
-          OCO_API_URL: https://models.inference.ai.azure.com
-          OCO_OPENAI_API_KEY: ${{ secrets.OCO_API_KEY }}
+          OCO_AI_PROVIDER: azure
+          OCO_AZURE_ENDPOINT: https://models.inference.ai.azure.com
+          OCO_AZURE_API_KEY: ${{ secrets.OCO_API_KEY }}
           OCO_MODEL: gpt-4o
