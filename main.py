@@ -8,9 +8,11 @@ import os
 import re
 import shutil
 import subprocess
+import time
 from pathlib import Path
 
-from azure.identity.aio import DefaultAzureCredential, ClientAssertionCredential
+from azure.identity.aio import DefaultAzureCredential
+from azure.core.credentials import AccessToken
 from msgraph_beta import GraphServiceClient
 import requests
 
@@ -161,21 +163,14 @@ async def main():
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(item, f, ensure_ascii=False, indent=4)
 
-    # Planned changes or new features in Microsoft Entra
-    def assertion_product_changes():
-        data = requests.post(f'https://login.microsoftonline.com/{os.environ['AZURE_TENANT_ID']}/oauth2/v2.0/token', {
-            'client_id': '9d15ec9c-4104-48aa-9688-c907238f257b', # ChangeManagementHub
-            'scope': 'https://graph.microsoft.com//.default openid profile offline_access',
-            'grant_type': 'refresh_token',
-            'brk_client_id': 'c44b4083-3bb0-49c1-b47d-974e53cbdf3c',
-            'redirect_uri': 'brk-c44b4083-3bb0-49c1-b47d-974e53cbdf3c://entra.microsoft.com',
-            'refresh_token': os.environ['AZURE_CHANGEMGMT_RT']
-        }, headers={'Origin': 'https://entra.microsoft.com'}).json() # can be any origin
-        print(data['access_token'])
-        subprocess.run(['gh', 'secret', 'set', 'AZURE_CHANGEMGMT_RT', '--body', data['refresh_token'], '--repo', os.environ['REPO']])
-        return data['access_token']
+    # Planned changes or new features in Microsoft Entra via ChangeManagementHub client
+    client = GraphServiceClient(RefreshTokenCredential(
+        '9d15ec9c-4104-48aa-9688-c907238f257b',
+        os.environ['AZURE_CHANGEMGMT_RT'],
+        'c44b4083-3bb0-49c1-b47d-974e53cbdf3c',
+        'brk-c44b4083-3bb0-49c1-b47d-974e53cbdf3c://entra.microsoft.com'
+    ), ['https://graph.microsoft.com/.default'])
     
-    client = GraphServiceClient(ClientAssertionCredential(os.environ['AZURE_TENANT_ID'], '9d15ec9c-4104-48aa-9688-c907238f257b', assertion_product_changes), ['https://graph.microsoft.com/.default'])
     if os.path.exists('IdentityProductChanges'):
         shutil.rmtree('IdentityProductChanges')
     os.makedirs('IdentityProductChanges')
@@ -186,7 +181,30 @@ async def main():
         for change in data.get('value'):
             id = change.get('id')
             with open(f'IdentityProductChanges/{id}.json', 'w', encoding='utf-8') as f:
-                json.dump(e, f, ensure_ascii=False, indent=4)
+                json.dump(change, f, ensure_ascii=False, indent=4)
         next = data.get('@odata.nextLink')
+
+class RefreshTokenCredential(object):
+    def __init__(self, client_id, refresh_token, brk_client_id = None, redirect_uri = None):
+        self._headers={}
+        self._body = {
+          'grant_type': 'refresh_token',
+          'client_id': client_id,
+          'refresh_token': refresh_token,
+          'scope': 'https://graph.microsoft.com//.default openid profile offline_access'
+        }
+        
+        if brk_client_id is not None:
+            self._headers['Origin'] = 'https://microsoft.com' # any origin
+            self._body['brk_client_id'] = brk_client_id
+            self._body['redirect_uri'] = redirect_uri
+
+    def get_token(self, *scopes: str, claims = None, tenant_id = None, **kwargs):
+        data = requests.post(f'https://login.microsoftonline.com/{os.environ["AZURE_TENANT_ID"]}/oauth2/v2.0/token', self._body, headers=self._headers).json()
+        
+        self._body['refresh_token'] = data['refresh_token']
+        subprocess.run(['gh', 'secret', 'set', 'AZURE_CHANGEMGMT_RT', '--body', data['refresh_token'], '--repo', os.environ['REPO']])
+        
+        return AccessToken(token=data['access_token'], expires_on=int(time.time()+data['expires_in']))
 
 asyncio.run(main())
