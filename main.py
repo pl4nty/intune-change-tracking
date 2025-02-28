@@ -251,7 +251,6 @@ async def main():
     headers = {'Authorization': f'Bearer {token}'}
     for URL in [
         # 'https://admin.microsoft.com/api/concierge/GetConciergeConfig?appName=teamsadmincenter&culture=en-US',
-        'https://admin.microsoft.com/api/concierge/GetConciergeConfig',
         'https://admin.microsoft.com/admin/api/features/config',
         'https://admin.microsoft.com/admin/api/features/all',
         'https://admin.microsoft.com/fd/bcws/api/v1/IntraTenantPartner/getPartnerList',
@@ -262,7 +261,6 @@ async def main():
             json.dump(data.json(), f, ensure_ascii=False, indent=4)
     for pair in [
         ['https://admin.microsoft.com/fd/addins/api/availableApps?workloads=MetaOS,Teams', 'apps'],
-        ['https://admin.microsoft.com/admin/api/messagecenter', 'Messages'],
         ['https://admin.microsoft.com/fd/edgeenterpriseextensionsmanagement/api/policies', 'policy_definitions'],
         ['https://admin.microsoft.com/fd/dms/odata/C2RReleaseInfo', 'value'],
         ['https://admin.microsoft.com/fd/bsxcommerce/v1/ProductOfferIndex?language=en-US', 'results'],
@@ -280,6 +278,17 @@ async def main():
         flattened_data += service['MessagesByClassification']['Advisories']
     with open('M365Admin/ServiceHealth.json', 'w', encoding='utf-8') as f:
         json.dump(flattened_data, f, ensure_ascii=False, indent=4)
+    data = requests.get(
+        'https://admin.microsoft.com/api/concierge/GetConciergeConfig', headers=headers).json()
+    data.pop('SessionID')
+    with open(f'M365Admin/GetConciergeConfig.json', 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
+    data = requests.get(
+        'https://admin.microsoft.com/admin/api/messagecenter', headers=headers).json()['Messages']
+    for item in data:
+        item.pop('ActionRequiredBySortValue', None)
+    with open(f'M365Admin/messagecenter.json', 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
 
 
 class IbizaTokenCredential(object):
