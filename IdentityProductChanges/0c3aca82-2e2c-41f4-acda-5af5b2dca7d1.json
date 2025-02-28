@@ -1,0 +1,22 @@
+{
+    "@odata.type": "#microsoft.graph.announcement",
+    "id": "0c3aca82-2e2c-41f4-acda-5af5b2dca7d1",
+    "changeItemService": "msGraph",
+    "tags": [
+        "Identity Modernization"
+    ],
+    "systemTags": [
+        "entra_change_announcements_90days"
+    ],
+    "documentationUrls": [
+        "https://learn.microsoft.com/en-us/graph/migrate-azure-ad-graph-overview"
+    ],
+    "shortDescription": "",
+    "title": "Important Update: Azure AD Graph Retirement - Sept 2024",
+    "description": "The retirement of the Azure AD Graph API service began on 1 September 2024 and will eventually impact both new and existing applications. As we deploy the phase starting over the coming weeks, new applications will not be able to use Azure AD Graph APIs unless they are configured for extended access. Microsoft Graph is the replacement for Azure AD Graph APIs, and we strongly recommend immediately migrating use of Azure AD Graph APIs to Microsoft Graph and limiting any further development using Azure AD Graph APIs. \n \n Required action - To avoid service disruptions, please follow our instructions to migrate applications to Microsoft Graph APIs. \n   \n If you need to extend Azure AD Graph access for an app to July 2025  \n \n If you have not fully completed app migrations to Microsoft Graph, you can extend this retirement. If you set the blockAzureADGraphAccess attribute to false in the application’s authenticationBehaviors configuration, the application will be able to use Azure AD Graph APIs through June 30, 2025. Further documentation can be found here.   \n \n New applications will receive a 403 error when attempting to access Azure AD Graph APIs unless this setting is set to false. For existing applications that will not complete migration to Microsoft Graph in 2024, you should plan to set this configuration now. \n \n If you need to find Applications in your tenant using Azure AD Graph APIs  \n \n The Microsoft Entra recommendations feature provides recommendations to put your tenant in a secure and healthy state, while also helping you maximize the value of the features available in Entra ID.     \n \n We’ve provided two Entra recommendations that show information about applications and service principals that are actively using Azure AD Graph APIs in your tenant. These new recommendations can support your efforts to identify and migrate the impacted applications and service principals to Microsoft Graph.",
+    "announcementDateTime": "2024-10-02T00:00:00Z",
+    "targetDateTime": "2025-07-01T00:00:00Z",
+    "impactLink": null,
+    "changeType": "deprecation",
+    "isCustomerActionRequired": true
+}

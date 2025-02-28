@@ -1,0 +1,20 @@
+{
+    "@odata.type": "#microsoft.graph.announcement",
+    "id": "b4f06d0e-ffba-4347-8811-dda6c073e46e",
+    "changeItemService": "enterpriseApps",
+    "tags": [
+        "Identity Security"
+    ],
+    "systemTags": [],
+    "documentationUrls": [
+        "https://devblogs.microsoft.com/identity/access-tokens-and-id-tokens/?ocid=identity_eml_tnp_autoid51_title"
+    ],
+    "shortDescription": "",
+    "title": "Encrypted Access Tokens for Microsoft APIs",
+    "description": "As of October 2024, Microsoft is gradually enabling encrypted access tokens across more of its APIs. This change alters the format of access tokens for Microsoft-owned APIs. \n \n Action Required: Client applications should treat access tokens as opaque strings, meaning they should not attempt to read, inspect, or parse them. Only the web APIs that are the intended recipients of the access tokens should be parsing and validating them. \n \n Why This Matters: If applications rely on specific token formats (e.g., expecting a URI in the ‘aud’ claim rather than a GUID), these assumptions may cause functionality issues as token formats change. \n \n If your client application currently parses access tokens, please review and update your code in line with best practices outlined on the Microsoft Identity Platform documentation.",
+    "announcementDateTime": "2024-11-01T00:00:00Z",
+    "targetDateTime": "2024-10-31T23:00:00Z",
+    "impactLink": null,
+    "changeType": "breakingChange",
+    "isCustomerActionRequired": true
+}

@@ -1,0 +1,20 @@
+{
+    "@odata.type": "#microsoft.graph.announcement",
+    "id": "8b26994e-5b9e-4cbf-9e7a-d7c6252df11c",
+    "changeItemService": "msGraph",
+    "tags": [
+        "Identity Modernization"
+    ],
+    "systemTags": [],
+    "documentationUrls": [
+        "https://learn.microsoft.com/en-us/graph/templates/how-to-migrate-to-dynamic-types"
+    ],
+    "shortDescription": "",
+    "title": "Dynamic type versioning in Bicep templates for Microsoft Graph",
+    "description": "In October 2024, we're introducing an update to the Bicep templates for Microsoft Graph public preview. The dynamic types feature enables semantic versioning for Microsoft Graph Bicep types for both beta and v1.0. During Bicep file authoring, you specify a Microsoft Graph Bicep type version referenced from the Microsoft artifact registry, instead of using a built-in Nuget package which is the current experience. Using dynamic types will allow for future breaking changes in existing Microsoft Graph Bicep resource types without impacting deployment of your existing Bicep files that use older versions of those resource types. \n \n Built-in types are deprecated and will be retired on January 24, 2025. Until the retirement date, built-in types will coexist with the new dynamic types. Any Microsoft Graph Bicep type changes will only be available through new versions of the dynamic types. \n \n Action required: \n \n Switch to the new dynamic types before 24th January 2025 to avoid Bicep template deployment failures. The switch will involve making some minor updates to your bicepconfig.json and main Bicep files. Additionally, to take advantage of any updated or new Microsoft Graph resource types, you will need to update the type version that your Bicep files use.",
+    "announcementDateTime": "2024-10-02T00:00:00Z",
+    "targetDateTime": "2025-01-25T01:00:00Z",
+    "impactLink": null,
+    "changeType": "breakingChange",
+    "isCustomerActionRequired": true
+}

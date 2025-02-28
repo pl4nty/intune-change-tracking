@@ -1,0 +1,20 @@
+{
+    "@odata.type": "#microsoft.graph.announcement",
+    "id": "9034e3e3-01d0-41fa-ae89-b2a34b101388",
+    "changeItemService": "msGraph",
+    "tags": [
+        "Identity Modernization"
+    ],
+    "systemTags": [],
+    "documentationUrls": [
+        "https://learn.microsoft.com/en-us/graph/migrate-azure-ad-graph-overview"
+    ],
+    "shortDescription": "",
+    "title": "Important Update: Azure AD Graph Retirement",
+    "description": "As of June 2023 , the Azure AD Graph API service is in a retirement cycle and will be retired (shut down) in incremental stages. In the first stage of this retirement cycle, newly-created applications will receive an error (HTTP 403) for any requests to Azure AD Graph APIs (https://graph.windows.net). We are revising the date for this first stage from June 30 to August 31, so only applications created after August 31, 2024 will be impacted . The second stage of the Azure AD Graph service retirement cycle will begin after January 31, 2025 . At this point, all applications that are using Azure AD Graph APIs will receive an error when making requests to the AAD Graph service. Azure AD Graph will be completely retired (and stop working) after June 30, 2025 . \n \n We understand that some apps may not have fully completed migration to Microsoft Graph. We are providing an optional configuration (through the authenticationBehaviors setting) that will allow an application to continue use of Azure AD Graph APIs through March 30, 2025 .  If you develop or distribute software that still uses Azure AD Graph APIs, you must act now to avoid interruption. You will either need to migrate your applications to Microsoft Graph (highly recommended) or configure the application for an extension, and ensure that your customers are prepared for the change.  \n To identify applications that are using Azure AD Graph APIs, we have provided two Entra recommendations with information about applications and service principals that are actively using Azure AD Graph APIs in your tenant. \n \n \n For more information, refer the documentation.",
+    "announcementDateTime": "2024-07-01T00:00:00Z",
+    "targetDateTime": "2024-09-01T00:00:00Z",
+    "impactLink": null,
+    "changeType": "deprecation",
+    "isCustomerActionRequired": true
+}

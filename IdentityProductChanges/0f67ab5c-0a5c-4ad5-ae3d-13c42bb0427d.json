@@ -1,0 +1,20 @@
+{
+    "@odata.type": "#microsoft.graph.roadmap",
+    "id": "0f67ab5c-0a5c-4ad5-ae3d-13c42bb0427d",
+    "changeItemService": "reporting",
+    "tags": [
+        ""
+    ],
+    "systemTags": [],
+    "documentationUrls": [
+        "https://learn.microsoft.com/en-us/entra/identity/monitoring-health/concept-sign-ins"
+    ],
+    "shortDescription": "",
+    "title": "General Availability - Improving visibility into downstream tenant sign-ins",
+    "description": "Microsoft Security wants to ensure that all customers are aware of how to notice when a partner is accessing a downstream tenant's resources. Interactive sign-in logs currently provide a list of login events, but there is no clear indication of which logins are from partners accessing downstream tenant resources. For example, when reviewing the logs, you may see a series of events, but without any additional context, it’s difficult to tell whether these logins are from a partner accessing another tenant’s data. \n \n Here is a list of steps that one can take to clarify which logins are associated with partner tenants: \n \n 1. Take note of the \"ServiceProvider\" value in the CrossTenantAccessType column: \n -This filter can be applied to refine the log data. When activated, it will immediately isolate events related to partner logins. \n 2. Utilize the \"Home Tenant ID\" and \"Resource Tenant ID\" Columns: \n -These two columns will directly identify logins coming from the partner’s tenant to a downstream tenant. \n \n \n After seeing a partner logging into a downstream tenant’s resources, an important follow-up activity to perform is to validate the activities that might have occurred in the downstream environment. \n Some examples of logs to look at are Entra Audit logs for Entra ID events, M365 Unified Audit Log (UAL) for M365 and Entra ID events, and/or the Azure Monitor activity log for Azure events. By following these steps, you will be able to clearly identify when a partner is logging into a downstream tenant’s resources and subsequent activity in the environment, enhancing your ability to manage and monitor cross-tenant access efficiently. \n \n To increase visibility into the aforementioned columns, Entra will begin enabling these columns to display by default when loading the sign-in logs UX starting on 3/7/25",
+    "changeItemState": "available",
+    "deliveryStage": "ga",
+    "category": "monitoringReporting",
+    "publishedDateTime": "2025-02-07T11:00:00Z",
+    "gotoLink": null
+}
