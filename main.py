@@ -266,8 +266,8 @@ async def main():
         ['https://admin.microsoft.com/fd/edgeenterpriseextensionsmanagement/api/policies', 'policy_definitions'],
         ['https://admin.microsoft.com/fd/dms/odata/C2RReleaseInfo', 'value'],
         ['https://admin.microsoft.com/fd/bsxcommerce/v1/ProductOfferIndex?language=en-US', 'results'],
-        ['https://admin.microsoft.com/fd/m365licensing/v3/licensedProducts', 'value']
-        ['https://admin.microsoft.com/fd/edgeenterpriseextensionsmanagement/api/sidebarExtensions', 'hub_apps']
+        ['https://admin.microsoft.com/fd/m365licensing/v3/licensedProducts', 'value'],
+        ['https://admin.microsoft.com/fd/edgeenterpriseextensionsmanagement/api/sidebarExtensions', 'hub_apps'],
     ]:
         data = requests.get(pair[0], headers=headers)
         with open(f'M365Admin/{pair[0].split('/')[-1].split('?')[0]}.json', 'w', encoding='utf-8') as f:
