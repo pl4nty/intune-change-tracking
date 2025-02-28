@@ -99,11 +99,11 @@ async def main():
     # Planned changes or new features in Microsoft Entra
     def assertion_product_changes():
         data = requests.post(f'https://login.microsoftonline.com/{os.environ['AZURE_TENANT_ID']}/oauth2/v2.0/token', {
-            client_id: '9d15ec9c-4104-48aa-9688-c907238f257b' # ChangeManagementHub
-            scope: 'https://graph.microsoft.com//.default openid profile offline_access'
-            grant_type: 'refresh_token'
-            brk_client_id: 'c44b4083-3bb0-49c1-b47d-974e53cbdf3c'
-            redirect_uri: 'brk-c44b4083-3bb0-49c1-b47d-974e53cbdf3c://entra.microsoft.com'
+            client_id: '9d15ec9c-4104-48aa-9688-c907238f257b', # ChangeManagementHub
+            scope: 'https://graph.microsoft.com//.default openid profile offline_access',
+            grant_type: 'refresh_token',
+            brk_client_id: 'c44b4083-3bb0-49c1-b47d-974e53cbdf3c',
+            redirect_uri: 'brk-c44b4083-3bb0-49c1-b47d-974e53cbdf3c://entra.microsoft.com',
             refresh_token: os.environ['AZURE_CHANGEMGMT_RT']
         }).json()
         subprocess.run(['gh', 'secret', 'set', 'AZURE_CHANGEMGMT_RT', '--body', data.refresh_token, '--repo', os.environ['REPO']])
