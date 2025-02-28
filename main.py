@@ -22,11 +22,6 @@ from msgraph_beta.generated.device_management.configuration_settings.configurati
 from msgraph_beta.generated.security.microsoft_graph_security_run_hunting_query.microsoft_graph_security_run_hunting_query_request_builder import MicrosoftGraphSecurityRunHuntingQueryRequestBuilder
 from msgraph_beta.generated.security.microsoft_graph_security_run_hunting_query.run_hunting_query_post_request_body import RunHuntingQueryPostRequestBody
 
-client = GraphServiceClient(DefaultAzureCredential(), ['https://graph.microsoft.com/.default'])
-request_config = RequestConfiguration(
-    options=[ResponseHandlerOption(NativeResponseHandler())],
-)
-
 # id_10699 -> id
 def cleanDCv1Ids(setting):
     id = '_'.join(setting.get('id').split('_')[:-1])
@@ -75,6 +70,11 @@ async def main():
                         path = Path(output, source, id).with_suffix('.json')
                         with open(path, 'w', encoding='utf-8') as f:
                             json.dump(setting, f, ensure_ascii=False, indent=4)
+
+    client = GraphServiceClient(DefaultAzureCredential(), ['https://graph.microsoft.com/.default'])
+    request_config = RequestConfiguration(
+        options=[ResponseHandlerOption(NativeResponseHandler())],
+    )
 
     data = await client.service_principals.with_url('https://graph.microsoft.com/beta/servicePrincipals/appId=0000000a-0000-0000-c000-000000000000/endpoints').get(request_configuration=request_config)
     value_array = data.json().get('value')
