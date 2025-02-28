@@ -96,35 +96,6 @@ async def main():
                 json.dump(sp, f, ensure_ascii=False, indent=4)
         next = data.get('@odata.nextLink')
 
-    # Planned changes or new features in Microsoft Entra
-    def assertion_product_changes():
-        data = requests.post(f'https://login.microsoftonline.com/{os.environ['AZURE_TENANT_ID']}/oauth2/v2.0/token', {
-            'client_id': '9d15ec9c-4104-48aa-9688-c907238f257b', # ChangeManagementHub
-            'scope': 'https://graph.microsoft.com//.default openid profile offline_access',
-            'grant_type': 'refresh_token',
-            'brk_client_id': 'c44b4083-3bb0-49c1-b47d-974e53cbdf3c',
-            'redirect_uri': 'brk-c44b4083-3bb0-49c1-b47d-974e53cbdf3c://entra.microsoft.com',
-            'refresh_token': os.environ['AZURE_CHANGEMGMT_RT']
-        }, headers={'Origin': 'https://entra.microsoft.com'}).json() # can be any origin
-        print(data['access_token'])
-        subprocess.run(['gh', 'secret', 'set', 'AZURE_CHANGEMGMT_RT', '--body', data['refresh_token'], '--repo', os.environ['REPO']])
-        return data['access_token']
-    customClient = GraphServiceClient(ClientAssertionCredential(os.environ['AZURE_TENANT_ID'], '9d15ec9c-4104-48aa-9688-c907238f257b', assertion_product_changes), ['https://graph.microsoft.com/.default'])
-    print(client)
-    print(customClient)
-    if os.path.exists('ProductChanges'):
-        shutil.rmtree('ProductChanges')
-    os.makedirs('ProductChanges')
-    next = 'https://graph.microsoft.com/beta/identity/productChanges'
-    while next is not None:
-        data = await customClient.identity.with_url(next).get(request_configuration=request_config)
-        data = data.json()
-        for change in data.get('value'):
-            id = change.get('id')
-            with open(f'ProductChanges/{id}.json', 'w', encoding='utf-8') as f:
-                json.dump(e, f, ensure_ascii=False, indent=4)
-        next = data.get('@odata.nextLink')
-
     for table in [
         'AlertEvidence',
         'AlertInfo',
@@ -189,5 +160,33 @@ async def main():
         path = Path(output, source, item.get('id')).with_suffix('.json')
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(item, f, ensure_ascii=False, indent=4)
+
+    # Planned changes or new features in Microsoft Entra
+    def assertion_product_changes():
+        data = requests.post(f'https://login.microsoftonline.com/{os.environ['AZURE_TENANT_ID']}/oauth2/v2.0/token', {
+            'client_id': '9d15ec9c-4104-48aa-9688-c907238f257b', # ChangeManagementHub
+            'scope': 'https://graph.microsoft.com//.default openid profile offline_access',
+            'grant_type': 'refresh_token',
+            'brk_client_id': 'c44b4083-3bb0-49c1-b47d-974e53cbdf3c',
+            'redirect_uri': 'brk-c44b4083-3bb0-49c1-b47d-974e53cbdf3c://entra.microsoft.com',
+            'refresh_token': os.environ['AZURE_CHANGEMGMT_RT']
+        }, headers={'Origin': 'https://entra.microsoft.com'}).json() # can be any origin
+        print(data['access_token'])
+        subprocess.run(['gh', 'secret', 'set', 'AZURE_CHANGEMGMT_RT', '--body', data['refresh_token'], '--repo', os.environ['REPO']])
+        return data['access_token']
+    
+    client = GraphServiceClient(ClientAssertionCredential(os.environ['AZURE_TENANT_ID'], '9d15ec9c-4104-48aa-9688-c907238f257b', assertion_product_changes), ['https://graph.microsoft.com/.default'])
+    if os.path.exists('IdentityProductChanges'):
+        shutil.rmtree('IdentityProductChanges')
+    os.makedirs('IdentityProductChanges')
+    next = 'https://graph.microsoft.com/beta/identity/productChanges'
+    while next is not None:
+        data = await client.identity.with_url(next).get(request_configuration=request_config)
+        data = data.json()
+        for change in data.get('value'):
+            id = change.get('id')
+            with open(f'IdentityProductChanges/{id}.json', 'w', encoding='utf-8') as f:
+                json.dump(e, f, ensure_ascii=False, indent=4)
+        next = data.get('@odata.nextLink')
 
 asyncio.run(main())
