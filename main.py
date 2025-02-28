@@ -171,18 +171,15 @@ async def main():
         'brk-c44b4083-3bb0-49c1-b47d-974e53cbdf3c://entra.microsoft.com'
     ), ['https://graph.microsoft.com/.default'])
     
-    if os.path.exists('IdentityProductChanges'):
-        shutil.rmtree('IdentityProductChanges')
-    os.makedirs('IdentityProductChanges')
+    changes = []
     next = 'https://graph.microsoft.com/beta/identity/productChanges'
     while next is not None:
         data = await client.identity.with_url(next).get(request_configuration=request_config)
         data = data.json()
-        for change in data.get('value'):
-            id = change.get('id')
-            with open(f'IdentityProductChanges/{id}.json', 'w', encoding='utf-8') as f:
-                json.dump(change, f, ensure_ascii=False, indent=4)
+        changes.extend(data.get('value', []))
         next = data.get('@odata.nextLink')
+    with open('IdentityProductChanges.json', 'w', encoding='utf-8') as f:
+        json.dump(changes, f, ensure_ascii=False, indent=4)
 
 class RefreshTokenCredential(object):
     def __init__(self, client_id, refresh_token, brk_client_id = None, redirect_uri = None):
