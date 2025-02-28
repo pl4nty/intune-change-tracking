@@ -7,10 +7,12 @@ import json
 import os
 import re
 import shutil
+import subprocess
 from pathlib import Path
 
-from azure.identity.aio import DefaultAzureCredential
+from azure.identity.aio import DefaultAzureCredential, ClientAssertionCredential
 from msgraph_beta import GraphServiceClient
+import requests
 
 from kiota_abstractions.base_request_configuration import RequestConfiguration
 from kiota_http.middleware.options import ResponseHandlerOption
@@ -95,12 +97,24 @@ async def main():
         next = data.get('@odata.nextLink')
 
     # Planned changes or new features in Microsoft Entra
+    def assertion_product_changes():
+        data = requests.post(f'https://login.microsoftonline.com/{os.environ['AZURE_TENANT_ID']}/oauth2/v2.0/token', {
+            client_id: '9d15ec9c-4104-48aa-9688-c907238f257b' # ChangeManagementHub
+            scope: 'https://graph.microsoft.com//.default openid profile offline_access'
+            grant_type: 'refresh_token'
+            brk_client_id: 'c44b4083-3bb0-49c1-b47d-974e53cbdf3c'
+            redirect_uri: 'brk-c44b4083-3bb0-49c1-b47d-974e53cbdf3c://entra.microsoft.com'
+            refresh_token: os.environ['AZURE_CHANGEMGMT_RT']
+        }).json()
+        subprocess.run(['gh', 'secret', 'set', 'AZURE_CHANGEMGMT_RT', '--body', data.refresh_token, '--repo', os.environ['REPO']])
+        return data.access_token
+    customClient = GraphServiceClient(ClientAssertionCredential(os.environ['AZURE_TENANT_ID'], '9d15ec9c-4104-48aa-9688-c907238f257b', assertion_product_changes), ['https://graph.microsoft.com/.default'])
     if os.path.exists('ProductChanges'):
         shutil.rmtree('ProductChanges')
     os.makedirs('ProductChanges')
     next = 'https://graph.microsoft.com/beta/identity/productChanges'
     while next is not None:
-        data = await client.identity.with_url(next).get(request_configuration=request_config)
+        data = await customClient.identity.with_url(next).get(request_configuration=request_config)
         data = data.json()
         for change in data.get('value'):
             id = change.get('id')
