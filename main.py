@@ -105,7 +105,7 @@ async def main():
             'brk_client_id': 'c44b4083-3bb0-49c1-b47d-974e53cbdf3c',
             'redirect_uri': 'brk-c44b4083-3bb0-49c1-b47d-974e53cbdf3c://entra.microsoft.com',
             'refresh_token': os.environ['AZURE_CHANGEMGMT_RT']
-        }).json()
+        }, headers={'Origin': 'https://entra.microsoft.com'}).json() # can be any origin
         print(data)
         subprocess.run(['gh', 'secret', 'set', 'AZURE_CHANGEMGMT_RT', '--body', data['refresh_token'], '--repo', os.environ['REPO']])
         return data['access_token']
