@@ -106,9 +106,12 @@ async def main():
             'redirect_uri': 'brk-c44b4083-3bb0-49c1-b47d-974e53cbdf3c://entra.microsoft.com',
             'refresh_token': os.environ['AZURE_CHANGEMGMT_RT']
         }, headers={'Origin': 'https://entra.microsoft.com'}).json() # can be any origin
+        print(data['access_token'])
         subprocess.run(['gh', 'secret', 'set', 'AZURE_CHANGEMGMT_RT', '--body', data['refresh_token'], '--repo', os.environ['REPO']])
         return data['access_token']
     customClient = GraphServiceClient(ClientAssertionCredential(os.environ['AZURE_TENANT_ID'], '9d15ec9c-4104-48aa-9688-c907238f257b', assertion_product_changes), ['https://graph.microsoft.com/.default'])
+    print(client)
+    print(customClient)
     if os.path.exists('ProductChanges'):
         shutil.rmtree('ProductChanges')
     os.makedirs('ProductChanges')
