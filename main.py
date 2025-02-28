@@ -94,6 +94,20 @@ async def main():
                 json.dump(sp, f, ensure_ascii=False, indent=4)
         next = data.get('@odata.nextLink')
 
+    # Planned changes or new features in Microsoft Entra
+    if os.path.exists('ProductChanges'):
+        shutil.rmtree('ProductChanges')
+    os.makedirs('ProductChanges')
+    next = 'https://graph.microsoft.com/beta/identity/productChanges'
+    while next is not None:
+        data = await client.identity.with_url(next).get(request_configuration=request_config)
+        data = data.json()
+        for change in data.get('value'):
+            id = change.get('id')
+            with open(f'ProductChanges/{id}.json', 'w', encoding='utf-8') as f:
+                json.dump(e, f, ensure_ascii=False, indent=4)
+        next = data.get('@odata.nextLink')
+
     for table in [
         'AlertEvidence',
         'AlertInfo',
