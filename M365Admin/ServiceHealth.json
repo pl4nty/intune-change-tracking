@@ -8282,9 +8282,53 @@
         "ImpactDescription": "Users may be unable to edit their OneDrive for Business content as they are in a read-only state.",
         "IsDismissed": false,
         "IsRead": false,
-        "LastUpdatedTime": "2025-02-28T17:54:32.943+00:00",
+        "LastUpdatedTime": "2025-03-01T01:41:09.04+00:00",
         "MessageType": 0,
         "Messages": [
+            {
+                "MessageText": "Title: Some users may be unable to edit their OneDrive for Business content as they are in a read-only state\n\nUser impact: Users may be unable to edit their OneDrive for Business content as they are in a read-only state.\n\nMore info: The error message states that \"You can't edit your files because your license to use OneDrive ended over a month ago.\"\n \nTo mitigate the issue, admins should update user OneDrive configurations from unsupported states into supported states, as described here: https://learn.microsoft.com/sharepoint/manage-user-profiles#add-and-remove-admins-for-a-users-onedrive \n \nSpecifically, IT admins should ensure that the owner (also known as the primary site collection administrator) of every OneDrive account is assigned to the correct user who owns that account and not a service account or group account.\n \nAs an optional workaround, admins can remove the read-only lock via PowerShell by following the instructions here: https://learn.microsoft.com/en-us/sharepoint/manage-lock-status Please note: the read-only notification will remain visible until full mitigation has been completed, however no archiving actions will take place.\n \nInformation about our enforcement of policy changes for unlicensed OneDrive accounts:\nhttps://learn.microsoft.com/en-us/sharepoint/unlicensed-onedrive-accounts \n \nCurrent status: We’ve successfully deployed the permanent fix and anticipate it will be completed by Monday, March 3, 2025. Additionally, the targeted rollouts intended to provide immediate relief for the second scenario are currently 93 percent complete. \n \nScope of impact: A subset of users who have recently been configured in the unsupported scenario or who have recently been licensed may be affected.\n \nStart time: Monday, January 27, 2025, at 12:00 AM UTC\n \nRoot cause: A recent policy enforcement rollout interacted negatively with a configuration leveraged by your organization. Specifically, this problem occurs when OneDrive for Business ownership is applied to a group or service account, which is an unsupported scenario. Our efforts to address this impact introduced a secondary issue in which recently licensed users are registering as unlicensed users in our systems, also resulting in read-only states for users.\n \nNext update by: Monday, March 3, 2025, at 7:00 PM UTC",
+                "OriginalMessageText": "Title: Some users may be unable to edit their OneDrive for Business content as they are in a read-only state\n\nUser impact: Users may be unable to edit their OneDrive for Business content as they are in a read-only state.\n\nMore info: The error message states that \"You can't edit your files because your license to use OneDrive ended over a month ago.\"\n \nTo mitigate the issue, admins should update user OneDrive configurations from unsupported states into supported states, as described here: https://learn.microsoft.com/sharepoint/manage-user-profiles#add-and-remove-admins-for-a-users-onedrive \n \nSpecifically, IT admins should ensure that the owner (also known as the primary site collection administrator) of every OneDrive account is assigned to the correct user who owns that account and not a service account or group account.\n \nAs an optional workaround, admins can remove the read-only lock via PowerShell by following the instructions here: https://learn.microsoft.com/en-us/sharepoint/manage-lock-status Please note: the read-only notification will remain visible until full mitigation has been completed, however no archiving actions will take place.\n \nInformation about our enforcement of policy changes for unlicensed OneDrive accounts:\nhttps://learn.microsoft.com/en-us/sharepoint/unlicensed-onedrive-accounts \n \nCurrent status: We’ve successfully deployed the permanent fix and anticipate it will be completed by Monday, March 3, 2025. Additionally, the targeted rollouts intended to provide immediate relief for the second scenario are currently 93 percent complete. \n \nScope of impact: A subset of users who have recently been configured in the unsupported scenario or who have recently been licensed may be affected.\n \nStart time: Monday, January 27, 2025, at 12:00 AM UTC\n \nRoot cause: A recent policy enforcement rollout interacted negatively with a configuration leveraged by your organization. Specifically, this problem occurs when OneDrive for Business ownership is applied to a group or service account, which is an unsupported scenario. Our efforts to address this impact introduced a secondary issue in which recently licensed users are registering as unlicensed users in our systems, also resulting in read-only states for users.\n \nNext update by: Monday, March 3, 2025, at 7:00 PM UTC",
+                "ParsedMessages": null,
+                "OriginalParsedMessages": [
+                    {
+                        "Id": "User impact",
+                        "Prefix": "User impact",
+                        "Content": "Users may be unable to edit their OneDrive for Business content as they are in a read-only state."
+                    },
+                    {
+                        "Id": "More info",
+                        "Prefix": "More info",
+                        "Content": "The error message states that \"You can't edit your files because your license to use OneDrive ended over a month ago.\"\n \nTo mitigate the issue, admins should update user OneDrive configurations from unsupported states into supported states, as described here: https://learn.microsoft.com/sharepoint/manage-user-profiles#add-and-remove-admins-for-a-users-onedrive \n \nSpecifically, IT admins should ensure that the owner (also known as the primary site collection administrator) of every OneDrive account is assigned to the correct user who owns that account and not a service account or group account.\n \nAs an optional workaround, admins can remove the read-only lock via PowerShell by following the instructions here: https://learn.microsoft.com/en-us/sharepoint/manage-lock-status Please note: the read-only notification will remain visible until full mitigation has been completed, however no archiving actions will take place.\n \nInformation about our enforcement of policy changes for unlicensed OneDrive accounts:\nhttps://learn.microsoft.com/en-us/sharepoint/unlicensed-onedrive-accounts"
+                    },
+                    {
+                        "Id": "Current status",
+                        "Prefix": "Current status",
+                        "Content": "We’ve successfully deployed the permanent fix and anticipate it will be completed by Monday, March 3, 2025. Additionally, the targeted rollouts intended to provide immediate relief for the second scenario are currently 93 percent complete."
+                    },
+                    {
+                        "Id": "Scope of impact",
+                        "Prefix": "Scope of impact",
+                        "Content": "A subset of users who have recently been configured in the unsupported scenario or who have recently been licensed may be affected."
+                    },
+                    {
+                        "Id": "Start time",
+                        "Prefix": "Start time",
+                        "Content": "Monday, January 27, 2025, at 12:00 AM UTC"
+                    },
+                    {
+                        "Id": "Root cause",
+                        "Prefix": "Root cause",
+                        "Content": "A recent policy enforcement rollout interacted negatively with a configuration leveraged by your organization. Specifically, this problem occurs when OneDrive for Business ownership is applied to a group or service account, which is an unsupported scenario. Our efforts to address this impact introduced a secondary issue in which recently licensed users are registering as unlicensed users in our systems, also resulting in read-only states for users."
+                    },
+                    {
+                        "Id": "Next update by",
+                        "Prefix": "Next update by",
+                        "Content": "Monday, March 3, 2025, at 7:00 PM UTC"
+                    }
+                ],
+                "PublishedTime": "2025-03-01T01:41:09.04+00:00",
+                "PostType": "Regular"
+            },
             {
                 "MessageText": "Title: Some users may be unable to edit their OneDrive for Business content as they are in a read-only state\n\nUser impact: Users may be unable to edit their OneDrive for Business content as they are in a read-only state.\n\nMore info: The error message states that \"You can't edit your files because your license to use OneDrive ended over a month ago.\"\n \nTo mitigate the issue, admins should update user OneDrive configurations from unsupported states into supported states, as described here: https://learn.microsoft.com/sharepoint/manage-user-profiles#add-and-remove-admins-for-a-users-onedrive \n \nSpecifically, IT admins should ensure that the owner (also known as the primary site collection administrator) of every OneDrive account is assigned to the correct user who owns that account.\n \nAs an optional workaround, admins can remove the read-only lock via PowerShell by following the instructions here: https://learn.microsoft.com/en-us/sharepoint/manage-lock-status Please note: the read-only notification will remain visible until full mitigation has been completed, however no archiving actions will take place.\n \nInformation about our enforcement of policy changes for unlicensed OneDrive accounts:\nhttps://learn.microsoft.com/en-us/sharepoint/unlicensed-onedrive-accounts\n\nCurrent status: We've initiated the targeted rollouts for immediate relief for the second scenario, which are currently 50 percent complete. In addition, we've completed development for our permanent fix which is undergoing deployment with an expected completion date of Monday, March 3, 2025.\n\nScope of impact: A subset of users who have recently been configured in the unsupported scenario or who have recently been licensed may be affected.\n\nStart time: Monday, January 27, 2025, at 12:00 AM UTC\n\nPreliminary root cause: A recent policy enforcement rollout interacted negatively with a configuration leveraged by your organization. Specifically, this problem occurs when OneDrive for Business ownership is applied to a group or service account, which is an unsupported scenario. Our efforts to address this impact introduced a secondary issue in which recently licensed users are registering as unlicensed users in our systems, also resulting in read-only states for users.\n\nNext update by: Saturday, March 1, 2025, at 2:30 AM UTC",
                 "OriginalMessageText": "Title: Some users may be unable to edit their OneDrive for Business content as they are in a read-only state\n\nUser impact: Users may be unable to edit their OneDrive for Business content as they are in a read-only state.\n\nMore info: The error message states that \"You can't edit your files because your license to use OneDrive ended over a month ago.\"\n \nTo mitigate the issue, admins should update user OneDrive configurations from unsupported states into supported states, as described here: https://learn.microsoft.com/sharepoint/manage-user-profiles#add-and-remove-admins-for-a-users-onedrive \n \nSpecifically, IT admins should ensure that the owner (also known as the primary site collection administrator) of every OneDrive account is assigned to the correct user who owns that account.\n \nAs an optional workaround, admins can remove the read-only lock via PowerShell by following the instructions here: https://learn.microsoft.com/en-us/sharepoint/manage-lock-status Please note: the read-only notification will remain visible until full mitigation has been completed, however no archiving actions will take place.\n \nInformation about our enforcement of policy changes for unlicensed OneDrive accounts:\nhttps://learn.microsoft.com/en-us/sharepoint/unlicensed-onedrive-accounts\n\nCurrent status: We've initiated the targeted rollouts for immediate relief for the second scenario, which are currently 50 percent complete. In addition, we've completed development for our permanent fix which is undergoing deployment with an expected completion date of Monday, March 3, 2025.\n\nScope of impact: A subset of users who have recently been configured in the unsupported scenario or who have recently been licensed may be affected.\n\nStart time: Monday, January 27, 2025, at 12:00 AM UTC\n\nPreliminary root cause: A recent policy enforcement rollout interacted negatively with a configuration leveraged by your organization. Specifically, this problem occurs when OneDrive for Business ownership is applied to a group or service account, which is an unsupported scenario. Our efforts to address this impact introduced a secondary issue in which recently licensed users are registering as unlicensed users in our systems, also resulting in read-only states for users.\n\nNext update by: Saturday, March 1, 2025, at 2:30 AM UTC",
@@ -9065,17 +9109,71 @@
         "AffectedTenantCount": 0,
         "AffectedUserCount": null,
         "Classification": 0,
-        "EndTime": null,
+        "EndTime": "2025-02-28T20:37:00+00:00",
         "Feature": "Planner",
         "FeatureDisplayName": "Planner",
         "Id": "PL1019250",
-        "OriginalImpactDescription": "Users may be missing a certain filter option and user details in Microsoft Planner.",
-        "ImpactDescription": "Users may be missing a certain filter option and user details in Microsoft Planner.",
+        "OriginalImpactDescription": "Users may have been missing a certain filter option and user details in Microsoft Planner.",
+        "ImpactDescription": "Users may have been missing a certain filter option and user details in Microsoft Planner.",
         "IsDismissed": false,
         "IsRead": false,
-        "LastUpdatedTime": "2025-02-28T00:29:50.843+00:00",
+        "LastUpdatedTime": "2025-03-01T02:10:15.407+00:00",
         "MessageType": 0,
         "Messages": [
+            {
+                "MessageText": "Title: Some users may be missing a certain filter option and user details in Microsoft Planner\n\nUser impact: Users may have been missing a certain filter option and user details in Microsoft Planner.\n\nMore info: Users couldn't use the “Filter by keyword” option when they attempted to access Microsoft Planner from Microsoft Teams. Additionally, users' profile pictures and initials were not always shown on Basic Microsoft Planner tasks or when assigning tasks to users.\n\nThe user detail impact may have affected users leveraging any Microsoft Planner access method, including Planner on the web or Microsoft Planner within Microsoft Teams.\n\nFinal status: We've confirmed via internal validations and an extended period of monitoring that the service rollback has completed and has successfully resolved the issue.\n\nScope of impact: Users serviced by the affected portions of infrastructure who utilized Microsoft Planner for the involved scenarios may have been impacted.\n\nStart time: Friday, February 21, 2025, at 5:42 PM UTC\n\nEnd time: Friday, February 28, 2025, at 8:37 PM UTC\n\nRoot cause: Some configuration changes contained within a recent regularly scheduled service update intended to improve the user experience were resulting in impact.\n\nNext steps: \n - We'll review our service update validation process to identify possible refinements in order to prevent similar instances of this issue in the future.\n\nThis is the final update for the event.",
+                "OriginalMessageText": "Title: Some users may be missing a certain filter option and user details in Microsoft Planner\n\nUser impact: Users may have been missing a certain filter option and user details in Microsoft Planner.\n\nMore info: Users couldn't use the “Filter by keyword” option when they attempted to access Microsoft Planner from Microsoft Teams. Additionally, users' profile pictures and initials were not always shown on Basic Microsoft Planner tasks or when assigning tasks to users.\n\nThe user detail impact may have affected users leveraging any Microsoft Planner access method, including Planner on the web or Microsoft Planner within Microsoft Teams.\n\nFinal status: We've confirmed via internal validations and an extended period of monitoring that the service rollback has completed and has successfully resolved the issue.\n\nScope of impact: Users serviced by the affected portions of infrastructure who utilized Microsoft Planner for the involved scenarios may have been impacted.\n\nStart time: Friday, February 21, 2025, at 5:42 PM UTC\n\nEnd time: Friday, February 28, 2025, at 8:37 PM UTC\n\nRoot cause: Some configuration changes contained within a recent regularly scheduled service update intended to improve the user experience were resulting in impact.\n\nNext steps: \n - We'll review our service update validation process to identify possible refinements in order to prevent similar instances of this issue in the future.\n\nThis is the final update for the event.",
+                "ParsedMessages": null,
+                "OriginalParsedMessages": [
+                    {
+                        "Id": "User impact",
+                        "Prefix": "User impact",
+                        "Content": "Users may have been missing a certain filter option and user details in Microsoft Planner."
+                    },
+                    {
+                        "Id": "More info",
+                        "Prefix": "More info",
+                        "Content": "Users couldn't use the “Filter by keyword” option when they attempted to access Microsoft Planner from Microsoft Teams. Additionally, users' profile pictures and initials were not always shown on Basic Microsoft Planner tasks or when assigning tasks to users.\n\nThe user detail impact may have affected users leveraging any Microsoft Planner access method, including Planner on the web or Microsoft Planner within Microsoft Teams."
+                    },
+                    {
+                        "Id": "Final status",
+                        "Prefix": "Final status",
+                        "Content": "We've confirmed via internal validations and an extended period of monitoring that the service rollback has completed and has successfully resolved the issue."
+                    },
+                    {
+                        "Id": "Scope of impact",
+                        "Prefix": "Scope of impact",
+                        "Content": "Users serviced by the affected portions of infrastructure who utilized Microsoft Planner for the involved scenarios may have been impacted."
+                    },
+                    {
+                        "Id": "Start time",
+                        "Prefix": "Start time",
+                        "Content": "Friday, February 21, 2025, at 5:42 PM UTC"
+                    },
+                    {
+                        "Id": "End time",
+                        "Prefix": "End time",
+                        "Content": "Friday, February 28, 2025, at 8:37 PM UTC"
+                    },
+                    {
+                        "Id": "Root cause",
+                        "Prefix": "Root cause",
+                        "Content": "Some configuration changes contained within a recent regularly scheduled service update intended to improve the user experience were resulting in impact."
+                    },
+                    {
+                        "Id": "Next steps",
+                        "Prefix": "Next steps",
+                        "Content": "- We'll review our service update validation process to identify possible refinements in order to prevent similar instances of this issue in the future."
+                    },
+                    {
+                        "Id": "Final message",
+                        "Prefix": "Final message",
+                        "Content": "This is the final update for the event."
+                    }
+                ],
+                "PublishedTime": "2025-03-01T02:10:15.407+00:00",
+                "PostType": "Regular"
+            },
             {
                 "MessageText": "Title: Some users may be missing a certain filter option and user details in Microsoft Planner\n\nUser impact: Users may be missing a certain filter option and user details in Microsoft Planner.\n\nMore info: Users can't use the “Filter by keyword” option when accessing Microsoft Planner from Microsoft Teams. Additionally, users' profile pictures and initials are not always shown on Basic Microsoft Planner tasks or when assigning tasks to users.\n\nThe user detail impact may affect users leveraging any Microsoft Planner access method, including Planner on the web or Microsoft Planner within Microsoft Teams.\n\nCurrent status: We've identified that some configuration changes contained within a recent regularly scheduled service update intended to improve the user experience are resulting in impact. We've taken action to roll back the offending changes throughout the affected environment and anticipate this process will complete by the time of our next scheduled update, at which point we'll test to confirm impact is fully remediated.\n\nScope of impact: Users serviced by the affected portions of infrastructure utilizing Microsoft Planner for the involved scenarios may be impacted.\n\nStart time: Monday, February 24, 2025, at 8:00 AM UTC\n\nRoot cause: Some configuration changes contained within a recent regularly scheduled service update intended to improve the user experience are resulting in impact.\n\nNext update by: Saturday, March 1, 2025, at 2:30 AM UTC",
                 "OriginalMessageText": "Title: Some users may be missing a certain filter option and user details in Microsoft Planner\n\nUser impact: Users may be missing a certain filter option and user details in Microsoft Planner.\n\nMore info: Users can't use the “Filter by keyword” option when accessing Microsoft Planner from Microsoft Teams. Additionally, users' profile pictures and initials are not always shown on Basic Microsoft Planner tasks or when assigning tasks to users.\n\nThe user detail impact may affect users leveraging any Microsoft Planner access method, including Planner on the web or Microsoft Planner within Microsoft Teams.\n\nCurrent status: We've identified that some configuration changes contained within a recent regularly scheduled service update intended to improve the user experience are resulting in impact. We've taken action to roll back the offending changes throughout the affected environment and anticipate this process will complete by the time of our next scheduled update, at which point we'll test to confirm impact is fully remediated.\n\nScope of impact: Users serviced by the affected portions of infrastructure utilizing Microsoft Planner for the involved scenarios may be impacted.\n\nStart time: Monday, February 24, 2025, at 8:00 AM UTC\n\nRoot cause: Some configuration changes contained within a recent regularly scheduled service update intended to improve the user experience are resulting in impact.\n\nNext update by: Saturday, March 1, 2025, at 2:30 AM UTC",
@@ -9148,12 +9246,12 @@
         "EnableParsing": true,
         "PostIncidentDocumentUrl": null,
         "Severity": "Unknown",
-        "StartTime": "2025-02-28T00:07:49+00:00",
+        "StartTime": "2025-02-21T17:42:00+00:00",
         "MessageStatus": {
-            "DisplayName": "Service degradation",
-            "LocalizedDisplayName": "Service degradation",
+            "DisplayName": "Service restored",
+            "LocalizedDisplayName": "Service restored",
             "Id": 0,
-            "IsResolved": false
+            "IsResolved": true
         },
         "OriginalTitle": "Some users may be missing a certain filter option and user details in Microsoft Planner",
         "Title": "Some users may be missing a certain filter option and user details in Microsoft Planner",
