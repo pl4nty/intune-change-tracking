@@ -181,23 +181,24 @@ async def main():
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(item, f, ensure_ascii=False, indent=4)
 
+    # could only find 24-hour SPA token :(
     # Planned changes or new features in Microsoft Entra via ChangeManagementHub client
-    client = GraphServiceClient(RefreshTokenCredential(
-        '9d15ec9c-4104-48aa-9688-c907238f257b',
-        'AZURE_CHANGEMGMT_RT',
-        'c44b4083-3bb0-49c1-b47d-974e53cbdf3c',
-        'brk-c44b4083-3bb0-49c1-b47d-974e53cbdf3c://entra.microsoft.com'
-    ), ['https://graph.microsoft.com/.default'])
+    # client = GraphServiceClient(RefreshTokenCredential(
+    #     '9d15ec9c-4104-48aa-9688-c907238f257b',
+    #     'AZURE_CHANGEMGMT_RT',
+    #     'c44b4083-3bb0-49c1-b47d-974e53cbdf3c',
+    #     'brk-c44b4083-3bb0-49c1-b47d-974e53cbdf3c://entra.microsoft.com'
+    # ), ['https://graph.microsoft.com/.default'])
 
-    changes = []
-    next = 'https://graph.microsoft.com/beta/identity/productChanges'
-    while next is not None:
-        data = await client.identity.with_url(next).get(request_configuration=request_config)
-        data = data.json()
-        changes.extend(data.get('value', []))
-        next = data.get('@odata.nextLink')
-    with open('IdentityProductChanges.json', 'w', encoding='utf-8') as f:
-        json.dump(changes, f, ensure_ascii=False, indent=4)
+    # changes = []
+    # next = 'https://graph.microsoft.com/beta/identity/productChanges'
+    # while next is not None:
+    #     data = await client.identity.with_url(next).get(request_configuration=request_config)
+    #     data = data.json()
+    #     changes.extend(data.get('value', []))
+    #     next = data.get('@odata.nextLink')
+    # with open('IdentityProductChanges.json', 'w', encoding='utf-8') as f:
+    #     json.dump(changes, f, ensure_ascii=False, indent=4)
 
     # Office Cloud Policy Service
     token = RefreshTokenCredential(
