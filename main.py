@@ -332,6 +332,9 @@ class RefreshTokenCredential(object):
         data = requests.post(
             f'https://login.microsoftonline.com/{os.environ["AZURE_TENANT_ID"]}/oauth2/v2.0/token', self._body, headers=self._headers).json()
 
+        if 'refresh_token' not in data:
+            print(data)
+            raise Exception('token refresh failed')
         self._body['refresh_token'] = data['refresh_token']
         subprocess.run(['gh', 'secret', 'set', self._token_envvar,
                        '--body', data['refresh_token'], '--repo', os.environ['REPO']])
