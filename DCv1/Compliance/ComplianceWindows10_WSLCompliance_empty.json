@@ -65,6 +65,11 @@
                 "readOnly": false,
                 "writeOnce": false,
                 "enabled": true,
+                "linkedValidation": {
+                    "entityKey": "maximumOSVersion",
+                    "linkedValidationType": 1,
+                    "validationMessageKey": "mustBeSmallerThanOsMaximumVersion"
+                },
                 "multiItemIncludeSelectAll": false
             }
         },
@@ -91,6 +96,11 @@
                 "readOnly": false,
                 "writeOnce": false,
                 "enabled": true,
+                "linkedValidation": {
+                    "entityKey": "minimumOSVersion",
+                    "linkedValidationType": 2,
+                    "validationMessageKey": "mustBeGreaterThanOsMinimumVersion"
+                },
                 "multiItemIncludeSelectAll": false
             }
         }
@@ -118,10 +128,5 @@
     "readOnly": false,
     "writeOnce": false,
     "enabled": true,
-    "linkedValidation": {
-        "entityKey": "customComplianceRequired",
-        "linkedValidationType": 5,
-        "validationMessageKey": "windowsSubsystemLinuxComplianceInfoBox"
-    },
     "multiItemIncludeSelectAll": false
 }
