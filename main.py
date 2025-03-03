@@ -200,34 +200,34 @@ async def main():
     # with open('IdentityProductChanges.json', 'w', encoding='utf-8') as f:
     #     json.dump(changes, f, ensure_ascii=False, indent=4)
 
-    # Office Cloud Policy Service
-    token = RefreshTokenCredential(
-        '3cf6df92-2745-4f6f-bbcf-19b59bcdb62a',
-        'AZURE_OCPS_RT',
-    ).get_token('https://config.office.net//.default').token
-    headers = {'Authorization': f'Bearer {token}',
-               'User-Agent': 'github.com/pl4nty'}
-    for URL in [
-        # 'https://clients.config.office.net/releases/v1.0/FileList/channelsForProductIds?productId=O365ProPlusRetail&productId=O365ProPlusEEANoTeamsRetail',
-        # 'https://clients.config.office.net/onboarding/odata/v1.0/Agreementdata',
-        'https://clients.config.office.net/odbhealth/v1.0/synchealth/reports/versioncount',
-        'https://clients.config.office.net/releases/v1.0/FileList/languagesForProductIds?productId=O365ProPlusRetail',
-        'https://config.office.com/appConfig/v1.0/userflights',
-        # 'https://config.office.com/policyadmin/v1.0/policies',
-        'https://clients.config.office.net/settings/v1.0/SettingsCatalog/Settings',
-        'https://config.office.com/appConfig/v1.0/ServiceHealth',
-        # 'https://config.office.com/onboarding/odata/v1.0/FeatureProvisiondata',
-        'https://clients.config.office.net/releases/v1.0/OfficeReleases',
-        # POST https://clients.config.office.net/intents/odata/v1.0/ComponentGroupIntent {"componentGroupId": "a4e9e0f7-28cc-4304-98bc-fe2cb31121e0", "adminSelection": "off"} controls WebView2 autoinstall, or 675c828d-2e53-4ace-9697-75c5264b31c4 for Teams
-    ]:
-        data = requests.get(URL, headers=headers)
-        with open(f'OCPS/{URL.split('/')[-1].split('?')[0]}.json', 'w', encoding='utf-8') as f:
-            json.dump(data.json(), f, ensure_ascii=False, indent=4)
+    # # Office Cloud Policy Service
+    # token = RefreshTokenCredential(
+    #     '3cf6df92-2745-4f6f-bbcf-19b59bcdb62a',
+    #     'AZURE_OCPS_RT',
+    # ).get_token('https://config.office.net//.default').token
+    # headers = {'Authorization': f'Bearer {token}',
+    #            'User-Agent': 'github.com/pl4nty'}
+    # for URL in [
+    #     # 'https://clients.config.office.net/releases/v1.0/FileList/channelsForProductIds?productId=O365ProPlusRetail&productId=O365ProPlusEEANoTeamsRetail',
+    #     # 'https://clients.config.office.net/onboarding/odata/v1.0/Agreementdata',
+    #     'https://clients.config.office.net/odbhealth/v1.0/synchealth/reports/versioncount',
+    #     'https://clients.config.office.net/releases/v1.0/FileList/languagesForProductIds?productId=O365ProPlusRetail',
+    #     'https://config.office.com/appConfig/v1.0/userflights',
+    #     # 'https://config.office.com/policyadmin/v1.0/policies',
+    #     'https://clients.config.office.net/settings/v1.0/SettingsCatalog/Settings',
+    #     'https://config.office.com/appConfig/v1.0/ServiceHealth',
+    #     # 'https://config.office.com/onboarding/odata/v1.0/FeatureProvisiondata',
+    #     'https://clients.config.office.net/releases/v1.0/OfficeReleases',
+    #     # POST https://clients.config.office.net/intents/odata/v1.0/ComponentGroupIntent {"componentGroupId": "a4e9e0f7-28cc-4304-98bc-fe2cb31121e0", "adminSelection": "off"} controls WebView2 autoinstall, or 675c828d-2e53-4ace-9697-75c5264b31c4 for Teams
+    # ]:
+    #     data = requests.get(URL, headers=headers)
+    #     with open(f'OCPS/{URL.split('/')[-1].split('?')[0]}.json', 'w', encoding='utf-8') as f:
+    #         json.dump(data.json(), f, ensure_ascii=False, indent=4)
 
-    data = requests.get(
-        'https://clients.config.office.net/onboarding/odata/v1.0/FeatureData', headers=headers)
-    with open(f'OCPS/FeatureData.json', 'w', encoding='utf-8') as f:
-        json.dump(data.json()['value'], f, ensure_ascii=False, indent=4)
+    # data = requests.get(
+    #     'https://clients.config.office.net/onboarding/odata/v1.0/FeatureData', headers=headers)
+    # with open(f'OCPS/FeatureData.json', 'w', encoding='utf-8') as f:
+    #     json.dump(data.json()['value'], f, ensure_ascii=False, indent=4)
 
     # Teams Admin Center
     token = RefreshTokenCredential(
