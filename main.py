@@ -182,7 +182,7 @@ async def main():
             json.dump(item, f, ensure_ascii=False, indent=4)
 
     # could only find 24-hour SPA token :(
-    # Planned changes or new features in Microsoft Entra via ChangeManagementHub client
+    # # Planned changes or new features in Microsoft Entra via ChangeManagementHub client
     # client = GraphServiceClient(RefreshTokenCredential(
     #     '9d15ec9c-4104-48aa-9688-c907238f257b',
     #     'AZURE_CHANGEMGMT_RT',
@@ -229,67 +229,67 @@ async def main():
     # with open(f'OCPS/FeatureData.json', 'w', encoding='utf-8') as f:
     #     json.dump(data.json()['value'], f, ensure_ascii=False, indent=4)
 
-    # Teams Admin Center
-    token = RefreshTokenCredential(
-        '2ddfbe71-ed12-4123-b99b-d5fc8a062a79',
-        'AZURE_TEAMS_RT',
-    ).get_token('https://api.spaces.skype.com/.default').token
-    headers = {'Authorization': f'Bearer {token}'}
-    data = requests.post('https://authsvc.teams.microsoft.com/v1.0/authz', headers=headers).json()
-    del data['tokens']
-    with open(f'Teams/discovery.json', 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=4)
-    data = requests.get(
-        'https://teams.microsoft.com/api/mt/part/au-01/beta/users/appsCatalog', headers=headers)
-    with open(f'Teams/appsCatalog.json', 'w', encoding='utf-8') as f:
-        json.dump(data.json(), f, ensure_ascii=False, indent=4)
+    # # Teams Admin Center
+    # token = RefreshTokenCredential(
+    #     '2ddfbe71-ed12-4123-b99b-d5fc8a062a79',
+    #     'AZURE_TEAMS_RT',
+    # ).get_token('https://api.spaces.skype.com/.default').token
+    # headers = {'Authorization': f'Bearer {token}'}
+    # data = requests.post('https://authsvc.teams.microsoft.com/v1.0/authz', headers=headers).json()
+    # del data['tokens']
+    # with open(f'Teams/discovery.json', 'w', encoding='utf-8') as f:
+    #     json.dump(data, f, ensure_ascii=False, indent=4)
+    # data = requests.get(
+    #     'https://teams.microsoft.com/api/mt/part/au-01/beta/users/appsCatalog', headers=headers)
+    # with open(f'Teams/appsCatalog.json', 'w', encoding='utf-8') as f:
+    #     json.dump(data.json(), f, ensure_ascii=False, indent=4)
 
-    # M365 Admin Center via Teams
-    token = RefreshTokenCredential(
-        '2ddfbe71-ed12-4123-b99b-d5fc8a062a79',
-        'AZURE_TEAMS_RT',
-    ).get_token('https://portal.office.com/.default').token
-    headers = {'Authorization': f'Bearer {token}'}
-    for URL in [
-        # 'https://admin.microsoft.com/api/concierge/GetConciergeConfig?appName=teamsadmincenter&culture=en-US',
-        'https://admin.microsoft.com/admin/api/features/config',
-        'https://admin.microsoft.com/admin/api/features/all',
-        'https://admin.microsoft.com/fd/bcws/api/v1/IntraTenantPartner/getPartnerList',
-        'https://admin.microsoft.com/fd/bsxcommerce/v1/ProductOffers/EligibleProductOffers?language=en-US',
-    ]:
-        data = requests.get(URL, headers=headers)
-        with open(f'M365Admin/{URL.split('/')[-1].split('?')[0]}.json', 'w', encoding='utf-8') as f:
-            json.dump(data.json(), f, ensure_ascii=False, indent=4)
-    for pair in [
-        ['https://admin.microsoft.com/fd/addins/api/availableApps?workloads=MetaOS,Teams', 'apps'],
-        ['https://admin.microsoft.com/fd/edgeenterpriseextensionsmanagement/api/policies', 'policy_definitions'],
-        ['https://admin.microsoft.com/fd/dms/odata/C2RReleaseInfo', 'value'],
-        ['https://admin.microsoft.com/fd/bsxcommerce/v1/ProductOfferIndex?language=en-US', 'results'],
-        ['https://admin.microsoft.com/fd/m365licensing/v3/licensedProducts', 'value'],
-        ['https://admin.microsoft.com/fd/edgeenterpriseextensionsmanagement/api/sidebarExtensions', 'hub_apps'],
-    ]:
-        data = requests.get(pair[0], headers=headers)
-        with open(f'M365Admin/{pair[0].split('/')[-1].split('?')[0]}.json', 'w', encoding='utf-8') as f:
-            json.dump(data.json()[pair[1]], f, ensure_ascii=False, indent=4)
-    data = requests.get(
-        'https://admin.microsoft.com/admin/api/servicehealth/status/activeCM?showResolved=true', headers=headers).json()['ServiceStatus']
-    flattened_data = []
-    for service in data:
-        flattened_data += service['MessagesByClassification']['Incidents']
-        flattened_data += service['MessagesByClassification']['Advisories']
-    with open('M365Admin/ServiceHealth.json', 'w', encoding='utf-8') as f:
-        json.dump(flattened_data, f, ensure_ascii=False, indent=4)
-    data = requests.get(
-        'https://admin.microsoft.com/api/concierge/GetConciergeConfig', headers=headers).json()
-    data.pop('SessionID')
-    with open(f'M365Admin/GetConciergeConfig.json', 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=4)
-    data = requests.get(
-        'https://admin.microsoft.com/admin/api/messagecenter', headers=headers).json()['Messages']
-    for item in data:
-        item.pop('ActionRequiredBySortValue', None)
-    with open(f'M365Admin/messagecenter.json', 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=4)
+    # # M365 Admin Center via Teams
+    # token = RefreshTokenCredential(
+    #     '2ddfbe71-ed12-4123-b99b-d5fc8a062a79',
+    #     'AZURE_TEAMS_RT',
+    # ).get_token('https://portal.office.com/.default').token
+    # headers = {'Authorization': f'Bearer {token}'}
+    # for URL in [
+    #     # 'https://admin.microsoft.com/api/concierge/GetConciergeConfig?appName=teamsadmincenter&culture=en-US',
+    #     'https://admin.microsoft.com/admin/api/features/config',
+    #     'https://admin.microsoft.com/admin/api/features/all',
+    #     'https://admin.microsoft.com/fd/bcws/api/v1/IntraTenantPartner/getPartnerList',
+    #     'https://admin.microsoft.com/fd/bsxcommerce/v1/ProductOffers/EligibleProductOffers?language=en-US',
+    # ]:
+    #     data = requests.get(URL, headers=headers)
+    #     with open(f'M365Admin/{URL.split('/')[-1].split('?')[0]}.json', 'w', encoding='utf-8') as f:
+    #         json.dump(data.json(), f, ensure_ascii=False, indent=4)
+    # for pair in [
+    #     ['https://admin.microsoft.com/fd/addins/api/availableApps?workloads=MetaOS,Teams', 'apps'],
+    #     ['https://admin.microsoft.com/fd/edgeenterpriseextensionsmanagement/api/policies', 'policy_definitions'],
+    #     ['https://admin.microsoft.com/fd/dms/odata/C2RReleaseInfo', 'value'],
+    #     ['https://admin.microsoft.com/fd/bsxcommerce/v1/ProductOfferIndex?language=en-US', 'results'],
+    #     ['https://admin.microsoft.com/fd/m365licensing/v3/licensedProducts', 'value'],
+    #     ['https://admin.microsoft.com/fd/edgeenterpriseextensionsmanagement/api/sidebarExtensions', 'hub_apps'],
+    # ]:
+    #     data = requests.get(pair[0], headers=headers)
+    #     with open(f'M365Admin/{pair[0].split('/')[-1].split('?')[0]}.json', 'w', encoding='utf-8') as f:
+    #         json.dump(data.json()[pair[1]], f, ensure_ascii=False, indent=4)
+    # data = requests.get(
+    #     'https://admin.microsoft.com/admin/api/servicehealth/status/activeCM?showResolved=true', headers=headers).json()['ServiceStatus']
+    # flattened_data = []
+    # for service in data:
+    #     flattened_data += service['MessagesByClassification']['Incidents']
+    #     flattened_data += service['MessagesByClassification']['Advisories']
+    # with open('M365Admin/ServiceHealth.json', 'w', encoding='utf-8') as f:
+    #     json.dump(flattened_data, f, ensure_ascii=False, indent=4)
+    # data = requests.get(
+    #     'https://admin.microsoft.com/api/concierge/GetConciergeConfig', headers=headers).json()
+    # data.pop('SessionID')
+    # with open(f'M365Admin/GetConciergeConfig.json', 'w', encoding='utf-8') as f:
+    #     json.dump(data, f, ensure_ascii=False, indent=4)
+    # data = requests.get(
+    #     'https://admin.microsoft.com/admin/api/messagecenter', headers=headers).json()['Messages']
+    # for item in data:
+    #     item.pop('ActionRequiredBySortValue', None)
+    # with open(f'M365Admin/messagecenter.json', 'w', encoding='utf-8') as f:
+    #     json.dump(data, f, ensure_ascii=False, indent=4)
 
 
 class IbizaTokenCredential(object):
