@@ -17,7 +17,7 @@
     "visibility": "settingsCatalog,template",
     "riskLevel": "low",
     "id": "device_vendor_msft_policy_config_deliveryoptimization_dogroupidsource",
-    "description": "Set this policy to restrict peer selection to a specific source. Available options are: 1 = AD Site, 2 = Authenticated domain SID, 3 = DHCP Option ID, 4 = DNS Suffix, 5 = AAD. When set, the Group ID will be assigned automatically from the selected source. If you set this policy, the GroupID policy will be ignored. The options set in this policy only apply to Group (2) download mode. If Group (2) isn't set as Download mode, this policy will be ignored. For option 3 - DHCP Option ID, the client will query DHCP Option ID 234 and use the returned GUID value as the Group ID. Starting with Windows 10, version 1903, you can use the Azure Active Directory (AAD) Tenant ID as a means to define groups. To do this, set the value of DOGroupIdSource to 5.",
+    "description": "Specifies the source of group ID used for peer selection.",
     "helpText": "",
     "name": "DOGroupIdSource",
     "displayName": "DO Group Id Source",
@@ -53,10 +53,10 @@
     "options": [
         {
             "itemId": "device_vendor_msft_policy_config_deliveryoptimization_dogroupidsource_0",
-            "description": "Unset",
+            "description": "Not Set",
             "helpText": null,
-            "name": "Unset",
-            "displayName": "Unset",
+            "name": "Not Set",
+            "displayName": "Not Set",
             "optionValue": {
                 "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
                 "settingValueTemplateReference": null,
@@ -95,10 +95,10 @@
         },
         {
             "itemId": "device_vendor_msft_policy_config_deliveryoptimization_dogroupidsource_3",
-            "description": "DHCP user option",
+            "description": "DHCP Option ID",
             "helpText": null,
-            "name": "DHCP user option",
-            "displayName": "DHCP user option",
+            "name": "DHCP Option ID",
+            "displayName": "DHCP Option ID",
             "optionValue": {
                 "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
                 "settingValueTemplateReference": null,
@@ -109,10 +109,10 @@
         },
         {
             "itemId": "device_vendor_msft_policy_config_deliveryoptimization_dogroupidsource_4",
-            "description": "DNS suffix",
+            "description": "DNS Suffix",
             "helpText": null,
-            "name": "DNS suffix",
-            "displayName": "DNS suffix",
+            "name": "DNS Suffix",
+            "displayName": "DNS Suffix",
             "optionValue": {
                 "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
                 "settingValueTemplateReference": null,
@@ -123,10 +123,10 @@
         },
         {
             "itemId": "device_vendor_msft_policy_config_deliveryoptimization_dogroupidsource_5",
-            "description": "AAD",
+            "description": "Entra ID Tenant ID",
             "helpText": null,
-            "name": "AAD",
-            "displayName": "AAD",
+            "name": "Entra ID Tenant ID",
+            "displayName": "Entra ID Tenant ID",
             "optionValue": {
                 "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
                 "settingValueTemplateReference": null,
