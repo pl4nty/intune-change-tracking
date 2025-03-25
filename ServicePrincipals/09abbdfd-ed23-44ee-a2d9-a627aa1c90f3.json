@@ -66,38 +66,12 @@
             "allowedMemberTypes": [
                 "Application"
             ],
-            "description": "Allows the app to read organization-wide Microsoft Planner settings, without a signed-in user.",
-            "displayName": "Read organization-wide Microsoft Planner settings",
-            "id": "fc2a0408-0ddc-4173-80b9-15a933a5ff57",
+            "description": "Allows app to publish tasks to planner. Only operations pertaining to publish will be allowed. Examples of allowed operations within this role are task creation. ",
+            "displayName": "Publish Tasks into Planner",
+            "id": "e83a13aa-744d-44ee-9a42-d6f5137d9d0a",
             "isEnabled": true,
             "origin": "Application",
-            "value": "OrgSettings-Planner.Read.All",
-            "isPreAuthorizationRequired": false,
-            "isPrivate": false
-        },
-        {
-            "allowedMemberTypes": [
-                "Application"
-            ],
-            "description": "Allows the app to read and write organization-wide Microsoft Planner settings, without a signed-in user.",
-            "displayName": "Read and write organization-wide Microsoft Planner settings",
-            "id": "68067c9d-a1be-4603-b095-3eaf54a42510",
-            "isEnabled": true,
-            "origin": "Application",
-            "value": "OrgSettings-Planner.ReadWrite.All",
-            "isPreAuthorizationRequired": false,
-            "isPrivate": false
-        },
-        {
-            "allowedMemberTypes": [
-                "Application"
-            ],
-            "description": "Allows an app to update a published task in planner. Only task edit operations are allowed in this scope.",
-            "displayName": "Update a task that has been published in Planner",
-            "id": "fdc2d224-c588-43f8-b0c0-8abf2b7abda7",
-            "isEnabled": true,
-            "origin": "Application",
-            "value": "Task.Publish.Update",
+            "value": "Task.Publish.Create",
             "isPreAuthorizationRequired": false,
             "isPrivate": false
         },
@@ -118,12 +92,38 @@
             "allowedMemberTypes": [
                 "Application"
             ],
-            "description": "Allows app to publish tasks to planner. Only operations pertaining to publish will be allowed. Examples of allowed operations within this role are task creation. ",
-            "displayName": "Publish Tasks into Planner",
-            "id": "e83a13aa-744d-44ee-9a42-d6f5137d9d0a",
+            "description": "Allows an app to update a published task in planner. Only task edit operations are allowed in this scope.",
+            "displayName": "Update a task that has been published in Planner",
+            "id": "fdc2d224-c588-43f8-b0c0-8abf2b7abda7",
             "isEnabled": true,
             "origin": "Application",
-            "value": "Task.Publish.Create",
+            "value": "Task.Publish.Update",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to read and write organization-wide Microsoft Planner settings, without a signed-in user.",
+            "displayName": "Read and write organization-wide Microsoft Planner settings",
+            "id": "68067c9d-a1be-4603-b095-3eaf54a42510",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "OrgSettings-Planner.ReadWrite.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to read organization-wide Microsoft Planner settings, without a signed-in user.",
+            "displayName": "Read organization-wide Microsoft Planner settings",
+            "id": "fc2a0408-0ddc-4173-80b9-15a933a5ff57",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "OrgSettings-Planner.Read.All",
             "isPreAuthorizationRequired": false,
             "isPrivate": false
         }
@@ -138,25 +138,14 @@
     "keyCredentials": [],
     "publishedPermissionScopes": [
         {
-            "adminConsentDescription": "Allows the app to read organization-wide Microsoft Planner settings on behalf of the signed-in user.",
-            "adminConsentDisplayName": "Read organization-wide Microsoft Planner settings",
-            "id": "36393f92-d362-4c50-8880-82c92586a155",
+            "adminConsentDescription": "Allows an app to read published user tasks",
+            "adminConsentDisplayName": "Read user published tasks",
+            "id": "8057a3f8-ac27-4195-984c-ee6efa721ef1",
             "isEnabled": true,
-            "type": "Admin",
-            "userConsentDescription": "Allows the app to read organization-wide Microsoft Planner settings on your behalf.",
-            "userConsentDisplayName": "Read organization-wide Microsoft Planner settings",
-            "value": "OrgSettings-Planner.Read.All",
-            "isPrivate": false
-        },
-        {
-            "adminConsentDescription": "Allows the app to read and write organization-wide Microsoft Planner settings on behalf of the signed-in user.",
-            "adminConsentDisplayName": "Read and write organization-wide Microsoft Planner settings",
-            "id": "2e483df6-5d5c-44ee-88f3-e5238f38ebb6",
-            "isEnabled": true,
-            "type": "Admin",
-            "userConsentDescription": "Allows the app to read and write organization-wide Microsoft Planner settings on your behalf.",
-            "userConsentDisplayName": "Read and write organization-wide Microsoft Planner settings",
-            "value": "OrgSettings-Planner.ReadWrite.All",
+            "type": "User",
+            "userConsentDescription": "Allows an app to read published user tasks",
+            "userConsentDisplayName": "Read user published tasks",
+            "value": "Tasks.Read.Published",
             "isPrivate": false
         },
         {
@@ -171,14 +160,25 @@
             "isPrivate": false
         },
         {
-            "adminConsentDescription": "Allows an app to read published user tasks",
-            "adminConsentDisplayName": "Read user published tasks",
-            "id": "8057a3f8-ac27-4195-984c-ee6efa721ef1",
+            "adminConsentDescription": "Allows the app to read and write organization-wide Microsoft Planner settings on behalf of the signed-in user.",
+            "adminConsentDisplayName": "Read and write organization-wide Microsoft Planner settings",
+            "id": "2e483df6-5d5c-44ee-88f3-e5238f38ebb6",
             "isEnabled": true,
-            "type": "User",
-            "userConsentDescription": "Allows an app to read published user tasks",
-            "userConsentDisplayName": "Read user published tasks",
-            "value": "Tasks.Read.Published",
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to read and write organization-wide Microsoft Planner settings on your behalf.",
+            "userConsentDisplayName": "Read and write organization-wide Microsoft Planner settings",
+            "value": "OrgSettings-Planner.ReadWrite.All",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to read organization-wide Microsoft Planner settings on behalf of the signed-in user.",
+            "adminConsentDisplayName": "Read organization-wide Microsoft Planner settings",
+            "id": "36393f92-d362-4c50-8880-82c92586a155",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to read organization-wide Microsoft Planner settings on your behalf.",
+            "userConsentDisplayName": "Read organization-wide Microsoft Planner settings",
+            "value": "OrgSettings-Planner.Read.All",
             "isPrivate": false
         }
     ],
