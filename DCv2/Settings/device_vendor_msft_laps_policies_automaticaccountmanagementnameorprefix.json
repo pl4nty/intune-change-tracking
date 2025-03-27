@@ -2,34 +2,34 @@
     "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
     "accessTypes": "add,delete,get,replace",
     "keywords": [
-        "Administrator Account Name",
+        "Automatic Account Management Name Or Prefix",
         "LAPS"
     ],
     "infoUrls": [
         "https://docs.microsoft.com/windows/client-management/mdm/LAPS-csp/"
     ],
     "baseUri": "./Device/Vendor/MSFT/LAPS",
-    "offsetUri": "/Policies/AdministratorAccountName",
-    "rootDefinitionId": "device_vendor_msft_laps_policies_administratoraccountname",
+    "offsetUri": "/Policies/AutomaticAccountManagementNameOrPrefix",
+    "rootDefinitionId": "device_vendor_msft_laps_policies_automaticaccountmanagementenabled",
     "categoryId": "f1dcf7b6-2d89-41bf-b5eb-02a879c6db5d",
     "settingUsage": "configuration",
     "uxBehavior": "default",
-    "visibility": "template",
+    "visibility": "settingsCatalog,template",
     "riskLevel": "low",
-    "id": "device_vendor_msft_laps_policies_administratoraccountname",
-    "description": "Use this setting to configure the name of the managed local administrator account.\n\nIf not specified, the default built-in local administrator account will be located by well-known SID (even if renamed).\n\nIf specified, the specified account's password will be managed.\n\nNote: if a custom managed local administrator account name is specified in this setting, that account must be created via other means. Specifying a name in this setting will not cause the account to be created.\r\n ",
+    "id": "device_vendor_msft_laps_policies_automaticaccountmanagementnameorprefix",
+    "description": "Use this setting to configure the name or prefix of the managed local administrator account.\n\nIf specified, the value will be used as the name or name prefix of the managed account.\n\nIf not specified, this setting will default to \"WLapsAdmin\".",
     "helpText": "",
-    "name": "AdministratorAccountName",
-    "displayName": "Administrator Account Name ",
+    "name": "AutomaticAccountManagementNameOrPrefix",
+    "displayName": "Automatic Account Management Name Or Prefix",
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
         "description": null,
         "platform": "windows10",
         "deviceMode": "none",
         "technologies": "mdm",
-        "configurationServiceProviderVersion": "1.0",
+        "configurationServiceProviderVersion": "1.1",
         "maximumSupportedVersion": null,
-        "minimumSupportedVersion": "10.0.17763.4244",
+        "minimumSupportedVersion": "10.0.26100",
         "windowsSkus": [
             "windowsEnterprise",
             "windowsProfessional",
@@ -65,6 +65,11 @@
         "settingValueTemplateReference": null,
         "value": null
     },
-    "dependentOn": [],
+    "dependentOn": [
+        {
+            "dependentOn": "device_vendor_msft_laps_policies_automaticaccountmanagementenabled_true",
+            "parentSettingId": "device_vendor_msft_laps_policies_automaticaccountmanagementenabled"
+        }
+    ],
     "dependedOnBy": []
 }

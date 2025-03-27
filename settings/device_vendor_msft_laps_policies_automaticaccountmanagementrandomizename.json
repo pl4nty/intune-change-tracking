@@ -1,0 +1,95 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Automatic Account Management Randomize Name",
+        "LAPS"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/LAPS-csp/"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/LAPS",
+    "offsetUri": "/Policies/AutomaticAccountManagementRandomizeName",
+    "rootDefinitionId": "device_vendor_msft_laps_policies_automaticaccountmanagementenabled",
+    "categoryId": "f1dcf7b6-2d89-41bf-b5eb-02a879c6db5d",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_laps_policies_automaticaccountmanagementrandomizename",
+    "description": "Use this setting to configure whether the name of the automatically managed account uses a random numeric suffix each time the password is rotated.\n\nIf this setting is enabled, the name of the target account will use a random numeric suffix.\n\nIf this setting is disbled, the name of the target account will not use a random numeric suffix..\n\nIf not specified, this setting defaults to False.",
+    "helpText": "",
+    "name": "AutomaticAccountManagementRandomizeName",
+    "displayName": "Automatic Account Management Randomize Name",
+    "defaultOptionId": "device_vendor_msft_laps_policies_automaticaccountmanagementrandomizename_false",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.1",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26100",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "surfaceHub",
+            "windowsEducation",
+            "holoLens",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_laps_policies_automaticaccountmanagementrandomizename_false",
+            "description": "The name of the target account will not use a random numeric suffix.",
+            "helpText": null,
+            "name": "The name of the target account will not use a random numeric suffix.",
+            "displayName": "The name of the target account will not use a random numeric suffix.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "False"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_laps_policies_automaticaccountmanagementenabled_true",
+                    "parentSettingId": "device_vendor_msft_laps_policies_automaticaccountmanagementenabled"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_laps_policies_automaticaccountmanagementrandomizename_true",
+            "description": "The name of the target account will use a random numeric suffix.",
+            "helpText": null,
+            "name": "The name of the target account will use a random numeric suffix.",
+            "displayName": "The name of the target account will use a random numeric suffix.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "True"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_laps_policies_automaticaccountmanagementenabled_true",
+                    "parentSettingId": "device_vendor_msft_laps_policies_automaticaccountmanagementenabled"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

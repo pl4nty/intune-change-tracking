@@ -2,34 +2,34 @@
     "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
     "accessTypes": "add,delete,get,replace",
     "keywords": [
-        "Password Length",
+        "Passphrase Length",
         "LAPS"
     ],
     "infoUrls": [
         "https://docs.microsoft.com/windows/client-management/mdm/LAPS-csp/"
     ],
     "baseUri": "./Device/Vendor/MSFT/LAPS",
-    "offsetUri": "/Policies/PasswordLength",
-    "rootDefinitionId": "device_vendor_msft_laps_policies_passwordlength",
+    "offsetUri": "/Policies/PassphraseLength",
+    "rootDefinitionId": "device_vendor_msft_laps_policies_passwordcomplexity",
     "categoryId": "f1dcf7b6-2d89-41bf-b5eb-02a879c6db5d",
     "settingUsage": "configuration",
     "uxBehavior": "default",
-    "visibility": "template",
+    "visibility": "settingsCatalog,template",
     "riskLevel": "low",
-    "id": "device_vendor_msft_laps_policies_passwordlength",
-    "description": "Use this setting to configure the length of the password of the managed local administrator account.\n\nIf not specified, this setting will default to 14 characters.\n\nThis setting has a minimum allowed value of 8 characters.\n\nThis setting has a maximum allowed value of 64 characters.\r\n ",
+    "id": "device_vendor_msft_laps_policies_passphraselength",
+    "description": "Use this setting to configure the number of passphrase words.\n\nIf not specified, this setting will default to 6 words\n\nThis setting has a minimum allowed value of 3 words.\n\nThis setting has a maximum allowed value of 10 words.",
     "helpText": "",
-    "name": "PasswordLength",
-    "displayName": "Password Length ",
+    "name": "PassphraseLength",
+    "displayName": "Passphrase Length",
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
         "description": null,
         "platform": "windows10",
         "deviceMode": "none",
         "technologies": "mdm",
-        "configurationServiceProviderVersion": "1.0",
+        "configurationServiceProviderVersion": "1.1",
         "maximumSupportedVersion": null,
-        "minimumSupportedVersion": "10.0.17763.4244",
+        "minimumSupportedVersion": "10.0.26100",
         "windowsSkus": [
             "windowsEnterprise",
             "windowsProfessional",
@@ -53,14 +53,27 @@
     "referredSettingInformationList": [],
     "valueDefinition": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
-        "maximumValue": 64,
-        "minimumValue": 8
+        "maximumValue": 10,
+        "minimumValue": 3
     },
     "defaultValue": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
         "settingValueTemplateReference": null,
-        "value": 14
+        "value": 6
     },
-    "dependentOn": [],
+    "dependentOn": [
+        {
+            "dependentOn": "device_vendor_msft_laps_policies_passwordcomplexity_6",
+            "parentSettingId": "device_vendor_msft_laps_policies_passwordcomplexity"
+        },
+        {
+            "dependentOn": "device_vendor_msft_laps_policies_passwordcomplexity_7",
+            "parentSettingId": "device_vendor_msft_laps_policies_passwordcomplexity"
+        },
+        {
+            "dependentOn": "device_vendor_msft_laps_policies_passwordcomplexity_8",
+            "parentSettingId": "device_vendor_msft_laps_policies_passwordcomplexity"
+        }
+    ],
     "dependedOnBy": []
 }
