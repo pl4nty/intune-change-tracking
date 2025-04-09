@@ -106,9 +106,9 @@ async def main():
     os.makedirs('RoleDefinitions')
     for provider in ["cloudPC", "deviceManagement", "directory", "entitlementManagement", "exchange"]:
         data = await client.service_principals.with_url(f'https://graph.microsoft.com/beta/roleManagement/{provider}/roleDefinitions').get(request_configuration=request_config)
-        data = data.json()
-        if data is not None:
-            for x in data.get('value'):
+        data = data.json().get('value')
+        if data:
+            for x in data:
                 id = x.get('id')
                 with open(f'RoleDefinitions/{id}.json', 'w', encoding='utf-8') as f:
                     json.dump(x, f, ensure_ascii=False, indent=4)
