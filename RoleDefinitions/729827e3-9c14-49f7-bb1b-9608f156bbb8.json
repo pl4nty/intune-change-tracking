@@ -1,0 +1,38 @@
+{
+    "id": "729827e3-9c14-49f7-bb1b-9608f156bbb8",
+    "assignmentMode": "allowed",
+    "categories": "identity",
+    "description": "Can reset passwords for non-administrators and Helpdesk Administrators.",
+    "displayName": "Helpdesk Administrator",
+    "isBuiltIn": true,
+    "isEnabled": true,
+    "isPrivileged": true,
+    "resourceScopes": [
+        "/"
+    ],
+    "richDescription": "Users with this role can change passwords, invalidate refresh tokens, manage service requests, and monitor service health. Invalidating a refresh token forces the user to sign in again. Helpdesk administrators can reset passwords and invalidate refresh tokens of other users who are non-administrators or assigned the following roles only:\n* Directory Readers\n* Guest Inviter\n* Helpdesk Administrator\n* Message Center Reader\n* Password Administrator\n* Reports Reader",
+    "templateId": "729827e3-9c14-49f7-bb1b-9608f156bbb8",
+    "version": "1",
+    "rolePermissions": [
+        {
+            "allowedResourceActions": [
+                "microsoft.azure.serviceHealth/allEntities/allTasks",
+                "microsoft.azure.supportTickets/allEntities/allTasks",
+                "microsoft.directory/bitlockerKeys/key/read",
+                "microsoft.directory/deviceLocalCredentials/standard/read",
+                "microsoft.directory/users/invalidateAllRefreshTokens",
+                "microsoft.directory/users/password/update",
+                "microsoft.office365.serviceHealth/allEntities/allTasks",
+                "microsoft.office365.supportTickets/allEntities/allTasks",
+                "microsoft.office365.webPortal/allEntities/standard/read"
+            ],
+            "condition": null
+        }
+    ],
+    "inheritsPermissionsFrom@odata.context": "https://graph.microsoft.com/beta/$metadata#roleManagement/directory/roleDefinitions('729827e3-9c14-49f7-bb1b-9608f156bbb8')/inheritsPermissionsFrom",
+    "inheritsPermissionsFrom": [
+        {
+            "id": "88d8e3e3-8f55-4a1e-953a-9b9898b8876b"
+        }
+    ]
+}

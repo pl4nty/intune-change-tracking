@@ -1,0 +1,36 @@
+{
+    "id": "4a5d8f65-41da-4de4-8968-e035b65339cf",
+    "assignmentMode": "allowed",
+    "categories": "readOnly,securityAndCompliance",
+    "description": "Can read sign-in and audit reports.",
+    "displayName": "Reports Reader",
+    "isBuiltIn": true,
+    "isEnabled": true,
+    "isPrivileged": false,
+    "resourceScopes": [
+        "/"
+    ],
+    "richDescription": "Users with this role can view usage reporting data and the reports dashboard in Office 365 admin center and the adoption context pack in Power BI. Additionally, the role provides access to sign-on reports and activity in Microsoft Entra ID and data returned by the Microsoft Graph reporting API. A user assigned to the Reports Reader role can access only relevant usage and adoption metrics. They don't have any admin permissions to configure settings or access the product specific admin centers like Exchange.",
+    "templateId": "4a5d8f65-41da-4de4-8968-e035b65339cf",
+    "version": "1",
+    "rolePermissions": [
+        {
+            "allowedResourceActions": [
+                "microsoft.azure.serviceHealth/allEntities/allTasks",
+                "microsoft.directory/auditLogs/allProperties/read",
+                "microsoft.directory/provisioningLogs/allProperties/read",
+                "microsoft.directory/signInReports/allProperties/read",
+                "microsoft.office365.network/performance/allProperties/read",
+                "microsoft.office365.usageReports/allEntities/allProperties/read",
+                "microsoft.office365.webPortal/allEntities/standard/read"
+            ],
+            "condition": null
+        }
+    ],
+    "inheritsPermissionsFrom@odata.context": "https://graph.microsoft.com/beta/$metadata#roleManagement/directory/roleDefinitions('4a5d8f65-41da-4de4-8968-e035b65339cf')/inheritsPermissionsFrom",
+    "inheritsPermissionsFrom": [
+        {
+            "id": "88d8e3e3-8f55-4a1e-953a-9b9898b8876b"
+        }
+    ]
+}

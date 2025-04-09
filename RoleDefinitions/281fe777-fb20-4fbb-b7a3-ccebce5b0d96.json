@@ -1,0 +1,40 @@
+{
+    "id": "281fe777-fb20-4fbb-b7a3-ccebce5b0d96",
+    "assignmentMode": "allowed",
+    "categories": "other",
+    "description": "Create and read warranty claims for Microsoft manufactured hardware, like Surface and HoloLens.",
+    "displayName": "Microsoft Hardware Warranty Specialist",
+    "isBuiltIn": true,
+    "isEnabled": true,
+    "isPrivileged": false,
+    "resourceScopes": [
+        "/"
+    ],
+    "richDescription": "Users with this role can do the following tasks:\n* Create new warranty claims for Microsoft manufactured hardware, like Surface and HoloLens\n* Read warranty claims that they created\n* Read and update existing shipping addresses\n* Read shipping status for open warranty claims they created\n* Create and manage service requests in the Microsoft 365 admin center",
+    "templateId": "281fe777-fb20-4fbb-b7a3-ccebce5b0d96",
+    "version": "1",
+    "rolePermissions": [
+        {
+            "allowedResourceActions": [
+                "microsoft.hardware.support/shippingAddress/allProperties/read",
+                "microsoft.hardware.support/warrantyClaims/createAsOwner",
+                "microsoft.office365.supportTickets/allEntities/allTasks",
+                "microsoft.office365.webPortal/allEntities/standard/read"
+            ],
+            "condition": null
+        },
+        {
+            "allowedResourceActions": [
+                "microsoft.hardware.support/shippingStatus/allProperties/read",
+                "microsoft.hardware.support/warrantyClaims/allProperties/read"
+            ],
+            "condition": "$SubjectIsOwner"
+        }
+    ],
+    "inheritsPermissionsFrom@odata.context": "https://graph.microsoft.com/beta/$metadata#roleManagement/directory/roleDefinitions('281fe777-fb20-4fbb-b7a3-ccebce5b0d96')/inheritsPermissionsFrom",
+    "inheritsPermissionsFrom": [
+        {
+            "id": "88d8e3e3-8f55-4a1e-953a-9b9898b8876b"
+        }
+    ]
+}

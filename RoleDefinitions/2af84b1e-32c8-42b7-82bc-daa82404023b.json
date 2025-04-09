@@ -1,0 +1,66 @@
+{
+    "id": "2af84b1e-32c8-42b7-82bc-daa82404023b",
+    "assignmentMode": "systemAssigned",
+    "categories": "identity",
+    "description": "Restricted role for guest users. Can read a limited set of directory information.",
+    "displayName": "Restricted Guest User",
+    "isBuiltIn": true,
+    "isEnabled": true,
+    "isPrivileged": false,
+    "resourceScopes": [
+        "/"
+    ],
+    "richDescription": null,
+    "templateId": "2af84b1e-32c8-42b7-82bc-daa82404023b",
+    "version": "1",
+    "rolePermissions": [
+        {
+            "allowedResourceActions": [
+                "microsoft.directory/applications/owners/limitedRead",
+                "microsoft.directory/applications/policies/limitedRead",
+                "microsoft.directory/applications/standard/limitedRead",
+                "microsoft.directory/domains/standard/read",
+                "microsoft.directory/organization/basicProfile/read",
+                "microsoft.directory/servicePrincipals/appRoleAssignedTo/limitedRead",
+                "microsoft.directory/servicePrincipals/appRoleAssignments/limitedRead",
+                "microsoft.directory/servicePrincipals/memberOf/limitedRead",
+                "microsoft.directory/servicePrincipals/oAuth2PermissionGrants/limitedRead",
+                "microsoft.directory/servicePrincipals/ownedObjects/limitedRead",
+                "microsoft.directory/servicePrincipals/owners/limitedRead",
+                "microsoft.directory/servicePrincipals/policies/limitedRead",
+                "microsoft.directory/servicePrincipals/standard/limitedRead"
+            ],
+            "condition": null
+        },
+        {
+            "allowedResourceActions": [
+                "microsoft.directory/users/appRoleAssignments/read",
+                "microsoft.directory/users/authenticationMethods/basic/update",
+                "microsoft.directory/users/authenticationMethods/create",
+                "microsoft.directory/users/authenticationMethods/delete",
+                "microsoft.directory/users/authenticationMethods/standard/read",
+                "microsoft.directory/users/authenticationMethods/standard/restrictedRead",
+                "microsoft.directory/users/deviceForResourceAccount/read",
+                "microsoft.directory/users/directReports/read",
+                "microsoft.directory/users/eligibleMemberOf/read",
+                "microsoft.directory/users/invitedBy/read",
+                "microsoft.directory/users/licenseDetails/read",
+                "microsoft.directory/users/manager/read",
+                "microsoft.directory/users/memberOf/read",
+                "microsoft.directory/users/oAuth2PermissionGrants/read",
+                "microsoft.directory/users/ownedDevices/read",
+                "microsoft.directory/users/ownedObjects/read",
+                "microsoft.directory/users/password/update",
+                "microsoft.directory/users/pendingMemberOf/read",
+                "microsoft.directory/users/photo/read",
+                "microsoft.directory/users/registeredDevices/read",
+                "microsoft.directory/users/scopedRoleMemberOf/read",
+                "microsoft.directory/users/sponsors/read",
+                "microsoft.directory/users/standard/read"
+            ],
+            "condition": "$ResourceIsSelf"
+        }
+    ],
+    "inheritsPermissionsFrom@odata.context": "https://graph.microsoft.com/beta/$metadata#roleManagement/directory/roleDefinitions('2af84b1e-32c8-42b7-82bc-daa82404023b')/inheritsPermissionsFrom",
+    "inheritsPermissionsFrom": []
+}
