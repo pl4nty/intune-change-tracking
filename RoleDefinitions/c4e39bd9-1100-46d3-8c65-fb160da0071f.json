@@ -1,0 +1,48 @@
+{
+    "id": "c4e39bd9-1100-46d3-8c65-fb160da0071f",
+    "assignmentMode": "allowed",
+    "categories": "identity",
+    "description": "Can access to view, set and reset authentication method information for any non-admin user.",
+    "displayName": "Authentication Administrator",
+    "isBuiltIn": true,
+    "isEnabled": true,
+    "isPrivileged": true,
+    "resourceScopes": [
+        "/"
+    ],
+    "richDescription": "Users with this role can set or reset any authentication method (including passwords) for non-administrators and some roles. Authentication Administrators can require users who are non-administrators or assigned to some roles to re-register against existing non-password credentials (for example, multifactor authentication or FIDO), and can also revoke remember multifactor authentication on the device, which prompts for MFA on the next sign-in.",
+    "templateId": "c4e39bd9-1100-46d3-8c65-fb160da0071f",
+    "version": "1",
+    "rolePermissions": [
+        {
+            "allowedResourceActions": [
+                "microsoft.azure.serviceHealth/allEntities/allTasks",
+                "microsoft.azure.supportTickets/allEntities/allTasks",
+                "microsoft.directory/deletedItems.users/restore",
+                "microsoft.directory/users/authenticationMethods/basic/update",
+                "microsoft.directory/users/authenticationMethods/create",
+                "microsoft.directory/users/authenticationMethods/delete",
+                "microsoft.directory/users/authenticationMethods/standard/restrictedRead",
+                "microsoft.directory/users/basic/update",
+                "microsoft.directory/users/delete",
+                "microsoft.directory/users/disable",
+                "microsoft.directory/users/enable",
+                "microsoft.directory/users/invalidateAllRefreshTokens",
+                "microsoft.directory/users/manager/update",
+                "microsoft.directory/users/password/update",
+                "microsoft.directory/users/restore",
+                "microsoft.directory/users/userPrincipalName/update",
+                "microsoft.office365.serviceHealth/allEntities/allTasks",
+                "microsoft.office365.supportTickets/allEntities/allTasks",
+                "microsoft.office365.webPortal/allEntities/standard/read"
+            ],
+            "condition": null
+        }
+    ],
+    "inheritsPermissionsFrom@odata.context": "https://graph.microsoft.com/beta/$metadata#roleManagement/directory/roleDefinitions('c4e39bd9-1100-46d3-8c65-fb160da0071f')/inheritsPermissionsFrom",
+    "inheritsPermissionsFrom": [
+        {
+            "id": "88d8e3e3-8f55-4a1e-953a-9b9898b8876b"
+        }
+    ]
+}

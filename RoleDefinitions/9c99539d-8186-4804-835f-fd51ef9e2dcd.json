@@ -1,0 +1,30 @@
+{
+    "id": "9c99539d-8186-4804-835f-fd51ef9e2dcd",
+    "assignmentMode": "allowed",
+    "categories": "identity",
+    "description": "Read audit logs related to custom security attributes.",
+    "displayName": "Attribute Log Reader",
+    "isBuiltIn": true,
+    "isEnabled": true,
+    "isPrivileged": false,
+    "resourceScopes": [
+        "/"
+    ],
+    "richDescription": "Assign the Attribute Log Reader role to users who need to do the following tasks:\n* Read audit logs for attribute set changes\n* Read audit logs for custom security attribute definition changes\n* Read audit logs for custom security attribute assignment changes\nUsers with this role *cannot* do the following tasks:\n* Configure diagnostic settings for custom security attributes\n* Read audit logs for other events\nBy default, Global Administrator and other administrator roles do not have permissions to read audit logs for custom security attributes. To read audit logs for custom security attributes, you must be assigned this role or the Attribute Log Administrator role.",
+    "templateId": "9c99539d-8186-4804-835f-fd51ef9e2dcd",
+    "version": "1",
+    "rolePermissions": [
+        {
+            "allowedResourceActions": [
+                "microsoft.directory/customSecurityAttributeAuditLogs/allProperties/read"
+            ],
+            "condition": null
+        }
+    ],
+    "inheritsPermissionsFrom@odata.context": "https://graph.microsoft.com/beta/$metadata#roleManagement/directory/roleDefinitions('9c99539d-8186-4804-835f-fd51ef9e2dcd')/inheritsPermissionsFrom",
+    "inheritsPermissionsFrom": [
+        {
+            "id": "88d8e3e3-8f55-4a1e-953a-9b9898b8876b"
+        }
+    ]
+}

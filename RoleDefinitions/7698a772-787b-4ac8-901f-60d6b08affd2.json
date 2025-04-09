@@ -1,0 +1,48 @@
+{
+    "id": "7698a772-787b-4ac8-901f-60d6b08affd2",
+    "assignmentMode": "allowed",
+    "categories": "devices,identity",
+    "description": "Limited access to manage devices in Microsoft Entra ID.",
+    "displayName": "Cloud Device Administrator",
+    "isBuiltIn": true,
+    "isEnabled": true,
+    "isPrivileged": true,
+    "resourceScopes": [
+        "/"
+    ],
+    "richDescription": "Users in this role can enable, disable, and delete devices in Microsoft Entra ID and read Windows 10 BitLocker keys (if present) in the Azure portal. The role does not grant permissions to manage any other properties on the device.",
+    "templateId": "7698a772-787b-4ac8-901f-60d6b08affd2",
+    "version": "1",
+    "rolePermissions": [
+        {
+            "allowedResourceActions": [
+                "microsoft.azure.serviceHealth/allEntities/allTasks",
+                "microsoft.directory/auditLogs/allProperties/read",
+                "microsoft.directory/authorizationPolicy/standard/read",
+                "microsoft.directory/bitlockerKeys/key/read",
+                "microsoft.directory/deletedItems.devices/delete",
+                "microsoft.directory/deletedItems.devices/restore",
+                "microsoft.directory/deviceLocalCredentials/password/read",
+                "microsoft.directory/deviceManagementPolicies/basic/update",
+                "microsoft.directory/deviceManagementPolicies/standard/read",
+                "microsoft.directory/deviceRegistrationPolicy/basic/update",
+                "microsoft.directory/deviceRegistrationPolicy/standard/read",
+                "microsoft.directory/devices/delete",
+                "microsoft.directory/devices/disable",
+                "microsoft.directory/devices/enable",
+                "microsoft.directory/devices/permissions/update",
+                "microsoft.directory/deviceTemplates/owners/read",
+                "microsoft.directory/deviceTemplates/owners/update",
+                "microsoft.directory/signInReports/allProperties/read",
+                "microsoft.office365.serviceHealth/allEntities/allTasks"
+            ],
+            "condition": null
+        }
+    ],
+    "inheritsPermissionsFrom@odata.context": "https://graph.microsoft.com/beta/$metadata#roleManagement/directory/roleDefinitions('7698a772-787b-4ac8-901f-60d6b08affd2')/inheritsPermissionsFrom",
+    "inheritsPermissionsFrom": [
+        {
+            "id": "88d8e3e3-8f55-4a1e-953a-9b9898b8876b"
+        }
+    ]
+}

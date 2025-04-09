@@ -1,0 +1,48 @@
+{
+    "id": "0526716b-113d-4c15-b2c8-68e3c22b9f80",
+    "assignmentMode": "allowed",
+    "categories": "collaboration,identity",
+    "description": "Can create and manage the authentication methods policy, tenant-wide MFA settings, password protection policy, and verifiable credentials.",
+    "displayName": "Authentication Policy Administrator",
+    "isBuiltIn": true,
+    "isEnabled": true,
+    "isPrivileged": false,
+    "resourceScopes": [
+        "/"
+    ],
+    "richDescription": "Users in this role can create, deploy, and maintain password protection policies and configure authentication methods in a tenant. An Authentication policy administrator can perform the following tasks - manage authentication method settings; configure smart lockout settings; manage a custom banned password list. Users in this role cannot set, change, or reset any individual users' registered authentication methods. This role is intended for managing policy rather than managing users. For example, an Authentication policy administrator will be able to configure that passwords are required to be registered, and the lockout policy for those passwords, but will not be able to reset a user's password.",
+    "templateId": "0526716b-113d-4c15-b2c8-68e3c22b9f80",
+    "version": "1",
+    "rolePermissions": [
+        {
+            "allowedResourceActions": [
+                "microsoft.azure.supportTickets/allEntities/allTasks",
+                "microsoft.directory/organization/strongAuthentication/allTasks",
+                "microsoft.directory/userCredentialPolicies/basic/update",
+                "microsoft.directory/userCredentialPolicies/create",
+                "microsoft.directory/userCredentialPolicies/delete",
+                "microsoft.directory/userCredentialPolicies/owners/read",
+                "microsoft.directory/userCredentialPolicies/owners/update",
+                "microsoft.directory/userCredentialPolicies/policyAppliedTo/read",
+                "microsoft.directory/userCredentialPolicies/standard/read",
+                "microsoft.directory/userCredentialPolicies/tenantDefault/update",
+                "microsoft.directory/verifiableCredentials/configuration/allProperties/read",
+                "microsoft.directory/verifiableCredentials/configuration/allProperties/update",
+                "microsoft.directory/verifiableCredentials/configuration/contracts/allProperties/read",
+                "microsoft.directory/verifiableCredentials/configuration/contracts/allProperties/update",
+                "microsoft.directory/verifiableCredentials/configuration/contracts/cards/allProperties/read",
+                "microsoft.directory/verifiableCredentials/configuration/contracts/cards/revoke",
+                "microsoft.directory/verifiableCredentials/configuration/contracts/create",
+                "microsoft.directory/verifiableCredentials/configuration/create",
+                "microsoft.directory/verifiableCredentials/configuration/delete"
+            ],
+            "condition": null
+        }
+    ],
+    "inheritsPermissionsFrom@odata.context": "https://graph.microsoft.com/beta/$metadata#roleManagement/directory/roleDefinitions('0526716b-113d-4c15-b2c8-68e3c22b9f80')/inheritsPermissionsFrom",
+    "inheritsPermissionsFrom": [
+        {
+            "id": "88d8e3e3-8f55-4a1e-953a-9b9898b8876b"
+        }
+    ]
+}
