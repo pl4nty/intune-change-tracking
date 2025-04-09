@@ -100,6 +100,18 @@ async def main():
                 json.dump(sp, f, ensure_ascii=False, indent=4)
         next = data.get('@odata.nextLink')
 
+    # Role definitions
+    if os.path.exists('RoleDefinitions'):
+        shutil.rmtree('RoleDefinitions')
+    os.makedirs('RoleDefinitions')
+    for provider in ["cloudPC", "deviceManagement", "directory", "entitlementManagement", "exchange"]:
+        data = await client.service_principals.with_url(f'https://graph.microsoft.com/beta/roleManagement/{provider}/roleDefinitions').get(request_configuration=request_config)
+        value_array = data.json().get('value')
+        for x in data.get('value'):
+            id = x.get('id')
+            with open(f'RoleDefinitions/{id}.json', 'w', encoding='utf-8') as f:
+                json.dump(x, f, ensure_ascii=False, indent=4)
+    
     for table in [
         'AlertEvidence',
         'AlertInfo',
