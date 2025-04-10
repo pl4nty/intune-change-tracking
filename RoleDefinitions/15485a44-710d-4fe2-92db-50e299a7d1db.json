@@ -1,0 +1,36 @@
+{
+    "id": "15485a44-710d-4fe2-92db-50e299a7d1db",
+    "description": "This role enables administrators and end users, such as legal and compliance officers, to search the administrator audit log and view the results that are returned. The audit log can be searched using the Shell or reports can be run from the Exchange Control Panel. Users and groups assigned this role can view anything contained within the audit log, including the cmdlets that were run and who ran them, the objects they were run against, and the parameters and values that were provided. Because the results returned might include sensitive information, this role should only be assigned to those with an explicit need to view the information.",
+    "displayName": "View-Only Audit Logs",
+    "isEnabled": true,
+    "version": "0.12 (14.0.451.0)",
+    "isBuiltIn": true,
+    "templateId": null,
+    "allowedPrincipalTypes": "user,group",
+    "rolePermissions": [
+        {
+            "allowedResourceActions": [
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Set-TenantMailFromAddress -ApplicationId -FromAddress -OrganizationId",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-MessageTraceCopilot -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Test-DatabaseEvent -AssistantName -Counter -Process -RestItemFilter",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Search-UnifiedAuditLog -Debug -EndDate -ErrorAction -ErrorVariable -Formatted -FreeText -HighCompleteness -IPAddresses -LongerRetentionEnabled -ObjectIds -Operations -OutBuffer -OutVariable -RecordType -ResultSize -SessionCommand -SessionId -SiteIds -StartDate -UserIds -Verbose -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-BookingMailbox -RecipientTypeDetails -ResultSize",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Test-MailboxAssistant -AssistantName -Process",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-ScopeAdmins -ScopeIds",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Start-AuditAssistant -Identity",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Set-UnifiedAuditSetting -ErrorAction -ErrorVariable -Identity -OutBuffer -OutVariable -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Search-MailboxAuditLog -EndDate -ErrorAction -ErrorVariable -ExternalAccess -GroupMailbox -HasAttachments -Identity -IncludeInactiveMailbox -LogonTypes -Mailboxes -Operations -OutBuffer -OutVariable -ResultSize -ShowDetails -StartDate -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Search-AdminAuditLog -Cmdlets -EndDate -ErrorAction -ErrorVariable -ExternalAccess -IsSuccess -ObjectIds -OutBuffer -OutVariable -Parameters -ResultSize -StartDate -StartIndex -UserIds -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) New-MailboxAuditLogSearch -Confirm -EndDate -ErrorAction -ErrorVariable -ExternalAccess -GroupMailbox -HasAttachments -LogonTypes -Mailboxes -Name -Operations -OutBuffer -OutVariable -ShowDetails -StartDate -StatusMailRecipients -WarningAction -WarningVariable -WhatIf",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) New-AdminAuditLogSearch -Cmdlets -Confirm -EndDate -ErrorAction -ErrorVariable -ExternalAccess -Name -ObjectIds -OutBuffer -OutVariable -Parameters -StartDate -StatusMailRecipients -UserIds -WarningAction -WarningVariable -WhatIf",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-UnifiedAuditSetting -ErrorAction -ErrorVariable -Identity -OutBuffer -OutVariable -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-MailboxAuditBypassAssociation -ErrorAction -ErrorVariable -Identity -OutBuffer -OutVariable -ResultSize -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-Mailbox -Anr -ErrorAction -ErrorVariable -Filter -Identity -MailboxPlan -OrganizationalUnit -OutBuffer -OutVariable -PublicFolder -RecipientTypeDetails -ResultSize -SortBy -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-AuditLogSearch -CreatedAfter -CreatedBefore -Debug -ErrorAction -ErrorVariable -Identity -ResultSize -Type -Verbose -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-AdminAuditLogConfig -ErrorAction -ErrorVariable -OutBuffer -OutVariable -WarningAction -WarningVariable"
+            ],
+            "excludedResourceActions": [],
+            "condition": null
+        }
+    ]
+}
