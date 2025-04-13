@@ -1,0 +1,38 @@
+{
+    "id": "693d7d22-4776-44f1-bc3e-7ba65d552d3a",
+    "description": "This role enables individual users to view and modify their voice mail settings.",
+    "displayName": "MyVoiceMail",
+    "isEnabled": true,
+    "version": "0.12 (14.0.451.0)",
+    "isBuiltIn": true,
+    "templateId": null,
+    "allowedPrincipalTypes": "user,group",
+    "rolePermissions": [
+        {
+            "allowedResourceActions": [
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-ScopeAdmins -ScopeIds",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Stop-UMPhoneSession -Confirm -ErrorAction -ErrorVariable -Identity -OutBuffer -OutVariable -WarningAction -WarningVariable -WhatIf",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Start-UMPhoneSession -AwayVoicemailGreeting -CallAnsweringRuleId -Confirm -DefaultVoicemailGreeting -ErrorAction -ErrorVariable -OutBuffer -OutVariable -PhoneNumber -UMMailbox -WarningAction -WarningVariable -WhatIf",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Start-AuditAssistant -Identity",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Set-User -Identity",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Set-UnifiedAuditSetting -Identity",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Set-UMMailboxPIN -Confirm -ErrorAction -ErrorVariable -Identity -OutBuffer -OutVariable -Pin -PinExpired -SendEmail -WarningAction -WarningVariable -WhatIf",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Set-UMMailboxConfiguration -Confirm -DefaultPlayOnPhoneNumber -ErrorAction -ErrorVariable -FolderToReadEmailsFrom -Greeting -Identity -OutBuffer -OutVariable -ReadOldestUnreadVoiceMessagesFirst -ReceivedVoiceMailPreviewEnabled -SentVoiceMailPreviewEnabled -WarningAction -WarningVariable -WhatIf",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Set-UMMailbox -Confirm -ErrorAction -ErrorVariable -Identity -ImListMigrationCompleted -MissedCallNotificationEnabled -OutBuffer -OutVariable -PinlessAccessToVoiceMailEnabled -WarningAction -WarningVariable -WhatIf",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Set-UMCallAnsweringRule -CallerIds -CallersCanInterruptGreeting -CheckAutomaticReplies -Confirm -ErrorAction -ErrorVariable -ExtensionsDialed -Identity -KeyMappings -Name -OutBuffer -OutVariable -Priority -ScheduleStatus -TimeOfDay -WarningAction -WarningVariable -WhatIf",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Remove-UMCallAnsweringRule -Confirm -ErrorAction -ErrorVariable -Identity -OutBuffer -OutVariable -WarningAction -WarningVariable -WhatIf",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) New-UMCallAnsweringRule -CallerIds -CallersCanInterruptGreeting -CheckAutomaticReplies -Confirm -ErrorAction -ErrorVariable -ExtensionsDialed -KeyMappings -Name -OutBuffer -OutVariable -Priority -ScheduleStatus -TimeOfDay -WarningAction -WarningVariable -WhatIf",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-UnifiedAuditSetting -Identity",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-UMPhoneSession -ErrorAction -ErrorVariable -Identity -OutBuffer -OutVariable -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-UMMailboxConfiguration -ErrorAction -ErrorVariable -Identity -OutBuffer -OutVariable -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-UMMailbox -Anr -ErrorAction -ErrorVariable -Filter -Identity -OutBuffer -OutVariable -ResultSize -SortBy -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-UMCallAnsweringRule -ErrorAction -ErrorVariable -Identity -OutBuffer -OutVariable -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-Mailbox -Identity",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Enable-UMCallAnsweringRule -Confirm -ErrorAction -ErrorVariable -Identity -OutBuffer -OutVariable -WarningAction -WarningVariable -WhatIf",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Disable-UMCallAnsweringRule -Confirm -ErrorAction -ErrorVariable -Identity -OutBuffer -OutVariable -WarningAction -WarningVariable -WhatIf"
+            ],
+            "excludedResourceActions": [],
+            "condition": null
+        }
+    ]
+}

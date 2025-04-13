@@ -1,0 +1,33 @@
+{
+    "id": "39653fe4-646e-43be-9411-de679f24f069",
+    "description": "This role enables individual users to create, view, and modify their text messaging settings.",
+    "displayName": "MyTextMessaging",
+    "isEnabled": true,
+    "version": "0.12 (14.0.451.0)",
+    "isBuiltIn": true,
+    "templateId": null,
+    "allowedPrincipalTypes": "user,group",
+    "rolePermissions": [
+        {
+            "allowedResourceActions": [
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-ScopeAdmins -ScopeIds",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) New-InboxRule -Name",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Set-InboxRule -Identity -Mailbox",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Start-AuditAssistant -Identity",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Set-UnifiedAuditSetting -Identity",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Set-UMMailbox -Identity -UMSMSNotificationOption",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Set-TextMessagingAccount -Confirm -CountryRegionId -ErrorAction -ErrorVariable -Identity -IgnoreDefaultScope -MobileOperatorId -NotificationPhoneNumber -OutBuffer -OutVariable -WarningAction -WarningVariable -WhatIf",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Set-SweepRule -Identity -KeepForDays -KeepLatest -Mailbox -Name -Provider",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Send-TextMessagingVerificationCode -Confirm -ErrorAction -ErrorVariable -Identity -OutBuffer -OutVariable -WarningAction -WarningVariable -WhatIf",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) New-SweepRule -KeepForDays -KeepLatest -Name -Provider",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-UnifiedAuditSetting -Identity",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-TextMessagingAccount -Credential -ErrorAction -ErrorVariable -Identity -OutBuffer -OutVariable -ReadFromDomainController -ResultSize -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-Mailbox -Identity",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Compare-TextMessagingVerificationCode -Confirm -ErrorAction -ErrorVariable -Identity -OutBuffer -OutVariable -VerificationCode -WarningAction -WarningVariable -WhatIf",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Clear-TextMessagingAccount -Confirm -ErrorAction -ErrorVariable -Identity -IgnoreDefaultScope -OutBuffer -OutVariable -WarningAction -WarningVariable -WhatIf"
+            ],
+            "excludedResourceActions": [],
+            "condition": null
+        }
+    ]
+}
