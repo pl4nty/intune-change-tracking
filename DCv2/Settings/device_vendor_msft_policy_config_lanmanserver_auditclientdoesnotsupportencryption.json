@@ -2,26 +2,26 @@
     "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
     "accessTypes": "add,delete,get,replace",
     "keywords": [
-        "Disable AI Data Analysis",
-        "Windows AI"
+        "Audit Client Does Not Support Encryption",
+        "Lanman Server"
     ],
     "infoUrls": [
-        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-WindowsAI#disableaidataanalysis"
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-LanmanServer#auditclientdoesnotsupportencryption"
     ],
-    "baseUri": "./User/Vendor/MSFT/Policy",
-    "offsetUri": "/Config/WindowsAI/DisableAIDataAnalysis",
-    "rootDefinitionId": "user_vendor_msft_policy_config_windowsai_disableaidataanalysis",
-    "categoryId": "33a43c22-104b-4683-995b-5652cfd5b490",
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/LanmanServer/AuditClientDoesNotSupportEncryption",
+    "rootDefinitionId": "device_vendor_msft_policy_config_lanmanserver_auditclientdoesnotsupportencryption",
+    "categoryId": "1c3001ea-af28-4291-94b0-7f12ea93d3ca",
     "settingUsage": "configuration",
     "uxBehavior": "toggle",
     "visibility": "settingsCatalog,template",
     "riskLevel": "low",
-    "id": "user_vendor_msft_policy_config_windowsai_disableaidataanalysis",
-    "description": "This policy setting allows you to determine whether end users have the option to allow snapshots to be saved on their PCs. If disabled, end users will have a choice to save snapshots of their screen on their PC and then use Recall to find things they've seen. If the policy is enabled, end users will not be able to save snapshots on their PC. If the policy is not configured, end users will not be able to save snapshots on their PC.\r\n ",
+    "id": "device_vendor_msft_policy_config_lanmanserver_auditclientdoesnotsupportencryption",
+    "description": "This policy controls whether the SMB server will log the event when the SMB client doesn't support encryption. If you enable this policy setting, the SMB server will log the event when the SMB client doesn't support encryption. If you disable or do not configure this policy setting, the SMB server will not log the event.",
     "helpText": "",
-    "name": "DisableAIDataAnalysis",
-    "displayName": "Disable AI Data Analysis (User)",
-    "defaultOptionId": "user_vendor_msft_policy_config_windowsai_disableaidataanalysis_0",
+    "name": "AuditClientDoesNotSupportEncryption",
+    "displayName": "Audit Client Does Not Support Encryption",
+    "defaultOptionId": "device_vendor_msft_policy_config_lanmanserver_auditclientdoesnotsupportencryption_0",
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
         "description": null,
@@ -30,11 +30,12 @@
         "technologies": "mdm",
         "configurationServiceProviderVersion": "11.0",
         "maximumSupportedVersion": null,
-        "minimumSupportedVersion": "10.0.26100.3912",
+        "minimumSupportedVersion": "10.0.26100.3613",
         "windowsSkus": [
             "windowsEnterprise",
             "windowsProfessional",
             "windowsEducation",
+            "windowsMultiSession",
             "iotEnterprise",
             "windowsCloudN",
             "windows11SE",
@@ -50,11 +51,11 @@
     "referredSettingInformationList": [],
     "options": [
         {
-            "itemId": "user_vendor_msft_policy_config_windowsai_disableaidataanalysis_0",
-            "description": "Enable Saving Snapshots for Windows.",
+            "itemId": "device_vendor_msft_policy_config_lanmanserver_auditclientdoesnotsupportencryption_0",
+            "description": "Disabled",
             "helpText": null,
-            "name": "Enable Saving Snapshots for Windows.",
-            "displayName": "Enable Saving Snapshots for Windows.",
+            "name": "Disabled",
+            "displayName": "Disabled",
             "optionValue": {
                 "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
                 "settingValueTemplateReference": null,
@@ -64,11 +65,11 @@
             "dependedOnBy": []
         },
         {
-            "itemId": "user_vendor_msft_policy_config_windowsai_disableaidataanalysis_1",
-            "description": "Disable Saving Snapshots for Windows.",
+            "itemId": "device_vendor_msft_policy_config_lanmanserver_auditclientdoesnotsupportencryption_1",
+            "description": "Enabled",
             "helpText": null,
-            "name": "Disable Saving Snapshots for Windows.",
-            "displayName": "Disable Saving Snapshots for Windows.",
+            "name": "Enabled",
+            "displayName": "Enabled",
             "optionValue": {
                 "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
                 "settingValueTemplateReference": null,
