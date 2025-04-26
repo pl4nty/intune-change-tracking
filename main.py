@@ -30,6 +30,8 @@ def cleanDCv1Ids(setting):
     for option in setting.get('options', []):
         for child in option.get('children', []):
             cleanDCv1Ids(child)
+    for option in setting.get('complexOptions', []):
+        cleanDCv1Ids(option)
     for column in setting.get('columns', []):
         if metadata := column.get('metadata'):
             cleanDCv1Ids(metadata)
