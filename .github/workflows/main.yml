@@ -4,8 +4,7 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 * * * *" # hourly
-  pull_request:
-    types: [opened, synchronize, reopened]
+  push:
 
 jobs:
   main:
@@ -14,10 +13,9 @@ jobs:
     permissions:
       id-token: write # Graph auth
       contents: write # committing
+      models: read # summarise
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-        with:
-          ref: ${{ github.head_ref }}
       # azure-identity doesn't support GitHub WIF
       - uses: azure/login@a65d910e8af852a8061c627c456678983e180302 # v2.2.0
         with:
@@ -28,6 +26,7 @@ jobs:
         with:
           python-version: 3.x
           cache: pip
+
       - run: pip install -r requirements.txt
       - run: python main.py
         env:
@@ -38,7 +37,30 @@ jobs:
           AZURE_INTUNEPORTAL_RT: ${{ secrets.AZURE_INTUNEPORTAL_RT }}
           AZURE_OCPS_RT: ${{ secrets.AZURE_OCPS_RT }}
           AZURE_TEAMS_RT: ${{ secrets.AZURE_TEAMS_RT }}
+
+      - name: Generate prompt
+        id: prompt
+        shell: /usr/bin/bash {0}
+        run: |
+          cat << EOF > ../prompt
+          Generate a commit message summarising the changes in the following git diff.
+          The message should contain a one-line summary of the changes, and a newline-separated list of the changes.
+          The one-line summary should be specific. Do not use generic phrases like "Updated configuration files with multiple improvements and enhancements" 
+          Respond with only the commit message and no other text. Do not use markdown formatting.
+
+          Here is the diff:
+          EOF
+
+          git add .
+          git diff --cached --exit-code >> ../prompt
+          echo "changed=$?" >> $GITHUB_OUTPUT
+      - id: inference
+        if: steps.prompt.outputs.changed == '1'
+        uses: actions/ai-inference@main
+        with:
+          prompt-file: ../prompt
+          model: openai/gpt-4.1
       - uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
         with:
           default_author: github_actions
-          message: Change detected
+          message: "data: ${{ steps.inference.outputs.response }}"
