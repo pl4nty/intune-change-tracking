@@ -1,0 +1,71 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Set Time To Reboot",
+        "Remote Remediation"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/RemoteRemediation-csp/"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/RemoteRemediation",
+    "offsetUri": "/CloudRemediationSettings/AutoRemediationSettings/SetTimeToReboot",
+    "rootDefinitionId": "device_vendor_msft_remoteremediation_cloudremediationsettings_enablecloudremediation",
+    "categoryId": "52e76943-bfc9-4fb5-bdc8-5d4e8c6a436e",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_remoteremediation_cloudremediationsettings_autoremediationsettings_settimetoreboot",
+    "description": "Get/set the time to reboot (in minutes) during auto cloud remediation. The maximum time to reboot possible is 72 hours. \"SetTimeToReboot\" is dependent on \"EnableAutoRemediation\" and only takes effect if \"EnableAutoRemediation\" is set to true. Otherwise an invalid argument error will be returned and no changes will be made.\r\n This setting is only available to Windows Insiders",
+    "helpText": "",
+    "name": "SetTimeToReboot",
+    "displayName": "Set Time To Reboot (Windows Insiders only)",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.25272",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "surfaceHub",
+            "windowsEducation",
+            "holoLens",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 4320,
+        "minimumValue": 1
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 180
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "device_vendor_msft_remoteremediation_cloudremediationsettings_autoremediationsettings_enableautoremediation_true",
+            "parentSettingId": "device_vendor_msft_remoteremediation_cloudremediationsettings_autoremediationsettings_enableautoremediation"
+        }
+    ],
+    "dependedOnBy": []
+}
