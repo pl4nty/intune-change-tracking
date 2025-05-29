@@ -1,0 +1,40 @@
+{
+    "id": "bd1714c2-f570-4b79-bbe8-16e7a099602d",
+    "description": "This role enables administrators to configure whether data within a mailbox should be retained for litigation purposes in an organization.",
+    "displayName": "Legal Hold",
+    "isEnabled": true,
+    "version": "0.12 (14.0.451.0)",
+    "isBuiltIn": true,
+    "templateId": null,
+    "allowedPrincipalTypes": "user,group",
+    "rolePermissions": [
+        {
+            "allowedResourceActions": [
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-Recipient -Anr -AuthenticationType -BookmarkDisplayName -ErrorAction -ErrorVariable -Filter -Identity -IncludeBookmarkObject -IncludeManagerWithDisplayName -IncludeSoftDeletedRecipients -OrganizationalUnit -OutBuffer -OutVariable -Properties -PropertySet -RecipientPreviewFilter -RecipientType -RecipientTypeDetails -ResultSize -SortBy -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-MessageTraceCopilot -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Test-DatabaseEvent -AssistantName -Counter -Process -RestItemFilter",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-BookingMailbox -RecipientTypeDetails -ResultSize",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-ScopeEntities -Filter -Identity -OrganizationalUnit -Properties -PropertySet -ResultSize -Scenario -ScopeIds -ScopeRecipientType -SortBy -Workload",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Set-Mailbox -AccountDisabled -Confirm -ElcProcessingDisabled -ExcludeFromAllOrgHolds -ExcludeFromOrgHolds -Force -GroupMailbox -Identity -InactiveMailbox -LitigationHoldDate -LitigationHoldDuration -LitigationHoldEnabled -LitigationHoldOwner -NonCompliantDevices -RecalculateInactiveMailbox -RemoveDelayHoldApplied -RemoveDelayReleaseHoldApplied -RemoveOrphanedHolds -RetentionComment -RetentionPolicy -RetentionUrl -SingleItemRecoveryEnabled -StsRefreshTokensValidFrom -UpdateEnforcedTimestamp",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Test-MailboxAssistant -AssistantName -Process",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-ScopeAdmins -Filter -Identity -OrganizationalUnit -Properties -PropertySet -ResultSize -ScopeIds -SortBy",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Set-MailUser -EnableLitigationHoldForMigration -ExcludeFromAllOrgHolds -ExcludeFromOrgHolds -Identity -RecalculateInactiveMailUser -RemoveComplianceTagHoldApplied -RemoveDelayHoldApplied -RemoveDelayReleaseHoldApplied -RemoveDisabledArchive -RemoveLitigationHoldEnabled -RemoveOrphanedHolds",
+                "SetHoldOnMailboxes",
+                "GetHoldOnMailboxes",
+                "GetDiscoverySearchConfiguration",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Write-AdminAuditLog -Comment -Confirm -ErrorAction -ErrorVariable -OutBuffer -OutVariable -WarningAction -WarningVariable -WhatIf",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Start-AuditAssistant -Identity",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Set-UnifiedAuditSetting -ErrorAction -ErrorVariable -Identity -OutBuffer -OutVariable -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Set-MailboxSearch -Confirm -Description -ErrorAction -ErrorVariable -Force -Identity -InPlaceHoldEnabled -ItemHoldPeriod -Name -OutBuffer -OutVariable -SourceMailboxes -WarningAction -WarningVariable -WhatIf",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Remove-MailboxSearch -Confirm -ErrorAction -ErrorVariable -Identity -OutBuffer -OutVariable -WarningAction -WarningVariable -WhatIf",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) New-MailboxSearch -Confirm -Description -ErrorAction -ErrorVariable -Force -InPlaceHoldEnabled -InPlaceHoldIdentity -ItemHoldPeriod -Name -OutBuffer -OutVariable -SourceMailboxes -WarningAction -WarningVariable -WhatIf",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-User -Anr -ErrorAction -ErrorVariable -Filter -Identity -OrganizationalUnit -OutBuffer -OutVariable -PublicFolder -RecipientTypeDetails -ResultSize -SortBy -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-UnifiedAuditSetting -ErrorAction -ErrorVariable -Identity -OutBuffer -OutVariable -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-MailboxSearch -ErrorAction -ErrorVariable -Identity -InPlaceHoldIdentity -OutBuffer -OutVariable -ResultSize -ShowDeletionInProgressSearches -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-Mailbox -Anr -ErrorAction -ErrorVariable -Filter -Identity -MailboxPlan -OrganizationalUnit -OutBuffer -OutVariable -PublicFolder -RecipientTypeDetails -ResultSize -SortBy -WarningAction -WarningVariable"
+            ],
+            "excludedResourceActions": [],
+            "condition": null
+        }
+    ]
+}

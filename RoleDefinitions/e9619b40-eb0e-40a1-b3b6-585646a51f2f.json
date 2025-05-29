@@ -1,0 +1,43 @@
+{
+    "id": "e9619b40-eb0e-40a1-b3b6-585646a51f2f",
+    "description": "This role enables administrators to create and manage universal security groups and their memberships in an organization. \r\nIf your organization maintains a split permissions model where USG creation and management is performed by a different group other than those who manage Exchange servers, assign this role to that group.",
+    "displayName": "Security Group Creation and Membership",
+    "isEnabled": true,
+    "version": "0.12 (14.0.451.0)",
+    "isBuiltIn": true,
+    "templateId": null,
+    "allowedPrincipalTypes": "user,group",
+    "rolePermissions": [
+        {
+            "allowedResourceActions": [
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-Recipient -Anr -BookmarkDisplayName -ErrorAction -ErrorVariable -Filter -Identity -IncludeBookmarkObject -IncludeManagerWithDisplayName -IncludeSoftDeletedRecipients -OrganizationalUnit -OutBuffer -OutVariable -Properties -PropertySet -RecipientPreviewFilter -RecipientType -RecipientTypeDetails -ResultSize -SortBy -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-DistributionGroup -Anr -Credential -ErrorAction -ErrorVariable -Filter -Identity -IncludeAcceptMessagesOnlyFromDLMembersWithDisplayNames -IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames -IncludeAcceptMessagesOnlyFromWithDisplayNames -IncludeBypassModerationFromSendersOrMembersWithDisplayNames -IncludeGrantSendOnBehalfToWithDisplayNames -IncludeManagedByWithDisplayNames -IncludeModeratedByWithDisplayNames -ManagedBy -OrganizationalUnit -OutBuffer -OutVariable -ResultSize -SortBy -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-MessageTraceCopilot -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Test-DatabaseEvent -AssistantName -Counter -Process -RestItemFilter",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-BookingMailbox -RecipientTypeDetails -ResultSize",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-ScopeEntities -Filter -Identity -OrganizationalUnit -Properties -PropertySet -ResultSize -Scenario -ScopeIds -ScopeRecipientType -SortBy -Workload",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-EligibleDistributionGroupForMigration -ErrorAction -ErrorVariable -Identity -ManagedBy -OrganizationalUnit -OutBuffer -OutVariable -ResultSize -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Test-MailboxAssistant -AssistantName -Process",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-ScopeAdmins -Filter -Identity -OrganizationalUnit -Properties -PropertySet -ResultSize -ScopeIds -SortBy",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) New-DistributionGroup -Alias -BypassNestedModerationEnabled -Confirm -CopyOwnerToMember -Description -DisplayName -ErrorAction -ErrorVariable -ManagedBy -MemberDepartRestriction -MemberJoinRestriction -Members -ModeratedBy -ModerationEnabled -Name -Notes -OrganizationalUnit -OutBuffer -OutVariable -PrimarySmtpAddress -RequireSenderAuthenticationEnabled -RoomList -SendModerationNotifications -Type -WarningAction -WarningVariable -WhatIf",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-DynamicDistributionGroupMember -Identity -IncludeSoftDeletedObjects",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Write-AdminAuditLog -Comment -Confirm -ErrorAction -ErrorVariable -OutBuffer -OutVariable -WarningAction -WarningVariable -WhatIf",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Update-DistributionGroupMember -BypassSecurityGroupManagerCheck -Identity -Members",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Start-AuditAssistant -Identity",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Set-UnifiedAuditSetting -ErrorAction -ErrorVariable -Identity -OutBuffer -OutVariable -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Set-Group -BypassSecurityGroupManagerCheck -Identity",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Set-DistributionGroup -BypassSecurityGroupManagerCheck -Identity -RoomList",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Remove-DistributionGroupMember -BypassSecurityGroupManagerCheck -Identity -Member",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Remove-DistributionGroup -BypassSecurityGroupManagerCheck -Confirm -ErrorAction -ErrorVariable -Identity -OutBuffer -OutVariable -WarningAction -WarningVariable -WhatIf",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-UnifiedAuditSetting -ErrorAction -ErrorVariable -Identity -OutBuffer -OutVariable -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-SweepRule -BypassScopeCheck",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-OrganizationalUnit -ErrorAction -ErrorVariable -Identity -IncludeContainers -OutBuffer -OutVariable -ResultSize -SearchText -SingleNodeOnly -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-Mailbox -Anr -ErrorAction -ErrorVariable -Filter -Identity -MailboxPlan -Migration -OrganizationalUnit -OutBuffer -OutVariable -PublicFolder -RecipientTypeDetails -ResultSize -SortBy -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-DistributionGroupMember -Identity -IncludeSoftDeletedObjects",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Add-DistributionGroupMember -BypassSecurityGroupManagerCheck -Identity -Member"
+            ],
+            "excludedResourceActions": [],
+            "condition": null
+        }
+    ]
+}
