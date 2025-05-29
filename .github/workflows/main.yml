@@ -56,11 +56,12 @@ jobs:
           echo "changed=$?" >> $GITHUB_OUTPUT
       - id: inference
         if: steps.prompt.outputs.changed == '1'
+        continue-on-error: true
         uses: actions/ai-inference@main
         with:
           prompt-file: ../prompt
-          model: openai/gpt-4.1
+          model: ${{ vars.MODEL }}
       - uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
         with:
           default_author: github_actions
-          message: "data: ${{ steps.inference.outputs.response }}"
+          message: "data: ${{ steps.inference.outputs.response || 'change detected' }}"
