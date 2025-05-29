@@ -114,6 +114,18 @@ async def main():
                 id = x.get('id')
                 with open(f'RoleDefinitions/{id}.json', 'w', encoding='utf-8') as f:
                     json.dump(x, f, ensure_ascii=False, indent=4)
+
+     # Resource operations
+    if os.path.exists('ResourceOperations'):
+        shutil.rmtree('ResourceOperations')
+    os.makedirs('ResourceOperations')
+    data = await client.service_principals.with_url('https://graph.microsoft.com/beta/deviceManagement/resourceOperations').get(request_configuration=request_config)
+    data = data.json().get('value')
+    if data:
+        for x in data:
+            id = x.get('id')
+            with open(f'ResourceOperations/{id}.json', 'w', encoding='utf-8') as f:
+                json.dump(x, f, ensure_ascii=False, indent=4)
     
     for table in [
         'AlertEvidence',
