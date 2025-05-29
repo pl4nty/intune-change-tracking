@@ -1,37 +1,37 @@
 {
     "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
-    "accessTypes": "get",
+    "accessTypes": "add,delete,get,replace",
     "keywords": [
-        "Block Linux Enrollment",
-        "Linux Enrollment",
-        "Enrollment"
+        "ADE profile",
+        "enrollment",
+        "Management settings"
     ],
     "infoUrls": [],
     "occurrence": null,
-    "baseUri": "com.microsoft.manage.LinuxMdm",
-    "offsetUri": "/BlockEnrollment/Required",
-    "rootDefinitionId": "linux_enrollment_blockenrollment",
-    "categoryId": "a93cb07c-fa96-42af-8987-40f78eae10bd",
+    "baseUri": "./enrollment/ade",
+    "offsetUri": "/ade_awaitConfiguration_basic",
+    "rootDefinitionId": "ade_awaitconfiguration_basic",
+    "categoryId": "75e27534-3163-45b1-b34e-ca79b077b286",
     "settingUsage": "configuration",
-    "uxBehavior": "default",
+    "uxBehavior": "toggle",
     "visibility": "template",
     "riskLevel": "low",
-    "id": "linux_enrollment_blockenrollment",
-    "description": "Specifies whether to block Linux enrollments",
-    "helpText": null,
-    "name": "BlockLinuxEnrollment",
-    "displayName": "Block Linux Enrollment",
-    "defaultOptionId": "linux_blockenrollment_required_1",
+    "id": "ade_awaitconfiguration_basic",
+    "description": "Keeps the device in Setup Assistant until the first sync between the device and Intune installs policies.",
+    "helpText": "",
+    "name": "AwaitConfiguration_Basic_1",
+    "displayName": "Await final configuration",
+    "defaultOptionId": "ade_awaitconfiguration_basic_1",
     "applicability": {
         "description": null,
-        "platform": "linux",
+        "platform": "visionOS, tvOS",
         "deviceMode": "none",
-        "technologies": "linuxMdm"
+        "technologies": "enrollment"
     },
     "referredSettingInformationList": [],
     "options": [
         {
-            "itemId": "linux_blockenrollment_required_0",
+            "itemId": "ade_awaitconfiguration_basic_0",
             "description": null,
             "helpText": null,
             "name": "No",
@@ -45,7 +45,7 @@
             "dependedOnBy": []
         },
         {
-            "itemId": "linux_blockenrollment_required_1",
+            "itemId": "ade_awaitconfiguration_basic_1",
             "description": null,
             "helpText": null,
             "name": "Yes",

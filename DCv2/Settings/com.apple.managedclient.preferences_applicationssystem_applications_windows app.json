@@ -1,5 +1,5 @@
 {
-    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
     "accessTypes": "none",
     "keywords": [
         "Microsoft AutoUpdate (MAU)"
@@ -7,26 +7,18 @@
     "infoUrls": [],
     "occurrence": null,
     "baseUri": "PayloadContent/com.microsoft.autoupdate2/Forced/[0]/mcx_preference_settings",
-    "offsetUri": "ApplicationsSystem//Applications/Windows App.app",
+    "offsetUri": "ApplicationsSystem//Applications/Windows App.app/Application ID",
     "rootDefinitionId": "com.apple.managedclient.preferences_applicationssystem",
     "categoryId": "2373de26-8270-4e74-a53f-9aeb55d5553c",
     "settingUsage": "configuration",
     "uxBehavior": "default",
     "visibility": "settingsCatalog,template",
     "riskLevel": "low",
-    "id": "com.apple.managedclient.preferences_applicationssystem_applications_windows app.app",
+    "id": "com.apple.managedclient.preferences_applicationssystem_applications_windows app.app_application id",
     "description": null,
     "helpText": null,
-    "name": "ApplicationsSystem_Applications_Windows App.app",
-    "displayName": "Windows App",
-    "childIds": [
-        "com.apple.managedclient.preferences_applicationssystem_applications_windows app.app_application id",
-        "com.apple.managedclient.preferences_applicationssystem_applications_windows app.app_lcid",
-        "com.apple.managedclient.preferences_applicationssystem_applications_windows app.app_channelname",
-        "com.apple.managedclient.preferences_applicationssystem_applications_windows app.app_manifestserver"
-    ],
-    "maximumCount": 1,
-    "minimumCount": 0,
+    "name": "ApplicationsSystem_Applications_Windows App.app_Application ID",
+    "displayName": "Application ID",
     "applicability": {
         "description": null,
         "platform": "macOS",
@@ -34,28 +26,25 @@
         "technologies": "mdm,appleRemoteManagement"
     },
     "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": "MSRD10"
+    },
     "dependentOn": [
         {
-            "dependentOn": "com.apple.managedclient.preferences_applicationssystem",
-            "parentSettingId": "com.apple.managedclient.preferences_applicationssystem"
+            "dependentOn": "com.apple.managedclient.preferences_applicationssystem_applications_windows app.app",
+            "parentSettingId": "com.apple.managedclient.preferences_applicationssystem_applications_windows app.app"
         }
     ],
-    "dependedOnBy": [
-        {
-            "dependedOnBy": "com.apple.managedclient.preferences_applicationssystem_applications_windows app.app_application id",
-            "required": true
-        },
-        {
-            "dependedOnBy": "com.apple.managedclient.preferences_applicationssystem_applications_windows app.app_lcid",
-            "required": true
-        },
-        {
-            "dependedOnBy": "com.apple.managedclient.preferences_applicationssystem_applications_windows app.app_channelname",
-            "required": false
-        },
-        {
-            "dependedOnBy": "com.apple.managedclient.preferences_applicationssystem_applications_windows app.app_manifestserver",
-            "required": false
-        }
-    ]
+    "dependedOnBy": []
 }

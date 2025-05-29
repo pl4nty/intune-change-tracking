@@ -7,18 +7,18 @@
     "infoUrls": [],
     "occurrence": null,
     "baseUri": "",
-    "offsetUri": "CardDAVAccountDescription",
+    "offsetUri": "CardDAVUsername",
     "rootDefinitionId": "com.apple.carddav.account_com.apple.carddav.account",
     "categoryId": "45fe783f-a80b-42d9-ab3c-8c4081be8d05",
     "settingUsage": "configuration",
     "uxBehavior": "default",
     "visibility": "settingsCatalog,template",
     "riskLevel": "low",
-    "id": "com.apple.carddav.account_carddavaccountdescription",
-    "description": "The description of the account.",
+    "id": "com.apple.carddav.account_carddavusername",
+    "description": "The user name for logins.",
     "helpText": null,
-    "name": "CardDAVAccountDescription",
-    "displayName": "Card DAV Account Description",
+    "name": "CardDAVUsername",
+    "displayName": "Card DAV Username",
     "applicability": {
         "description": null,
         "platform": "iOS,macOS",
@@ -28,7 +28,7 @@
     "referredSettingInformationList": [],
     "valueDefinition": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
-        "format": "none",
+        "format": "variableReplacement",
         "inputValidationSchema": null,
         "maximumLength": 1032,
         "minimumLength": 0,
@@ -38,7 +38,7 @@
     "defaultValue": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
         "settingValueTemplateReference": null,
-        "value": ""
+        "value": "{{USERNAME}}"
     },
     "dependentOn": [
         {

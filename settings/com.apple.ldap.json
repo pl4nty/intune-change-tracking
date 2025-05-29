@@ -1,5 +1,5 @@
 {
-    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
     "accessTypes": "none",
     "keywords": [
         "LDAP"
@@ -7,18 +7,25 @@
     "infoUrls": [],
     "occurrence": null,
     "baseUri": "",
-    "offsetUri": "LDAPSearchSettings/[{0}]/LDAPSearchSettingSearchBase",
+    "offsetUri": "LDAPSearchSettings",
     "rootDefinitionId": "com.apple.ldap.account_com.apple.ldap.account",
     "categoryId": "9ba1b877-865a-4104-8376-b43a0c75b04b",
     "settingUsage": "configuration",
-    "uxBehavior": "default",
+    "uxBehavior": "contextPane",
     "visibility": "settingsCatalog,template",
     "riskLevel": "low",
-    "id": "com.apple.ldap.account_ldapsearchsettings_item_ldapsearchsettingsearchbase",
-    "description": "The path to the node where a search should start. ",
+    "id": "com.apple.ldap.account_ldapsearchsettings",
+    "description": "An array of search settings dictionaries.",
     "helpText": null,
-    "name": "LDAPSearchSettings_item_LDAPSearchSettingSearchBase",
-    "displayName": "LDAP Search Setting Search Base",
+    "name": "LDAPSearchSettings",
+    "displayName": "LDAP Search Settings",
+    "childIds": [
+        "com.apple.ldap.account_ldapsearchsettings_item_ldapsearchsettingdescription",
+        "com.apple.ldap.account_ldapsearchsettings_item_ldapsearchsettingsearchbase",
+        "com.apple.ldap.account_ldapsearchsettings_item_ldapsearchsettingscope"
+    ],
+    "maximumCount": 2147483647,
+    "minimumCount": 1,
     "applicability": {
         "description": null,
         "platform": "iOS,macOS",
@@ -26,25 +33,24 @@
         "technologies": "mdm,appleRemoteManagement"
     },
     "referredSettingInformationList": [],
-    "valueDefinition": {
-        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
-        "format": "none",
-        "inputValidationSchema": null,
-        "maximumLength": 1032,
-        "minimumLength": 0,
-        "isSecret": false,
-        "fileTypes": []
-    },
-    "defaultValue": {
-        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
-        "settingValueTemplateReference": null,
-        "value": ""
-    },
     "dependentOn": [
         {
-            "dependentOn": "com.apple.ldap.account_ldapsearchsettings",
-            "parentSettingId": "com.apple.ldap.account_ldapsearchsettings"
+            "dependentOn": "com.apple.ldap.account_com.apple.ldap.account",
+            "parentSettingId": "com.apple.ldap.account_com.apple.ldap.account"
         }
     ],
-    "dependedOnBy": []
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "com.apple.ldap.account_ldapsearchsettings_item_ldapsearchsettingdescription",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.ldap.account_ldapsearchsettings_item_ldapsearchsettingsearchbase",
+            "required": true
+        },
+        {
+            "dependedOnBy": "com.apple.ldap.account_ldapsearchsettings_item_ldapsearchsettingscope",
+            "required": false
+        }
+    ]
 }

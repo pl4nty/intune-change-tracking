@@ -7,19 +7,19 @@
     "infoUrls": [],
     "occurrence": null,
     "baseUri": "",
-    "offsetUri": "Services/ListenEvent/[{0}]/StaticCode",
+    "offsetUri": "Services/ScreenCapture/[{0}]/Allowed",
     "rootDefinitionId": "com.apple.tcc.configuration-profile-policy_com.apple.tcc.configuration-profile-policy",
     "categoryId": "82d173f9-ba0b-4b09-bbb8-68cba4916162",
     "settingUsage": "configuration",
     "uxBehavior": "toggle",
     "visibility": "settingsCatalog,template",
     "riskLevel": "low",
-    "id": "com.apple.tcc.configuration-profile-policy_services_listenevent_item_staticcode",
-    "description": "If true, statically validate the code requirement. Used only if the process invalidates its dynamic code signature.",
+    "id": "com.apple.tcc.configuration-profile-policy_services_screencapture_item_allowed",
+    "description": "If true, access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.",
     "helpText": null,
-    "name": "Services_ListenEvent_item_StaticCode",
-    "displayName": "Static Code",
-    "defaultOptionId": "com.apple.tcc.configuration-profile-policy_services_listenevent_item_staticcode_false",
+    "name": "Services_ScreenCapture_item_Allowed",
+    "displayName": "Allowed (Deprecated)",
+    "defaultOptionId": "com.apple.tcc.configuration-profile-policy_services_screencapture_item_allowed_false",
     "applicability": {
         "description": null,
         "platform": "macOS",
@@ -29,10 +29,10 @@
     "referredSettingInformationList": [],
     "options": [
         {
-            "itemId": "com.apple.tcc.configuration-profile-policy_services_listenevent_item_staticcode_false",
+            "itemId": "com.apple.tcc.configuration-profile-policy_services_screencapture_item_allowed_false",
             "description": null,
             "helpText": null,
-            "name": "Disabled",
+            "name": "Blocked",
             "displayName": "False",
             "optionValue": {
                 "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
@@ -41,17 +41,17 @@
             },
             "dependentOn": [
                 {
-                    "dependentOn": "com.apple.tcc.configuration-profile-policy_services_listenevent",
-                    "parentSettingId": "com.apple.tcc.configuration-profile-policy_services_listenevent"
+                    "dependentOn": "com.apple.tcc.configuration-profile-policy_services_screencapture",
+                    "parentSettingId": "com.apple.tcc.configuration-profile-policy_services_screencapture"
                 }
             ],
             "dependedOnBy": []
         },
         {
-            "itemId": "com.apple.tcc.configuration-profile-policy_services_listenevent_item_staticcode_true",
+            "itemId": "com.apple.tcc.configuration-profile-policy_services_screencapture_item_allowed_true",
             "description": null,
             "helpText": null,
-            "name": "Enabled",
+            "name": "Allowed",
             "displayName": "True",
             "optionValue": {
                 "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
@@ -60,8 +60,8 @@
             },
             "dependentOn": [
                 {
-                    "dependentOn": "com.apple.tcc.configuration-profile-policy_services_listenevent",
-                    "parentSettingId": "com.apple.tcc.configuration-profile-policy_services_listenevent"
+                    "dependentOn": "com.apple.tcc.configuration-profile-policy_services_screencapture",
+                    "parentSettingId": "com.apple.tcc.configuration-profile-policy_services_screencapture"
                 }
             ],
             "dependedOnBy": []

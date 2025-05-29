@@ -709,6 +709,32 @@
             "allowedMemberTypes": [
                 "Application"
             ],
+            "description": "Read activity audit log from the audit store.",
+            "displayName": "Read activity audit log from the audit store.",
+            "id": "99bc85fb-e857-4220-9f8c-3a1c83148d2e",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "AuditActivity.Read",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the application to upload bulk activity audit logs to the audit store.",
+            "displayName": "Upload activity audit logs to the audit store.",
+            "id": "f6318678-2713-4bb6-b123-233e7336c1bd",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "AuditActivity.Write",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
             "description": "Allows the app to read and query your audit log activities, without a signed-in user.",
             "displayName": "Read all audit log data",
             "id": "b0afded3-3588-46d8-8b3d-9842eff778da",
@@ -1755,6 +1781,58 @@
             "isEnabled": true,
             "origin": "Application",
             "value": "Contacts.ReadWrite",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to process and evaluate content for data security, governance and compliance outcomes at tenant scope.",
+            "displayName": "Process content for data security, governance and compliance",
+            "id": "5ad511bf-571c-4ef6-8c3c-85b94b85df98",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "Content.Process.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to process and evaluate content for data security, governance and compliance outcomes for a user.",
+            "displayName": "Process content for data security, governance and compliance",
+            "id": "24ceb246-ad29-4680-90b4-3e91ffad15eb",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "Content.Process.User",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Read contents activity audit log from the audit store.",
+            "displayName": "Read contents activity audit log from the audit store.",
+            "id": "368425e7-6954-4f5a-9d92-90b75bd580c9",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "ContentActivity.Read",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the application to upload bulk contents activity audit logs to the audit store.",
+            "displayName": "Upload content activity audit logs to the audit store.",
+            "id": "2932e07a-3c29-44e4-bb36-6d0fc176387f",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "ContentActivity.Write",
             "isPreAuthorizationRequired": false,
             "isPrivate": false
         },
@@ -5155,6 +5233,45 @@
             "allowedMemberTypes": [
                 "Application"
             ],
+            "description": "Allows the app to identify Purview data protection, compliance and governance policy scopes defined for all users across tenant.",
+            "displayName": "Compute Purview policies at tenant scope",
+            "id": "e5a76501-dbb0-492c-ab55-5d09e8837263",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "ProtectionScopes.Compute.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to identify Purview data protection, compliance and governance policy scopes defined for an individual user.",
+            "displayName": "Compute Purview policies for an individual user",
+            "id": "fe696d63-5e1f-4515-8232-cccc316903c6",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "ProtectionScopes.Compute.User",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to read and query your provisioning log activities, without a signed-in user.",
+            "displayName": "Read all provisioning log data",
+            "id": "091937d3-3e38-47a1-8649-b2f99d3035f1",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "ProvisioningLog.Read.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
             "description": "Allows the application to read  certificate-based authentication configuration such as all public key infrastructures (PKI) and certificate authorities (CA) configured for the organization, without a signed-in user.",
             "displayName": "Read all certificate based authentication configurations",
             "id": "214fda0c-514a-4650-b037-b562b1a66124",
@@ -5883,6 +6000,58 @@
             "allowedMemberTypes": [
                 "Application"
             ],
+            "description": "Allow the app to determine if there is any sensitivity label to be applied automatically to the content or recommended to the user for manual application, without a signed-in user.",
+            "displayName": "Evaluate sensitivity labels",
+            "id": "57f0b71b-a759-45a0-9a0f-cc099fbd9a44",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "SensitivityLabel.Evaluate",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to evaluate all sensitivity label.",
+            "displayName": "Evaluate labels tenant scope.",
+            "id": "986fa56a-6680-4aac-af09-4d1765376739",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "SensitivityLabel.Evaluate.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to get sensitivity labels.",
+            "displayName": "Get labels application scope.",
+            "id": "3b8e7aad-f6e3-4299-83f8-6fc6a5777f0b",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "SensitivityLabel.Read",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to get sensitivity labels.",
+            "displayName": "Get labels tenant scope.",
+            "id": "e46a01e9-b2cf-4d89-8424-bcdc6dd445ab",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "SensitivityLabels.Read.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
             "description": "Allows the app to read all Exchange service activity, without a signed-in user.",
             "displayName": "Read all Exchange service activity",
             "id": "2b655018-450a-4845-81e7-d603b1ebffdb",
@@ -6136,6 +6305,19 @@
             "isEnabled": true,
             "origin": "Application",
             "value": "SpiffeTrustDomain.ReadWrite.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to modify Viva Engage storylines, read all storylines properties, update storyline properties, and delete storyline properties without a signed-in user.",
+            "displayName": "Read and write all Viva Engage storylines",
+            "id": "6eff534b-699e-44d9-af61-a4182f0ec37e",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "Storyline.ReadWrite.All",
             "isPreAuthorizationRequired": false,
             "isPrivate": false
         },
@@ -7875,6 +8057,28 @@
             "isPrivate": false
         },
         {
+            "adminConsentDescription": "Read activity audit log from the audit store.",
+            "adminConsentDisplayName": "Read activity audit log from the audit store.",
+            "id": "16786f81-40d2-4116-bb26-d1a753bf0b20",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Read activity audit log from the audit store.",
+            "userConsentDisplayName": "Read activity audit log from the audit store.",
+            "value": "AuditActivity.Read",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the application to upload bulk activity audit logs to the audit store.",
+            "adminConsentDisplayName": "Upload activity audit logs to the audit store.",
+            "id": "a78fd341-0672-4792-a8ae-a5925b2546eb",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the application to upload bulk activity audit logs to the audit store.",
+            "userConsentDisplayName": "Upload activity audit logs to the audit store.",
+            "value": "AuditActivity.Write",
+            "isPrivate": false
+        },
+        {
             "adminConsentDescription": "Allows the app to read and query your audit log activities, on behalf of the signed-in user.",
             "adminConsentDisplayName": "Read audit log data",
             "id": "e4c9e354-4dc5-45b8-9e7c-e1393b0b1a20",
@@ -8752,6 +8956,50 @@
             "userConsentDescription": "Allows the app to read, update, create, and delete contacts you have permissions to access, including your own and shared contacts.",
             "userConsentDisplayName": "Read and write to your and shared contacts",
             "value": "Contacts.ReadWrite.Shared",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to process and evaluate content for data security, governance and compliance outcomes at tenant scope.",
+            "adminConsentDisplayName": "Process content for data security, governance and compliance",
+            "id": "7e2467d1-f874-46bb-828e-24cb06b29d3f",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to process and evaluate content for data security, governance and compliance outcomes at tenant scope.",
+            "userConsentDisplayName": "Process content for data security, governance and compliance",
+            "value": "Content.Process.All",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to process and evaluate content for data security, governance and compliance outcomes for a user.",
+            "adminConsentDisplayName": "Process content for data security, governance and compliance",
+            "id": "1d787a13-f750-4ad6-875a-fcbd2725596b",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to process and evaluate content for data security, governance and compliance outcomes for a user.",
+            "userConsentDisplayName": "Process content for data security, governance and compliance",
+            "value": "Content.Process.User",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Read contents activity audit log from the audit store.",
+            "adminConsentDisplayName": "Read contents activity audit log from the audit store.",
+            "id": "62c55b2f-a2b1-4312-8385-be57afd901b4",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Read contents activity audit log from the audit store.",
+            "userConsentDisplayName": "Read contents activity audit log from the audit store.",
+            "value": "ContentActivity.Read",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the application to upload bulk contents activity audit logs to the audit store.",
+            "adminConsentDisplayName": "Upload contents activity audit logs to the audit store.",
+            "id": "948caae6-152a-48cd-a746-4844af30e8e9",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the application to upload bulk contents activity audit logs to the audit store.",
+            "userConsentDisplayName": "Upload contents activity audit logs to the audit store.",
+            "value": "ContentActivity.Write",
             "isPrivate": false
         },
         {
@@ -12044,6 +12292,39 @@
             "isPrivate": false
         },
         {
+            "adminConsentDescription": "Allows the app to identify Purview data protection, compliance and governance policy scopes defined for all users across tenant.",
+            "adminConsentDisplayName": "Compute Purview policies at tenant scope",
+            "id": "98f5a27a-539a-48bc-a597-f78e9e1e76bf",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to identify Purview data protection, compliance and governance policy scopes defined for all users across tenant.",
+            "userConsentDisplayName": "Compute Purview policies at tenant scope",
+            "value": "ProtectionScopes.Compute.All",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to identify Purview data protection, compliance and governance policy scopes defined for an individual user.",
+            "adminConsentDisplayName": "Compute Purview policies for an individual user",
+            "id": "4fc04d16-a9fc-4c5e-8da4-79b6c33638a4",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to identify Purview data protection, compliance and governance policy scopes defined for an individual user.",
+            "userConsentDisplayName": "Compute Purview policies for an individual user",
+            "value": "ProtectionScopes.Compute.User",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to read and query your provisioning log activities, on behalf of the signed-in user.",
+            "adminConsentDisplayName": "Read provisioning log data",
+            "id": "95aec97b-cf27-4a8d-a67d-42f60b5b38ef",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to read and query your provisioning log activities, on your behalf.",
+            "userConsentDisplayName": "Read provisioning log data",
+            "value": "ProvisioningLog.Read.All",
+            "isPrivate": false
+        },
+        {
             "adminConsentDescription": "Allows the application to read certificate-based authentication configuration such as all public key infrastructures (PKI) and certificate authorities (CA) configured for the organization, on behalf of the signed-in user.",
             "adminConsentDisplayName": "Read certificate based authentication configurations",
             "id": "04a4b2a2-3f26-4fc8-87ee-9c46e68db175",
@@ -12877,6 +13158,17 @@
             "userConsentDescription": "Allows the app to read and write your organization's SPIFFE trust domains and child resources on your behalf.",
             "userConsentDisplayName": "Read and write SPIFFE trust domains and child resources",
             "value": "SpiffeTrustDomain.ReadWrite.All",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to modify the Viva Engage storyline and read all storyline properties on behalf of the signed-in user.",
+            "adminConsentDisplayName": "Read and write all Viva Engage storylines",
+            "id": "fd1d61cb-4e4b-4d15-a6d2-161348681d84",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to create Viva Engage storyline items and read all storyline properties on your behalf.",
+            "userConsentDisplayName": "Read and write all Viva Engage storylines",
+            "value": "Storyline.ReadWrite.All",
             "isPrivate": false
         },
         {
@@ -14076,6 +14368,28 @@
             "userConsentDescription": "Allows the app to report your app activity information to Microsoft Timeline.",
             "userConsentDisplayName": "Write app activity to your timeline",
             "value": "UserTimelineActivity.Write.CreatedByApp",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to read a user's windows settings which are stored in cloud and their values on behalf of the signed-in user.",
+            "adminConsentDisplayName": "Read windows settings for all devices",
+            "id": "77e07bab-1b34-40a5-bb6c-4b197b3f6027",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to read your windows settings which are stored in cloud and their values.",
+            "userConsentDisplayName": "Read your windows settings for all devices",
+            "value": "UserWindowsSettings.Read.All",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to read and write a user's windows settings which are stored in cloud and their values on behalf of the signed-in user.",
+            "adminConsentDisplayName": "Read and write windows settings for all devices",
+            "id": "dcb1026d-b7e1-4d31-9f61-6724d5140bf9",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to read and write your windows settings which are stored in cloud and their values.",
+            "userConsentDisplayName": "Read and write your windows settings for all devices",
+            "value": "UserWindowsSettings.ReadWrite.All",
             "isPrivate": false
         },
         {

@@ -1,0 +1,74 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "OopPrintDriversAllowed",
+        "Out-of-process print drivers allowed",
+        "\\Microsoft Edge\\Printing",
+        "Microsoft Edge\\Printing",
+        "Printing"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev134~Policy~microsoft_edge~Printing/OopPrintDriversAllowed",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edgev134~policy~microsoft_edge~printing_oopprintdriversallowed",
+    "categoryId": "c6099521-a05f-480a-8562-7e71318e2cda",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_microsoft_edgev134~policy~microsoft_edge~printing_oopprintdriversallowed",
+    "description": "This policy determines whether Microsoft Edge handles interactions with printer drivers through a separate service process.\r\n\r\nUsing a service process for tasks like querying available printers, retrieving print driver settings, and submitting documents to local printers improves browser stability and prevents UI freezing during Print Preview.\r\n\r\nEnabled or Not Set: Microsoft Edge will use a separate service process for these printing tasks.\r\n\r\nDisabled: Microsoft Edge will perform these printing tasks within the browser process.\r\n\r\nNote: This policy will be deprecated in the future once the transition to out-of-process print drivers is fully implemented.",
+    "helpText": "",
+    "name": "OopPrintDriversAllowed",
+    "displayName": "Out-of-process print drivers allowed",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edgev134~policy~microsoft_edge~printing_oopprintdriversallowed_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev134~policy~microsoft_edge~printing_oopprintdriversallowed_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev134~policy~microsoft_edge~printing_oopprintdriversallowed_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

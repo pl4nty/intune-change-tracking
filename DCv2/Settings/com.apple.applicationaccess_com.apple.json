@@ -169,6 +169,7 @@
         "com.apple.applicationaccess_allowuntrustedtlsprompt",
         "com.apple.applicationaccess_allowusbrestrictedmode",
         "com.apple.applicationaccess_allowvideoconferencing",
+        "com.apple.applicationaccess_allowvideoconferencingremotecontrol",
         "com.apple.applicationaccess_allowvisualintelligencesummary",
         "com.apple.applicationaccess_allowvoicedialing",
         "com.apple.applicationaccess_allowvpncreation",
@@ -212,8 +213,7 @@
         "com.apple.applicationaccess_safariallowautofill",
         "com.apple.applicationaccess_safariallowjavascript",
         "com.apple.applicationaccess_safariallowpopups",
-        "com.apple.applicationaccess_safariforcefraudwarning",
-        "com.apple.applicationaccess_allowvideoconferencingremotecontrol"
+        "com.apple.applicationaccess_safariforcefraudwarning"
     ],
     "maximumCount": 1,
     "minimumCount": 0,
@@ -823,6 +823,10 @@
             "required": false
         },
         {
+            "dependedOnBy": "com.apple.applicationaccess_allowvideoconferencingremotecontrol",
+            "required": false
+        },
+        {
             "dependedOnBy": "com.apple.applicationaccess_allowvisualintelligencesummary",
             "required": false
         },
@@ -996,10 +1000,6 @@
         },
         {
             "dependedOnBy": "com.apple.applicationaccess_safariforcefraudwarning",
-            "required": false
-        },
-        {
-            "dependedOnBy": "com.apple.applicationaccess_allowvideoconferencingremotecontrol",
             "required": false
         }
     ]

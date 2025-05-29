@@ -1,0 +1,84 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Enable Dynamic Signature Dropped Event Reporting",
+        "Defender"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/Defender-csp/"
+    ],
+    "baseUri": "./Vendor/MSFT/Defender",
+    "offsetUri": "/Configuration/Reporting/EnableDynamicSignatureDroppedEventReporting",
+    "rootDefinitionId": "device_vendor_msft_defender_configuration_reporting_enabledynamicsignaturedroppedeventreporting",
+    "categoryId": "e8400c82-34c8-4d6e-bbf9-85220f3205ea",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_defender_configuration_reporting_enabledynamicsignaturedroppedeventreporting",
+    "description": "This setting controls whether to report a Dynamic Security Intelligence Update dropped event. By default, such events are not reported.",
+    "helpText": "",
+    "name": "EnableDynamicSignatureDroppedEventReporting",
+    "displayName": "Enable Dynamic Signature Dropped Event Reporting",
+    "defaultOptionId": "device_vendor_msft_defender_configuration_reporting_enabledynamicsignaturedroppedeventreporting_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm,microsoftSense",
+        "configurationServiceProviderVersion": "1.3",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.14393",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_defender_configuration_reporting_enabledynamicsignaturedroppedeventreporting_0",
+            "description": "Dynamic Security intelligence update dropped events will not be reported.",
+            "helpText": null,
+            "name": "Dynamic Security intelligence update dropped events will not be reported.",
+            "displayName": "Dynamic Security intelligence update dropped events will not be reported.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_defender_configuration_reporting_enabledynamicsignaturedroppedeventreporting_1",
+            "description": "Dynamic Security intelligence update events will be reported.",
+            "helpText": null,
+            "name": "Dynamic Security intelligence update events will be reported.",
+            "displayName": "Dynamic Security intelligence update events will be reported.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}
