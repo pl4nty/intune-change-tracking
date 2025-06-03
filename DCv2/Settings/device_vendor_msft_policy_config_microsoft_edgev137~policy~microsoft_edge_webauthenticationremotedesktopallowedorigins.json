@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "WebAuthenticationRemoteDesktopAllowedOrigins",
+        "Allowed Origins for Proxied WebAuthn Requests from Remote Desktop Applications.",
+        "\\Microsoft Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev137~Policy~microsoft_edge/WebAuthenticationRemoteDesktopAllowedOrigins",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edgev137~policy~microsoft_edge_webauthenticationremotedesktopallowedorigins",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_microsoft_edgev137~policy~microsoft_edge_webauthenticationremotedesktopallowedorigins",
+    "description": "This policy defines a list of allowed HTTPS origins for remote desktop client applications that initiate WebAuthn API requests from a browsing session on a remote host.\r\n\r\nOrigins specified in this policy can request WebAuthn authentication for Relying Party IDs (RP IDs) they would not typically be authorized to claim.\r\n\r\nOnly HTTPS origins are supported. Wildcards are not permitted. Entries that do not\r\nmeet these requirements will be ignored.\r\n\r\nFor more information about the WebAuthn Remote Desktop Support feature, please see https://github.com/w3c/webauthn/wiki/Explainer:-Remote-Desktop-Support/a4e158c569f456c759d0ddd294a9015bd4d4eb9a.\r\n\r\nExample value:\r\n\r\nhttps://server:8080/",
+    "helpText": "",
+    "name": "WebAuthenticationRemoteDesktopAllowedOrigins",
+    "displayName": "Allowed Origins for Proxied WebAuthn Requests from Remote Desktop Applications.",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edgev137~policy~microsoft_edge_webauthenticationremotedesktopallowedorigins_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev137~policy~microsoft_edge_webauthenticationremotedesktopallowedorigins_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev137~policy~microsoft_edge_webauthenticationremotedesktopallowedorigins_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_microsoft_edgev137~policy~microsoft_edge_webauthenticationremotedesktopallowedorigins_webauthenticationremotedesktopallowedoriginsdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

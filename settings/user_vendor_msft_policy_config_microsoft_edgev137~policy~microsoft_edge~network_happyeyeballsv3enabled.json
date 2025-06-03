@@ -1,0 +1,74 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "HappyEyeballsV3Enabled",
+        "Use the Happy Eyeballs V3 algorithm for connection attempts",
+        "\\Microsoft Edge\\Network settings",
+        "Microsoft Edge\\Network settings",
+        "Network settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev137~Policy~microsoft_edge~Network/HappyEyeballsV3Enabled",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edgev137~policy~microsoft_edge~network_happyeyeballsv3enabled",
+    "categoryId": "3fbd3b29-bafd-4adf-89e4-3be612dee275",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_microsoft_edgev137~policy~microsoft_edge~network_happyeyeballsv3enabled",
+    "description": "Controls whether Microsoft Edge uses the Happy Eyeballs V3 algorithm to optimize connection attempts. This algorithm improves reliability and performance in dual-stack (IPv4/IPv6) networks by racing connection attempts across IP versions and HTTP protocols (e.g., HTTP/3 vs. others). For more details, see https://datatracker.ietf.org/doc/draft-pauly-happy-happyeyeballs-v3.\r\n\r\nEnabled or not configured: Uses the algorithm for connection attempts.\r\n\r\nDisabled: Disables the algorithm.\r\n\r\nNote: This policy supports dynamic refresh.\r\n\r\nImportant: This policy is temporary and will be removed in a future version.",
+    "helpText": "",
+    "name": "HappyEyeballsV3Enabled",
+    "displayName": "Use the Happy Eyeballs V3 algorithm for connection attempts (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edgev137~policy~microsoft_edge~network_happyeyeballsv3enabled_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev137~policy~microsoft_edge~network_happyeyeballsv3enabled_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev137~policy~microsoft_edge~network_happyeyeballsv3enabled_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}
