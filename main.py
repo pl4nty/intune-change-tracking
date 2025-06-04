@@ -106,13 +106,14 @@ async def main():
     if os.path.exists('RoleDefinitions'):
         shutil.rmtree('RoleDefinitions')
     os.makedirs('RoleDefinitions')
-    for provider in ["cloudPC", "deviceManagement", "directory", "entitlementManagement", "exchange"]:
+    for provider in ['cloudPC', 'deviceManagement', 'directory', 'entitlementManagement', 'exchange']:
         data = await client.service_principals.with_url(f'https://graph.microsoft.com/beta/roleManagement/{provider}/roleDefinitions').get(request_configuration=request_config)
         data = data.json().get('value')
+        os.makedirs(Path('RoleDefinitions', provider))
         if data:
             for x in data:
                 id = x.get('id')
-                with open(f'RoleDefinitions/{id}.json', 'w', encoding='utf-8') as f:
+                with open(f'RoleDefinitions/{provider}/{id}.json', 'w', encoding='utf-8') as f:
                     json.dump(x, f, ensure_ascii=False, indent=4)
 
      # Resource operations
