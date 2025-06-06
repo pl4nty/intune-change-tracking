@@ -236,6 +236,13 @@
                 "isEnabled": true
             },
             {
+                "description": "Read attendance reports & attendance records for this webinar or town hall.",
+                "displayName": "Read virtual event artifacts",
+                "id": "c5d06837-8c0d-42fc-9e49-545e3f941261",
+                "value": "OnlineMeetingArtifact.Read.Chat",
+                "isEnabled": true
+            },
+            {
                 "description": "Allows the app to send notifications inside meetings associated with this chat, without a signed-in user.",
                 "displayName": "Send notifications in the meetings associated with this chat",
                 "id": "d9837fe0-9c31-4faa-8acb-b10874560161",
@@ -401,6 +408,20 @@
                 "displayName": "Manage this team's tabs",
                 "id": "717ca3a4-bc73-47f8-b613-4d43e657fa9c",
                 "value": "TeamsTab.ReadWrite.Group",
+                "isEnabled": true
+            },
+            {
+                "description": "Read information for this webinars or town halls, including schedules, speakers, and event settings and webinar registrations.",
+                "displayName": "Read virtual event details",
+                "id": "298266a0-fbf7-4804-b988-5a54e61566c8",
+                "value": "VirtualEvent.Read.Chat",
+                "isEnabled": true
+            },
+            {
+                "description": "Register attendees and cancel registrations for this webinar.",
+                "displayName": "Manage virtual event registrations",
+                "id": "0e646cc8-6b07-4030-9a41-a7db4644b4cc",
+                "value": "VirtualEventRegistration-Anon.ReadWrite.Chat",
                 "isEnabled": true
             }
         ]
@@ -2704,6 +2725,19 @@
             "isEnabled": true,
             "origin": "Application",
             "value": "EngagementConversation.Migration.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to list Viva Engage Teams QA conversations, and to read their properties without a signed-in user.",
+            "displayName": "Read all Viva Engage Teams QA conversations",
+            "id": "d746beae-b46e-446e-924a-5b805a5c4467",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "EngagementMeetingConversation.Read.All",
             "isPreAuthorizationRequired": false,
             "isPrivate": false
         },
@@ -9773,6 +9807,17 @@
             "isPrivate": false
         },
         {
+            "adminConsentDescription": "Allows the app to read Viva Engage Teams QA conversations, and to read their properties on behalf of the signed-in user.",
+            "adminConsentDisplayName": "Read all Viva Engage Teams QA conversations",
+            "id": "58c5819e-29bd-4400-ad52-82cd82a63fbd",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to list Viva Engage conversations, and to read their properties on your behalf.",
+            "userConsentDisplayName": "Read all Viva Engage Teams QA conversations",
+            "value": "EngagementMeetingConversation.Read.All",
+            "isPrivate": false
+        },
+        {
             "adminConsentDescription": "Allows the app to list a user's Viva Engage roles, on behalf of the signed-in user.",
             "adminConsentDisplayName": "Read a user's Viva Engage roles ",
             "id": "9f1da0fc-345c-4dfb-bab5-5215a073a417",
@@ -12930,6 +12975,50 @@
             "isPrivate": false
         },
         {
+            "adminConsentDescription": "Allow the app to determine if there is any sensitivity label to be applied automatically to the content or recommended to the user for manual application, on behalf of the signed-in user.",
+            "adminConsentDisplayName": "Evaluate sensitivity labels",
+            "id": "a4633e44-d355-4474-99df-8c2de6b0e39e",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allow the app to determine if there is any sensitivity label to be applied automatically to the content or recommended to the user for manual application, on your behalf.",
+            "userConsentDisplayName": "Evaluate sensitivity labels",
+            "value": "SensitivityLabel.Evaluate",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to evaluate all sensitivity label.",
+            "adminConsentDisplayName": "Evaluate labels tenant scope.",
+            "id": "a42e3c42-b31e-4919-b699-696dca5dc9e7",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Evaluate labels tenant scope, on your behalf.",
+            "userConsentDisplayName": "Evaluate labels tenant scope",
+            "value": "SensitivityLabel.Evaluate.All",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to get sensitivity labels.",
+            "adminConsentDisplayName": "Get labels user scope.",
+            "id": "1aeb73ce-68d7-49b7-913a-eedc80844551",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Get labels tenant scope, on your behalf.",
+            "userConsentDisplayName": "Get labels user scope",
+            "value": "SensitivityLabel.Read",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to get sensitivity labels.",
+            "adminConsentDisplayName": "Get labels app scope.",
+            "id": "8b377c27-ea19-4863-a948-8a8588c8f2c3",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Get labels on behalf of user.",
+            "userConsentDisplayName": "Get labels on behalf of user",
+            "value": "SensitivityLabels.Read.All",
+            "isPrivate": false
+        },
+        {
             "adminConsentDescription": "Allows the app to read all Exchange service activity, on behalf of the signed-in user.",
             "adminConsentDisplayName": "Read all Exchange service activity",
             "id": "1fe7aa48-9373-4a47-8df3-168335e0f4c9",
@@ -14338,6 +14427,17 @@
             "isPrivate": false
         },
         {
+            "adminConsentDescription": "Allows the app to read cloud clipboard data on behalf of the signed-in user.",
+            "adminConsentDisplayName": "Read cloud clipboard items",
+            "id": "61e8a09a-087f-4e36-8c8c-1c77c5228017",
+            "isEnabled": true,
+            "type": "User",
+            "userConsentDescription": "Allows the app to read your cloud clipboard items.",
+            "userConsentDisplayName": "Read cloud clipboard items",
+            "value": "UserCloudClipboard.Read",
+            "isPrivate": false
+        },
+        {
             "adminConsentDescription": "Allows the app to send, read, update and delete user’s notifications.",
             "adminConsentDisplayName": "Deliver and manage user's notifications",
             "id": "26e2f3e8-b2a1-47fc-9620-89bb5b042024",
@@ -14666,6 +14766,13 @@
             "isEnabled": true
         },
         {
+            "description": "Read attendance reports & attendance records for this webinar or town hall.",
+            "displayName": "Read virtual event artifacts",
+            "id": "c5d06837-8c0d-42fc-9e49-545e3f941261",
+            "value": "OnlineMeetingArtifact.Read.Chat",
+            "isEnabled": true
+        },
+        {
             "description": "Allows the app to send notifications inside meetings associated with this chat, without a signed-in user.",
             "displayName": "Send notifications in the meetings associated with this chat",
             "id": "d9837fe0-9c31-4faa-8acb-b10874560161",
@@ -14831,6 +14938,20 @@
             "displayName": "Manage this team's tabs",
             "id": "717ca3a4-bc73-47f8-b613-4d43e657fa9c",
             "value": "TeamsTab.ReadWrite.Group",
+            "isEnabled": true
+        },
+        {
+            "description": "Read information for this webinars or town halls, including schedules, speakers, and event settings and webinar registrations.",
+            "displayName": "Read virtual event details",
+            "id": "298266a0-fbf7-4804-b988-5a54e61566c8",
+            "value": "VirtualEvent.Read.Chat",
+            "isEnabled": true
+        },
+        {
+            "description": "Register attendees and cancel registrations for this webinar.",
+            "displayName": "Manage virtual event registrations",
+            "id": "0e646cc8-6b07-4030-9a41-a7db4644b4cc",
+            "value": "VirtualEventRegistration-Anon.ReadWrite.Chat",
             "isEnabled": true
         }
     ],
