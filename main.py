@@ -170,9 +170,6 @@ async def main():
         path = Path(output, source, item.get('id')).with_suffix('.json')
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(item, f, ensure_ascii=False, indent=4)
-    # backwards compat
-    shutil.rmtree('settings')
-    shutil.copytree(Path(output, source), 'settings')
 
     # DCv2 compliance
     source = 'Compliance'
