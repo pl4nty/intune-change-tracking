@@ -47,7 +47,7 @@
                         },
                         {
                             "validationType": 2,
-                            "validationArguments": "(?:^\\{\\{OnPrem_Distinguished_Name\\}\\}$)|(?:^CN=(?:[^\\{\\},=]+?(?=,*)|[^\\{\\}=,]*?(?:\\{\\{(?:UserName|EmailAddress|OnPrem_Distinguished_Name|onPremisesSamAccountName|UserPrincipalName|Department|AAD_Device_ID|Device_Serial|Device_IMEI|SerialNumber|IMEINumber|AzureADDeviceId|WiFiMacAddress|IMEI|DeviceName|DeviceId|MEID)\\}\\}[^\\{\\}=,]*?)+(?=,*))(?:,(?:L|O|OU|E|Email|C|S|ST|STREET|T|Title|G|GivenName|Initials|SN|DC)=(?:[^\\{\\}=,]+?(?=,*)|[^\\{\\}=,]*?(?:\\{\\{(?:UserName|EmailAddress|OnPrem_Distinguished_Name|onPremisesSamAccountName|UserPrincipalName|Department|AAD_Device_ID|Device_Serial|Device_IMEI|SerialNumber|IMEINumber|AzureADDeviceId|WiFiMacAddress|IMEI|DeviceName|DeviceId|MEID)\\}\\}[^\\{\\}=,]*?)+(?=,*)))*$)",
+                            "validationArguments": "(?:^\\{\\{OnPrem_Distinguished_Name\\}\\}$)|(?:^CN=(?:[^\\{\\},=]+?(?=,*)|[^\\{\\}=,]*?(?:\\{\\{(?:UserName|EmailAddress|OnPrem_Distinguished_Name|onPremisesSamAccountName|UserPrincipalName|Department|GivenName|Surname|AAD_Device_ID|Device_Serial|Device_IMEI|SerialNumber|IMEINumber|AzureADDeviceId|WiFiMacAddress|IMEI|DeviceName|DeviceId|MEID)\\}\\}[^\\{\\}=,]*?)+(?=,*))(?:,(?:L|O|OU|E|Email|C|S|ST|STREET|T|Title|G|GivenName|Initials|SN|DC)=(?:[^\\{\\}=,]+?(?=,*)|[^\\{\\}=,]*?(?:\\{\\{(?:UserName|EmailAddress|OnPrem_Distinguished_Name|onPremisesSamAccountName|UserPrincipalName|Department|GivenName|Surname|AAD_Device_ID|Device_Serial|Device_IMEI|SerialNumber|IMEINumber|AzureADDeviceId|WiFiMacAddress|IMEI|DeviceName|DeviceId|MEID)\\}\\}[^\\{\\}=,]*?)+(?=,*)))*$)",
                             "failureMessage": "sCEPPolicyCustomSubjectNameFormatDescription"
                         },
                         {
@@ -167,7 +167,7 @@
                                 "validation": [
                                     {
                                         "validationType": 2,
-                                        "validationArguments": "\\w*\\{\\{OnPremisesSecurityIdentifier\\}\\}\\w*|^(?:(?:(?:(?:{{(?:UserName|EmailAddress|OnPrem_Distinguished_Name|onPremisesSamAccountName|UserPrincipalName|Department|AAD_Device_ID|Device_Serial|Device_IMEI|SerialNumber|IMEINumber|AzureADDeviceId|WiFiMacAddress|IMEI|DeviceName|DeviceId|MEID)}}))|(?:[^{}|;]))+)$",
+                                        "validationArguments": "\\w*\\{\\{OnPremisesSecurityIdentifier\\}\\}\\w*|^(?:(?:(?:(?:{{(?:UserName|EmailAddress|OnPrem_Distinguished_Name|onPremisesSamAccountName|UserPrincipalName|Department|GivenName|Surname|AAD_Device_ID|Device_Serial|Device_IMEI|SerialNumber|IMEINumber|AzureADDeviceId|WiFiMacAddress|IMEI|DeviceName|DeviceId|MEID)}}))|(?:[^{}|;]))+)$",
                                         "failureMessage": "sCEPPolicyCustomSubjectAlternativeNameForUserDescription"
                                     }
                                 ],
