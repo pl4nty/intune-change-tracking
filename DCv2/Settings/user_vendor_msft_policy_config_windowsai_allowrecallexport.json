@@ -1,0 +1,73 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Allow Recall Export",
+        "Windows AI"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-WindowsAI#allowrecallexport"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/WindowsAI/AllowRecallExport",
+    "rootDefinitionId": "user_vendor_msft_policy_config_windowsai_allowrecallexport",
+    "categoryId": "33a43c22-104b-4683-995b-5652cfd5b490",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_windowsai_allowrecallexport",
+    "description": "This policy allows you to determine whether Recall and snapshot information can be exported. Recall and snapshot information may be sensitive, and the files that are exported are unencrypted. Users can export from Settings > Privacy & Security > Recall & Snapshots > Advanced Settings > Export your Recall and snapshot info. Users are warned that the files are unencrypted before exporting. When you set this policy to enabled, users will be able to export Recall and snapshot information. If the policy is set to disabled or not configured, users will not be able to export their Recall and snapshot information.\r\n This setting is only available to Windows Insiders",
+    "helpText": "",
+    "name": "AllowRecallExport",
+    "displayName": "Allow Recall Export (User) (Windows Insiders only)",
+    "defaultOptionId": "user_vendor_msft_policy_config_windowsai_allowrecallexport_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.25272",
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_windowsai_allowrecallexport_0",
+            "description": "Deny export of Recall and snapshots information",
+            "helpText": null,
+            "name": "Deny export of Recall and snapshots information",
+            "displayName": "Deny export of Recall and snapshots information",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_windowsai_allowrecallexport_1",
+            "description": "Allow export of Recall and snapshot information",
+            "helpText": null,
+            "name": "Allow export of Recall and snapshot information",
+            "displayName": "Allow export of Recall and snapshot information",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}
