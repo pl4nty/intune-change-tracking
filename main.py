@@ -160,7 +160,6 @@ async def main():
 
     # DCv1 settingDefinitions
     output = 'DCv1'
-    shutil.rmtree(output)
     source = 'Settings'
     os.makedirs(Path(output, source))
     data = await client.device_management.with_url('https://graph.microsoft.com/beta/deviceManagement/settingDefinitions').get(request_configuration=request_config)
