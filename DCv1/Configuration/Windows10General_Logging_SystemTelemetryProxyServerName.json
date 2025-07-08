@@ -1,0 +1,32 @@
+{
+    "id": "Windows10General_Logging_SystemTelemetryProxyServerName",
+    "dataType": 20,
+    "category": 80,
+    "nameResourceKey": "SystemTelemetryProxyServerName",
+    "descriptionResourceKey": "SystemTelemetryProxyServerDescription",
+    "emptyValueResourceKey": "SystemTelemetryProxyServerExample",
+    "inputControlLength": 0,
+    "validation": [
+        {
+            "validationType": 2,
+            "validationArguments": "^[a-zA-Z0-9:\\.\\[\\]]*$",
+            "failureMessage": "containsBadCharacters"
+        },
+        {
+            "validationType": 2,
+            "validationArguments": "^.+:(\\d{1,5})$",
+            "failureMessage": "incorrectPortNumber"
+        }
+    ],
+    "childSettings": [],
+    "options": [],
+    "isRequired": false,
+    "entityKey": "systemTelemetryProxyServer",
+    "booleanActions": 0,
+    "policyType": 79,
+    "flipChildrenEnabledLogic": false,
+    "readOnly": false,
+    "writeOnce": false,
+    "enabled": true,
+    "multiItemIncludeSelectAll": false
+}

@@ -1,0 +1,1485 @@
+{
+    "hideAddById": false,
+    "hideAddByUrl": true,
+    "includeWebApps": false,
+    "excludeAppIds": [],
+    "appTypes": [],
+    "addNewItemsToTop": false,
+    "blockInlineAdd": true,
+    "hideHeader": false,
+    "hideCsvImport": true,
+    "hideCsvExport": true,
+    "hideTableSection": false,
+    "isDependentTable": false,
+    "labelAndButtonsInline": false,
+    "noItemsTextId": "FirewallNoRulesMessage",
+    "hideLabelAndButtons": false,
+    "combineUniquenessKeysIntoSingleKey": false,
+    "columns": [
+        {
+            "hideFromEditor": false,
+            "hideFromGrid": false,
+            "columnNameOverride": "firewallRuleHeader",
+            "isEditableInline": false,
+            "metadata": {
+                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRuleName",
+                "dataType": 20,
+                "category": 36,
+                "nameResourceKey": "firewallRuleName",
+                "descriptionResourceKey": "firewallRuleNameTooltip",
+                "emptyValueResourceKey": "firewallRuleNamePlaceholder",
+                "inputControlLength": 50,
+                "validation": [
+                    {
+                        "validationType": 5,
+                        "validationArguments": "|",
+                        "failureMessage": "pipeInvalidError"
+                    },
+                    {
+                        "validationType": 1,
+                        "failureMessage": "nameBlankError"
+                    },
+                    {
+                        "validationType": 16,
+                        "validationArguments": 200
+                    },
+                    {
+                        "validationType": 5,
+                        "validationArguments": "/",
+                        "failureMessage": "forwardSlashInvalidError"
+                    }
+                ],
+                "childSettings": [],
+                "options": [],
+                "isRequired": true,
+                "entityKey": "displayName",
+                "booleanActions": 0,
+                "policyType": 77,
+                "flipChildrenEnabledLogic": false,
+                "readOnly": false,
+                "writeOnce": false,
+                "enabled": false,
+                "flightingFeatureName": "enableFirewallCustomRules",
+                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                "multiItemIncludeSelectAll": false
+            }
+        },
+        {
+            "hideFromEditor": false,
+            "hideFromGrid": true,
+            "isEditableInline": false,
+            "metadata": {
+                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRuleDescription",
+                "dataType": 20,
+                "category": 36,
+                "nameResourceKey": "firewallRuleDescription",
+                "descriptionResourceKey": "firewallRuleDescriptionTooltip",
+                "emptyValueResourceKey": "firewallRuleDescriptionPlaceholder",
+                "inputControlLength": 50,
+                "validation": [],
+                "childSettings": [],
+                "options": [],
+                "isRequired": false,
+                "entityKey": "description",
+                "booleanActions": 0,
+                "policyType": 77,
+                "flipChildrenEnabledLogic": false,
+                "readOnly": false,
+                "writeOnce": false,
+                "enabled": false,
+                "flightingFeatureName": "enableFirewallCustomRules",
+                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                "multiItemIncludeSelectAll": false
+            }
+        },
+        {
+            "hideFromEditor": false,
+            "hideFromGrid": true,
+            "isEditableInline": false,
+            "metadata": {
+                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRuleDirection",
+                "dataType": 16,
+                "category": 36,
+                "nameResourceKey": "firewallRuleDirection",
+                "descriptionResourceKey": "firewallRuleDirectionTooltip",
+                "inputControlLength": 50,
+                "validation": [],
+                "childSettings": [],
+                "options": [
+                    {
+                        "nameResourceKey": "notConfigured",
+                        "value": "notConfigured",
+                        "isRequired": false,
+                        "isDisabled": false,
+                        "retainValuesOnDeSelection": false,
+                        "deleteValuesOnDeSelection": false,
+                        "hidden": false,
+                        "enabled": true
+                    },
+                    {
+                        "nameResourceKey": "firewallRuleDirectionInbound",
+                        "value": "in",
+                        "isRequired": false,
+                        "isDisabled": false,
+                        "retainValuesOnDeSelection": false,
+                        "deleteValuesOnDeSelection": false,
+                        "hidden": false,
+                        "enabled": true
+                    },
+                    {
+                        "nameResourceKey": "firewallRuleDirectionOutbound",
+                        "value": "out",
+                        "isRequired": false,
+                        "isDisabled": false,
+                        "retainValuesOnDeSelection": false,
+                        "deleteValuesOnDeSelection": false,
+                        "hidden": false,
+                        "enabled": true
+                    }
+                ],
+                "isRequired": false,
+                "entityKey": "trafficDirection",
+                "booleanActions": 0,
+                "defaultValue": "notConfigured",
+                "policyType": 77,
+                "flipChildrenEnabledLogic": false,
+                "readOnly": false,
+                "writeOnce": false,
+                "enabled": false,
+                "flightingFeatureName": "enableFirewallCustomRules",
+                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                "multiItemIncludeSelectAll": false
+            }
+        },
+        {
+            "hideFromEditor": false,
+            "hideFromGrid": true,
+            "isEditableInline": false,
+            "metadata": {
+                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRuleAction",
+                "dataType": 16,
+                "category": 36,
+                "nameResourceKey": "firewallRuleAction",
+                "descriptionResourceKey": "firewallRuleActionTooltip",
+                "inputControlLength": 50,
+                "validation": [],
+                "childSettings": [],
+                "options": [
+                    {
+                        "nameResourceKey": "notConfigured",
+                        "value": "notConfigured",
+                        "isRequired": false,
+                        "isDisabled": false,
+                        "retainValuesOnDeSelection": false,
+                        "deleteValuesOnDeSelection": false,
+                        "hidden": false,
+                        "enabled": true
+                    },
+                    {
+                        "nameResourceKey": "blockOption",
+                        "value": "blocked",
+                        "isRequired": false,
+                        "isDisabled": false,
+                        "retainValuesOnDeSelection": false,
+                        "deleteValuesOnDeSelection": false,
+                        "hidden": false,
+                        "enabled": true
+                    },
+                    {
+                        "nameResourceKey": "allowOption",
+                        "value": "allowed",
+                        "isRequired": false,
+                        "isDisabled": false,
+                        "retainValuesOnDeSelection": false,
+                        "deleteValuesOnDeSelection": false,
+                        "hidden": false,
+                        "enabled": true
+                    }
+                ],
+                "isRequired": false,
+                "entityKey": "action",
+                "booleanActions": 0,
+                "defaultValue": "notConfigured",
+                "policyType": 77,
+                "flipChildrenEnabledLogic": false,
+                "readOnly": false,
+                "writeOnce": false,
+                "enabled": false,
+                "flightingFeatureName": "enableFirewallCustomRules",
+                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                "multiItemIncludeSelectAll": false
+            }
+        },
+        {
+            "hideFromEditor": false,
+            "hideFromGrid": true,
+            "isEditableInline": false,
+            "metadata": {
+                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRuleNetworkType",
+                "dataType": 13,
+                "category": 36,
+                "nameResourceKey": "firewallRuleNetworkType",
+                "descriptionResourceKey": "firewallRuleNetworkTypeTooltip",
+                "inputControlLength": 50,
+                "validation": [],
+                "childSettings": [],
+                "options": [
+                    {
+                        "nameResourceKey": "firewallRuleNetworkTypeDomain",
+                        "value": "domain",
+                        "isRequired": false,
+                        "isDisabled": false,
+                        "retainValuesOnDeSelection": false,
+                        "deleteValuesOnDeSelection": false,
+                        "hidden": false,
+                        "enabled": true
+                    },
+                    {
+                        "nameResourceKey": "firewallRuleNetworkTypePrivate",
+                        "value": "private",
+                        "isRequired": false,
+                        "isDisabled": false,
+                        "retainValuesOnDeSelection": false,
+                        "deleteValuesOnDeSelection": false,
+                        "hidden": false,
+                        "enabled": true
+                    },
+                    {
+                        "nameResourceKey": "firewallRuleNetworkTypePublic",
+                        "value": "public",
+                        "isRequired": false,
+                        "isDisabled": false,
+                        "retainValuesOnDeSelection": false,
+                        "deleteValuesOnDeSelection": false,
+                        "hidden": false,
+                        "enabled": true
+                    }
+                ],
+                "isRequired": false,
+                "entityKey": "profileTypes",
+                "booleanActions": 0,
+                "defaultValue": "notConfigured",
+                "policyType": 77,
+                "flipChildrenEnabledLogic": false,
+                "readOnly": false,
+                "writeOnce": false,
+                "enabled": false,
+                "flightingFeatureName": "enableFirewallCustomRules",
+                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                "multiItemIncludeSelectAll": false
+            }
+        },
+        {
+            "hideFromEditor": false,
+            "hideFromGrid": true,
+            "isEditableInline": false,
+            "metadata": {
+                "disableTopPadding": false,
+                "isSettingDescription": false,
+                "showAsSectionHeader": false,
+                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRuleApplicationSettingsHeader",
+                "dataType": 8,
+                "category": 36,
+                "nameResourceKey": "firewallRuleApplicationSettingsHeader",
+                "inputControlLength": 0,
+                "validation": [],
+                "childSettings": [],
+                "options": [],
+                "isRequired": false,
+                "booleanActions": 0,
+                "policyType": 77,
+                "flipChildrenEnabledLogic": false,
+                "readOnly": false,
+                "writeOnce": false,
+                "enabled": false,
+                "flightingFeatureName": "enableFirewallCustomRules",
+                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                "multiItemIncludeSelectAll": false
+            }
+        },
+        {
+            "hideFromEditor": false,
+            "hideFromGrid": true,
+            "isEditableInline": false,
+            "metadata": {
+                "disableTopPadding": true,
+                "isSettingDescription": true,
+                "showAsSectionHeader": false,
+                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRuleApplicationSettingsSubheader",
+                "dataType": 8,
+                "category": 36,
+                "nameResourceKey": "firewallRuleApplicationSettingsSubheader",
+                "inputControlLength": 0,
+                "validation": [],
+                "childSettings": [],
+                "options": [],
+                "isRequired": false,
+                "booleanActions": 0,
+                "policyType": 77,
+                "flipChildrenEnabledLogic": false,
+                "readOnly": false,
+                "writeOnce": false,
+                "enabled": false,
+                "flightingFeatureName": "enableFirewallCustomRules",
+                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                "multiItemIncludeSelectAll": false
+            }
+        },
+        {
+            "hideFromEditor": false,
+            "hideFromGrid": true,
+            "isEditableInline": false,
+            "metadata": {
+                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRuleApplication",
+                "dataType": 16,
+                "category": 36,
+                "nameResourceKey": "firewallRuleApplication",
+                "descriptionResourceKey": "firewallRuleApplicationTooltip",
+                "inputControlLength": 50,
+                "validation": [],
+                "childSettings": [],
+                "options": [
+                    {
+                        "nameResourceKey": "firewallRuleAllOption",
+                        "value": "all",
+                        "isRequired": false,
+                        "isDisabled": false,
+                        "retainValuesOnDeSelection": false,
+                        "deleteValuesOnDeSelection": false,
+                        "hidden": false,
+                        "enabled": true
+                    },
+                    {
+                        "nameResourceKey": "firewallRulePackageFamilyName",
+                        "value": "packageFamilyName",
+                        "children": [
+                            {
+                                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRulePackageFamilyName",
+                                "dataType": 20,
+                                "category": 36,
+                                "nameResourceKey": "firewallRulePackageFamilyName",
+                                "descriptionResourceKey": "firewallRulePackageFamilyNameTooltip",
+                                "emptyValueResourceKey": "firewallRulePackageFamilyNamePlaceholder",
+                                "helpLink": "https://aka.ms/AppXPackageNameFromPowerShell",
+                                "helpLinkTextResourceKey": "learnMore",
+                                "inputControlLength": 50,
+                                "validation": [
+                                    {
+                                        "validationType": 5,
+                                        "validationArguments": "|",
+                                        "failureMessage": "pipeInvalidError"
+                                    },
+                                    {
+                                        "validationType": 1,
+                                        "failureMessage": "packageFamilyNameBlankError"
+                                    },
+                                    {
+                                        "validationType": 16,
+                                        "validationArguments": 64
+                                    },
+                                    {
+                                        "validationType": 5,
+                                        "validationArguments": "._",
+                                        "failureMessage": "packageFamilyNameInvalidOrWrongFormatError"
+                                    },
+                                    {
+                                        "validationType": 2,
+                                        "validationArguments": "^[a-zA-Z0-9\\-\\.]{3,50}_[a-zA-Z0-9]{13}$",
+                                        "failureMessage": "packageFamilyNameInvalidOrWrongFormatError"
+                                    },
+                                    {
+                                        "validationType": 2,
+                                        "validationArguments": "^(?!CON_|PRN_|AUX_|NUL_|COM1_|COM2_|COM3_|COM4_|COM5_|COM6_|COM7_|COM8_|COM9_|LPT1_|LPT2_|LPT3_|LPT4_|LPT5_|LPT6_|LPT7_|LPT8_|LPT9_).*$",
+                                        "failureMessage": "packageFamilyNameInvalidOrWrongFormatError"
+                                    }
+                                ],
+                                "childSettings": [],
+                                "options": [],
+                                "isRequired": true,
+                                "entityKey": "packageFamilyName",
+                                "booleanActions": 0,
+                                "policyType": 77,
+                                "flipChildrenEnabledLogic": false,
+                                "readOnly": false,
+                                "writeOnce": false,
+                                "enabled": false,
+                                "flightingFeatureName": "enableFirewallCustomRules",
+                                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                                "multiItemIncludeSelectAll": false
+                            }
+                        ],
+                        "isRequired": false,
+                        "isDisabled": false,
+                        "retainValuesOnDeSelection": false,
+                        "deleteValuesOnDeSelection": false,
+                        "hidden": false,
+                        "enabled": true
+                    },
+                    {
+                        "nameResourceKey": "firewallRuleFileName",
+                        "value": "filePath",
+                        "children": [
+                            {
+                                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRuleFileName",
+                                "dataType": 20,
+                                "category": 36,
+                                "nameResourceKey": "firewallRuleFileName",
+                                "descriptionResourceKey": "firewallRuleFileNameTooltip",
+                                "emptyValueResourceKey": "firewallRuleFileNamePlaceholder",
+                                "helpLink": "https://aka.ms/intunefirewallfilepathrule",
+                                "helpLinkTextResourceKey": "learnMore",
+                                "inputControlLength": 50,
+                                "validation": [
+                                    {
+                                        "validationType": 5,
+                                        "validationArguments": "|",
+                                        "failureMessage": "pipeInvalidError"
+                                    },
+                                    {
+                                        "validationType": 1,
+                                        "failureMessage": "fileNameBlankError"
+                                    },
+                                    {
+                                        "validationType": 16,
+                                        "validationArguments": 259
+                                    },
+                                    {
+                                        "validationType": 5,
+                                        "validationArguments": "/",
+                                        "failureMessage": "forwardSlashInvalidError"
+                                    }
+                                ],
+                                "childSettings": [],
+                                "options": [],
+                                "isRequired": true,
+                                "entityKey": "filePath",
+                                "booleanActions": 0,
+                                "policyType": 77,
+                                "flipChildrenEnabledLogic": false,
+                                "readOnly": false,
+                                "writeOnce": false,
+                                "enabled": false,
+                                "flightingFeatureName": "enableFirewallCustomRules",
+                                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                                "multiItemIncludeSelectAll": false
+                            }
+                        ],
+                        "isRequired": false,
+                        "isDisabled": false,
+                        "retainValuesOnDeSelection": false,
+                        "deleteValuesOnDeSelection": false,
+                        "hidden": false,
+                        "enabled": true
+                    },
+                    {
+                        "nameResourceKey": "firewallRuleServiceName",
+                        "value": "serviceName",
+                        "children": [
+                            {
+                                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRuleServiceName",
+                                "dataType": 20,
+                                "category": 36,
+                                "nameResourceKey": "firewallRuleServiceName",
+                                "descriptionResourceKey": "firewallRuleServiceNameTooltip",
+                                "emptyValueResourceKey": "firewallRuleServiceNamePlaceholder",
+                                "helpLink": "https://aka.ms/intunefirewallservicenamerule",
+                                "helpLinkTextResourceKey": "learnMore",
+                                "inputControlLength": 50,
+                                "validation": [
+                                    {
+                                        "validationType": 5,
+                                        "validationArguments": "|",
+                                        "failureMessage": "pipeInvalidError"
+                                    },
+                                    {
+                                        "validationType": 1,
+                                        "failureMessage": "serviceNameBlankError"
+                                    },
+                                    {
+                                        "validationType": 16,
+                                        "validationArguments": 259
+                                    },
+                                    {
+                                        "validationType": 5,
+                                        "validationArguments": "\\",
+                                        "failureMessage": "backwardSlashInvalidError"
+                                    },
+                                    {
+                                        "validationType": 5,
+                                        "validationArguments": "\"",
+                                        "failureMessage": "quotationInvalidError"
+                                    },
+                                    {
+                                        "validationType": 5,
+                                        "validationArguments": "/",
+                                        "failureMessage": "forwardSlashInvalidError"
+                                    }
+                                ],
+                                "childSettings": [],
+                                "options": [],
+                                "isRequired": true,
+                                "entityKey": "serviceName",
+                                "booleanActions": 0,
+                                "policyType": 77,
+                                "flipChildrenEnabledLogic": false,
+                                "readOnly": false,
+                                "writeOnce": false,
+                                "enabled": false,
+                                "flightingFeatureName": "enableFirewallCustomRules",
+                                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                                "linkedValidation": {
+                                    "entityKey": "localUserAuthorizations",
+                                    "linkedValidationType": 5,
+                                    "validationMessageKey": "firewallRuleServiceNameSetWithPopulatedUserListConflict"
+                                },
+                                "multiItemIncludeSelectAll": false
+                            }
+                        ],
+                        "isRequired": false,
+                        "isDisabled": false,
+                        "retainValuesOnDeSelection": false,
+                        "deleteValuesOnDeSelection": false,
+                        "hidden": false,
+                        "enabled": true
+                    }
+                ],
+                "isRequired": false,
+                "entityKey": "firewallRuleSyntheticApplicationKey",
+                "booleanActions": 0,
+                "defaultValue": "all",
+                "policyType": 77,
+                "flipChildrenEnabledLogic": false,
+                "readOnly": false,
+                "writeOnce": false,
+                "enabled": false,
+                "flightingFeatureName": "enableFirewallCustomRules",
+                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                "multiItemIncludeSelectAll": false
+            }
+        },
+        {
+            "hideFromEditor": false,
+            "hideFromGrid": true,
+            "isEditableInline": false,
+            "metadata": {
+                "disableTopPadding": false,
+                "isSettingDescription": false,
+                "showAsSectionHeader": false,
+                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRuleIPAddressSettingsHeader",
+                "dataType": 8,
+                "category": 36,
+                "nameResourceKey": "firewallRuleIPAddressSettingsHeader",
+                "inputControlLength": 0,
+                "validation": [],
+                "childSettings": [],
+                "options": [],
+                "isRequired": false,
+                "booleanActions": 0,
+                "policyType": 77,
+                "flipChildrenEnabledLogic": false,
+                "readOnly": false,
+                "writeOnce": false,
+                "enabled": false,
+                "flightingFeatureName": "enableFirewallCustomRules",
+                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                "multiItemIncludeSelectAll": false
+            }
+        },
+        {
+            "hideFromEditor": false,
+            "hideFromGrid": true,
+            "isEditableInline": false,
+            "metadata": {
+                "disableTopPadding": true,
+                "isSettingDescription": true,
+                "showAsSectionHeader": false,
+                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRuleIPAddressSettingsSubheader",
+                "dataType": 8,
+                "category": 36,
+                "nameResourceKey": "firewallRuleIPAddressSettingsSubheader",
+                "inputControlLength": 0,
+                "validation": [],
+                "childSettings": [],
+                "options": [],
+                "isRequired": false,
+                "booleanActions": 0,
+                "policyType": 77,
+                "flipChildrenEnabledLogic": false,
+                "readOnly": false,
+                "writeOnce": false,
+                "enabled": false,
+                "flightingFeatureName": "enableFirewallCustomRules",
+                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                "multiItemIncludeSelectAll": false
+            }
+        },
+        {
+            "hideFromEditor": false,
+            "hideFromGrid": true,
+            "isEditableInline": false,
+            "metadata": {
+                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRuleIPAddressSettingsLocal",
+                "dataType": 16,
+                "category": 36,
+                "nameResourceKey": "firewallRuleIPAddressSettingsLocal",
+                "descriptionResourceKey": "firewallRuleIPAddressSettingsLocalTooltip",
+                "inputControlLength": 50,
+                "validation": [],
+                "childSettings": [],
+                "options": [
+                    {
+                        "nameResourceKey": "firewallRulesAnyAddressOption",
+                        "value": "all",
+                        "isRequired": false,
+                        "isDisabled": false,
+                        "retainValuesOnDeSelection": false,
+                        "deleteValuesOnDeSelection": false,
+                        "hidden": false,
+                        "enabled": true
+                    },
+                    {
+                        "nameResourceKey": "firewallRuleIPAddressSettingsSpecifiedAddressOption",
+                        "value": "specificValue",
+                        "children": [
+                            {
+                                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRuleIPAddressSettingsAddresses",
+                                "dataType": 20,
+                                "category": 36,
+                                "nameResourceKey": "firewallRuleIPAddressSettingsAddresses",
+                                "emptyValueResourceKey": "firewallRuleIPAddressSettingsLocalPlaceholder",
+                                "inputControlLength": 50,
+                                "validation": [
+                                    {
+                                        "validationType": 5,
+                                        "validationArguments": "|",
+                                        "failureMessage": "pipeInvalidError"
+                                    },
+                                    {
+                                        "validationType": 16,
+                                        "validationArguments": 800
+                                    },
+                                    {
+                                        "validationType": 21,
+                                        "validationArguments": 1,
+                                        "failureMessage": "localAddressInvalidError"
+                                    }
+                                ],
+                                "childSettings": [],
+                                "options": [],
+                                "isRequired": true,
+                                "entityKey": "localAddressRanges",
+                                "booleanActions": 0,
+                                "policyType": 77,
+                                "flipChildrenEnabledLogic": false,
+                                "readOnly": false,
+                                "writeOnce": false,
+                                "enabled": false,
+                                "flightingFeatureName": "enableFirewallCustomRules",
+                                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                                "multiItemIncludeSelectAll": false
+                            }
+                        ],
+                        "isRequired": false,
+                        "isDisabled": false,
+                        "retainValuesOnDeSelection": false,
+                        "deleteValuesOnDeSelection": false,
+                        "hidden": false,
+                        "enabled": true
+                    }
+                ],
+                "isRequired": false,
+                "entityKey": "firewallRuleSyntheticLocalAddressesKey",
+                "booleanActions": 0,
+                "defaultValue": "all",
+                "policyType": 77,
+                "flipChildrenEnabledLogic": false,
+                "readOnly": false,
+                "writeOnce": false,
+                "enabled": false,
+                "flightingFeatureName": "enableFirewallCustomRules",
+                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                "multiItemIncludeSelectAll": false
+            }
+        },
+        {
+            "hideFromEditor": false,
+            "hideFromGrid": true,
+            "isEditableInline": false,
+            "metadata": {
+                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRuleIPAddressSettingsRemote",
+                "dataType": 16,
+                "category": 36,
+                "nameResourceKey": "firewallRuleIPAddressSettingsRemote",
+                "descriptionResourceKey": "firewallRuleIPAddressSettingsRemoteTooltip",
+                "inputControlLength": 50,
+                "validation": [],
+                "childSettings": [],
+                "options": [
+                    {
+                        "nameResourceKey": "firewallRulesAnyAddressOption",
+                        "value": "all",
+                        "isRequired": false,
+                        "isDisabled": false,
+                        "retainValuesOnDeSelection": false,
+                        "deleteValuesOnDeSelection": false,
+                        "hidden": false,
+                        "enabled": true
+                    },
+                    {
+                        "nameResourceKey": "firewallRuleIPAddressSettingsSpecifiedAddressOption",
+                        "value": "specificValue",
+                        "children": [
+                            {
+                                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRuleIPAddressSettingsAddresses",
+                                "dataType": 20,
+                                "category": 36,
+                                "nameResourceKey": "firewallRuleIPAddressSettingsAddresses",
+                                "emptyValueResourceKey": "firewallRuleIPAddressSettingsRemotePlaceholder",
+                                "inputControlLength": 50,
+                                "validation": [
+                                    {
+                                        "validationType": 5,
+                                        "validationArguments": "|",
+                                        "failureMessage": "pipeInvalidError"
+                                    },
+                                    {
+                                        "validationType": 16,
+                                        "validationArguments": 800
+                                    },
+                                    {
+                                        "validationType": 21,
+                                        "validationArguments": 2,
+                                        "failureMessage": "remoteAddressInvalidError"
+                                    }
+                                ],
+                                "childSettings": [],
+                                "options": [],
+                                "isRequired": true,
+                                "entityKey": "remoteAddressRanges",
+                                "booleanActions": 0,
+                                "policyType": 77,
+                                "flipChildrenEnabledLogic": false,
+                                "readOnly": false,
+                                "writeOnce": false,
+                                "enabled": false,
+                                "flightingFeatureName": "enableFirewallCustomRules",
+                                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                                "multiItemIncludeSelectAll": false
+                            }
+                        ],
+                        "isRequired": false,
+                        "isDisabled": false,
+                        "retainValuesOnDeSelection": false,
+                        "deleteValuesOnDeSelection": false,
+                        "hidden": false,
+                        "enabled": true
+                    }
+                ],
+                "isRequired": false,
+                "entityKey": "firewallRuleSyntheticRemoteAddressesKey",
+                "booleanActions": 0,
+                "defaultValue": "all",
+                "policyType": 77,
+                "flipChildrenEnabledLogic": false,
+                "readOnly": false,
+                "writeOnce": false,
+                "enabled": false,
+                "flightingFeatureName": "enableFirewallCustomRules",
+                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                "multiItemIncludeSelectAll": false
+            }
+        },
+        {
+            "hideFromEditor": false,
+            "hideFromGrid": true,
+            "isEditableInline": false,
+            "metadata": {
+                "disableTopPadding": false,
+                "isSettingDescription": false,
+                "showAsSectionHeader": false,
+                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRulePortAndProtocolHeader",
+                "dataType": 8,
+                "category": 36,
+                "nameResourceKey": "firewallRulePortAndProtocolHeader",
+                "inputControlLength": 0,
+                "validation": [],
+                "childSettings": [],
+                "options": [],
+                "isRequired": false,
+                "booleanActions": 0,
+                "policyType": 77,
+                "flipChildrenEnabledLogic": false,
+                "readOnly": false,
+                "writeOnce": false,
+                "enabled": false,
+                "flightingFeatureName": "enableFirewallCustomRules",
+                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                "multiItemIncludeSelectAll": false
+            }
+        },
+        {
+            "hideFromEditor": false,
+            "hideFromGrid": true,
+            "isEditableInline": false,
+            "metadata": {
+                "disableTopPadding": true,
+                "isSettingDescription": true,
+                "showAsSectionHeader": false,
+                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRulePortAndProtocolSubheader",
+                "dataType": 8,
+                "category": 36,
+                "nameResourceKey": "firewallRulePortAndProtocolSubheader",
+                "inputControlLength": 0,
+                "validation": [],
+                "childSettings": [],
+                "options": [],
+                "isRequired": false,
+                "booleanActions": 0,
+                "policyType": 77,
+                "flipChildrenEnabledLogic": false,
+                "readOnly": false,
+                "writeOnce": false,
+                "enabled": false,
+                "flightingFeatureName": "enableFirewallCustomRules",
+                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                "multiItemIncludeSelectAll": false
+            }
+        },
+        {
+            "hideFromEditor": false,
+            "hideFromGrid": true,
+            "isEditableInline": false,
+            "metadata": {
+                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRuleProtocolSetting",
+                "dataType": 16,
+                "category": 36,
+                "nameResourceKey": "firewallRuleProtocolSetting",
+                "descriptionResourceKey": "firewallRuleProtocolTooltip",
+                "helpLink": "https://aka.ms/intunefirewallprotocolrule",
+                "helpLinkTextResourceKey": "learnMore",
+                "inputControlLength": 50,
+                "validation": [],
+                "childSettings": [],
+                "options": [
+                    {
+                        "nameResourceKey": "firewallRuleAnyOption",
+                        "value": "any",
+                        "isRequired": false,
+                        "isDisabled": false,
+                        "retainValuesOnDeSelection": false,
+                        "deleteValuesOnDeSelection": false,
+                        "hidden": false,
+                        "enabled": true
+                    },
+                    {
+                        "nameResourceKey": "firewallRuleProtocolTCPOption",
+                        "value": "TCP",
+                        "children": [
+                            {
+                                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRuleLocalPortsSetting",
+                                "dataType": 16,
+                                "category": 36,
+                                "nameResourceKey": "firewallRuleLocalPortsSetting",
+                                "descriptionResourceKey": "firewallRulePortSettingTooltip",
+                                "helpLink": "https://aka.ms/intunefirewalllocalportrule",
+                                "helpLinkTextResourceKey": "learnMore",
+                                "inputControlLength": 50,
+                                "validation": [],
+                                "childSettings": [],
+                                "options": [
+                                    {
+                                        "nameResourceKey": "firewallRuleAllPortsOption",
+                                        "value": "all",
+                                        "isRequired": false,
+                                        "isDisabled": false,
+                                        "retainValuesOnDeSelection": false,
+                                        "deleteValuesOnDeSelection": false,
+                                        "hidden": false,
+                                        "enabled": true
+                                    },
+                                    {
+                                        "nameResourceKey": "firewallRuleSpecifiedPortsOption",
+                                        "value": "specificValue",
+                                        "children": [
+                                            {
+                                                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRulePortsLabel",
+                                                "dataType": 20,
+                                                "category": 36,
+                                                "nameResourceKey": "firewallRulePortsLabel",
+                                                "emptyValueResourceKey": "firewallRuleLocalPortsPlaceholder",
+                                                "inputControlLength": 50,
+                                                "validation": [
+                                                    {
+                                                        "validationType": 2,
+                                                        "validationArguments": "^[0-9\\-\\,]*$",
+                                                        "failureMessage": "firewallRulesPortOrPortRangeInvalidCharacterError"
+                                                    },
+                                                    {
+                                                        "validationType": 16,
+                                                        "validationArguments": 100
+                                                    },
+                                                    {
+                                                        "validationType": 21,
+                                                        "validationArguments": 0,
+                                                        "failureMessage": "firewallRulesPortOrPortRangeInvalidError"
+                                                    }
+                                                ],
+                                                "childSettings": [],
+                                                "options": [],
+                                                "isRequired": true,
+                                                "entityKey": "localPortRanges",
+                                                "booleanActions": 0,
+                                                "policyType": 77,
+                                                "flipChildrenEnabledLogic": false,
+                                                "readOnly": false,
+                                                "writeOnce": false,
+                                                "enabled": false,
+                                                "flightingFeatureName": "enableFirewallCustomRules",
+                                                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                                                "multiItemIncludeSelectAll": false
+                                            }
+                                        ],
+                                        "isRequired": false,
+                                        "isDisabled": false,
+                                        "retainValuesOnDeSelection": false,
+                                        "deleteValuesOnDeSelection": false,
+                                        "hidden": false,
+                                        "enabled": true
+                                    }
+                                ],
+                                "isRequired": false,
+                                "entityKey": "firewallRuleSyntheticLocalPortsKey",
+                                "booleanActions": 0,
+                                "defaultValue": "all",
+                                "policyType": 77,
+                                "flipChildrenEnabledLogic": false,
+                                "readOnly": false,
+                                "writeOnce": false,
+                                "enabled": false,
+                                "flightingFeatureName": "enableFirewallCustomRules",
+                                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                                "multiItemIncludeSelectAll": false
+                            },
+                            {
+                                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRuleRemotePortsSetting",
+                                "dataType": 16,
+                                "category": 36,
+                                "nameResourceKey": "firewallRuleRemotePortsSetting",
+                                "descriptionResourceKey": "firewallRulePortSettingTooltip",
+                                "helpLink": "https://aka.ms/intunefirewallremoteportrule",
+                                "helpLinkTextResourceKey": "learnMore",
+                                "inputControlLength": 50,
+                                "validation": [],
+                                "childSettings": [],
+                                "options": [
+                                    {
+                                        "nameResourceKey": "firewallRuleAllPortsOption",
+                                        "value": "all",
+                                        "isRequired": false,
+                                        "isDisabled": false,
+                                        "retainValuesOnDeSelection": false,
+                                        "deleteValuesOnDeSelection": false,
+                                        "hidden": false,
+                                        "enabled": true
+                                    },
+                                    {
+                                        "nameResourceKey": "firewallRuleSpecifiedPortsOption",
+                                        "value": "specificValue",
+                                        "children": [
+                                            {
+                                                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRulePortsLabel",
+                                                "dataType": 20,
+                                                "category": 36,
+                                                "nameResourceKey": "firewallRulePortsLabel",
+                                                "emptyValueResourceKey": "firewallRuleRemotePortsPlaceholder",
+                                                "inputControlLength": 50,
+                                                "validation": [
+                                                    {
+                                                        "validationType": 2,
+                                                        "validationArguments": "^[0-9\\-\\,]*$",
+                                                        "failureMessage": "firewallRulesPortOrPortRangeInvalidCharacterError"
+                                                    },
+                                                    {
+                                                        "validationType": 16,
+                                                        "validationArguments": 100
+                                                    },
+                                                    {
+                                                        "validationType": 21,
+                                                        "validationArguments": 0,
+                                                        "failureMessage": "firewallRulesPortOrPortRangeInvalidError"
+                                                    }
+                                                ],
+                                                "childSettings": [],
+                                                "options": [],
+                                                "isRequired": true,
+                                                "entityKey": "remotePortRanges",
+                                                "booleanActions": 0,
+                                                "policyType": 77,
+                                                "flipChildrenEnabledLogic": false,
+                                                "readOnly": false,
+                                                "writeOnce": false,
+                                                "enabled": false,
+                                                "flightingFeatureName": "enableFirewallCustomRules",
+                                                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                                                "multiItemIncludeSelectAll": false
+                                            }
+                                        ],
+                                        "isRequired": false,
+                                        "isDisabled": false,
+                                        "retainValuesOnDeSelection": false,
+                                        "deleteValuesOnDeSelection": false,
+                                        "hidden": false,
+                                        "enabled": true
+                                    }
+                                ],
+                                "isRequired": false,
+                                "entityKey": "firewallRuleSyntheticRemotePortsKey",
+                                "booleanActions": 0,
+                                "defaultValue": "all",
+                                "policyType": 77,
+                                "flipChildrenEnabledLogic": false,
+                                "readOnly": false,
+                                "writeOnce": false,
+                                "enabled": false,
+                                "flightingFeatureName": "enableFirewallCustomRules",
+                                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                                "multiItemIncludeSelectAll": false
+                            }
+                        ],
+                        "isRequired": false,
+                        "isDisabled": false,
+                        "retainValuesOnDeSelection": false,
+                        "deleteValuesOnDeSelection": false,
+                        "hidden": false,
+                        "enabled": true
+                    },
+                    {
+                        "nameResourceKey": "firewallRuleProtocolUDPOption",
+                        "value": "UDP",
+                        "children": [
+                            {
+                                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRuleLocalPortsSetting",
+                                "dataType": 16,
+                                "category": 36,
+                                "nameResourceKey": "firewallRuleLocalPortsSetting",
+                                "descriptionResourceKey": "firewallRulePortSettingTooltip",
+                                "helpLink": "https://aka.ms/intunefirewalllocalportrule",
+                                "helpLinkTextResourceKey": "learnMore",
+                                "inputControlLength": 50,
+                                "validation": [],
+                                "childSettings": [],
+                                "options": [
+                                    {
+                                        "nameResourceKey": "firewallRuleAllPortsOption",
+                                        "value": "all",
+                                        "isRequired": false,
+                                        "isDisabled": false,
+                                        "retainValuesOnDeSelection": false,
+                                        "deleteValuesOnDeSelection": false,
+                                        "hidden": false,
+                                        "enabled": true
+                                    },
+                                    {
+                                        "nameResourceKey": "firewallRuleSpecifiedPortsOption",
+                                        "value": "specificValue",
+                                        "children": [
+                                            {
+                                                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRulePortsLabel",
+                                                "dataType": 20,
+                                                "category": 36,
+                                                "nameResourceKey": "firewallRulePortsLabel",
+                                                "emptyValueResourceKey": "firewallRuleLocalPortsPlaceholder",
+                                                "inputControlLength": 50,
+                                                "validation": [
+                                                    {
+                                                        "validationType": 2,
+                                                        "validationArguments": "^[0-9\\-\\,]*$",
+                                                        "failureMessage": "firewallRulesPortOrPortRangeInvalidCharacterError"
+                                                    },
+                                                    {
+                                                        "validationType": 16,
+                                                        "validationArguments": 100
+                                                    },
+                                                    {
+                                                        "validationType": 21,
+                                                        "validationArguments": 0,
+                                                        "failureMessage": "firewallRulesPortOrPortRangeInvalidError"
+                                                    }
+                                                ],
+                                                "childSettings": [],
+                                                "options": [],
+                                                "isRequired": true,
+                                                "entityKey": "localPortRanges",
+                                                "booleanActions": 0,
+                                                "policyType": 77,
+                                                "flipChildrenEnabledLogic": false,
+                                                "readOnly": false,
+                                                "writeOnce": false,
+                                                "enabled": false,
+                                                "flightingFeatureName": "enableFirewallCustomRules",
+                                                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                                                "multiItemIncludeSelectAll": false
+                                            }
+                                        ],
+                                        "isRequired": false,
+                                        "isDisabled": false,
+                                        "retainValuesOnDeSelection": false,
+                                        "deleteValuesOnDeSelection": false,
+                                        "hidden": false,
+                                        "enabled": true
+                                    }
+                                ],
+                                "isRequired": false,
+                                "entityKey": "firewallRuleSyntheticLocalPortsKey",
+                                "booleanActions": 0,
+                                "defaultValue": "all",
+                                "policyType": 77,
+                                "flipChildrenEnabledLogic": false,
+                                "readOnly": false,
+                                "writeOnce": false,
+                                "enabled": false,
+                                "flightingFeatureName": "enableFirewallCustomRules",
+                                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                                "multiItemIncludeSelectAll": false
+                            },
+                            {
+                                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRuleRemotePortsSetting",
+                                "dataType": 16,
+                                "category": 36,
+                                "nameResourceKey": "firewallRuleRemotePortsSetting",
+                                "descriptionResourceKey": "firewallRulePortSettingTooltip",
+                                "helpLink": "https://aka.ms/intunefirewallremoteportrule",
+                                "helpLinkTextResourceKey": "learnMore",
+                                "inputControlLength": 50,
+                                "validation": [],
+                                "childSettings": [],
+                                "options": [
+                                    {
+                                        "nameResourceKey": "firewallRuleAllPortsOption",
+                                        "value": "all",
+                                        "isRequired": false,
+                                        "isDisabled": false,
+                                        "retainValuesOnDeSelection": false,
+                                        "deleteValuesOnDeSelection": false,
+                                        "hidden": false,
+                                        "enabled": true
+                                    },
+                                    {
+                                        "nameResourceKey": "firewallRuleSpecifiedPortsOption",
+                                        "value": "specificValue",
+                                        "children": [
+                                            {
+                                                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRulePortsLabel",
+                                                "dataType": 20,
+                                                "category": 36,
+                                                "nameResourceKey": "firewallRulePortsLabel",
+                                                "emptyValueResourceKey": "firewallRuleRemotePortsPlaceholder",
+                                                "inputControlLength": 50,
+                                                "validation": [
+                                                    {
+                                                        "validationType": 2,
+                                                        "validationArguments": "^[0-9\\-\\,]*$",
+                                                        "failureMessage": "firewallRulesPortOrPortRangeInvalidCharacterError"
+                                                    },
+                                                    {
+                                                        "validationType": 16,
+                                                        "validationArguments": 100
+                                                    },
+                                                    {
+                                                        "validationType": 21,
+                                                        "validationArguments": 0,
+                                                        "failureMessage": "firewallRulesPortOrPortRangeInvalidError"
+                                                    }
+                                                ],
+                                                "childSettings": [],
+                                                "options": [],
+                                                "isRequired": true,
+                                                "entityKey": "remotePortRanges",
+                                                "booleanActions": 0,
+                                                "policyType": 77,
+                                                "flipChildrenEnabledLogic": false,
+                                                "readOnly": false,
+                                                "writeOnce": false,
+                                                "enabled": false,
+                                                "flightingFeatureName": "enableFirewallCustomRules",
+                                                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                                                "multiItemIncludeSelectAll": false
+                                            }
+                                        ],
+                                        "isRequired": false,
+                                        "isDisabled": false,
+                                        "retainValuesOnDeSelection": false,
+                                        "deleteValuesOnDeSelection": false,
+                                        "hidden": false,
+                                        "enabled": true
+                                    }
+                                ],
+                                "isRequired": false,
+                                "entityKey": "firewallRuleSyntheticRemotePortsKey",
+                                "booleanActions": 0,
+                                "defaultValue": "all",
+                                "policyType": 77,
+                                "flipChildrenEnabledLogic": false,
+                                "readOnly": false,
+                                "writeOnce": false,
+                                "enabled": false,
+                                "flightingFeatureName": "enableFirewallCustomRules",
+                                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                                "multiItemIncludeSelectAll": false
+                            }
+                        ],
+                        "isRequired": false,
+                        "isDisabled": false,
+                        "retainValuesOnDeSelection": false,
+                        "deleteValuesOnDeSelection": false,
+                        "hidden": false,
+                        "enabled": true
+                    },
+                    {
+                        "nameResourceKey": "firewallRuleProtocolCustomOption",
+                        "value": "customProtocol",
+                        "children": [
+                            {
+                                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRuleProtocolSetting",
+                                "dataType": 14,
+                                "category": 36,
+                                "nameResourceKey": "firewallRuleProtocolSetting",
+                                "emptyValueResourceKey": "firewallRuleProtocolPlaceholder",
+                                "inputControlLength": 50,
+                                "validation": [
+                                    {
+                                        "validationType": 18,
+                                        "validationArguments": [
+                                            0,
+                                            255
+                                        ]
+                                    }
+                                ],
+                                "childSettings": [],
+                                "options": [],
+                                "isRequired": true,
+                                "entityKey": "protocol",
+                                "booleanActions": 0,
+                                "policyType": 77,
+                                "flipChildrenEnabledLogic": false,
+                                "readOnly": false,
+                                "writeOnce": false,
+                                "enabled": false,
+                                "flightingFeatureName": "enableFirewallCustomRules",
+                                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                                "multiItemIncludeSelectAll": false
+                            }
+                        ],
+                        "isRequired": false,
+                        "isDisabled": false,
+                        "retainValuesOnDeSelection": false,
+                        "deleteValuesOnDeSelection": false,
+                        "hidden": false,
+                        "enabled": true
+                    }
+                ],
+                "isRequired": false,
+                "entityKey": "firewallRuleSyntheticProtocolKey",
+                "booleanActions": 0,
+                "defaultValue": "any",
+                "policyType": 77,
+                "flipChildrenEnabledLogic": false,
+                "readOnly": false,
+                "writeOnce": false,
+                "enabled": false,
+                "flightingFeatureName": "enableFirewallCustomRules",
+                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                "multiItemIncludeSelectAll": false
+            }
+        },
+        {
+            "hideFromEditor": false,
+            "hideFromGrid": true,
+            "isEditableInline": false,
+            "metadata": {
+                "disableTopPadding": false,
+                "isSettingDescription": false,
+                "showAsSectionHeader": false,
+                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRuleAdvancedConfigurationHeader",
+                "dataType": 8,
+                "category": 36,
+                "nameResourceKey": "firewallRuleAdvancedConfigurationHeader",
+                "inputControlLength": 0,
+                "validation": [],
+                "childSettings": [],
+                "options": [],
+                "isRequired": false,
+                "booleanActions": 0,
+                "policyType": 77,
+                "flipChildrenEnabledLogic": false,
+                "readOnly": false,
+                "writeOnce": false,
+                "enabled": false,
+                "flightingFeatureName": "enableFirewallCustomRules",
+                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                "multiItemIncludeSelectAll": false
+            }
+        },
+        {
+            "hideFromEditor": false,
+            "hideFromGrid": true,
+            "isEditableInline": false,
+            "metadata": {
+                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRuleInterfaceTypesSetting",
+                "dataType": 13,
+                "category": 36,
+                "nameResourceKey": "firewallRuleInterfaceTypesSetting",
+                "descriptionResourceKey": "firewallRuleInterfaceTypesTooltip",
+                "inputControlLength": 50,
+                "validation": [],
+                "childSettings": [],
+                "options": [
+                    {
+                        "nameResourceKey": "firewallRuleInterfaceTypesRemoteAccess",
+                        "value": "remoteAccess",
+                        "isRequired": false,
+                        "isDisabled": false,
+                        "retainValuesOnDeSelection": false,
+                        "deleteValuesOnDeSelection": false,
+                        "hidden": false,
+                        "enabled": true
+                    },
+                    {
+                        "nameResourceKey": "firewallRuleInterfaceTypesWireless",
+                        "value": "wireless",
+                        "isRequired": false,
+                        "isDisabled": false,
+                        "retainValuesOnDeSelection": false,
+                        "deleteValuesOnDeSelection": false,
+                        "hidden": false,
+                        "enabled": true
+                    },
+                    {
+                        "nameResourceKey": "firewallRuleInterfaceTypesLocalAreaNetwork",
+                        "value": "lan",
+                        "isRequired": false,
+                        "isDisabled": false,
+                        "retainValuesOnDeSelection": false,
+                        "deleteValuesOnDeSelection": false,
+                        "hidden": false,
+                        "enabled": true
+                    }
+                ],
+                "isRequired": false,
+                "entityKey": "interfaceTypes",
+                "booleanActions": 0,
+                "defaultValue": "notConfigured",
+                "policyType": 77,
+                "flipChildrenEnabledLogic": false,
+                "readOnly": false,
+                "writeOnce": false,
+                "enabled": false,
+                "flightingFeatureName": "enableFirewallCustomRules",
+                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                "multiItemIncludeSelectAll": false
+            }
+        },
+        {
+            "hideFromEditor": false,
+            "hideFromGrid": true,
+            "isEditableInline": false,
+            "metadata": {
+                "disableTopPadding": false,
+                "isSettingDescription": true,
+                "showAsSectionHeader": false,
+                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRuleAuthorizedUsersHeader",
+                "dataType": 8,
+                "category": 36,
+                "nameResourceKey": "firewallRuleAuthorizedUsersHeader",
+                "inputControlLength": 0,
+                "validation": [],
+                "childSettings": [],
+                "options": [],
+                "isRequired": false,
+                "booleanActions": 0,
+                "policyType": 77,
+                "flipChildrenEnabledLogic": false,
+                "readOnly": false,
+                "writeOnce": false,
+                "enabled": false,
+                "flightingFeatureName": "enableFirewallCustomRules",
+                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                "multiItemIncludeSelectAll": false
+            }
+        },
+        {
+            "hideFromEditor": false,
+            "hideFromGrid": true,
+            "isEditableInline": false,
+            "metadata": {
+                "leaveUnencrypted": true,
+                "id": "Windows10EndpointProtection_DefenderFirewall_firewallRuleAuthorizedUsersSubheader",
+                "dataType": 12,
+                "category": 36,
+                "nameResourceKey": "firewallRuleAuthorizedUsersSubheader",
+                "descriptionResourceKey": "firewallRuleAuthorizedUsersHeaderTooltip",
+                "emptyValueResourceKey": "firewallRuleAuthorizedUsersPlaceholder",
+                "helpLink": "https://aka.ms/intunefirewallauthorizedusers",
+                "helpLinkTextResourceKey": "learnMore",
+                "inputControlLength": 0,
+                "validation": [
+                    {
+                        "validationType": 5,
+                        "validationArguments": "|",
+                        "failureMessage": "pipeInvalidError"
+                    },
+                    {
+                        "validationType": 16,
+                        "validationArguments": 750
+                    }
+                ],
+                "childSettings": [],
+                "options": [],
+                "isRequired": false,
+                "entityKey": "localUserAuthorizations",
+                "booleanActions": 0,
+                "policyType": 77,
+                "flipChildrenEnabledLogic": false,
+                "readOnly": false,
+                "writeOnce": false,
+                "enabled": false,
+                "flightingFeatureName": "enableFirewallCustomRules",
+                "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                "linkedValidation": {
+                    "entityKey": "serviceName",
+                    "linkedValidationType": 5,
+                    "validationMessageKey": "firewallRuleUserListSetWithPopulatedServiceNameConflict"
+                },
+                "multiItemIncludeSelectAll": false
+            }
+        }
+    ],
+    "maxItemCount": 150,
+    "reorderableRows": false,
+    "promptOnDelete": false,
+    "showNumOfRowsAddedText": false,
+    "showKioskCustomBrowseSection": false,
+    "entityKeyMap": {},
+    "customAddRowBladeHeader": "createRuleBladeHeader",
+    "customEditRowBladeHeader": "editRuleBladeHeader",
+    "id": "Windows10EndpointProtection_DefenderFirewall_empty",
+    "dataType": 21,
+    "category": 36,
+    "nameResourceKey": "empty",
+    "inputControlLength": 0,
+    "validation": [],
+    "childSettings": [],
+    "options": [],
+    "isRequired": false,
+    "entityKey": "firewallRules",
+    "booleanActions": 0,
+    "policyType": 77,
+    "flipChildrenEnabledLogic": false,
+    "readOnly": false,
+    "writeOnce": false,
+    "enabled": false,
+    "flightingFeatureName": "enableFirewallCustomRules",
+    "flightingFeatureAlwaysOverridesSprintFlighting": true,
+    "multiItemIncludeSelectAll": false,
+    "summaryResourceKey": "firewallRules"
+}

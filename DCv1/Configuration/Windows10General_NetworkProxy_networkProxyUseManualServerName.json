@@ -1,0 +1,114 @@
+{
+    "id": "Windows10General_NetworkProxy_networkProxyUseManualServerName",
+    "dataType": 0,
+    "category": 87,
+    "nameResourceKey": "networkProxyUseManualServerName",
+    "inputControlLength": 0,
+    "validation": [],
+    "childSettings": [
+        {
+            "id": "Windows10General_NetworkProxy_vPNPolicyAddressName",
+            "dataType": 20,
+            "category": 87,
+            "nameResourceKey": "vPNPolicyAddressName",
+            "inputControlLength": 50,
+            "validation": [
+                {
+                    "validationType": 2,
+                    "validationArguments": "^\\w+(\\-?\\w)*\\.\\w+(\\-?\\w)*(\\.\\w+)*$",
+                    "failureMessage": "mustBeValidAddress"
+                }
+            ],
+            "childSettings": [],
+            "options": [],
+            "isRequired": true,
+            "entityKey": "networkProxyServerName",
+            "booleanActions": 0,
+            "policyType": 79,
+            "flipChildrenEnabledLogic": false,
+            "readOnly": false,
+            "writeOnce": false,
+            "enabled": true,
+            "multiItemIncludeSelectAll": false
+        },
+        {
+            "id": "Windows10General_NetworkProxy_vPNPolicyPortNumberName",
+            "dataType": 14,
+            "category": 87,
+            "nameResourceKey": "vPNPolicyPortNumberName",
+            "inputControlLength": 50,
+            "validation": [
+                {
+                    "validationType": 18,
+                    "validationArguments": [
+                        0,
+                        65535
+                    ]
+                }
+            ],
+            "childSettings": [],
+            "options": [],
+            "isRequired": true,
+            "entityKey": "networkProxyServerPort",
+            "booleanActions": 0,
+            "policyType": 79,
+            "flipChildrenEnabledLogic": false,
+            "readOnly": false,
+            "writeOnce": false,
+            "enabled": true,
+            "multiItemIncludeSelectAll": false
+        },
+        {
+            "id": "Windows10General_NetworkProxy_networkProxyUseManualServerExceptionsName",
+            "dataType": 12,
+            "category": 87,
+            "nameResourceKey": "networkProxyUseManualServerExceptionsName",
+            "descriptionResourceKey": "networkProxyUseManualServerExceptionsDescription",
+            "inputControlLength": 0,
+            "validation": [],
+            "childSettings": [],
+            "options": [],
+            "isRequired": false,
+            "entityKey": "networkProxyExceptionsTextString",
+            "booleanActions": 0,
+            "policyType": 79,
+            "flipChildrenEnabledLogic": false,
+            "readOnly": false,
+            "writeOnce": false,
+            "enabled": true,
+            "multiItemIncludeSelectAll": false
+        },
+        {
+            "id": "Windows10General_NetworkProxy_networkProxyUseManualServerForLocalAddressName",
+            "dataType": 0,
+            "category": 87,
+            "nameResourceKey": "networkProxyUseManualServerForLocalAddressName",
+            "descriptionResourceKey": "networkProxyUseManualServerForLocalAddressDescription",
+            "inputControlLength": 0,
+            "validation": [],
+            "childSettings": [],
+            "options": [],
+            "isRequired": false,
+            "entityKey": "useForLocalAddresses",
+            "booleanActions": 0,
+            "defaultValue": false,
+            "policyType": 79,
+            "flipChildrenEnabledLogic": false,
+            "readOnly": false,
+            "writeOnce": false,
+            "enabled": true,
+            "multiItemIncludeSelectAll": false
+        }
+    ],
+    "options": [],
+    "isRequired": false,
+    "entityKey": "networkProxyUseManualServerName",
+    "booleanActions": 0,
+    "defaultValue": false,
+    "policyType": 79,
+    "flipChildrenEnabledLogic": false,
+    "readOnly": false,
+    "writeOnce": false,
+    "enabled": true,
+    "multiItemIncludeSelectAll": false
+}

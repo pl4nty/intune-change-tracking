@@ -1,0 +1,297 @@
+{
+    "id": "Windows10SharedPC_SharedPCAccountManager_win10SharedPCAccountManager",
+    "dataType": 16,
+    "category": 105,
+    "nameResourceKey": "win10SharedPCAccountManager",
+    "descriptionResourceKey": "win10SharedPCAccountManagerDescription",
+    "inputControlLength": 0,
+    "validation": [],
+    "childSettings": [],
+    "options": [
+        {
+            "nameResourceKey": "notConfigured",
+            "value": "notConfigured",
+            "isRequired": false,
+            "isDisabled": false,
+            "retainValuesOnDeSelection": false,
+            "deleteValuesOnDeSelection": false,
+            "hidden": false,
+            "enabled": true
+        },
+        {
+            "nameResourceKey": "enabledOption",
+            "value": "enabled",
+            "children": [
+                {
+                    "ouputAnArray": false,
+                    "complexOptions": [
+                        {
+                            "value": "#microsoft.graph.sharedPCAccountManagerPolicy",
+                            "id": "Windows10SharedPC_SharedPCAccountManager_",
+                            "dataType": 9,
+                            "category": 105,
+                            "inputControlLength": 0,
+                            "validation": [],
+                            "childSettings": [],
+                            "options": [],
+                            "isRequired": false,
+                            "entityKey": "@odata.type",
+                            "booleanActions": 0,
+                            "policyType": 86,
+                            "flipChildrenEnabledLogic": false,
+                            "readOnly": false,
+                            "writeOnce": false,
+                            "enabled": true,
+                            "multiItemIncludeSelectAll": false
+                        },
+                        {
+                            "id": "Windows10SharedPC_SharedPCAccountManager_win10SharedPCAccountDeletion",
+                            "dataType": 16,
+                            "category": 105,
+                            "nameResourceKey": "win10SharedPCAccountDeletion",
+                            "descriptionResourceKey": "win10SharedPCAccountDeletionDescription",
+                            "inputControlLength": 0,
+                            "validation": [],
+                            "childSettings": [],
+                            "options": [
+                                {
+                                    "nameResourceKey": "win10SharedPCAccountDeletionDiskSpace",
+                                    "value": "diskSpaceThreshold",
+                                    "children": [
+                                        {
+                                            "id": "Windows10SharedPC_SharedPCAccountManager_win10SharedPCDiskLevelDeletion",
+                                            "dataType": 14,
+                                            "category": 105,
+                                            "nameResourceKey": "win10SharedPCDiskLevelDeletion",
+                                            "descriptionResourceKey": "win10SharedPCDiskLevelDeletionDescription",
+                                            "emptyValueResourceKey": "win10SharedPCDiskSpaceEmptyValueDescription",
+                                            "inputControlLength": 0,
+                                            "validation": [
+                                                {
+                                                    "validationType": 18,
+                                                    "validationArguments": [
+                                                        0,
+                                                        100
+                                                    ]
+                                                }
+                                            ],
+                                            "childSettings": [],
+                                            "options": [],
+                                            "isRequired": false,
+                                            "entityKey": "removeAccountsBelowDiskFreePercentage",
+                                            "booleanActions": 0,
+                                            "policyType": 86,
+                                            "flipChildrenEnabledLogic": false,
+                                            "readOnly": false,
+                                            "writeOnce": false,
+                                            "enabled": true,
+                                            "multiItemIncludeSelectAll": false
+                                        },
+                                        {
+                                            "id": "Windows10SharedPC_SharedPCAccountManager_win10SharedPCDiskLevelCaching",
+                                            "dataType": 14,
+                                            "category": 105,
+                                            "nameResourceKey": "win10SharedPCDiskLevelCaching",
+                                            "descriptionResourceKey": "win10SharedPCDiskLevelCachingDescription",
+                                            "emptyValueResourceKey": "win10SharedPCDiskSpaceEmptyValueDescription",
+                                            "inputControlLength": 0,
+                                            "validation": [
+                                                {
+                                                    "validationType": 18,
+                                                    "validationArguments": [
+                                                        0,
+                                                        100
+                                                    ]
+                                                }
+                                            ],
+                                            "childSettings": [],
+                                            "options": [],
+                                            "isRequired": false,
+                                            "entityKey": "cacheAccountsAboveDiskFreePercentage",
+                                            "booleanActions": 0,
+                                            "policyType": 86,
+                                            "flipChildrenEnabledLogic": false,
+                                            "readOnly": false,
+                                            "writeOnce": false,
+                                            "enabled": true,
+                                            "multiItemIncludeSelectAll": false
+                                        }
+                                    ],
+                                    "isRequired": false,
+                                    "isDisabled": false,
+                                    "retainValuesOnDeSelection": true,
+                                    "deleteValuesOnDeSelection": false,
+                                    "hidden": false,
+                                    "enabled": true
+                                },
+                                {
+                                    "nameResourceKey": "win10SharedPCAccountDeletionDiskSpaceInactiveThreshold",
+                                    "value": "diskSpaceThresholdOrInactiveThreshold",
+                                    "children": [
+                                        {
+                                            "id": "Windows10SharedPC_SharedPCAccountManager_win10SharedPCDiskLevelDeletion",
+                                            "dataType": 14,
+                                            "category": 105,
+                                            "nameResourceKey": "win10SharedPCDiskLevelDeletion",
+                                            "descriptionResourceKey": "win10SharedPCDiskLevelDeletionDescription",
+                                            "emptyValueResourceKey": "win10SharedPCDiskSpaceEmptyValueDescription",
+                                            "inputControlLength": 0,
+                                            "validation": [
+                                                {
+                                                    "validationType": 18,
+                                                    "validationArguments": [
+                                                        0,
+                                                        100
+                                                    ]
+                                                }
+                                            ],
+                                            "childSettings": [],
+                                            "options": [],
+                                            "isRequired": false,
+                                            "entityKey": "removeAccountsBelowDiskFreePercentage",
+                                            "booleanActions": 0,
+                                            "policyType": 86,
+                                            "flipChildrenEnabledLogic": false,
+                                            "readOnly": false,
+                                            "writeOnce": false,
+                                            "enabled": true,
+                                            "multiItemIncludeSelectAll": false
+                                        },
+                                        {
+                                            "id": "Windows10SharedPC_SharedPCAccountManager_win10SharedPCDiskLevelCaching",
+                                            "dataType": 14,
+                                            "category": 105,
+                                            "nameResourceKey": "win10SharedPCDiskLevelCaching",
+                                            "descriptionResourceKey": "win10SharedPCDiskLevelCachingDescription",
+                                            "emptyValueResourceKey": "win10SharedPCDiskSpaceEmptyValueDescription",
+                                            "inputControlLength": 0,
+                                            "validation": [
+                                                {
+                                                    "validationType": 18,
+                                                    "validationArguments": [
+                                                        0,
+                                                        100
+                                                    ]
+                                                }
+                                            ],
+                                            "childSettings": [],
+                                            "options": [],
+                                            "isRequired": false,
+                                            "entityKey": "cacheAccountsAboveDiskFreePercentage",
+                                            "booleanActions": 0,
+                                            "policyType": 86,
+                                            "flipChildrenEnabledLogic": false,
+                                            "readOnly": false,
+                                            "writeOnce": false,
+                                            "enabled": true,
+                                            "multiItemIncludeSelectAll": false
+                                        },
+                                        {
+                                            "id": "Windows10SharedPC_SharedPCAccountManager_win10SharedPCInactiveThreshold",
+                                            "dataType": 14,
+                                            "category": 105,
+                                            "nameResourceKey": "win10SharedPCInactiveThreshold",
+                                            "descriptionResourceKey": "win10SharedPCInactiveThresholdDescription",
+                                            "emptyValueResourceKey": "win10SharedPCInactiveThresholdEmpty",
+                                            "inputControlLength": 0,
+                                            "validation": [
+                                                {
+                                                    "validationType": 18,
+                                                    "validationArguments": [
+                                                        0,
+                                                        60
+                                                    ]
+                                                }
+                                            ],
+                                            "childSettings": [],
+                                            "options": [],
+                                            "isRequired": false,
+                                            "entityKey": "inactiveThresholdDays",
+                                            "booleanActions": 0,
+                                            "policyType": 86,
+                                            "flipChildrenEnabledLogic": false,
+                                            "readOnly": false,
+                                            "writeOnce": false,
+                                            "enabled": true,
+                                            "multiItemIncludeSelectAll": false
+                                        }
+                                    ],
+                                    "isRequired": false,
+                                    "isDisabled": false,
+                                    "retainValuesOnDeSelection": true,
+                                    "deleteValuesOnDeSelection": false,
+                                    "hidden": false,
+                                    "enabled": true
+                                },
+                                {
+                                    "nameResourceKey": "win10SharedPCAccountDeletionImmediate",
+                                    "value": "immediate",
+                                    "isRequired": false,
+                                    "isDisabled": false,
+                                    "retainValuesOnDeSelection": false,
+                                    "deleteValuesOnDeSelection": false,
+                                    "hidden": false,
+                                    "enabled": true
+                                }
+                            ],
+                            "isRequired": false,
+                            "entityKey": "accountDeletionPolicy",
+                            "booleanActions": 0,
+                            "defaultValue": "diskSpaceThreshold",
+                            "policyType": 86,
+                            "flipChildrenEnabledLogic": false,
+                            "readOnly": false,
+                            "writeOnce": false,
+                            "enabled": true,
+                            "multiItemIncludeSelectAll": false
+                        }
+                    ],
+                    "singleSetting": false,
+                    "id": "Windows10SharedPC_SharedPCAccountManager_",
+                    "dataType": 6,
+                    "category": 105,
+                    "inputControlLength": 0,
+                    "validation": [],
+                    "childSettings": [],
+                    "options": [],
+                    "isRequired": false,
+                    "entityKey": "accountManagerPolicy",
+                    "booleanActions": 0,
+                    "policyType": 86,
+                    "flipChildrenEnabledLogic": false,
+                    "readOnly": false,
+                    "writeOnce": false,
+                    "enabled": true,
+                    "multiItemIncludeSelectAll": false
+                }
+            ],
+            "isRequired": false,
+            "isDisabled": false,
+            "retainValuesOnDeSelection": false,
+            "deleteValuesOnDeSelection": false,
+            "hidden": false,
+            "enabled": true
+        },
+        {
+            "nameResourceKey": "disabledOption",
+            "value": "disabled",
+            "isRequired": false,
+            "isDisabled": false,
+            "retainValuesOnDeSelection": false,
+            "deleteValuesOnDeSelection": false,
+            "hidden": false,
+            "enabled": true
+        }
+    ],
+    "isRequired": false,
+    "entityKey": "setAccountManager",
+    "booleanActions": 0,
+    "defaultValue": "notConfigured",
+    "unconfiguredValue": "notConfigured",
+    "policyType": 86,
+    "flipChildrenEnabledLogic": false,
+    "readOnly": false,
+    "writeOnce": false,
+    "enabled": true,
+    "multiItemIncludeSelectAll": false
+}

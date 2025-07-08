@@ -1,0 +1,180 @@
+{
+    "disableTopPadding": false,
+    "isSettingDescription": false,
+    "showAsSectionHeader": true,
+    "id": "AndroidDeviceOwnerGeneral_VPNConnectivity_fullyManagedAndDedicatedAndroidEnrollmentTypesHeaderName",
+    "dataType": 8,
+    "category": 131,
+    "nameResourceKey": "fullyManagedAndDedicatedAndroidEnrollmentTypesHeaderName",
+    "descriptionResourceKey": "fullyManagedAndDedicatedAndroidEnrollmentTypesHeaderDescription",
+    "inputControlLength": 0,
+    "validation": [],
+    "childSettings": [
+        {
+            "id": "AndroidDeviceOwnerGeneral_VPNConnectivity_androidEnterpriseGlobalProxyEnabledName",
+            "dataType": 0,
+            "category": 131,
+            "nameResourceKey": "androidEnterpriseGlobalProxyEnabledName",
+            "inputControlLength": 0,
+            "validation": [],
+            "childSettings": [
+                {
+                    "id": "AndroidDeviceOwnerGeneral_VPNConnectivity_androidEnterpriseGlobalProxyTypeName",
+                    "dataType": 16,
+                    "category": 131,
+                    "nameResourceKey": "androidEnterpriseGlobalProxyTypeName",
+                    "inputControlLength": 0,
+                    "validation": [],
+                    "childSettings": [],
+                    "options": [
+                        {
+                            "nameResourceKey": "DirectGlobalProxyOption",
+                            "value": "direct",
+                            "children": [
+                                {
+                                    "id": "AndroidDeviceOwnerGeneral_VPNConnectivity_androidEnterpriseGlobalProxyHostName",
+                                    "dataType": 20,
+                                    "category": 131,
+                                    "nameResourceKey": "androidEnterpriseGlobalProxyHostName",
+                                    "inputControlLength": 0,
+                                    "validation": [],
+                                    "childSettings": [],
+                                    "options": [],
+                                    "isRequired": true,
+                                    "entityKey": "globalProxyHost",
+                                    "booleanActions": 0,
+                                    "defaultValue": "",
+                                    "policyType": 2,
+                                    "flipChildrenEnabledLogic": false,
+                                    "readOnly": false,
+                                    "writeOnce": false,
+                                    "enabled": true,
+                                    "multiItemIncludeSelectAll": false
+                                },
+                                {
+                                    "id": "AndroidDeviceOwnerGeneral_VPNConnectivity_androidEnterpriseGlobalProxyPortName",
+                                    "dataType": 14,
+                                    "category": 131,
+                                    "nameResourceKey": "androidEnterpriseGlobalProxyPortName",
+                                    "inputControlLength": 0,
+                                    "validation": [
+                                        {
+                                            "validationType": 2,
+                                            "validationArguments": "^(6(?:[0-4]\\d{3}|5(?:[0-4]\\d{2}|5(?:[0-2]\\d|3[0-5])))|(?:[1-5]\\d{0,3}|[6-9]\\d{0,2})?\\d)$"
+                                        }
+                                    ],
+                                    "childSettings": [],
+                                    "options": [],
+                                    "isRequired": true,
+                                    "entityKey": "globalProxyPort",
+                                    "booleanActions": 0,
+                                    "policyType": 2,
+                                    "flipChildrenEnabledLogic": false,
+                                    "readOnly": false,
+                                    "writeOnce": false,
+                                    "enabled": true,
+                                    "multiItemIncludeSelectAll": false
+                                },
+                                {
+                                    "id": "AndroidDeviceOwnerGeneral_VPNConnectivity_androidEnterpriseGlobalProxyExcludedHostsName",
+                                    "dataType": 20,
+                                    "category": 131,
+                                    "nameResourceKey": "androidEnterpriseGlobalProxyExcludedHostsName",
+                                    "descriptionResourceKey": "androidEnterpriseGlobalProxyExcludedHostsDescription",
+                                    "inputControlLength": 0,
+                                    "validation": [],
+                                    "childSettings": [],
+                                    "options": [],
+                                    "isRequired": false,
+                                    "entityKey": "globalProxyExcludedHosts",
+                                    "booleanActions": 0,
+                                    "defaultValue": "",
+                                    "policyType": 2,
+                                    "flipChildrenEnabledLogic": false,
+                                    "readOnly": false,
+                                    "writeOnce": false,
+                                    "enabled": true,
+                                    "multiItemIncludeSelectAll": false
+                                }
+                            ],
+                            "isRequired": false,
+                            "isDisabled": false,
+                            "retainValuesOnDeSelection": false,
+                            "deleteValuesOnDeSelection": false,
+                            "hidden": false,
+                            "enabled": true
+                        },
+                        {
+                            "nameResourceKey": "ProxyAutoConfigGlobalProxyOption",
+                            "value": "proxyAutoConfig",
+                            "children": [
+                                {
+                                    "id": "AndroidDeviceOwnerGeneral_VPNConnectivity_androidEnterpriseGlobalProxyProxyAutoConfigURLName",
+                                    "dataType": 20,
+                                    "category": 131,
+                                    "nameResourceKey": "androidEnterpriseGlobalProxyProxyAutoConfigURLName",
+                                    "inputControlLength": 0,
+                                    "validation": [
+                                        {
+                                            "validationType": 2,
+                                            "validationArguments": "^(((http|https|ftp):\\/\\/.+?)|([\\w-]+\\.?)+)$",
+                                            "failureMessage": "mustBeValidURL"
+                                        }
+                                    ],
+                                    "childSettings": [],
+                                    "options": [],
+                                    "isRequired": true,
+                                    "entityKey": "globalProxyProxyAutoConfigURL",
+                                    "booleanActions": 0,
+                                    "defaultValue": "",
+                                    "policyType": 2,
+                                    "flipChildrenEnabledLogic": false,
+                                    "readOnly": false,
+                                    "writeOnce": false,
+                                    "enabled": true,
+                                    "multiItemIncludeSelectAll": false
+                                }
+                            ],
+                            "isRequired": false,
+                            "isDisabled": false,
+                            "retainValuesOnDeSelection": false,
+                            "deleteValuesOnDeSelection": false,
+                            "hidden": false,
+                            "enabled": true
+                        }
+                    ],
+                    "isRequired": false,
+                    "entityKey": "globalProxyTypeSelector",
+                    "booleanActions": 0,
+                    "policyType": 2,
+                    "flipChildrenEnabledLogic": false,
+                    "readOnly": false,
+                    "writeOnce": false,
+                    "enabled": true,
+                    "multiItemIncludeSelectAll": false
+                }
+            ],
+            "options": [],
+            "isRequired": false,
+            "entityKey": "globalProxyEnabled",
+            "booleanActions": 2,
+            "defaultValue": false,
+            "policyType": 2,
+            "flipChildrenEnabledLogic": false,
+            "readOnly": false,
+            "writeOnce": false,
+            "enabled": true,
+            "multiItemIncludeSelectAll": false,
+            "clearChildrenWhenValueDefault": true
+        }
+    ],
+    "options": [],
+    "isRequired": false,
+    "booleanActions": 0,
+    "policyType": 2,
+    "flipChildrenEnabledLogic": false,
+    "readOnly": false,
+    "writeOnce": false,
+    "enabled": true,
+    "multiItemIncludeSelectAll": false
+}

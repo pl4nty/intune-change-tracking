@@ -1,0 +1,446 @@
+{
+    "id": "IosSCEP_SCEPProperties_SCEPPolicyWindowsCertificateStoreName",
+    "dataType": 16,
+    "category": 103,
+    "nameResourceKey": "SCEPPolicyWindowsCertificateStoreName",
+    "descriptionResourceKey": "empty",
+    "inputControlLength": 50,
+    "validation": [],
+    "childSettings": [],
+    "options": [
+        {
+            "nameResourceKey": "SCEPPolicyWindowsCertificateStoreUser",
+            "value": "user",
+            "children": [
+                {
+                    "value": "custom",
+                    "id": "IosSCEP_SCEPProperties_",
+                    "dataType": 9,
+                    "category": 103,
+                    "inputControlLength": 0,
+                    "validation": [],
+                    "childSettings": [],
+                    "options": [],
+                    "isRequired": false,
+                    "entityKey": "subjectNameFormat",
+                    "booleanActions": 0,
+                    "policyType": 50,
+                    "flipChildrenEnabledLogic": false,
+                    "readOnly": false,
+                    "writeOnce": false,
+                    "enabled": true,
+                    "multiItemIncludeSelectAll": false
+                },
+                {
+                    "id": "IosSCEP_SCEPProperties_sCEPPolicySubjectNameFormatName",
+                    "dataType": 20,
+                    "category": 103,
+                    "nameResourceKey": "sCEPPolicySubjectNameFormatName",
+                    "descriptionResourceKey": "sCEPPolicySubjectNameFormatDescription",
+                    "helpLink": "https://aka.ms/AA21pwc",
+                    "helpLinkTextResourceKey": "sCEPPolicySubjectNameFormatHelp",
+                    "inputControlLength": 50,
+                    "validation": [
+                        {
+                            "validationType": 16,
+                            "validationArguments": 1000
+                        },
+                        {
+                            "validationType": 2,
+                            "validationArguments": "(?:^\\{\\{OnPrem_Distinguished_Name\\}\\}$)|(?:^CN=(?:[^\\{\\},=]+?(?=,*)|[^\\{\\}=,]*?(?:\\{\\{(?:UserName|EmailAddress|OnPrem_Distinguished_Name|onPremisesSamAccountName|UserPrincipalName|Department|GivenName|Surname|AAD_Device_ID|Device_Serial|Device_IMEI|SerialNumber|IMEINumber|AzureADDeviceId|WiFiMacAddress|IMEI|DeviceName|DeviceId|MEID)\\}\\}[^\\{\\}=,]*?)+(?=,*))(?:,(?:L|O|OU|E|Email|C|S|ST|STREET|T|Title|G|GivenName|Initials|SN|DC)=(?:[^\\{\\}=,]+?(?=,*)|[^\\{\\}=,]*?(?:\\{\\{(?:UserName|EmailAddress|OnPrem_Distinguished_Name|onPremisesSamAccountName|UserPrincipalName|Department|GivenName|Surname|AAD_Device_ID|Device_Serial|Device_IMEI|SerialNumber|IMEINumber|AzureADDeviceId|WiFiMacAddress|IMEI|DeviceName|DeviceId|MEID)\\}\\}[^\\{\\}=,]*?)+(?=,*)))*$)",
+                            "failureMessage": "sCEPPolicyCustomSubjectNameFormatDescription"
+                        },
+                        {
+                            "validationType": 16,
+                            "validationArguments": 1000
+                        }
+                    ],
+                    "childSettings": [],
+                    "options": [],
+                    "isRequired": true,
+                    "entityKey": "subjectNameFormatString",
+                    "booleanActions": 0,
+                    "defaultValue": "CN={{UserName}},E={{EmailAddress}}",
+                    "policyType": 50,
+                    "flipChildrenEnabledLogic": false,
+                    "readOnly": false,
+                    "writeOnce": false,
+                    "enabled": true,
+                    "multiItemIncludeSelectAll": false
+                },
+                {
+                    "hideAddById": false,
+                    "hideAddByUrl": false,
+                    "includeWebApps": false,
+                    "excludeAppIds": [],
+                    "appTypes": [],
+                    "addNewItemsToTop": false,
+                    "blockInlineAdd": false,
+                    "hideHeader": false,
+                    "hideCsvImport": true,
+                    "hideCsvExport": true,
+                    "hideTableSection": false,
+                    "isDependentTable": false,
+                    "labelAndButtonsInline": true,
+                    "noItemsTextId": "noSanAttributes",
+                    "hideLabelAndButtons": false,
+                    "combineUniquenessKeysIntoSingleKey": false,
+                    "columns": [
+                        {
+                            "hideFromEditor": false,
+                            "hideFromGrid": false,
+                            "isEditableInline": false,
+                            "metadata": {
+                                "id": "IosSCEP_SCEPProperties_attribute",
+                                "dataType": 16,
+                                "category": 103,
+                                "nameResourceKey": "attribute",
+                                "descriptionResourceKey": "empty",
+                                "inputControlLength": 0,
+                                "validation": [],
+                                "childSettings": [],
+                                "options": [
+                                    {
+                                        "nameResourceKey": "PolicyEmailAddress",
+                                        "value": "emailAddress",
+                                        "isRequired": false,
+                                        "isDisabled": false,
+                                        "retainValuesOnDeSelection": false,
+                                        "deleteValuesOnDeSelection": false,
+                                        "hidden": false,
+                                        "enabled": true
+                                    },
+                                    {
+                                        "nameResourceKey": "PolicyUserPrincipalName",
+                                        "value": "userPrincipalName",
+                                        "isRequired": false,
+                                        "isDisabled": false,
+                                        "retainValuesOnDeSelection": false,
+                                        "deleteValuesOnDeSelection": false,
+                                        "hidden": false,
+                                        "enabled": true
+                                    },
+                                    {
+                                        "nameResourceKey": "PolicyDomainNameService",
+                                        "value": "domainNameService",
+                                        "isRequired": false,
+                                        "isDisabled": false,
+                                        "retainValuesOnDeSelection": false,
+                                        "deleteValuesOnDeSelection": false,
+                                        "hidden": false,
+                                        "enabled": true
+                                    },
+                                    {
+                                        "nameResourceKey": "PolicyUniversalResourceIdentifier",
+                                        "value": "universalResourceIdentifier",
+                                        "isRequired": false,
+                                        "isDisabled": false,
+                                        "retainValuesOnDeSelection": false,
+                                        "deleteValuesOnDeSelection": false,
+                                        "hidden": false,
+                                        "enabled": true,
+                                        "flightingFeatureName": "urlTypeSan"
+                                    }
+                                ],
+                                "isRequired": true,
+                                "entityKey": "sanType",
+                                "booleanActions": 0,
+                                "policyType": 50,
+                                "flipChildrenEnabledLogic": false,
+                                "readOnly": false,
+                                "writeOnce": false,
+                                "enabled": true,
+                                "multiItemIncludeSelectAll": false
+                            }
+                        },
+                        {
+                            "hideFromEditor": false,
+                            "hideFromGrid": false,
+                            "isEditableInline": false,
+                            "metadata": {
+                                "id": "IosSCEP_SCEPProperties_value",
+                                "dataType": 20,
+                                "category": 103,
+                                "nameResourceKey": "value",
+                                "descriptionResourceKey": "empty",
+                                "inputControlLength": 0,
+                                "validation": [
+                                    {
+                                        "validationType": 2,
+                                        "validationArguments": "\\w*\\{\\{OnPremisesSecurityIdentifier\\}\\}\\w*|^(?:(?:(?:(?:{{(?:UserName|EmailAddress|OnPrem_Distinguished_Name|onPremisesSamAccountName|UserPrincipalName|Department|GivenName|Surname|AAD_Device_ID|Device_Serial|Device_IMEI|SerialNumber|IMEINumber|AzureADDeviceId|WiFiMacAddress|IMEI|DeviceName|DeviceId|MEID)}}))|(?:[^{}|;]))+)$",
+                                        "failureMessage": "sCEPPolicyCustomSubjectAlternativeNameForUserDescription"
+                                    }
+                                ],
+                                "childSettings": [],
+                                "options": [],
+                                "isRequired": true,
+                                "entityKey": "name",
+                                "booleanActions": 0,
+                                "policyType": 50,
+                                "flipChildrenEnabledLogic": false,
+                                "readOnly": false,
+                                "writeOnce": false,
+                                "enabled": true,
+                                "multiItemIncludeSelectAll": false
+                            }
+                        }
+                    ],
+                    "reorderableRows": false,
+                    "promptOnDelete": false,
+                    "showNumOfRowsAddedText": false,
+                    "showKioskCustomBrowseSection": false,
+                    "entityKeyMap": {},
+                    "id": "IosSCEP_SCEPProperties_PolicySubjectAlternativeName",
+                    "dataType": 21,
+                    "category": 103,
+                    "nameResourceKey": "PolicySubjectAlternativeName",
+                    "descriptionResourceKey": "PolicySubjectAlternativeNameDescription",
+                    "helpLink": "http://go.microsoft.com/fwlink/?LinkId=2027630",
+                    "helpLinkTextResourceKey": "PolicySubjectAlternativeNameHelp",
+                    "inputControlLength": 0,
+                    "validation": [],
+                    "childSettings": [],
+                    "options": [],
+                    "isRequired": false,
+                    "entityKey": "customSubjectAlternativeNames",
+                    "booleanActions": 0,
+                    "policyType": 50,
+                    "flipChildrenEnabledLogic": false,
+                    "readOnly": false,
+                    "writeOnce": false,
+                    "enabled": true,
+                    "multiItemIncludeSelectAll": false
+                }
+            ],
+            "isRequired": false,
+            "isDisabled": false,
+            "retainValuesOnDeSelection": false,
+            "deleteValuesOnDeSelection": false,
+            "hidden": false,
+            "enabled": true
+        },
+        {
+            "nameResourceKey": "SCEPPolicyWindowsCertificateStoreMachine",
+            "value": "machine",
+            "children": [
+                {
+                    "value": "custom",
+                    "id": "IosSCEP_SCEPProperties_",
+                    "dataType": 9,
+                    "category": 103,
+                    "inputControlLength": 0,
+                    "validation": [],
+                    "childSettings": [],
+                    "options": [],
+                    "isRequired": false,
+                    "entityKey": "subjectNameFormat",
+                    "booleanActions": 0,
+                    "policyType": 50,
+                    "flipChildrenEnabledLogic": false,
+                    "readOnly": false,
+                    "writeOnce": false,
+                    "enabled": true,
+                    "multiItemIncludeSelectAll": false
+                },
+                {
+                    "id": "IosSCEP_SCEPProperties_sCEPPolicySubjectNameFormatName",
+                    "dataType": 20,
+                    "category": 103,
+                    "nameResourceKey": "sCEPPolicySubjectNameFormatName",
+                    "descriptionResourceKey": "sCEPPolicySubjectNameFormatDescription",
+                    "helpLink": "https://aka.ms/AA21pwc",
+                    "helpLinkTextResourceKey": "sCEPPolicySubjectNameFormatHelp",
+                    "inputControlLength": 50,
+                    "validation": [
+                        {
+                            "validationType": 16,
+                            "validationArguments": 1000
+                        },
+                        {
+                            "validationType": 2,
+                            "validationArguments": "^CN=(?:[^\\{\\},=]+?(?=,*)|[^\\{\\}=,]*?(?:\\{\\{(?:AAD_Device_ID|Device_Serial|Device_IMEI|SerialNumber|IMEINumber|AzureADDeviceId|WiFiMacAddress|IMEI|DeviceName|DeviceId|MEID)\\}\\}[^\\{\\}=,]*?)+(?=,*))(?:,(?:L|O|OU|E|Email|C|S|ST|STREET|T|Title|G|GivenName|Initials|SN|DC)=(?:[^\\{\\}=,]+?(?=,*)|[^\\{\\}=,]*?(?:\\{\\{(?:AAD_Device_ID|Device_Serial|Device_IMEI|SerialNumber|IMEINumber|AzureADDeviceId|WiFiMacAddress|IMEI|DeviceName|DeviceId|MEID)\\}\\}[^\\{\\}=,]*?)+(?=,*)))*$",
+                            "failureMessage": "sCEPPolicyCustomSubjectNameForMachineDescription"
+                        },
+                        {
+                            "validationType": 16,
+                            "validationArguments": 1000
+                        }
+                    ],
+                    "childSettings": [],
+                    "options": [],
+                    "isRequired": true,
+                    "entityKey": "subjectNameFormatString",
+                    "booleanActions": 0,
+                    "defaultValue": "CN={{AAD_Device_ID}}",
+                    "policyType": 50,
+                    "flipChildrenEnabledLogic": false,
+                    "readOnly": false,
+                    "writeOnce": false,
+                    "enabled": true,
+                    "multiItemIncludeSelectAll": false
+                },
+                {
+                    "hideAddById": false,
+                    "hideAddByUrl": false,
+                    "includeWebApps": false,
+                    "excludeAppIds": [],
+                    "appTypes": [],
+                    "addNewItemsToTop": false,
+                    "blockInlineAdd": false,
+                    "hideHeader": false,
+                    "hideCsvImport": true,
+                    "hideCsvExport": true,
+                    "hideTableSection": false,
+                    "isDependentTable": false,
+                    "labelAndButtonsInline": true,
+                    "noItemsTextId": "noSanAttributes",
+                    "hideLabelAndButtons": false,
+                    "combineUniquenessKeysIntoSingleKey": false,
+                    "columns": [
+                        {
+                            "hideFromEditor": false,
+                            "hideFromGrid": false,
+                            "isEditableInline": false,
+                            "metadata": {
+                                "id": "IosSCEP_SCEPProperties_attribute",
+                                "dataType": 16,
+                                "category": 103,
+                                "nameResourceKey": "attribute",
+                                "descriptionResourceKey": "empty",
+                                "inputControlLength": 0,
+                                "validation": [],
+                                "childSettings": [],
+                                "options": [
+                                    {
+                                        "nameResourceKey": "PolicyEmailAddress",
+                                        "value": "emailAddress",
+                                        "isRequired": false,
+                                        "isDisabled": false,
+                                        "retainValuesOnDeSelection": false,
+                                        "deleteValuesOnDeSelection": false,
+                                        "hidden": false,
+                                        "enabled": true
+                                    },
+                                    {
+                                        "nameResourceKey": "PolicyUserPrincipalName",
+                                        "value": "userPrincipalName",
+                                        "isRequired": false,
+                                        "isDisabled": false,
+                                        "retainValuesOnDeSelection": false,
+                                        "deleteValuesOnDeSelection": false,
+                                        "hidden": false,
+                                        "enabled": true
+                                    },
+                                    {
+                                        "nameResourceKey": "PolicyDomainNameService",
+                                        "value": "domainNameService",
+                                        "isRequired": false,
+                                        "isDisabled": false,
+                                        "retainValuesOnDeSelection": false,
+                                        "deleteValuesOnDeSelection": false,
+                                        "hidden": false,
+                                        "enabled": true
+                                    },
+                                    {
+                                        "nameResourceKey": "PolicyUniversalResourceIdentifier",
+                                        "value": "universalResourceIdentifier",
+                                        "isRequired": false,
+                                        "isDisabled": false,
+                                        "retainValuesOnDeSelection": false,
+                                        "deleteValuesOnDeSelection": false,
+                                        "hidden": false,
+                                        "enabled": true,
+                                        "flightingFeatureName": "urlTypeSan"
+                                    }
+                                ],
+                                "isRequired": true,
+                                "entityKey": "sanType",
+                                "booleanActions": 0,
+                                "policyType": 50,
+                                "flipChildrenEnabledLogic": false,
+                                "readOnly": false,
+                                "writeOnce": false,
+                                "enabled": true,
+                                "multiItemIncludeSelectAll": false
+                            }
+                        },
+                        {
+                            "hideFromEditor": false,
+                            "hideFromGrid": false,
+                            "isEditableInline": false,
+                            "metadata": {
+                                "id": "IosSCEP_SCEPProperties_value",
+                                "dataType": 20,
+                                "category": 103,
+                                "nameResourceKey": "value",
+                                "descriptionResourceKey": "empty",
+                                "inputControlLength": 0,
+                                "validation": [
+                                    {
+                                        "validationType": 2,
+                                        "validationArguments": "^(?:(?:(?:(?:{{(?:AAD_Device_ID|Device_Serial|Device_IMEI|SerialNumber|IMEINumber|AzureADDeviceId|WiFiMacAddress|IMEI|DeviceName|DeviceId|MEID)}}))|(?:[^{}|;]))+)$",
+                                        "failureMessage": "sCEPPolicyCustomSubjectAlternativeNameForMachineDescription"
+                                    }
+                                ],
+                                "childSettings": [],
+                                "options": [],
+                                "isRequired": true,
+                                "entityKey": "name",
+                                "booleanActions": 0,
+                                "policyType": 50,
+                                "flipChildrenEnabledLogic": false,
+                                "readOnly": false,
+                                "writeOnce": false,
+                                "enabled": true,
+                                "multiItemIncludeSelectAll": false
+                            }
+                        }
+                    ],
+                    "reorderableRows": false,
+                    "promptOnDelete": false,
+                    "showNumOfRowsAddedText": false,
+                    "showKioskCustomBrowseSection": false,
+                    "entityKeyMap": {},
+                    "id": "IosSCEP_SCEPProperties_PolicySubjectAlternativeName",
+                    "dataType": 21,
+                    "category": 103,
+                    "nameResourceKey": "PolicySubjectAlternativeName",
+                    "descriptionResourceKey": "PolicySubjectAlternativeNameDescription",
+                    "helpLink": "http://go.microsoft.com/fwlink/?LinkId=2027630",
+                    "helpLinkTextResourceKey": "PolicySubjectAlternativeNameHelp",
+                    "inputControlLength": 0,
+                    "validation": [],
+                    "childSettings": [],
+                    "options": [],
+                    "isRequired": false,
+                    "entityKey": "customSubjectAlternativeNames",
+                    "booleanActions": 0,
+                    "policyType": 50,
+                    "flipChildrenEnabledLogic": false,
+                    "readOnly": false,
+                    "writeOnce": false,
+                    "enabled": true,
+                    "multiItemIncludeSelectAll": false
+                }
+            ],
+            "isRequired": false,
+            "isDisabled": false,
+            "retainValuesOnDeSelection": false,
+            "deleteValuesOnDeSelection": false,
+            "hidden": false,
+            "enabled": true
+        }
+    ],
+    "isRequired": false,
+    "entityKey": "certificateStore",
+    "booleanActions": 0,
+    "defaultValue": "user",
+    "policyType": 50,
+    "flipChildrenEnabledLogic": false,
+    "readOnly": false,
+    "writeOnce": false,
+    "enabled": true,
+    "flightingFeatureName": "iosMachineSCEPCertificate",
+    "flightingFeatureAlwaysOverridesSprintFlighting": true,
+    "multiItemIncludeSelectAll": false
+}
