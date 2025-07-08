@@ -1,0 +1,46 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementCollectionSettingDefinition",
+    "id": "deviceConfiguration--androidDeviceOwnerGeneralDeviceConfiguration_kioskMultiAppsModeApps",
+    "valueType": "collection",
+    "displayName": "Apps to make available from Managed Home Screen.",
+    "isTopLevel": true,
+    "description": "Kiosk mode apps",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "elementDefinitionId": "deviceConfiguration--appListItem",
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingAppConstraint",
+            "supportedTypes": [
+                "androidForWorkApp",
+                "androidManagedStoreApp",
+                "androidManagedStoreWebApp"
+            ]
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingRequiredConstraint",
+            "notConfiguredValue": ""
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--androidDeviceOwnerGeneralDeviceConfiguration_kioskModeUseMangedHomeScreenApp",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "enabled",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

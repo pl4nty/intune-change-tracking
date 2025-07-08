@@ -1,0 +1,38 @@
+{
+    "id": "deviceConfiguration--windows10EndpointProtectionConfiguration_defenderNetworkProtectionType",
+    "valueType": "string",
+    "displayName": "Enable network protection",
+    "isTopLevel": true,
+    "description": "When set to Enable, network protection will be enabled for all users on the system. Network protection protects employees from accessing phishing scams, and malicious content on the Internet. This includes third-party browsers. Setting this to Audit only, users will not be blocked from dangerous domains however Windows events will be raised instead. Setting this to Not Configured will return the setting to Windows default, which is disabled.",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=872618",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "notConfigured",
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "userDefined",
+                    "displayName": "Disable"
+                },
+                {
+                    "value": "enable",
+                    "displayName": "Enable"
+                },
+                {
+                    "value": "auditMode",
+                    "displayName": "Audit mode"
+                }
+            ]
+        }
+    ],
+    "dependencies": []
+}

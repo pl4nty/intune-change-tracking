@@ -1,0 +1,44 @@
+{
+    "id": "deviceConfiguration--windows10EndpointProtectionConfiguration_defenderSecurityCenterDisableRansomwareUI",
+    "valueType": "boolean",
+    "displayName": "Hide the Ransomware data recovery option in the Windows Security app",
+    "isTopLevel": true,
+    "description": "By setting this to Yes, the ransomware data recovery area in the Windows Security app will be hidden from end-users. Also, ransomware related notifications will be suppressed. By setting this to Not configured, the setting will return to client default which is to allow user access and notifications.",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=873664",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": null,
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "false",
+                    "displayName": "No"
+                },
+                {
+                    "value": "true",
+                    "displayName": "Yes"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windows10EndpointProtectionConfiguration_defenderSecurityCenterDisableVirusUI",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": false
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,60 @@
+{
+    "id": "deviceConfiguration--iOSCompliancePolicy_passcodeMinutesOfInactivityBeforeLock",
+    "valueType": "integer",
+    "displayName": "Maximum minutes after screen lock before password is required",
+    "isTopLevel": true,
+    "description": "Set to 0 to require a password immediately. There is no maximum number of minutes, and this number overrides the number currently set on the device. Immediately recommended.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": null,
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "0",
+                    "displayName": "Immediately"
+                },
+                {
+                    "value": "1",
+                    "displayName": "1 Minute"
+                },
+                {
+                    "value": "5",
+                    "displayName": "5 Minutes"
+                },
+                {
+                    "value": "15",
+                    "displayName": "15 Minutes"
+                },
+                {
+                    "value": "60",
+                    "displayName": "1 hour"
+                },
+                {
+                    "value": "240",
+                    "displayName": "4 hours"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--iOSCompliancePolicy_passcodeRequired",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

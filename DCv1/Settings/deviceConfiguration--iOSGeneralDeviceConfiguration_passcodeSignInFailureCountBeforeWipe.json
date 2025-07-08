@@ -1,0 +1,39 @@
+{
+    "id": "deviceConfiguration--iOSGeneralDeviceConfiguration_passcodeSignInFailureCountBeforeWipe",
+    "valueType": "integer",
+    "displayName": "Number of sign-in failures before wiping device",
+    "isTopLevel": true,
+    "description": "Number of consecutive times an incorrect password can be entered before device is wiped of all data. (2-11)",
+    "placeholderText": "(2-11)",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingIntegerConstraint",
+            "minimumValue": 4,
+            "maximumValue": 11
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint",
+            "enrollmentTypes": [
+                "IOSDeviceEnrollment",
+                "IOSAutoDeviceEnrollment"
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--iOSGeneralDeviceConfiguration_passcodeRequired",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

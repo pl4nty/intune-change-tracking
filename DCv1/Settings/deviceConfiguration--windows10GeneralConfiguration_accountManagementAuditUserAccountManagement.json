@@ -1,0 +1,38 @@
+{
+    "id": "deviceConfiguration--windows10GeneralConfiguration_accountManagementAuditUserAccountManagement",
+    "valueType": "string",
+    "displayName": "Audit User Account Management (Device)",
+    "isTopLevel": true,
+    "description": "This policy setting allows you to audit changes to user accounts. Events include the following:     A user account is created, changed, deleted; renamed, disabled, enabled, locked out, or unlocked.     A user account???s password is set or changed.     A security identifier (SID) is added to the SID History of a user account.     The Directory Services Restore Mode password is configured.     Permissions on administrative user accounts are changed.     Credential Manager credentials are backed up or restored.  If you configure this policy setting, an audit event is generated when an attempt to change a user account is made. Success audits record successful attempts and Failure audits record unsuccessful attempts. If you do not configure this policy setting, no audit event is generated when a user account changes.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "none",
+                    "displayName": "None"
+                },
+                {
+                    "value": "success",
+                    "displayName": "Success"
+                },
+                {
+                    "value": "failure",
+                    "displayName": "Failure"
+                },
+                {
+                    "value": "successAndFailure",
+                    "displayName": "Success and Failure"
+                }
+            ]
+        }
+    ],
+    "dependencies": []
+}

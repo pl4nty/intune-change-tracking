@@ -1,0 +1,69 @@
+{
+    "id": "deviceConfiguration--windowsDeliveryOptimizationConfiguration_vpnPeerCaching",
+    "valueType": "string",
+    "displayName": "VPN peer caching",
+    "isTopLevel": true,
+    "description": "Enables the device to participate in peer caching while connected via VPN to the domain network.​",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "notConfigured",
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "enabled",
+                    "displayName": "Enabled"
+                },
+                {
+                    "value": "disabled",
+                    "displayName": "Disabled"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windowsDeliveryOptimizationConfiguration_deliveryOptimizationMode",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "userDefined",
+                            "displayName": null
+                        },
+                        {
+                            "value": "httpOnly",
+                            "displayName": null
+                        },
+                        {
+                            "value": "httpWithPeeringNat",
+                            "displayName": null
+                        },
+                        {
+                            "value": "httpWithPeeringPrivateGroup",
+                            "displayName": null
+                        },
+                        {
+                            "value": "httpWithInternetPeering",
+                            "displayName": null
+                        },
+                        {
+                            "value": "simpleDownload",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

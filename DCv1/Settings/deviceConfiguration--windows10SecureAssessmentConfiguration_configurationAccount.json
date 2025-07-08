@@ -1,0 +1,45 @@
+{
+    "id": "deviceConfiguration--windows10SecureAssessmentConfiguration_configurationAccount",
+    "valueType": "string",
+    "displayName": "Account user name",
+    "isTopLevel": true,
+    "description": "The user name of the test taking account. The user can be a domain account (domain\\user), an AAD account (username@tenant.com) or a local account (username).",
+    "placeholderText": "e.g. tester",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+            "minimumLength": 1,
+            "maximumLength": 1000
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windows10SecureAssessmentConfiguration_configurationAccountType",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "azureADAccount",
+                            "displayName": null
+                        },
+                        {
+                            "value": "domainAccount",
+                            "displayName": null
+                        },
+                        {
+                            "value": "localAccount",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

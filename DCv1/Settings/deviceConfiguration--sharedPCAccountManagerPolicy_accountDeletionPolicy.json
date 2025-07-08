@@ -1,0 +1,34 @@
+{
+    "id": "deviceConfiguration--sharedPCAccountManagerPolicy_accountDeletionPolicy",
+    "valueType": "string",
+    "displayName": "Account deletion",
+    "isTopLevel": false,
+    "description": "Shared PC mode can be configured to delete accounts immediately at sign-out, when disk space is low, and when accounts are inactive for too long.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "diskSpaceThreshold",
+                    "displayName": "At storage space threshold"
+                },
+                {
+                    "value": "diskSpaceThresholdOrInactiveThreshold",
+                    "displayName": "At storage space threshold and inactive threshold"
+                },
+                {
+                    "value": "immediate",
+                    "displayName": "Immediately after log-out"
+                }
+            ]
+        }
+    ],
+    "dependencies": []
+}

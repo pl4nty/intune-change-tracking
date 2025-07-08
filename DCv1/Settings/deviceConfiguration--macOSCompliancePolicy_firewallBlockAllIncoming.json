@@ -1,0 +1,26 @@
+{
+    "id": "deviceConfiguration--macOSCompliancePolicy_firewallBlockAllIncoming",
+    "valueType": "boolean",
+    "displayName": "Block incoming connections",
+    "isTopLevel": true,
+    "description": "Block all incoming connections except those required for basic internet services such as DHCP, Bonjour, and IPSec. This will block all sharing services.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--macOSCompliancePolicy_firewallEnabled",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

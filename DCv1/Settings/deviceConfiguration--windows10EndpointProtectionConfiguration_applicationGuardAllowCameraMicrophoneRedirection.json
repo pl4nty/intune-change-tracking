@@ -1,0 +1,53 @@
+{
+    "id": "deviceConfiguration--windows10EndpointProtectionConfiguration_applicationGuardAllowCameraMicrophoneRedirection",
+    "valueType": "boolean",
+    "displayName": "Allow camera and microphone access (Microsoft Edge only)",
+    "isTopLevel": true,
+    "description": "If set to Yes, applications inside Microsoft Defender Application Guard will be able to access the camera and microphone on the user’s device. This policy setting is supported for Application Guard on Microsoft Edge only.",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=2148915",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": null,
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "false",
+                    "displayName": "No"
+                },
+                {
+                    "value": "true",
+                    "displayName": "Yes"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windows10EndpointProtectionConfiguration_applicationGuardEnabledOptions",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "enabledForEdge",
+                            "displayName": null
+                        },
+                        {
+                            "value": "enabledForEdgeAndOffice",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

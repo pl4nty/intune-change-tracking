@@ -1,0 +1,34 @@
+{
+    "id": "admx--lync16v2_LPolicyEnableSIPHighSecurityMode",
+    "valueType": "string",
+    "displayName": "Configure SIP security mode",
+    "isTopLevel": true,
+    "description": "\r\nWhen Lync connects to the server, it supports various authentication mechanisms.  This policy allows the user to specify whether Digest and Basic authentication are supported.\r\n\r\nDisabled (default):  NTLM/Kerberos/TLS-DSK/Digest/Basic\r\nEnabled:\r\n  Authentication mechanisms:  NTLM/Kerberos/TLS-DSK\r\n  Gal Download: Requires HTTPS if user is not logged in as an internal user.\r\n      ",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "enabled",
+                    "displayName": "Enabled"
+                },
+                {
+                    "value": "disabled",
+                    "displayName": "Disabled"
+                },
+                {
+                    "value": "notConfigured",
+                    "displayName": "Not configured"
+                }
+            ]
+        }
+    ],
+    "dependencies": []
+}

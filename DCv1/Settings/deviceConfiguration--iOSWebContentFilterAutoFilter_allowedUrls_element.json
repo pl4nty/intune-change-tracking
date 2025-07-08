@@ -1,0 +1,30 @@
+{
+    "id": "deviceConfiguration--iOSWebContentFilterAutoFilter_allowedUrls_element",
+    "valueType": "string",
+    "displayName": "URL",
+    "isTopLevel": false,
+    "description": null,
+    "placeholderText": "http://microsoft.com",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+            "minimumLength": null,
+            "maximumLength": 1000
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingRegexConstraint",
+            "regex": "(^(http|https|ftp)://(.)+?$)"
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingRequiredConstraint",
+            "notConfiguredValue": ""
+        }
+    ],
+    "dependencies": []
+}

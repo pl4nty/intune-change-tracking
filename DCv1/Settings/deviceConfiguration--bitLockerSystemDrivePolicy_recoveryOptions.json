@@ -1,0 +1,36 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementComplexSettingDefinition",
+    "id": "deviceConfiguration--bitLockerSystemDrivePolicy_recoveryOptions",
+    "valueType": "complex",
+    "displayName": "System drive recovery",
+    "isTopLevel": false,
+    "description": "Control how BitLocker-protected OS drives are recovered in the absence of the required startup key information. Selecting \"Enable\" allows you to configure various drive recovery techniques. By selecting \"Not configured\", the default recovery options are supported including DRA, the end user can specify recovery options and recovery information is not backed up to Azure Active Directory.",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=872529",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "propertyDefinitionIds": [
+        "deviceConfiguration--bitLockerRecoveryOptions_recoveryKeyUsage",
+        "deviceConfiguration--bitLockerRecoveryOptions_recoveryInformationToStore",
+        "deviceConfiguration--bitLockerRecoveryOptions_enableRecoveryInformationSaveToStore",
+        "deviceConfiguration--bitLockerRecoveryOptions_recoveryPasswordUsage",
+        "deviceConfiguration--bitLockerRecoveryOptions_hideRecoveryOptions",
+        "deviceConfiguration--bitLockerRecoveryOptions_enableBitLockerAfterRecoveryInformationToStore",
+        "deviceConfiguration--bitLockerRecoveryOptions_blockDataRecoveryAgent"
+    ],
+    "constraints": [],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--bitLockerSystemDrivePolicy_startupAuthenticationRequired",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

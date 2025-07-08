@@ -1,0 +1,29 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementAbstractComplexSettingDefinition",
+    "id": "deviceConfiguration--iOSDeviceFeaturesConfiguration_identityCertificateForClientAuthentication",
+    "valueType": "abstractComplex",
+    "displayName": "Renewal certificate",
+    "isTopLevel": true,
+    "description": "Select the certificate used to reauthenticate the user's Kerberos credential without any need for user intervention when the user's SSO session expires.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "implementations": [
+        "deviceConfiguration--iOSPkcsCertificateProfile",
+        "deviceConfiguration--iOSScepCertificateProfile"
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint",
+            "enrollmentTypes": [
+                "IOSDeviceEnrollment",
+                "IOSAutoDeviceEnrollment"
+            ]
+        }
+    ],
+    "dependencies": []
+}

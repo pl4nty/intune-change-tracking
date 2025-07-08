@@ -1,0 +1,39 @@
+{
+    "id": "deviceConfiguration--iOSGeneralDeviceConfiguration_passcodeMinimumLength",
+    "valueType": "integer",
+    "displayName": "Minimum password length",
+    "isTopLevel": true,
+    "description": "Minimum number of digits or characters in password. (4-14)",
+    "placeholderText": "(4-14)",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingIntegerConstraint",
+            "minimumValue": 4,
+            "maximumValue": 14
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint",
+            "enrollmentTypes": [
+                "IOSDeviceEnrollment",
+                "IOSAutoDeviceEnrollment"
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--iOSGeneralDeviceConfiguration_passcodeRequired",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

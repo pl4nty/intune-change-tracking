@@ -1,0 +1,37 @@
+{
+    "id": "deviceConfiguration--sharedPCAccountManagerPolicy_inactiveThresholdDays",
+    "valueType": "integer",
+    "displayName": "Inactive account threshold",
+    "isTopLevel": false,
+    "description": "The number of consecutive days after which an account that has not signed in is deleted. (0-60)",
+    "placeholderText": "Enter number of days",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingIntegerConstraint",
+            "minimumValue": 0,
+            "maximumValue": 60
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--sharedPCAccountManagerPolicy_accountDeletionPolicy",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "diskSpaceThresholdOrInactiveThreshold",
+                            "displayName": "diskSpaceThresholdOrInactiveThreshold"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

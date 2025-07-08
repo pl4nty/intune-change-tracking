@@ -1,0 +1,32 @@
+{
+    "id": "deviceConfiguration--androidDeviceOwnerGeneralDeviceConfiguration_kioskModeScreenSaverImageUrl",
+    "valueType": "string",
+    "displayName": "Set custom screen saver image",
+    "isTopLevel": true,
+    "description": null,
+    "placeholderText": "http://contoso.com/img.jpg",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+            "minimumLength": null,
+            "maximumLength": 1000
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--androidDeviceOwnerGeneralDeviceConfiguration_kioskModeScreenSaverConfigurationEnabled",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

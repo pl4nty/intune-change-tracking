@@ -1,0 +1,41 @@
+{
+    "id": "deviceConfiguration--macOSEndpointProtectionConfiguration_fileVaultPersonalRecoveryKeyHelpMessage",
+    "valueType": "string",
+    "displayName": "Escrow location description of personal recovery key",
+    "isTopLevel": true,
+    "description": "Display a short message to the user that explains how they can retrieve their personal recovery key. This text will be inserted into the message the user sees when enabling FileVault.",
+    "placeholderText": "Enter message...",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+            "minimumLength": null,
+            "maximumLength": 2048
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingRequiredConstraint",
+            "notConfiguredValue": null
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--macOSEndpointProtectionConfiguration_fileVaultSelectedRecoveryKeyTypes",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "personalRecoveryKey",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

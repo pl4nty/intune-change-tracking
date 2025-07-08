@@ -1,0 +1,57 @@
+{
+    "id": "deviceConfiguration--windowsDeliveryOptimizationConfiguration_minimumRamAllowedToPeerInGigabytes",
+    "valueType": "integer",
+    "displayName": "Minimum RAM required for peer caching (in GB)",
+    "isTopLevel": true,
+    "description": "Minimum RAM required on devices to use peer caching. The recommended value is 4 GB. (1-100000)",
+    "placeholderText": "Enter a value in GBs",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingIntegerConstraint",
+            "minimumValue": 1,
+            "maximumValue": 100000
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windowsDeliveryOptimizationConfiguration_deliveryOptimizationMode",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "userDefined",
+                            "displayName": null
+                        },
+                        {
+                            "value": "httpOnly",
+                            "displayName": null
+                        },
+                        {
+                            "value": "httpWithPeeringNat",
+                            "displayName": null
+                        },
+                        {
+                            "value": "httpWithPeeringPrivateGroup",
+                            "displayName": null
+                        },
+                        {
+                            "value": "httpWithInternetPeering",
+                            "displayName": null
+                        },
+                        {
+                            "value": "simpleDownload",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

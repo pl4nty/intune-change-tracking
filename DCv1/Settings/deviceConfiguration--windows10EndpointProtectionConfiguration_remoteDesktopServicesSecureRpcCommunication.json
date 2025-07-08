@@ -1,0 +1,34 @@
+{
+    "id": "deviceConfiguration--windows10EndpointProtectionConfiguration_remoteDesktopServicesSecureRpcCommunication",
+    "valueType": "string",
+    "displayName": "Secure RPC communication",
+    "isTopLevel": true,
+    "description": "Specifies whether a Remote Desktop Session Host server requires secure RPC communication with all clients or allows unsecured communication.\r\n\r\nYou can use this setting to strengthen the security of RPC communication with clients by allowing only authenticated and encrypted requests.\r\n\r\nIf the status is set to Enabled, Remote Desktop Services accepts requests from RPC clients that support secure requests, and does not allow unsecured communication with untrusted clients.\r\n\r\nIf the status is set to Disabled, Remote Desktop Services always requests security for all RPC traffic. However, unsecured communication is allowed for RPC clients that do not respond to the request.\r\n\r\nIf the status is set to Not Configured, unsecured communication is allowed.\r\n\r\nNote: The RPC interface is used for administering and configuring Remote Desktop Services.",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=2067248",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "notConfigured",
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "enabled",
+                    "displayName": "Enabled"
+                },
+                {
+                    "value": "disabled",
+                    "displayName": "Disabled"
+                }
+            ]
+        }
+    ],
+    "dependencies": []
+}

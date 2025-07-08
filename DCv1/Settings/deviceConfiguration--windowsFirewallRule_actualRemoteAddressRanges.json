@@ -1,0 +1,28 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementCollectionSettingDefinition",
+    "id": "deviceConfiguration--windowsFirewallRule_actualRemoteAddressRanges",
+    "valueType": "collection",
+    "displayName": "Remote address ranges",
+    "isTopLevel": false,
+    "description": "\r\n    List of remote addresses covered by the rule. Tokens are case insensitive. Valid tokens include:​​​<br>\r\n<ul><li>\"*\" indicates any remote address. If present, this must be the only token included.</li>\r\n<li>\"Defaultgateway\"</li>\r\n<li>\"DHCP\"</li>\r\n<li>\"DNS\"</li>\r\n<li>\"WINS\"</li>\r\n<li>\"Intranet\" (supported on Windows versions 1809+)</li>\r\n<li>\"RmtIntranet\" (supported on Windows versions 1809+)</li>\r\n<li>\"Internet\" (supported on Windows versions 1809+)</li>\r\n<li>\"Ply2Renders\" ​(supported on Windows versions 1809+)</li>\r\n<li>\"LocalSubnet\" indicates any local address on the local subnet.</li>\r\n<li>A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.</li>\r\n<li>A valid IPv6 address.</li>\r\n<li>An IPv4 address range in the format of \"start address - end address\" with no spaces included, where the start address is less than the end address.</li>\r\n<li>An IPv6 address range in the format of \"start address - end address\" with no spaces included, where the start address is less than the end address.​</li></ul>\r\nIf not specified, the default is \"Any address.\"",
+    "placeholderText": null,
+    "documentationUrl": "https://aka.ms/intunefirewallremoteaddressrule",
+    "headerTitle": "IP address settings",
+    "headerSubtitle": "Specifies the local and remote addresses to which this rule applies",
+    "keywords": [
+        ""
+    ],
+    "elementDefinitionId": "deviceConfiguration--windowsFirewallRule_actualRemoteAddressRanges_element",
+    "constraints": [],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windowsFirewallRule_useAnyRemoteAddressRange",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": false
+                }
+            ]
+        }
+    ]
+}

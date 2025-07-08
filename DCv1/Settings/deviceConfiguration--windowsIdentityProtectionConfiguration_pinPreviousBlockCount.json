@@ -1,0 +1,32 @@
+{
+    "id": "deviceConfiguration--windowsIdentityProtectionConfiguration_pinPreviousBlockCount",
+    "valueType": "integer",
+    "displayName": "Remember PIN history:",
+    "isTopLevel": true,
+    "description": "If configured, the user will not be able to reuse this number of previous PINs.",
+    "placeholderText": "Enter a number (0, 50), 0 = No",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingIntegerConstraint",
+            "minimumValue": 0,
+            "maximumValue": 50
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windowsIdentityProtectionConfiguration_windowsHelloForBusinessBlocked",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": false
+                }
+            ]
+        }
+    ]
+}

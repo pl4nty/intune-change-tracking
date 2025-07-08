@@ -1,0 +1,49 @@
+{
+    "id": "deviceConfiguration--windows10EndpointProtectionConfiguration_firewallProfileDomainSecuredPacketExemptionAllowed",
+    "valueType": "string",
+    "displayName": "Block IPsec network traffic with stealth mode rules",
+    "isTopLevel": true,
+    "description": "When this setting is set to yes, IPsec secured traffic through stealth mode rules will be blocked. When this setting is set to no it enforces the client default which is to allow IPsec packet exemptions. When not configured, the setting is returned to client default.",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=872560",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "notConfigured",
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "blocked",
+                    "displayName": "Yes"
+                },
+                {
+                    "value": "allowed",
+                    "displayName": "No"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windows10EndpointProtectionConfiguration_firewallProfileDomainStealthModeBlocked",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "allowed",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

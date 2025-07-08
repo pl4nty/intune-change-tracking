@@ -1,0 +1,49 @@
+{
+    "id": "deviceConfiguration--iOSDeviceFeaturesConfiguration_singleSignOnExtensionPkinitCertificateId",
+    "valueType": "string",
+    "displayName": "PKINIT certificate",
+    "isTopLevel": true,
+    "description": "Select the Public Key Cryptography for Initial Authentication (PKINIT) certificate to be deployed to the device. Used to reauthenticate the user's Kerberos credential without any need for user intervention when the user's SSO session expires.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint",
+            "enrollmentTypes": [
+                "IOSUserEnrollment",
+                "IOSDeviceEnrollment",
+                "IOSAutoDeviceEnrollment"
+            ]
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingRegexConstraint",
+            "regex": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingProfileConstraint",
+            "source": "deviceConfiguration",
+            "types": [
+                "iosPkcsCertificateProfile",
+                "iosScepCertificateProfile"
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--iOSDeviceFeaturesConfiguration_iOSSingleSignOnExtension",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingAbstractImplementationConstraint",
+                    "allowedAbstractImplementationDefinitionIds": [
+                        "deviceConfiguration://iOSKerberosSingleSignOnExtension"
+                    ]
+                }
+            ]
+        }
+    ]
+}

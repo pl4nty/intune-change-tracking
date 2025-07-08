@@ -1,0 +1,49 @@
+{
+    "id": "deviceConfiguration--windowsDeliveryOptimizationConfiguration_restrictPeerSelectionBy",
+    "valueType": "string",
+    "displayName": "Restrict Peer Selection",
+    "isTopLevel": true,
+    "description": "Restricts peer selection via the selected option. Applies to Download Modes NAT (1) and Group (2).​",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "notConfigured",
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "subnetMask",
+                    "displayName": "subnetMask"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windowsDeliveryOptimizationConfiguration_deliveryOptimizationMode",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "httpWithPeeringNat",
+                            "displayName": null
+                        },
+                        {
+                            "value": "httpWithPeeringPrivateGroup",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

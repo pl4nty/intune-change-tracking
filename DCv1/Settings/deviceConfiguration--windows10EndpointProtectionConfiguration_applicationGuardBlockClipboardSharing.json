@@ -1,0 +1,61 @@
+{
+    "id": "deviceConfiguration--windows10EndpointProtectionConfiguration_applicationGuardBlockClipboardSharing",
+    "valueType": "string",
+    "displayName": "Clipboard behavior (Microsoft Edge only)",
+    "isTopLevel": true,
+    "description": "Choose what copy and paste actions are allowed from the local PC and an Application Guard virtual browser. This policy setting is supported for Application Guard on Microsoft Edge only.",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=872351",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "notConfigured",
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "blockBoth",
+                    "displayName": "Block copy and paste between PC and browser"
+                },
+                {
+                    "value": "blockHostToContainer",
+                    "displayName": "Allow copy and paste from browser to PC only"
+                },
+                {
+                    "value": "blockContainerToHost",
+                    "displayName": "Allow copy and paste from PC to browser only"
+                },
+                {
+                    "value": "blockNone",
+                    "displayName": "Allow copy and paste between PC and browser"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windows10EndpointProtectionConfiguration_applicationGuardEnabledOptions",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "enabledForEdge",
+                            "displayName": null
+                        },
+                        {
+                            "value": "enabledForEdgeAndOffice",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

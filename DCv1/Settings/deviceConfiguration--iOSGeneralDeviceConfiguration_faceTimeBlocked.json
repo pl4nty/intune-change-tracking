@@ -1,0 +1,33 @@
+{
+    "id": "deviceConfiguration--iOSGeneralDeviceConfiguration_faceTimeBlocked",
+    "valueType": "boolean",
+    "displayName": "Block FaceTime",
+    "isTopLevel": true,
+    "description": null,
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint",
+            "enrollmentTypes": [
+                "IOSAutoDeviceEnrollment"
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--iOSGeneralDeviceConfiguration_cameraBlocked",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": false
+                }
+            ]
+        }
+    ]
+}

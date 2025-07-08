@@ -1,0 +1,49 @@
+{
+    "id": "deviceConfiguration--windows10EndpointProtectionConfiguration_firewallProfilePublicStealthModeBlocked",
+    "valueType": "string",
+    "displayName": "Block stealth mode",
+    "isTopLevel": true,
+    "description": "By default, stealth mode is enabled on devices. It helps prevent malicious users from discovering information about network devices and the services they run.  Disabling stealth mode can make devices vulnerable to attack.",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=872559",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "notConfigured",
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "blocked",
+                    "displayName": "Yes"
+                },
+                {
+                    "value": "allowed",
+                    "displayName": "No"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windows10EndpointProtectionConfiguration_firewallProfilePublicFirewallEnabled",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "allowed",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

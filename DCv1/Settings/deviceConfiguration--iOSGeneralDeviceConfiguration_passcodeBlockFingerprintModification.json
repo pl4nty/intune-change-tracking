@@ -1,0 +1,33 @@
+{
+    "id": "deviceConfiguration--iOSGeneralDeviceConfiguration_passcodeBlockFingerprintModification",
+    "valueType": "boolean",
+    "displayName": "Block modification of Touch ID fingerprints and Face ID faces",
+    "isTopLevel": true,
+    "description": "Block users from adding, changing, or removing fingerprints and faces. Face ID is avaliable in iOS 11.0 and later.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint",
+            "enrollmentTypes": [
+                "IOSAutoDeviceEnrollment"
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--iOSGeneralDeviceConfiguration_passcodeBlockModification",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": false
+                }
+            ]
+        }
+    ]
+}

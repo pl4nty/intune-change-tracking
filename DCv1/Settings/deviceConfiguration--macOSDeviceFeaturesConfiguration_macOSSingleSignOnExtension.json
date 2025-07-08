@@ -1,0 +1,30 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementAbstractComplexSettingDefinition",
+    "id": "deviceConfiguration--macOSDeviceFeaturesConfiguration_macOSSingleSignOnExtension",
+    "valueType": "abstractComplex",
+    "displayName": "SSO app extension type",
+    "isTopLevel": true,
+    "description": "Perform SSO with one of these extension types.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "implementations": [
+        "deviceConfiguration--macOSRedirectSingleSignOnExtension",
+        "deviceConfiguration--macOSCredentialSingleSignOnExtension",
+        "deviceConfiguration--macOSKerberosSingleSignOnExtension"
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint",
+            "enrollmentTypes": [
+                "MacOSUserApprovedEnrollment",
+                "MacOSAutoDeviceEnrollment"
+            ]
+        }
+    ],
+    "dependencies": []
+}

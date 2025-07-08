@@ -1,0 +1,31 @@
+{
+    "id": "deviceConfiguration--macOSEndpointProtectionConfiguration_fileVaultAllowDeferralUntilSignOut",
+    "valueType": "boolean",
+    "displayName": "Allow deferral until sign out",
+    "isTopLevel": true,
+    "description": "Defer the prompt until the user signs out. Only 'yes' is supported.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+            "value": true
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--macOSEndpointProtectionConfiguration_fileVaultEnabled",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "id": "deviceConfiguration--windows10CompliancePolicy_signatureOutOfDate",
+    "valueType": "boolean",
+    "displayName": "Require Microsoft Defender Antimalware security intelligence up-to-date",
+    "isTopLevel": true,
+    "description": "Require Microsoft Defender security intelligence to be up-to-date. (This compliance check is supported for desktop devices running Windows 10 or later)",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windows10CompliancePolicy_defenderEnabled",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

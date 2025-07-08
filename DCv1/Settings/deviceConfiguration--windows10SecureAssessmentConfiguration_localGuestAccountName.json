@@ -1,0 +1,37 @@
+{
+    "id": "deviceConfiguration--windows10SecureAssessmentConfiguration_localGuestAccountName",
+    "valueType": "string",
+    "displayName": "Account name",
+    "isTopLevel": true,
+    "description": "The name of the local guest account used for testing. The name is displayed on the local guest account tile on the bottom-left of the device's sign-in screen. Students click the tile to launch the test.",
+    "placeholderText": "e.g. Test",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+            "minimumLength": 1,
+            "maximumLength": 1000
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windows10SecureAssessmentConfiguration_configurationAccountType",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "localGuestAccount",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

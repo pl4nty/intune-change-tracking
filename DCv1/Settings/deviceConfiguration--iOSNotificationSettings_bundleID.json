@@ -1,0 +1,30 @@
+{
+    "id": "deviceConfiguration--iOSNotificationSettings_bundleID",
+    "valueType": "string",
+    "displayName": "App bundle ID",
+    "isTopLevel": false,
+    "description": "Enter the Bundle ID of the app to which to apply these notification settings.",
+    "placeholderText": "e.g. com.apple.calculator",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+            "minimumLength": null,
+            "maximumLength": 1000
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingRegexConstraint",
+            "regex": "^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\\-]*[a-zA-Z0-9])\\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\\-]*[A-Za-z0-9])$"
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingRequiredConstraint",
+            "notConfiguredValue": ""
+        }
+    ],
+    "dependencies": []
+}

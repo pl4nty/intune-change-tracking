@@ -1,0 +1,57 @@
+{
+    "id": "deviceConfiguration--windowsDeliveryOptimizationConfiguration_maximumCacheAgeInDays",
+    "valueType": "integer",
+    "displayName": "Maximum cache age (in days)",
+    "isTopLevel": true,
+    "description": "The maximum retention period for each content item in the cache. The recommended value is 7 days. (0-3650)",
+    "placeholderText": "Value 0 specifies not limited.",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingIntegerConstraint",
+            "minimumValue": 0,
+            "maximumValue": 3650
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windowsDeliveryOptimizationConfiguration_deliveryOptimizationMode",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "userDefined",
+                            "displayName": null
+                        },
+                        {
+                            "value": "httpOnly",
+                            "displayName": null
+                        },
+                        {
+                            "value": "httpWithPeeringNat",
+                            "displayName": null
+                        },
+                        {
+                            "value": "httpWithPeeringPrivateGroup",
+                            "displayName": null
+                        },
+                        {
+                            "value": "httpWithInternetPeering",
+                            "displayName": null
+                        },
+                        {
+                            "value": "simpleDownload",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

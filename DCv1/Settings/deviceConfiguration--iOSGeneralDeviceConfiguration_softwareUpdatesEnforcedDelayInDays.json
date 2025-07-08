@@ -1,0 +1,42 @@
+{
+    "id": "deviceConfiguration--iOSGeneralDeviceConfiguration_softwareUpdatesEnforcedDelayInDays",
+    "valueType": "integer",
+    "displayName": "Delay visibility of software updates",
+    "isTopLevel": true,
+    "description": "Delay the user’s software update for this many days. The maximum is 90 days. (1-90)",
+    "placeholderText": "30",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingIntegerConstraint",
+            "minimumValue": 0,
+            "maximumValue": 90
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingRequiredConstraint",
+            "notConfiguredValue": "0"
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint",
+            "enrollmentTypes": [
+                "IOSAutoDeviceEnrollment"
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--iOSGeneralDeviceConfiguration_softwareUpdatesForceDelayed",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

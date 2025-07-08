@@ -1,0 +1,43 @@
+{
+    "id": "deviceConfiguration--windows81GeneralConfiguration_minimumAutoInstallClassification",
+    "valueType": "string",
+    "displayName": "Minimum classification of updates to install automatically",
+    "isTopLevel": true,
+    "description": "Minimum auto install classification",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "userDefined",
+                    "displayName": "User defined"
+                },
+                {
+                    "value": "recommendedAndImportant",
+                    "displayName": "Recommended And Important"
+                },
+                {
+                    "value": "important",
+                    "displayName": "Important"
+                },
+                {
+                    "value": "none",
+                    "displayName": "None"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windows81GeneralConfiguration_updatesRequireAutomaticUpdates",
+            "constraints": []
+        }
+    ]
+}

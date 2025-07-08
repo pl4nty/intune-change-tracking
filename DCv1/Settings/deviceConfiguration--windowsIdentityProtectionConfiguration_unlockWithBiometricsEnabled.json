@@ -1,0 +1,26 @@
+{
+    "id": "deviceConfiguration--windowsIdentityProtectionConfiguration_unlockWithBiometricsEnabled",
+    "valueType": "boolean",
+    "displayName": "Allow biometric authentication:",
+    "isTopLevel": true,
+    "description": "If allowed, Windows Hello for Business can authenticate using gestures, such as face and fingerprint. Users must still configure a PIN in case of failure.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windowsIdentityProtectionConfiguration_windowsHelloForBusinessBlocked",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": false
+                }
+            ]
+        }
+    ]
+}

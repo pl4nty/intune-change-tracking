@@ -1,0 +1,37 @@
+{
+    "id": "deviceConfiguration--androidDeviceOwnerGeneralDeviceConfiguration_kioskModeExitCode",
+    "valueType": "string",
+    "displayName": "Leave kiosk mode code",
+    "isTopLevel": true,
+    "description": "The 4-6 digit PIN will be the code an IT administrator enters on a multi-app dedicated device to pause kiosk mode.",
+    "placeholderText": "Enter a 4-6 digit PIN",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+            "minimumLength": null,
+            "maximumLength": 6
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--androidDeviceOwnerGeneralDeviceConfiguration_kioskModeUseMangedHomeScreenApp",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "enabled",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

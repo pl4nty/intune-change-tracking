@@ -1,0 +1,39 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementCollectionSettingDefinition",
+    "id": "admx--microsoftedgeExtensionInstallBlocklist_ExtensionInstallBlocklistDesc",
+    "valueType": "collection",
+    "displayName": "Extension IDs the user should be prevented from installing (or * for all)",
+    "isTopLevel": true,
+    "description": null,
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "elementDefinitionId": "admx--microsoftedgeExtensionInstallBlocklist_ExtensionInstallBlocklistDesc_element",
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingCollectionConstraint",
+            "minimumLength": 1,
+            "maximumLength": 500
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "admx--microsoftedge_ExtensionInstallBlocklist",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "enabled",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

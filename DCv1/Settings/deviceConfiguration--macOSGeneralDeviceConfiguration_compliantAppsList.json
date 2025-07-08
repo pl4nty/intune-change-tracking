@@ -1,0 +1,45 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementCollectionSettingDefinition",
+    "id": "deviceConfiguration--macOSGeneralDeviceConfiguration_compliantAppsList",
+    "valueType": "collection",
+    "displayName": "Apps list",
+    "isTopLevel": true,
+    "description": null,
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "elementDefinitionId": "deviceConfiguration--appListItem",
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint",
+            "enrollmentTypes": [
+                "MacOSUserApprovedEnrollment",
+                "MacOSAutoDeviceEnrollment"
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--macOSGeneralDeviceConfiguration_compliantAppListType",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "appsInListCompliant",
+                            "displayName": "appsInListApproved"
+                        },
+                        {
+                            "value": "appsNotInListCompliant",
+                            "displayName": "appsInListProhibited"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

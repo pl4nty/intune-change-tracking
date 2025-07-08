@@ -1,0 +1,32 @@
+{
+    "id": "deviceConfiguration--androidDeviceOwnerGeneralDeviceConfiguration_kioskModeScreenSaverStartDelayInSeconds",
+    "valueType": "integer",
+    "displayName": "Number of seconds the device is inactive before showing screen saver",
+    "isTopLevel": true,
+    "description": null,
+    "placeholderText": "30",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingIntegerConstraint",
+            "minimumValue": 1,
+            "maximumValue": 9999999
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--androidDeviceOwnerGeneralDeviceConfiguration_kioskModeScreenSaverConfigurationEnabled",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "id": "deviceConfiguration--androidDeviceOwnerGeneralDeviceConfiguration_kioskModeScreenSaverDisplayTimeInSeconds",
+    "valueType": "integer",
+    "displayName": "Number of seconds the device shows screen saver before turning off screen",
+    "isTopLevel": true,
+    "description": null,
+    "placeholderText": "0",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingIntegerConstraint",
+            "minimumValue": 0,
+            "maximumValue": 9999999
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--androidDeviceOwnerGeneralDeviceConfiguration_kioskModeScreenSaverConfigurationEnabled",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

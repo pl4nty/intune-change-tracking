@@ -1,0 +1,26 @@
+{
+    "id": "deviceConfiguration--windows10CompliancePolicy_rtpEnabled",
+    "valueType": "boolean",
+    "displayName": "Require real-time protection",
+    "isTopLevel": true,
+    "description": "Require real-time protection prompts for known malware detection. (This compliance check is supported for desktop devices running Windows 10 or later)",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windows10CompliancePolicy_defenderEnabled",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

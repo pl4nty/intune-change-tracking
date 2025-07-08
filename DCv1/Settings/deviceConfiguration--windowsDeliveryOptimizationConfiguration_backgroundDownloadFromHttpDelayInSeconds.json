@@ -1,0 +1,57 @@
+{
+    "id": "deviceConfiguration--windowsDeliveryOptimizationConfiguration_backgroundDownloadFromHttpDelayInSeconds",
+    "valueType": "integer",
+    "displayName": "Delay background HTTP download (in seconds)",
+    "isTopLevel": true,
+    "description": "Delay the use of the HTTP source in a background download to prioritize the download from peers. After the max delay is reached, the download will resume from the http source. Recommended value is 60 seconds.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingIntegerConstraint",
+            "minimumValue": 0,
+            "maximumValue": 2147483647
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windowsDeliveryOptimizationConfiguration_deliveryOptimizationMode",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "userDefined",
+                            "displayName": null
+                        },
+                        {
+                            "value": "httpOnly",
+                            "displayName": null
+                        },
+                        {
+                            "value": "httpWithPeeringNat",
+                            "displayName": null
+                        },
+                        {
+                            "value": "httpWithPeeringPrivateGroup",
+                            "displayName": null
+                        },
+                        {
+                            "value": "httpWithInternetPeering",
+                            "displayName": null
+                        },
+                        {
+                            "value": "simpleDownload",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

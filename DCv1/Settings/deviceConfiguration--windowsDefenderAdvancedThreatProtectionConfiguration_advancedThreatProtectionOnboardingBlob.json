@@ -1,0 +1,50 @@
+{
+    "id": "deviceConfiguration--windowsDefenderAdvancedThreatProtectionConfiguration_advancedThreatProtectionOnboardingBlob",
+    "valueType": "string",
+    "displayName": "Microsoft Defender for Endpoint onboarding blob",
+    "isTopLevel": true,
+    "description": "Microsoft Defender for Endpoint onboarding blob",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingFileConstraint",
+            "supportedExtensions": [
+                "onboarding"
+            ]
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementIntentSettingSecretConstraint"
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+            "minimumLength": null,
+            "maximumLength": 87337
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windowsDefenderAdvancedThreatProtectionConfiguration_advancedThreatProtectionBlobType",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "onboardingBlob",
+                            "displayName": null
+                        },
+                        {
+                            "value": "notConfigured",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

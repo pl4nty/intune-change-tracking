@@ -1,0 +1,58 @@
+{
+    "id": "deviceConfiguration--iOSGeneralDeviceConfiguration_kioskModeManagedAppId",
+    "valueType": "string",
+    "displayName": "Managed Intune app to use for Kiosk mode",
+    "isTopLevel": true,
+    "description": "Add managed Intune apps from the Software Node.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint",
+            "enrollmentTypes": [
+                "IOSAutoDeviceEnrollment"
+            ]
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+            "minimumLength": null,
+            "maximumLength": 1000
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingRegexConstraint",
+            "regex": "^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\\-]*[a-zA-Z0-9])\\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\\-]*[A-Za-z0-9])$"
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingAppConstraint",
+            "supportedTypes": [
+                "managedIOSLobApp",
+                "managedIOSStoreApp"
+            ]
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingRequiredConstraint",
+            "notConfiguredValue": ""
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--iOSGeneralDeviceConfiguration_kioskModeAppType",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "managedApp",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

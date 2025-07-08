@@ -1,0 +1,49 @@
+{
+    "id": "deviceConfiguration--androidDeviceOwnerGeneralDeviceConfiguration_kioskModeVirtualHomeButtonType",
+    "valueType": "string",
+    "displayName": "Virtual home button",
+    "isTopLevel": true,
+    "description": "Enable a soft-key button that returns users to the Managed Home Screen. Choose between a persistent, floating button or a button activated by a swipe-up gesture.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "notConfigured",
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "swipeUp",
+                    "displayName": "Swipe up"
+                },
+                {
+                    "value": "floating",
+                    "displayName": "Floating"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--androidDeviceOwnerGeneralDeviceConfiguration_kioskModeUseMangedHomeScreenApp",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "enabled",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

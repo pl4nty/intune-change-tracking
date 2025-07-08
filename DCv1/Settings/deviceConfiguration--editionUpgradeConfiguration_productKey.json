@@ -1,0 +1,80 @@
+{
+    "id": "deviceConfiguration--editionUpgradeConfiguration_productKey",
+    "valueType": "string",
+    "displayName": "Product key",
+    "isTopLevel": true,
+    "description": "Product key",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+            "minimumLength": null,
+            "maximumLength": 200
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementIntentSettingSecretConstraint"
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingRegexConstraint",
+            "regex": "^\\w{5}-\\w{5}-\\w{5}-\\w{5}-\\w{5}$"
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--editionUpgradeConfiguration_targetEdition",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "windows10Enterprise",
+                            "displayName": null
+                        },
+                        {
+                            "value": "windows10EnterpriseN",
+                            "displayName": null
+                        },
+                        {
+                            "value": "windows10Education",
+                            "displayName": null
+                        },
+                        {
+                            "value": "windows10EducationN",
+                            "displayName": null
+                        },
+                        {
+                            "value": "windows10Professional",
+                            "displayName": null
+                        },
+                        {
+                            "value": "windows10ProfessionalN",
+                            "displayName": null
+                        },
+                        {
+                            "value": "windows10ProfessionalEducation",
+                            "displayName": null
+                        },
+                        {
+                            "value": "windows10ProfessionalEducationN",
+                            "displayName": null
+                        },
+                        {
+                            "value": "windows10ProfessionalWorkstation",
+                            "displayName": null
+                        },
+                        {
+                            "value": "windows10ProfessionalWorkstationN",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

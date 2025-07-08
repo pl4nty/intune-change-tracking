@@ -1,0 +1,22 @@
+{
+    "id": "deviceConfiguration--windows10EndpointProtectionConfiguration_defenderCloudExtendedTimeout",
+    "valueType": "integer",
+    "displayName": "Additional amount of time (0-50 seconds) to extend cloud protection timeout",
+    "isTopLevel": true,
+    "description": "Specify the maximum amount of time that Microsoft Defender Antivirus should block a file while waiting for a result from the cloud. The base amount is 10 seconds-any additional time specified here(up to 50 seconds) will be added to those 10 seconds. This amount is a theoretical maximum-in most cases the scan will take less time than the maximum. Extending the time allows the cloud to thoroughly investigate suspicious files.\r\nWe recommend you enable this setting and specify at least 20 additional seconds. (0-50)",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=2113940&clcid=0x409",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingIntegerConstraint",
+            "minimumValue": 0,
+            "maximumValue": 50
+        }
+    ],
+    "dependencies": []
+}

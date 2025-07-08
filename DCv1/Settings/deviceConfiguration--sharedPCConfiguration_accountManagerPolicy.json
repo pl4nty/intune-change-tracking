@@ -1,0 +1,38 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementComplexSettingDefinition",
+    "id": "deviceConfiguration--sharedPCConfiguration_accountManagerPolicy",
+    "valueType": "complex",
+    "displayName": "Account manager policy",
+    "isTopLevel": true,
+    "description": "Account manager policy",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "propertyDefinitionIds": [
+        "deviceConfiguration--sharedPCAccountManagerPolicy_accountDeletionPolicy",
+        "deviceConfiguration--sharedPCAccountManagerPolicy_removeAccountsBelowDiskFreePercentage",
+        "deviceConfiguration--sharedPCAccountManagerPolicy_cacheAccountsAboveDiskFreePercentage",
+        "deviceConfiguration--sharedPCAccountManagerPolicy_inactiveThresholdDays"
+    ],
+    "constraints": [],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--sharedPCConfiguration_setAccountManager",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "enabled",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

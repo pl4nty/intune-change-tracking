@@ -1,0 +1,42 @@
+{
+    "id": "deviceConfiguration--windows10EndpointProtectionConfiguration_defenderGuardMyFoldersType",
+    "valueType": "string",
+    "displayName": "Enable folder protection",
+    "isTopLevel": true,
+    "description": "When set to Yes, Defender will block untrusted apps attempts to modify or delete files in protected folders, or write to disk sectors. Windows Defender automatically determines which applications can be trusted, and alternatively define your own list of trusted applications. Define the folders to protect in the next few settings. When set to Audit only, Windows events will be raised when untrusted applications access controlled folders, but no block will be enforced. When set to Block disk modification only, only writes to to disk sectors will be blocked. Setting not configured will return the setting back to default, and no read/writes will be blocked.",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=872614",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "userDefined",
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "enable",
+                    "displayName": "Enable"
+                },
+                {
+                    "value": "auditMode",
+                    "displayName": "Audit mode"
+                },
+                {
+                    "value": "blockDiskModification",
+                    "displayName": "Block disk modification"
+                },
+                {
+                    "value": "auditDiskModification",
+                    "displayName": "Audit disk modification"
+                }
+            ]
+        }
+    ],
+    "dependencies": []
+}

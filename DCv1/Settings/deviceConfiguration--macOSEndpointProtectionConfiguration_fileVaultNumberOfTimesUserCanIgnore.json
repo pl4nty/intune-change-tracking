@@ -1,0 +1,85 @@
+{
+    "id": "deviceConfiguration--macOSEndpointProtectionConfiguration_fileVaultNumberOfTimesUserCanIgnore",
+    "valueType": "integer",
+    "displayName": "Number of times allowed to bypass",
+    "isTopLevel": true,
+    "description": "Set the value to -1 to disable the setting. Set the value to 0 to always prompt the user to enable FileVault, although they can ignore the prompt. Set the value from 1 to 10 to allow the user to bypass the prompt that many times until they are required to encrypt the device.",
+    "placeholderText": "Enter -1 to disable or an integer 0-10",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingIntegerConstraint",
+            "minimumValue": -1,
+            "maximumValue": 10
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "-1",
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "1",
+                    "displayName": "1"
+                },
+                {
+                    "value": "2",
+                    "displayName": "2"
+                },
+                {
+                    "value": "3",
+                    "displayName": "3"
+                },
+                {
+                    "value": "4",
+                    "displayName": "4"
+                },
+                {
+                    "value": "5",
+                    "displayName": "5"
+                },
+                {
+                    "value": "6",
+                    "displayName": "6"
+                },
+                {
+                    "value": "7",
+                    "displayName": "7"
+                },
+                {
+                    "value": "8",
+                    "displayName": "8"
+                },
+                {
+                    "value": "9",
+                    "displayName": "9"
+                },
+                {
+                    "value": "10",
+                    "displayName": "10"
+                },
+                {
+                    "value": "0",
+                    "displayName": "No limit, always prompt"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--macOSEndpointProtectionConfiguration_fileVaultEnabled",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

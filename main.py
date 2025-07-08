@@ -158,6 +158,16 @@ async def main():
                 json.dump(data.json().get('results'), f,
                           ensure_ascii=False, indent=4)
 
+    # DCv1 settingDefinitions
+    output = 'DCv1'
+    source = 'Settings'
+    os.makedirs(Path(output, source))
+    data = await client.device_management.with_url('https://graph.microsoft.com/beta/deviceManagement/settingDefinitions').get(request_configuration=request_config)
+    for item in data.json().get('value'):
+        path = Path(output, source, item.get('id')).with_suffix('.json')
+        with open(path, 'w', encoding='utf-8') as f:
+            json.dump(item, f, ensure_ascii=False, indent=4)
+
     # DCv2 configurationSettings eg Settings Catalog
     output = 'DCv2'
     shutil.rmtree(output)

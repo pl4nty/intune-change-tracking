@@ -1,0 +1,80 @@
+{
+    "id": "deviceConfiguration--iOSGeneralDeviceConfiguration_passcodeMinutesOfInactivityBeforeScreenTimeout",
+    "valueType": "integer",
+    "displayName": "Maximum minutes of inactivity until screen locks",
+    "isTopLevel": true,
+    "description": "Set to 0 to use the device's minimum possible value. This number (0-60) overrides the number currently set on the device. If set to Immediately, devices will use the minimum possible value per device.",
+    "placeholderText": "0-5, 10, or 15",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingIntegerConstraint",
+            "minimumValue": 0,
+            "maximumValue": 60
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint",
+            "enrollmentTypes": [
+                "IOSDeviceEnrollment",
+                "IOSAutoDeviceEnrollment"
+            ]
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": null,
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "0",
+                    "displayName": "Immediately"
+                },
+                {
+                    "value": "1",
+                    "displayName": "1 minute"
+                },
+                {
+                    "value": "2",
+                    "displayName": "2 minutes"
+                },
+                {
+                    "value": "3",
+                    "displayName": "3 minutes"
+                },
+                {
+                    "value": "4",
+                    "displayName": "4 minutes"
+                },
+                {
+                    "value": "5",
+                    "displayName": "5 minutes"
+                },
+                {
+                    "value": "10",
+                    "displayName": "10 minutes"
+                },
+                {
+                    "value": "15",
+                    "displayName": "15 minutes"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--iOSGeneralDeviceConfiguration_passcodeRequired",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

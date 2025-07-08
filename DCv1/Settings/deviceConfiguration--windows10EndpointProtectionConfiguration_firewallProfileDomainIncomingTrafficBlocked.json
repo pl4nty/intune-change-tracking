@@ -1,0 +1,49 @@
+{
+    "id": "deviceConfiguration--windows10EndpointProtectionConfiguration_firewallProfileDomainIncomingTrafficBlocked",
+    "valueType": "string",
+    "displayName": "Enable shielded mode",
+    "isTopLevel": true,
+    "description": "When this setting is set to yes, the machine will be put into shielded mode which will isolate it from the network. All traffic will be blocked. When not configured, the client default is shielded mode disabled.",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=872561",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "notConfigured",
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "blocked",
+                    "displayName": "Yes"
+                },
+                {
+                    "value": "allowed",
+                    "displayName": "No"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windows10EndpointProtectionConfiguration_firewallProfileDomainFirewallEnabled",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "allowed",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

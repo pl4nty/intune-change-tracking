@@ -1,0 +1,36 @@
+{
+    "id": "deviceConfiguration--windows10CompliancePolicy_defenderVersion",
+    "valueType": "string",
+    "displayName": "Microsoft Defender Antimalware minimum version",
+    "isTopLevel": true,
+    "description": "Minimum version of Microsoft Defender (e.g. 4.11.0.0) (This compliance check is supported for desktop devices running Windows 10 or later)",
+    "placeholderText": "Valid version format: 4.11.0.0",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+            "minimumLength": null,
+            "maximumLength": 50
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingRegexConstraint",
+            "regex": "^$|^\\d+\\.\\d+\\.\\d+\\.\\d+$"
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windows10CompliancePolicy_defenderEnabled",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

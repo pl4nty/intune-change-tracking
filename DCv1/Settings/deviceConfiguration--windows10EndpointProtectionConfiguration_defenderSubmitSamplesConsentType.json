@@ -1,0 +1,42 @@
+{
+    "id": "deviceConfiguration--windows10EndpointProtectionConfiguration_defenderSubmitSamplesConsentType",
+    "valueType": "string",
+    "displayName": "Submit samples consent",
+    "isTopLevel": true,
+    "description": "Checks for the user consent level in Microsoft Defender to send data. If the required consent has already been granted, Microsoft Defender submits them. If not, (and if the user has specified never to ask), the UI is launched to ask for user consent (when Defender/AllowCloudProtection is allowed) before sending data.",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=2114041&clcid=0x409",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "notConfigured",
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "sendSafeSamplesAutomatically",
+                    "displayName": "Send safe samples automatically"
+                },
+                {
+                    "value": "alwaysPrompt",
+                    "displayName": "Always prompt"
+                },
+                {
+                    "value": "neverSend",
+                    "displayName": "Never send"
+                },
+                {
+                    "value": "sendAllSamplesAutomatically",
+                    "displayName": "Send all samples automatically"
+                }
+            ]
+        }
+    ],
+    "dependencies": []
+}

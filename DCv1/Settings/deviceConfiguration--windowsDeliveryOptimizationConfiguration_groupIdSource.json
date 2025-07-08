@@ -1,0 +1,36 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementAbstractComplexSettingDefinition",
+    "id": "deviceConfiguration--windowsDeliveryOptimizationConfiguration_groupIdSource",
+    "valueType": "abstractComplex",
+    "displayName": "Group ID source",
+    "isTopLevel": true,
+    "description": "Group ID is assigned automatically from the selected source. To set your own Group ID select “Custom” and provide a GUID.​",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "implementations": [
+        "deviceConfiguration--deliveryOptimizationGroupIdCustom",
+        "deviceConfiguration--deliveryOptimizationGroupIdSourceOptions"
+    ],
+    "constraints": [],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windowsDeliveryOptimizationConfiguration_deliveryOptimizationMode",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "httpWithPeeringPrivateGroup",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

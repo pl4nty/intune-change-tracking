@@ -1,0 +1,57 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementAbstractComplexSettingDefinition",
+    "id": "deviceConfiguration--windowsDeliveryOptimizationConfiguration_bandwidthMode",
+    "valueType": "abstractComplex",
+    "displayName": "Bandwidth optimization type",
+    "isTopLevel": true,
+    "description": "Select the maximum bandwidth that Delivery Optimization uses across all concurrent download activities. Downloads from LAN peers are not throttled even when this policy is set.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "implementations": [
+        "deviceConfiguration--deliveryOptimizationBandwidthAbsolute",
+        "deviceConfiguration--deliveryOptimizationBandwidthHoursWithPercentage",
+        "deviceConfiguration--deliveryOptimizationBandwidthPercentage"
+    ],
+    "constraints": [],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windowsDeliveryOptimizationConfiguration_deliveryOptimizationMode",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "userDefined",
+                            "displayName": null
+                        },
+                        {
+                            "value": "httpOnly",
+                            "displayName": null
+                        },
+                        {
+                            "value": "httpWithPeeringNat",
+                            "displayName": null
+                        },
+                        {
+                            "value": "httpWithPeeringPrivateGroup",
+                            "displayName": null
+                        },
+                        {
+                            "value": "httpWithInternetPeering",
+                            "displayName": null
+                        },
+                        {
+                            "value": "simpleDownload",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

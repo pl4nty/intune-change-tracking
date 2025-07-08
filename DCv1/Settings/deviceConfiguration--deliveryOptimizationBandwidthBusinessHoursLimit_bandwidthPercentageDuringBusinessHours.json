@@ -1,0 +1,33 @@
+{
+    "id": "deviceConfiguration--deliveryOptimizationBandwidthBusinessHoursLimit_bandwidthPercentageDuringBusinessHours",
+    "valueType": "integer",
+    "displayName": "During business hours (in %)",
+    "isTopLevel": false,
+    "description": null,
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingIntegerConstraint",
+            "minimumValue": 0,
+            "maximumValue": 100
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--deliveryOptimizationBandwidthBusinessHoursLimit_bandwidthBeginBusinessHours",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingIntegerConstraint",
+                    "minimumValue": 0,
+                    "maximumValue": 23
+                }
+            ]
+        }
+    ]
+}

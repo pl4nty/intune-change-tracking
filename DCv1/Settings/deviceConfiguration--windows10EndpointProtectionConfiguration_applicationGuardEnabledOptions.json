@@ -1,0 +1,38 @@
+{
+    "id": "deviceConfiguration--windows10EndpointProtectionConfiguration_applicationGuardEnabledOptions",
+    "valueType": "string",
+    "displayName": "Turn on Application Guard",
+    "isTopLevel": true,
+    "description": "If enabled for Microsoft Edge, Application Guard opens unapproved sites in a Hyper-V virtualized browsing container.\r\n\r\nIf enabled for isolated Windows environments, Application Guard is turned on for any applications enabled for App Guard within Windows. For example, Microsoft Office, where Application Guard opens Word, Excel, PowerPoint documents safely inside a Hyper-V container.\r\n\r\nIf enabled for Microsoft Edge and isolated Windows environments, Application Guard is configured for both scenarios.\r\n\r\nIf not configured, Microsoft Defender Application Guard is not configured for Microsoft Edge or isolated Windows environments.",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=872350",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "notConfigured",
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "enabledForEdge",
+                    "displayName": "Enabled for Edge"
+                },
+                {
+                    "value": "enabledForOffice",
+                    "displayName": "Enabled for isolated Windows environments"
+                },
+                {
+                    "value": "enabledForEdgeAndOffice",
+                    "displayName": "Enabled for Edge AND isolated Windows environments"
+                }
+            ]
+        }
+    ],
+    "dependencies": []
+}

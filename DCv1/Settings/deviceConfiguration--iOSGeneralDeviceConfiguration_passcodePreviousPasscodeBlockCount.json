@@ -1,0 +1,39 @@
+{
+    "id": "deviceConfiguration--iOSGeneralDeviceConfiguration_passcodePreviousPasscodeBlockCount",
+    "valueType": "integer",
+    "displayName": "Prevent reuse of previous passwords",
+    "isTopLevel": true,
+    "description": "Number of new passwords that must be used until an old one can be reused. (1-24)",
+    "placeholderText": "(1-24)",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingIntegerConstraint",
+            "minimumValue": 1,
+            "maximumValue": 24
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint",
+            "enrollmentTypes": [
+                "IOSDeviceEnrollment",
+                "IOSAutoDeviceEnrollment"
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--iOSGeneralDeviceConfiguration_passcodeRequired",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

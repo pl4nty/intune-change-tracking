@@ -1,0 +1,32 @@
+{
+    "id": "deviceConfiguration--bitLockerSystemDrivePolicy_prebootRecoveryMessage",
+    "valueType": "string",
+    "displayName": "Preboot recovery message",
+    "isTopLevel": false,
+    "description": "Use this option to declare if a custom recovery message or URL is desired.",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=872530",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+            "minimumLength": null,
+            "maximumLength": 900
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--bitLockerSystemDrivePolicy_prebootRecoveryEnableMessageAndUrl",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "id": "deviceConfiguration--windowsFirewallRule_packageFamilyName",
+    "valueType": "string",
+    "displayName": "Package family name",
+    "isTopLevel": false,
+    "description": "Package family names can be retrieved by running the Get-AppxPackage command from PowerShell. You can define one application to be used in each Firewall rule. If you specify multiple conditions in a single rule, these will be treated as an AND operation. i.e program=svchost.exe AND service=mpssvc, etc.\r\n\r\nAll of the app related conditions in a single rule work to scope the traffic even further, so they must all correspond to the specific app/service.",
+    "placeholderText": "e.g. Microsoft.Office.OneNote_8wekyb3d8bbwe",
+    "documentationUrl": "https://aka.ms/AppXPackageNameFromPowerShell",
+    "headerTitle": "Applications settings",
+    "headerSubtitle": "Application(s) targeted with this rule",
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+            "minimumLength": null,
+            "maximumLength": 64
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingRegexConstraint",
+            "regex": "^(?!CON_|PRN_|AUX_|NUL_|COM1_|COM2_|COM3_|COM4_|COM5_|COM6_|COM7_|COM8_|COM9_|LPT1_|LPT2_|LPT3_|LPT4_|LPT5_|LPT6_|LPT7_|LPT8_|LPT9_|con_|prn_|aux_|nul_|com1_|com2_|com3_|com4_|com5_|com6_|com7_|com8_|com9_|lpt1_|lpt2_|lpt3_|lpt4_|lpt5_|lpt6_|lpt7_|lpt8_|lpt9_|Con_|Prn_|Aux_|Nul_|Com1_|Com2_|Com3_|Com4_|Com5_|Com6_|Com7_|Com8_|Com9_|Lpt1_|Lpt2_|Lpt3_|Lpt4_|Lpt5_|Lpt6_|Lpt7_|Lpt8_|Lpt9_)[a-zA-Z0-9\\-\\.]{3,50}_[a-zA-Z0-9]{13}$"
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windowsFirewallRule_filePath",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+                    "minimumLength": null,
+                    "maximumLength": 0
+                }
+            ]
+        },
+        {
+            "definitionId": "deviceConfiguration--windowsFirewallRule_serviceName",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+                    "minimumLength": null,
+                    "maximumLength": 0
+                }
+            ]
+        }
+    ]
+}
