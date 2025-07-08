@@ -1,0 +1,32 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementAbstractComplexSettingDefinition",
+    "id": "deviceConfiguration--iOSDeviceFeaturesConfiguration_iOSSingleSignOnExtension",
+    "valueType": "abstractComplex",
+    "displayName": "SSO app extension type",
+    "isTopLevel": true,
+    "description": "Perform SSO with one of these extension types.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "implementations": [
+        "deviceConfiguration--iOSAzureAdSingleSignOnExtension",
+        "deviceConfiguration--iOSRedirectSingleSignOnExtension",
+        "deviceConfiguration--iOSCredentialSingleSignOnExtension",
+        "deviceConfiguration--iOSKerberosSingleSignOnExtension"
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint",
+            "enrollmentTypes": [
+                "IOSUserEnrollment",
+                "IOSDeviceEnrollment",
+                "IOSAutoDeviceEnrollment"
+            ]
+        }
+    ],
+    "dependencies": []
+}

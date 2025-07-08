@@ -1,0 +1,41 @@
+{
+    "id": "deviceConfiguration--sharedPCAccountManagerPolicy_cacheAccountsAboveDiskFreePercentage",
+    "valueType": "integer",
+    "displayName": "Stop delete threshold(%)",
+    "isTopLevel": false,
+    "description": "Account manager stops deleting cached accounts as soon as total disk/storage space meets your configured threshold.",
+    "placeholderText": "Enter percentage of disk space(0-100)",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingIntegerConstraint",
+            "minimumValue": 0,
+            "maximumValue": 100
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--sharedPCAccountManagerPolicy_accountDeletionPolicy",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "diskSpaceThreshold",
+                            "displayName": "diskSpaceThreshold"
+                        },
+                        {
+                            "value": "diskSpaceThresholdOrInactiveThreshold",
+                            "displayName": "diskSpaceThresholdOrInactiveThreshold"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

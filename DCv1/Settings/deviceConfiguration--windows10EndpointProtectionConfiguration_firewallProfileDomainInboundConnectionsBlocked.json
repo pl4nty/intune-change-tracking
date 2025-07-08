@@ -1,0 +1,49 @@
+{
+    "id": "deviceConfiguration--windows10EndpointProtectionConfiguration_firewallProfileDomainInboundConnectionsBlocked",
+    "valueType": "string",
+    "displayName": "Block inbound connections",
+    "isTopLevel": true,
+    "description": "When this setting is set to yes, all inbound connections that do not match an inbound rule will be blocked. When this setting is set to no, all connections that do not match an inbound rule will be allowed. This allow/block rule will be evaluated at the very end of the rule list. Setting this to not configured returns the setting to client default, which is block.",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=872564",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "notConfigured",
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "blocked",
+                    "displayName": "Yes"
+                },
+                {
+                    "value": "allowed",
+                    "displayName": "No"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windows10EndpointProtectionConfiguration_firewallProfileDomainFirewallEnabled",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "allowed",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

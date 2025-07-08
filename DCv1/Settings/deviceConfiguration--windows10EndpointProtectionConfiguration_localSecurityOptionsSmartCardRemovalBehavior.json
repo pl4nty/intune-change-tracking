@@ -1,0 +1,38 @@
+{
+    "id": "deviceConfiguration--windows10EndpointProtectionConfiguration_localSecurityOptionsSmartCardRemovalBehavior",
+    "valueType": "string",
+    "displayName": "Smart card removal behavior",
+    "isTopLevel": true,
+    "description": "This security setting determines what happens when the smart card for a logged-on user is removed from the smart card reader.\r\n\r\nIf you click Lock Workstation in the Properties dialog box for this policy, the workstation is locked when the smart card is removed, allowing users to leave the area, take their smart card with them, and still maintain a protected session.\r\n\r\nIf you click Force Logoff in the Properties dialog box for this policy, the user is automatically logged off when the smart card is removed.\r\n\r\nIf you click Disconnect if a Remote Desktop Services session, removal of the smart card disconnects the session without logging the user off. This allows the user to insert the smart card and resume the session later, or at another smart card reader-equipped computer, without having to log on again. If the session is local, this policy functions identically to Lock Workstation.",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=2067331",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "noAction",
+                    "displayName": "No Action"
+                },
+                {
+                    "value": "lockWorkstation",
+                    "displayName": "Lock workstation"
+                },
+                {
+                    "value": "forceLogoff",
+                    "displayName": "Force logoff"
+                },
+                {
+                    "value": "disconnectRemoteDesktopSession",
+                    "displayName": "Disconnect Remote Desktop session"
+                }
+            ]
+        }
+    ],
+    "dependencies": []
+}

@@ -1,0 +1,48 @@
+{
+    "id": "deviceConfiguration--iOSDeviceFeaturesConfiguration_wallpaperDisplayLocation",
+    "valueType": "string",
+    "displayName": "Wallpaper display location",
+    "isTopLevel": true,
+    "description": "Wallpaper Display Location. If you want to block users from changing the wallpaper, go to Device restrictions > General.",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=2064647&clcid=0x409",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "notConfigured",
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "lockScreen",
+                    "displayName": "Lock screen"
+                },
+                {
+                    "value": "homeScreen",
+                    "displayName": "Home screen"
+                },
+                {
+                    "value": "lockAndHomeScreens",
+                    "displayName": "Lock and home screen"
+                }
+            ]
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint",
+            "enrollmentTypes": [
+                "IOSAutoDeviceEnrollment"
+            ]
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingRequiredConstraint",
+            "notConfiguredValue": null
+        }
+    ],
+    "dependencies": []
+}

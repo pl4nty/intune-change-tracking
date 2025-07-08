@@ -1,0 +1,49 @@
+{
+    "id": "deviceConfiguration--windows10EndpointProtectionConfiguration_firewallProfilePrivateConnectionSecurityRulesFromGroupPolicyMerged",
+    "valueType": "string",
+    "displayName": "Ignore connection security rules",
+    "isTopLevel": true,
+    "description": "When this setting is set to yes, IPsec firewall rules in the local store will be ignored. Setting it to no will honor these rules. Setting this to not configured returns the setting to client default which is to honor the local rules.",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=872568",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "notConfigured",
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "blocked",
+                    "displayName": "Yes"
+                },
+                {
+                    "value": "allowed",
+                    "displayName": "No"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windows10EndpointProtectionConfiguration_firewallProfilePrivateFirewallEnabled",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "allowed",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

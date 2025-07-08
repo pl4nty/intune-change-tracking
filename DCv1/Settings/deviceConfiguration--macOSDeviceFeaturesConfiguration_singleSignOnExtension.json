@@ -1,0 +1,38 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementAbstractComplexSettingDefinition",
+    "id": "deviceConfiguration--macOSDeviceFeaturesConfiguration_singleSignOnExtension",
+    "valueType": "abstractComplex",
+    "displayName": "SSO app extension type",
+    "isTopLevel": true,
+    "description": "Perform SSO with a generic credential or Kerberos credential extension. A credential extension is intended for challenge/response authentication protocols.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "implementations": [
+        "deviceConfiguration--credentialSingleSignOnExtension",
+        "deviceConfiguration--iOSKerberosSingleSignOnExtension",
+        "deviceConfiguration--macOSKerberosSingleSignOnExtension",
+        "deviceConfiguration--redirectSingleSignOnExtension",
+        "deviceConfiguration--iOSAzureAdSingleSignOnExtension",
+        "deviceConfiguration--iOSCredentialSingleSignOnExtension",
+        "deviceConfiguration--iOSRedirectSingleSignOnExtension",
+        "deviceConfiguration--macOSCredentialSingleSignOnExtension",
+        "deviceConfiguration--macOSRedirectSingleSignOnExtension"
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint",
+            "enrollmentTypes": [
+                "MacOSDeviceEnrollment",
+                "MacOSAutoDeviceEnrollment",
+                "MacOSUserEnrollment",
+                "MacOSUserApprovedEnrollment"
+            ]
+        }
+    ],
+    "dependencies": []
+}

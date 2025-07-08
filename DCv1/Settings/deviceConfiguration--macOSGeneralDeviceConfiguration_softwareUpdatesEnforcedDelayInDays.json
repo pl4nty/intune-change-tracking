@@ -1,0 +1,43 @@
+{
+    "id": "deviceConfiguration--macOSGeneralDeviceConfiguration_softwareUpdatesEnforcedDelayInDays",
+    "valueType": "integer",
+    "displayName": "Delay visibility of software updates",
+    "isTopLevel": true,
+    "description": "Delay the user’s software update for this many days. The maximum is 90 days. (1-90)",
+    "placeholderText": "30",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingIntegerConstraint",
+            "minimumValue": 0,
+            "maximumValue": 90
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint",
+            "enrollmentTypes": [
+                "MacOSUserApprovedEnrollment",
+                "MacOSAutoDeviceEnrollment"
+            ]
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingRequiredConstraint",
+            "notConfiguredValue": null
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--macOSGeneralDeviceConfiguration_softwareUpdatesForceDelayed",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

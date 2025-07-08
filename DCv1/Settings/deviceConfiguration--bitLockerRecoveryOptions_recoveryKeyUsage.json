@@ -1,0 +1,38 @@
+{
+    "id": "deviceConfiguration--bitLockerRecoveryOptions_recoveryKeyUsage",
+    "valueType": "string",
+    "displayName": "Recovery key file creation",
+    "isTopLevel": false,
+    "description": "Setting this to Allow will allow an admin user to create a 256-bit recovery key file manually.\r\nSetting this to Require will require an admin user to create a 256-bit recovery key file manually.\r\nSetting this to Deny will disallow any admin user from creating a 256-bit recovery key file manually.\r\n\r\nBitLocker silent enablement requires this setting configured as Deny or Allow.\r\n    ",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "notConfigured",
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "blocked",
+                    "displayName": "Blocked"
+                },
+                {
+                    "value": "required",
+                    "displayName": "Required"
+                },
+                {
+                    "value": "allowed",
+                    "displayName": "Allowed"
+                }
+            ]
+        }
+    ],
+    "dependencies": []
+}

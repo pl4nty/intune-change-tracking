@@ -1,0 +1,26 @@
+{
+    "id": "deviceConfiguration--bitLockerSystemDrivePolicy_startupAuthenticationBlockWithoutTpmChip",
+    "valueType": "boolean",
+    "displayName": "Disable BitLocker on devices where TPM is incompatible",
+    "isTopLevel": false,
+    "description": "Setting this to Yes will disable BitLocker from being configured without a compatible TPM chip.\r\n\r\nThis setting may be helpful for testing, but it is not suggested to enable BitLocker without a TPM. If no TPM is present, BitLocker will require a password or USB drive for startup.\r\n\r\nThis setting only applies when first enabling BitLocker. If BitLocker is already enabled prior to applying this setting, it will have no effect.",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=872527",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--bitLockerSystemDrivePolicy_startupAuthenticationRequired",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

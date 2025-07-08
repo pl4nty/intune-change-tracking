@@ -1,0 +1,26 @@
+{
+    "id": "deviceConfiguration--windows10TeamGeneralConfiguration_welcomeScreenBackgroundImageUrl",
+    "valueType": "string",
+    "displayName": "Welcome screen background image URL",
+    "isTopLevel": true,
+    "description": "Custom welcome screen background image URL. Must be a .PNG file with endpoint https://",
+    "placeholderText": "e.g. https://...png",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+            "minimumLength": null,
+            "maximumLength": 1000
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingRegexConstraint",
+            "regex": "^(https)://(.)+?$"
+        }
+    ],
+    "dependencies": []
+}

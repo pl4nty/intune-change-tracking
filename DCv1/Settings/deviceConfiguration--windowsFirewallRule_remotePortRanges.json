@@ -1,0 +1,43 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementCollectionSettingDefinition",
+    "id": "deviceConfiguration--windowsFirewallRule_remotePortRanges",
+    "valueType": "collection",
+    "displayName": "Remote port ranges",
+    "isTopLevel": false,
+    "description": "\r\n    List of remote port ranges. Valid values include:​<br>\r\n<ul><li>A valid port number between 0 and 65535. For example, 200</li>\r\n<li>A port range in the format of \"start port – end port\" with no spaces included, where the start port is less than the end port. For example, 300-320</li></ul>\r\nIf not specified, the default is \"All ports.\"\r\n\r\nWhen defining multiple local and remote port ranges, the Firewall rule will be evaluated as OR operations within an individual field, and AND operations across rule fields. i.e. (local port A OR local port B) AND (remote port A OR remote port B).",
+    "placeholderText": null,
+    "documentationUrl": "https://aka.ms/intunefirewallremoteportrule",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "elementDefinitionId": "deviceConfiguration--windowsFirewallRule_remotePortRanges_element",
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingCollectionConstraint",
+            "minimumLength": null,
+            "maximumLength": 25
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windowsFirewallRule_protocol",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "6",
+                            "displayName": null
+                        },
+                        {
+                            "value": "17",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

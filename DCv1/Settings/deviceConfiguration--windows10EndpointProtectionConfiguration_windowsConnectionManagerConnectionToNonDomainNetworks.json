@@ -1,0 +1,34 @@
+{
+    "id": "deviceConfiguration--windows10EndpointProtectionConfiguration_windowsConnectionManagerConnectionToNonDomainNetworks",
+    "valueType": "string",
+    "displayName": "Block connection to non-domain networks",
+    "isTopLevel": true,
+    "description": "This policy setting prevents computers from connecting to both a domain based network and a non-domain based network at the same time.\r\n\r\nIf this policy setting is enabled, the computer responds to automatic and manual network connection attempts based on the following circumstances:\r\n\r\nAutomatic connection attempts\r\n\r\nWhen the computer is already connected to a domain based network, all automatic connection attempts to non-domain networks are blocked.\r\nWhen the computer is already connected to a non-domain based network, automatic connection attempts to domain based networks are blocked.\r\nManual connection attempts\r\n\r\nWhen the computer is already connected to either a non-domain based network or a domain based network over media other than Ethernet, and a user attempts to create a manual connection to an additional network in violation of this policy setting, the existing network connection is disconnected and the manual connection is allowed.\r\nWhen the computer is already connected to either a non-domain based network or a domain based network over Ethernet, and a user attempts to create a manual connection to an additional network in violation of this policy setting, the existing Ethernet connection is maintained and the manual connection attempt is blocked.\r\nIf this policy setting is not configured or is disabled, computers are allowed to connect simultaneously to both domain and non-domain networks.",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=2067323",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "notConfigured",
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "enabled",
+                    "displayName": "Enabled"
+                },
+                {
+                    "value": "disabled",
+                    "displayName": "Disabled"
+                }
+            ]
+        }
+    ],
+    "dependencies": []
+}

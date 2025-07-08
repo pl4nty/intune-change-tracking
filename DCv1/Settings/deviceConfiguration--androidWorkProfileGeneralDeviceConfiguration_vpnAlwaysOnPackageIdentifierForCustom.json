@@ -1,0 +1,45 @@
+{
+    "id": "deviceConfiguration--androidWorkProfileGeneralDeviceConfiguration_vpnAlwaysOnPackageIdentifierForCustom",
+    "valueType": "string",
+    "displayName": "Package ID",
+    "isTopLevel": true,
+    "description": "Enter the package ID of the VPN client app in the Google Play store. For example, if the URL for the app in the Play store is https://play.google.com/store/details?id=com.contosovpn.android.prod, the package ID would be com.contosovpn.android.prod.",
+    "placeholderText": "Package ID",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+            "minimumLength": null,
+            "maximumLength": 1000
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingRegexConstraint",
+            "regex": "^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\\-]*[a-zA-Z0-9])\\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\\-]*[A-Za-z0-9])$"
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingRequiredConstraint",
+            "notConfiguredValue": ""
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--androidWorkProfileGeneralDeviceConfiguration_vpnAlwaysOnPackageType",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "custom",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "id": "deviceConfiguration--iOSGeneralDeviceConfiguration_appStoreBlockAutomaticDownloads",
+    "valueType": "boolean",
+    "displayName": "Block automatic app downloads",
+    "isTopLevel": true,
+    "description": "Blocks automatic downloading of apps purchased on other devices. Does not affect updates to existing apps.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint",
+            "enrollmentTypes": [
+                "IOSAutoDeviceEnrollment"
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--iOSGeneralDeviceConfiguration_appStoreBlocked",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": false
+                }
+            ]
+        }
+    ]
+}

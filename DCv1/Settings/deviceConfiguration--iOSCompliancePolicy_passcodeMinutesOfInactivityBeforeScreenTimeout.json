@@ -1,0 +1,68 @@
+{
+    "id": "deviceConfiguration--iOSCompliancePolicy_passcodeMinutesOfInactivityBeforeScreenTimeout",
+    "valueType": "integer",
+    "displayName": "Maximum minutes of inactivity until screen locks",
+    "isTopLevel": true,
+    "description": "Set to 0 to use the device's minimum possible value. This number (0-60) overrides the number currently set on the device. If set to Immediately, devices will use the minimum possible value per device.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": null,
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "0",
+                    "displayName": "Immediately"
+                },
+                {
+                    "value": "1",
+                    "displayName": "1 Minute"
+                },
+                {
+                    "value": "2",
+                    "displayName": "2 Minutes"
+                },
+                {
+                    "value": "3",
+                    "displayName": "3 Minutes"
+                },
+                {
+                    "value": "4",
+                    "displayName": "4 Minutes"
+                },
+                {
+                    "value": "5",
+                    "displayName": "5 Minutes"
+                },
+                {
+                    "value": "10",
+                    "displayName": "10 Minutes"
+                },
+                {
+                    "value": "15",
+                    "displayName": "15 Minutes"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--iOSCompliancePolicy_passcodeRequired",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

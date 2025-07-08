@@ -1,0 +1,35 @@
+{
+    "id": "deviceConfiguration--macOSDeviceFeaturesConfiguration_authorizedUsersListIncludeNetworkUsers",
+    "valueType": "boolean",
+    "displayName": "Show network users",
+    "isTopLevel": true,
+    "description": null,
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint",
+            "enrollmentTypes": [
+                "MacOSDeviceEnrollment",
+                "MacOSUserApprovedEnrollment",
+                "MacOSAutoDeviceEnrollment"
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--macOSDeviceFeaturesConfiguration_authorizedUsersListHidden",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": false
+                }
+            ]
+        }
+    ]
+}

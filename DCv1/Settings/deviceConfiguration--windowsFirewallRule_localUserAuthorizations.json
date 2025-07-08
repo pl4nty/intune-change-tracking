@@ -1,0 +1,36 @@
+{
+    "id": "deviceConfiguration--windowsFirewallRule_localUserAuthorizations",
+    "valueType": "string",
+    "displayName": "Authorized users",
+    "isTopLevel": false,
+    "description": "Specifies the list of authorized local users for this rule. A list of authorized users cannot be specified if the rule being authored is targeting a Windows service. If not specified, the default is all users.",
+    "placeholderText": "Enter a list of users in SDDL format",
+    "documentationUrl": "https://aka.ms/intunefirewallauthorizedusers",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+            "minimumLength": null,
+            "maximumLength": 750
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingSddlConstraint"
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windowsFirewallRule_serviceName",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+                    "minimumLength": null,
+                    "maximumLength": 0
+                }
+            ]
+        }
+    ]
+}

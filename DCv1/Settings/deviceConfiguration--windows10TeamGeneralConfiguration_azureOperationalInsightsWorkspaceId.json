@@ -1,0 +1,32 @@
+{
+    "id": "deviceConfiguration--windows10TeamGeneralConfiguration_azureOperationalInsightsWorkspaceId",
+    "valueType": "string",
+    "displayName": "Workspace ID",
+    "isTopLevel": true,
+    "description": "Workspace ID",
+    "placeholderText": "Not configured",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+            "minimumLength": null,
+            "maximumLength": 1000
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windows10TeamGeneralConfiguration_azureOperationalInsightsBlockTelemetry",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

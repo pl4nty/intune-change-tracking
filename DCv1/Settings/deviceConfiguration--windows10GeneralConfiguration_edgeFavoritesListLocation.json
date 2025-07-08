@@ -1,0 +1,32 @@
+{
+    "id": "deviceConfiguration--windows10GeneralConfiguration_edgeFavoritesListLocation",
+    "valueType": "string",
+    "displayName": "Favorites List",
+    "isTopLevel": true,
+    "description": "List of favorites to publish for the user/device (Browser/Provision Favorites)",
+    "placeholderText": "http://co.com/favorites.html",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+            "minimumLength": null,
+            "maximumLength": 1000
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windows10GeneralConfiguration_edgeBlockEditFavorites",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": false
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "id": "deviceConfiguration--iOSSingleSignOnSettings_kerberosPrincipalName",
+    "valueType": "string",
+    "displayName": "Kerberos principal name",
+    "isTopLevel": false,
+    "description": "Select the Kerberos principal name. If not selected, the user is prompted for a principal name during MDM profile installation.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "",
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "userPrincipalName",
+                    "displayName": "User principal name"
+                },
+                {
+                    "value": "deviceID",
+                    "displayName": "Intune device ID"
+                },
+                {
+                    "value": "AADDeviceId",
+                    "displayName": "Azure AD device ID"
+                },
+                {
+                    "value": "onPremisesSamAccountName",
+                    "displayName": "SAM account name"
+                }
+            ]
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+            "minimumLength": null,
+            "maximumLength": 1000
+        }
+    ],
+    "dependencies": []
+}

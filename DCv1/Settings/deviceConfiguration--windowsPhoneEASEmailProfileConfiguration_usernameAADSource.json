@@ -1,0 +1,34 @@
+{
+    "id": "deviceConfiguration--windowsPhoneEASEmailProfileConfiguration_usernameAADSource",
+    "valueType": "string",
+    "displayName": "Username attribute from AAD",
+    "isTopLevel": true,
+    "description": "The attribute Intune gets from Azure AD to dynamically generate the username that will be used by this profile e.g. MyName@contoso.com (UPN) or MyName (username).",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "userPrincipalName",
+                    "displayName": "User Principal Name"
+                },
+                {
+                    "value": "primarySmtpAddress",
+                    "displayName": "Primary Smtp Address"
+                },
+                {
+                    "value": "samAccountName",
+                    "displayName": "Sam Account Name"
+                }
+            ]
+        }
+    ],
+    "dependencies": []
+}

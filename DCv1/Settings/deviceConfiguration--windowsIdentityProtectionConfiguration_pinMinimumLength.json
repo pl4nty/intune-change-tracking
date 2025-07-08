@@ -1,0 +1,32 @@
+{
+    "id": "deviceConfiguration--windowsIdentityProtectionConfiguration_pinMinimumLength",
+    "valueType": "integer",
+    "displayName": "Minimum PIN length:",
+    "isTopLevel": true,
+    "description": "Minimum PIN length must be between 4 and 127. (4-127)",
+    "placeholderText": "Not configured",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingIntegerConstraint",
+            "minimumValue": 4,
+            "maximumValue": 127
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windowsIdentityProtectionConfiguration_windowsHelloForBusinessBlocked",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": false
+                }
+            ]
+        }
+    ]
+}

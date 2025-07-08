@@ -1,0 +1,30 @@
+{
+    "id": "deviceConfiguration--bitLockerRecoveryOptions_recoveryInformationToStore",
+    "valueType": "string",
+    "displayName": "Configure BitLocker recovery package",
+    "isTopLevel": false,
+    "description": "Choosing backup recovery password and key packages will include both the BitLocker recovery password (used by admins/users to unlock protected drives) and recovery key packages (used by admins for data recovery purposes) in Active Directory. Selecting backup recovery password only will mean the recovery key packages may not be accessible when needed.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "passwordAndKey",
+                    "displayName": "Password and key"
+                },
+                {
+                    "value": "passwordOnly",
+                    "displayName": "Password only"
+                }
+            ]
+        }
+    ],
+    "dependencies": []
+}

@@ -1,0 +1,32 @@
+{
+    "id": "deviceConfiguration--windowsIdentityProtectionConfiguration_pinExpirationInDays",
+    "valueType": "integer",
+    "displayName": "PIN expiration (days):",
+    "isTopLevel": true,
+    "description": "If configured, the user will be forced to change their PIN after the set number of days. The user can still proactively change their PIN before expiration.",
+    "placeholderText": "Enter a number (0, 730), 0 = Never",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingIntegerConstraint",
+            "minimumValue": 0,
+            "maximumValue": 730
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windowsIdentityProtectionConfiguration_windowsHelloForBusinessBlocked",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": false
+                }
+            ]
+        }
+    ]
+}

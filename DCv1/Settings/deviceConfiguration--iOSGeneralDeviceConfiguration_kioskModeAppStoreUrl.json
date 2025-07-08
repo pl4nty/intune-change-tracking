@@ -1,0 +1,51 @@
+{
+    "id": "deviceConfiguration--iOSGeneralDeviceConfiguration_kioskModeAppStoreUrl",
+    "valueType": "string",
+    "displayName": "URL of app for kiosk mode",
+    "isTopLevel": true,
+    "description": "URL of app for kiosk mode, e.g. https://itunes.apple.com/us/app/work-folders/id950878067?mt=8",
+    "placeholderText": "e.g. https://itunes.apple.com/us/app/work-folders/id950878067?mt=8",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint",
+            "enrollmentTypes": [
+                "IOSAutoDeviceEnrollment"
+            ]
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+            "minimumLength": null,
+            "maximumLength": 1000
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingRegexConstraint",
+            "regex": "(^(http|https|ftp)://(.)+?$)"
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingRequiredConstraint",
+            "notConfiguredValue": ""
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--iOSGeneralDeviceConfiguration_kioskModeAppType",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "appStoreApp",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

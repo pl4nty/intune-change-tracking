@@ -1,0 +1,61 @@
+{
+    "id": "deviceConfiguration--windowsDeliveryOptimizationConfiguration_modifyCacheLocation",
+    "valueType": "string",
+    "displayName": "Modify cache drive",
+    "isTopLevel": true,
+    "description": "The device drive that Delivery Optimization will use for its cache. The drive location can be specified using environment variables, drive letter or full path.",
+    "placeholderText": "%SystemDrive%",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+            "minimumLength": null,
+            "maximumLength": 1000
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingRegexConstraint",
+            "regex": "^([a-zA-Z]:[\\\\\\/](?:[a-zA-Z0-9]+[\\\\\\/]?)*([a-zA-Z0-9]+\\.[a-zA-Z0-9]{1,8})?|(%[\\w \\.-]+%)|([a-zA-Z]:))$"
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windowsDeliveryOptimizationConfiguration_deliveryOptimizationMode",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "userDefined",
+                            "displayName": null
+                        },
+                        {
+                            "value": "httpOnly",
+                            "displayName": null
+                        },
+                        {
+                            "value": "httpWithPeeringNat",
+                            "displayName": null
+                        },
+                        {
+                            "value": "httpWithPeeringPrivateGroup",
+                            "displayName": null
+                        },
+                        {
+                            "value": "httpWithInternetPeering",
+                            "displayName": null
+                        },
+                        {
+                            "value": "simpleDownload",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

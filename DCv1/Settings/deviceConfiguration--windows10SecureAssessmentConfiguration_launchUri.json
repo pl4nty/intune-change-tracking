@@ -1,0 +1,26 @@
+{
+    "id": "deviceConfiguration--windows10SecureAssessmentConfiguration_launchUri",
+    "valueType": "string",
+    "displayName": "Assessment URL",
+    "isTopLevel": true,
+    "description": "Url link to an assessment that's automatically loaded when the secure assessment browser is launched.",
+    "placeholderText": "e.g. http://mobile.tds.airas.edu",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+            "minimumLength": 1,
+            "maximumLength": 1000
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingRegexConstraint",
+            "regex": "(^(http|https|ftp)://(.)+?$)"
+        }
+    ],
+    "dependencies": []
+}

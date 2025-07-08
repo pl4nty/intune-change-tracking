@@ -1,0 +1,26 @@
+{
+    "id": "deviceConfiguration--windows10EndpointProtectionConfiguration_bitLockerAllowStandardUserEncryption",
+    "valueType": "boolean",
+    "displayName": "Allow standard users to enable encryption during Autopilot",
+    "isTopLevel": true,
+    "description": "When set to Yes, during Azure Active Directory Join (AADJ) silent enable scenarios, users do not need to be local administrators to enable BitLocker. When set to not configured, the setting will be left as client default which is to require local admin access to enable BitLocker.\r\n\r\nFor non-silent enablement/Autopilot scenarios, the user must be a local admin to complete the BitLocker setup wizard. ",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=2114200",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windows10EndpointProtectionConfiguration_bitLockerDisableWarningForOtherDiskEncryption",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

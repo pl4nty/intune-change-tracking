@@ -1,0 +1,33 @@
+{
+    "id": "deviceConfiguration--iOSGeneralDeviceConfiguration_classroomAppForceUnpromptedScreenObservation",
+    "valueType": "boolean",
+    "displayName": "Require Classroom app to perform AirPlay and view screen without prompting",
+    "isTopLevel": true,
+    "description": "Student devices enrolled in a class via the Classroom app will automatically give permission to that course’s teacher to silently observe the student’s screen.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint",
+            "enrollmentTypes": [
+                "IOSAutoDeviceEnrollment"
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--iOSGeneralDeviceConfiguration_screenCaptureBlocked",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": false
+                }
+            ]
+        }
+    ]
+}

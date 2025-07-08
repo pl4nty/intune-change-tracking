@@ -1,0 +1,35 @@
+{
+    "id": "deviceConfiguration--windows10EndpointProtectionConfiguration_applicationGuardAllowPersistence",
+    "valueType": "boolean",
+    "displayName": "Allow user-generated browser data to be saved (Microsoft Edge only)",
+    "isTopLevel": true,
+    "description": "Allow user data (e.g., passwords, favorites, and cookies) that is created during an Application Guard virtual browsing session to be saved. This policy setting is supported for Application Guard on Microsoft Edge only.",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=872419",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windows10EndpointProtectionConfiguration_applicationGuardEnabledOptions",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "enabledForEdge",
+                            "displayName": null
+                        },
+                        {
+                            "value": "enabledForEdgeAndOffice",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

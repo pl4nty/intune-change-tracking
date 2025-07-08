@@ -1,0 +1,34 @@
+{
+    "id": "admx--microsoftedgev85diff_EnableSha1ForLocalAnchors",
+    "valueType": "string",
+    "displayName": "Allow certificates signed using SHA-1 when issued by local trust anchors (deprecated)",
+    "isTopLevel": true,
+    "description": "DEPRECATED: This policy is deprecated. It is currently supported but will become obsolete in a future release.\r\n\r\nWhen this setting is enabled, Microsoft Edge allows connections secured by SHA-1 signed certificates so long as the the certificate chains to a locally-installed root certificate and is otherwise valid.\r\n\r\nNote that this policy depends on the operating system (OS) certificate verification stack allowing SHA-1 signatures. If an OS update changes the OS handling of SHA-1 certificates, this policy might no longer have effect.  Further, this policy is intended as a temporary workaround to give enterprises more time to move away from SHA-1. This policy will be removed in Microsoft Edge 92 releasing in mid 2021.\r\n\r\nIf you don't set this policy or set it to false, or the SHA-1 certificate chains to a publicly trusted certificate root, then Microsoft Edge won't allow certificates signed by SHA-1.\r\n\r\nThis policy is only available on Windows instances that are joined to a Microsoft Active Directory domain or Windows 10/11 Pro or Enterprise instances enrolled for device management.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "notConfigured",
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "enabled",
+                    "displayName": "Enabled"
+                },
+                {
+                    "value": "disabled",
+                    "displayName": "Disabled"
+                }
+            ]
+        }
+    ],
+    "dependencies": []
+}

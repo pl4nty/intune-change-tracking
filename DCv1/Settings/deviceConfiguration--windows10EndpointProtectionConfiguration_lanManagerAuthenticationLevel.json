@@ -1,0 +1,46 @@
+{
+    "id": "deviceConfiguration--windows10EndpointProtectionConfiguration_lanManagerAuthenticationLevel",
+    "valueType": "string",
+    "displayName": "Authentication level",
+    "isTopLevel": true,
+    "description": "This security setting determines which challenge/response authentication protocol is used for network logons. This choice affects the level of authentication protocol used by clients, the level of session security negotiated, and the level of authentication accepted by servers as follows:\r\n\r\nSend LM and NTLM responses: Clients use LM and NTLM authentication and never use NTLMv2 session security; domain controllers accept LM, NTLM, and NTLMv2 authentication.\r\n\r\nSend LM and NTLM - use NTLMv2 session security if negotiated: Clients use LM and NTLM authentication and use NTLMv2 session security if the server supports it; domain controllers accept LM, NTLM, and NTLMv2 authentication.\r\n\r\nSend NTLM response only: Clients use NTLM authentication only and use NTLMv2 session security if the server supports it; domain controllers accept LM, NTLM, and NTLMv2 authentication.\r\n\r\nSend NTLMv2 response only: Clients use NTLMv2 authentication only and use NTLMv2 session security if the server supports it; domain controllers accept LM, NTLM, and NTLMv2 authentication.\r\n\r\nSend NTLMv2 response only\\refuse LM: Clients use NTLMv2 authentication only and use NTLMv2 session security if the server supports it; domain controllers refuse LM (accept only NTLM and NTLMv2 authentication).\r\n\r\nSend NTLMv2 response only\\refuse LM and NTLM: Clients use NTLMv2 authentication only and use NTLMv2 session security if the server supports it; domain controllers refuse LM and NTLM (accept only NTLMv2 authentication).",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=2067189",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "lmAndNltm",
+                    "displayName": "Send LM and NTLM responses"
+                },
+                {
+                    "value": "lmNtlmAndNtlmV2",
+                    "displayName": "Send LM and NTLM - NTLMv2 if negotiated"
+                },
+                {
+                    "value": "lmAndNtlmOnly",
+                    "displayName": "Send NTLM response only"
+                },
+                {
+                    "value": "lmAndNtlmV2",
+                    "displayName": "Send NTLMv2 response only"
+                },
+                {
+                    "value": "lmNtlmV2AndNotLm",
+                    "displayName": "Send NTLMv2 response only. Refuse LM"
+                },
+                {
+                    "value": "lmNtlmV2AndNotLmOrNtm",
+                    "displayName": "Send NTLMv2 response only. Refuse LM and NTLM"
+                }
+            ]
+        }
+    ],
+    "dependencies": []
+}

@@ -1,0 +1,34 @@
+{
+    "id": "deviceConfiguration--iOSGeneralDeviceConfiguration_contactsAllowManagedToUnmanagedWrite",
+    "valueType": "boolean",
+    "displayName": "Allow managed apps to write contacts to unmanaged contacts accounts",
+    "isTopLevel": true,
+    "description": "Users can sync and add their managed contacts (including business and corporate ones) to an unmanaged app, such as the device's built-in contacts app.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint",
+            "enrollmentTypes": [
+                "IOSDeviceEnrollment",
+                "IOSAutoDeviceEnrollment"
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--iOSGeneralDeviceConfiguration_documentsBlockManagedDocumentsInUnmanagedApps",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

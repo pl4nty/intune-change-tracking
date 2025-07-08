@@ -1,0 +1,32 @@
+{
+    "id": "deviceConfiguration--windows10TeamGeneralConfiguration_maintenanceWindowDurationInHours",
+    "valueType": "integer",
+    "displayName": "Duration in hours",
+    "isTopLevel": true,
+    "description": "Duration in hours. Valid values are 1,2,3,4,5.",
+    "placeholderText": "e.g. 1-5",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingIntegerConstraint",
+            "minimumValue": 1,
+            "maximumValue": 5
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windows10TeamGeneralConfiguration_maintenanceWindowBlocked",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": false
+                }
+            ]
+        }
+    ]
+}

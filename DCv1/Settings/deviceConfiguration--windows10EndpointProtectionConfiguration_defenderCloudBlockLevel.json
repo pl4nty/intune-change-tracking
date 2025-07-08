@@ -1,0 +1,38 @@
+{
+    "id": "deviceConfiguration--windows10EndpointProtectionConfiguration_defenderCloudBlockLevel",
+    "valueType": "string",
+    "displayName": "Cloud-delivered protection level",
+    "isTopLevel": true,
+    "description": "Specify the level of cloud-delivered protection.\r\nNot Configured uses the default Microsoft Defender Antivirus blocking level and provides strong detection without increasing the risk of detecting legitimate files.\r\nHigh applies a strong level of detection.\r\nHigh + uses the High level and applies addition protection measures (may impact client performance).\r\nZero tolerance blocks all unknown executables\r\nWhile unlikely, setting to High may cause some legitimate files to be detected.\r\nWe recommend you set this to the default level (Not configured).",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=2113942&clcid=0x409",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "notConfigured",
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "high",
+                    "displayName": "High"
+                },
+                {
+                    "value": "highPlus",
+                    "displayName": "High plus"
+                },
+                {
+                    "value": "zeroTolerance",
+                    "displayName": "Zero tolerance"
+                }
+            ]
+        }
+    ],
+    "dependencies": []
+}

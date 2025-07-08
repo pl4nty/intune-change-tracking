@@ -1,0 +1,30 @@
+{
+    "id": "deviceConfiguration--macOSCustomAppConfiguration_bundleId",
+    "valueType": "string",
+    "displayName": "Preference domain name",
+    "isTopLevel": true,
+    "description": "Enter a bundle ID.",
+    "placeholderText": "com.company.application",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+            "minimumLength": null,
+            "maximumLength": 1000
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingRegexConstraint",
+            "regex": "^[\\w\\-]+(\\.[\\w\\-]+)*$"
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingRequiredConstraint",
+            "notConfiguredValue": null
+        }
+    ],
+    "dependencies": []
+}

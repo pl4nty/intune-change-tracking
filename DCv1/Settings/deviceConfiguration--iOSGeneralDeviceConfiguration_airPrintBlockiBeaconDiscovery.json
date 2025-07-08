@@ -1,0 +1,33 @@
+{
+    "id": "deviceConfiguration--iOSGeneralDeviceConfiguration_airPrintBlockiBeaconDiscovery",
+    "valueType": "boolean",
+    "displayName": "Block discovery of AirPrint printers using iBeacons",
+    "isTopLevel": true,
+    "description": "Blocking prevents malicious AirPrint Bluetooth beacons phishing for network traffic.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint",
+            "enrollmentTypes": [
+                "IOSAutoDeviceEnrollment"
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--iOSGeneralDeviceConfiguration_airPrintBlocked",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": false
+                }
+            ]
+        }
+    ]
+}

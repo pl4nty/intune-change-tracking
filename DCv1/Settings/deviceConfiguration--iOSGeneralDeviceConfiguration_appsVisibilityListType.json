@@ -1,0 +1,40 @@
+{
+    "id": "deviceConfiguration--iOSGeneralDeviceConfiguration_appsVisibilityListType",
+    "valueType": "string",
+    "displayName": "Type of visibility apps list",
+    "isTopLevel": true,
+    "description": "Set whether the list is a list of apps to hide or a list of apps to make visible.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint",
+            "enrollmentTypes": [
+                "IOSAutoDeviceEnrollment"
+            ]
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "none",
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "appsInListCompliant",
+                    "displayName": "Visible apps"
+                },
+                {
+                    "value": "appsNotInListCompliant",
+                    "displayName": "Hidden apps"
+                }
+            ]
+        }
+    ],
+    "dependencies": []
+}

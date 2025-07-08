@@ -1,0 +1,47 @@
+{
+    "id": "deviceConfiguration--editionUpgradeConfiguration_license",
+    "valueType": "string",
+    "displayName": "License files",
+    "isTopLevel": true,
+    "description": "License files",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+            "minimumLength": null,
+            "maximumLength": 102400
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingXmlConstraint"
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementIntentSettingSecretConstraint"
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--editionUpgradeConfiguration_targetEdition",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "windows10MobileEnterprise",
+                            "displayName": null
+                        },
+                        {
+                            "value": "windows10HolographicEnterprise",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

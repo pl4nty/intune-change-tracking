@@ -1,0 +1,26 @@
+{
+    "id": "deviceConfiguration--hardwareDeviceInstallationBlocked_identifiers_element",
+    "valueType": "string",
+    "displayName": "Identifiers",
+    "isTopLevel": false,
+    "description": null,
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingRegexConstraint",
+            "regex": "^[a-zA-Z0-9#_&.\\*\\\\\\?\\-]{1,1000}$|^\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\}$"
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+            "minimumLength": null,
+            "maximumLength": 1000
+        }
+    ],
+    "dependencies": []
+}

@@ -1,0 +1,42 @@
+{
+    "id": "deviceConfiguration--bitLockerRemovableDrivePolicy_encryptionMethod",
+    "valueType": "string",
+    "displayName": "Configure encryption method for removable data-drives",
+    "isTopLevel": false,
+    "description": "Select the desired encryption method for removable data-drives disks. You should use AES-CBC 128/256-bit if the drive will be used in other devices that are not running Windows 10, 1511 or earlier.\r\n\r\nChanging the encryption method has no effect if the drive is already encrypted, or if encryption is in progress. To change the encryption method, the drive must be decrypted first.",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=872526",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": null,
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "aesCbc128",
+                    "displayName": "AES 128bit CBC"
+                },
+                {
+                    "value": "aesCbc256",
+                    "displayName": "AES 256bit CBC"
+                },
+                {
+                    "value": "xtsAes128",
+                    "displayName": "AES 128bit XTS"
+                },
+                {
+                    "value": "xtsAes256",
+                    "displayName": "AES 256bit XTS"
+                }
+            ]
+        }
+    ],
+    "dependencies": []
+}

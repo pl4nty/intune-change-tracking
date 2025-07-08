@@ -1,0 +1,29 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementCollectionSettingDefinition",
+    "id": "deviceConfiguration--iOSSingleSignOnSettings_allowedAppsList",
+    "valueType": "collection",
+    "displayName": "Apps",
+    "isTopLevel": false,
+    "description": "The list of apps on users' devices that are allowed to use SSO. If this field is omitted, the login applies to all apps on the device. * wildcard characters may be used with iOS 9.0 and later. Only app bundle ID is required; the other fields are optional.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "elementDefinitionId": "deviceConfiguration--appListItem",
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingCollectionConstraint",
+            "minimumLength": null,
+            "maximumLength": 1000
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--iOSSingleSignOnSettings_kerberosPrincipalName",
+            "constraints": []
+        }
+    ]
+}

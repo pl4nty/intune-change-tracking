@@ -1,0 +1,51 @@
+{
+    "id": "deviceConfiguration--iOSGeneralDeviceConfiguration_passcodeRequiredType",
+    "valueType": "string",
+    "displayName": "Required password type",
+    "isTopLevel": true,
+    "description": null,
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint",
+            "enrollmentTypes": [
+                "IOSDeviceEnrollment",
+                "IOSAutoDeviceEnrollment"
+            ]
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "deviceDefault",
+                    "displayName": "Device default"
+                },
+                {
+                    "value": "alphanumeric",
+                    "displayName": "Alphanumeric"
+                },
+                {
+                    "value": "numeric",
+                    "displayName": "Numeric"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--iOSGeneralDeviceConfiguration_passcodeRequired",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

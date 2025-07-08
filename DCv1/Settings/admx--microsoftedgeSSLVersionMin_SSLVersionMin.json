@@ -1,0 +1,49 @@
+{
+    "id": "admx--microsoftedgeSSLVersionMin_SSLVersionMin",
+    "valueType": "string",
+    "displayName": "Minimum SSL version enabled",
+    "isTopLevel": true,
+    "description": null,
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "tls1",
+                    "displayName": "TLS 1.0"
+                },
+                {
+                    "value": "tls1.1",
+                    "displayName": "TLS 1.1"
+                },
+                {
+                    "value": "tls1.2",
+                    "displayName": "TLS 1.2"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "admx--microsoftedge_SSLVersionMin",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "enabled",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

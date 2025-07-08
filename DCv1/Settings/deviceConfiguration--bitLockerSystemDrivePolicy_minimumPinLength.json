@@ -1,0 +1,32 @@
+{
+    "id": "deviceConfiguration--bitLockerSystemDrivePolicy_minimumPinLength",
+    "valueType": "integer",
+    "displayName": "Minimum PIN length",
+    "isTopLevel": false,
+    "description": "Configure the minimum startup PIN length when TPM + PIN is required during BitLocker enablement.\r\n\r\nThe PIN length must be between 4 and 20 digits. If you do not configure this setting, users are able to configure a startup PIN of any length (between 4 and 20 digits)\r\n\r\nThis setting only applies when first enabling BitLocker. If BitLocker is already enabled prior to applying this setting, it will have no effect.",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=872528",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingIntegerConstraint",
+            "minimumValue": 4,
+            "maximumValue": 20
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--bitLockerSystemDrivePolicy_startupAuthenticationRequired",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

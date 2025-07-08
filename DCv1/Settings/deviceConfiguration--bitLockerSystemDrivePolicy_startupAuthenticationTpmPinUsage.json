@@ -1,0 +1,48 @@
+{
+    "id": "deviceConfiguration--bitLockerSystemDrivePolicy_startupAuthenticationTpmPinUsage",
+    "valueType": "string",
+    "displayName": "Compatible TPM startup PIN",
+    "isTopLevel": false,
+    "description": "Setting this to Allow startup PIN with TPM will enable BitLocker using the TPM if present, and allow a startup PIN be configured by the user. Setting this to Do not allow startup PIN with TPM will block the use of a PIN. Setting this to Require startup PIN with TPM will require BitLocker have a PIN and TPM present to return success.\r\n\r\nFor silent enable scenarios (including Autopilot) this setting cannot be successful, as user interaction is required. It is recommended that PIN is disabled where silent enablement of BitLocker is required.",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=872527",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "blocked",
+                    "displayName": "Blocked"
+                },
+                {
+                    "value": "required",
+                    "displayName": "Required"
+                },
+                {
+                    "value": "allowed",
+                    "displayName": "Allowed"
+                },
+                {
+                    "value": "notConfigured",
+                    "displayName": "Not configured"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--bitLockerSystemDrivePolicy_startupAuthenticationRequired",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

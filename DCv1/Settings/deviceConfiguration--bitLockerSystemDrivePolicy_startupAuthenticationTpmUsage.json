@@ -1,0 +1,48 @@
+{
+    "id": "deviceConfiguration--bitLockerSystemDrivePolicy_startupAuthenticationTpmUsage",
+    "valueType": "string",
+    "displayName": "Compatible TPM startup",
+    "isTopLevel": false,
+    "description": "Setting this to Allow TPM will enable BitLocker using the TPM if it's present. Setting this to Do not allow TPM will enable BitLocker without utilizing the TPM. Setting this to Require TPM will only enable BitLocker if TPM is present and usable.\r\n\r\nIt is recommended to require a TPM for BitLocker.\r\n\r\nThis setting only applies when first enabling BitLocker. If BitLocker is already enabled prior to applying this setting, it will have no effect.",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=872527",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "blocked",
+                    "displayName": "Blocked"
+                },
+                {
+                    "value": "required",
+                    "displayName": "Required"
+                },
+                {
+                    "value": "allowed",
+                    "displayName": "Allowed"
+                },
+                {
+                    "value": "notConfigured",
+                    "displayName": "Not configured"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--bitLockerSystemDrivePolicy_startupAuthenticationRequired",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

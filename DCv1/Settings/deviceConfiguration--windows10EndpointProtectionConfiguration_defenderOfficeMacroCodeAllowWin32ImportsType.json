@@ -1,0 +1,42 @@
+{
+    "id": "deviceConfiguration--windows10EndpointProtectionConfiguration_defenderOfficeMacroCodeAllowWin32ImportsType",
+    "valueType": "string",
+    "displayName": "Block Win32 API calls from Office macro",
+    "isTopLevel": true,
+    "description": "When set to Yes, Office macro's will be blocked from using Win32 API calls. When set to Audit only, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off. This attack surface reduction (ASR) rule is controlled via the following GUID: 92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=872977",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "userDefined",
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "block",
+                    "displayName": "Block"
+                },
+                {
+                    "value": "auditMode",
+                    "displayName": "Audit mode"
+                },
+                {
+                    "value": "warn",
+                    "displayName": "Warn"
+                },
+                {
+                    "value": "disable",
+                    "displayName": "Disable"
+                }
+            ]
+        }
+    ],
+    "dependencies": []
+}

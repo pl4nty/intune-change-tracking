@@ -1,0 +1,26 @@
+{
+    "id": "deviceConfiguration--windows10NetworkProxyServer_address",
+    "valueType": "string",
+    "displayName": "Address",
+    "isTopLevel": false,
+    "description": "Address",
+    "placeholderText": "e.g. 4.3.6.0:80, itgproxy.com:80, etc",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+            "minimumLength": 1,
+            "maximumLength": 1000
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingRegexConstraint",
+            "regex": "^\\w+(\\-?\\w)*\\.\\w+(\\.\\w+)*((:(6(?:[0-4]\\d{3}|5(?:[0-4]\\d{2}|5(?:[0-2]\\d|3[0-5])))|(?:[1-5]\\d{0,3}|[6-9]\\d{0,2})?\\d)){1})$"
+        }
+    ],
+    "dependencies": []
+}

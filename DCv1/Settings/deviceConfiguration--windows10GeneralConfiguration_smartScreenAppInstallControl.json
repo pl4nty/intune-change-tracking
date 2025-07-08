@@ -1,0 +1,42 @@
+{
+    "id": "deviceConfiguration--windows10GeneralConfiguration_smartScreenAppInstallControl",
+    "valueType": "string",
+    "displayName": "Apps from store only",
+    "isTopLevel": true,
+    "description": "This setting determines the user experience when they attempt to install apps from places other than the Microsoft Store. Configuring a device with a setting that isn’t supported on that device’s build is the same as not configuring the setting.\r\n\r\nNot configured: Users are able to install apps as defined by other policy settings. (RS3+)\r\n\r\nRecommend store if available: When installing an app from the web that is available in the Microsoft Store, users will see a message recommending they download it from the store. (RS5+)\r\n\r\nWarn when installing outside store: When installing an app from outside the Microsoft Store, users will see a warning advising them that files downloaded outside the store may not be safe. (RS5+)\r\n\r\nApp store only: Only permit app installations from the Microsoft Store. (RS3+)",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "notConfigured",
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "anywhere",
+                    "displayName": "Anywhere"
+                },
+                {
+                    "value": "storeOnly",
+                    "displayName": "Store only"
+                },
+                {
+                    "value": "recommendations",
+                    "displayName": "Recommendations"
+                },
+                {
+                    "value": "preferStore",
+                    "displayName": "Prefer store"
+                }
+            ]
+        }
+    ],
+    "dependencies": []
+}

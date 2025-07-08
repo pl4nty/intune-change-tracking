@@ -1,0 +1,38 @@
+{
+    "id": "deviceConfiguration--windows10EndpointProtectionConfiguration_localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers",
+    "valueType": "string",
+    "displayName": "Minimum session security for NTLM SSP based servers",
+    "isTopLevel": true,
+    "description": "This security setting allows a server to require the negotiation of 128-bit encryption and/or NTLMv2 session security. These values are dependent on the LAN Manager Authentication Level security setting value. The options are:\r\n\r\nRequire NTLMv2 session security: The connection will fail if message integrity is not negotiated. Require 128-bit encryption. The connection will fail if strong encryption (128-bit) is not negotiated.",
+    "placeholderText": null,
+    "documentationUrl": "https://go.microsoft.com/fwlink/?linkid=2067246",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "none",
+                    "displayName": "None"
+                },
+                {
+                    "value": "requireNtmlV2SessionSecurity",
+                    "displayName": "Require NTLM V2 session security"
+                },
+                {
+                    "value": "require128BitEncryption",
+                    "displayName": "Require 128 bit encryption"
+                },
+                {
+                    "value": "ntlmV2And128BitEncryption",
+                    "displayName": "Require NTLM V2 and 128 bit encryption"
+                }
+            ]
+        }
+    ],
+    "dependencies": []
+}

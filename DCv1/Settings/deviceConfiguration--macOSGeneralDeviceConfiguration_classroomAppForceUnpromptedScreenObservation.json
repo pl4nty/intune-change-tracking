@@ -1,0 +1,33 @@
+{
+    "id": "deviceConfiguration--macOSGeneralDeviceConfiguration_classroomAppForceUnpromptedScreenObservation",
+    "valueType": "boolean",
+    "displayName": "Allow Classroom app to perform AirPlay and view screen without prompting",
+    "isTopLevel": true,
+    "description": "Unprompted observation means that teachers can view screens without warning students first. This setting isn't available if you've blocked screenshots.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint",
+            "enrollmentTypes": [
+                "MacOSAutoDeviceEnrollment"
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--macOSGeneralDeviceConfiguration_screenCaptureBlocked",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": false
+                }
+            ]
+        }
+    ]
+}

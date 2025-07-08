@@ -1,0 +1,26 @@
+{
+    "id": "deviceConfiguration--windowsIdentityProtectionConfiguration_pinRecoveryEnabled",
+    "valueType": "boolean",
+    "displayName": "Enable PIN recovery:",
+    "isTopLevel": true,
+    "description": "Allows user to use the Windows Hello for Business PIN recovery service. If enabled, the PIN recovery secret will be stored on the device and the user can change their PIN if needed. If disabled or not configured, the recovery secret will not be created or stored.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windowsIdentityProtectionConfiguration_windowsHelloForBusinessBlocked",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": false
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+{
+    "id": "deviceConfiguration--iOSCompliancePolicy_passcodeMinimumCharacterSetCount",
+    "valueType": "integer",
+    "displayName": "Number of non-alphanumeric characters in password",
+    "isTopLevel": true,
+    "description": "Minimum number (0-4) of non-alphanumeric characters, such as #, %, !, etc., required in the password. The default value is 0.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": null,
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "0",
+                    "displayName": "0"
+                },
+                {
+                    "value": "1",
+                    "displayName": "1"
+                },
+                {
+                    "value": "2",
+                    "displayName": "2"
+                },
+                {
+                    "value": "3",
+                    "displayName": "3"
+                },
+                {
+                    "value": "4",
+                    "displayName": "4"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--iOSCompliancePolicy_passcodeRequired",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+{
+    "id": "deviceConfiguration--windows10EndpointProtectionConfiguration_firewallProfileDomainOutboundConnectionsBlocked",
+    "valueType": "string",
+    "displayName": "Block outbound connections",
+    "isTopLevel": true,
+    "description": "This setting will get applied to Windows version 1809 and above. When this setting is set to yes, all outbound connections that do not match an outbound rule will be blocked. When this setting is set to no, all connections that do not match an outbound rule will be allowed. This allow/block rule will be evaluated at the very end of the rule list. Setting this to not configured returns the setting to client default, which is allow.",
+    "placeholderText": null,
+    "documentationUrl": "https://aka.ms/intune-firewall-outboundaction",
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "notConfigured",
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "blocked",
+                    "displayName": "Yes"
+                },
+                {
+                    "value": "allowed",
+                    "displayName": "No"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windows10EndpointProtectionConfiguration_firewallProfileDomainFirewallEnabled",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+                    "values": [
+                        {
+                            "value": "allowed",
+                            "displayName": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

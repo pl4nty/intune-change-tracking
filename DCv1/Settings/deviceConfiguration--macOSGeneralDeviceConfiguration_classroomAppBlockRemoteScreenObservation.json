@@ -1,0 +1,33 @@
+{
+    "id": "deviceConfiguration--macOSGeneralDeviceConfiguration_classroomAppBlockRemoteScreenObservation",
+    "valueType": "boolean",
+    "displayName": "Disable AirPlay, view screen by Classroom app, and screen sharing",
+    "isTopLevel": true,
+    "description": "Blocks AirPlay, screen sharing to other devices, and a Classroom app feature used by teachers to view their students' screens. This setting isn't available if you've blocked screenshots.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint",
+            "enrollmentTypes": [
+                "MacOSAutoDeviceEnrollment"
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--macOSGeneralDeviceConfiguration_screenCaptureBlocked",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": false
+                }
+            ]
+        }
+    ]
+}

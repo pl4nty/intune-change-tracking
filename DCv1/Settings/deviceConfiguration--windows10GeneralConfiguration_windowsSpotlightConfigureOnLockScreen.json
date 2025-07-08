@@ -1,0 +1,44 @@
+{
+    "id": "deviceConfiguration--windows10GeneralConfiguration_windowsSpotlightConfigureOnLockScreen",
+    "valueType": "string",
+    "displayName": "Block Windows Spotlight on lock screen",
+    "isTopLevel": true,
+    "description": "Block Windows Spotlight on lock screen",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "notConfigured",
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "disabled",
+                    "displayName": "Disabled"
+                },
+                {
+                    "value": "enabled",
+                    "displayName": "Enabled"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windows10GeneralConfiguration_windowsSpotlightBlocked",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": false
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+{
+    "id": "deviceConfiguration--windows81GeneralConfiguration_browserLoggingReportLocation",
+    "valueType": "string",
+    "displayName": "Logging report location URL",
+    "isTopLevel": true,
+    "description": "Where to get reports (through post messages) about websites turned on in Enterprise mode.",
+    "placeholderText": "e.g. http://DC1/log.asp",
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingStringLengthConstraint",
+            "minimumLength": null,
+            "maximumLength": 1000
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingRegexConstraint",
+            "regex": "(^(http|https|ftp)://(.)+?$)"
+        }
+    ],
+    "dependencies": [
+        {
+            "definitionId": "deviceConfiguration--windows81GeneralConfiguration_browserBlockEnterpriseModeAccess",
+            "constraints": [
+                {
+                    "@odata.type": "#microsoft.graph.deviceManagementSettingBooleanConstraint",
+                    "value": false
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "id": "deviceConfiguration--iOSGeneralDeviceConfiguration_compliantAppListType",
+    "valueType": "string",
+    "displayName": "Type of restricted apps list",
+    "isTopLevel": true,
+    "description": "Device compliance can be viewed in the Restricted Apps Compliance report.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementSettingEnrollmentTypeConstraint",
+            "enrollmentTypes": [
+                "IOSDeviceEnrollment",
+                "IOSAutoDeviceEnrollment"
+            ]
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "none",
+                    "displayName": "Not configured"
+                },
+                {
+                    "value": "appsInListCompliant",
+                    "displayName": "Approved apps"
+                },
+                {
+                    "value": "appsNotInListCompliant",
+                    "displayName": "Prohibited apps"
+                }
+            ]
+        }
+    ],
+    "dependencies": []
+}

@@ -1,0 +1,50 @@
+{
+    "id": "deviceConfiguration--windowsDeliveryOptimizationConfiguration_deliveryOptimizationMode",
+    "valueType": "string",
+    "displayName": "Download mode",
+    "isTopLevel": true,
+    "description": "Specifies the download method that Delivery Optimization can use to manage network bandwidth consumption for content distribution scenarios.",
+    "placeholderText": null,
+    "documentationUrl": null,
+    "headerTitle": null,
+    "headerSubtitle": null,
+    "keywords": [
+        ""
+    ],
+    "constraints": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementEnumConstraint",
+            "values": [
+                {
+                    "value": "userDefined",
+                    "displayName": "User defined"
+                },
+                {
+                    "value": "httpOnly",
+                    "displayName": "HTTP only, no peering (0)"
+                },
+                {
+                    "value": "httpWithPeeringNat",
+                    "displayName": "HTTP blended with peering behind same NAT (1)"
+                },
+                {
+                    "value": "httpWithPeeringPrivateGroup",
+                    "displayName": "HTTP blended with peering across private group (2)"
+                },
+                {
+                    "value": "httpWithInternetPeering",
+                    "displayName": "HTTP blended with internet peering (3)"
+                },
+                {
+                    "value": "simpleDownload",
+                    "displayName": "Simple download mode with no peering (99)"
+                },
+                {
+                    "value": "bypassMode",
+                    "displayName": "Bypass mode (100)"
+                }
+            ]
+        }
+    ],
+    "dependencies": []
+}
