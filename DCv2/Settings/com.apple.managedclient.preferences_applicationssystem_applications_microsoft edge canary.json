@@ -1,25 +1,33 @@
 {
-    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
     "accessTypes": "none",
     "keywords": [
+        "Microsoft Auto Update",
         "Microsoft AutoUpdate (MAU)"
     ],
     "infoUrls": [],
     "occurrence": null,
     "baseUri": "PayloadContent/com.microsoft.autoupdate2/Forced/[0]/mcx_preference_settings",
-    "offsetUri": "ApplicationsSystem//Applications/Microsoft Edge Canary.app/ManifestServer",
+    "offsetUri": "ApplicationsSystem//Applications/Microsoft Edge Canary.app",
     "rootDefinitionId": "com.apple.managedclient.preferences_applicationssystem",
     "categoryId": "2373de26-8270-4e74-a53f-9aeb55d5553c",
     "settingUsage": "configuration",
     "uxBehavior": "default",
     "visibility": "settingsCatalog,template",
     "riskLevel": "low",
-    "id": "com.apple.managedclient.preferences_applicationssystem_applications_microsoft edge canary.app_manifestserver",
+    "id": "com.apple.managedclient.preferences_applicationssystem_applications_microsoft edge canary.app",
     "description": null,
     "helpText": null,
-    "name": "ApplicationsSystem_Applications_Microsoft Edge Canary.app_ManifestServer",
-    "displayName": "Update channel override (Deprecated)",
-    "defaultOptionId": "com.apple.managedclient.preferences_applicationssystem_applications_microsoft edge canary.app_manifestserver_0",
+    "name": "ApplicationsSystem_Applications_Microsoft Edge Canary.app",
+    "displayName": "Microsoft Edge Canary (Deprecated)",
+    "childIds": [
+        "com.apple.managedclient.preferences_applicationssystem_applications_microsoft edge canary.app_application id",
+        "com.apple.managedclient.preferences_applicationssystem_applications_microsoft edge canary.app_lcid",
+        "com.apple.managedclient.preferences_applicationssystem_applications_microsoft edge canary.app_channelname",
+        "com.apple.managedclient.preferences_applicationssystem_applications_microsoft edge canary.app_manifestserver"
+    ],
+    "maximumCount": 1,
+    "minimumCount": 0,
     "applicability": {
         "description": null,
         "platform": "macOS",
@@ -27,82 +35,28 @@
         "technologies": "mdm,appleRemoteManagement"
     },
     "referredSettingInformationList": [],
-    "options": [
+    "dependentOn": [
         {
-            "itemId": "com.apple.managedclient.preferences_applicationssystem_applications_microsoft edge canary.app_manifestserver_0",
-            "description": null,
-            "helpText": null,
-            "name": "Current Channel",
-            "displayName": "Current Channel",
-            "optionValue": {
-                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
-                "settingValueTemplateReference": null,
-                "value": "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
-            },
-            "dependentOn": [
-                {
-                    "dependentOn": "com.apple.managedclient.preferences_applicationssystem_applications_microsoft edge canary.app",
-                    "parentSettingId": "com.apple.managedclient.preferences_applicationssystem_applications_microsoft edge canary.app"
-                }
-            ],
-            "dependedOnBy": []
+            "dependentOn": "com.apple.managedclient.preferences_applicationssystem",
+            "parentSettingId": "com.apple.managedclient.preferences_applicationssystem"
+        }
+    ],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "com.apple.managedclient.preferences_applicationssystem_applications_microsoft edge canary.app_application id",
+            "required": true
         },
         {
-            "itemId": "com.apple.managedclient.preferences_applicationssystem_applications_microsoft edge canary.app_manifestserver_1",
-            "description": null,
-            "helpText": null,
-            "name": "Current Channel (Preview)",
-            "displayName": "Current Channel (Preview)",
-            "optionValue": {
-                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
-                "settingValueTemplateReference": null,
-                "value": "https://officecdnmac.microsoft.com/pr/1ac37578-5a24-40fb-892e-b89d85b6dfaa/MacAutoupdate/"
-            },
-            "dependentOn": [
-                {
-                    "dependentOn": "com.apple.managedclient.preferences_applicationssystem_applications_microsoft edge canary.app",
-                    "parentSettingId": "com.apple.managedclient.preferences_applicationssystem_applications_microsoft edge canary.app"
-                }
-            ],
-            "dependedOnBy": []
+            "dependedOnBy": "com.apple.managedclient.preferences_applicationssystem_applications_microsoft edge canary.app_lcid",
+            "required": true
         },
         {
-            "itemId": "com.apple.managedclient.preferences_applicationssystem_applications_microsoft edge canary.app_manifestserver_2",
-            "description": null,
-            "helpText": null,
-            "name": "Beta Channel",
-            "displayName": "Beta Channel",
-            "optionValue": {
-                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
-                "settingValueTemplateReference": null,
-                "value": "https://officecdnmac.microsoft.com/pr/4B2D7701-0A4F-49C8-B4CB-0C2D4043F51F/MacAutoupdate/"
-            },
-            "dependentOn": [
-                {
-                    "dependentOn": "com.apple.managedclient.preferences_applicationssystem_applications_microsoft edge canary.app",
-                    "parentSettingId": "com.apple.managedclient.preferences_applicationssystem_applications_microsoft edge canary.app"
-                }
-            ],
-            "dependedOnBy": []
+            "dependedOnBy": "com.apple.managedclient.preferences_applicationssystem_applications_microsoft edge canary.app_channelname",
+            "required": false
         },
         {
-            "itemId": "com.apple.managedclient.preferences_applicationssystem_applications_microsoft edge canary.app_manifestserver_3",
-            "description": null,
-            "helpText": null,
-            "name": "Change Freeze",
-            "displayName": "Change Freeze",
-            "optionValue": {
-                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
-                "settingValueTemplateReference": null,
-                "value": "https://officecdnmac.microsoft.com/pr/Freeze/"
-            },
-            "dependentOn": [
-                {
-                    "dependentOn": "com.apple.managedclient.preferences_applicationssystem_applications_microsoft edge canary.app",
-                    "parentSettingId": "com.apple.managedclient.preferences_applicationssystem_applications_microsoft edge canary.app"
-                }
-            ],
-            "dependedOnBy": []
+            "dependedOnBy": "com.apple.managedclient.preferences_applicationssystem_applications_microsoft edge canary.app_manifestserver",
+            "required": false
         }
     ]
 }
