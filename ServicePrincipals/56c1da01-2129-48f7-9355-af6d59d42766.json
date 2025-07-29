@@ -51,6 +51,19 @@
             "allowedMemberTypes": [
                 "Application"
             ],
+            "description": "Allows the app to read all webhook connection details without a signed-in user.",
+            "displayName": "WebhookData.Read.All",
+            "id": "875b7cce-8b8e-4f69-8744-0d0d285c25f3",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "WebhookData.Read.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
             "description": "Allows the app to read and write all external connections without a signed-in user.",
             "displayName": "ExternalConnection.ReadWrite.All",
             "id": "296c3066-18b3-4977-9e2b-9d2ca1fda62c",
@@ -187,6 +200,17 @@
     },
     "keyCredentials": [],
     "publishedPermissionScopes": [
+        {
+            "adminConsentDescription": "Allow the app to read webhook connection details, on behalf of the signed-in user.",
+            "adminConsentDisplayName": "Read webhook connection details",
+            "id": "a3028c9a-803b-47f3-be20-0f9a6c25a813",
+            "isEnabled": true,
+            "type": "User",
+            "userConsentDescription": "Allows the app to read webhook connection details that you have access to.",
+            "userConsentDisplayName": "Read webhook connection details",
+            "value": "WebhookData.Read.All",
+            "isPrivate": false
+        },
         {
             "adminConsentDescription": "Allow the app to read external datasets and content, on behalf of the signed-in user.",
             "adminConsentDisplayName": "Read items in external datasets",
