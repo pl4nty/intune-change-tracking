@@ -62,6 +62,20 @@
                 "isEnabled": true
             },
             {
+                "description": "Allows the teams-app to read all aiInsights for calls where the Teams-app is installed, without a signed-in user.",
+                "displayName": "Read all AI Insights for calls where the Teams application is installed.",
+                "id": "ff9d3910-ca91-4e7f-843f-d44ab36a961a",
+                "value": "CallAiInsights.Read.Chat",
+                "isEnabled": true
+            },
+            {
+                "description": "Allows the teams-app to read all recordings of calls where the Teams-app is installed, without a signed-in user.",
+                "displayName": "Read all recordings of calls where the Teams application is installed.",
+                "id": "22748df0-bd8c-4626-aad9-6dab421b33e4",
+                "value": "CallRecordings.Read.Chat",
+                "isEnabled": true
+            },
+            {
                 "description": "Allows the app to access media streams in calls associated with this chat or meeting, without a signed-in user.",
                 "displayName": "Access media streams in calls associated with this chat or meeting",
                 "id": "e716890c-c30a-4ac3-a0e3-551e7d9e8deb",
@@ -73,6 +87,13 @@
                 "displayName": "Join calls associated with this chat or meeting",
                 "id": "a01e73f1-94da-4f6d-9b73-02e4ea65560b",
                 "value": "Calls.JoinGroupCalls.Chat",
+                "isEnabled": true
+            },
+            {
+                "description": "Allows the Teams app to read all transcripts of calls where the Teams-app is installed, without a signed-in user.",
+                "displayName": "Read all transcripts of calls where the Teams app is installed.",
+                "id": "7990a5df-4c51-43ea-939c-3e8b18d6ddad",
+                "value": "CallTranscripts.Read.Chat",
                 "isEnabled": true
             },
             {
@@ -230,10 +251,24 @@
                 "isEnabled": true
             },
             {
+                "description": "Allows the app to read this meeting and subscribe to meeting call updates.",
+                "displayName": "Read this meeting and subscribe to meeting call updates .",
+                "id": "f991ed3f-9617-4d8d-b06c-d18d9fcbcf2a",
+                "value": "OnlineMeeting.Read.Chat",
+                "isEnabled": true
+            },
+            {
                 "description": "Allows the app to read basic properties, such as name, schedule, organizer, join link, and start or end notifications, of meetings associated with this chat, without a signed-in user.",
                 "displayName": "Read basic properties of meetings associated with this chat",
                 "id": "eda8d262-4e6e-4ff6-a7ba-a2fb50535165",
                 "value": "OnlineMeeting.ReadBasic.Chat",
+                "isEnabled": true
+            },
+            {
+                "description": "Allows the app to manage this online meeting, and subscribe to meeting call updates.",
+                "displayName": "Manage this meeting and subscribe to meeting call updates.",
+                "id": "93400bb4-2282-4371-a745-a86d64c966d0",
+                "value": "OnlineMeeting.ReadWrite.Chat",
                 "isEnabled": true
             },
             {
@@ -1316,6 +1351,19 @@
             "allowedMemberTypes": [
                 "Application"
             ],
+            "description": "Allows the app to read call recordings for all calls without a signed-in user.",
+            "displayName": "Read all call recordings",
+            "id": "ce8fb1f1-5e1f-44a0-b102-4ec28454d0dc",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "CallRecordings.Read.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
             "description": "Allows the app to read call records for all calls and online meetings without a signed-in user.",
             "displayName": "Read all call records",
             "id": "45bbb07e-7321-4fd7-a8f6-3ff27e6a81c8",
@@ -1387,6 +1435,19 @@
             "isEnabled": true,
             "origin": "Application",
             "value": "Calls.JoinGroupCallAsGuest.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to read call transcripts for all calls without a signed-in user.",
+            "displayName": "Read all call transcripts",
+            "id": "4cd61b6d-8692-40bf-9d90-7f38db5e5fce",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "CallTranscripts.Read.All",
             "isPreAuthorizationRequired": false,
             "isPrivate": false
         },
@@ -3103,6 +3164,19 @@
             "isEnabled": true,
             "origin": "Application",
             "value": "FileStorageContainer.Selected",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the application to manage file storage container type registrations without a signed-in user.",
+            "displayName": "Access selected file storage container type registrations",
+            "id": "2dcc6599-bd30-442b-8f11-90f88ad441dc",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "FileStorageContainerTypeReg.Selected",
             "isPreAuthorizationRequired": false,
             "isPrivate": false
         },
@@ -4930,7 +5004,7 @@
             "allowedMemberTypes": [
                 "Application"
             ],
-            "description": "Allows the app to read and write your organization's cross tenant access policies without a signed-in user.",
+            "description": "Allows the app to read and write your organization's cross-tenant access policies and configuration for automatic user consent settings to suppress consent prompts for users of the other tenant on behalf of the signed-in user.",
             "displayName": "Read and write your organization's cross tenant access policies",
             "id": "338163d7-f101-4c92-94ba-ca46fe52447c",
             "isEnabled": true,
@@ -8795,6 +8869,28 @@
             "isPrivate": false
         },
         {
+            "adminConsentDescription": "Allows the app to read all recordings of calls, on behalf of the signed-in user.",
+            "adminConsentDisplayName": "Read all recordings of calls. ",
+            "id": "63d31bd6-bcf5-40ca-8283-ba4130a66405",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to read all recordings of calls, on your behalf.",
+            "userConsentDisplayName": "Read all recordings of calls.",
+            "value": "CallRecordings.Read.All",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to read all transcripts of calls, on behalf of the signed-in user.",
+            "adminConsentDisplayName": "Read all transcripts of calls. ",
+            "id": "fbace248-5d8e-441c-85ca-cc19221a69a2",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to read all transcripts of calls, on your behalf.",
+            "userConsentDisplayName": "Read all transcripts of calls.",
+            "value": "CallTranscripts.Read.All",
+            "isPrivate": false
+        },
+        {
             "adminConsentDescription": "Allows to read all Change Management items.",
             "adminConsentDisplayName": "Read Change Management items",
             "id": "4628dff5-c33e-4fde-b17a-b64e7acb1bed",
@@ -10387,6 +10483,28 @@
             "userConsentDescription": "Allows the app to access a subset of Storage Containers on your behalf. The specific file storage containers and the permissions granted will be configured in Microsoft 365 by the developer of each container type.",
             "userConsentDisplayName": "Access selected file storage containers",
             "value": "FileStorageContainer.Selected",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the application to manage file storage container types on behalf of the signed in user. The user must be a SharePoint Embedded Admin or Global Admin.",
+            "adminConsentDisplayName": "Manage file storage container types on behalf of the signed in user",
+            "id": "8e6ec84c-5fcd-4cc7-ac8a-2296efc0ed9b",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to access a subset of storage container types on your behalf. You must be a SharePoint Embedded Admin or Global Admin.",
+            "userConsentDisplayName": "Manage file storage container types on your behalf",
+            "value": "FileStorageContainerType.Manage.All",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the application to manage file storage container type registrations on behalf of the signed in user. The user must be a SharePoint Embedded Admin or Global Admin.",
+            "adminConsentDisplayName": "Manage file storage container type registrations on behalf of the signed in user",
+            "id": "c319a7df-930e-44c0-a43b-7e5e9c7f4f24",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to access a subset of storage container type registrations on your behalf. You must be a SharePoint Embedded Admin or Global Admin.",
+            "userConsentDisplayName": "Manage file storage container type registrations on your behalf",
+            "value": "FileStorageContainerTypeReg.Manage.All",
             "isPrivate": false
         },
         {
@@ -12084,7 +12202,7 @@
             "isPrivate": false
         },
         {
-            "adminConsentDescription": "Allows the app to read and write your organization's cross tenant access policies on behalf of the signed-in user.",
+            "adminConsentDescription": "Allows the app to read and write your organization's cross-tenant access policies and configuration for automatic user consent settings to suppress consent prompts for users of the other tenant on behalf of the signed-in user.",
             "adminConsentDisplayName": "Read and write your organization's cross tenant access policies",
             "id": "014b43d0-6ed4-4fc6-84dc-4b6f7bae7d85",
             "isEnabled": true,
@@ -14998,6 +15116,20 @@
             "isEnabled": true
         },
         {
+            "description": "Allows the teams-app to read all aiInsights for calls where the Teams-app is installed, without a signed-in user.",
+            "displayName": "Read all AI Insights for calls where the Teams application is installed.",
+            "id": "ff9d3910-ca91-4e7f-843f-d44ab36a961a",
+            "value": "CallAiInsights.Read.Chat",
+            "isEnabled": true
+        },
+        {
+            "description": "Allows the teams-app to read all recordings of calls where the Teams-app is installed, without a signed-in user.",
+            "displayName": "Read all recordings of calls where the Teams application is installed.",
+            "id": "22748df0-bd8c-4626-aad9-6dab421b33e4",
+            "value": "CallRecordings.Read.Chat",
+            "isEnabled": true
+        },
+        {
             "description": "Allows the app to access media streams in calls associated with this chat or meeting, without a signed-in user.",
             "displayName": "Access media streams in calls associated with this chat or meeting",
             "id": "e716890c-c30a-4ac3-a0e3-551e7d9e8deb",
@@ -15009,6 +15141,13 @@
             "displayName": "Join calls associated with this chat or meeting",
             "id": "a01e73f1-94da-4f6d-9b73-02e4ea65560b",
             "value": "Calls.JoinGroupCalls.Chat",
+            "isEnabled": true
+        },
+        {
+            "description": "Allows the Teams app to read all transcripts of calls where the Teams-app is installed, without a signed-in user.",
+            "displayName": "Read all transcripts of calls where the Teams app is installed.",
+            "id": "7990a5df-4c51-43ea-939c-3e8b18d6ddad",
+            "value": "CallTranscripts.Read.Chat",
             "isEnabled": true
         },
         {
@@ -15166,10 +15305,24 @@
             "isEnabled": true
         },
         {
+            "description": "Allows the app to read this meeting and subscribe to meeting call updates.",
+            "displayName": "Read this meeting and subscribe to meeting call updates .",
+            "id": "f991ed3f-9617-4d8d-b06c-d18d9fcbcf2a",
+            "value": "OnlineMeeting.Read.Chat",
+            "isEnabled": true
+        },
+        {
             "description": "Allows the app to read basic properties, such as name, schedule, organizer, join link, and start or end notifications, of meetings associated with this chat, without a signed-in user.",
             "displayName": "Read basic properties of meetings associated with this chat",
             "id": "eda8d262-4e6e-4ff6-a7ba-a2fb50535165",
             "value": "OnlineMeeting.ReadBasic.Chat",
+            "isEnabled": true
+        },
+        {
+            "description": "Allows the app to manage this online meeting, and subscribe to meeting call updates.",
+            "displayName": "Manage this meeting and subscribe to meeting call updates.",
+            "id": "93400bb4-2282-4371-a745-a86d64c966d0",
+            "value": "OnlineMeeting.ReadWrite.Chat",
             "isEnabled": true
         },
         {
