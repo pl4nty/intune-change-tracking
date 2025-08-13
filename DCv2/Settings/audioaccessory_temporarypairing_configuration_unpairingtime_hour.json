@@ -1,0 +1,46 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Audio Accessory"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "TemporaryPairing/Configuration/UnpairingTime/Hour",
+    "rootDefinitionId": "audioaccessory_audioaccessory",
+    "categoryId": "a42e2248-d2dc-4476-a92d-d152fd67e04b",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "audioaccessory_temporarypairing_configuration_unpairingtime_hour",
+    "description": "The local time hour (24-hour clock) when the device automatically unpairs temporarily paired audio accessories. Required when setting the `Policy` key to `Hour`.",
+    "helpText": null,
+    "name": "TemporaryPairing_Configuration_UnpairingTime_Hour",
+    "displayName": "Hour",
+    "applicability": {
+        "description": null,
+        "platform": "iOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 23,
+        "minimumValue": 0
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 0
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "audioaccessory_temporarypairing_configuration_unpairingtime",
+            "parentSettingId": "audioaccessory_temporarypairing_configuration_unpairingtime"
+        }
+    ],
+    "dependedOnBy": []
+}

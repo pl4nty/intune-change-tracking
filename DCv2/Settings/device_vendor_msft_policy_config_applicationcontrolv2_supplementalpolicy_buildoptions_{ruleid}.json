@@ -1,0 +1,86 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Application Control",
+        "Rules",
+        "App Control for Business"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/en-us/windows/client-management/mdm/defender-csp"
+    ],
+    "baseUri": "./Vendor/MSFT/ApplicationControl",
+    "offsetUri": "Policies/{PolicyGuid}/Policy/{0}",
+    "rootDefinitionId": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions",
+    "categoryId": "a7b1c291-6bec-499b-9018-6120950cd5a6",
+    "settingUsage": "configuration",
+    "uxBehavior": "contextPane",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_{ruleid}",
+    "description": "",
+    "helpText": null,
+    "name": "ApplicationControlV2_SupplementalPolicy_Rules",
+    "displayName": "Policy rules",
+    "childIds": [
+        "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_{ruleid}_id",
+        "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_{ruleid}_name",
+        "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_{ruleid}_type",
+        "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_{ruleid}_action"
+    ],
+    "maximumCount": 100,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.3",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.18362",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "unknown",
+            "windowsEducation",
+            "windowsMultiSession",
+            "surfaceHub",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [
+        {
+            "dependentOn": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_builtincontrols",
+            "parentSettingId": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions"
+        }
+    ],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_{ruleid}_name",
+            "required": true
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_{ruleid}_type",
+            "required": true
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_{ruleid}_action",
+            "required": true
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_{ruleid}_id",
+            "required": false
+        }
+    ]
+}

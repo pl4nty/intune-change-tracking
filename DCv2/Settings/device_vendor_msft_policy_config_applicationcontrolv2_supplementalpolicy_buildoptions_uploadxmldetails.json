@@ -1,0 +1,71 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Base settings",
+        "App Control for Business"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-design-guide"
+    ],
+    "occurrence": null,
+    "baseUri": "./Vendor/MSFT/ApplicationControl",
+    "offsetUri": "/Policies/{PolicyGuid}/Policy/{0}",
+    "rootDefinitionId": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions",
+    "categoryId": "a7b1c291-6bec-499b-9018-6120950cd5a6",
+    "settingUsage": "configuration",
+    "uxBehavior": "largeTextBox",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_uploadxmldetails",
+    "description": "The format of the XML property list varies depending on the settings you are configuring for the ApplicationControl CSP. Microsoft Endpoint Manager will validate the XML format; but not validate the settings behaviour, the settings applicability nor sign the policy binary. ApplicationControl CSP supports base and supplemental policies for devices running the Windows 1903 build and later. Supplemental policies are required to loosen a base policy; and are always less restrictive. A supplemental policy needs to support a specific base policy that has been deployed to the same client. If not, there is no effect on assigned Windows devices.",
+    "helpText": null,
+    "name": "ApplicationControlV2_SupplementalPolicy_BuildOptions_XMLUpload",
+    "displayName": "XML Upload",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": null,
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.18362",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "unknown",
+            "windowsEducation",
+            "windowsMultiSession",
+            "surfaceHub",
+            "iotEnterprise"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "xml",
+        "inputValidationSchema": "xmlns=\"urn:schemas-microsoft-com:sipolicy\"",
+        "maximumLength": 800000,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": [
+            "xml"
+        ]
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_uploadxml",
+            "parentSettingId": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions"
+        }
+    ],
+    "dependedOnBy": []
+}

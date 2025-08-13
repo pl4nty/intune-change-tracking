@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Audio Accessory"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "TemporaryPairing/Configuration/UnpairingTime/Policy",
+    "rootDefinitionId": "audioaccessory_audioaccessory",
+    "categoryId": "a42e2248-d2dc-4476-a92d-d152fd67e04b",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "audioaccessory_temporarypairing_configuration_unpairingtime_policy",
+    "description": "A string that specifies the device's unpairing policy.\n- `None`: The device doesn't automatically unpair. Use this only with a return to service device that you erase and reenroll when assigning it from one user to another.\n- `Hour`: The device automatically unpairs temporarily paired audio accessories at the local time that the `Hour` key specifies.",
+    "helpText": null,
+    "name": "TemporaryPairing_Configuration_UnpairingTime_Policy",
+    "displayName": "Policy",
+    "defaultOptionId": "audioaccessory_temporarypairing_configuration_unpairingtime_policy_0",
+    "applicability": {
+        "description": null,
+        "platform": "iOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "audioaccessory_temporarypairing_configuration_unpairingtime_policy_0",
+            "description": null,
+            "helpText": null,
+            "name": "None",
+            "displayName": "None",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "None"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "audioaccessory_temporarypairing_configuration_unpairingtime",
+                    "parentSettingId": "audioaccessory_temporarypairing_configuration_unpairingtime"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "audioaccessory_temporarypairing_configuration_unpairingtime_policy_1",
+            "description": null,
+            "helpText": null,
+            "name": "Hour",
+            "displayName": "Hour",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "Hour"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "audioaccessory_temporarypairing_configuration_unpairingtime",
+                    "parentSettingId": "audioaccessory_temporarypairing_configuration_unpairingtime"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

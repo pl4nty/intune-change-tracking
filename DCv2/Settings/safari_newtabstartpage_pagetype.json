@@ -1,0 +1,89 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Safari Browser"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "NewTabStartPage/PageType",
+    "rootDefinitionId": "safari_safari",
+    "categoryId": "e0ab6868-4b53-4310-b665-f7c979941db7",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "safari_newtabstartpage_pagetype",
+    "description": "Sets the start page type in Safari:\n\n- `Start` - Safari uses the default start page. Safari disables the Homepage.\n- `Home` - Safari uses the page specified by `HomepageURL`, and Safari also sets that as the Homepage.\n- `Extension` - Safari uses the page specified by the Safari extension whose identifier is `ExtensionIdentifier`. Safari disables the Homepage.",
+    "helpText": null,
+    "name": "NewTabStartPage_PageType",
+    "displayName": "Page Type",
+    "defaultOptionId": "safari_newtabstartpage_pagetype_0",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "safari_newtabstartpage_pagetype_0",
+            "description": null,
+            "helpText": null,
+            "name": "Start",
+            "displayName": "Start",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "Start"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "safari_newtabstartpage",
+                    "parentSettingId": "safari_newtabstartpage"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "safari_newtabstartpage_pagetype_1",
+            "description": null,
+            "helpText": null,
+            "name": "Home",
+            "displayName": "Home",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "Home"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "safari_newtabstartpage",
+                    "parentSettingId": "safari_newtabstartpage"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "safari_newtabstartpage_pagetype_2",
+            "description": null,
+            "helpText": null,
+            "name": "Extension",
+            "displayName": "Extension",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "Extension"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "safari_newtabstartpage",
+                    "parentSettingId": "safari_newtabstartpage"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

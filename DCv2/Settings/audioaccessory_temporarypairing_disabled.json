@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Audio Accessory"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "TemporaryPairing/Disabled",
+    "rootDefinitionId": "audioaccessory_audioaccessory",
+    "categoryId": "a42e2248-d2dc-4476-a92d-d152fd67e04b",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "audioaccessory_temporarypairing_disabled",
+    "description": "If `true`, temporary pairing of audio accessories is disabled.",
+    "helpText": null,
+    "name": "TemporaryPairing_Disabled",
+    "displayName": "Disabled",
+    "defaultOptionId": "audioaccessory_temporarypairing_disabled_false",
+    "applicability": {
+        "description": null,
+        "platform": "iOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "audioaccessory_temporarypairing_disabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "audioaccessory_temporarypairing",
+                    "parentSettingId": "audioaccessory_temporarypairing"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "audioaccessory_temporarypairing_disabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "audioaccessory_temporarypairing",
+                    "parentSettingId": "audioaccessory_temporarypairing"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

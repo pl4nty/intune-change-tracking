@@ -1,0 +1,108 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Safari Browser"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "AcceptCookies",
+    "rootDefinitionId": "safari_safari",
+    "categoryId": "e0ab6868-4b53-4310-b665-f7c979941db7",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "safari_acceptcookies",
+    "description": "The policy Safari uses for managing cookies:\n\n- `Never`: Safari always blocks cookies.\n- `CurrentWebsite`: Safari allows cookies only from the current website.\n- `VisitedWebsites`: Safari allows cookies only from visited websites.\n- `Always`: Safari always allows cookies.",
+    "helpText": null,
+    "name": "AcceptCookies",
+    "displayName": "Accept Cookies",
+    "defaultOptionId": "safari_acceptcookies_3",
+    "applicability": {
+        "description": null,
+        "platform": "iOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "safari_acceptcookies_0",
+            "description": null,
+            "helpText": null,
+            "name": "Never",
+            "displayName": "Never",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "Never"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "safari_safari",
+                    "parentSettingId": "safari_safari"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "safari_acceptcookies_1",
+            "description": null,
+            "helpText": null,
+            "name": "CurrentWebsite",
+            "displayName": "CurrentWebsite",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "CurrentWebsite"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "safari_safari",
+                    "parentSettingId": "safari_safari"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "safari_acceptcookies_2",
+            "description": null,
+            "helpText": null,
+            "name": "VisitedWebsites",
+            "displayName": "VisitedWebsites",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "VisitedWebsites"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "safari_safari",
+                    "parentSettingId": "safari_safari"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "safari_acceptcookies_3",
+            "description": null,
+            "helpText": null,
+            "name": "Always",
+            "displayName": "Always",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "Always"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "safari_safari",
+                    "parentSettingId": "safari_safari"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

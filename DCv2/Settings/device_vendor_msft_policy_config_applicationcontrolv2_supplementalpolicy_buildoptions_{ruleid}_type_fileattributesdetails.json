@@ -1,0 +1,152 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Application Control",
+        "Rules",
+        "Rule",
+        "File Attributes",
+        "App Control for Business"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/en-us/windows/client-management/mdm/applicationcontrol-csp"
+    ],
+    "occurrence": null,
+    "baseUri": "./Vendor/MSFT/ApplicationControl",
+    "offsetUri": "/Policies/{PolicyGuid}/Policy/{0}",
+    "rootDefinitionId": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions",
+    "categoryId": "a7b1c291-6bec-499b-9018-6120950cd5a6",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_{ruleid}_type_fileattributesdetails",
+    "description": "Creates a rule for attributes of a selected file.",
+    "helpText": null,
+    "name": "ApplicationControlV2_SupplementalPolicy_Rule_FileAttributes",
+    "displayName": "File Attributes",
+    "defaultOptionId": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_{ruleid}_type_fileattributes_filename",
+    "maximumCount": 100,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": null,
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.18362",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "unknown",
+            "windowsEducation",
+            "windowsMultiSession",
+            "surfaceHub",
+            "iotEnterprise"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_{ruleid}_type_fileattributes_filename",
+            "description": null,
+            "helpText": null,
+            "name": "OriginalFileName",
+            "displayName": "Original file name",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_{ruleid}_type_fileattributes",
+                    "parentSettingId": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_{ruleid}_type"
+                }
+            ],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_{ruleid}_type_fileattributes_filenamedetails",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_{ruleid}_type_fileattributes_filedescription",
+            "description": null,
+            "helpText": null,
+            "name": "FileDescription",
+            "displayName": "File description",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_{ruleid}_type_fileattributes",
+                    "parentSettingId": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_{ruleid}_type"
+                }
+            ],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_{ruleid}_type_fileattributes_filedescriptiondetails",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_{ruleid}_type_fileattributes_productname",
+            "description": null,
+            "helpText": null,
+            "name": "MinVersion",
+            "displayName": "Minimum version",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_{ruleid}_type_fileattributes",
+                    "parentSettingId": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_{ruleid}_type"
+                }
+            ],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_{ruleid}_type_fileattributes_productnamedetails",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_{ruleid}_type_fileattributes_internalname",
+            "description": null,
+            "helpText": null,
+            "name": "InternalName",
+            "displayName": "Internal name",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_{ruleid}_type_fileattributes",
+                    "parentSettingId": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_{ruleid}_type"
+                }
+            ],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_{ruleid}_type_fileattributes_internalnamedetails",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

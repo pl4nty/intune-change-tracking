@@ -1,0 +1,89 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Advanced settings",
+        "App Control for Business"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/en-us/windows/client-management/mdm/applicationcontrol-csp"
+    ],
+    "occurrence": null,
+    "baseUri": "./Vendor/MSFT/ApplicationControl",
+    "offsetUri": "/Policies/{PolicyGuid}/Policy/{0}",
+    "rootDefinitionId": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions",
+    "categoryId": "a7b1c291-6bec-499b-9018-6120950cd5a6",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_disableruntimefilepathrules",
+    "description": "Turning this off will disable FilePath rule protection of enforcing user-writeability and onlu allowing admin-writable locations.",
+    "helpText": null,
+    "name": "ApplicationControlV2_SupplementalPolicy_BuildOptions_DisableRuntimeFilePathRules",
+    "displayName": "Disable runtime file path rules",
+    "defaultOptionId": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_disableruntimefilepathrules_disabled",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": null,
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.18362",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "unknown",
+            "windowsEducation",
+            "windowsMultiSession",
+            "surfaceHub",
+            "iotEnterprise"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_disableruntimefilepathrules_disabled",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_builtincontrols",
+                    "parentSettingId": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_disableruntimefilepathrules_enabled",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions_builtincontrols",
+                    "parentSettingId": "device_vendor_msft_policy_config_applicationcontrolv2_supplementalpolicy_buildoptions"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

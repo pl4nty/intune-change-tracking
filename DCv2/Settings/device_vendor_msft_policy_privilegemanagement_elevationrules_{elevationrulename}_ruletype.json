@@ -125,6 +125,30 @@
                 }
             ],
             "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}_userconfirmeduser",
+            "description": null,
+            "helpText": null,
+            "name": "UserConfirmedUser",
+            "displayName": "User confirmed user",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "UserConfirmedUser"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}",
+                    "parentSettingId": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}"
+                }
+            ],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_privilegemanagement_elevationrules_{elevationrulename}_ruletype_userconfirmeduservalidation",
+                    "required": false
+                }
+            ]
         }
     ]
 }

@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Safari Browser"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "AllowPopups",
+    "rootDefinitionId": "safari_safari",
+    "categoryId": "e0ab6868-4b53-4310-b665-f7c979941db7",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "safari_allowpopups",
+    "description": "If `false`, the system disables popups in Safari.",
+    "helpText": null,
+    "name": "AllowPopups",
+    "displayName": "Allow Popups",
+    "defaultOptionId": "safari_allowpopups_true",
+    "applicability": {
+        "description": null,
+        "platform": "iOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "safari_allowpopups_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "Blocked",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "safari_safari",
+                    "parentSettingId": "safari_safari"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "safari_allowpopups_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "Allowed",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "safari_safari",
+                    "parentSettingId": "safari_safari"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}
