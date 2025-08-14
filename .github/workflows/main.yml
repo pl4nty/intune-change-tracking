@@ -57,7 +57,7 @@ jobs:
       - id: inference
         if: steps.prompt.outputs.changed == '1'
         continue-on-error: true
-        uses: actions/ai-inference@v1.1.0
+        uses: actions/ai-inference@f347eae8ebabecb85d17f52960f909b8a4a8dad5 # v2.0.0
         with:
           prompt-file: ../prompt
           model: ${{ vars.MODEL }}
