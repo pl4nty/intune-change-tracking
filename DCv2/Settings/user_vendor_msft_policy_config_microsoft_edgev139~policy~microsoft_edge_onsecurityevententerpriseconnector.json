@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "OnSecurityEventEnterpriseConnector",
+        "Configuration policy for Microsoft Edge for Business Reporting Connectors",
+        "\\Microsoft Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev139~Policy~microsoft_edge/OnSecurityEventEnterpriseConnector",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edgev139~policy~microsoft_edge_onsecurityevententerpriseconnector",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_microsoft_edgev139~policy~microsoft_edge_onsecurityevententerpriseconnector",
+    "description": "Defines the Microsoft Edge for Business Reporting Connectors service settings that apply when a security event occurs in Microsoft Edge. These events include negative verdicts from Data Loss Prevention Connectors, password reuse, navigation to unsafe pages, and other security-sensitive actions.\r\n\r\nThe service_provider field specifies the reporting service provider. The enabled_event_names field lists the security events enabled for that provider.\r\n\r\nThis policy requires additional setup to take effect. For configuration guidance, see https://go.microsoft.com/fwlink/?linkid=2325446.\r\n\r\nExample value:\r\n\r\n[\r\n  {\r\n    \"enabled_event_names\": [\r\n      \"passwordChangedEvent\",\r\n      \"sensitiveDataEvent\"\r\n    ],\r\n    \"enabled_opt_in_events\": [\r\n      {\r\n        \"name\": \"loginEvent\",\r\n        \"url_patterns\": [\r\n          \"*\"\r\n        ]\r\n      },\r\n      {\r\n        \"name\": \"passwordBreachEvent\",\r\n        \"url_patterns\": [\r\n          \"example.com\",\r\n          \"other.example.com\"\r\n        ]\r\n      }\r\n    ],\r\n    \"service_provider\": \"microsoft\"\r\n  }\r\n]",
+    "helpText": "",
+    "name": "OnSecurityEventEnterpriseConnector",
+    "displayName": "Configuration policy for Microsoft Edge for Business Reporting Connectors (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edgev139~policy~microsoft_edge_onsecurityevententerpriseconnector_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev139~policy~microsoft_edge_onsecurityevententerpriseconnector_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev139~policy~microsoft_edge_onsecurityevententerpriseconnector_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_microsoft_edgev139~policy~microsoft_edge_onsecurityevententerpriseconnector_onsecurityevententerpriseconnector",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

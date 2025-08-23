@@ -1,0 +1,73 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft365CopilotChatIconEnabled_recommended",
+        "Control whether Microsoft 365 Copilot Chat shows in the Microsoft Edge for Business toolbar",
+        "\\Microsoft Edge - Default Settings (users can override)",
+        "Microsoft Edge - Default Settings (users can override)"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev139~Policy~microsoft_edge_recommended/Microsoft365CopilotChatIconEnabled_recommended",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edgev139~policy~microsoft_edge_recommended_microsoft365copilotchaticonenabled_recommended",
+    "categoryId": "43593f1a-6e4d-44a9-b1d4-99b375a9baa6",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_microsoft_edgev139~policy~microsoft_edge_recommended_microsoft365copilotchaticonenabled_recommended",
+    "description": "For users in an Entra ID Microsoft Edge profile, this policy controls whether the Microsoft 365 Copilot Chat icon will be shown in the Microsoft Edge for Business toolbar for Microsoft 365 Copilot licensed and unlicensed users.\r\n\r\nThis policy only applies when users are accessing Copilot in the sidepane.\r\n\r\nIf the policy is enabled: Copilot will appear in the toolbar.\r\n\r\nIf the policy is disabled: Copilot will not appear in the toolbar.\r\n\r\nIf the policy is not configured: Otherwise, Copilot will show in the toolbar and users may enable or disable Copilot from showing by using the Show Copilot toggle in settings.\r\n\r\nWhen both this policy and 'HubsSidebarEnabled' (Show Hubs Sidebar) are configured, this policy takes precedence in determining whether Copilot appears in the toolbar. If this policy is not configured and 'HubsSidebarEnabled' is disabled, Copilot will remain hidden. In a future release, this policy will be the sole control for managing Copilot's visibility in the toolbar.",
+    "helpText": "",
+    "name": "Microsoft365CopilotChatIconEnabled_recommended",
+    "displayName": "Control whether Microsoft 365 Copilot Chat shows in the Microsoft Edge for Business toolbar",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edgev139~policy~microsoft_edge_recommended_microsoft365copilotchaticonenabled_recommended_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev139~policy~microsoft_edge_recommended_microsoft365copilotchaticonenabled_recommended_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev139~policy~microsoft_edge_recommended_microsoft365copilotchaticonenabled_recommended_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

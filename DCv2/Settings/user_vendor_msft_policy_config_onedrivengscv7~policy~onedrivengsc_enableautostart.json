@@ -1,0 +1,73 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "EnableAutoStart",
+        "Start OneDrive automatically when signing in to Windows",
+        "\\OneDrive",
+        "OneDrive"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/OneDriveNGSCv7~Policy~OneDriveNGSC/EnableAutoStart",
+    "rootDefinitionId": "user_vendor_msft_policy_config_onedrivengscv7~policy~onedrivengsc_enableautostart",
+    "categoryId": "5ee629c1-94da-49b3-b7a1-a24b279f36d4",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_onedrivengscv7~policy~onedrivengsc_enableautostart",
+    "description": "This setting overrides a user's choice, ensuring OneDrive will automatically start every time they sign in to Windows. \r\n      \r\nIf you configure this setting, OneDrive will start automatically when a user signs in to Windows. The OneDrive sync app must be restarted after this setting is enabled for the setting to take effect.\r\n\r\nIf you do not configure this setting or set it to any value other than 1, the user can choose to automatically start OneDrive (default choice) or to disable OneDrive from starting in OneDrive sync app settings.",
+    "helpText": "",
+    "name": "EnableAutoStart",
+    "displayName": "Start OneDrive automatically when signing in to Windows (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_onedrivengscv7~policy~onedrivengsc_enableautostart_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_onedrivengscv7~policy~onedrivengsc_enableautostart_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_onedrivengscv7~policy~onedrivengsc_enableautostart_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

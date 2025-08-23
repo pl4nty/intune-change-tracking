@@ -1,0 +1,73 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "SharedContentDeleteConfirmation",
+        "Prompt user to confirm when they delete shared content",
+        "\\OneDrive",
+        "OneDrive"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/OneDriveNGSCv7~Policy~OneDriveNGSC/SharedContentDeleteConfirmation",
+    "rootDefinitionId": "device_vendor_msft_policy_config_onedrivengscv7~policy~onedrivengsc_sharedcontentdeleteconfirmation",
+    "categoryId": "5ee629c1-94da-49b3-b7a1-a24b279f36d4",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_onedrivengscv7~policy~onedrivengsc_sharedcontentdeleteconfirmation",
+    "description": "When local synced files are deleted, which multiple users have access, a dialog appears informing the user that other users will no longer have access to that content, and asking them to confirm the action before OneDrive propagates deletes online. After confirming, deletes of other shared content for a short period of time do not cause additional confirmations. Other content continues to sync.\r\n\r\nEnable this setting to prevent users from hiding the confirmation dialog. Each time the user deletes shared content, their confirmation is required before the item is deleted for everyone online.\r\n\r\nDisable this setting to not show the delete confirmation message. Deletes will immediately be made in the cloud.\r\n\r\nDo not configure this setting so users can choose to hide the warning, with the effects mentioned above.\r\n      ",
+    "helpText": "",
+    "name": "SharedContentDeleteConfirmation",
+    "displayName": "Prompt user to confirm when they delete shared content",
+    "defaultOptionId": "device_vendor_msft_policy_config_onedrivengscv7~policy~onedrivengsc_sharedcontentdeleteconfirmation_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_onedrivengscv7~policy~onedrivengsc_sharedcontentdeleteconfirmation_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_onedrivengscv7~policy~onedrivengsc_sharedcontentdeleteconfirmation_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

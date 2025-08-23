@@ -1,0 +1,90 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DisableAccessibilitySettingSync",
+        "Do not sync accessibility settings",
+        "\\Windows Components\\Sync your settings",
+        "Administrative Templates\\Windows Components\\Sync your settings",
+        "Sync your settings"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settingssync#settingssync-disableaccessibilitysettingsync"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/SettingsSync/DisableAccessibilitySettingSync",
+    "rootDefinitionId": "device_vendor_msft_policy_config_settingssync_disableaccessibilitysettingsync",
+    "categoryId": "7574a907-5608-491f-8011-c57d487457f4",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_settingssync_disableaccessibilitysettingsync",
+    "description": "\r\n        Prevent the \"accessibility\" group from syncing to and from this PC. This turns off and disables the \"accessibility\" group on the \"Windows backup\" settings page in PC settings.\r\n\r\nIf you enable this policy setting, the \"accessibility\" group will not be synced.\r\n\r\nUse the option \"Allow users to turn accessibility syncing on\" so that syncing is turned off by default but not disabled.\r\n\r\nIf you do not set or disable this setting, syncing of the \"accessibility\" group is on by default and configurable by the user.\r\n      ",
+    "helpText": "",
+    "name": "DisableAccessibilitySettingSync",
+    "displayName": "Do not sync accessibility settings",
+    "defaultOptionId": "device_vendor_msft_policy_config_settingssync_disableaccessibilitysettingsync_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26100",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_settingssync_disableaccessibilitysettingsync_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_settingssync_disableaccessibilitysettingsync_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_settingssync_disableaccessibilitysettingsync_checkbox_useroverride",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

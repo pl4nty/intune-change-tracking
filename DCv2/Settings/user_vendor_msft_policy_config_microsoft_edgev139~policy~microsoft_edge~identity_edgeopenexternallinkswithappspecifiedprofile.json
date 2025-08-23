@@ -1,0 +1,74 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "EdgeOpenExternalLinksWithAppSpecifiedProfile",
+        "Prioritize App specified profile to open external links",
+        "\\Microsoft Edge\\Identity and sign-in",
+        "Microsoft Edge\\Identity and sign-in",
+        "Identity and sign-in"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev139~Policy~microsoft_edge~Identity/EdgeOpenExternalLinksWithAppSpecifiedProfile",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edgev139~policy~microsoft_edge~identity_edgeopenexternallinkswithappspecifiedprofile",
+    "categoryId": "45a89c1f-0a34-4f78-b28f-d30b623fa423",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_microsoft_edgev139~policy~microsoft_edge~identity_edgeopenexternallinkswithappspecifiedprofile",
+    "description": "This policy controls whether the profile specified by an app (such as Microsoft Teams or Outlook) is given priority when opening external links, instead of the profile selected in the Default profile for external links setting.\r\n\r\nPolicy behavior:\r\n1. Enabled or not configured: The app-specified profile is prioritized for opening external links. This behavior overrides the profile selected in settings, and the behavior defined by the EdgeDefaultProfileEnabled and EdgeOpenExternalLinksWithPrimaryWorkProfileEnabled policies. If the app doesn't specify a profile, this policy has no effect.\r\n2. Disabled: The profile selected in settings—along with the EdgeDefaultProfileEnabled and EdgeOpenExternalLinksWithPrimaryWorkProfileEnabled policies—will be used to determine which profile opens external links.\r\n\r\nNOTE:\r\nThis policy doesn't override user-defined preferences set through Automatic profile switching, including the Custom site switch setting located within it. If a user has configured specific sites to open in designated profiles, those preferences take precedence.",
+    "helpText": "",
+    "name": "EdgeOpenExternalLinksWithAppSpecifiedProfile",
+    "displayName": "Prioritize App specified profile to open external links (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edgev139~policy~microsoft_edge~identity_edgeopenexternallinkswithappspecifiedprofile_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev139~policy~microsoft_edge~identity_edgeopenexternallinkswithappspecifiedprofile_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev139~policy~microsoft_edge~identity_edgeopenexternallinkswithappspecifiedprofile_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}
