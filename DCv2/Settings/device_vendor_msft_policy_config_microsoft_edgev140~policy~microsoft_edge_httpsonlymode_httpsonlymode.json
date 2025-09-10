@@ -1,0 +1,121 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "HttpsOnlyMode",
+        "Allow HTTPS-Only Mode to be enabled",
+        "\\Microsoft Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev140~Policy~microsoft_edge/HttpsOnlyMode",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edgev140~policy~microsoft_edge_httpsonlymode",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_microsoft_edgev140~policy~microsoft_edge_httpsonlymode_httpsonlymode",
+    "description": "",
+    "helpText": "",
+    "name": "HttpsOnlyMode",
+    "displayName": "Allow HTTPS-Only Mode to be enabled (Device)",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edgev140~policy~microsoft_edge_httpsonlymode_httpsonlymode_allowed",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev140~policy~microsoft_edge_httpsonlymode_httpsonlymode_allowed",
+            "description": null,
+            "helpText": null,
+            "name": "Do not restrict users' HTTPS-Only Mode setting",
+            "displayName": "Do not restrict users' HTTPS-Only Mode setting",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "allowed"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_microsoft_edgev140~policy~microsoft_edge_httpsonlymode_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_microsoft_edgev140~policy~microsoft_edge_httpsonlymode"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev140~policy~microsoft_edge_httpsonlymode_httpsonlymode_disallowed",
+            "description": null,
+            "helpText": null,
+            "name": "Do not allow users to enable any HTTPS-Only Mode",
+            "displayName": "Do not allow users to enable any HTTPS-Only Mode",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "disallowed"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_microsoft_edgev140~policy~microsoft_edge_httpsonlymode_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_microsoft_edgev140~policy~microsoft_edge_httpsonlymode"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev140~policy~microsoft_edge_httpsonlymode_httpsonlymode_force_enabled",
+            "description": null,
+            "helpText": null,
+            "name": "Force enable HTTPS-Only Mode in Strict mode",
+            "displayName": "Force enable HTTPS-Only Mode in Strict mode",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "force_enabled"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_microsoft_edgev140~policy~microsoft_edge_httpsonlymode_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_microsoft_edgev140~policy~microsoft_edge_httpsonlymode"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev140~policy~microsoft_edge_httpsonlymode_httpsonlymode_force_balanced_enabled",
+            "description": null,
+            "helpText": null,
+            "name": "Force enable HTTPS-Only Mode in Balanced Mode",
+            "displayName": "Force enable HTTPS-Only Mode in Balanced Mode",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "force_balanced_enabled"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_microsoft_edgev140~policy~microsoft_edge_httpsonlymode_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_microsoft_edgev140~policy~microsoft_edge_httpsonlymode"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

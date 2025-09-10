@@ -1,0 +1,82 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Disable Cross Device Resume",
+        "Connectivity"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Connectivity#disablecrossdeviceresume"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Connectivity/DisableCrossDeviceResume",
+    "rootDefinitionId": "user_vendor_msft_policy_config_connectivity_disablecrossdeviceresume",
+    "categoryId": "f03f9f2f-f8ba-4c94-ad5f-95ada256c8c6",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_connectivity_disablecrossdeviceresume",
+    "description": "This policy allows IT admins to turn off CrossDeviceResume feature to continue tasks, such as browsing file, continue using 1P/ 3P apps that require linking between Phone and PC. If you enable this policy setting, the Windows device will not receive any CrossDeviceResume notification. If you disable this policy setting, the Windows device will receive notification to resume activity from linked phone. If you do not configure this policy setting, the default behavior is that the CrossDeviceResume feature is turned 'ON'. Changes to this policy take effect on reboot.\r\n This setting is only available to Windows Insiders",
+    "helpText": "",
+    "name": "DisableCrossDeviceResume",
+    "displayName": "Disable Cross Device Resume (User) (Windows Insiders only)",
+    "defaultOptionId": "user_vendor_msft_policy_config_connectivity_disablecrossdeviceresume_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "9.9",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.25272",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_connectivity_disablecrossdeviceresume_0",
+            "description": "CrossDeviceResume is Enabled.",
+            "helpText": null,
+            "name": "CrossDeviceResume is Enabled.",
+            "displayName": "CrossDeviceResume is Enabled.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_connectivity_disablecrossdeviceresume_1",
+            "description": "CrossDeviceResume is Disabled.",
+            "helpText": null,
+            "name": "CrossDeviceResume is Disabled.",
+            "displayName": "CrossDeviceResume is Disabled.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

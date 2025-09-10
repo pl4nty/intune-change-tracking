@@ -1,0 +1,73 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ServiceWorkerAutoPreloadEnabled",
+        "Allow ServiceWorker to dispatch navigation requests without waiting for its startup",
+        "\\Microsoft Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev140~Policy~microsoft_edge/ServiceWorkerAutoPreloadEnabled",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edgev140~policy~microsoft_edge_serviceworkerautopreloadenabled",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_microsoft_edgev140~policy~microsoft_edge_serviceworkerautopreloadenabled",
+    "description": "This policy controls whether Microsoft Edge enables the ServiceWorkerAutoPreload feature.\r\n\r\nWhen enabled or not configured, Microsoft Edge may initiate the main resource network request concurrently with the Service Worker bootstrap process. This can improve performance in scenarios where the Service Worker is not already running.\r\n\r\nIf you disable this policy, Microsoft Edge will wait to dispatch the navigation request until after the Service Worker has started.\r\n\r\nThis is a temporary policy and will be removed in version 144 of Microsoft Edge.\r\n\r\nFor more details on the feature, see https://github.com/WICG/service-worker-auto-preload.",
+    "helpText": "",
+    "name": "ServiceWorkerAutoPreloadEnabled",
+    "displayName": "Allow ServiceWorker to dispatch navigation requests without waiting for its startup (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edgev140~policy~microsoft_edge_serviceworkerautopreloadenabled_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev140~policy~microsoft_edge_serviceworkerautopreloadenabled_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev140~policy~microsoft_edge_serviceworkerautopreloadenabled_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Autopilot",
+        "Device Preparation",
+        "DeviceRenameTemplate",
+        "Out-of-box experience settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./enrollment/autopilot/DevicePreparation",
+    "offsetUri": "/OobeSettings/DeviceRenameTemplate",
+    "rootDefinitionId": "enrollment_autopilot_dpp_applydevicerenametemplate",
+    "categoryId": "72e4d72b-e01e-427c-a3b6-05bdcf04ef8d",
+    "settingUsage": "configuration",
+    "uxBehavior": "largeTextBox",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "enrollment_autopilot_dpp_devicerenametemplate",
+    "description": "Create a unique name for your devices. Names must be 15 characters or less, and can contain letters (a-z, A-Z), numbers (0-9), and hyphens. Names must not contain only numbers. Names cannot include a blank space. Use the %SERIAL% macro to add a hardware-specific serial number. Alternatively, use the %RAND:x% macro to add a random string of numbers, where x equals the number of digits to add.",
+    "helpText": "",
+    "name": "DeviceRenameTemplate",
+    "displayName": "Enter a name",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "enrollment",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": "^(?!.*\\s)(?!^\\d+$)(?=.{1,15}$)(?!.*%SERIAL%.*%RAND:\\d{1,2}%)(?!.*(%SERIAL%).*\\1)(?!.*(%RAND:\\d{1,2}%).*\\1)[A-Za-z0-9:-]*(%SERIAL%|%RAND:\\d{1,2}%)*[A-Za-z0-9:-]*$",
+        "maximumLength": 23,
+        "minimumLength": 1,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": "MyCompany-%RAND:4%"
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "enrollment_autopilot_dpp_applydevicerenametemplate_1",
+            "parentSettingId": "enrollment_autopilot_dpp_applydevicerenametemplate"
+        }
+    ],
+    "dependedOnBy": []
+}

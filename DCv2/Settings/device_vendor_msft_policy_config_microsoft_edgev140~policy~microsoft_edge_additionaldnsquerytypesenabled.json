@@ -1,0 +1,73 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "AdditionalDnsQueryTypesEnabled",
+        "Allow DNS queries for more DNS record types",
+        "\\Microsoft Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev140~Policy~microsoft_edge/AdditionalDnsQueryTypesEnabled",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edgev140~policy~microsoft_edge_additionaldnsquerytypesenabled",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_microsoft_edgev140~policy~microsoft_edge_additionaldnsquerytypesenabled",
+    "description": "This policy controls whether Microsoft Edge can query more DNS record types when making insecure (non-Secure DNS) requests.\r\n\r\nIf this policy is unset or set to Enabled, more record types such as HTTPS (DNS type 65) may be queried in addition to A (DNS type 1) and AAAA (DNS type 28).\r\n\r\nIf this policy is set to Disabled, Microsoft Edge will only query A and AAAA record types for insecure DNS requests.\r\n\r\nThis setting doesn't affect DNS queries made via Secure DNS, which may always use more record types.\r\n\r\nNote: This is a temporary policy and is planned for removal in a future version of Microsoft Edge. After removal, Microsoft Edge will always be able to query more DNS types during insecure requests.",
+    "helpText": "",
+    "name": "AdditionalDnsQueryTypesEnabled",
+    "displayName": "Allow DNS queries for more DNS record types",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edgev140~policy~microsoft_edge_additionaldnsquerytypesenabled_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev140~policy~microsoft_edge_additionaldnsquerytypesenabled_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev140~policy~microsoft_edge_additionaldnsquerytypesenabled_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

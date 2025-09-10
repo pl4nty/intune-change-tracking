@@ -1,0 +1,73 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Autopilot",
+        "Device Preparation",
+        "SkipKeyboard",
+        "Out-of-box experience settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./enrollment/autopilot/DevicePreparation",
+    "offsetUri": "/OobeSettings/SkipKeyboard",
+    "rootDefinitionId": "enrollment_autopilot_dpp_skipkeyboard",
+    "categoryId": "72e4d72b-e01e-427c-a3b6-05bdcf04ef8d",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "enrollment_autopilot_dpp_skipkeyboard",
+    "description": "If true, skip the keyboard selection page if Language is set.",
+    "helpText": "",
+    "name": "SkipKeyboard",
+    "displayName": "Automatically configure keyboard",
+    "defaultOptionId": "enrollment_autopilot_dpp_skipkeyboard_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "enrollment",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "enrollment_autopilot_dpp_skipkeyboard_0",
+            "description": null,
+            "helpText": null,
+            "name": "No",
+            "displayName": "No",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "enrollment_autopilot_dpp_skipkeyboard_1",
+            "description": null,
+            "helpText": null,
+            "name": "Yes",
+            "displayName": "Yes",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -2,28 +2,28 @@
     "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
     "accessTypes": "none",
     "keywords": [
-        "Software Update"
+        "Default Applications"
     ],
     "infoUrls": [],
     "occurrence": null,
     "baseUri": "",
-    "offsetUri": "DetailsURL",
-    "rootDefinitionId": "enforcement_enforcement",
-    "categoryId": "42a6198f-bdec-402e-b619-315400b65488",
+    "offsetUri": "Settings/[{0}]/DefaultApplications/Calling",
+    "rootDefinitionId": "settings_item_defaultapplications",
+    "categoryId": "b32726b3-b0e9-465b-86f8-b61ad8af52f0",
     "settingUsage": "configuration",
     "uxBehavior": "default",
     "visibility": "settingsCatalog,template",
     "riskLevel": "low",
-    "id": "enforcement_detailsurl",
-    "description": "The URL of a web page that shows details that the organization provides about the enforced software update.",
+    "id": "settings_item_defaultapplications_calling",
+    "description": "The bundle identifier of the app that the system sets as the default calling app. This app must be an eligible calling app.",
     "helpText": null,
-    "name": "DetailsURL",
-    "displayName": "Details URL",
+    "name": "Settings_item_DefaultApplications_Calling",
+    "displayName": "Calling",
     "applicability": {
         "description": null,
-        "platform": "iOS,macOS",
+        "platform": "iOS",
         "deviceMode": "none",
-        "technologies": "appleRemoteManagement"
+        "technologies": "mdm,appleRemoteManagement"
     },
     "referredSettingInformationList": [],
     "valueDefinition": {
@@ -42,8 +42,8 @@
     },
     "dependentOn": [
         {
-            "dependentOn": "enforcement_enforcement",
-            "parentSettingId": "enforcement_enforcement"
+            "dependentOn": "settings_item_defaultapplications",
+            "parentSettingId": "settings_item_defaultapplications"
         }
     ],
     "dependedOnBy": []
