@@ -1,0 +1,59 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "SizeBytes",
+        "Disk Drive"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/OpenExtensibilitySettings/InventoryAdaptor/windows_deviceinventory_diskdrive_driveid_sizebytes",
+    "rootDefinitionId": "windows_deviceinventory_diskdrive_driveid",
+    "categoryId": "c1812282-d637-4565-9105-6ccad9166f98",
+    "settingUsage": "inventory",
+    "uxBehavior": "default",
+    "visibility": "inventoryCatalog",
+    "riskLevel": "low",
+    "id": "windows_deviceinventory_diskdrive_driveid_sizebytes",
+    "description": null,
+    "helpText": null,
+    "name": "SizeBytes",
+    "displayName": "Size Bytes",
+    "defaultOptionId": "windows_deviceinventory_diskdrive_driveid_sizebytes_24",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "extensibility",
+        "configurationServiceProviderVersion": null,
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "windows_deviceinventory_diskdrive_driveid_sizebytes_24",
+            "description": "",
+            "helpText": null,
+            "name": "Refresh_Rate_24_Hours",
+            "displayName": "Refresh every 24 hours",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1440
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "windows_deviceinventory_diskdrive_driveid",
+                    "parentSettingId": "windows_deviceinventory_diskdrive_driveid"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}
