@@ -1,0 +1,59 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "VirtualMemoryTotalBytes",
+        "Memory Info"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/OpenExtensibilitySettings/InventoryAdaptor/windows_deviceinventory_memoryinfo_singleton_virtualmemorytotalbytes",
+    "rootDefinitionId": "windows_deviceinventory_memoryinfo_singleton",
+    "categoryId": "9837d02f-9f1c-47af-b561-665286833706",
+    "settingUsage": "inventory",
+    "uxBehavior": "default",
+    "visibility": "inventoryCatalog",
+    "riskLevel": "low",
+    "id": "windows_deviceinventory_memoryinfo_singleton_virtualmemorytotalbytes",
+    "description": null,
+    "helpText": null,
+    "name": "VirtualMemoryTotalBytes",
+    "displayName": "Virtual Memory Total Bytes",
+    "defaultOptionId": "windows_deviceinventory_memoryinfo_singleton_virtualmemorytotalbytes_24",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "extensibility",
+        "configurationServiceProviderVersion": null,
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "windows_deviceinventory_memoryinfo_singleton_virtualmemorytotalbytes_24",
+            "description": "",
+            "helpText": null,
+            "name": "Refresh_Rate_24_Hours",
+            "displayName": "Refresh every 24 hours",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1440
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "windows_deviceinventory_memoryinfo_singleton",
+                    "parentSettingId": "windows_deviceinventory_memoryinfo_singleton"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}
