@@ -1,0 +1,92 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "get,replace",
+    "keywords": [
+        "Is Selected",
+        "Multi SIM"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/MultiSIM-csp/"
+    ],
+    "baseUri": "./Vendor/MSFT/MultiSIM",
+    "offsetUri": "/{0}/Slots/{1}/IsSelected",
+    "rootDefinitionId": "device_vendor_msft_multisim_{modemid}",
+    "categoryId": "83fb8ae9-dfc0-4ff8-8a98-3a04f0edd919",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_multisim_{modemid}_slots_{slotid}_isselected",
+    "description": "Indicates whether this Slot is selected or not.",
+    "helpText": "",
+    "name": "IsSelected",
+    "displayName": "Is Selected",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17134",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_multisim_{modemid}_slots_{slotid}_isselected_false",
+            "description": "Not selected",
+            "helpText": null,
+            "name": "Not selected",
+            "displayName": "Not selected",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_multisim_{modemid}_slots_{slotid}",
+                    "parentSettingId": "device_vendor_msft_multisim_{modemid}_slots_{slotid}"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_multisim_{modemid}_slots_{slotid}_isselected_true",
+            "description": "Selected",
+            "helpText": null,
+            "name": "Selected",
+            "displayName": "Selected",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_multisim_{modemid}_slots_{slotid}",
+                    "parentSettingId": "device_vendor_msft_multisim_{modemid}_slots_{slotid}"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

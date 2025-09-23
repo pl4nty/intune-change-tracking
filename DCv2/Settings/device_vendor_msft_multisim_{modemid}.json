@@ -1,0 +1,66 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "get",
+    "keywords": [
+        " Modem ID",
+        "Multi SIM"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Vendor/MSFT/MultiSIM",
+    "offsetUri": "/{0}",
+    "rootDefinitionId": "device_vendor_msft_multisim_{modemid}",
+    "categoryId": "83fb8ae9-dfc0-4ff8-8a98-3a04f0edd919",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_multisim_{modemid}",
+    "description": "Node representing a Mobile Broadband Modem. The node name is the Modem ID. Modem ID is a GUID without curly braces, with exception of \"Embedded\" which represents the embedded Modem.",
+    "helpText": "",
+    "name": "{ModemID}",
+    "displayName": "Modem ID",
+    "childIds": [
+        "device_vendor_msft_multisim_{modemid}_policies_slotselectionenabled",
+        "device_vendor_msft_multisim_{modemid}_slots_{slotid}"
+    ],
+    "maximumCount": 1,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17134",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 100
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "device_vendor_msft_multisim_{modemid}_policies_slotselectionenabled",
+            "required": false
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_multisim_{modemid}_slots_{slotid}",
+            "required": false
+        }
+    ]
+}

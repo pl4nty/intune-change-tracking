@@ -1,0 +1,94 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,get,replace",
+    "keywords": [
+        "Is Discovery Server",
+        "e UIC Cs",
+        "eSIM"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/eUICCs-csp/"
+    ],
+    "baseUri": "./Vendor/MSFT/eUICCs",
+    "offsetUri": "/Default/DownloadServers/{0}/IsDiscoveryServer",
+    "rootDefinitionId": "device_vendor_msft_euiccs_{euicc}_downloadservers_{servername}",
+    "categoryId": "3c46dc04-e649-41b9-be99-04b771303fdd",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_euiccs_{euicc}_downloadservers_{servername}_isdiscoveryserver",
+    "description": "Indicates whether the server is a discovery server or if it is used for bulk download. A discovery server is used every time a user requests a profile discovery operation. Optional, default value is false.",
+    "helpText": "",
+    "name": "IsDiscoveryServer",
+    "displayName": "Is Discovery Server",
+    "defaultOptionId": "device_vendor_msft_euiccs_{euicc}_downloadservers_{servername}_isdiscoveryserver_false",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22621",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_euiccs_{euicc}_downloadservers_{servername}_isdiscoveryserver_false",
+            "description": "Is Not Discovery Server",
+            "helpText": null,
+            "name": "Is Not Discovery Server",
+            "displayName": "Is Not Discovery Server",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_euiccs_{euicc}_downloadservers_{servername}",
+                    "parentSettingId": "device_vendor_msft_euiccs_{euicc}_downloadservers_{servername}"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_euiccs_{euicc}_downloadservers_{servername}_isdiscoveryserver_true",
+            "description": "Is Discovery Server",
+            "helpText": null,
+            "name": "Is Discovery Server",
+            "displayName": "Is Discovery Server",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_euiccs_{euicc}_downloadservers_{servername}",
+                    "parentSettingId": "device_vendor_msft_euiccs_{euicc}_downloadservers_{servername}"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,74 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,get,replace",
+    "keywords": [
+        "Matching ID",
+        "e UIC Cs",
+        "eSIM"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/eUICCs-csp/"
+    ],
+    "baseUri": "./Vendor/MSFT/eUICCs",
+    "offsetUri": "/Default/Profiles/{0}/MatchingID",
+    "rootDefinitionId": "device_vendor_msft_euiccs_{euicc}_profiles_{iccid}",
+    "categoryId": "3c46dc04-e649-41b9-be99-04b771303fdd",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_euiccs_{euicc}_profiles_{iccid}_matchingid",
+    "description": "Matching ID (activation code token) for profile download. Must be set by the MDM when the ICCID subtree is created.",
+    "helpText": "",
+    "name": "MatchingID",
+    "displayName": "Matching ID",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.16299",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "regEx",
+        "inputValidationSchema": "^([0-9a-fA-F]{5}-){3}[0-9a-fA-F]{5}$",
+        "maximumLength": 87516,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "device_vendor_msft_euiccs_{euicc}_profiles_{iccid}",
+            "parentSettingId": "device_vendor_msft_euiccs_{euicc}_profiles_{iccid}"
+        }
+    ],
+    "dependedOnBy": []
+}

@@ -1,0 +1,71 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "get",
+    "keywords": [
+        " Slot ID",
+        "Multi SIM"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Vendor/MSFT/MultiSIM",
+    "offsetUri": "/{0}/Slots/{1}",
+    "rootDefinitionId": "device_vendor_msft_multisim_{modemid}",
+    "categoryId": "83fb8ae9-dfc0-4ff8-8a98-3a04f0edd919",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_multisim_{modemid}_slots_{slotid}",
+    "description": "Node representing a SIM Slot. The node name is the Slot ID. SIM Slot ID format is \"0\", \"1\", etc., with exception of \"Embedded\" which represents the embedded Slot.",
+    "helpText": "",
+    "name": "{SlotID}",
+    "displayName": " Slot ID",
+    "childIds": [
+        "device_vendor_msft_multisim_{modemid}_slots_{slotid}_isselected",
+        "device_vendor_msft_multisim_{modemid}_slots_{slotid}_identifier"
+    ],
+    "maximumCount": 4,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.17134",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 100
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [
+        {
+            "dependentOn": "device_vendor_msft_multisim_{modemid}",
+            "parentSettingId": "device_vendor_msft_multisim_{modemid}"
+        }
+    ],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "device_vendor_msft_multisim_{modemid}_slots_{slotid}_isselected",
+            "required": false
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_multisim_{modemid}_slots_{slotid}_identifier",
+            "required": true
+        }
+    ]
+}

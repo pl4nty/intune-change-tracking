@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,get,replace",
+    "keywords": [
+        "Maximum Attempts",
+        "e UIC Cs",
+        "eSIM"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/eUICCs-csp/"
+    ],
+    "baseUri": "./Vendor/MSFT/eUICCs",
+    "offsetUri": "/Default/DownloadServers/{0}/MaximumAttempts",
+    "rootDefinitionId": "device_vendor_msft_euiccs_{euicc}_downloadservers_{servername}",
+    "categoryId": "3c46dc04-e649-41b9-be99-04b771303fdd",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_euiccs_{euicc}_downloadservers_{servername}_maximumattempts",
+    "description": "How many times profile download should be attempted before giving up. A value of 0 indicates unlimited retry attempts. This parameter is optional; default value (50) is equivalent to about a month of retry attempts.\r\n This setting is only available to Windows Insiders",
+    "helpText": "",
+    "name": "MaximumAttempts",
+    "displayName": "Maximum Attempts (Windows Insiders only)",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.25272",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 2147483647,
+        "minimumValue": 0
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 50
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "device_vendor_msft_euiccs_{euicc}_downloadservers_{servername}",
+            "parentSettingId": "device_vendor_msft_euiccs_{euicc}_downloadservers_{servername}"
+        }
+    ],
+    "dependedOnBy": []
+}
