@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "PLMNID",
+        "Wireless Network Preference"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/WirelessNetworkPreference-csp/"
+    ],
+    "baseUri": "./Vendor/MSFT/WirelessNetworkPreference",
+    "offsetUri": "/ConnectionProfiles/{0}/Cellular/PLMNID",
+    "rootDefinitionId": "vendor_msft_wirelessnetworkpreference_connectionprofiles_{connectionprofileid}",
+    "categoryId": "0d9ee4f5-7d6b-41fd-9089-b0886f7ff944",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "vendor_msft_wirelessnetworkpreference_connectionprofiles_{connectionprofileid}_cellular_plmnid",
+    "description": "5- or 6-digit string identifying a cellular network. It consists of the combination of Mobile Country Code (MCC) and Mobile Network Code (MNC). \r\n This setting is only available to Windows Insiders",
+    "helpText": "",
+    "name": "PLMNID",
+    "displayName": "PLMNID (Windows Insiders only)",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.25272",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "regEx",
+        "inputValidationSchema": "^[0-9]{5,6}$",
+        "maximumLength": 87516,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "vendor_msft_wirelessnetworkpreference_connectionprofiles_{connectionprofileid}",
+            "parentSettingId": "vendor_msft_wirelessnetworkpreference_connectionprofiles_{connectionprofileid}"
+        }
+    ],
+    "dependedOnBy": []
+}

@@ -1,0 +1,66 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "get,replace",
+    "keywords": [
+        "Preferred Profile Wake Connection Timer In Seconds",
+        "Wireless Network Preference"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/WirelessNetworkPreference-csp/"
+    ],
+    "baseUri": "./Vendor/MSFT/WirelessNetworkPreference",
+    "offsetUri": "/Parameters/CellularParameters/PreferredProfileWakeConnectionTimerInSeconds",
+    "rootDefinitionId": "vendor_msft_wirelessnetworkpreference_parameters_cellularparameters_preferredprofilewakeconnectiontimerinseconds",
+    "categoryId": "0d9ee4f5-7d6b-41fd-9089-b0886f7ff944",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "vendor_msft_wirelessnetworkpreference_parameters_cellularparameters_preferredprofilewakeconnectiontimerinseconds",
+    "description": "When the device is woken from sleep with the most-preferred profile already enabled, this value configures the amount of time (in seconds) before the agent will give up on waiting for connection re-establishment with the most-preferred profile and start network discovery.\r\n This setting is only available to Windows Insiders",
+    "helpText": "",
+    "name": "PreferredProfileWakeConnectionTimerInSeconds",
+    "displayName": "Preferred Profile Wake Connection Timer In Seconds (Windows Insiders only)",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.25272",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 360,
+        "minimumValue": 30
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 200
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

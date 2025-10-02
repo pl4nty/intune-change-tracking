@@ -1,0 +1,66 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "get,replace",
+    "keywords": [
+        "Screen Off Duration To Trigger Network Discovery In Minutes",
+        "Wireless Network Preference"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/WirelessNetworkPreference-csp/"
+    ],
+    "baseUri": "./Vendor/MSFT/WirelessNetworkPreference",
+    "offsetUri": "/Parameters/CellularParameters/ScreenOffDurationToTriggerNetworkDiscoveryInMinutes",
+    "rootDefinitionId": "vendor_msft_wirelessnetworkpreference_parameters_cellularparameters_screenoffdurationtotriggernetworkdiscoveryinminutes",
+    "categoryId": "0d9ee4f5-7d6b-41fd-9089-b0886f7ff944",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "vendor_msft_wirelessnetworkpreference_parameters_cellularparameters_screenoffdurationtotriggernetworkdiscoveryinminutes",
+    "description": "When the device experiences screen off and back on, this value configures the minimum duration (in minutes) of the screen off period that will trigger network discovery.\r\n This setting is only available to Windows Insiders",
+    "helpText": "",
+    "name": "ScreenOffDurationToTriggerNetworkDiscoveryInMinutes",
+    "displayName": "Screen Off Duration To Trigger Network Discovery In Minutes (Windows Insiders only)",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.25272",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 30,
+        "minimumValue": 0
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 10
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

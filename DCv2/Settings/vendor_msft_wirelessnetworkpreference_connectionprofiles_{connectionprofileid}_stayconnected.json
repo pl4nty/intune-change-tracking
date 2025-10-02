@@ -1,0 +1,95 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Stay Connected",
+        "Wireless Network Preference"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/WirelessNetworkPreference-csp/"
+    ],
+    "baseUri": "./Vendor/MSFT/WirelessNetworkPreference",
+    "offsetUri": "/ConnectionProfiles/{0}/StayConnected",
+    "rootDefinitionId": "vendor_msft_wirelessnetworkpreference_connectionprofiles_{connectionprofileid}",
+    "categoryId": "0d9ee4f5-7d6b-41fd-9089-b0886f7ff944",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "vendor_msft_wirelessnetworkpreference_connectionprofiles_{connectionprofileid}_stayconnected",
+    "description": "When set to 0: Default network discovery behavior is applied. When set to 1: Once connected, the device will always stay connected to this network. This means the device will not attempt to discover or switch to other higher priority networks until it first loses connectivity to this network.\r\n This setting is only available to Windows Insiders",
+    "helpText": "",
+    "name": "StayConnected",
+    "displayName": "Stay Connected (Windows Insiders only)",
+    "defaultOptionId": "vendor_msft_wirelessnetworkpreference_connectionprofiles_{connectionprofileid}_stayconnected_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.25272",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "vendor_msft_wirelessnetworkpreference_connectionprofiles_{connectionprofileid}_stayconnected_0",
+            "description": "Default network discovery behavior.",
+            "helpText": null,
+            "name": "Default network discovery behavior.",
+            "displayName": "Default network discovery behavior.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "vendor_msft_wirelessnetworkpreference_connectionprofiles_{connectionprofileid}",
+                    "parentSettingId": "vendor_msft_wirelessnetworkpreference_connectionprofiles_{connectionprofileid}"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "vendor_msft_wirelessnetworkpreference_connectionprofiles_{connectionprofileid}_stayconnected_1",
+            "description": "Once connected to this network, try to stay connected.",
+            "helpText": null,
+            "name": "Once connected to this network, try to stay connected.",
+            "displayName": "Once connected to this network, try to stay connected.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "vendor_msft_wirelessnetworkpreference_connectionprofiles_{connectionprofileid}",
+                    "parentSettingId": "vendor_msft_wirelessnetworkpreference_connectionprofiles_{connectionprofileid}"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,95 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Wireless Type",
+        "Wireless Network Preference"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/WirelessNetworkPreference-csp/"
+    ],
+    "baseUri": "./Vendor/MSFT/WirelessNetworkPreference",
+    "offsetUri": "/ConnectionProfiles/{0}/WirelessType",
+    "rootDefinitionId": "vendor_msft_wirelessnetworkpreference_connectionprofiles_{connectionprofileid}",
+    "categoryId": "0d9ee4f5-7d6b-41fd-9089-b0886f7ff944",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "vendor_msft_wirelessnetworkpreference_connectionprofiles_{connectionprofileid}_wirelesstype",
+    "description": "Type of wireless network (either Cellular or Wi-Fi). 0 represents Cellular, and 1 represents Wi-Fi. Currently only cellular is supported.\r\n This setting is only available to Windows Insiders",
+    "helpText": "",
+    "name": "WirelessType",
+    "displayName": "Wireless Type (Windows Insiders only)",
+    "defaultOptionId": "vendor_msft_wirelessnetworkpreference_connectionprofiles_{connectionprofileid}_wirelesstype_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.25272",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "vendor_msft_wirelessnetworkpreference_connectionprofiles_{connectionprofileid}_wirelesstype_0",
+            "description": "Cellular",
+            "helpText": null,
+            "name": "Cellular",
+            "displayName": "Cellular",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "vendor_msft_wirelessnetworkpreference_connectionprofiles_{connectionprofileid}",
+                    "parentSettingId": "vendor_msft_wirelessnetworkpreference_connectionprofiles_{connectionprofileid}"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "vendor_msft_wirelessnetworkpreference_connectionprofiles_{connectionprofileid}_wirelesstype_1",
+            "description": "Wi-Fi",
+            "helpText": null,
+            "name": "Wi-Fi",
+            "displayName": "Wi- Fi",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "vendor_msft_wirelessnetworkpreference_connectionprofiles_{connectionprofileid}",
+                    "parentSettingId": "vendor_msft_wirelessnetworkpreference_connectionprofiles_{connectionprofileid}"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

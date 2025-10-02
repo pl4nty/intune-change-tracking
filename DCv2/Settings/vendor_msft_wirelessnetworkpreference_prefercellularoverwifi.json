@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "get,replace",
+    "keywords": [
+        "Prefer Cellular Over Wi Fi",
+        "Wireless Network Preference"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/WirelessNetworkPreference-csp/"
+    ],
+    "baseUri": "./Vendor/MSFT/WirelessNetworkPreference",
+    "offsetUri": "/PreferCellularOverWiFi",
+    "rootDefinitionId": "vendor_msft_wirelessnetworkpreference_prefercellularoverwifi",
+    "categoryId": "0d9ee4f5-7d6b-41fd-9089-b0886f7ff944",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "vendor_msft_wirelessnetworkpreference_prefercellularoverwifi",
+    "description": "It determines the order of preference between Wi-Fi and cellular networks. When the value is set to “False”, Wi-Fi is preferred over cellular. When the value is set to “True”, cellular is preferred over Wi-Fi. \r\n This setting is only available to Windows Insiders",
+    "helpText": "",
+    "name": "PreferCellularOverWiFi",
+    "displayName": "Prefer Cellular Over Wi Fi (Windows Insiders only)",
+    "defaultOptionId": "vendor_msft_wirelessnetworkpreference_prefercellularoverwifi_false",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.25272",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "vendor_msft_wirelessnetworkpreference_prefercellularoverwifi_false",
+            "description": "Prefer Wi-Fi over Cellular.",
+            "helpText": null,
+            "name": "Prefer Wi-Fi over Cellular.",
+            "displayName": "Prefer Wi-Fi over Cellular.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "False"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "vendor_msft_wirelessnetworkpreference_prefercellularoverwifi_true",
+            "description": "Prefer Cellular over Wi-Fi.",
+            "helpText": null,
+            "name": "Prefer Cellular over Wi-Fi.",
+            "displayName": "Prefer Cellular over Wi-Fi.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "True"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}
