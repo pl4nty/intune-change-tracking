@@ -16,8 +16,8 @@
     "visibility": "settingsCatalog,template",
     "riskLevel": "low",
     "id": "vendor_msft_sharedpc_kioskmodeusertiledisplaytext",
-    "description": "Specifies the display text for the account shown on the sign-in screen which launches the app specified by KioskModeAUMID.",
-    "helpText": null,
+    "description": "Specifies the display text for the account shown on the sign-in screen which launches the app specified by KioskModeAUMID. If used, this value must be set before the action on the EnableSharedPCMode node is taken.",
+    "helpText": "",
     "name": "KioskModeUserTileDisplayText",
     "displayName": "Kiosk Mode User Tile Display Text",
     "applicability": {
@@ -28,8 +28,18 @@
         "technologies": "mdm",
         "configurationServiceProviderVersion": "1.1",
         "maximumSupportedVersion": null,
-        "minimumSupportedVersion": null,
-        "windowsSkus": [],
+        "minimumSupportedVersion": "10.0.15063",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
         "requiresAzureAd": false,
         "requiredAzureAdTrustType": "none"
     },
@@ -42,7 +52,7 @@
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
         "format": "none",
         "inputValidationSchema": null,
-        "maximumLength": 175032,
+        "maximumLength": 87516,
         "minimumLength": 0,
         "isSecret": false,
         "fileTypes": []

@@ -16,8 +16,8 @@
     "visibility": "settingsCatalog,template",
     "riskLevel": "low",
     "id": "vendor_msft_sharedpc_signinonresume",
-    "description": "Require signing in on waking up from sleep.",
-    "helpText": null,
+    "description": "Require signing in on waking up from sleep. If used, this value must be set before the action on the EnableSharedPCMode node is taken.",
+    "helpText": "",
     "name": "SignInOnResume",
     "displayName": "Sign In On Resume",
     "defaultOptionId": "vendor_msft_sharedpc_signinonresume_false",
@@ -29,8 +29,18 @@
         "technologies": "mdm",
         "configurationServiceProviderVersion": "1.0",
         "maximumSupportedVersion": null,
-        "minimumSupportedVersion": null,
-        "windowsSkus": [],
+        "minimumSupportedVersion": "10.0.14393",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
         "requiresAzureAd": false,
         "requiredAzureAdTrustType": "none"
     },
@@ -41,29 +51,29 @@
     "referredSettingInformationList": [],
     "options": [
         {
-            "itemId": "vendor_msft_sharedpc_signinonresume_true",
-            "description": null,
-            "helpText": null,
-            "name": "true",
-            "displayName": "true",
-            "optionValue": {
-                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
-                "settingValueTemplateReference": null,
-                "value": "true"
-            },
-            "dependentOn": [],
-            "dependedOnBy": []
-        },
-        {
             "itemId": "vendor_msft_sharedpc_signinonresume_false",
-            "description": null,
+            "description": "False",
             "helpText": null,
-            "name": "false",
+            "name": "False",
             "displayName": "false",
             "optionValue": {
                 "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
                 "settingValueTemplateReference": null,
                 "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "vendor_msft_sharedpc_signinonresume_true",
+            "description": "True",
+            "helpText": null,
+            "name": "True",
+            "displayName": "true",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
             },
             "dependentOn": [],
             "dependedOnBy": []

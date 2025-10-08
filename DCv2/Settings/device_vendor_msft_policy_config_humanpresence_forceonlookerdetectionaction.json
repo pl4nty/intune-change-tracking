@@ -1,0 +1,93 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Force Onlooker Detection Action",
+        "Human Presence"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-HumanPresence#forceonlookerdetectionaction"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/HumanPresence/ForceOnlookerDetectionAction",
+    "rootDefinitionId": "device_vendor_msft_policy_config_humanpresence_forceonlookerdetectionaction",
+    "categoryId": "a77e6e83-a02e-4a51-a27e-6437ea42aeb5",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_humanpresence_forceonlookerdetectionaction",
+    "description": "Determines whether the Onlooker Detection action is forced by the MDM policy. The user will not be able to change this setting and the toggle in the UI will be greyed out.",
+    "helpText": "",
+    "name": "ForceOnlookerDetectionAction",
+    "displayName": "Force Onlooker Detection Action",
+    "defaultOptionId": "device_vendor_msft_policy_config_humanpresence_forceonlookerdetectionaction_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26200.6584",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_humanpresence_forceonlookerdetectionaction_3",
+            "description": "ForcedDimAndNotify.",
+            "helpText": null,
+            "name": "ForcedDimAndNotify.",
+            "displayName": "Forced Dim And Notify.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_humanpresence_forceonlookerdetectionaction_2",
+            "description": "ForcedNotify.",
+            "helpText": null,
+            "name": "ForcedNotify.",
+            "displayName": "Forced Notify.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_humanpresence_forceonlookerdetectionaction_0",
+            "description": "DefaultToUserChoice.",
+            "helpText": null,
+            "name": "DefaultToUserChoice.",
+            "displayName": "Default To User Choice.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,90 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "IZ_PolicyLogon_5",
+        "Logon options",
+        "\\Windows Components\\Internet Explorer\\Internet Control Panel\\Security Page\\Trusted Sites Zone",
+        "Administrative Templates\\Windows Components\\Internet Explorer\\Internet Control Panel\\Security Page\\Trusted Sites Zone",
+        "Trusted Sites Zone"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-trustedsiteszonelogonoptions"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/InternetExplorer/TrustedSitesZoneLogonOptions",
+    "rootDefinitionId": "device_vendor_msft_policy_config_internetexplorer_trustedsiteszonelogonoptions",
+    "categoryId": "cd16477e-7cff-4c24-ba7a-cc4342779f4b",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_internetexplorer_trustedsiteszonelogonoptions",
+    "description": "This policy setting allows you to manage settings for logon options.\r\n\r\nIf you enable this policy setting, you can choose from the following logon options.\r\n\r\nAnonymous logon to disable HTTP authentication and use the guest account only for the Common Internet File System (CIFS) protocol.\r\n\r\nPrompt for user name and password to query users for user IDs and passwords. After a user is queried, these values can be used silently for the remainder of the session.\r\n\r\nAutomatic logon only in Intranet zone to query users for user IDs and passwords in other zones. After a user is queried, these values can be used silently for the remainder of the session.\r\n\r\nAutomatic logon with current user name and password to attempt logon using Windows NT Challenge Response (also known as NTLM authentication). If Windows NT Challenge Response is supported by the server, the logon uses the user's network user name and password for logon. If Windows NT Challenge Response is not supported by the server, the user is queried to provide the user name and password.\r\n\r\nIf you disable this policy setting, logon is set to Automatic logon only in Intranet zone.\r\n\r\nIf you do not configure this policy setting, logon is set to Automatic logon with current username and password.",
+    "helpText": "",
+    "name": "IZ_PolicyLogon_5",
+    "displayName": "Logon options",
+    "defaultOptionId": "device_vendor_msft_policy_config_internetexplorer_trustedsiteszonelogonoptions_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041.3758",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_internetexplorer_trustedsiteszonelogonoptions_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_internetexplorer_trustedsiteszonelogonoptions_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_internetexplorer_trustedsiteszonelogonoptions_iz_partname1a00",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

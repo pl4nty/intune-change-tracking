@@ -17,7 +17,7 @@
     "riskLevel": "low",
     "id": "vendor_msft_sharedpc_setedupolicies",
     "description": "Set a list of EDU policies.",
-    "helpText": null,
+    "helpText": "",
     "name": "SetEduPolicies",
     "displayName": "Set Edu Policies",
     "defaultOptionId": "vendor_msft_sharedpc_setedupolicies_false",
@@ -29,8 +29,18 @@
         "technologies": "mdm",
         "configurationServiceProviderVersion": "1.0",
         "maximumSupportedVersion": null,
-        "minimumSupportedVersion": null,
-        "windowsSkus": [],
+        "minimumSupportedVersion": "10.0.14393",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
         "requiresAzureAd": false,
         "requiredAzureAdTrustType": "none"
     },
@@ -41,29 +51,29 @@
     "referredSettingInformationList": [],
     "options": [
         {
-            "itemId": "vendor_msft_sharedpc_setedupolicies_true",
-            "description": null,
-            "helpText": null,
-            "name": "true",
-            "displayName": "true",
-            "optionValue": {
-                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
-                "settingValueTemplateReference": null,
-                "value": "true"
-            },
-            "dependentOn": [],
-            "dependedOnBy": []
-        },
-        {
             "itemId": "vendor_msft_sharedpc_setedupolicies_false",
-            "description": null,
+            "description": "Not configured",
             "helpText": null,
-            "name": "false",
+            "name": "Not configured",
             "displayName": "false",
             "optionValue": {
                 "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
                 "settingValueTemplateReference": null,
                 "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "vendor_msft_sharedpc_setedupolicies_true",
+            "description": "Enabled",
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "true",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
             },
             "dependentOn": [],
             "dependedOnBy": []

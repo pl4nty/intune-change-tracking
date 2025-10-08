@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Enable Hotpatch Auto Remediation",
+        "System"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-System#enablehotpatchautoremediation"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/System/EnableHotpatchAutoRemediation",
+    "rootDefinitionId": "device_vendor_msft_policy_config_system_enablehotpatchautoremediation",
+    "categoryId": "f62e0f2a-4363-4246-8057-1dc811fe4360",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_system_enablehotpatchautoremediation",
+    "description": "This policy setting controls whether Automatic Remediation is enabled on the hotpatch enrolled device. This policy has no effect on devices                     that does not have hotpatch updates installed.                     If you enable this policy setting, Automatic Remediation is enabled on the hotpatch enrolled device.                     If you disable or do not configure this policy setting, Automatic Remediation is disabled on the hotpatch enrolled device.",
+    "helpText": "",
+    "name": "EnableHotpatchAutoRemediation",
+    "displayName": "Enable Hotpatch Auto Remediation",
+    "defaultOptionId": "device_vendor_msft_policy_config_system_enablehotpatchautoremediation_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26100.4946",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_system_enablehotpatchautoremediation_0",
+            "description": "Automatic Remediation is not enabled (Default)",
+            "helpText": null,
+            "name": "Automatic Remediation is not enabled (Default)",
+            "displayName": "Automatic Remediation is not enabled (Default)",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_system_enablehotpatchautoremediation_1",
+            "description": "Automatic Remediation is enabled",
+            "helpText": null,
+            "name": "Automatic Remediation is enabled",
+            "displayName": "Automatic Remediation is enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Enable Shared PC Mode With One Drive Sync",
+        "Shared PC"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/SharedPC-csp/"
+    ],
+    "baseUri": "./Vendor/MSFT/SharedPC",
+    "offsetUri": "/EnableSharedPCModeWithOneDriveSync",
+    "rootDefinitionId": "vendor_msft_sharedpc_enablesharedpcmodewithonedrivesync",
+    "categoryId": "891d2958-5a8c-479c-aa68-69b1b6c735e1",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "vendor_msft_sharedpc_enablesharedpcmodewithonedrivesync",
+    "description": "Setting this node to “1” triggers the action to configure a device to Shared PC mode with OneDrive sync turned on",
+    "helpText": "",
+    "name": "EnableSharedPCModeWithOneDriveSync",
+    "displayName": "Enable Shared PC Mode With One Drive Sync",
+    "defaultOptionId": "vendor_msft_sharedpc_enablesharedpcmodewithonedrivesync_false",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.2",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22621",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "vendor_msft_sharedpc_enablesharedpcmodewithonedrivesync_false",
+            "description": "Not configured",
+            "helpText": null,
+            "name": "Not configured",
+            "displayName": "Not configured",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "vendor_msft_sharedpc_enablesharedpcmodewithonedrivesync_true",
+            "description": "Enabled",
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

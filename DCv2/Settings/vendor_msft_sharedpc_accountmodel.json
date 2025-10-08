@@ -16,8 +16,8 @@
     "visibility": "settingsCatalog,template",
     "riskLevel": "low",
     "id": "vendor_msft_sharedpc_accountmodel",
-    "description": "Configures which type of accounts are allowed to use the PC. Allowed values: 0 (only guest), 1 (domain-joined only), 2 (domain-joined and guest).",
-    "helpText": null,
+    "description": "Configures which type of accounts are allowed to use the PC. Allowed values: 0 (only guest), 1 (domain-joined only), 2 (domain-joined and guest). If used, this value must be set before the action on the EnableSharedPCMode node is taken.",
+    "helpText": "",
     "name": "AccountModel",
     "displayName": "Account Model",
     "defaultOptionId": "vendor_msft_sharedpc_accountmodel_0",
@@ -29,8 +29,18 @@
         "technologies": "mdm",
         "configurationServiceProviderVersion": "1.0",
         "maximumSupportedVersion": null,
-        "minimumSupportedVersion": null,
-        "windowsSkus": [],
+        "minimumSupportedVersion": "10.0.14393",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
         "requiresAzureAd": false,
         "requiredAzureAdTrustType": "none"
     },
@@ -42,9 +52,9 @@
     "options": [
         {
             "itemId": "vendor_msft_sharedpc_accountmodel_0",
-            "description": null,
+            "description": "Only guest accounts are allowed.",
             "helpText": null,
-            "name": "only guest",
+            "name": "Only guest accounts are allowed.",
             "displayName": "Guest",
             "optionValue": {
                 "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
@@ -56,9 +66,9 @@
         },
         {
             "itemId": "vendor_msft_sharedpc_accountmodel_1",
-            "description": null,
+            "description": "Only domain-joined accounts are allowed.",
             "helpText": null,
-            "name": "domain-joined only",
+            "name": "Only domain-joined accounts are allowed.",
             "displayName": "Domain",
             "optionValue": {
                 "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
@@ -70,9 +80,9 @@
         },
         {
             "itemId": "vendor_msft_sharedpc_accountmodel_2",
-            "description": null,
+            "description": "Domain-joined and guest accounts are allowed.",
             "helpText": null,
-            "name": "domain-joined and guest",
+            "name": "Domain-joined and guest accounts are allowed.",
             "displayName": "Guest and Domain",
             "optionValue": {
                 "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",

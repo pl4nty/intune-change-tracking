@@ -16,8 +16,8 @@
     "visibility": "settingsCatalog,template",
     "riskLevel": "low",
     "id": "vendor_msft_sharedpc_kioskmodeaumid",
-    "description": "Specifies the AUMID of the app to use with assigned access.",
-    "helpText": null,
+    "description": "Specifies the AUMID of the app to use with assigned access. If used, this value must be set before the action on the EnableSharedPCMode node is taken.",
+    "helpText": "",
     "name": "KioskModeAUMID",
     "displayName": "Kiosk Mode AUMID",
     "applicability": {
@@ -28,8 +28,18 @@
         "technologies": "mdm",
         "configurationServiceProviderVersion": "1.1",
         "maximumSupportedVersion": null,
-        "minimumSupportedVersion": null,
-        "windowsSkus": [],
+        "minimumSupportedVersion": "10.0.15063",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
         "requiresAzureAd": false,
         "requiredAzureAdTrustType": "none"
     },
@@ -42,8 +52,8 @@
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
         "format": "none",
         "inputValidationSchema": null,
-        "maximumLength": 130,
-        "minimumLength": 21,
+        "maximumLength": 87516,
+        "minimumLength": 0,
         "isSecret": false,
         "fileTypes": []
     },

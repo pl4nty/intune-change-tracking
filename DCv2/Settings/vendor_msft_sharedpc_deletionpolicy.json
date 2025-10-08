@@ -16,8 +16,8 @@
     "visibility": "settingsCatalog,template",
     "riskLevel": "low",
     "id": "vendor_msft_sharedpc_deletionpolicy",
-    "description": "Configures when accounts will be deleted. Allowed values: 0 (delete immediately), 1 (delete at disk space threshold), 2 (delete at disk space threshold and inactive threshold).",
-    "helpText": null,
+    "description": "Configures when accounts will be deleted. Allowed values: 0 (delete immediately), 1 (delete at disk space threshold), 2 (Delete at disk space threshold and inactive threshold). If used, this value must be set before the action on the EnableSharedPCMode node is taken.",
+    "helpText": "",
     "name": "DeletionPolicy",
     "displayName": "Deletion Policy",
     "defaultOptionId": "vendor_msft_sharedpc_deletionpolicy_1",
@@ -29,8 +29,18 @@
         "technologies": "mdm",
         "configurationServiceProviderVersion": "1.0",
         "maximumSupportedVersion": null,
-        "minimumSupportedVersion": null,
-        "windowsSkus": [],
+        "minimumSupportedVersion": "10.0.14393",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
         "requiresAzureAd": false,
         "requiredAzureAdTrustType": "none"
     },
@@ -42,9 +52,9 @@
     "options": [
         {
             "itemId": "vendor_msft_sharedpc_deletionpolicy_0",
-            "description": null,
+            "description": "Delete immediately.",
             "helpText": null,
-            "name": "Delete immediately",
+            "name": "Delete immediately.",
             "displayName": "Delete immediately",
             "optionValue": {
                 "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
@@ -56,7 +66,7 @@
         },
         {
             "itemId": "vendor_msft_sharedpc_deletionpolicy_1",
-            "description": null,
+            "description": "Delete at disk space threshold",
             "helpText": null,
             "name": "Delete at disk space threshold",
             "displayName": "Delete at disk space threshold",
@@ -70,7 +80,7 @@
         },
         {
             "itemId": "vendor_msft_sharedpc_deletionpolicy_2",
-            "description": null,
+            "description": "Delete at disk space threshold and inactive threshold",
             "helpText": null,
             "name": "Delete at disk space threshold and inactive threshold",
             "displayName": "Delete at disk space threshold and inactive threshold",

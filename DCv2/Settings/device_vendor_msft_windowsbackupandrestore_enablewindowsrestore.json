@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Enable Windows Restore",
+        "Windows Backup And Restore"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/WindowsBackupAndRestore-csp/"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/WindowsBackupAndRestore",
+    "offsetUri": "/EnableWindowsRestore",
+    "rootDefinitionId": "device_vendor_msft_windowsbackupandrestore_enablewindowsrestore",
+    "categoryId": "a3ec7cde-bca6-4e3e-9f7e-f66a43196924",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_windowsbackupandrestore_enablewindowsrestore",
+    "description": "Sets a policy to enable Windows Restore.\r\n This setting is only available to Windows Insiders",
+    "helpText": "",
+    "name": "EnableWindowsRestore",
+    "displayName": "Enable Windows Restore (Windows Insiders only)",
+    "defaultOptionId": "device_vendor_msft_windowsbackupandrestore_enablewindowsrestore_false",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "9.9",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.25272",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_windowsbackupandrestore_enablewindowsrestore_false",
+            "description": "Windows Restore Not Configured",
+            "helpText": null,
+            "name": "Windows Restore Not Configured",
+            "displayName": "Windows Restore Not Configured",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_windowsbackupandrestore_enablewindowsrestore_true",
+            "description": "Windows Restore Enabled",
+            "helpText": null,
+            "name": "Windows Restore Enabled",
+            "displayName": "Windows Restore Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

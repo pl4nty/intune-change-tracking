@@ -1,0 +1,90 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Pol_SecGuide_0050_NetbtNodeTypeConfig",
+        "NetBT NodeType configuration",
+        "\\MS Security Guide",
+        "Administrative Templates\\MS Security Guide",
+        "MS Security Guide"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-mssecurityguide#mssecurityguide-netbtnodetypeconfiguration"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/MSSecurityGuide/NetBTNodeTypeConfiguration",
+    "rootDefinitionId": "device_vendor_msft_policy_config_mssecurityguide_netbtnodetypeconfiguration",
+    "categoryId": "5371d50c-0aaa-425a-a075-2cb1c59968b9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_mssecurityguide_netbtnodetypeconfiguration",
+    "description": "The NetBT NodeType setting determines what methods NetBT uses to register and resolve names:\r\n* A B-node computer uses broadcasts.\r\n* A P-node computer uses only point-to-point name queries to a name server (WINS).\r\n* An M-node computer broadcasts first, and then queries the name server.\r\n* An H-node computer queries the name server first, and then broadcasts.\r\nResolution through LMHOSTS or DNS follows these methods. If the NodeType value is present, it overrides any DhcpNodeType value.\r\nIf neither NodeType nor DhcpNodeType is present, the computer uses B-node if there are no WINS servers configured for the network, or H-node if there is at least one WINS server configured.\r\n",
+    "helpText": "",
+    "name": "Pol_SecGuide_0050_NetbtNodeTypeConfig",
+    "displayName": "NetBT NodeType configuration",
+    "defaultOptionId": "device_vendor_msft_policy_config_mssecurityguide_netbtnodetypeconfiguration_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22621.5126",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_mssecurityguide_netbtnodetypeconfiguration_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_mssecurityguide_netbtnodetypeconfiguration_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_mssecurityguide_netbtnodetypeconfiguration_pol_secguide_secguide_netbtnodetypecfg",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

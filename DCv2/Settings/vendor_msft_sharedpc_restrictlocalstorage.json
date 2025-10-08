@@ -16,8 +16,8 @@
     "visibility": "settingsCatalog,template",
     "riskLevel": "low",
     "id": "vendor_msft_sharedpc_restrictlocalstorage",
-    "description": "Restricts the user from using local storage. This node is optional.",
-    "helpText": null,
+    "description": "Restricts the user from using local storage. This node is optional. If used, this value must be set before the action on the EnableSharedPCMode node is taken.",
+    "helpText": "",
     "name": "RestrictLocalStorage",
     "displayName": "Restrict Local Storage",
     "defaultOptionId": "vendor_msft_sharedpc_restrictlocalstorage_false",
@@ -29,8 +29,18 @@
         "technologies": "mdm",
         "configurationServiceProviderVersion": "1.1",
         "maximumSupportedVersion": null,
-        "minimumSupportedVersion": null,
-        "windowsSkus": [],
+        "minimumSupportedVersion": "10.0.15063",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
         "requiresAzureAd": false,
         "requiredAzureAdTrustType": "none"
     },
@@ -41,29 +51,29 @@
     "referredSettingInformationList": [],
     "options": [
         {
-            "itemId": "vendor_msft_sharedpc_restrictlocalstorage_true",
-            "description": null,
-            "helpText": null,
-            "name": "true",
-            "displayName": "true",
-            "optionValue": {
-                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
-                "settingValueTemplateReference": null,
-                "value": "true"
-            },
-            "dependentOn": [],
-            "dependedOnBy": []
-        },
-        {
             "itemId": "vendor_msft_sharedpc_restrictlocalstorage_false",
-            "description": null,
+            "description": "False",
             "helpText": null,
-            "name": "false",
+            "name": "False",
             "displayName": "false",
             "optionValue": {
                 "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
                 "settingValueTemplateReference": null,
                 "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "vendor_msft_sharedpc_restrictlocalstorage_true",
+            "description": "True",
+            "helpText": null,
+            "name": "True",
+            "displayName": "true",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
             },
             "dependentOn": [],
             "dependedOnBy": []

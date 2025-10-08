@@ -1,0 +1,84 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "EnableWindowsPackageManagerCommandLineInterfaces",
+        "Enable Windows Package Manager command line interfaces",
+        "\\Windows Components\\Desktop App Installer",
+        "Administrative Templates\\Windows Components\\Desktop App Installer",
+        "Desktop App Installer"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-desktopappinstaller#desktopappinstaller-enablewindowspackagemanagercommandlineinterfaces"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/DesktopAppInstaller/EnableWindowsPackageManagerCommandLineInterfaces",
+    "rootDefinitionId": "device_vendor_msft_policy_config_desktopappinstaller_enablewindowspackagemanagercommandlineinterfaces",
+    "categoryId": "70063d93-03f0-462e-9943-b0241b88d54d",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_desktopappinstaller_enablewindowspackagemanagercommandlineinterfaces",
+    "description": "This policy determines if a user can perform an action using the Windows Package Manager through a command line interface (WinGet CLI, or WinGet PowerShell).\r\n\r\nIf you disable this policy, users will not be able execute the Windows Package Manager CLI, and PowerShell cmdlets.\r\n\r\nIf you enable, or do not configuring this policy, users will be able to execute the Windows Package Manager CLI commands, and PowerShell cmdlets. (Provided “Enable App Installer” policy is not disabled).\r\n\r\nThis policy does not override the “Enable App Installer” policy.",
+    "helpText": "",
+    "name": "EnableWindowsPackageManagerCommandLineInterfaces",
+    "displayName": "Enable Windows Package Manager command line interfaces",
+    "defaultOptionId": "device_vendor_msft_policy_config_desktopappinstaller_enablewindowspackagemanagercommandlineinterfaces_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26100",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_desktopappinstaller_enablewindowspackagemanagercommandlineinterfaces_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_desktopappinstaller_enablewindowspackagemanagercommandlineinterfaces_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

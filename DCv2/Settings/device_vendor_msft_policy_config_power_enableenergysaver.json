@@ -1,0 +1,82 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Enable Energy Saver",
+        "Power"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Power#enableenergysaver"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Power/EnableEnergySaver",
+    "rootDefinitionId": "device_vendor_msft_policy_config_power_enableenergysaver",
+    "categoryId": "e9cd3225-7b0e-485e-99f8-7ec8dd3977a1",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_power_enableenergysaver",
+    "description": "This policy will extend battery life and reduce energy consumption by enabling Energy Saver to always be on. Energy Saver will always be on for desktops as well as laptops regardless of battery level for both AC and DC. If you disable or don't configure this policy setting, then Energy Saver will turn on based on the EnergySaverBatteryThreshold group policy.",
+    "helpText": "",
+    "name": "EnableEnergySaver",
+    "displayName": "Enable Energy Saver",
+    "defaultOptionId": "device_vendor_msft_policy_config_power_enableenergysaver_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26200.6584",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_power_enableenergysaver_0",
+            "description": "Disable energy saver policy",
+            "helpText": null,
+            "name": "Disable energy saver policy",
+            "displayName": "Disable energy saver policy",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_power_enableenergysaver_1",
+            "description": "Enable energy saver always-on mode.",
+            "helpText": null,
+            "name": "Enable energy saver always-on mode.",
+            "displayName": "Enable energy saver always-on mode.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}
