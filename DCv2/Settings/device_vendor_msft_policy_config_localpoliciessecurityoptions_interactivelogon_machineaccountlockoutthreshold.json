@@ -1,0 +1,64 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Interactive Logon Machine Account Lockout Threshold",
+        "Local Policies Security Options"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions#interactivelogon_machineaccountlockoutthreshold"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/LocalPoliciesSecurityOptions/InteractiveLogon_MachineAccountLockoutThreshold",
+    "rootDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_interactivelogon_machineaccountlockoutthreshold",
+    "categoryId": "914a31d0-ae3b-4ae5-bd31-504b9f0b91df",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_localpoliciessecurityoptions_interactivelogon_machineaccountlockoutthreshold",
+    "description": "Interactive logon: Machine account threshold.  The machine lockout policy is enforced only on those machines that have Bitlocker enabled for protecting OS volumes. Please ensure that appropriate recovery password backup policies are enabled. This security setting determines the number of failed logon attempts that causes the machine to be locked out. A locked out machine can only be recovered by providing recovery key at console. You can set the value between 1 and 999 failed logon attempts. If you set the value to 0, the machine will never be locked out. Values from 1 to 3 will be interpreted as 4. Failed password attempts against workstations or member servers that have been locked using either CTRL+ALT+DELETE or password protected screen savers counts as failed logon attempts. The machine lockout policy is enforced only on those machines that have Bitlocker enabled for protecting OS volumes. Please ensure that the appropriate recovery password backup policies are enabled.  Default: 0.\r\n ",
+    "helpText": "",
+    "name": "InteractiveLogon_MachineAccountLockoutThreshold",
+    "displayName": "Interactive Logon Machine Account Lockout Threshold",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22621.5126",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 999,
+        "minimumValue": 0
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 0
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Audit Audit The Use Of Backup And Restoreprivilege",
+        "Local Policies Security Options"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions#audit_audittheuseofbackupandrestoreprivilege"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/LocalPoliciesSecurityOptions/Audit_AuditTheUseOfBackupAndRestoreprivilege",
+    "rootDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_audit_audittheuseofbackupandrestoreprivilege",
+    "categoryId": "914a31d0-ae3b-4ae5-bd31-504b9f0b91df",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_localpoliciessecurityoptions_audit_audittheuseofbackupandrestoreprivilege",
+    "description": "Audit: Audit the use of Backup and Restore privilege  This security setting determines whether to audit the use of all user privileges, including Backup and Restore, when the Audit privilege use policy is in effect. Enabling this option when the Audit privilege use policy is also enabled generates an audit event for every file that is backed up or restored. If you disable this policy, then use of the Backup or Restore privilege is not audited even when Audit privilege use is enabled. Note: On Windows versions prior to Windows Vista configuring this security setting, changes will not take effect until you restart Windows. Enabling this setting can cause a LOT of events, sometimes hundreds per second, during a backup operation.  Default: Disabled.\r\n ",
+    "helpText": "",
+    "name": "Audit_AuditTheUseOfBackupAndRestoreprivilege",
+    "displayName": "Audit The Use Of Backup And Restoreprivilege",
+    "defaultOptionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_audit_audittheuseofbackupandrestoreprivilege_aa==",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22621.5126",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_audit_audittheuseofbackupandrestoreprivilege_aq==",
+            "description": "Enable",
+            "helpText": null,
+            "name": "Enable",
+            "displayName": "Enable",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "AQ=="
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_audit_audittheuseofbackupandrestoreprivilege_aa==",
+            "description": "Disable",
+            "helpText": null,
+            "name": "Disable",
+            "displayName": "Disable",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "AA=="
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

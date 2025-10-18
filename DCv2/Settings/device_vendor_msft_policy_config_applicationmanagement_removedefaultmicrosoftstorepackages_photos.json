@@ -1,0 +1,90 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "RemoveDefaultMicrosoftStorePackages",
+        "Remove Default Microsoft Store packages from the system.",
+        "\\Windows Components\\App Package Deployment",
+        "Administrative Templates\\Windows Components\\App Package Deployment",
+        "App Package Deployment"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ApplicationManagement/RemoveDefaultMicrosoftStorePackages",
+    "rootDefinitionId": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages",
+    "categoryId": "ffb6de77-8f2d-4b45-9cd4-00bb75cd496c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_photos",
+    "description": "",
+    "helpText": "",
+    "name": "Photos",
+    "displayName": "Microsoft Photos ** (Device)",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26100",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_photos_0",
+            "description": null,
+            "helpText": null,
+            "name": "False",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_photos_1",
+            "description": null,
+            "helpText": null,
+            "name": "True",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

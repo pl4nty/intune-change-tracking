@@ -1,0 +1,64 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Microsoft Network Server Amount Of Idle Time Required Before Suspending Session",
+        "Local Policies Security Options"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions#microsoftnetworkserver_amountofidletimerequiredbeforesuspendingsession"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer_AmountOfIdleTimeRequiredBeforeSuspendingSession",
+    "rootDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_microsoftnetworkserver_amountofidletimerequiredbeforesuspendingsession",
+    "categoryId": "914a31d0-ae3b-4ae5-bd31-504b9f0b91df",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_localpoliciessecurityoptions_microsoftnetworkserver_amountofidletimerequiredbeforesuspendingsession",
+    "description": "Microsoft network server: Amount of idle time required before suspending a session  This security setting determines the amount of continuous idle time that must pass in a Server Message Block (SMB) session before the session is suspended due to inactivity. Administrators can use this policy to control when a computer suspends an inactive SMB session. If client activity resumes, the session is automatically reestablished. For this policy setting, a value of 0 means to disconnect an idle session as quickly as is reasonably possible. The maximum value is 99999, which is 208 days; in effect, this value disables the policy.  Default: This policy is not defined, which means that the system treats it as 15 minutes for servers and undefined for workstations.\r\n ",
+    "helpText": "",
+    "name": "MicrosoftNetworkServer_AmountOfIdleTimeRequiredBeforeSuspendingSession",
+    "displayName": "Microsoft Network Server Amount Of Idle Time Required Before Suspending Session",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22621.5126",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 99999,
+        "minimumValue": 0
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 99999
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

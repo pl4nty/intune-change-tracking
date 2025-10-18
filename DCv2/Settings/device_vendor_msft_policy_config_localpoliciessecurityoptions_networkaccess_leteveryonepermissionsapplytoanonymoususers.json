@@ -1,0 +1,64 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Network Access Let Everyone Permissions Apply To Anonymous Users",
+        "Local Policies Security Options"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions#networkaccess_leteveryonepermissionsapplytoanonymoususers"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/LocalPoliciesSecurityOptions/NetworkAccess_LetEveryonePermissionsApplyToAnonymousUsers",
+    "rootDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networkaccess_leteveryonepermissionsapplytoanonymoususers",
+    "categoryId": "914a31d0-ae3b-4ae5-bd31-504b9f0b91df",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networkaccess_leteveryonepermissionsapplytoanonymoususers",
+    "description": "Network access: Let Everyone permissions apply to anonymous users  This security setting determines what additional permissions are granted for anonymous connections to the computer. Windows allows anonymous users to perform certain activities, such as enumerating the names of domain accounts and network shares. This is convenient, for example, when an administrator wants to grant access to users in a trusted domain that does not maintain a reciprocal trust. By Default, the Everyone security identifier (SID) is removed from the token created for anonymous connections. Therefore, permissions granted to the Everyone group do not apply to anonymous users. If this option is set, anonymous users can only access those resources for which the anonymous user has been explicitly given permission. If this policy is enabled, the Everyone SID is added to the token that is created for anonymous connections. In this case, anonymous users are able to access any resource for which the Everyone group has been given permissions.  Default: Disabled.\r\n ",
+    "helpText": "",
+    "name": "NetworkAccess_LetEveryonePermissionsApplyToAnonymousUsers",
+    "displayName": "Network Access Let Everyone Permissions Apply To Anonymous Users",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22621.5126",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 1,
+        "minimumValue": 0
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 0
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

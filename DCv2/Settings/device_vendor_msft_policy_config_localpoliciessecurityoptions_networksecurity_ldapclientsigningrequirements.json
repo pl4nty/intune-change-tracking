@@ -1,0 +1,64 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Network Security LDAP Client Signing Requirements",
+        "Local Policies Security Options"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions#networksecurity_ldapclientsigningrequirements"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/LocalPoliciesSecurityOptions/NetworkSecurity_LDAPClientSigningRequirements",
+    "rootDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networksecurity_ldapclientsigningrequirements",
+    "categoryId": "914a31d0-ae3b-4ae5-bd31-504b9f0b91df",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networksecurity_ldapclientsigningrequirements",
+    "description": "Network security: LDAP client signing requirements  This security setting determines the level of data signing that is requested on behalf of clients issuing LDAP BIND requests, as follows:  None: The LDAP BIND request is issued with the options that are specified by the caller.  Negotiate signing: If Transport Layer Security/Secure Sockets Layer (TLS\\SSL) has not been started, the LDAP BIND request is initiated with the LDAP data signing option set in addition to the options specified by the caller. If TLS\\SSL has been started, the LDAP BIND request is initiated with the options that are specified by the caller.  Require signature: This is the same as Negotiate signing. However, if the LDAP server's intermediate saslBindInProgress response does not indicate that LDAP traffic signing is required, the caller is told that the LDAP BIND command request failed.  Caution  If you set the server to Require signature, you must also set the client. Not setting the client results in a loss of connection with the server.  Note: This setting does not have any impact on ldap_simple_bind or ldap_simple_bind_s. No Microsoft LDAP clients that are shipped with Windows XP Professional use ldap_simple_bind or ldap_simple_bind_s to talk to a domain controller.  Default: Negotiate signing.\r\n ",
+    "helpText": "",
+    "name": "NetworkSecurity_LDAPClientSigningRequirements",
+    "displayName": "Network Security LDAP Client Signing Requirements",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22621.5126",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 2,
+        "minimumValue": 0
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 1
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

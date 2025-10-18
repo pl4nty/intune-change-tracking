@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Network Access Allow Anonymous SID Or Name Translation",
+        "Local Policies Security Options"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions#networkaccess_allowanonymoussidornametranslation"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/LocalPoliciesSecurityOptions/NetworkAccess_AllowAnonymousSIDOrNameTranslation",
+    "rootDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networkaccess_allowanonymoussidornametranslation",
+    "categoryId": "914a31d0-ae3b-4ae5-bd31-504b9f0b91df",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networkaccess_allowanonymoussidornametranslation",
+    "description": "Network access: Allow anonymous SID/name translation  This policy setting determines whether an anonymous user can request security identifier (SID) attributes for another user. If this policy is enabled, an anonymous user can request the SID attribute for another user. An anonymous user with knowledge of an administrator's SID could contact a computer that has this policy enabled and use the SID to get the administrator's name. This setting affects both the SID-to-name translation as well as the name-to-SID translation. If this policy setting is disabled, an anonymous user cannot request the SID attribute for another user.  Default on workstations and member servers: Disabled.  Default on domain controllers running Windows Server 2008 or later: Disabled.  Default on domain controllers running Windows Server 2003 R2 or earlier: Enabled.\r\n ",
+    "helpText": "",
+    "name": "NetworkAccess_AllowAnonymousSIDOrNameTranslation",
+    "displayName": "Network Access Allow Anonymous SID Or Name Translation",
+    "defaultOptionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networkaccess_allowanonymoussidornametranslation_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22621.5126",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networkaccess_allowanonymoussidornametranslation_1",
+            "description": "Enable",
+            "helpText": null,
+            "name": "Enable",
+            "displayName": "Enable",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networkaccess_allowanonymoussidornametranslation_0",
+            "description": "Disable",
+            "helpText": null,
+            "name": "Disable",
+            "displayName": "Disable",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

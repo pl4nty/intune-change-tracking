@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Network Access Remotely Accessible Registry Paths",
+        "Local Policies Security Options"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions#networkaccess_remotelyaccessibleregistrypaths"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/LocalPoliciesSecurityOptions/NetworkAccess_RemotelyAccessibleRegistryPaths",
+    "rootDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networkaccess_remotelyaccessibleregistrypaths",
+    "categoryId": "914a31d0-ae3b-4ae5-bd31-504b9f0b91df",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networkaccess_remotelyaccessibleregistrypaths",
+    "description": "Network access: Remotely accessible registry paths  This security setting determines which registry keys can be accessed over the network, regardless of the users or groups listed in the access control list (ACL) of the winreg registry key.  Default:  System\\CurrentControlSet\\Control\\ProductOptions  System\\CurrentControlSet\\Control\\Server Applications  Software\\Microsoft\\Windows NT\\CurrentVersion  Caution  Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.  Note: This security setting is not available on earlier versions of Windows. The security setting that appears on computers running Windows XP, &quot;Network access: Remotely accessible registry paths&quot; corresponds to the &quot;Network access: Remotely accessible registry paths and subpaths&quot; security option on members of the Windows Server 2003 family. For more information, see Network access: Remotely accessible registry paths and subpaths.\r\n ",
+    "helpText": "",
+    "name": "NetworkAccess_RemotelyAccessibleRegistryPaths",
+    "displayName": "Network Access Remotely Accessible Registry Paths",
+    "maximumCount": 1000,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22621.5126",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 87516,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

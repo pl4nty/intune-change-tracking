@@ -1,0 +1,64 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "System Objects Require Case Insensitivity For Non Windows Subsystems",
+        "Local Policies Security Options"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions#systemobjects_requirecaseinsensitivityfornonwindowssubsystems"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/LocalPoliciesSecurityOptions/SystemObjects_RequireCaseInsensitivityForNonWindowsSubsystems",
+    "rootDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_systemobjects_requirecaseinsensitivityfornonwindowssubsystems",
+    "categoryId": "914a31d0-ae3b-4ae5-bd31-504b9f0b91df",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_localpoliciessecurityoptions_systemobjects_requirecaseinsensitivityfornonwindowssubsystems",
+    "description": "System objects: Require case insensitivity for non-Windows subsystems  This security setting determines whether case insensitivity is enforced for all subsystems. The Win32 subsystem is case insensitive. However, the kernel supports case sensitivity for other subsystems, such as POSIX. If this setting is enabled, case insensitivity is enforced for all directory objects, symbolic links, and IO objects, including file objects. Disabling this setting does not allow the Win32 subsystem to become case sensitive.  Default: Enabled.\r\n ",
+    "helpText": "",
+    "name": "SystemObjects_RequireCaseInsensitivityForNonWindowsSubsystems",
+    "displayName": "System Objects Require Case Insensitivity For Non Windows Subsystems",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22621.5126",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 1,
+        "minimumValue": 0
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 1
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

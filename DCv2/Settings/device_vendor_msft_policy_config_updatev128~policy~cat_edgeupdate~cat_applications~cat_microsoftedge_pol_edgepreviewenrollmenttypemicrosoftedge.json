@@ -1,0 +1,79 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Pol_EdgePreviewEnrollmentTypeMicrosoftEdge",
+        "Edge Preview enrollment type",
+        "\\Microsoft Edge Update\\Applications\\Microsoft Edge",
+        "Microsoft Edge Update\\Applications\\Microsoft Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/updatev128~Policy~Cat_EdgeUpdate~Cat_Applications~Cat_MicrosoftEdge/Pol_EdgePreviewEnrollmentTypeMicrosoftEdge",
+    "rootDefinitionId": "device_vendor_msft_policy_config_updatev128~policy~cat_edgeupdate~cat_applications~cat_microsoftedge_pol_edgepreviewenrollmenttypemicrosoftedge",
+    "categoryId": "3bb9ca38-645e-479c-ac5f-01959aec9c30",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_updatev128~policy~cat_edgeupdate~cat_applications~cat_microsoftedge_pol_edgepreviewenrollmenttypemicrosoftedge",
+    "description": "Details for this policy will be available in a future release",
+    "helpText": "",
+    "name": "Pol_EdgePreviewEnrollmentTypeMicrosoftEdge",
+    "displayName": "Edge Preview enrollment type",
+    "defaultOptionId": "device_vendor_msft_policy_config_updatev128~policy~cat_edgeupdate~cat_applications~cat_microsoftedge_pol_edgepreviewenrollmenttypemicrosoftedge_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_updatev128~policy~cat_edgeupdate~cat_applications~cat_microsoftedge_pol_edgepreviewenrollmenttypemicrosoftedge_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_updatev128~policy~cat_edgeupdate~cat_applications~cat_microsoftedge_pol_edgepreviewenrollmenttypemicrosoftedge_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_updatev128~policy~cat_edgeupdate~cat_applications~cat_microsoftedge_pol_edgepreviewenrollmenttypemicrosoftedge_part_edgepreviewenrollmenttype",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Domain Member Require Strong Session Key",
+        "Local Policies Security Options"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions#domainmember_requirestrongsessionkey"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/LocalPoliciesSecurityOptions/DomainMember_RequireStrongSessionKey",
+    "rootDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_domainmember_requirestrongsessionkey",
+    "categoryId": "914a31d0-ae3b-4ae5-bd31-504b9f0b91df",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_localpoliciessecurityoptions_domainmember_requirestrongsessionkey",
+    "description": "Domain member: Require strong (Windows 2000 or later) session key  This security setting determines whether 128-bit key strength is required for encrypted secure channel data. When a computer joins a domain, a computer account is created. After that, when the system starts, it uses the computer account password to create a secure channel with a domain controller within the domain. This secure channel is used to perform operations such as NTLM pass-through authentication, LSA SID/name Lookup, and so on. Depending on what version of Windows is running on the domain controller that the domain member is communicating with and the settings of the parameters:  Domain member: Digitally encrypt or sign secure channel data (always)  Domain member: Digitally encrypt secure channel data (when possible)  Some or all of the information that is transmitted over the secure channel will be encrypted. This policy setting determines whether or not 128-bit key strength is required for the secure channel information that is encrypted. If this setting is enabled, then the secure channel will not be established unless 128-bit encryption can be performed. If this setting is disabled, then the key strength is negotiated with the domain controller.  Default: Enabled.  Important  In order to take advantage of this policy on member workstations and servers, all domain controllers that constitute the member's domain must be running Windows 2000 or later. In order to take advantage of this policy on domain controllers, all domain controllers in the same domain as well as all trusted domains must run Windows 2000 or later.\r\n ",
+    "helpText": "",
+    "name": "DomainMember_RequireStrongSessionKey",
+    "displayName": "Domain Member Require Strong Session Key",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22621.5126",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 1,
+        "minimumValue": 0
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 1
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

@@ -1,26 +1,28 @@
 {
-    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
     "accessTypes": "add,delete,get,replace",
     "keywords": [
-        "Set Data Loss Prevention Provider",
-        "Windows AI"
+        "Network Access Named Pipes That Can Be Accessed Anonymously",
+        "Local Policies Security Options"
     ],
     "infoUrls": [
-        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-WindowsAI#setdatalosspreventionprovider"
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions#networkaccess_namedpipesthatcanbeaccessedanonymously"
     ],
     "baseUri": "./Device/Vendor/MSFT/Policy",
-    "offsetUri": "/Config/WindowsAI/SetDataLossPreventionProvider",
-    "rootDefinitionId": "device_vendor_msft_policy_config_windowsai_setdatalosspreventionprovider",
-    "categoryId": "33a43c22-104b-4683-995b-5652cfd5b490",
+    "offsetUri": "/Config/LocalPoliciesSecurityOptions/NetworkAccess_NamedPipesThatCanBeAccessedAnonymously",
+    "rootDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networkaccess_namedpipesthatcanbeaccessedanonymously",
+    "categoryId": "914a31d0-ae3b-4ae5-bd31-504b9f0b91df",
     "settingUsage": "configuration",
     "uxBehavior": "default",
     "visibility": "settingsCatalog,template",
     "riskLevel": "low",
-    "id": "device_vendor_msft_policy_config_windowsai_setdatalosspreventionprovider",
-    "description": "This policy allows an admin to specify a DLP provider, which Recall will use if the provider is properly installed. You will need to get the string for this from your provider. It will look something like 'key:HKEY_LOCAL_MACHINE\\Software\\Contoso\\DLP; value:InstallPath; binary:contosoDLP.dll' (without any quotes in the value). Important: This setting applies to Enterprise and Education client SKUs only.\r\n This setting is only available to Windows Insiders",
+    "id": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networkaccess_namedpipesthatcanbeaccessedanonymously",
+    "description": "Network access: Named pipes that can be accessed anonymously  This security setting determines which communication sessions (pipes) will have attributes and permissions that allow anonymous access.  Default: None.\r\n ",
     "helpText": "",
-    "name": "SetDataLossPreventionProvider",
-    "displayName": "Set Data Loss Prevention Provider (Windows Insiders only)",
+    "name": "NetworkAccess_NamedPipesThatCanBeAccessedAnonymously",
+    "displayName": "Network Access Named Pipes That Can Be Accessed Anonymously",
+    "maximumCount": 1000,
+    "minimumCount": 0,
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
         "description": null,
@@ -29,12 +31,17 @@
         "technologies": "mdm",
         "configurationServiceProviderVersion": "11.0",
         "maximumSupportedVersion": null,
-        "minimumSupportedVersion": "10.0.25272",
+        "minimumSupportedVersion": "10.0.22621.5126",
         "windowsSkus": [
             "windowsEnterprise",
+            "windowsProfessional",
             "windowsEducation",
+            "windowsMultiSession",
             "iotEnterprise",
-            "iotEnterpriseSEval"
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
         ],
         "requiresAzureAd": false,
         "requiredAzureAdTrustType": "none"

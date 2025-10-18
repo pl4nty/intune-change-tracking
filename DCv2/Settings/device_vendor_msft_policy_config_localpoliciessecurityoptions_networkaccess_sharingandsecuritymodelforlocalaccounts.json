@@ -1,0 +1,64 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Network Access Sharing And Security Model For Local Accounts",
+        "Local Policies Security Options"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions#networkaccess_sharingandsecuritymodelforlocalaccounts"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/LocalPoliciesSecurityOptions/NetworkAccess_SharingAndSecurityModelForLocalAccounts",
+    "rootDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networkaccess_sharingandsecuritymodelforlocalaccounts",
+    "categoryId": "914a31d0-ae3b-4ae5-bd31-504b9f0b91df",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networkaccess_sharingandsecuritymodelforlocalaccounts",
+    "description": "Network access: Sharing and security model for local accounts  This security setting determines how network logons that use local accounts are authenticated. If this setting is set to Classic, network logons that use local account credentials authenticate by using those credentials. The Classic model allows fine control over access to resources. By using the Classic model, you can grant different types of access to different users for the same resource. If this setting is set to Guest only, network logons that use local accounts are automatically mapped to the Guest account. By using the Guest model, you can have all users treated equally. All users authenticate as Guest, and they all receive the same level of access to a given resource, which can be either Read-only or Modify.  Default on domain computers: Classic.  Default on stand-alone computers: Guest only  Important  With the Guest only model, any user who can access your computer over the network (including anonymous Internet users) can access your shared resources. You must use the Windows Firewall or another similar device to protect your computer from unauthorized access. Similarly, with the Classic model, local accounts must be password protected; otherwise, those user accounts can be used by anyone to access shared system resources.  Note: This setting does not affect interactive logons that are performed remotely by using such services as Telnet or Remote Desktop Services. Remote Desktop Services was called Terminal Services in previous versions of Windows Server. This policy will have no impact on computers running Windows 2000. When the computer is not joined to a domain, this setting also modifies the Sharing and Security tabs in File Explorer to correspond to the sharing and security model that is being used.\r\n ",
+    "helpText": "",
+    "name": "NetworkAccess_SharingAndSecurityModelForLocalAccounts",
+    "displayName": "Network Access Sharing And Security Model For Local Accounts",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.22621.5126",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 1,
+        "minimumValue": 0
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 0
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

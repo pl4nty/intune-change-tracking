@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "RelaunchFastIfOutdated",
+        "Relaunch browser quickly when the current version is outdated",
+        "\\Microsoft Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev141~Policy~microsoft_edge/RelaunchFastIfOutdated",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edgev141~policy~microsoft_edge_relaunchfastifoutdated",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_microsoft_edgev141~policy~microsoft_edge_relaunchfastifoutdated",
+    "description": "This policy specifies the minimum release age after which relaunch notifications become more aggressive. The release age is calculated from the time the currently running version was last served to clients.\r\n\r\nIf a browser relaunch is needed to finalize a pending update and the current version has been outdated for more than the number of days specified by this setting, the RelaunchNotificationPeriod policy is overridden to 2 hours. If the RelaunchNotification policy is set to 1 ('Required'), a browser relaunch will be forced at the end of the period.\r\n\r\nIf not set, or if the release age cannot be determined, the RelaunchNotificationPeriod policy will be used for all updates.",
+    "helpText": "",
+    "name": "RelaunchFastIfOutdated",
+    "displayName": "Relaunch browser quickly when the current version is outdated",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edgev141~policy~microsoft_edge_relaunchfastifoutdated_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev141~policy~microsoft_edge_relaunchfastifoutdated_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev141~policy~microsoft_edge_relaunchfastifoutdated_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_microsoft_edgev141~policy~microsoft_edge_relaunchfastifoutdated_relaunchfastifoutdated",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}
