@@ -17,7 +17,7 @@
                     "category": 154,
                     "nameResourceKey": "ztdnsModeHeaderName",
                     "helpLink": "https://aka.ms/ztdns",
-                    "helpLinkTextResourceKey": "ztdnsModeHeaderLearnMore",
+                    "helpLinkTextResourceKey": "learnMore",
                     "inputControlLength": 0,
                     "validation": [],
                     "childSettings": [],
@@ -115,7 +115,7 @@
             "validation": [],
             "childSettings": [],
             "options": [],
-            "isRequired": true,
+            "isRequired": false,
             "booleanActions": 0,
             "policyType": 130,
             "flipChildrenEnabledLogic": false,
@@ -136,7 +136,7 @@
                     "category": 154,
                     "nameResourceKey": "ztdnsSecureDnsServerHeaderName",
                     "helpLink": "https://aka.ms/ztdns",
-                    "helpLinkTextResourceKey": "ztdnsSecureDnsServerHeaderLearnMore",
+                    "helpLinkTextResourceKey": "learnMore",
                     "inputControlLength": 0,
                     "validation": [],
                     "childSettings": [],
@@ -232,7 +232,7 @@
                         },
                         {
                             "hideFromEditor": false,
-                            "hideFromGrid": true,
+                            "hideFromGrid": false,
                             "isEditableInline": false,
                             "metadata": {
                                 "id": "Windows10Ztdns_WindowsZtdns_ztdnsSecureDnsServerTypeName",
@@ -249,80 +249,58 @@
                                         "value": "doh",
                                         "children": [
                                             {
-                                                "disableTopPadding": false,
-                                                "isSettingDescription": true,
-                                                "showAsSectionHeader": false,
-                                                "id": "Windows10Ztdns_WindowsZtdns_ztdnsSecureDnsServerDohHeaderName",
-                                                "dataType": 8,
+                                                "id": "Windows10Ztdns_WindowsZtdns_ztdnsSecureDnsServerDohUrlName",
+                                                "dataType": 20,
                                                 "category": 154,
-                                                "nameResourceKey": "ztdnsSecureDnsServerDohHeaderName",
+                                                "nameResourceKey": "ztdnsSecureDnsServerDohUrlName",
+                                                "descriptionResourceKey": "ztdnsSecureDnsServerDohUrlDescription",
+                                                "emptyValueResourceKey": "ztdnsSecureDnsServerDohUrlPlaceholder",
                                                 "inputControlLength": 0,
-                                                "validation": [],
-                                                "childSettings": [
+                                                "validation": [
                                                     {
-                                                        "id": "Windows10Ztdns_WindowsZtdns_ztdnsSecureDnsServerDohUrlName",
-                                                        "dataType": 20,
-                                                        "category": 154,
-                                                        "nameResourceKey": "ztdnsSecureDnsServerDohUrlName",
-                                                        "descriptionResourceKey": "ztdnsSecureDnsServerDohUrlDescription",
-                                                        "emptyValueResourceKey": "ztdnsSecureDnsServerDohUrlPlaceholder",
-                                                        "inputControlLength": 0,
-                                                        "validation": [
-                                                            {
-                                                                "validationType": 2,
-                                                                "validationArguments": [
-                                                                    "^https://[^\\s/$.?#].[^\\s]*$"
-                                                                ],
-                                                                "failureMessage": "mustBeAValidHttpsUrl"
-                                                            }
+                                                        "validationType": 2,
+                                                        "validationArguments": [
+                                                            "^https://[^\\s/$.?#].[^\\s]*$"
                                                         ],
-                                                        "childSettings": [],
-                                                        "options": [],
-                                                        "isRequired": true,
-                                                        "entityKey": "dnsOverHttpsConfiguration.queryUrl",
-                                                        "booleanActions": 0,
-                                                        "policyType": 130,
-                                                        "flipChildrenEnabledLogic": false,
-                                                        "readOnly": false,
-                                                        "writeOnce": false,
-                                                        "enabled": true,
-                                                        "multiItemIncludeSelectAll": false
-                                                    },
-                                                    {
-                                                        "id": "Windows10Ztdns_WindowsZtdns_ztdnsSecureDnsServerDohPortName",
-                                                        "dataType": 14,
-                                                        "category": 154,
-                                                        "nameResourceKey": "ztdnsSecureDnsServerDohPortName",
-                                                        "descriptionResourceKey": "ztdnsSecureDnsServerDohPortDescription",
-                                                        "inputControlLength": 0,
-                                                        "validation": [
-                                                            {
-                                                                "validationType": 18,
-                                                                "validationArguments": [
-                                                                    0,
-                                                                    65535
-                                                                ],
-                                                                "failureMessage": "mustBeAValidPort"
-                                                            }
-                                                        ],
-                                                        "childSettings": [],
-                                                        "options": [],
-                                                        "isRequired": false,
-                                                        "entityKey": "dnsOverHttpsConfiguration.httpsPort",
-                                                        "booleanActions": 0,
-                                                        "defaultValue": 443,
-                                                        "unconfiguredValue": 443,
-                                                        "policyType": 130,
-                                                        "flipChildrenEnabledLogic": false,
-                                                        "readOnly": false,
-                                                        "writeOnce": false,
-                                                        "enabled": true,
-                                                        "multiItemIncludeSelectAll": false
+                                                        "failureMessage": "mustBeAValidHttpsUrl"
                                                     }
                                                 ],
+                                                "childSettings": [],
+                                                "options": [],
+                                                "isRequired": true,
+                                                "entityKey": "dnsOverHttpsConfiguration.queryUrl",
+                                                "booleanActions": 0,
+                                                "policyType": 130,
+                                                "flipChildrenEnabledLogic": false,
+                                                "readOnly": false,
+                                                "writeOnce": false,
+                                                "enabled": true,
+                                                "multiItemIncludeSelectAll": false
+                                            },
+                                            {
+                                                "id": "Windows10Ztdns_WindowsZtdns_ztdnsSecureDnsServerDohPortName",
+                                                "dataType": 14,
+                                                "category": 154,
+                                                "nameResourceKey": "ztdnsSecureDnsServerDohPortName",
+                                                "descriptionResourceKey": "ztdnsSecureDnsServerDohPortDescription",
+                                                "inputControlLength": 0,
+                                                "validation": [
+                                                    {
+                                                        "validationType": 18,
+                                                        "validationArguments": [
+                                                            0,
+                                                            65535
+                                                        ],
+                                                        "failureMessage": "mustBeAValidPort"
+                                                    }
+                                                ],
+                                                "childSettings": [],
                                                 "options": [],
                                                 "isRequired": false,
+                                                "entityKey": "dnsOverHttpsConfiguration.httpsPort",
                                                 "booleanActions": 0,
+                                                "defaultValue": 443,
+                                                "unconfiguredValue": 443,
                                                 "policyType": 130,
                                                 "flipChildrenEnabledLogic": false,
                                                 "readOnly": false,
@@ -343,72 +321,50 @@
                                         "value": "dot",
                                         "children": [
                                             {
-                                                "disableTopPadding": false,
-                                                "isSettingDescription": true,
-                                                "showAsSectionHeader": false,
-                                                "id": "Windows10Ztdns_WindowsZtdns_ztdnsSecureDnsServerDotHeaderName",
-                                                "dataType": 8,
+                                                "id": "Windows10Ztdns_WindowsZtdns_ztdnsSecureDnsServerDotHostnameName",
+                                                "dataType": 20,
                                                 "category": 154,
-                                                "nameResourceKey": "ztdnsSecureDnsServerDotHeaderName",
+                                                "nameResourceKey": "ztdnsSecureDnsServerDotHostnameName",
+                                                "descriptionResourceKey": "ztdnsSecureDnsServerDotHostnameDescription",
+                                                "emptyValueResourceKey": "ztdnsSecureDnsServerDotHostnamePlaceholder",
                                                 "inputControlLength": 0,
                                                 "validation": [],
-                                                "childSettings": [
+                                                "childSettings": [],
+                                                "options": [],
+                                                "isRequired": true,
+                                                "entityKey": "dnsOverTlsConfiguration.certificateSubjectName",
+                                                "booleanActions": 0,
+                                                "policyType": 130,
+                                                "flipChildrenEnabledLogic": false,
+                                                "readOnly": false,
+                                                "writeOnce": false,
+                                                "enabled": true,
+                                                "multiItemIncludeSelectAll": false
+                                            },
+                                            {
+                                                "id": "Windows10Ztdns_WindowsZtdns_ztdnsSecureDnsServerDotPortName",
+                                                "dataType": 14,
+                                                "category": 154,
+                                                "nameResourceKey": "ztdnsSecureDnsServerDotPortName",
+                                                "descriptionResourceKey": "ztdnsSecureDnsServerDotPortDescription",
+                                                "inputControlLength": 0,
+                                                "validation": [
                                                     {
-                                                        "id": "Windows10Ztdns_WindowsZtdns_ztdnsSecureDnsServerDotHostnameName",
-                                                        "dataType": 20,
-                                                        "category": 154,
-                                                        "nameResourceKey": "ztdnsSecureDnsServerDotHostnameName",
-                                                        "descriptionResourceKey": "ztdnsSecureDnsServerDotHostnameDescription",
-                                                        "emptyValueResourceKey": "ztdnsSecureDnsServerDotHostnamePlaceholder",
-                                                        "inputControlLength": 0,
-                                                        "validation": [],
-                                                        "childSettings": [],
-                                                        "options": [],
-                                                        "isRequired": true,
-                                                        "entityKey": "dnsOverTlsConfiguration.certificateSubjectName",
-                                                        "booleanActions": 0,
-                                                        "policyType": 130,
-                                                        "flipChildrenEnabledLogic": false,
-                                                        "readOnly": false,
-                                                        "writeOnce": false,
-                                                        "enabled": true,
-                                                        "multiItemIncludeSelectAll": false
-                                                    },
-                                                    {
-                                                        "id": "Windows10Ztdns_WindowsZtdns_ztdnsSecureDnsServerDotPortName",
-                                                        "dataType": 14,
-                                                        "category": 154,
-                                                        "nameResourceKey": "ztdnsSecureDnsServerDotPortName",
-                                                        "descriptionResourceKey": "ztdnsSecureDnsServerDotPortDescription",
-                                                        "inputControlLength": 0,
-                                                        "validation": [
-                                                            {
-                                                                "validationType": 18,
-                                                                "validationArguments": [
-                                                                    0,
-                                                                    65535
-                                                                ],
-                                                                "failureMessage": "mustBeAValidPort"
-                                                            }
+                                                        "validationType": 18,
+                                                        "validationArguments": [
+                                                            0,
+                                                            65535
                                                         ],
-                                                        "childSettings": [],
-                                                        "options": [],
-                                                        "isRequired": false,
-                                                        "entityKey": "dnsOverTlsConfiguration.tlsPort",
-                                                        "booleanActions": 0,
-                                                        "defaultValue": 853,
-                                                        "unconfiguredValue": 853,
-                                                        "policyType": 130,
-                                                        "flipChildrenEnabledLogic": false,
-                                                        "readOnly": false,
-                                                        "writeOnce": false,
-                                                        "enabled": true,
-                                                        "multiItemIncludeSelectAll": false
+                                                        "failureMessage": "mustBeAValidPort"
                                                     }
                                                 ],
+                                                "childSettings": [],
                                                 "options": [],
                                                 "isRequired": false,
+                                                "entityKey": "dnsOverTlsConfiguration.tlsPort",
                                                 "booleanActions": 0,
+                                                "defaultValue": 853,
+                                                "unconfiguredValue": 853,
                                                 "policyType": 130,
                                                 "flipChildrenEnabledLogic": false,
                                                 "readOnly": false,
@@ -429,79 +385,26 @@
                                         "value": "dohAndDot",
                                         "children": [
                                             {
-                                                "disableTopPadding": false,
-                                                "isSettingDescription": true,
-                                                "showAsSectionHeader": false,
-                                                "id": "Windows10Ztdns_WindowsZtdns_ztdnsSecureDnsServerDohHeaderName",
-                                                "dataType": 8,
+                                                "id": "Windows10Ztdns_WindowsZtdns_ztdnsSecureDnsServerDohUrlName",
+                                                "dataType": 20,
                                                 "category": 154,
-                                                "nameResourceKey": "ztdnsSecureDnsServerDohHeaderName",
+                                                "nameResourceKey": "ztdnsSecureDnsServerDohUrlName",
+                                                "descriptionResourceKey": "ztdnsSecureDnsServerDohUrlDescription",
+                                                "emptyValueResourceKey": "ztdnsSecureDnsServerDohUrlPlaceholder",
                                                 "inputControlLength": 0,
-                                                "validation": [],
-                                                "childSettings": [
+                                                "validation": [
                                                     {
-                                                        "id": "Windows10Ztdns_WindowsZtdns_ztdnsSecureDnsServerDohUrlName",
-                                                        "dataType": 20,
-                                                        "category": 154,
-                                                        "nameResourceKey": "ztdnsSecureDnsServerDohUrlName",
-                                                        "descriptionResourceKey": "ztdnsSecureDnsServerDohUrlDescription",
-                                                        "emptyValueResourceKey": "ztdnsSecureDnsServerDohUrlPlaceholder",
-                                                        "inputControlLength": 0,
-                                                        "validation": [
-                                                            {
-                                                                "validationType": 2,
-                                                                "validationArguments": [
-                                                                    "^https://[^\\s/$.?#].[^\\s]*$"
-                                                                ],
-                                                                "failureMessage": "mustBeAValidHttpsUrl"
-                                                            }
+                                                        "validationType": 2,
+                                                        "validationArguments": [
+                                                            "^https://[^\\s/$.?#].[^\\s]*$"
                                                         ],
-                                                        "childSettings": [],
-                                                        "options": [],
-                                                        "isRequired": true,
-                                                        "entityKey": "dnsOverHttpsConfiguration.queryUrl",
-                                                        "booleanActions": 0,
-                                                        "policyType": 130,
-                                                        "flipChildrenEnabledLogic": false,
-                                                        "readOnly": false,
-                                                        "writeOnce": false,
-                                                        "enabled": true,
-                                                        "multiItemIncludeSelectAll": false
-                                                    },
-                                                    {
-                                                        "id": "Windows10Ztdns_WindowsZtdns_ztdnsSecureDnsServerDohPortName",
-                                                        "dataType": 14,
-                                                        "category": 154,
-                                                        "nameResourceKey": "ztdnsSecureDnsServerDohPortName",
-                                                        "descriptionResourceKey": "ztdnsSecureDnsServerDohPortDescription",
-                                                        "inputControlLength": 0,
-                                                        "validation": [
-                                                            {
-                                                                "validationType": 18,
-                                                                "validationArguments": [
-                                                                    0,
-                                                                    65535
-                                                                ],
-                                                                "failureMessage": "mustBeAValidPort"
-                                                            }
-                                                        ],
-                                                        "childSettings": [],
-                                                        "options": [],
-                                                        "isRequired": false,
-                                                        "entityKey": "dnsOverHttpsConfiguration.httpsPort",
-                                                        "booleanActions": 0,
-                                                        "defaultValue": 443,
-                                                        "unconfiguredValue": 443,
-                                                        "policyType": 130,
-                                                        "flipChildrenEnabledLogic": false,
-                                                        "readOnly": false,
-                                                        "writeOnce": false,
-                                                        "enabled": true,
-                                                        "multiItemIncludeSelectAll": false
+                                                        "failureMessage": "mustBeAValidHttpsUrl"
                                                     }
                                                 ],
+                                                "childSettings": [],
                                                 "options": [],
-                                                "isRequired": false,
+                                                "isRequired": true,
+                                                "entityKey": "dnsOverHttpsConfiguration.queryUrl",
                                                 "booleanActions": 0,
                                                 "policyType": 130,
                                                 "flipChildrenEnabledLogic": false,
@@ -511,72 +414,81 @@
                                                 "multiItemIncludeSelectAll": false
                                             },
                                             {
-                                                "disableTopPadding": false,
-                                                "isSettingDescription": true,
-                                                "showAsSectionHeader": false,
-                                                "id": "Windows10Ztdns_WindowsZtdns_ztdnsSecureDnsServerDotHeaderName",
-                                                "dataType": 8,
+                                                "id": "Windows10Ztdns_WindowsZtdns_ztdnsSecureDnsServerDohPortName",
+                                                "dataType": 14,
                                                 "category": 154,
-                                                "nameResourceKey": "ztdnsSecureDnsServerDotHeaderName",
+                                                "nameResourceKey": "ztdnsSecureDnsServerDohPortName",
+                                                "descriptionResourceKey": "ztdnsSecureDnsServerDohPortDescription",
                                                 "inputControlLength": 0,
-                                                "validation": [],
-                                                "childSettings": [
+                                                "validation": [
                                                     {
-                                                        "id": "Windows10Ztdns_WindowsZtdns_ztdnsSecureDnsServerDotHostnameName",
-                                                        "dataType": 20,
-                                                        "category": 154,
-                                                        "nameResourceKey": "ztdnsSecureDnsServerDotHostnameName",
-                                                        "descriptionResourceKey": "ztdnsSecureDnsServerDotHostnameDescription",
-                                                        "emptyValueResourceKey": "ztdnsSecureDnsServerDotHostnamePlaceholder",
-                                                        "inputControlLength": 0,
-                                                        "validation": [],
-                                                        "childSettings": [],
-                                                        "options": [],
-                                                        "isRequired": true,
-                                                        "entityKey": "dnsOverTlsConfiguration.certificateSubjectName",
-                                                        "booleanActions": 0,
-                                                        "policyType": 130,
-                                                        "flipChildrenEnabledLogic": false,
-                                                        "readOnly": false,
-                                                        "writeOnce": false,
-                                                        "enabled": true,
-                                                        "multiItemIncludeSelectAll": false
-                                                    },
-                                                    {
-                                                        "id": "Windows10Ztdns_WindowsZtdns_ztdnsSecureDnsServerDotPortName",
-                                                        "dataType": 14,
-                                                        "category": 154,
-                                                        "nameResourceKey": "ztdnsSecureDnsServerDotPortName",
-                                                        "descriptionResourceKey": "ztdnsSecureDnsServerDotPortDescription",
-                                                        "inputControlLength": 0,
-                                                        "validation": [
-                                                            {
-                                                                "validationType": 18,
-                                                                "validationArguments": [
-                                                                    0,
-                                                                    65535
-                                                                ],
-                                                                "failureMessage": "mustBeAValidPort"
-                                                            }
+                                                        "validationType": 18,
+                                                        "validationArguments": [
+                                                            0,
+                                                            65535
                                                         ],
-                                                        "childSettings": [],
-                                                        "options": [],
-                                                        "isRequired": false,
-                                                        "entityKey": "dnsOverTlsConfiguration.tlsPort",
-                                                        "booleanActions": 0,
-                                                        "defaultValue": 853,
-                                                        "unconfiguredValue": 853,
-                                                        "policyType": 130,
-                                                        "flipChildrenEnabledLogic": false,
-                                                        "readOnly": false,
-                                                        "writeOnce": false,
-                                                        "enabled": true,
-                                                        "multiItemIncludeSelectAll": false
+                                                        "failureMessage": "mustBeAValidPort"
                                                     }
                                                 ],
+                                                "childSettings": [],
                                                 "options": [],
                                                 "isRequired": false,
+                                                "entityKey": "dnsOverHttpsConfiguration.httpsPort",
                                                 "booleanActions": 0,
+                                                "defaultValue": 443,
+                                                "unconfiguredValue": 443,
+                                                "policyType": 130,
+                                                "flipChildrenEnabledLogic": false,
+                                                "readOnly": false,
+                                                "writeOnce": false,
+                                                "enabled": true,
+                                                "multiItemIncludeSelectAll": false
+                                            },
+                                            {
+                                                "id": "Windows10Ztdns_WindowsZtdns_ztdnsSecureDnsServerDotHostnameName",
+                                                "dataType": 20,
+                                                "category": 154,
+                                                "nameResourceKey": "ztdnsSecureDnsServerDotHostnameName",
+                                                "descriptionResourceKey": "ztdnsSecureDnsServerDotHostnameDescription",
+                                                "emptyValueResourceKey": "ztdnsSecureDnsServerDotHostnamePlaceholder",
+                                                "inputControlLength": 0,
+                                                "validation": [],
+                                                "childSettings": [],
+                                                "options": [],
+                                                "isRequired": true,
+                                                "entityKey": "dnsOverTlsConfiguration.certificateSubjectName",
+                                                "booleanActions": 0,
+                                                "policyType": 130,
+                                                "flipChildrenEnabledLogic": false,
+                                                "readOnly": false,
+                                                "writeOnce": false,
+                                                "enabled": true,
+                                                "multiItemIncludeSelectAll": false
+                                            },
+                                            {
+                                                "id": "Windows10Ztdns_WindowsZtdns_ztdnsSecureDnsServerDotPortName",
+                                                "dataType": 14,
+                                                "category": 154,
+                                                "nameResourceKey": "ztdnsSecureDnsServerDotPortName",
+                                                "descriptionResourceKey": "ztdnsSecureDnsServerDotPortDescription",
+                                                "inputControlLength": 0,
+                                                "validation": [
+                                                    {
+                                                        "validationType": 18,
+                                                        "validationArguments": [
+                                                            0,
+                                                            65535
+                                                        ],
+                                                        "failureMessage": "mustBeAValidPort"
+                                                    }
+                                                ],
+                                                "childSettings": [],
+                                                "options": [],
+                                                "isRequired": false,
+                                                "entityKey": "dnsOverTlsConfiguration.tlsPort",
+                                                "booleanActions": 0,
+                                                "defaultValue": 853,
+                                                "unconfiguredValue": 853,
                                                 "policyType": 130,
                                                 "flipChildrenEnabledLogic": false,
                                                 "readOnly": false,
@@ -643,7 +555,7 @@
             "validation": [],
             "childSettings": [],
             "options": [],
-            "isRequired": true,
+            "isRequired": false,
             "booleanActions": 0,
             "policyType": 130,
             "flipChildrenEnabledLogic": false,
@@ -664,7 +576,7 @@
                     "category": 154,
                     "nameResourceKey": "ztdnsTrustedCAHeaderName",
                     "helpLink": "https://aka.ms/ztdns",
-                    "helpLinkTextResourceKey": "ztdnsTrustedCAHeaderLearnMore",
+                    "helpLinkTextResourceKey": "learnMore",
                     "inputControlLength": 0,
                     "validation": [],
                     "childSettings": [],
@@ -688,10 +600,10 @@
                                 94
                             ],
                             "linkedCert": true,
-                            "id": "Windows10Ztdns_WindowsZtdns_ztdnsRootCertificateHeader",
+                            "id": "Windows10Ztdns_WindowsZtdns_sCEPPolicySelectRootCertificateName",
                             "dataType": 4,
                             "category": 154,
-                            "nameResourceKey": "ztdnsRootCertificateHeader",
+                            "nameResourceKey": "sCEPPolicySelectRootCertificateName",
                             "descriptionResourceKey": "SCEPPolicySelectRootCertificateName",
                             "inputControlLength": 80,
                             "validation": [],
@@ -711,10 +623,10 @@
                     ],
                     "configurableComplexOptions": {},
                     "removePadding": false,
-                    "id": "Windows10Ztdns_WindowsZtdns_ztdnsRootCertificateHeader",
+                    "id": "Windows10Ztdns_WindowsZtdns_sCEPPolicySelectRootCertificateName",
                     "dataType": 5,
                     "category": 154,
-                    "nameResourceKey": "ztdnsRootCertificateHeader",
+                    "nameResourceKey": "sCEPPolicySelectRootCertificateName",
                     "descriptionResourceKey": "sCEPPolicySelectRootCertificateDescription",
                     "emptyValueResourceKey": "selectCertificate",
                     "inputControlLength": 0,
@@ -741,7 +653,7 @@
             "validation": [],
             "childSettings": [],
             "options": [],
-            "isRequired": true,
+            "isRequired": false,
             "booleanActions": 0,
             "policyType": 130,
             "flipChildrenEnabledLogic": false,
@@ -850,7 +762,8 @@
                                             "dataType": 20,
                                             "category": 154,
                                             "nameResourceKey": "ztdnsExemptionRuleIpAddressName",
-                                            "emptyValueResourceKey": "ztdnsExemptionRuleIpAddressPlaceholder",
+                                            "descriptionResourceKey": "ztdnsExemptionRuleIpAddressDescription",
+                                            "emptyValueResourceKey": "ztdnsExemptionRuleIpAddressDescription",
                                             "inputControlLength": 0,
                                             "validation": [
                                                 {
@@ -1010,7 +923,7 @@
                     "category": 154,
                     "nameResourceKey": "ztdnsClientCertificateHeaderName",
                     "helpLink": "https://aka.ms/ztdns",
-                    "helpLinkTextResourceKey": "ztdnsClientCertificateHeaderLearnMore",
+                    "helpLinkTextResourceKey": "learnMore",
                     "inputControlLength": 0,
                     "validation": [],
                     "childSettings": [],
@@ -1034,10 +947,10 @@
                                 94
                             ],
                             "linkedCert": true,
-                            "id": "Windows10Ztdns_WindowsZtdns_ztdnsRootCertificateHeader",
+                            "id": "Windows10Ztdns_WindowsZtdns_sCEPPolicySelectRootCertificateName",
                             "dataType": 4,
                             "category": 154,
-                            "nameResourceKey": "ztdnsRootCertificateHeader",
+                            "nameResourceKey": "sCEPPolicySelectRootCertificateName",
                             "descriptionResourceKey": "SCEPPolicySelectRootCertificateName",
                             "inputControlLength": 80,
                             "validation": [],
@@ -1057,10 +970,10 @@
                     ],
                     "configurableComplexOptions": {},
                     "removePadding": false,
-                    "id": "Windows10Ztdns_WindowsZtdns_ztdnsRootCertificateHeader",
+                    "id": "Windows10Ztdns_WindowsZtdns_sCEPPolicySelectRootCertificateName",
                     "dataType": 5,
                     "category": 154,
-                    "nameResourceKey": "ztdnsRootCertificateHeader",
+                    "nameResourceKey": "sCEPPolicySelectRootCertificateName",
                     "descriptionResourceKey": "sCEPPolicySelectRootCertificateDescription",
                     "emptyValueResourceKey": "selectCertificate",
                     "inputControlLength": 0,
@@ -1085,7 +998,7 @@
                     "category": 154,
                     "nameResourceKey": "ztdnsClientCertificateEkuHeaderName",
                     "helpLink": "https://aka.ms/ztdns",
-                    "helpLinkTextResourceKey": "ztdnsClientCertificateEkuHeaderLearnMore",
+                    "helpLinkTextResourceKey": "learnMore",
                     "inputControlLength": 0,
                     "validation": [],
                     "childSettings": [],
@@ -1114,6 +1027,7 @@
                     "isDependentTable": false,
                     "labelAndButtonsInline": true,
                     "noItemsTextId": "NoKeys",
+                    "predefinedSelections": "KeyUsagesSelections",
                     "hideLabelAndButtons": false,
                     "uniquenessKeys": [
                         "name"
@@ -1186,6 +1100,7 @@
                     "dataType": 21,
                     "category": 154,
                     "nameResourceKey": "sCEPPolicyExtendedKeyUsageName",
+                    "descriptionResourceKey": "sCEPPolicyExtendedKeyUsageDescription",
                     "inputControlLength": 0,
                     "validation": [],
                     "childSettings": [],
@@ -1230,7 +1145,7 @@
                     "nameResourceKey": "ztdnsAdvancedSettingsLoopbackTrafficBlockedName",
                     "descriptionResourceKey": "ztdnsAdvancedSettingsLoopbackTrafficBlockedDescription",
                     "helpLink": "https://aka.ms/ztdns",
-                    "helpLinkTextResourceKey": "ztdnsAdvancedSettingsLoopbackTrafficBlockedLearnMore",
+                    "helpLinkTextResourceKey": "learnMore",
                     "inputControlLength": 0,
                     "validation": [],
                     "childSettings": [
@@ -1241,14 +1156,14 @@
                             "nameResourceKey": "ztdnsAdvancedSettingsLoopbackDnsForwarderEnabledName",
                             "descriptionResourceKey": "ztdnsAdvancedSettingsLoopbackDnsForwarderEnabledDescription",
                             "helpLink": "https://aka.ms/ztdns",
-                            "helpLinkTextResourceKey": "ztdnsAdvancedSettingsLoopbackDnsForwarderEnabledLearnMore",
+                            "helpLinkTextResourceKey": "learnMore",
                             "inputControlLength": 0,
                             "validation": [],
                             "childSettings": [],
                             "options": [],
                             "isRequired": false,
                             "entityKey": "loopbackDnsForwarderEnabled",
-                            "booleanActions": 0,
+                            "booleanActions": 2,
                             "defaultValue": false,
                             "policyType": 130,
                             "flipChildrenEnabledLogic": false,
@@ -1277,7 +1192,7 @@
                     "nameResourceKey": "ztdnsAdvancedSettingsHostsFileResolutionEnabledName",
                     "descriptionResourceKey": "ztdnsAdvancedSettingsHostsFileResolutionEnabledDescription",
                     "helpLink": "https://aka.ms/ztdns",
-                    "helpLinkTextResourceKey": "ztdnsAdvancedSettingsHostsFileResolutionEnabledLearnMore",
+                    "helpLinkTextResourceKey": "learnMore",
                     "inputControlLength": 0,
                     "validation": [],
                     "childSettings": [],
@@ -1300,7 +1215,7 @@
                     "nameResourceKey": "ztdnsAdvancedSettingsMaximumConnectionTimeInSecondsName",
                     "descriptionResourceKey": "ztdnsAdvancedSettingsMaximumConnectionTimeInSecondsDescription",
                     "helpLink": "https://aka.ms/ztdns",
-                    "helpLinkTextResourceKey": "ztdnsAdvancedSettingsMaximumConnectionTimeInSecondsLearnMore",
+                    "helpLinkTextResourceKey": "learnMore",
                     "inputControlLength": 0,
                     "validation": [
                         {
