@@ -75,6 +75,19 @@
             "allowedMemberTypes": [
                 "Application"
             ],
+            "description": "Allows the app to manage a limited set of Exchange Online configuration objects without user interaction, for specific scenarios supported by the adminapi/v2.0 endpoint. To enable management actions an admin must also assign the appropriate Exchange RBAC roles directly to the app.",
+            "displayName": "Manage Exchange as application v2",
+            "id": "ea3d980d-ebc7-4be4-8298-a167e5b8797c",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "Exchange.ManageAsAppV2",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
             "description": "Allows the app to manage the organization's Exchange environment without any user interaction. This includes mailboxes, groups, and other configuration objects. To enable management actions, an admin must assign the appropriate roles directly to the app.",
             "displayName": "Manage Exchange As Application",
             "id": "dc50a0fb-09a3-484d-be87-e023b12c6440",
@@ -419,6 +432,17 @@
     },
     "keyCredentials": [],
     "publishedPermissionScopes": [
+        {
+            "adminConsentDescription": "Allows the app to manage a limited set of Exchange Online configuration objects via the adminapi/v2.0 endpoint. This permission is intended for specific scenarios and requires appropriate Exchange RBAC role assignments.",
+            "adminConsentDisplayName": "Manage Exchange configuration v2",
+            "id": "44d6b5f2-d42b-4fa7-b999-1c5fcab98e4d",
+            "isEnabled": true,
+            "type": "User",
+            "userConsentDescription": " Allows the app to manage a limited set of Exchange Online configuration objects via the adminapi/v2.0 endpoint. This permission is intended for specific scenarios and requires admin to assign you appropriate Exchange RBAC role assignments.",
+            "userConsentDisplayName": "Manage Exchange configuration v2",
+            "value": "Exchange.ManageV2",
+            "isPrivate": false
+        },
         {
             "adminConsentDescription": "This allows application to host MyDay Owa powered experience for both user and shared mailbox and calendar",
             "adminConsentDisplayName": "OPX.MyDay.All",
