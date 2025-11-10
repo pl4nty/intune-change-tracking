@@ -1,0 +1,73 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Enable Secureboot Certificate Updates",
+        "Secure Boot"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-SecureBoot#enablesecurebootcertificateupdates"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/SecureBoot/EnableSecurebootCertificateUpdates",
+    "rootDefinitionId": "device_vendor_msft_policy_config_secureboot_enablesecurebootcertificateupdates",
+    "categoryId": "a3e48951-624d-4fee-b470-d17ce16e6b0c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_secureboot_enablesecurebootcertificateupdates",
+    "description": "This policy enables the Secure Boot certificate update process. Setting this to Enabled causes the new Secure Boot certificates to be installed and installs the 2023 signed boot manager for all devices where the policy is applied.",
+    "helpText": "",
+    "name": "EnableSecurebootCertificateUpdates",
+    "displayName": "Enable Secureboot Certificate Updates",
+    "defaultOptionId": "device_vendor_msft_policy_config_secureboot_enablesecurebootcertificateupdates_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19044",
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_secureboot_enablesecurebootcertificateupdates_0",
+            "description": "Disabled",
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_secureboot_enablesecurebootcertificateupdates_22852",
+            "description": "(Enabled) Initiates the deployment of new secure boot certificates and related updates.",
+            "helpText": null,
+            "name": "(Enabled) Initiates the deployment of new secure boot certificates and related updates.",
+            "displayName": "(Enabled) Initiates the deployment of new secure boot certificates and related updates.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 22852
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

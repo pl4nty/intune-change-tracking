@@ -1,0 +1,74 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "AVD_SERVER_UDP_SHORTPATH_DIRECT",
+        "Enable RDP Shortpath for managed network using NAT traversal",
+        "\\Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Azure Virtual Desktop\\RDP Shortpath",
+        "Administrative Templates\\Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Azure Virtual Desktop\\RDP Shortpath",
+        "RDP Shortpath"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/terminalServer-AVDv3~Policy~AVD_GP_NODE~AVD_TRANSPORT_GP_NODE/AVD_SERVER_UDP_SHORTPATH_DIRECT",
+    "rootDefinitionId": "device_vendor_msft_policy_config_terminalserver-avdv3~policy~avd_gp_node~avd_transport_gp_node_avd_server_udp_shortpath_direct",
+    "categoryId": "5d4e843b-2848-4508-9143-cb3217c2fe83",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_terminalserver-avdv3~policy~avd_gp_node~avd_transport_gp_node_avd_server_udp_shortpath_direct",
+    "description": "This policy lets you control RDP Shortpath for managed networks. It's a direct UDP connection between a client device and session host using a private connection, such as ExpressRoute private peering or a virtual private network (VPN). When the RDP Shortpath listener isn't enabled on session hosts and an inbound port isn't allowed, ICE/STUN is used to discover available IP addresses and a dynamic port that can be used for a connection. \r\n \r\nIf you enable or do not configure the policy this policy setting, Remote Desktop Protocol will consider managed networks paths to establish connection with the session host. \r\n \r\nIf you disable this policy, Remote Desktop Protocol will NOT consider managed networks path to establish connection with the session host.\r\n      ",
+    "helpText": "",
+    "name": "AVD_SERVER_UDP_SHORTPATH_DIRECT",
+    "displayName": "Enable RDP Shortpath for managed network using NAT traversal",
+    "defaultOptionId": "device_vendor_msft_policy_config_terminalserver-avdv3~policy~avd_gp_node~avd_transport_gp_node_avd_server_udp_shortpath_direct_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_terminalserver-avdv3~policy~avd_gp_node~avd_transport_gp_node_avd_server_udp_shortpath_direct_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_terminalserver-avdv3~policy~avd_gp_node~avd_transport_gp_node_avd_server_udp_shortpath_direct_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

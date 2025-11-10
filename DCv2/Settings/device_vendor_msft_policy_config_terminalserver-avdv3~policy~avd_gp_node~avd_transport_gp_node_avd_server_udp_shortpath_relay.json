@@ -1,0 +1,74 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "AVD_SERVER_UDP_SHORTPATH_RELAY",
+        "Enable RDP Shortpath for public network using Relay (TURN)",
+        "\\Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Azure Virtual Desktop\\RDP Shortpath",
+        "Administrative Templates\\Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Azure Virtual Desktop\\RDP Shortpath",
+        "RDP Shortpath"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/terminalServer-AVDv3~Policy~AVD_GP_NODE~AVD_TRANSPORT_GP_NODE/AVD_SERVER_UDP_SHORTPATH_RELAY",
+    "rootDefinitionId": "device_vendor_msft_policy_config_terminalserver-avdv3~policy~avd_gp_node~avd_transport_gp_node_avd_server_udp_shortpath_relay",
+    "categoryId": "5d4e843b-2848-4508-9143-cb3217c2fe83",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_terminalserver-avdv3~policy~avd_gp_node~avd_transport_gp_node_avd_server_udp_shortpath_relay",
+    "description": "This policy lets you control RDP Shortpath for public networks using the Traversal Using Relay NAT (TURN). A relayed UDP is a connection between a client device and session host using a public connection where TURN relays traffic through an intermediate server between a client and session host \r\n \r\nIf you enable or do not configure this policy setting, Remote Desktop Protocol will consider public networks relayed paths to establish connection with the session host. \r\n \r\nIf you disable this policy, Remote Desktop Protocol will NOT consider public networks relayed paths to establish connection with the session host.\r\n      ",
+    "helpText": "",
+    "name": "AVD_SERVER_UDP_SHORTPATH_RELAY",
+    "displayName": "Enable RDP Shortpath for public network using Relay (TURN)",
+    "defaultOptionId": "device_vendor_msft_policy_config_terminalserver-avdv3~policy~avd_gp_node~avd_transport_gp_node_avd_server_udp_shortpath_relay_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_terminalserver-avdv3~policy~avd_gp_node~avd_transport_gp_node_avd_server_udp_shortpath_relay_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_terminalserver-avdv3~policy~avd_gp_node~avd_transport_gp_node_avd_server_udp_shortpath_relay_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}
