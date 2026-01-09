@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ExtensionInstallTypeBlocklist",
+        "Blocklist for install types of extensions",
+        "\\Google\\Google Chrome\\Extensions",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Extensions"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV141~Policy~googlechrome~Extensions/ExtensionInstallTypeBlocklist",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~extensions_extensioninstalltypeblocklist",
+    "categoryId": "216de445-a80d-4981-b151-3b4466edc808",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~extensions_extensioninstalltypeblocklist",
+    "description": "The blocklist controls which extensions install types are disallowed.\r\n\r\nSetting \"command_line\" will block extension from being loaded from\r\ncommand line.\r\n\r\nExample value:\r\n\r\ncommand_line",
+    "helpText": "",
+    "name": "ExtensionInstallTypeBlocklist",
+    "displayName": "Blocklist for install types of extensions (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~extensions_extensioninstalltypeblocklist_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~extensions_extensioninstalltypeblocklist_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~extensions_extensioninstalltypeblocklist_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~extensions_extensioninstalltypeblocklist_extensioninstalltypeblocklistdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

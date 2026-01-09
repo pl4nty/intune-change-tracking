@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ClipboardAllowedForUrls",
+        "Allow clipboard on these sites",
+        "\\Google\\Google Chrome\\Content settings",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Content settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV141~Policy~googlechrome~ContentSettings/ClipboardAllowedForUrls",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~contentsettings_clipboardallowedforurls",
+    "categoryId": "59d29716-55b0-4014-a458-38b408ff9530",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~contentsettings_clipboardallowedforurls",
+    "description": "Setting the policy lets you set a list of URL patterns that specify sites that can use the clipboard site permission. This does not include all clipboard operations on origins matching the patterns. For instance, users will still be able to paste using keyboard shortcuts as this isn't gated by the clipboard site permission.\r\n\r\n\r\nLeaving the policy unset means DefaultClipboardSetting applies for all sites, if it's set. If not, the user's personal setting applies.\r\n\r\nFor detailed information on valid url patterns, please see https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns. Wildcards, *, are allowed.\r\n\r\nExample value:\r\n\r\nhttps://www.example.com\r\n[*.]example.edu",
+    "helpText": "",
+    "name": "ClipboardAllowedForUrls",
+    "displayName": "Allow clipboard on these sites (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~contentsettings_clipboardallowedforurls_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~contentsettings_clipboardallowedforurls_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~contentsettings_clipboardallowedforurls_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~contentsettings_clipboardallowedforurls_clipboardallowedforurlsdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

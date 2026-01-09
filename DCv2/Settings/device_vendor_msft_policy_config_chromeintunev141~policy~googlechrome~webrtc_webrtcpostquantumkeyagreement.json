@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "WebRtcPostQuantumKeyAgreement",
+        "Enable post-quantum key agreement for WebRTC",
+        "\\Google\\Google Chrome\\WebRtc settings",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Web Rtc settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV141~Policy~googlechrome~WebRtc/WebRtcPostQuantumKeyAgreement",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~webrtc_webrtcpostquantumkeyagreement",
+    "categoryId": "b811c4fe-7ff0-4bd1-a454-0918d4e2f896",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~webrtc_webrtcpostquantumkeyagreement",
+    "description": "This policy allows controlling post-quantum key agreement for WebRTC.\r\n\r\nIf this policy is set to Enabled, post-quantum key agreement would be offered for\r\nWebRTC.\r\n\r\nIf this policy is set to Disabled, post-quantum key agreement would not be offered\r\nfor WebRTC.\r\n\r\nIf this policy is not set, the value would be set by the default rollout process\r\nfor post-quantum key agreement offered for WebRTC.\r\n\r\nOffering a post-quantum key agreement is backwards-compatible. Existing DTLS\r\npeers and networking middleware are expected to ignore the new option and\r\ncontinue selecting previous options.\r\n\r\nHowever, devices that do not correctly implement DTLS may malfunction when\r\noffered the new option. For example, they may disconnect in response to\r\nunrecognized options or the resulting larger messages. Such devices are not\r\npost-quantum-ready and will interfere with an enterprise's post-quantum\r\ntransition. If encountered, administrators should contact the vendor for a fix.\r\n\r\nThis policy is a temporary measure and will be removed after some milestones.",
+    "helpText": "",
+    "name": "WebRtcPostQuantumKeyAgreement",
+    "displayName": "Enable post-quantum key agreement for WebRTC",
+    "defaultOptionId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~webrtc_webrtcpostquantumkeyagreement_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~webrtc_webrtcpostquantumkeyagreement_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~webrtc_webrtcpostquantumkeyagreement_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

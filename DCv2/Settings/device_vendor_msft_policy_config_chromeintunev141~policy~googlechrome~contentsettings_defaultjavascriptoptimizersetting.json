@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DefaultJavaScriptOptimizerSetting",
+        "Control use of JavaScript optimizers",
+        "\\Google\\Google Chrome\\Content settings",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Content settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV141~Policy~googlechrome~ContentSettings/DefaultJavaScriptOptimizerSetting",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~contentsettings_defaultjavascriptoptimizersetting",
+    "categoryId": "59d29716-55b0-4014-a458-38b408ff9530",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~contentsettings_defaultjavascriptoptimizersetting",
+    "description": "Allows you to set whether Google Chrome\r\nwill run the v8 JavaScript engine with more advanced JavaScript optimizations enabled.\r\n\r\nDisabling JavaScript optimizations (by setting this policy's value to 2) will\r\nmean that Google Chrome may render web\r\ncontent more slowly.\r\n\r\nThis policy can be overridden for specific URL patterns using the JavaScriptOptimizerAllowedForSites and JavaScriptOptimizerBlockedForSites policies.\r\n\r\nIf this policy is left not set, JavaScript optimizations are enabled.",
+    "helpText": "",
+    "name": "DefaultJavaScriptOptimizerSetting",
+    "displayName": "Control use of JavaScript optimizers",
+    "defaultOptionId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~contentsettings_defaultjavascriptoptimizersetting_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~contentsettings_defaultjavascriptoptimizersetting_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~contentsettings_defaultjavascriptoptimizersetting_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~contentsettings_defaultjavascriptoptimizersetting_defaultjavascriptoptimizersetting",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

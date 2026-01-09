@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ReduceAcceptLanguageEnabled",
+        "Control Accept-Language Reduction",
+        "\\Google\\Google Chrome",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Google Chrome"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV141~Policy~googlechrome/ReduceAcceptLanguageEnabled",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_reduceacceptlanguageenabled",
+    "categoryId": "36c83fb3-c18c-472b-b39e-617c2f8a7fbd",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_reduceacceptlanguageenabled",
+    "description": "The Accept-Language HTTP request header and the JavaScript navigator.languages getter are planned for reduction for privacy reasons.\r\nTo facilitate testing and ensure compatibility, this policy allows you to enable or disable the Accept-Language Reduction feature.\r\n\r\nIf this policy is set to enabled or left unset, Accept-Language Reduction will be applied through field trials.\r\nIf this policy is set to disabled, field trials will not be able to activate Accept-Language Reduction.\r\n\r\nFor more information about this feature, please visit: https://github.com/explainers-by-googlers/reduce-accept-language.\r\n\r\nNOTE: Only newly-started renderer processes will reflect changes to this policy while the browser is running.",
+    "helpText": "",
+    "name": "ReduceAcceptLanguageEnabled",
+    "displayName": "Control Accept-Language Reduction (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_reduceacceptlanguageenabled_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_reduceacceptlanguageenabled_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_reduceacceptlanguageenabled_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

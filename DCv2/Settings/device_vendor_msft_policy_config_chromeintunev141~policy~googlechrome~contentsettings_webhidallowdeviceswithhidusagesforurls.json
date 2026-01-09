@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "WebHidAllowDevicesWithHidUsagesForUrls",
+        "Automatically grant permission to these sites to connect to HID devices containing top-level collections with the given HID usage.",
+        "\\Google\\Google Chrome\\Content settings",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Content settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV141~Policy~googlechrome~ContentSettings/WebHidAllowDevicesWithHidUsagesForUrls",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~contentsettings_webhidallowdeviceswithhidusagesforurls",
+    "categoryId": "59d29716-55b0-4014-a458-38b408ff9530",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~contentsettings_webhidallowdeviceswithhidusagesforurls",
+    "description": "Setting the policy lets you list the URLs that specify which sites are automatically granted permission to access a HID device containing a top-level collection with the given HID usage. Each item in the list requires both usages and urls fields for the policy to be valid. Each item in the usages field must have a usage_page and may have a usage field. Omitting the usage field will create a policy matching any device containing a top-level collection with a usage from the specified usage page. An item which has a usage field without a usage_page field is invalid and is ignored.\r\n\r\nLeaving the policy unset means DefaultWebHidGuardSetting applies, if it's set. If not, the user's personal setting applies.\r\n\r\nURLs in this policy shouldn't conflict with those configured through WebHidBlockedForUrls. If they do, this policy takes precedence over WebHidBlockedForUrls.\r\nSee https://cloud.google.com/docs/chrome-enterprise/policies/?policy=WebHidAllowDevicesWithHidUsagesForUrls for more information about schema and formatting.\r\n\r\n\r\nExample value:\r\n\r\n[\r\n  {\r\n    \"urls\": [\r\n      \"https://google.com\",\r\n      \"https://chromium.org\"\r\n    ],\r\n    \"usages\": [\r\n      {\r\n        \"usage\": 5678,\r\n        \"usage_page\": 1234\r\n      }\r\n    ]\r\n  }\r\n]",
+    "helpText": "",
+    "name": "WebHidAllowDevicesWithHidUsagesForUrls",
+    "displayName": "Automatically grant permission to these sites to connect to HID devices containing top-level collections with the given HID usage.",
+    "defaultOptionId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~contentsettings_webhidallowdeviceswithhidusagesforurls_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~contentsettings_webhidallowdeviceswithhidusagesforurls_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~contentsettings_webhidallowdeviceswithhidusagesforurls_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~contentsettings_webhidallowdeviceswithhidusagesforurls_webhidallowdeviceswithhidusagesforurls",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

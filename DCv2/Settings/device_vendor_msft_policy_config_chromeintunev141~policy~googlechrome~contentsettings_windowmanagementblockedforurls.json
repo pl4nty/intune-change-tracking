@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "WindowManagementBlockedForUrls",
+        "Block Window Management permission on these sites",
+        "\\Google\\Google Chrome\\Content settings",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Content settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV141~Policy~googlechrome~ContentSettings/WindowManagementBlockedForUrls",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~contentsettings_windowmanagementblockedforurls",
+    "categoryId": "59d29716-55b0-4014-a458-38b408ff9530",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~contentsettings_windowmanagementblockedforurls",
+    "description": "Allows you to set a list of site url patterns that specify sites which will automatically deny the window management permission. This will limit the ability of sites to see information about the device's screens and use that information to open and place windows or request fullscreen on specific screens.\r\n\r\nFor detailed information on valid site url patterns, please see https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns. Wildcards, *, are allowed. This policy only matches based on origin, so any path in the URL pattern is ignored.\r\n\r\nIf this policy is not set for a site then the policy from DefaultWindowManagementSetting applies to the site, if set, otherwise the permission will follow the browser's defaults and allow users to choose this permission per site.\r\n\r\nThis replaces the deprecated WindowPlacementBlockedForUrls policy.\r\n\r\nExample value:\r\n\r\nhttps://www.example.com\r\n[*.]example.edu",
+    "helpText": "",
+    "name": "WindowManagementBlockedForUrls",
+    "displayName": "Block Window Management permission on these sites",
+    "defaultOptionId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~contentsettings_windowmanagementblockedforurls_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~contentsettings_windowmanagementblockedforurls_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~contentsettings_windowmanagementblockedforurls_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~contentsettings_windowmanagementblockedforurls_windowmanagementblockedforurlsdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

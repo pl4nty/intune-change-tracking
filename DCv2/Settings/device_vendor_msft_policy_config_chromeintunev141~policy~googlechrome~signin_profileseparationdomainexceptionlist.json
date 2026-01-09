@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ProfileSeparationDomainExceptionList",
+        "Enterprise profile separation secondary domain allowlist",
+        "\\Google\\Google Chrome\\Sign-in settings",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Sign-in settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV141~Policy~googlechrome~Signin/ProfileSeparationDomainExceptionList",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~signin_profileseparationdomainexceptionlist",
+    "categoryId": "f00e9baf-9bbf-48e4-aaac-57410730f016",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~signin_profileseparationdomainexceptionlist",
+    "description": "If this policy is unset, account logins will not be required to create a new separate profile.\r\n\r\nIf this policy is set, account logins from the listed domains will not be required to create a new separate profile.\r\n\r\nThis policy can be set to an empty string so that all account logins are required to create a new separate profile.\r\n\r\nExample value:\r\n\r\ndomain.com\r\notherdomain.com",
+    "helpText": "",
+    "name": "ProfileSeparationDomainExceptionList",
+    "displayName": "Enterprise profile separation secondary domain allowlist",
+    "defaultOptionId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~signin_profileseparationdomainexceptionlist_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~signin_profileseparationdomainexceptionlist_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~signin_profileseparationdomainexceptionlist_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~signin_profileseparationdomainexceptionlist_profileseparationdomainexceptionlistdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

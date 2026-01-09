@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ThirdPartyStoragePartitioningBlockedForOrigins",
+        "Disable third-party storage partitioning for specific top-level origins",
+        "\\Google\\Google Chrome\\Deprecated policies",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Deprecated policies"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV141~Policy~googlechrome~DeprecatedPolicies/ThirdPartyStoragePartitioningBlockedForOrigins",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~deprecatedpolicies_thirdpartystoragepartitioningblockedfororigins",
+    "categoryId": "5900ac65-f656-459c-bd82-1329a862544d",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~deprecatedpolicies_thirdpartystoragepartitioningblockedfororigins",
+    "description": "This policy is deprecated. Its usage is discouraged. Read more at https://support.google.com/chrome/a/answer/7643500\r\n\r\nExample value:\r\n\r\nwww.example.com\r\n[*.]example.edu",
+    "helpText": "",
+    "name": "ThirdPartyStoragePartitioningBlockedForOrigins",
+    "displayName": "Disable third-party storage partitioning for specific top-level origins",
+    "defaultOptionId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~deprecatedpolicies_thirdpartystoragepartitioningblockedfororigins_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~deprecatedpolicies_thirdpartystoragepartitioningblockedfororigins_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~deprecatedpolicies_thirdpartystoragepartitioningblockedfororigins_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~deprecatedpolicies_thirdpartystoragepartitioningblockedfororigins_thirdpartystoragepartitioningblockedfororiginsdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

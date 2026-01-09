@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "HttpsUpgradesEnabled",
+        "Enable automatic HTTPS upgrades",
+        "\\Google\\Google Chrome",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Google Chrome"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV141~Policy~googlechrome/HttpsUpgradesEnabled",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_httpsupgradesenabled",
+    "categoryId": "36c83fb3-c18c-472b-b39e-617c2f8a7fbd",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_httpsupgradesenabled",
+    "description": "Google Chrome attempts to upgrade some\r\nnavigations from HTTP to HTTPS, when possible. This policy can be used to\r\ndisable this behavior. If set to \"true\" or left unset, this feature will be\r\nenabled by default.\r\n\r\nThe separate HttpAllowlist policy\r\ncan be used to exempt specific hostnames or hostname patterns from being\r\nupgraded to HTTPS by this feature.\r\n\r\nSee also the HttpsOnlyMode policy.",
+    "helpText": "",
+    "name": "HttpsUpgradesEnabled",
+    "displayName": "Enable automatic HTTPS upgrades",
+    "defaultOptionId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_httpsupgradesenabled_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_httpsupgradesenabled_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_httpsupgradesenabled_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

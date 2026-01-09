@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "RemoteAccessHostAllowPinAuthentication",
+        "Allow PIN and pairing authentication methods for remote access hosts",
+        "\\Google\\Google Chrome\\Remote access",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Remote access"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV141~Policy~googlechrome~RemoteAccess/RemoteAccessHostAllowPinAuthentication",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~remoteaccess_remoteaccesshostallowpinauthentication",
+    "categoryId": "098942c3-afe3-40c8-823f-37f0b5b13ad4",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~remoteaccess_remoteaccesshostallowpinauthentication",
+    "description": "Setting the policy to Enabled allows the remote access host to use PIN and pairing authentications when accepting client connections.\r\n\r\nSetting the policy to Disabled disallows PIN or pairing authentications.\r\n\r\nLeaving it unset lets the host decide whether PIN and/or pairing authentications can be used.\r\n\r\nNote: If the setting results in no mutually supported authentication methods by both the host and the client, then the connection will be rejected.",
+    "helpText": "",
+    "name": "RemoteAccessHostAllowPinAuthentication",
+    "displayName": "Allow PIN and pairing authentication methods for remote access hosts",
+    "defaultOptionId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~remoteaccess_remoteaccesshostallowpinauthentication_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~remoteaccess_remoteaccesshostallowpinauthentication_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~remoteaccess_remoteaccesshostallowpinauthentication_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

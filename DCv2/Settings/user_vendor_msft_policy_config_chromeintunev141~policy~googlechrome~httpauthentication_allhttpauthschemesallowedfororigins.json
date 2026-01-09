@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "AllHttpAuthSchemesAllowedForOrigins",
+        "List of origins allowing all HTTP authentication",
+        "\\Google\\Google Chrome\\HTTP authentication",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "HTTP authentication"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV141~Policy~googlechrome~HTTPAuthentication/AllHttpAuthSchemesAllowedForOrigins",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~httpauthentication_allhttpauthschemesallowedfororigins",
+    "categoryId": "93ed2300-658d-40f3-8211-9295a240579c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~httpauthentication_allhttpauthschemesallowedfororigins",
+    "description": "Setting the policy specifies for which origins to allow all the HTTP authentication schemes Google Chrome supports regardless of the AuthSchemes policy.\r\n\r\nFormat the origin pattern according to this format (https://support.google.com/chrome/a?p=url_blocklist_filter_format). Up to 1,000 exceptions can be defined in AllHttpAuthSchemesAllowedForOrigins.\r\nWildcards are allowed for the whole origin or parts of the origin, either the scheme, host, port.\r\n\r\nExample value:\r\n\r\n*.example.com",
+    "helpText": "",
+    "name": "AllHttpAuthSchemesAllowedForOrigins",
+    "displayName": "List of origins allowing all HTTP authentication (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~httpauthentication_allhttpauthschemesallowedfororigins_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~httpauthentication_allhttpauthschemesallowedfororigins_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~httpauthentication_allhttpauthschemesallowedfororigins_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~httpauthentication_allhttpauthschemesallowedfororigins_allhttpauthschemesallowedfororiginsdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

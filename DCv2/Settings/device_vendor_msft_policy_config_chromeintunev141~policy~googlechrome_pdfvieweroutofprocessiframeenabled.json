@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "PdfViewerOutOfProcessIframeEnabled",
+        "Use out-of-process iframe PDF Viewer",
+        "\\Google\\Google Chrome",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Google Chrome"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV141~Policy~googlechrome/PdfViewerOutOfProcessIframeEnabled",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_pdfvieweroutofprocessiframeenabled",
+    "categoryId": "36c83fb3-c18c-472b-b39e-617c2f8a7fbd",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_pdfvieweroutofprocessiframeenabled",
+    "description": "Controls whether the PDF viewer in Google Chrome uses an out-of-process iframe (OOPIF). This will be the new PDF viewer architecture in the future, as it is simpler and makes adding new features easier. The existing GuestView PDF viewer is an outdated, complex architecture that is being deprecated.\r\n\r\nWhen this policy is set to Enabled or not set, Google Chrome will be able to use the OOPIF PDF viewer architecture. Once Enabled or not set, the default behavior will be decided by Google Chrome.\r\n\r\nWhen this policy is set to Disabled, Google Chrome will strictly use the existing GuestView PDF viewer. It embeds a web page with a separate frame tree into another web page.\r\n\r\nThis policy will be removed in the future, after the OOPIF PDF viewer feature has fully rolled out.",
+    "helpText": "",
+    "name": "PdfViewerOutOfProcessIframeEnabled",
+    "displayName": "Use out-of-process iframe PDF Viewer",
+    "defaultOptionId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_pdfvieweroutofprocessiframeenabled_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_pdfvieweroutofprocessiframeenabled_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_pdfvieweroutofprocessiframeenabled_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

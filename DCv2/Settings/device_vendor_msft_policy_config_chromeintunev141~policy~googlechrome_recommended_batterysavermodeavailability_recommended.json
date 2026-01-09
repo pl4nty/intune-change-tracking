@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "BatterySaverModeAvailability_recommended",
+        "Enable Battery Saver Mode",
+        "\\Google\\Google Chrome - Default Settings (users can override)",
+        "Both",
+        "Software\\Policies\\Google\\Chrome\\Recommended",
+        "Google Chrome - Default Settings users can override"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV141~Policy~googlechrome_recommended/BatterySaverModeAvailability_recommended",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_recommended_batterysavermodeavailability_recommended",
+    "categoryId": "c3857f91-3df8-472f-9b5a-b10778c715c0",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_recommended_batterysavermodeavailability_recommended",
+    "description": "This policy enables or disables the Battery Saver Mode setting.\r\nOn Chrome, this setting makes it so that frame rate is throttled to lower power consumption. If this policy is unset, the end user can control this setting in chrome://settings/performance.\r\nOn ChromeOS, this setting makes it so that frame rate and CPU frequency are throttled, backlights are dimmed, and Android is put in Battery Saver Mode. On devices with multiple CPUs, some CPUs will be turned off.\r\nThe different levels are:\r\nDisabled (0): Battery Saver Mode will be disabled.\r\nEnabledBelowThreshold (1): Battery Saver Mode will be enabled when the device is on battery power and battery level is low.\r\nEnabledOnBattery (2): This value is deprecated as of M121. From M121 onwards, values will be      treated as EnabledBelowThreshold.\r\n",
+    "helpText": "",
+    "name": "BatterySaverModeAvailability_recommended",
+    "displayName": "Enable Battery Saver Mode",
+    "defaultOptionId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_recommended_batterysavermodeavailability_recommended_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_recommended_batterysavermodeavailability_recommended_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_recommended_batterysavermodeavailability_recommended_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_recommended_batterysavermodeavailability_recommended_batterysavermodeavailability",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

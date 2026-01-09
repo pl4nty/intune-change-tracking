@@ -1,0 +1,84 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "LensOverlaySettings",
+        "Settings for the Lens Overlay feature",
+        "\\Google\\Google Chrome",
+        "Google\\Google Chrome",
+        "Google Chrome"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV141~Policy~googlechrome/LensOverlaySettings",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_lensoverlaysettings",
+    "categoryId": "36c83fb3-c18c-472b-b39e-617c2f8a7fbd",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_lensoverlaysettings_lensoverlaysettings",
+    "description": "",
+    "helpText": "",
+    "name": "LensOverlaySettings",
+    "displayName": "Settings for the Lens Overlay feature (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_lensoverlaysettings_lensoverlaysettings_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_lensoverlaysettings_lensoverlaysettings_0",
+            "description": null,
+            "helpText": null,
+            "name": "Allow",
+            "displayName": "Allow",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_lensoverlaysettings_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_lensoverlaysettings"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_lensoverlaysettings_lensoverlaysettings_1",
+            "description": null,
+            "helpText": null,
+            "name": "Do not allow",
+            "displayName": "Do not allow",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_lensoverlaysettings_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_lensoverlaysettings"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

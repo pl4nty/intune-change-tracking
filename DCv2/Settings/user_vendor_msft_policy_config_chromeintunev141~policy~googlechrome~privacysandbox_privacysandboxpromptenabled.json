@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "PrivacySandboxPromptEnabled",
+        "Choose whether the Privacy Sandbox prompt can be shown to your users",
+        "\\Google\\Google Chrome\\Privacy Sandbox policies",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Privacy Sandbox policies"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV141~Policy~googlechrome~PrivacySandbox/PrivacySandboxPromptEnabled",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~privacysandbox_privacysandboxpromptenabled",
+    "categoryId": "d4ad9168-8c49-45d6-a7e5-86ba990fff3e",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~privacysandbox_privacysandboxpromptenabled",
+    "description": "A policy to control whether your users see the Privacy Sandbox prompt.\r\nThe prompt is a user-blocking flow which informs your users of the Privacy Sandbox settings. See https://privacysandbox.com for details about Chrome’s effort to deprecate third-party cookies.\r\n\r\nIf you set this policy to Disabled, then Google Chrome won’t show the Privacy Sandbox prompt.\r\nIf you set this policy to Enabled or keep it unset, then Google Chrome determines whether the Privacy Sandbox prompt can be shown or not and then show it if possible.\r\n\r\nIf any of the following policies are set, it’s required to set this policy to Disabled:\r\nPrivacySandboxAdTopicsEnabled\r\nPrivacySandboxSiteEnabledAdsEnabled\r\nPrivacySandboxAdMeasurementEnabled",
+    "helpText": "",
+    "name": "PrivacySandboxPromptEnabled",
+    "displayName": "Choose whether the Privacy Sandbox prompt can be shown to your users (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~privacysandbox_privacysandboxpromptenabled_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~privacysandbox_privacysandboxpromptenabled_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~privacysandbox_privacysandboxpromptenabled_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

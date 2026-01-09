@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ShareBrowsingHistoryWithCopilotSearchAllowed",
+        "Allow sharing tenant-approved browsing history with Microsoft 365 Copilot Search",
+        "\\Microsoft Edge",
+        "Both",
+        "Software\\Policies\\Microsoft\\Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev143~Policy~microsoft_edge/ShareBrowsingHistoryWithCopilotSearchAllowed",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edgev143~policy~microsoft_edge_sharebrowsinghistorywithcopilotsearchallowed",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_microsoft_edgev143~policy~microsoft_edge_sharebrowsinghistorywithcopilotsearchallowed",
+    "description": "This policy controls whether browsing history in Microsoft Edge is shared with Microsoft 365 Copilot Search to provide more relevant search results. Only tenant-approved, work-related sites are shared.\r\n\r\nThis feature is available only to users who are signed in to Microsoft Edge with an Entra ID account and have an eligible Microsoft 365 Copilot license.\r\n\r\nIf you enable or don't configure this policy, browsing history will be shared with Microsoft 365 Copilot Search by default, and users can turn off sharing using the toggle in Microsoft Edge settings.\r\n\r\nIf you disable this policy, browsing history won't be shared with Microsoft 365 Copilot Search.\r\n\r\nLearn more about how Copilot uses data and consent at https://go.microsoft.com/fwlink/?linkid=2333202",
+    "helpText": "",
+    "name": "ShareBrowsingHistoryWithCopilotSearchAllowed",
+    "displayName": "Allow sharing tenant-approved browsing history with Microsoft 365 Copilot Search (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edgev143~policy~microsoft_edge_sharebrowsinghistorywithcopilotsearchallowed_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev143~policy~microsoft_edge_sharebrowsinghistorywithcopilotsearchallowed_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev143~policy~microsoft_edge_sharebrowsinghistorywithcopilotsearchallowed_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

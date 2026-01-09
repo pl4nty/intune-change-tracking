@@ -1,0 +1,103 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "HelpMeWriteSettings",
+        "Settings for Help Me Write",
+        "\\Google\\Google Chrome\\Generative AI",
+        "Google\\Google Chrome\\Generative AI",
+        "Generative AI"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV141~Policy~googlechrome~GenerativeAI/HelpMeWriteSettings",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_helpmewritesettings",
+    "categoryId": "5ee1e57c-db64-4f8e-a9ec-5308b5c633c4",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_helpmewritesettings_helpmewritesettings",
+    "description": "",
+    "helpText": "",
+    "name": "HelpMeWriteSettings",
+    "displayName": "Settings for Help Me Write (Device)",
+    "defaultOptionId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_helpmewritesettings_helpmewritesettings_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_helpmewritesettings_helpmewritesettings_0",
+            "description": null,
+            "helpText": null,
+            "name": "Allow Help Me Write and improve AI models.",
+            "displayName": "Allow Help Me Write and improve AI models.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_helpmewritesettings_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_helpmewritesettings"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_helpmewritesettings_helpmewritesettings_1",
+            "description": null,
+            "helpText": null,
+            "name": "Allow Help Me Write without improving AI models.",
+            "displayName": "Allow Help Me Write without improving AI models.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_helpmewritesettings_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_helpmewritesettings"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_helpmewritesettings_helpmewritesettings_2",
+            "description": null,
+            "helpText": null,
+            "name": "Do not allow Help Me Write.",
+            "displayName": "Do not allow Help Me Write.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_helpmewritesettings_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_helpmewritesettings"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

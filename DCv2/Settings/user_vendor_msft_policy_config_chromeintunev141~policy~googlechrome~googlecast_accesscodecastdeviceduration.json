@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "AccessCodeCastDeviceDuration",
+        "Specifies how long (in seconds) a cast device selected with an access code or QR code stays in the Google Cast menu's list of cast devices.",
+        "\\Google\\Google Chrome\\Google Cast",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Google Cast"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV141~Policy~googlechrome~GoogleCast/AccessCodeCastDeviceDuration",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~googlecast_accesscodecastdeviceduration",
+    "categoryId": "f7486553-9e63-4d63-9423-56e5ffe48700",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~googlecast_accesscodecastdeviceduration",
+    "description": "This policy specifies how long (in seconds) a cast device that was previously selected via an access code or QR code can be seen within the Google Cast menu of cast devices.\r\nThe lifetime of an entry starts at the time the access code was first entered or the QR code was first scanned.\r\nDuring this period the cast device will appear in the Google Cast menu's list of cast devices.\r\nAfter this period, in order to use the cast device again the access code must be reentered or the QR code must be rescanned.\r\nBy default, the period is zero seconds, so cast devices will not stay in the Google Cast menu, and so the access code must be reentered, or the QR code rescanned, in order to initiate a new casting session.\r\nNote that this policy only affects how long a cast devices appears in the Google Cast menu, and has no effect on any ongoing cast session which will continue even if the period expires.\r\nThis policy has no effect unless the AccessCodeCastEnabled policy is Enabled.",
+    "helpText": "",
+    "name": "AccessCodeCastDeviceDuration",
+    "displayName": "Specifies how long (in seconds) a cast device selected with an access code or QR code stays in the Google Cast menu's list of cast devices. (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~googlecast_accesscodecastdeviceduration_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~googlecast_accesscodecastdeviceduration_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~googlecast_accesscodecastdeviceduration_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~googlecast_accesscodecastdeviceduration_accesscodecastdeviceduration",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

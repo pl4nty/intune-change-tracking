@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ForcePermissionPolicyUnloadDefaultEnabled",
+        "Controls whether unload event handlers can be disabled.",
+        "\\Google\\Google Chrome",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Google Chrome"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV141~Policy~googlechrome/ForcePermissionPolicyUnloadDefaultEnabled",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_forcepermissionpolicyunloaddefaultenabled",
+    "categoryId": "36c83fb3-c18c-472b-b39e-617c2f8a7fbd",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_forcepermissionpolicyunloaddefaultenabled",
+    "description": "unload event handlers are being deprecated. Whether they fire depends on the unload Permissions-Policy. Currently, they are allowed by policy by default. In the future they will gradually move to being disallowed by default and sites must explicitly enable them using Permissions-Policy headers. This enterprise policy can be used to opt out of this gradual deprecation by forcing the default to remain as enabled.\r\n\r\nPages may depend on unload event handlers to save data or signal the end of a user session to the server. This is not recommended as it is unreliable and impacts performance by blocking use of BackForwardCache. Recommended alternatives exist, however the unload event has been used for a long time. Some applications may still rely on them.\r\n\r\nIf this policy is set to false or not set, then unload events handlers will be gradually deprecated in-line with the deprecation rollout and sites which do not set Permissions-Policy header will stop firing `unload` events.\r\n\r\nIf this policy is set to true then unload event handlers will continue to work by default.\r\n\r\nNOTE: This policy had an incorrectly documented default of `true` in M117. The unload event did and will not change in M117, so this policy has no effect in that version.\r\n",
+    "helpText": "",
+    "name": "ForcePermissionPolicyUnloadDefaultEnabled",
+    "displayName": "Controls whether unload event handlers can be disabled. (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_forcepermissionpolicyunloaddefaultenabled_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_forcepermissionpolicyunloaddefaultenabled_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_forcepermissionpolicyunloaddefaultenabled_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

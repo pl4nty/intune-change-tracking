@@ -1,0 +1,76 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "OriginKeyedProcessesEnabled_recommended",
+        "Enable origin-keyed process isolation by default.",
+        "\\Google\\Google Chrome - Default Settings (users can override)",
+        "Both",
+        "Software\\Policies\\Google\\Chrome\\Recommended",
+        "OriginKeyedProcessesEnabled",
+        "Google Chrome - Default Settings users can override"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV141~Policy~googlechrome_recommended/OriginKeyedProcessesEnabled_recommended",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_recommended_originkeyedprocessesenabled_recommended",
+    "categoryId": "c3857f91-3df8-472f-9b5a-b10778c715c0",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_recommended_originkeyedprocessesenabled_recommended",
+    "description": "Enables origin-keyed process isolation for most pages (i.e., those assigned to an origin-keyed agent cluster by default). This improves security but also increases the number of processes created. Users are allowed to override the set policy value via the command-line flags or chrome://flags (both to turn this feature on or off).\r\n\r\nSetting the policy to Enabled results in most origins being isolated, even from other origins in the same site. See also the IsolateOrigins and SitePerProcess policies.\r\n\r\nSetting the policy to Disabled results in no origins being isolated from the rest of their site unless an origin explicitly asks to.\r\n\r\nNot setting the policy results in the browser determining which origins to isolate and when to isolate them.",
+    "helpText": "",
+    "name": "OriginKeyedProcessesEnabled_recommended",
+    "displayName": "Enable origin-keyed process isolation by default. (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_recommended_originkeyedprocessesenabled_recommended_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_recommended_originkeyedprocessesenabled_recommended_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_recommended_originkeyedprocessesenabled_recommended_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,87 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "IZ_ProxyByPass",
+        "Intranet Sites: Include all sites that bypass the proxy server",
+        "\\Windows Components\\Internet Explorer\\Internet Control Panel\\Security Page",
+        "Both",
+        "Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap",
+        "ProxyByPass",
+        "Security Page"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-includeallproxybypasssites"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/InternetExplorer/IncludeAllProxyByPassSites",
+    "rootDefinitionId": "device_vendor_msft_policy_config_internetexplorer_includeallproxybypasssites",
+    "categoryId": "d2da164d-dd77-4489-b67f-d7fbdb19cde2",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_internetexplorer_includeallproxybypasssites",
+    "description": "This policy setting controls whether sites which bypass the proxy server are mapped into the local Intranet security zone.\r\n\r\nIf you enable this policy setting, sites which bypass the proxy server are mapped into the Intranet Zone.\r\n\r\nIf you disable this policy setting, sites which bypass the proxy server aren't necessarily mapped into the Intranet Zone (other rules might map one there).\r\n\r\nIf you do not configure this policy setting, users choose whether sites which bypass the proxy server are mapped into the Intranet Zone.",
+    "helpText": "",
+    "name": "IZ_ProxyByPass",
+    "displayName": "Intranet Sites: Include all sites that bypass the proxy server",
+    "defaultOptionId": "device_vendor_msft_policy_config_internetexplorer_includeallproxybypasssites_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26100.4770",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_internetexplorer_includeallproxybypasssites_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_internetexplorer_includeallproxybypasssites_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

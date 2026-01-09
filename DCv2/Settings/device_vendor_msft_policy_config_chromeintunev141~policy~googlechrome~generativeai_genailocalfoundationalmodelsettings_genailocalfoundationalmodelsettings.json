@@ -1,0 +1,84 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "GenAILocalFoundationalModelSettings",
+        "Settings for GenAI local foundational model",
+        "\\Google\\Google Chrome\\Generative AI",
+        "Google\\Google Chrome\\Generative AI",
+        "Generative AI"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV141~Policy~googlechrome~GenerativeAI/GenAILocalFoundationalModelSettings",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_genailocalfoundationalmodelsettings",
+    "categoryId": "5ee1e57c-db64-4f8e-a9ec-5308b5c633c4",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_genailocalfoundationalmodelsettings_genailocalfoundationalmodelsettings",
+    "description": "",
+    "helpText": "",
+    "name": "GenAILocalFoundationalModelSettings",
+    "displayName": "Settings for GenAI local foundational model (Device)",
+    "defaultOptionId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_genailocalfoundationalmodelsettings_genailocalfoundationalmodelsettings_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_genailocalfoundationalmodelsettings_genailocalfoundationalmodelsettings_0",
+            "description": null,
+            "helpText": null,
+            "name": "Downloads model automatically",
+            "displayName": "Downloads model automatically",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_genailocalfoundationalmodelsettings_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_genailocalfoundationalmodelsettings"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_genailocalfoundationalmodelsettings_genailocalfoundationalmodelsettings_1",
+            "description": null,
+            "helpText": null,
+            "name": "Do not download model",
+            "displayName": "Do not download model",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_genailocalfoundationalmodelsettings_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_genailocalfoundationalmodelsettings"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

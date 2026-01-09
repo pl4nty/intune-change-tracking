@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "LocalNetworkAccessRestrictionsEnabled",
+        "Specifies whether to apply restrictions to requests to local network endpoints",
+        "\\Google\\Google Chrome\\Local Network Access settings",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Local Network Access settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV141~Policy~googlechrome~LocalNetworkAccessSettings/LocalNetworkAccessRestrictionsEnabled",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~localnetworkaccesssettings_localnetworkaccessrestrictionsenabled",
+    "categoryId": "f66e6bf2-a437-4d36-b46c-e965b31a5d4f",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~localnetworkaccesssettings_localnetworkaccessrestrictionsenabled",
+    "description": "When this policy is set to Enabled, any time when a warning is supposed to be\r\ndisplayed in the DevTools due to Local Network Access checks failing, the\r\nmain request will be blocked instead.\r\n\r\nWhen this policy is set to Disabled or unset, Local Network Access requests will use the\r\ndefault handling of these requests.\r\n\r\nSee https://wicg.github.io/local-network-access/ for Local Network Access restrictions.",
+    "helpText": "",
+    "name": "LocalNetworkAccessRestrictionsEnabled",
+    "displayName": "Specifies whether to apply restrictions to requests to local network endpoints (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~localnetworkaccesssettings_localnetworkaccessrestrictionsenabled_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~localnetworkaccesssettings_localnetworkaccessrestrictionsenabled_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~localnetworkaccesssettings_localnetworkaccessrestrictionsenabled_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

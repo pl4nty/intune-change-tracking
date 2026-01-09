@@ -1,0 +1,92 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Disable Remote Agent Connectors",
+        "Windows AI"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-WindowsAI#disableremoteagentconnectors"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/WindowsAI/DisableRemoteAgentConnectors",
+    "rootDefinitionId": "device_vendor_msft_policy_config_windowsai_disableremoteagentconnectors",
+    "categoryId": "33a43c22-104b-4683-995b-5652cfd5b490",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_windowsai_disableremoteagentconnectors",
+    "description": "Enable or Disable Remote Agent Connectors.\r\n This setting is only available to Windows Insiders",
+    "helpText": "",
+    "name": "DisableRemoteAgentConnectors",
+    "displayName": "Disable Remote Agent Connectors (Windows Insiders only)",
+    "defaultOptionId": "device_vendor_msft_policy_config_windowsai_disableremoteagentconnectors_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.25272",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsEducation",
+            "iotEnterprise",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_windowsai_disableremoteagentconnectors_0",
+            "description": "User in control.",
+            "helpText": null,
+            "name": "User in control.",
+            "displayName": "User in control.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_windowsai_disableremoteagentconnectors_1",
+            "description": "Force Enable.",
+            "helpText": null,
+            "name": "Force Enable.",
+            "displayName": "Force Enable.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_windowsai_disableremoteagentconnectors_2",
+            "description": "Force Disable.",
+            "helpText": null,
+            "name": "Force Disable.",
+            "displayName": "Force Disable.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "WebRtcIPHandlingUrl",
+        "WebRTC per URL IP Handling",
+        "\\Google\\Google Chrome\\WebRtc settings",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Web Rtc settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV141~Policy~googlechrome~WebRtc/WebRtcIPHandlingUrl",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~webrtc_webrtciphandlingurl",
+    "categoryId": "b811c4fe-7ff0-4bd1-a454-0918d4e2f896",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~webrtc_webrtciphandlingurl",
+    "description": "This policy allows restricting which IP addresses and interfaces WebRTC uses when attempting to find the best available connection for each specific URL pattern.\r\n\r\nIt accepts a list of URL patterns and handling type pairs. The URL patterns are checked in order and the first match will configure which handling is used by WebRTC for the domain. When the URL of the current document is not matched against any entry, it uses the configuration set by the policy WebRtcIPHandling.\r\n\r\nFor detailed information on valid input patterns, please see https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns. Wildcards, *, are allowed. This policy only matches based on origin, so any path in the URL pattern is ignored.\r\n\r\nValid handling values:\r\n\r\n* default - WebRTC uses all network interfaces.\r\n\r\n* default_public_and_private_interfaces - WebRTC uses all public and private interfaces.\r\n\r\n* default_public_interface_only - WebRTC uses all public interfaces, but not private ones.\r\n\r\n* disable_non_proxied_udp - WebRTC uses either UDP SOCKS proxying or will fallback to TCP proxying.\r\n\r\nSee RFC 8828 section 5.2 (https://tools.ietf.org/html/rfc8828.html#section-5.2) for a detailed description of all the handling values.\r\nSee https://cloud.google.com/docs/chrome-enterprise/policies/?policy=WebRtcIPHandlingUrl for more information about schema and formatting.\r\n\r\n\r\nExample value:\r\n\r\n[\r\n  {\r\n    \"url\": \"https://www.example.com\",\r\n    \"handling\": \"default_public_and_private_interfaces\"\r\n  },\r\n  {\r\n    \"url\": \"https://[*.]example.edu\",\r\n    \"handling\": \"default_public_interface_only\"\r\n  },\r\n  {\r\n    \"url\": \"*\",\r\n    \"handling\": \"disable_non_proxied_udp\"\r\n  }\r\n]",
+    "helpText": "",
+    "name": "WebRtcIPHandlingUrl",
+    "displayName": "WebRTC per URL IP Handling (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~webrtc_webrtciphandlingurl_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~webrtc_webrtciphandlingurl_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~webrtc_webrtciphandlingurl_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~webrtc_webrtciphandlingurl_webrtciphandlingurl",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

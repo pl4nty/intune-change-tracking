@@ -1,0 +1,87 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "SecurityPage_AutoDetect",
+        "Turn on automatic detection of intranet",
+        "\\Windows Components\\Internet Explorer\\Internet Control Panel\\Security Page",
+        "Both",
+        "Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap",
+        "AutoDetect",
+        "Security Page"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-autodetectintranet"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/InternetExplorer/AutoDetectIntranet",
+    "rootDefinitionId": "device_vendor_msft_policy_config_internetexplorer_autodetectintranet",
+    "categoryId": "d2da164d-dd77-4489-b67f-d7fbdb19cde2",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_internetexplorer_autodetectintranet",
+    "description": "This policy setting enables intranet mapping rules to be applied automatically if the computer belongs to a domain.\r\n\r\nIf you enable this policy setting, automatic detection of the intranet is turned on, and intranet mapping rules are applied automatically if the computer belongs to a domain.\r\n\r\nIf you disable this policy setting, automatic detection of the intranet is turned off, and intranet mapping rules are applied however they are configured.\r\n\r\nIf this policy setting is not configured, the user can choose whether or not to automatically detect the intranet through the intranet settings dialog in Control Panel.",
+    "helpText": "",
+    "name": "SecurityPage_AutoDetect",
+    "displayName": "Turn on automatic detection of intranet",
+    "defaultOptionId": "device_vendor_msft_policy_config_internetexplorer_autodetectintranet_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26100.4770",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_internetexplorer_autodetectintranet_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_internetexplorer_autodetectintranet_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

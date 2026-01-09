@@ -1,0 +1,103 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "TabCompareSettings",
+        "Tab Compare settings",
+        "\\Google\\Google Chrome\\Generative AI",
+        "Google\\Google Chrome\\Generative AI",
+        "Generative AI"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV141~Policy~googlechrome~GenerativeAI/TabCompareSettings",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_tabcomparesettings",
+    "categoryId": "5ee1e57c-db64-4f8e-a9ec-5308b5c633c4",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_tabcomparesettings_tabcomparesettings",
+    "description": "",
+    "helpText": "",
+    "name": "TabCompareSettings",
+    "displayName": "Tab Compare settings (Device)",
+    "defaultOptionId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_tabcomparesettings_tabcomparesettings_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_tabcomparesettings_tabcomparesettings_0",
+            "description": null,
+            "helpText": null,
+            "name": "Allow Tab Compare and improve AI models.",
+            "displayName": "Allow Tab Compare and improve AI models.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_tabcomparesettings_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_tabcomparesettings"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_tabcomparesettings_tabcomparesettings_1",
+            "description": null,
+            "helpText": null,
+            "name": "Allow Tab Compare without improving AI models.",
+            "displayName": "Allow Tab Compare without improving AI models.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_tabcomparesettings_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_tabcomparesettings"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_tabcomparesettings_tabcomparesettings_2",
+            "description": null,
+            "helpText": null,
+            "name": "Do not allow Tab Compare.",
+            "displayName": "Do not allow Tab Compare.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_tabcomparesettings_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~generativeai_tabcomparesettings"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

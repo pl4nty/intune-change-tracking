@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "AccessControlAllowMethodsInCORSPreflightSpecConformant",
+        "Make Access-Control-Allow-Methods matching in CORS preflight spec conformant",
+        "\\Google\\Google Chrome\\Network settings",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Network settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV141~Policy~googlechrome~Network/AccessControlAllowMethodsInCORSPreflightSpecConformant",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~network_accesscontrolallowmethodsincorspreflightspecconformant",
+    "categoryId": "fa2722a8-dcfd-4e14-a429-2b0041642c77",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~network_accesscontrolallowmethodsincorspreflightspecconformant",
+    "description": "This policy controls whether request methods are uppercased when matching with Access-Control-Allow-Methods response headers in CORS preflight.\r\n\r\nIf the policy is Disabled, request methods are uppercased.\r\nThis is the behavior on or before Google Chrome 108.\r\n\r\nIf the policy is Enabled or not set, request methods are not uppercased, unless matching case-insensitively with DELETE, GET, HEAD, OPTIONS, POST, or PUT.\r\nThis would reject fetch(url, {method: 'Foo'}) + \"Access-Control-Allow-Methods: FOO\" response header,\r\nand would accept fetch(url, {method: 'Foo'}) + \"Access-Control-Allow-Methods: Foo\" response header.\r\n\r\nNote: request methods \"post\" and \"put\" are not affected, while \"patch\" is affected.\r\n\r\nThis policy is intended to be temporary and will be removed in the future.",
+    "helpText": "",
+    "name": "AccessControlAllowMethodsInCORSPreflightSpecConformant",
+    "displayName": "Make Access-Control-Allow-Methods matching in CORS preflight spec conformant (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~network_accesscontrolallowmethodsincorspreflightspecconformant_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~network_accesscontrolallowmethodsincorspreflightspecconformant_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~network_accesscontrolallowmethodsincorspreflightspecconformant_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

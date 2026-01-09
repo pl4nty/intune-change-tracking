@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "CACertificateManagementAllowed",
+        "Allow users to manage installed CA certificates.",
+        "\\Google\\Google Chrome\\Certificate management settings",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Certificate management settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV141~Policy~googlechrome~CertificateManagement/CACertificateManagementAllowed",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~certificatemanagement_cacertificatemanagementallowed",
+    "categoryId": "1d6d392c-8b32-459b-b114-af964a4bbbc5",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~certificatemanagement_cacertificatemanagementallowed",
+    "description": "Setting the policy to All (0) or leaving it unset lets users edit trust settings for all CA certificates, remove user-imported certificates, and import certificates using Certificate Manager. Setting the policy to UserOnly (1) lets users manage only user-imported certificates, but not change trust settings of built-in certificates. Setting it to None (2) lets users view (not manage) CA certificates.",
+    "helpText": "",
+    "name": "CACertificateManagementAllowed",
+    "displayName": "Allow users to manage installed CA certificates.",
+    "defaultOptionId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~certificatemanagement_cacertificatemanagementallowed_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~certificatemanagement_cacertificatemanagementallowed_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~certificatemanagement_cacertificatemanagementallowed_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_chromeintunev141~policy~googlechrome~certificatemanagement_cacertificatemanagementallowed_cacertificatemanagementallowed",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

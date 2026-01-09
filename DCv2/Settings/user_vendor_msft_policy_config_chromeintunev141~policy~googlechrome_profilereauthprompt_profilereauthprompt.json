@@ -1,0 +1,84 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ProfileReauthPrompt",
+        "Prompt users to re-authenticate to the profile",
+        "\\Google\\Google Chrome",
+        "Google\\Google Chrome",
+        "Google Chrome"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV141~Policy~googlechrome/ProfileReauthPrompt",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_profilereauthprompt",
+    "categoryId": "36c83fb3-c18c-472b-b39e-617c2f8a7fbd",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_profilereauthprompt_profilereauthprompt",
+    "description": "",
+    "helpText": "",
+    "name": "ProfileReauthPrompt",
+    "displayName": "Prompt users to re-authenticate to the profile (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_profilereauthprompt_profilereauthprompt_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_profilereauthprompt_profilereauthprompt_0",
+            "description": null,
+            "helpText": null,
+            "name": "Do not prompt for reauth",
+            "displayName": "Do not prompt for reauth",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_profilereauthprompt_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_profilereauthprompt"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_profilereauthprompt_profilereauthprompt_1",
+            "description": null,
+            "helpText": null,
+            "name": "Prompt for reauth in a tab",
+            "displayName": "Prompt for reauth in a tab",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_profilereauthprompt_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_profilereauthprompt"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

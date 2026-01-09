@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "EnterpriseProfileBadgeToolbarSettings",
+        "Controls visibility of enterprise profile badge in the toolbar",
+        "\\Google\\Google Chrome",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Google Chrome"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chromeIntuneV141~Policy~googlechrome/EnterpriseProfileBadgeToolbarSettings",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_enterpriseprofilebadgetoolbarsettings",
+    "categoryId": "36c83fb3-c18c-472b-b39e-617c2f8a7fbd",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_enterpriseprofilebadgetoolbarsettings",
+    "description": "For work and school profiles, the toolbar will show a \"Work\" or \"School\" label by default next to the toolbar avatar. The label will only be shown if the signed in account is managed.\r\n\r\nSetting this policy to hide_expanded_enterprise_toolbar_badge (value 1) will hide the enterprise badge for a managed profile in the toolbar.\r\n\r\nLeaving this policy unset or setting it to show_expanded_enterprise_toolbar_badge (value 0) will show the enterprise badge.\r\n\r\nThe label is customizable via the EnterpriseCustomLabel policy.",
+    "helpText": "",
+    "name": "EnterpriseProfileBadgeToolbarSettings",
+    "displayName": "Controls visibility of enterprise profile badge in the toolbar (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_enterpriseprofilebadgetoolbarsettings_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_enterpriseprofilebadgetoolbarsettings_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_enterpriseprofilebadgetoolbarsettings_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_chromeintunev141~policy~googlechrome_enterpriseprofilebadgetoolbarsettings_enterpriseprofilebadgetoolbarsettings",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}
