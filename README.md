@@ -1,4 +1,4 @@
-# [![Subscribe with RSS](https://upload.wikimedia.org/wikipedia/en/thumb/4/43/Feed-icon.svg/25px-Feed-icon.svg.png)](https://github.com/pl4nty/intune-change-tracking/commits/main/DCv2.atom) Intune change tracking
+# Intune change tracking
 
 Tracks changes to [Microsoft Intune](https://learn.microsoft.com/en-us/mem/intune/fundamentals/what-is-intune) features via the [Microsoft Graph](https://learn.microsoft.com/en-us/graph/overview) API.
-[Click here](https://github.com/pl4nty/intune-change-tracking/commits/main/DCv2.atom) to subscribe with RSS.
+[Click here](https://github.com/pl4nty/intune-change-tracking/commits/main/DCv2.atom) to subscribe with [RSS](https://en.wikipedia.org/wiki/RSS).
