@@ -1,0 +1,32 @@
+{
+    "id": "7150d34d-3ddb-4bb5-b71c-a2cb2a43dfd9",
+    "description": "This role enables administrators to manage organization-wide transport settings, such as system messages, site configuration, and other organization-wide transport settings.\r\nThis role doesn't enable you to create or manage transport Receive or Send connectors, queues, hygiene, agents, remote and accepted domains, or rules. To create or manage each of the transport features, you must be assigned roles associated with the following role types:\r\nReceiveConnectors\r\nSendConnectors\r\nTransportQueues\r\nTransportHygiene\r\nTransportAgents\r\nRemoteandAcceptedDomains\r\nTransportRules",
+    "displayName": "Organization Transport Settings",
+    "isEnabled": true,
+    "version": "0.12 (14.0.451.0)",
+    "isBuiltIn": true,
+    "templateId": null,
+    "allowedPrincipalTypes": "user,group",
+    "rolePermissions": [
+        {
+            "allowedResourceActions": [
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Set-TenantMailFromAddress -ApplicationId -FromAddress",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Set-TransportConfig -AddressBookPolicyRoutingEnabled -AllowLegacyTLSClients -ClearCategories -Confirm -ConvertDisclaimerWrapperToEml -DSNConversionMode -ErrorAction -ErrorVariable -ExternalDelayDsnEnabled -ExternalDsnDefaultLanguage -ExternalDsnLanguageDetectionEnabled -ExternalDsnReportingAuthority -ExternalDsnSendHtml -ExternalPostmasterAddress -Force -HeaderPromotionModeSetting -InternalDelayDsnEnabled -InternalDsnDefaultLanguage -InternalDsnLanguageDetectionEnabled -InternalDsnReportingAuthority -InternalDsnSendHtml -JournalingReportNdrTo -JournalMessageExpirationDays -MaxRecipientEnvelopeLimit -MessageExpiration -OutBuffer -OutVariable -PreventDuplicateJournalingEnabled -ReplyAllStormBlockDurationHours -ReplyAllStormDetectionMinimumRecipients -ReplyAllStormDetectionMinimumReplies -ReplyAllStormProtectionEnabled -Rfc2231EncodingEnabled -SmtpClientAuthenticationDisabled -VoicemailJournalingEnabled -WarningAction -WarningVariable -WhatIf",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) New-TenantExemptionQuota -BlockingScenario",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-TenantExemptionQuotaEligibility -BlockingScenario",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-TenantExemptionQuota -BlockingScenario",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Test-OAuthConnectivity -AppOnly -Confirm -Debug -DomainController -ErrorAction -ErrorVariable -Mailbox -OutBuffer -OutVariable -ReloadConfig -Service -TargetUri -UseCachedToken -Verbose -WarningAction -WarningVariable -WhatIf",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Write-AdminAuditLog -Comment -Confirm -ErrorAction -ErrorVariable -OutBuffer -OutVariable -WarningAction -WarningVariable -WhatIf",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Set-HybridMailflow -CentralizedTransportEnabled -CertificateSubject -Confirm -ErrorAction -ErrorVariable -InboundIPs -OnPremisesFQDN -OutboundDomains -OutBuffer -OutVariable -SecureMailEnabled -WarningAction -WarningVariable -WhatIf",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-TransportConfig -ErrorAction -ErrorVariable -OutBuffer -OutVariable -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-OrganizationRelationship -ErrorAction -ErrorVariable -Identity -OutBuffer -OutVariable -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-IntraOrganizationConnector -ErrorAction -ErrorVariable -Identity -OutBuffer -OutVariable -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-IntraOrganizationConfiguration -ErrorAction -ErrorVariable -OutBuffer -OutVariable -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-HybridMailflowDatacenterIPs -ErrorAction -ErrorVariable -OutBuffer -OutVariable -WarningAction -WarningVariable",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-HybridMailflow -ErrorAction -ErrorVariable -OutBuffer -OutVariable -WarningAction -WarningVariable"
+            ],
+            "excludedResourceActions": [],
+            "condition": null
+        }
+    ]
+}

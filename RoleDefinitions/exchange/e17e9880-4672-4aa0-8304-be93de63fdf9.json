@@ -1,0 +1,28 @@
+{
+    "id": "e17e9880-4672-4aa0-8304-be93de63fdf9",
+    "description": "This role enables individual users to view and modify their e-mail subscription settings such as message format and protocol defaults.",
+    "displayName": "MyMailSubscriptions",
+    "isEnabled": true,
+    "version": "0.12 (14.0.451.0)",
+    "isBuiltIn": true,
+    "templateId": null,
+    "allowedPrincipalTypes": "user,group",
+    "rolePermissions": [
+        {
+            "allowedResourceActions": [
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-TenantScanRequestStatistics -IncludeReport",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Remove-MailboxAnalysisRequest -Confirm -ErrorAction -ErrorVariable -Force -Identity -Mailbox -OutBuffer -OutVariable -WarningAction -WarningVariable -WhatIf",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-ScopeAdmins -ScopeIds",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-SyncRequestStatistics -DiagnosticInfo -DiagnosticOnly -ErrorAction -ErrorVariable -Identity -IncludeReport -IncludeSkippedItems -IncludeSlaReport -OutBuffer -OutVariable -ReportOnly -WarningAction -WarningVariable -WhatIf",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Start-AuditAssistant -Identity",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Set-UnifiedAuditSetting -Identity",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Remove-SyncRequest -Confirm -ErrorAction -ErrorVariable -Force -Identity -Mailbox -OutBuffer -OutVariable -WarningAction -WarningVariable -WhatIf -Xrm",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-UnifiedAuditSetting -Identity",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-SyncRequest -Confirm -ErrorAction -ErrorVariable -Identity -Mailbox -Name -OutBuffer -OutVariable -ResultSize -SyncProtocol -WarningAction -WarningVariable -WhatIf -WorkloadType",
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-Mailbox -Identity"
+            ],
+            "excludedResourceActions": [],
+            "condition": null
+        }
+    ]
+}
