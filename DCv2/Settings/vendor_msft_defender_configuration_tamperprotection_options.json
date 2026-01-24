@@ -17,10 +17,10 @@
     "visibility": "template",
     "riskLevel": "low",
     "id": "vendor_msft_defender_configuration_tamperprotection_options",
-    "description": "Tamper protection helps protect important security features from unwanted changes and interference. This includes real-time protection, behavior monitoring, and more. Accepts signed string to turn the feature on or off. Settings are configured with an MDM solution, such as Intune and is available in Windows 10 Enterprise E5 or equivalent subscriptions.",
+    "description": "This setting can be used to turn on controlled configuration or tamper protection to help protect important security features from unwanted changes and interference.\r\n\r\nIf the setting is configured to Tamper Protection (On), this turns on tamper protection to enforce tamper protected settings to their secure defaults. This includes real-time protection, behavior monitoring, and more. Settings are configured with an MDM solution, such as Intune and is available in Windows 10 Enterprise E5 or equivalent subscriptions.\r\n\r\nIf the setting is configured to Controlled Configuration (On), this turns on controlled configuration, which enforces the configuration coming from Intune exclusively and any non-configured settings to their secure defaults. Controlled configuration is applicable to Antivirus and Endpoint detection and response settings.\r\n\r\nIf the setting is configured to OFF, this turns off Controlled Configuration and Tamper Protection.",
     "helpText": null,
-    "name": "TamperProtection",
-    "displayName": "TamperProtection (Device)",
+    "name": "ControlledConfiguration",
+    "displayName": "Controlled Configuration (Device)",
     "defaultOptionId": "vendor_msft_defender_configuration_tamperprotection_options_1",
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
@@ -68,6 +68,10 @@
                 {
                     "dependedOnBy": "vendor_msft_defender_configuration_tamperprotection_blob",
                     "required": false
+                },
+                {
+                    "dependedOnBy": "vendor_msft_controlledconfiguration_blob",
+                    "required": false
                 }
             ]
         },
@@ -76,7 +80,7 @@
             "description": null,
             "helpText": null,
             "name": "Onboarding",
-            "displayName": "On",
+            "displayName": "Tamper Protection (On)",
             "optionValue": {
                 "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
                 "settingValueTemplateReference": null,
@@ -84,6 +88,33 @@
             },
             "dependentOn": [],
             "dependedOnBy": [
+                {
+                    "dependedOnBy": "vendor_msft_defender_configuration_tamperprotection_blob",
+                    "required": false
+                },
+                {
+                    "dependedOnBy": "vendor_msft_controlledconfiguration_blob",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "itemId": "vendor_msft_defender_configuration_tamperprotection_options_2",
+            "description": null,
+            "helpText": null,
+            "name": "ControlledConfig_Onboarding",
+            "displayName": "Controlled Configuration (On)",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "ControlledConfig_Onboarding"
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "vendor_msft_controlledconfiguration_blob",
+                    "required": false
+                },
                 {
                     "dependedOnBy": "vendor_msft_defender_configuration_tamperprotection_blob",
                     "required": false
