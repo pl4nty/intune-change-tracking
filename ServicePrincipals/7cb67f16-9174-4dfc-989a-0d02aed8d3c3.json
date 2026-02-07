@@ -52,7 +52,34 @@
     "api": {
         "resourceSpecificApplicationPermissions": []
     },
-    "appRoles": [],
+    "appRoles": [
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to invoke AI Agents RTP tools",
+            "displayName": "AI Agents RTP Tool Invocation",
+            "id": "c4e2f8a3-9b51-4d7e-8f3c-2a6d4b8e1c9f",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "AIAgentsRTP.ToolInvocation",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Deprecated - use AIAgentsRTP.ToolInvocation instead",
+            "displayName": "AI Agents RTP Tool Invocation (Deprecated)",
+            "id": "da3f40d6-0a79-4e0b-9cfd-df0f53b6575d",
+            "isEnabled": false,
+            "origin": "Application",
+            "value": "AIAgentsRTP.ToolInvocation.Deprecated",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        }
+    ],
     "info": {
         "termsOfServiceUrl": null,
         "supportUrl": null,
@@ -61,7 +88,30 @@
         "logoUrl": null
     },
     "keyCredentials": [],
-    "publishedPermissionScopes": [],
+    "publishedPermissionScopes": [
+        {
+            "adminConsentDescription": "Allows the app to invoke AI Agents RTP tools on behalf of the user",
+            "adminConsentDisplayName": "AI Agents RTP Tool Invocation",
+            "id": "b8e3c5a1-7d92-4f6e-a1c8-9d4b2e6f8a3c",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allow this app to invoke AI Agents RTP tools on your behalf",
+            "userConsentDisplayName": "Invoke AI Agents RTP tools",
+            "value": "AIAgentsRTP.ToolInvocation",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Deprecated - use AIAgentsRTP.ToolInvocation instead",
+            "adminConsentDisplayName": "AI Agents RTP Tool Invocation (Deprecated)",
+            "id": "da3f40d6-0a79-4e0b-9cfd-df0f53b6575d",
+            "isEnabled": false,
+            "type": "Admin",
+            "userConsentDescription": "Deprecated scope",
+            "userConsentDisplayName": "Invoke AI Agents RTP tools (Deprecated)",
+            "value": "AIAgentsRTP.ToolInvocation.Deprecated",
+            "isPrivate": false
+        }
+    ],
     "passwordCredentials": [],
     "resourceSpecificApplicationPermissions": [],
     "verifiedPublisher": {
