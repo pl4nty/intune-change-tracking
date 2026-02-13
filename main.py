@@ -2,7 +2,7 @@ from msgraph_beta.generated.security.microsoft_graph_security_run_hunting_query.
 from msgraph_beta.generated.security.microsoft_graph_security_run_hunting_query.microsoft_graph_security_run_hunting_query_request_builder import MicrosoftGraphSecurityRunHuntingQueryRequestBuilder
 from msgraph_beta.generated.device_management.configuration_settings.configuration_settings_request_builder import ConfigurationSettingsRequestBuilder
 from kiota_abstractions.native_response_handler import NativeResponseHandler
-from kiota_http.middleware.options import ResponseHandlerOption
+from kiota_http.middleware.options.response_handler_option import ResponseHandlerOption
 from kiota_abstractions.base_request_configuration import RequestConfiguration
 import requests
 from msgraph_beta import GraphServiceClient
@@ -72,7 +72,7 @@ async def main():
                         # id_10699 -> id
                         id = '_'.join(setting.get('id').split('_')[:-1])
                         cleanDCv1Ids(setting)
-                        path = Path(output, source, id).with_suffix('.json')
+                        path = Path(output, source, id + '.json')
                         with open(path, 'w', encoding='utf-8') as f:
                             json.dump(setting, f, ensure_ascii=False, indent=4)
 
@@ -127,7 +127,7 @@ async def main():
             id = x.get('id')
             with open(f'ResourceOperations/{id}.json', 'w', encoding='utf-8') as f:
                 json.dump(x, f, ensure_ascii=False, indent=4)
-    
+
     for table in [
         'AlertEvidence',
         'AlertInfo',
@@ -164,7 +164,7 @@ async def main():
     os.makedirs(Path(output, source))
     data = await client.device_management.with_url('https://graph.microsoft.com/beta/deviceManagement/settingDefinitions').get(request_configuration=request_config)
     for item in data.json().get('value'):
-        path = Path(output, source, item.get('id')).with_suffix('.json')
+        path = Path(output, source, item.get('id') + '.json')
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(item, f, ensure_ascii=False, indent=4)
 
@@ -177,7 +177,7 @@ async def main():
     data = await client.device_management.with_url('https://graph.microsoft.com/beta/deviceManagement/configurationSettings').get(request_configuration=request_config)
     for item in data.json().get('value'):
         item.pop('version')
-        path = Path(output, source, item.get('id')).with_suffix('.json')
+        path = Path(output, source, item.get('id') + '.json')
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(item, f, ensure_ascii=False, indent=4)
 
@@ -187,7 +187,7 @@ async def main():
     data = await client.device_management.with_url('https://graph.microsoft.com/beta/deviceManagement/complianceSettings').get(request_configuration=request_config)
     for item in data.json().get('value'):
         item.pop('version')
-        path = Path(output, source, item.get('id')).with_suffix('.json')
+        path = Path(output, source, item.get('id') + '.json')
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(item, f, ensure_ascii=False, indent=4)
 
@@ -197,7 +197,7 @@ async def main():
     # kiota 1.9.1 started dropping deviceManagement from endpoint
     data = await client.device_management.with_url('https://graph.microsoft.com/beta/deviceManagement/configurationPolicyTemplates').get(request_configuration=request_config)
     for item in data.json().get('value'):
-        path = Path(output, source, item.get('id')).with_suffix('.json')
+        path = Path(output, source, item.get('id') + '.json')
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(item, f, ensure_ascii=False, indent=4)
 
@@ -212,7 +212,7 @@ async def main():
     data = await client.device_management.with_url('https://graph.microsoft.com/beta/deviceManagement/inventorySettings').get(request_configuration=request_config)
     for item in data.json().get('value'):
         item.pop('version')
-        path = Path(output, source, item.get('id')).with_suffix('.json')
+        path = Path(output, source, item.get('id') + '.json')
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(item, f, ensure_ascii=False, indent=4)
 
