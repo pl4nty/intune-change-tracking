@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Security Preferences"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "dontAllowFireWallUI",
+    "rootDefinitionId": "com.apple.preference.security_com.apple.preference.security",
+    "categoryId": "8abddb23-7036-4ba8-8912-529279a849ea",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.preference.security_dontallowfirewallui",
+    "description": "If true, disables user changes to the firewall settings.",
+    "helpText": null,
+    "name": "dontAllowFireWallUI",
+    "displayName": "Do Not Allow Firewall UI",
+    "defaultOptionId": "com.apple.preference.security_dontallowfirewallui_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.preference.security_dontallowfirewallui_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.preference.security_com.apple.preference.security",
+                    "parentSettingId": "com.apple.preference.security_com.apple.preference.security"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.preference.security_dontallowfirewallui_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.preference.security_com.apple.preference.security",
+                    "parentSettingId": "com.apple.preference.security_com.apple.preference.security"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

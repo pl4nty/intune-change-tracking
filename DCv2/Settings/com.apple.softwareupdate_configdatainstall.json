@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Software Update"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "ConfigDataInstall",
+    "rootDefinitionId": "com.apple.softwareupdate_com.apple.softwareupdate",
+    "categoryId": "f8f4d337-4c55-4518-91c4-f7f77703d843",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.softwareupdate_configdatainstall",
+    "description": "If false, restricts the automatic installation of configuration data.",
+    "helpText": null,
+    "name": "ConfigDataInstall",
+    "displayName": "Config Data Install (Deprecated)",
+    "defaultOptionId": "com.apple.softwareupdate_configdatainstall_true",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.softwareupdate_configdatainstall_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.softwareupdate_com.apple.softwareupdate",
+                    "parentSettingId": "com.apple.softwareupdate_com.apple.softwareupdate"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.softwareupdate_configdatainstall_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.softwareupdate_com.apple.softwareupdate",
+                    "parentSettingId": "com.apple.softwareupdate_com.apple.softwareupdate"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

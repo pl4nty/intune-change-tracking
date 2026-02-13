@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Restrictions"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "allowSafari",
+    "rootDefinitionId": "com.apple.applicationaccess_com.apple.applicationaccess",
+    "categoryId": "eda31027-9270-4959-801b-397fa05512e2",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.applicationaccess_allowsafari",
+    "description": "If false, disables the Safari web browser app, and its icon is removed from the Home screen. This setting also prevents users from opening web clips. As of iOS 13, requires a supervised device. Available in iOS 4 and later.",
+    "helpText": null,
+    "name": "allowSafari",
+    "displayName": "Allow Safari",
+    "defaultOptionId": "com.apple.applicationaccess_allowsafari_true",
+    "applicability": {
+        "description": null,
+        "platform": "iOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.applicationaccess_allowsafari_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.applicationaccess_com.apple.applicationaccess",
+                    "parentSettingId": "com.apple.applicationaccess_com.apple.applicationaccess"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.applicationaccess_allowsafari_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.applicationaccess_com.apple.applicationaccess",
+                    "parentSettingId": "com.apple.applicationaccess_com.apple.applicationaccess"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

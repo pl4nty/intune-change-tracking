@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Finder"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "ProhibitConnectTo",
+    "rootDefinitionId": "com.apple.finder_com.apple.finder",
+    "categoryId": "d8f06fcf-7328-43ac-b5b7-f7166b5333de",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.finder_prohibitconnectto",
+    "description": "If true, prohibits users from using a dialog that lets them view, select, or manually connect to servers on the local network or on the internet.",
+    "helpText": null,
+    "name": "ProhibitConnectTo",
+    "displayName": "Prohibit Connect To",
+    "defaultOptionId": "com.apple.finder_prohibitconnectto_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.finder_prohibitconnectto_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.finder_com.apple.finder",
+                    "parentSettingId": "com.apple.finder_com.apple.finder"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.finder_prohibitconnectto_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.finder_com.apple.finder",
+                    "parentSettingId": "com.apple.finder_com.apple.finder"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

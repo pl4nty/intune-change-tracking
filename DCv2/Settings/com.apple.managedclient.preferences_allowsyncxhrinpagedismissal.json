@@ -1,0 +1,62 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#allowsyncxhrinpagedismissal"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "AllowSyncXHRInPageDismissal",
+    "rootDefinitionId": "com.apple.managedclient.preferences_allowsyncxhrinpagedismissal",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_allowsyncxhrinpagedismissal",
+    "description": "This policy lets you specify that a page can send synchronous XHR requests during page dismissal.\n\nIf you enable this policy, pages can send synchronous XHR requests during page dismissal.\n\nIf you disable this policy or don't configure this policy, pages aren't allowed to send synchronous XHR requests during page dismissal.\n\nThis policy is temporary and will be removed in a future release.",
+    "helpText": null,
+    "name": "AllowSyncXHRInPageDismissal",
+    "displayName": "Allow pages to send synchronous XHR requests during page dismissal",
+    "defaultOptionId": "com.apple.managedclient.preferences_allowsyncxhrinpagedismissal_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_allowsyncxhrinpagedismissal_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "Blocked",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_allowsyncxhrinpagedismissal_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "Allowed",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

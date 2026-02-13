@@ -1,0 +1,48 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#defaultsearchprovidersuggesturl"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "DefaultSearchProviderSuggestURL",
+    "rootDefinitionId": "com.apple.managedclient.preferences_defaultsearchprovidersuggesturl",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_defaultsearchprovidersuggesturl",
+    "description": "Specifies the URL for the search engine used to provide search suggestions. The URL contains the string '{searchTerms}', which is replaced at query time by the text the user has entered so far.\n\nThis policy is optional. If you don't configure it, users won't see search suggestions; they will see suggestions from their browsing history and favorites.\n\nBing's suggest URL can be specified as:\n\n'{bing:baseURL}qbox?query={searchTerms}'.\n\nGoogle's suggest URL can be specified as: '{google:baseURL}complete/search?output=chrome&q={searchTerms}'.\n\nThis policy is applied only if you enable the \"DefaultSearchProviderEnabled\" and \"DefaultSearchProviderSearchURL\" policies.",
+    "helpText": null,
+    "name": "DefaultSearchProviderSuggestURL",
+    "displayName": "Default search provider URL for suggestions",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

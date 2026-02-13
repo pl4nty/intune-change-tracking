@@ -1,0 +1,46 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Web Rtc settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.WebRtcIPHandlingUrl",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.webrtciphandlingurl",
+    "categoryId": "08677354-6f67-455e-a430-4d8d2fbabe84",
+    "settingUsage": "configuration",
+    "uxBehavior": "largeTextBox",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.webrtciphandlingurl",
+    "description": "Controls which IP addresses and network interfaces WebRTC can use\nwhen establishing connections for specific URL patterns.\n\nHow It Works:\nAccepts a list of URL patterns, each paired with a handling type.\nWebRTC evaluates patterns sequentially; the first match determines the handling type.\nIf no match is found, WebRTC defaults to the WebRtcLocalhostIpHandling WebRtcLocalhostIpHandling. policy.\nThis policy applies only to origins—URL path components are ignored.\nWildcards (*) are supported in URL patterns.\n\nSupported Handling Values:\ndefault – Uses all available network interfaces.\ndefault_public_and_private_interfaces – WebRTC uses all public and private interfaces.\ndefault_public_interface_only – WebRTC uses only public interfaces.\ndisable_non_proxied_udp – WebRTC uses UDP SOCKS proxying or falls back to TCP proxying.\n\nMore Information:\nValid input patterns: <a href=\"https://go.microsoft.com/fwlink/?linkid=2095322\">https://go.microsoft.com/fwlink/?linkid=2095322</a>\nHandling types: https://tools.ietf.org/html/rfc8828.html#section-5.2",
+    "helpText": null,
+    "name": "WebRtcIPHandlingUrl",
+    "displayName": "WebRTC IP Handling Policy for URL Patterns",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 0,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

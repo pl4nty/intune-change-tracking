@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.ConfigureShare",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.configureshare",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.configureshare",
+    "description": "If you set this policy to 'ShareAllowed' (the default), users will be able to access the Share experience from the Settings and More Menu in Microsoft Edge to share with other apps on the system.\n\nIf you set this policy to 'ShareDisallowed', users won't be able to access the Share experience. If the Share button is on the toolbar, it will also be hidden.\n\nPolicy options mapping:\n\n* ShareAllowed (0) = Allow using the Share experience\n\n* ShareDisallowed (1) = Don't allow using the Share experience\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "ConfigureShare",
+    "displayName": "Configure the Share experience",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.configureshare_shareallowed",
+            "description": null,
+            "helpText": null,
+            "name": "Allow using the Share experience",
+            "displayName": "Allow using the Share experience",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.configureshare_sharedisallowed",
+            "description": null,
+            "helpText": null,
+            "name": "Don't allow using the Share experience",
+            "displayName": "Don't allow using the Share experience",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

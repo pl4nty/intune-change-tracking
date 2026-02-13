@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Block",
+        "Factory reset",
+        "Factory reset Block",
+        "General"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "/com.android.deviceRestrictionPolicy/",
+    "offsetUri": "/factoryResetBlocked/",
+    "rootDefinitionId": "com.android.devicerestrictionpolicy.factoryresetblocked",
+    "categoryId": "b6733d23-eadc-486a-abfc-62b78698a16c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.android.devicerestrictionpolicy.factoryresetblocked",
+    "description": "If 'True', prevents users from using the factory reset option in the device's settings. If 'False', Intune doesn't change or update this setting. By default, the OS might allow users to use this setting on the device. Available for fully managed and dedicated devices.",
+    "helpText": "",
+    "name": "FactoryResetBlocked",
+    "displayName": "Block factory reset",
+    "defaultOptionId": "com.android.devicerestrictionpolicy.factoryresetblocked_false",
+    "applicability": {
+        "description": null,
+        "platform": "androidEnterprise",
+        "deviceMode": "none",
+        "technologies": "android"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.android.devicerestrictionpolicy.factoryresetblocked_false",
+            "description": "False",
+            "helpText": null,
+            "name": "False",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.factoryresetblocked_true",
+            "description": "True",
+            "helpText": null,
+            "name": "True",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

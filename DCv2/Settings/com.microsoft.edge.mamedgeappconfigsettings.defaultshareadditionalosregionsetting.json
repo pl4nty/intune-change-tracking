@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.DefaultShareAdditionalOSRegionSetting",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.defaultshareadditionalosregionsetting",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.defaultshareadditionalosregionsetting",
+    "description": "This policy controls the default value for the \"share additional operating system region\" setting in Microsoft Edge.\n\nThe \"share additional operating system region\" Microsoft Edge setting controls whether the OS Regional format setting will be shared with the web through the default JavaScript locale. If shared, websites will be able to query the OS Regional format using JavaScript code, for example; \"Intl.DateTimeFormat().resolvedOptions().locale\". The default value for the setting is \"Limited\".\n\nIf you set this policy to \"Limited\", the OS Regional format will only be shared if its language part matches the Microsoft Edge display language.\n\nIf you set this policy to \"Always\", the OS Regional format will always be shared. This value could cause unexpected website behavior if the OS Regional format language is different from the Microsoft Edge display language. For example, if a website uses the JavaScript default locale to format dates, the names of the days and months can be displayed in one language while the surrounding text is displayed in another language.\n\nIf you set this policy to \"Never\", the OS Regional format will never be shared.\n\nExample 1: In this example the OS Regional format is set to \"en-GB\" and the browser display language is set to \"en-US\". Then the OS Regional format will be shared if the policy is set to \"Limited\", or \"Always\".\n\nExample 2: In this example the OS Regional format is set to \"es-MX\" and the browser display language is set to \"en-US\". Then the OS Regional format will be shared if the policy is set to \"Always\" but will not if the policy is set to \"Limited\".\n\nFor more information about this setting, see <a href=\"https://go.microsoft.com/fwlink/?linkid=2222282\">https://go.microsoft.com/fwlink/?linkid=2222282</a>\n\nPolicy options mapping:\n\n* Limited (0) = Limited\n\n* Always (1) = Always share the OS Regional format\n\n* Never (2) = Never share the OS Regional format\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "DefaultShareAdditionalOSRegionSetting",
+    "displayName": "Set the default \"share additional operating system region\" setting",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.defaultshareadditionalosregionsetting_limited",
+            "description": null,
+            "helpText": null,
+            "name": "Limited",
+            "displayName": "Limited",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.defaultshareadditionalosregionsetting_always",
+            "description": null,
+            "helpText": null,
+            "name": "Always share the OS Regional format",
+            "displayName": "Always share the OS Regional format",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.defaultshareadditionalosregionsetting_never",
+            "description": null,
+            "helpText": null,
+            "name": "Never share the OS Regional format",
+            "displayName": "Never share the OS Regional format",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

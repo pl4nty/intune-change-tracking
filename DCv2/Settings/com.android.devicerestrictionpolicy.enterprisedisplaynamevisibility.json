@@ -1,0 +1,67 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Company",
+        "company name",
+        "organization name",
+        "organization",
+        "brand",
+        "label",
+        "hide organization name",
+        "General"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "/com.android.deviceRestrictionPolicy/",
+    "offsetUri": "/enterpriseDisplayNameVisibility/",
+    "rootDefinitionId": "com.android.devicerestrictionpolicy.enterprisedisplaynamevisibility",
+    "categoryId": "b6733d23-eadc-486a-abfc-62b78698a16c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.android.devicerestrictionpolicy.enterprisedisplaynamevisibility",
+    "description": "If 'True', prevents the enterprise name from being displayed on the device (such as on the lock screen). If 'False', Intune doesn't change or update this setting. By default, the OS displays the enterprise name set during device setup. Available for fully managed, dedicated, and corporate-owned work profile devices.",
+    "helpText": null,
+    "name": "EnterpriseDisplayNameVisibility",
+    "displayName": "Hide organization name",
+    "defaultOptionId": "com.android.devicerestrictionpolicy.enterprisedisplaynamevisibility_false",
+    "applicability": {
+        "description": null,
+        "platform": "androidEnterprise",
+        "deviceMode": "none",
+        "technologies": "android"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.android.devicerestrictionpolicy.enterprisedisplaynamevisibility_false",
+            "description": "False",
+            "helpText": null,
+            "name": "ENTERPRISE_DISPLAY_NAME_VISIBLE",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "ENTERPRISE_DISPLAY_NAME_VISIBLE"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.enterprisedisplaynamevisibility_true",
+            "description": "True",
+            "helpText": null,
+            "name": "ENTERPRISE_DISPLAY_NAME_HIDDEN",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "ENTERPRISE_DISPLAY_NAME_HIDDEN"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

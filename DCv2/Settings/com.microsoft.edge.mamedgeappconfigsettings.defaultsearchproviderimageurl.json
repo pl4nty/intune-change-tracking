@@ -1,0 +1,46 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Default search provider"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.DefaultSearchProviderImageURL",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.defaultsearchproviderimageurl",
+    "categoryId": "8aa3383a-efac-4ec4-841d-06e3e18646d8",
+    "settingUsage": "configuration",
+    "uxBehavior": "smallTextBox",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.defaultsearchproviderimageurl",
+    "description": "Specifies the URL to the search engine used for image search. Search requests are sent using the GET method.\n\nThis policy is optional. If you don't configure it, image search isn't available.\n\nSpecify Bing's Image Search URL as:\n'{bing:baseURL}images/detail/search?iss=sbiupload&FORM=ANCMS1#enterInsights'.\n\nSpecify Google's Image Search URL as: '{google:baseURL}searchbyimage/upload'.\n\nSee \"DefaultSearchProviderImageURLPostParams\" policy to finish configuring image search.\n\nThis policy is applied only if you enable the \"DefaultSearchProviderEnabled\" and \"DefaultSearchProviderSearchURL\" policies.\n\nStarting in Microsoft Edge 84, you can set this policy as a recommended policy. If the user has already set a default search provider, the default search provider configured by this recommended policy will not be added to the list of search providers the user can choose from. If this is the desired behavior, use the \"ManagedSearchEngines\" policy.",
+    "helpText": null,
+    "name": "DefaultSearchProviderImageURL",
+    "displayName": "Specifies the search-by-image feature for the default search provider",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 0,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

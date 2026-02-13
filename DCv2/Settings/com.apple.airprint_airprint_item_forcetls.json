@@ -1,0 +1,71 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Air Print",
+        "AirPrint"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "AirPrint/[{0}]/ForceTLS",
+    "rootDefinitionId": "com.apple.airprint_com.apple.airprint",
+    "categoryId": "429c4b85-a2b4-46ed-afa0-6c89c08a5544",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.airprint_airprint_item_forcetls",
+    "description": "If true, AirPrint connections are secured by Transport Layer Security (TLS). Available only in iOS 11 and later.",
+    "helpText": null,
+    "name": "AirPrint_item_ForceTLS",
+    "displayName": "Force TLS",
+    "defaultOptionId": "com.apple.airprint_airprint_item_forcetls_false",
+    "applicability": {
+        "description": null,
+        "platform": "iOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.airprint_airprint_item_forcetls_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.airprint_airprint",
+                    "parentSettingId": "com.apple.airprint_airprint"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.airprint_airprint_item_forcetls_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.airprint_airprint",
+                    "parentSettingId": "com.apple.airprint_airprint"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

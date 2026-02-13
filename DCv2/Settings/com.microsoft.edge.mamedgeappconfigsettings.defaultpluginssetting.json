@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Content settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.DefaultPluginsSetting",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.defaultpluginssetting",
+    "categoryId": "92d69c43-75ac-49b1-a3ef-9350079eef86",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.defaultpluginssetting",
+    "description": "This policy doesn't work because Flash is no longer supported by Microsoft Edge.\n\n\"PluginsAllowedForUrls\" and \"PluginsBlockedForUrls\" are checked first, then this policy. The options are 'ClickToPlay' and 'BlockPlugins'. If you set this policy to 'BlockPlugins', this plugin is denied for all websites. 'ClickToPlay' lets the Flash plugin run, but users click the placeholder to start it.\n\nIf you don't configure this policy, the user can change this setting manually.\n\nNote: Automatic playback is only for domains explicitly listed in the \"PluginsAllowedForUrls\" policy. To turn automatic playback on for all sites, add http://* and https://* to the allowed list of URLs.\n\nPolicy options mapping:\n\n* BlockPlugins (2) = Block the Adobe Flash plugin\n\n* ClickToPlay (3) = Click to play\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "DefaultPluginsSetting",
+    "displayName": "Default Adobe Flash setting (Obsolete)",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.defaultpluginssetting_blockplugins",
+            "description": null,
+            "helpText": null,
+            "name": "Block the Adobe Flash plugin",
+            "displayName": "Block the Adobe Flash plugin",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.defaultpluginssetting_clicktoplay",
+            "description": null,
+            "helpText": null,
+            "name": "Click to play",
+            "displayName": "Click to play",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

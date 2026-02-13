@@ -1,0 +1,81 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "RestoreOnStartup",
+        "Action to take on Microsoft Edge startup",
+        "\\Microsoft Edge\\Startup, home page and new tab page",
+        "Microsoft Edge\\Startup, home page and new tab page",
+        "Startup, home page and new tab page",
+        "Both",
+        "Software\\Policies\\Microsoft\\Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev77.3~Policy~microsoft_edge~Startup/RestoreOnStartup",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edgev77.3~policy~microsoft_edge~startup_restoreonstartup",
+    "categoryId": "00d7396c-cadc-4d29-86ba-fe4df2ecb110",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_microsoft_edgev77.3~policy~microsoft_edge~startup_restoreonstartup",
+    "description": "Specify how Microsoft Edge behaves when it starts.\r\n\r\nIf you want a new tab to always open on startup, choose 'RestoreOnStartupIsNewTabPage'.\r\n\r\nIf you want to reopen URLs that were open the last time Microsoft Edge closed, choose 'RestoreOnStartupIsLastSession'. The browsing session will be restored as it was. Note that this option disables some settings that rely on sessions or that perform actions on exit (such as Clear browsing data on exit or session-only cookies).\r\n\r\nIf you want to open a specific set of URLs, choose 'RestoreOnStartupIsURLs'.\r\n\r\nStarting in Microsoft Edge version 125, if you want to reopen URLs that were open the last time Microsoft Edge closed and open a specific set of URLs, choose 'RestoreOnStartupIsLastSessionAndURLs'.\r\n\r\nDisabling this setting is the same as leaving it not configured. Users will be able to change it in Microsoft Edge.\r\n\r\nThis policy is only available on Windows instances that are joined to a Microsoft Active Directory domain, joined to Microsoft Azure Active Directory, or instances that enrolled for device management. On macOS, this policy is only available on instances that are managed via MDM or joined to a domain via MCX.\r\n\r\nPolicy options mapping:\r\n\r\n* RestoreOnStartupIsNewTabPage (5) = Open a new tab\r\n\r\n* RestoreOnStartupIsLastSession (1) = Restore the last session\r\n\r\n* RestoreOnStartupIsURLs (4) = Open a list of URLs\r\n\r\n* RestoreOnStartupIsLastSessionAndURLs (6) = Open a list of URLs and restore the last session\r\n\r\nUse the preceding information when configuring this policy.",
+    "helpText": "",
+    "name": "RestoreOnStartup",
+    "displayName": "Action to take on Microsoft Edge startup",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edgev77.3~policy~microsoft_edge~startup_restoreonstartup_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev77.3~policy~microsoft_edge~startup_restoreonstartup_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev77.3~policy~microsoft_edge~startup_restoreonstartup_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_microsoft_edgev77.3~policy~microsoft_edge~startup_restoreonstartup_restoreonstartup",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

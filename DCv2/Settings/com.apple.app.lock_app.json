@@ -1,0 +1,56 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "App Lock"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "App",
+    "rootDefinitionId": "com.apple.app.lock_com.apple.app.lock",
+    "categoryId": "7b4e3f58-fb7a-4e6b-8f39-35d1cd90f508",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.app.lock_app",
+    "description": "A dictionary that contains information about the app.",
+    "helpText": null,
+    "name": "App",
+    "displayName": "App",
+    "childIds": [
+        "com.apple.app.lock_app_identifier",
+        "com.apple.app.lock_app_options",
+        "com.apple.app.lock_app_userenabledoptions"
+    ],
+    "maximumCount": 1,
+    "minimumCount": 0,
+    "applicability": {
+        "description": null,
+        "platform": "iOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [
+        {
+            "dependentOn": "com.apple.app.lock_com.apple.app.lock",
+            "parentSettingId": "com.apple.app.lock_com.apple.app.lock"
+        }
+    ],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "com.apple.app.lock_app_identifier",
+            "required": true
+        },
+        {
+            "dependedOnBy": "com.apple.app.lock_app_options",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.app.lock_app_userenabledoptions",
+            "required": false
+        }
+    ]
+}

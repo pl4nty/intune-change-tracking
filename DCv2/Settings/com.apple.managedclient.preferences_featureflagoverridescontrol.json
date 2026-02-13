@@ -1,0 +1,77 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#featureflagoverridescontrol"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "FeatureFlagOverridesControl",
+    "rootDefinitionId": "com.apple.managedclient.preferences_featureflagoverridescontrol",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_featureflagoverridescontrol",
+    "description": "Configures users ability to override state of feature flags.\nIf you set this policy to 'CommandLineOverridesEnabled', users can override state of feature flags using command line arguments but not edge://flags page.\n\nIf you set this policy to 'OverridesEnabled', users can override state of feature flags using command line arguments or edge://flags page.\n\nIf you set this policy to 'OverridesDisabled', users can't override state of feature flags using command line arguments or edge://flags page.\n\nIf you don't configure this policy, the behavior is the same as the 'OverridesEnabled'.\n\nPolicy options mapping:\n\n* CommandLineOverridesEnabled (2) = Allow users to override feature flags using command line arguments only\n\n* OverridesEnabled (1) = Allow users to override feature flags\n\n* OverridesDisabled (0) = Prevent users from overriding feature flags\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "FeatureFlagOverridesControl",
+    "displayName": "Configure users ability to override feature flags",
+    "defaultOptionId": "com.apple.managedclient.preferences_featureflagoverridescontrol_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_featureflagoverridescontrol_0",
+            "description": null,
+            "helpText": null,
+            "name": "Prevent users from overriding feature flags",
+            "displayName": "Prevent users from overriding feature flags",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_featureflagoverridescontrol_1",
+            "description": null,
+            "helpText": null,
+            "name": "Allow users to override feature flags",
+            "displayName": "Allow users to override feature flags",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_featureflagoverridescontrol_2",
+            "description": null,
+            "helpText": null,
+            "name": "Allow users to override feature flags using command line arguments only",
+            "displayName": "Allow users to override feature flags using command line arguments only",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

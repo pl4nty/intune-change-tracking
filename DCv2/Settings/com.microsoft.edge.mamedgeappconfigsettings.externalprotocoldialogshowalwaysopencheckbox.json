@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.ExternalProtocolDialogShowAlwaysOpenCheckbox",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.externalprotocoldialogshowalwaysopencheckbox",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.externalprotocoldialogshowalwaysopencheckbox",
+    "description": "This policy controls whether the \"Always allow this site to open links of this type\" checkbox is shown on external protocol launch confirmation prompts. This policy only applies to https:// links.\n\nIf you enable this policy, when an external protocol confirmation prompt is shown, the user can select \"Always allow\" to skip all future confirmation prompts for the protocol on this site.\n\nIf you disable this policy, the \"Always allow\" checkbox isn't displayed. The user will be prompted for confirmation every time an external protocol is invoked.\n\nPrior to Microsoft Edge 83, if you don't configure this policy, the \"Always allow\" checkbox isn't displayed. The user will be prompted for confirmation every time an external protocol is invoked.\n\nOn Microsoft Edge 83, if you don't configure this policy, the checkbox visibility is controlled by the \"Enable remembering protocol launch prompting preferences\" flag in edge://flags\n\nAs of Microsoft Edge 84, if you don't configure this policy, when an external protocol confirmation prompt is shown, the user can select \"Always allow\" to skip all future confirmation prompts for the protocol on this site.",
+    "helpText": null,
+    "name": "ExternalProtocolDialogShowAlwaysOpenCheckbox",
+    "displayName": "Show an \"Always open\" checkbox in external protocol dialog",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.externalprotocoldialogshowalwaysopencheckbox_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.externalprotocoldialogshowalwaysopencheckbox_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

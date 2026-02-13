@@ -1,0 +1,71 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "System Policy Control",
+        "Gatekeeper"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "AllowIdentifiedDevelopers",
+    "rootDefinitionId": "com.apple.systempolicy.control_com.apple.systempolicy.control",
+    "categoryId": "763525a0-8456-4336-a8d1-392253e8fdd8",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.systempolicy.control_allowidentifieddevelopers",
+    "description": "If true, enables Gatekeeper's \"Mac App Store and identified developers\" option.\r\nIf false, enables Gatekeeper's \"Mac App Store\" option.\r\n\r\nIf the value of Enable Assessment isn't set to true, this key has no effect.",
+    "helpText": null,
+    "name": "AllowIdentifiedDevelopers",
+    "displayName": "Allow Identified Developers",
+    "defaultOptionId": "com.apple.systempolicy.control_allowidentifieddevelopers_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.systempolicy.control_allowidentifieddevelopers_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.systempolicy.control_com.apple.systempolicy.control",
+                    "parentSettingId": "com.apple.systempolicy.control_com.apple.systempolicy.control"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.systempolicy.control_allowidentifieddevelopers_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.systempolicy.control_com.apple.systempolicy.control",
+                    "parentSettingId": "com.apple.systempolicy.control_com.apple.systempolicy.control"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

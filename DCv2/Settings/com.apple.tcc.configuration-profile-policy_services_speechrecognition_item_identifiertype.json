@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Privacy Preferences Policy Control"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "Services/SpeechRecognition/[{0}]/IdentifierType",
+    "rootDefinitionId": "com.apple.tcc.configuration-profile-policy_com.apple.tcc.configuration-profile-policy",
+    "categoryId": "82d173f9-ba0b-4b09-bbb8-68cba4916162",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.tcc.configuration-profile-policy_services_speechrecognition_item_identifiertype",
+    "description": "The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.",
+    "helpText": null,
+    "name": "Services_SpeechRecognition_item_IdentifierType",
+    "displayName": "Identifier Type",
+    "defaultOptionId": "com.apple.tcc.configuration-profile-policy_services_speechrecognition_item_identifiertype_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.tcc.configuration-profile-policy_services_speechrecognition_item_identifiertype_0",
+            "description": null,
+            "helpText": null,
+            "name": "bundleID",
+            "displayName": "bundle ID",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "bundleID"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.tcc.configuration-profile-policy_services_speechrecognition",
+                    "parentSettingId": "com.apple.tcc.configuration-profile-policy_services_speechrecognition"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.tcc.configuration-profile-policy_services_speechrecognition_item_identifiertype_1",
+            "description": null,
+            "helpText": null,
+            "name": "path",
+            "displayName": "path",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "path"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.tcc.configuration-profile-policy_services_speechrecognition",
+                    "parentSettingId": "com.apple.tcc.configuration-profile-policy_services_speechrecognition"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

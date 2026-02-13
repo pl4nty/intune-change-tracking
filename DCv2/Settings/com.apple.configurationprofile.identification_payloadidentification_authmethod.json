@@ -1,0 +1,71 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Identification",
+        "Identification (Deprecated)"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "PayloadIdentification/AuthMethod",
+    "rootDefinitionId": "com.apple.configurationprofile.identification_com.apple.configurationprofile.identification",
+    "categoryId": "c3fdc01d-0648-4dcb-855d-7afe78bf1d89",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.configurationprofile.identification_payloadidentification_authmethod",
+    "description": "The authorization method. Either the password is supplied in the profile or the user supplies it. ",
+    "helpText": null,
+    "name": "PayloadIdentification_AuthMethod",
+    "displayName": "Auth Method",
+    "defaultOptionId": "com.apple.configurationprofile.identification_payloadidentification_authmethod_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.configurationprofile.identification_payloadidentification_authmethod_0",
+            "description": null,
+            "helpText": null,
+            "name": "Password",
+            "displayName": "Password",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "Password"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.configurationprofile.identification_payloadidentification",
+                    "parentSettingId": "com.apple.configurationprofile.identification_payloadidentification"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.configurationprofile.identification_payloadidentification_authmethod_1",
+            "description": null,
+            "helpText": null,
+            "name": "UserEnteredPassword",
+            "displayName": "UserEnteredPassword",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "UserEnteredPassword"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.configurationprofile.identification_payloadidentification",
+                    "parentSettingId": "com.apple.configurationprofile.identification_payloadidentification"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

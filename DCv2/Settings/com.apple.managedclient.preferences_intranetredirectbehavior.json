@@ -1,0 +1,92 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge - All",
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#intranetredirectbehavior"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "IntranetRedirectBehavior",
+    "rootDefinitionId": "com.apple.managedclient.preferences_intranetredirectbehavior",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_intranetredirectbehavior",
+    "description": "This policy configures behavior for intranet redirection via DNS interception checks. The checks attempt to discover whether the browser is behind a proxy that redirects unknown host names.\n\nIf this policy isn't configured, the browser will use the default behavior of DNS interception checks and intranet redirect suggestions. In M88, they are enabled by default but will be disabled by default in the future release.\n\n\"DNSInterceptionChecksEnabled\" is a related policy that might also disable DNS interception checks. However, this policy is a more flexible version which might separately control intranet redirection infobars and might be expanded in the future.\nIf either \"DNSInterceptionChecksEnabled\" or this policy make a request to disable interception checks, the checks will be disabled.\nIf DNS interception checks are disabled by this policy but \"GoToIntranetSiteForSingleWordEntryInAddressBar\" is enabled, single word queries will still result in intranet navigations.\n\nPolicy options mapping:\n\n* Default (0) = Use default browser behavior.\n\n* DisableInterceptionChecksDisableInfobar (1) = Disable DNS interception checks and did-you-mean \"http://intranetsite/\" infobars.\n\n* DisableInterceptionChecksEnableInfobar (2) = Disable DNS interception checks; allow did-you-mean \"http://intranetsite/\" infobars.\n\n* EnableInterceptionChecksEnableInfobar (3) = Allow DNS interception checks and did-you-mean \"http://intranetsite/\" infobars.\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "IntranetRedirectBehavior",
+    "displayName": "Intranet Redirection Behavior",
+    "defaultOptionId": "com.apple.managedclient.preferences_intranetredirectbehavior_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_intranetredirectbehavior_0",
+            "description": null,
+            "helpText": null,
+            "name": "Use default browser behavior.",
+            "displayName": "Use default browser behavior.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_intranetredirectbehavior_1",
+            "description": null,
+            "helpText": null,
+            "name": "Disable DNS interception checks and did-you-mean \"http://intranetsite/\" infobars.",
+            "displayName": "Disable DNS interception checks and did-you-mean \"http://intranetsite/\" infobars.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_intranetredirectbehavior_2",
+            "description": null,
+            "helpText": null,
+            "name": "Disable DNS interception checks; allow did-you-mean \"http://intranetsite/\" infobars.",
+            "displayName": "Disable DNS interception checks; allow did-you-mean \"http://intranetsite/\" infobars.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_intranetredirectbehavior_3",
+            "description": null,
+            "helpText": null,
+            "name": "Allow DNS interception checks and did-you-mean \"http://intranetsite/\" infobars.",
+            "displayName": "Allow DNS interception checks and did-you-mean \"http://intranetsite/\" infobars.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Content Caching"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "DisplayAlerts",
+    "rootDefinitionId": "com.apple.assetcache.managed_com.apple.assetcache.managed",
+    "categoryId": "e95335ec-2704-47ab-8b40-f602b31eeb9d",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.assetcache.managed_displayalerts",
+    "description": "If true, Content Caching displays exceptional conditions (alerts) as system notifications in the upper corner of the screen. Alerts were automatically displayed starting in macOS 10.13. In macOS 10.15 the alerts are off by default, but still available via this setting.\r\nAvailable in macOS 10.15 and later.",
+    "helpText": null,
+    "name": "DisplayAlerts",
+    "displayName": "Display Alerts",
+    "defaultOptionId": "com.apple.assetcache.managed_displayalerts_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.assetcache.managed_displayalerts_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.assetcache.managed_com.apple.assetcache.managed",
+                    "parentSettingId": "com.apple.assetcache.managed_com.apple.assetcache.managed"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.assetcache.managed_displayalerts_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.assetcache.managed_com.apple.assetcache.managed",
+                    "parentSettingId": "com.apple.assetcache.managed_com.apple.assetcache.managed"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#defaultwebusbguardsetting"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "DefaultWebUsbGuardSetting",
+    "rootDefinitionId": "com.apple.managedclient.preferences_defaultwebusbguardsetting",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_defaultwebusbguardsetting",
+    "description": "Set whether websites can access connected USB devices. You can completely block access or ask the user each time a website wants to get access to connected USB devices.\n\nYou can override this policy for specific URL patterns by using the \"WebUsbAskForUrls\" and \"WebUsbBlockedForUrls\" policies.\n\nIf you don't configure this policy, sites can ask users whether they can access the connected USB devices (3) by default, and users can change this setting.\n\n* 2 = Don't allow any site to request access to USB devices via the WebUSB API\n\n* 3 = Allow sites to ask the user to grant access to a connected USB device",
+    "helpText": null,
+    "name": "DefaultWebUsbGuardSetting",
+    "displayName": "Control use of the WebUSB API",
+    "defaultOptionId": "com.apple.managedclient.preferences_defaultwebusbguardsetting_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultwebusbguardsetting_0",
+            "description": null,
+            "helpText": null,
+            "name": "Do not allow any site to request access to USB devices via the WebUSB API",
+            "displayName": "Do not allow any site to request access to USB devices via the WebUSB API",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultwebusbguardsetting_1",
+            "description": null,
+            "helpText": null,
+            "name": "Allow sites to ask the user to grant access to a connected USB device",
+            "displayName": "Allow sites to ask the user to grant access to a connected USB device",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DNS Settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "ProhibitDisablement",
+    "rootDefinitionId": "com.apple.dnssettings.managed_com.apple.dnssettings.managed",
+    "categoryId": "bbe51018-a17d-46c4-9517-ff45c54d8d18",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.dnssettings.managed_prohibitdisablement",
+    "description": "If true, prohibits users from disabling DNS settings. This key is only available on supervised devices.",
+    "helpText": null,
+    "name": "ProhibitDisablement",
+    "displayName": "Prohibit Disablement",
+    "defaultOptionId": "com.apple.dnssettings.managed_prohibitdisablement_false",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.dnssettings.managed_prohibitdisablement_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.dnssettings.managed_com.apple.dnssettings.managed",
+                    "parentSettingId": "com.apple.dnssettings.managed_com.apple.dnssettings.managed"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.dnssettings.managed_prohibitdisablement_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.dnssettings.managed_com.apple.dnssettings.managed",
+                    "parentSettingId": "com.apple.dnssettings.managed_com.apple.dnssettings.managed"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

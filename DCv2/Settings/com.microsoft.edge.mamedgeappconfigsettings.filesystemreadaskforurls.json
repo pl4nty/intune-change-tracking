@@ -1,0 +1,48 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Content settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.FileSystemReadAskForUrls",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.filesystemreadaskforurls",
+    "categoryId": "92d69c43-75ac-49b1-a3ef-9350079eef86",
+    "settingUsage": "configuration",
+    "uxBehavior": "smallTextBox",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.filesystemreadaskforurls",
+    "description": "Setting the policy lets you list the URL patterns that specify which sites can ask users to grant them read access to files or directories in the host operating system's file system via the File System API.\n\nLeaving the policy unset means \"DefaultFileSystemReadGuardSetting\" applies for all sites, if it's set. If not, users' personal settings apply.\n\nURL patterns can't conflict with \"FileSystemReadBlockedForUrls\". Neither policy takes precedence if a URL matches with both.\n\nFor detailed information about valid url patterns, see <a href=\"https://go.microsoft.com/fwlink/?linkid=2095322\">https://go.microsoft.com/fwlink/?linkid=2095322</a>. * is not an accepted value for this policy.",
+    "helpText": null,
+    "name": "FileSystemReadAskForUrls",
+    "displayName": "Allow read access via the File System API on these sites",
+    "maximumCount": 600,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 0,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

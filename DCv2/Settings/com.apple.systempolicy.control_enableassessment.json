@@ -1,0 +1,71 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "System Policy Control",
+        "Gatekeeper"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "EnableAssessment",
+    "rootDefinitionId": "com.apple.systempolicy.control_com.apple.systempolicy.control",
+    "categoryId": "763525a0-8456-4336-a8d1-392253e8fdd8",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.systempolicy.control_enableassessment",
+    "description": "If true, enables Gatekeeper.",
+    "helpText": null,
+    "name": "EnableAssessment",
+    "displayName": "Enable Assessment",
+    "defaultOptionId": "com.apple.systempolicy.control_enableassessment_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.systempolicy.control_enableassessment_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.systempolicy.control_com.apple.systempolicy.control",
+                    "parentSettingId": "com.apple.systempolicy.control_com.apple.systempolicy.control"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.systempolicy.control_enableassessment_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.systempolicy.control_com.apple.systempolicy.control",
+                    "parentSettingId": "com.apple.systempolicy.control_com.apple.systempolicy.control"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

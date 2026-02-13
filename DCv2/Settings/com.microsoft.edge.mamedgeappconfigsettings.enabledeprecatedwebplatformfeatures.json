@@ -1,0 +1,49 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.EnableDeprecatedWebPlatformFeatures",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.enabledeprecatedwebplatformfeatures",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.enabledeprecatedwebplatformfeatures",
+    "description": "This policy is obsolete because dedicated web platform policies are now used to manage individual web platform feature deprecations.\n\nSpecify a list of deprecated web platform features to temporarily re-enable.\n\nThis policy lets you re-enable deprecated web platform features for a limited time. Features are identified by a string tag.\n\nIf you don't configure this policy, if the list is empty, or if a feature doesn't match one of the supported string tags, all deprecated web platform features remain disabled.\n\nWhile the policy itself is supported on the above platforms, the feature it's enabling might not be available on all of those platforms. Not all deprecated Web Platform features can be re-enabled. Only those explicitly listed below can be re-enabled, and only for a limited period of time, which differs per feature. You can review the intent behind the Web Platform feature changes at https://bit.ly/blinkintents.\n\nThe general format of the string tag is [DeprecatedFeatureName]_EffectiveUntil[yyyymmdd].\n\nPolicy options mapping:\n\n* ExampleDeprecatedFeature (ExampleDeprecatedFeature_EffectiveUntil20080902) = Enable ExampleDeprecatedFeature API through 2008/09/02\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "EnableDeprecatedWebPlatformFeatures",
+    "displayName": "Re-enable deprecated web platform features for a limited time (Obsolete)",
+    "defaultOptionId": null,
+    "maximumCount": 100,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.enabledeprecatedwebplatformfeatures_exampledeprecatedfeature",
+            "description": null,
+            "helpText": null,
+            "name": "Enable ExampleDeprecatedFeature API through 2008/09/02",
+            "displayName": "Enable ExampleDeprecatedFeature API through 2008/09/02",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "ExampleDeprecatedFeature_EffectiveUntil20080902"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

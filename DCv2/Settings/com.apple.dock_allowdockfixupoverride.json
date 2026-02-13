@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Dock"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "AllowDockFixupOverride",
+    "rootDefinitionId": "com.apple.dock_com.apple.dock",
+    "categoryId": "cc388035-b49c-493e-a598-14b0d0de4359",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.dock_allowdockfixupoverride",
+    "description": "If true, use the file in /Library/Preferences/com.apple.dockfixup.plist when a new user or migrated user logs in. This option has no effect for existing users. Available in macOS 10.12 and later. Only available on the device channel.",
+    "helpText": null,
+    "name": "AllowDockFixupOverride",
+    "displayName": "Allow Dock Fixup Override",
+    "defaultOptionId": "com.apple.dock_allowdockfixupoverride_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.dock_allowdockfixupoverride_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.dock_com.apple.dock",
+                    "parentSettingId": "com.apple.dock_com.apple.dock"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.dock_allowdockfixupoverride_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.dock_com.apple.dock",
+                    "parentSettingId": "com.apple.dock_com.apple.dock"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

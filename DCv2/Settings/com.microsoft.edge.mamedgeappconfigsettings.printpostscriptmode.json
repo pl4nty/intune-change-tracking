@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Printing"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.PrintPostScriptMode",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.printpostscriptmode",
+    "categoryId": "c6099521-a05f-480a-8562-7e71318e2cda",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.printpostscriptmode",
+    "description": "Controls how Microsoft Edge prints on Microsoft Windows.\n\nPrinting to a PostScript printer on Microsoft Windows different PostScript generation methods can affect printing performance.\n\nIf you set this policy to Default, Microsoft Edge will use a set of default options when generating PostScript. For text in particular, text will always be rendered using Type 3 fonts.\n\nIf you set this policy to Type42, Microsoft Edge will render text using Type 42 fonts if possible. This should increase printing speed for some PostScript printers.\n\nIf you don't configure this policy, Microsoft Edge will be in Default mode.\n\nPolicy options mapping:\n\n* Default (0) = Default\n\n* Type42 (1) = Type42\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "PrintPostScriptMode",
+    "displayName": "Print PostScript Mode",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.printpostscriptmode_default",
+            "description": null,
+            "helpText": null,
+            "name": "Default",
+            "displayName": "Default",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.printpostscriptmode_type42",
+            "description": null,
+            "helpText": null,
+            "name": "Type42",
+            "displayName": "Type42",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

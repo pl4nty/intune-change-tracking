@@ -1,0 +1,48 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Content settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.CookiesSessionOnlyForUrls",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.cookiessessiononlyforurls",
+    "categoryId": "92d69c43-75ac-49b1-a3ef-9350079eef86",
+    "settingUsage": "configuration",
+    "uxBehavior": "smallTextBox",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.cookiessessiononlyforurls",
+    "description": "Cookies created by websites that match a URL pattern you define are deleted when the session ends (when the window closes).\n\nCookies created by websites that don't match the pattern are controlled by the \"DefaultCookiesSetting\" policy (if set) or by the user's personal configuration. This is also the default behavior if you don't configure this policy.\n\nYou can also use the \"CookiesAllowedForUrls\" and \"CookiesBlockedForUrls\" policies to control which websites can create cookies.\n\nNote there cannot be conflicting URL patterns set between these three policies:\n\n- \"CookiesBlockedForUrls\"\n\n- \"CookiesAllowedForUrls\"\n\n- CookiesSessionOnlyForUrls\n\nFor detailed information on valid url patterns, please see <a href=\"https://go.microsoft.com/fwlink/?linkid=2095322\">https://go.microsoft.com/fwlink/?linkid=2095322</a>. * is not an accepted value for this policy.\n\nIf you set the \"RestoreOnStartup\" policy to restore URLs from previous sessions, this policy is ignored, and cookies are stored permanently for those sites.",
+    "helpText": null,
+    "name": "CookiesSessionOnlyForUrls",
+    "displayName": "Limit cookies from specific websites to the current session",
+    "maximumCount": 600,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 0,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

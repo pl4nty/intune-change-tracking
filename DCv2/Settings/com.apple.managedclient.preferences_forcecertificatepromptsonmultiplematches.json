@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#forcecertificatepromptsonmultiplematches"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "ForceCertificatePromptsOnMultipleMatches",
+    "rootDefinitionId": "com.apple.managedclient.preferences_forcecertificatepromptsonmultiplematches",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_forcecertificatepromptsonmultiplematches",
+    "description": "Toggles whether users are prompted to select a certificate if there are multiple certificates available and a site is configured with \"AutoSelectCertificateForUrls\". If you don't configure \"AutoSelectCertificateForUrls\" for a site, the user will always be prompted to select a certificate.\n\nIf you set this policy to True, Microsoft Edge will prompt a user to select a certificate for sites on the list defined in \"AutoSelectCertificateForUrls\" if and only if there is more than one certificate.\n\nIf you set this policy to False or don't configure it, Microsoft Edge will automatically select a certificate even if there are multiple matches for a certificate. The user will not be prompted to select a certificate for sites on the list defined in \"AutoSelectCertificateForUrls\".",
+    "helpText": null,
+    "name": "ForceCertificatePromptsOnMultipleMatches",
+    "displayName": "Configure whether Microsoft Edge should automatically select a certificate when there are multiple certificate matches for a site configured with \"AutoSelectCertificateForUrls\"",
+    "defaultOptionId": "com.apple.managedclient.preferences_forcecertificatepromptsonmultiplematches_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_forcecertificatepromptsonmultiplematches_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_forcecertificatepromptsonmultiplematches_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,71 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "File Vault Options",
+        "FileVault Options"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "dontAllowFDEEnable",
+    "rootDefinitionId": "com.apple.mcx_com.apple.mcx-fdefilevaultoptions",
+    "categoryId": "5b327ef8-f9fb-4e10-ba9e-8a8ca9bf4ed9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.mcx_dontallowfdeenable",
+    "description": "Set to true to prevent FileVault from being enabled.",
+    "helpText": null,
+    "name": "dontAllowFDEEnable",
+    "displayName": "Prevent FileVault From Being Enabled",
+    "defaultOptionId": "com.apple.mcx_dontallowfdeenable_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.mcx_dontallowfdeenable_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.mcx_com.apple.mcx-fdefilevaultoptions",
+                    "parentSettingId": "com.apple.mcx_com.apple.mcx-fdefilevaultoptions"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.mcx_dontallowfdeenable_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.mcx_com.apple.mcx-fdefilevaultoptions",
+                    "parentSettingId": "com.apple.mcx_com.apple.mcx-fdefilevaultoptions"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

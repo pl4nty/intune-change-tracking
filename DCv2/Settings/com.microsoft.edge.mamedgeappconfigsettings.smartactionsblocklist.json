@@ -1,0 +1,77 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.SmartActionsBlockList",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.smartactionsblocklist",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.smartactionsblocklist",
+    "description": "List specific services, such as PDFs, and websites that don't show smart actions. (Smart actions are actions like \"define\" which are available in full and mini context menus in Microsoft Edge.)\n\nIf you enable the policy:\n   - The smart action in the mini and full context menu will be disabled for all profiles for services that match the given list.\n   - Users will not see the smart action in the mini and full context menu on text selection for services that match the given list.\n   - In Microsoft Edge settings, the smart action in the mini and full context menu will be disabled for services that match the given list.\n\nIf you disable or don't configure this policy:\n   - The smart action in the mini and full context menu will be enabled for all profiles.\n   - Users will see the smart action in the mini and full context menu on text selection.\n   - In Microsoft Edge settings, the smart action in the mini and full context menu will be enabled.\n\nPolicy options mapping:\n\n* smart_actions (smart_actions) = Smart actions in pdfs and on websites\n\n* smart_actions_website (smart_actions_website) = Smart actions on websites\n\n* smart_actions_pdf (smart_actions_pdf) = Smart actions in PDF\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "SmartActionsBlockList",
+    "displayName": "Block smart actions for a list of services",
+    "defaultOptionId": null,
+    "maximumCount": 100,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.smartactionsblocklist_smart_actions",
+            "description": null,
+            "helpText": null,
+            "name": "Smart actions in pdfs and on websites",
+            "displayName": "Smart actions in pdfs and on websites",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "smart_actions"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.smartactionsblocklist_smart_actions_website",
+            "description": null,
+            "helpText": null,
+            "name": "Smart actions on websites",
+            "displayName": "Smart actions on websites",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "smart_actions_website"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.smartactionsblocklist_smart_actions_pdf",
+            "description": null,
+            "helpText": null,
+            "name": "Smart actions in PDF",
+            "displayName": "Smart actions in PDF",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "smart_actions_pdf"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,51 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Scheduled scan configuration"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.wdav/Forced/[0]/mcx_preference_settings/scheduledScan",
+    "offsetUri": "weeklyConfiguration",
+    "rootDefinitionId": "com.apple.managedclient.preferences_weeklyconfiguration",
+    "categoryId": "64c8233f-3057-4485-b902-d71a312318d7",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_weeklyconfiguration",
+    "description": "Should scheduled scan be run with low priority. (Scan might take longer to complete).",
+    "helpText": null,
+    "name": "weeklyConfiguration",
+    "displayName": "Weekly scheduled scan configuration",
+    "childIds": [
+        "com.apple.managedclient.preferences_weeklyconfiguration_scantype",
+        "com.apple.managedclient.preferences_weeklyconfiguration_dayofweek",
+        "com.apple.managedclient.preferences_weeklyconfiguration_timeofday"
+    ],
+    "maximumCount": 1,
+    "minimumCount": 0,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "com.apple.managedclient.preferences_weeklyconfiguration_scantype",
+            "required": true
+        },
+        {
+            "dependedOnBy": "com.apple.managedclient.preferences_weeklyconfiguration_dayofweek",
+            "required": true
+        },
+        {
+            "dependedOnBy": "com.apple.managedclient.preferences_weeklyconfiguration_timeofday",
+            "required": true
+        }
+    ]
+}

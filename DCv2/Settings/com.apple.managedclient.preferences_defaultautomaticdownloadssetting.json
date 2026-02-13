@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#defaultautomaticdownloadssetting"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "DefaultAutomaticDownloadsSetting",
+    "rootDefinitionId": "com.apple.managedclient.preferences_defaultautomaticdownloadssetting",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_defaultautomaticdownloadssetting",
+    "description": "Set whether websites can perform multiple downloads successively without user interaction. You can enable it for all sites (AllowAutomaticDownloads) or block it for all sites (BlockAutomaticDownloads).\nIf you don't configure this policy, multiple automatic downloads can be performed in all sites, and the user can change this setting.\n\nPolicy options mapping:\n\n* AllowAutomaticDownloads (1) = Allow all websites to perform automatic downloads\n\n* BlockAutomaticDownloads (2) = Don't allow any website to perform automatic downloads\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "DefaultAutomaticDownloadsSetting",
+    "displayName": "Default automatic downloads setting",
+    "defaultOptionId": "com.apple.managedclient.preferences_defaultautomaticdownloadssetting_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultautomaticdownloadssetting_0",
+            "description": null,
+            "helpText": null,
+            "name": "Allow all websites to perform automatic downloads",
+            "displayName": "Allow all websites to perform automatic downloads",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultautomaticdownloadssetting_1",
+            "description": null,
+            "helpText": null,
+            "name": "Don't allow any website to perform automatic downloads",
+            "displayName": "Don't allow any website to perform automatic downloads",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

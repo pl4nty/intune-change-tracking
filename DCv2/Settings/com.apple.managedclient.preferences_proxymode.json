@@ -1,0 +1,105 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#proxymode"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "ProxyMode",
+    "rootDefinitionId": "com.apple.managedclient.preferences_proxymode",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_proxymode",
+    "description": "Specify the proxy server settings used by Microsoft Edge. If you enable this policy, users can't change the proxy settings.\n\nIf you choose to never use a proxy server and to always connect directly, all other options are ignored.\n\nIf you choose to use system proxy settings, all other options are ignored.\n\nIf you choose to auto detect the proxy server, all other options are ignored.\n\nIf you choose fixed server proxy mode, you can specify further options in \"ProxyServer\" and 'Comma-separated list of proxy bypass rules'.\n\nIf you choose to use a .pac proxy script, you must specify the URL to the script in 'URL to a proxy .pac file'.\n\nFor detailed examples, go to https://go.microsoft.com/fwlink/?linkid=2094936.\n\nIf you enable this policy, Microsoft Edge will ignore all proxy-related options specified from the command line.\n\nIf you don't configure this policy users can choose their own proxy settings.\n\n* \"direct\" = Never use a proxy\n\n* \"auto_detect\" = Auto detect proxy settings\n\n* \"pac_script\" = Use a .pac proxy script\n\n* \"fixed_servers\" = Use fixed proxy servers\n\n* \"system\" = Use system proxy settings",
+    "helpText": null,
+    "name": "ProxyMode",
+    "displayName": "Configure proxy server settings",
+    "defaultOptionId": "com.apple.managedclient.preferences_proxymode_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_proxymode_0",
+            "description": null,
+            "helpText": null,
+            "name": "Auto detect proxy settings",
+            "displayName": "Never use a proxy",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "auto_detect"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_proxymode_1",
+            "description": null,
+            "helpText": null,
+            "name": "Never use a proxy",
+            "displayName": "Auto detect proxy settings",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "direct"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_proxymode_2",
+            "description": null,
+            "helpText": null,
+            "name": "Use fixed proxy servers",
+            "displayName": "Use a .pac proxy script",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "fixed_servers"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_proxymode_3",
+            "description": null,
+            "helpText": null,
+            "name": "Use a .pac proxy script",
+            "displayName": "Use fixed proxy servers",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "pac_script"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_proxymode_4",
+            "description": null,
+            "helpText": null,
+            "name": "Use system proxy settings",
+            "displayName": "Use system proxy settings",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "system"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

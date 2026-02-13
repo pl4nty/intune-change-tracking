@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Auto Update",
+        "Microsoft AutoUpdate (MAU)"
+    ],
+    "infoUrls": [
+        "https://macadmins.software/docs/MAU_38.pdf"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.autoupdate2/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "StartDaemonOnAppLaunch",
+    "rootDefinitionId": "com.apple.managedclient.preferences_startdaemononapplaunch",
+    "categoryId": "2373de26-8270-4e74-a53f-9aeb55d5553c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_startdaemononapplaunch",
+    "description": "Force Office apps to register with AutoUpdate on each launch.",
+    "helpText": null,
+    "name": "StartDaemonOnAppLaunch",
+    "displayName": "Register app on launch",
+    "defaultOptionId": "com.apple.managedclient.preferences_startdaemononapplaunch_true",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_startdaemononapplaunch_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_startdaemononapplaunch_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Directory Service"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "ADNamespace",
+    "rootDefinitionId": "com.apple.directoryservice.managed_com.apple.directoryservice.managed",
+    "categoryId": "5995d2ad-5ec7-49d2-ada2-d9c2b57746ba",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.directoryservice.managed_adnamespace",
+    "description": "The primary user account naming convention; either forest or domain.",
+    "helpText": null,
+    "name": "ADNamespace",
+    "displayName": "AD Namespace",
+    "defaultOptionId": "com.apple.directoryservice.managed_adnamespace_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.directoryservice.managed_adnamespace_0",
+            "description": null,
+            "helpText": null,
+            "name": "forest",
+            "displayName": "forest",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "forest"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.directoryservice.managed_com.apple.directoryservice.managed",
+                    "parentSettingId": "com.apple.directoryservice.managed_com.apple.directoryservice.managed"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.directoryservice.managed_adnamespace_1",
+            "description": null,
+            "helpText": null,
+            "name": "domain",
+            "displayName": "domain",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "domain"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.directoryservice.managed_com.apple.directoryservice.managed",
+                    "parentSettingId": "com.apple.directoryservice.managed_com.apple.directoryservice.managed"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,51 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "System Extensions"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "AllowedSystemExtensions",
+    "rootDefinitionId": "com.apple.system-extension-policy_com.apple.system-extension-policy",
+    "categoryId": "cb33668b-933f-4424-8d2d-8bdf0e61bddd",
+    "settingUsage": "configuration",
+    "uxBehavior": "contextPane",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.system-extension-policy_allowedsystemextensions",
+    "description": "A dictionary of approved system extensions on the computer. The dictionary maps the team identifiers (keys) to arrays of bundle identifiers, where the bundle identifier defines the system extension to install. It’s an error for the same team identifier to appear in both the AllowedTeamIdentifiers array and as a key in this dictionary.",
+    "helpText": null,
+    "name": "AllowedSystemExtensions",
+    "displayName": "Allowed System Extensions",
+    "childIds": [
+        "com.apple.system-extension-policy_allowedsystemextensions_generickey",
+        "com.apple.system-extension-policy_allowedsystemextensions_generickey_keytobereplaced"
+    ],
+    "maximumCount": 2147483647,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm"
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [
+        {
+            "dependentOn": "com.apple.system-extension-policy_com.apple.system-extension-policy",
+            "parentSettingId": "com.apple.system-extension-policy_com.apple.system-extension-policy"
+        }
+    ],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "com.apple.system-extension-policy_allowedsystemextensions_generickey",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.system-extension-policy_allowedsystemextensions_generickey_keytobereplaced",
+            "required": true
+        }
+    ]
+}

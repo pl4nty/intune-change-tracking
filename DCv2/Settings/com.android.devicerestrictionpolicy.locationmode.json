@@ -1,0 +1,62 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Location",
+        "Mode",
+        "General"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "/com.android.deviceRestrictionPolicy/",
+    "offsetUri": "/LocationMode/",
+    "rootDefinitionId": "com.android.devicerestrictionpolicy.locationmode",
+    "categoryId": "b6733d23-eadc-486a-abfc-62b78698a16c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.android.devicerestrictionpolicy.locationmode",
+    "description": "If 'True', disables the Location setting on the device and prevents users from turning it on. When this setting is disabled, then any other setting that depends on the device location is affected, including the Locate device remote action that admins use. If 'False', Intune doesn't change or update this setting. By default, the OS might allow using location on the device. Available for fully managed, dedicated and corporate-owned work profile devices.",
+    "helpText": null,
+    "name": "LocationMode",
+    "displayName": "Block location",
+    "defaultOptionId": "com.android.devicerestrictionpolicy.locationmode_notconfigured",
+    "applicability": {
+        "description": null,
+        "platform": "androidEnterprise",
+        "deviceMode": "none",
+        "technologies": "android"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.android.devicerestrictionpolicy.locationmode_notconfigured",
+            "description": "No restrictions on the location setting and no specific behavior is set or enforced. This is the default.",
+            "helpText": null,
+            "name": "notConfigured",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "LOCATION_USER_CHOICE"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.locationmode_disabled",
+            "description": "Location setting is disabled on the device.",
+            "helpText": null,
+            "name": "disabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "LOCATION_DISABLED"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "System Extensions"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "AllowUserOverrides",
+    "rootDefinitionId": "com.apple.system-extension-policy_com.apple.system-extension-policy",
+    "categoryId": "cb33668b-933f-4424-8d2d-8bdf0e61bddd",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.system-extension-policy_allowuseroverrides",
+    "description": "If false, restricts users from approving additional system extensions that configuration profiles don’t explicitly allow.",
+    "helpText": null,
+    "name": "AllowUserOverrides",
+    "displayName": "Allow User Overrides",
+    "defaultOptionId": "com.apple.system-extension-policy_allowuseroverrides_true",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.system-extension-policy_allowuseroverrides_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.system-extension-policy_com.apple.system-extension-policy",
+                    "parentSettingId": "com.apple.system-extension-policy_com.apple.system-extension-policy"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.system-extension-policy_allowuseroverrides_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.system-extension-policy_com.apple.system-extension-policy",
+                    "parentSettingId": "com.apple.system-extension-policy_com.apple.system-extension-policy"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

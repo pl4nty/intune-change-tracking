@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Smart Card"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "allowSmartCard",
+    "rootDefinitionId": "com.apple.security.smartcard_com.apple.security.smartcard",
+    "categoryId": "f4a8384f-9e4e-4fc6-9ee2-28fa5260347a",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.security.smartcard_allowsmartcard",
+    "description": "If false, disables the SmartCard for logins, authorizations, and screen saver unlocking. It is still allowed for other functions, such as signing emails and accessing the web. A restart is required for a setting change to take effect. ",
+    "helpText": null,
+    "name": "allowSmartCard",
+    "displayName": "Allow Smart Card",
+    "defaultOptionId": "com.apple.security.smartcard_allowsmartcard_true",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.security.smartcard_allowsmartcard_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.security.smartcard_com.apple.security.smartcard",
+                    "parentSettingId": "com.apple.security.smartcard_com.apple.security.smartcard"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.security.smartcard_allowsmartcard_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.security.smartcard_com.apple.security.smartcard",
+                    "parentSettingId": "com.apple.security.smartcard_com.apple.security.smartcard"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

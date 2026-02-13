@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Content settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.IntranetFileLinksEnabled",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.intranetfilelinksenabled",
+    "categoryId": "92d69c43-75ac-49b1-a3ef-9350079eef86",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.intranetfilelinksenabled",
+    "description": "This setting allows file URL links to intranet zone files from intranet zone HTTPS websites to open Windows File Explorer for that file or directory.\n\nIf you enable this policy, intranet zone file URL links originating from intranet zone HTTPS pages will open Windows File Explorer to the parent directory of the file and select the file. Intranet zone directory URL links originating from intranet zone HTTPS pages will open Windows File Explorer to the directory with no items in the directory selected.\n\nIf you disable or don't configure this policy, file URL links will not open.\n\nMicrosoft Edge uses the definition of intranet zone as configured for Internet Explorer. Note that https://localhost/ is specifically blocked as an exception of allowed intranet zone host, while loopback addresses (127.0.0.*, [::1]) are considered internet zone by default.\n\nUsers may opt out of prompts on a per-protocol/per-site basis unless the \"ExternalProtocolDialogShowAlwaysOpenCheckbox\" policy is disabled.",
+    "helpText": null,
+    "name": "IntranetFileLinksEnabled",
+    "displayName": "Allow intranet zone file URL links from Microsoft Edge to open in Windows File Explorer",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.intranetfilelinksenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.intranetfilelinksenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

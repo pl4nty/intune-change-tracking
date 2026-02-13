@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Restrictions"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "allowOpenFromUnmanagedToManaged",
+    "rootDefinitionId": "com.apple.applicationaccess_com.apple.applicationaccess",
+    "categoryId": "eda31027-9270-4959-801b-397fa05512e2",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.applicationaccess_allowopenfromunmanagedtomanaged",
+    "description": "If false, documents in unmanaged apps and accounts only open in other unmanaged apps and accounts. Available in iOS 7 and later. Also available for user enrollment.",
+    "helpText": null,
+    "name": "allowOpenFromUnmanagedToManaged",
+    "displayName": "Allow Open From Unmanaged To Managed",
+    "defaultOptionId": "com.apple.applicationaccess_allowopenfromunmanagedtomanaged_true",
+    "applicability": {
+        "description": null,
+        "platform": "iOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.applicationaccess_allowopenfromunmanagedtomanaged_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.applicationaccess_com.apple.applicationaccess",
+                    "parentSettingId": "com.apple.applicationaccess_com.apple.applicationaccess"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.applicationaccess_allowopenfromunmanagedtomanaged_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.applicationaccess_com.apple.applicationaccess",
+                    "parentSettingId": "com.apple.applicationaccess_com.apple.applicationaccess"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,84 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "AllowStandardUserControl",
+        "Allow standard users to execute installer operations",
+        "\\Visual Studio\\Install and Update Settings",
+        "Visual Studio\\Install and Update Settings",
+        "Install and Update Settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/VisualStudiov2.1~Policy~VisualStudio~InstallandUpdateSettings/AllowStandardUserControl",
+    "rootDefinitionId": "device_vendor_msft_policy_config_visualstudiov2.1~policy~visualstudio~installandupdatesettings_allowstandardusercontrol",
+    "categoryId": "175ddbac-b0ae-4d9d-b76e-4eb1a487fc93",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_visualstudiov2.1~policy~visualstudio~installandupdatesettings_allowstandardusercontrol_allowstandardusercontroldropid",
+    "description": "",
+    "helpText": "",
+    "name": "AllowStandardUserControlDropID",
+    "displayName": "Define which installer commands Standard Users can execute",
+    "defaultOptionId": "device_vendor_msft_policy_config_visualstudiov2.1~policy~visualstudio~installandupdatesettings_allowstandardusercontrol_allowstandardusercontroldropid_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_visualstudiov2.1~policy~visualstudio~installandupdatesettings_allowstandardusercontrol_allowstandardusercontroldropid_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled for Update and Rollback",
+            "displayName": "Enabled for Update and Rollback",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_visualstudiov2.1~policy~visualstudio~installandupdatesettings_allowstandardusercontrol_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_visualstudiov2.1~policy~visualstudio~installandupdatesettings_allowstandardusercontrol"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_visualstudiov2.1~policy~visualstudio~installandupdatesettings_allowstandardusercontrol_allowstandardusercontroldropid_2",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled for all installer operations",
+            "displayName": "Enabled for all installer operations",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_visualstudiov2.1~policy~visualstudio~installandupdatesettings_allowstandardusercontrol_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_visualstudiov2.1~policy~visualstudio~installandupdatesettings_allowstandardusercontrol"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,89 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Extensible Single Sign On (SSO)"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "PlatformSSO/UserAuthorizationMode",
+    "rootDefinitionId": "com.apple.extensiblesso_com.apple.extensiblesso",
+    "categoryId": "7b6ddf4e-7136-4fde-adbf-38e6bdfcc962",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.extensiblesso_platformsso_userauthorizationmode",
+    "description": "This setting affects the permissions after authentication by Platform SSO. It is applied each time user authenticates. Use of the following:\n* Standard\n    The account will be a standard user. It will be removed from the 'admin' group.\n* Admin\n    The account will be added to the local administrators group.\n* Groups\n    The account will be assigned groups using the 'AdministratorGroups', 'AdditionalGroups', or 'AuthorizationGroups'.",
+    "helpText": null,
+    "name": "PlatformSSO_UserAuthorizationMode",
+    "displayName": "User Authorization Mode",
+    "defaultOptionId": "com.apple.extensiblesso_platformsso_userauthorizationmode_0",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "mdm"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.extensiblesso_platformsso_userauthorizationmode_0",
+            "description": null,
+            "helpText": null,
+            "name": "Standard",
+            "displayName": "Standard",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "Standard"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.extensiblesso_platformsso",
+                    "parentSettingId": "com.apple.extensiblesso_platformsso"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.extensiblesso_platformsso_userauthorizationmode_1",
+            "description": null,
+            "helpText": null,
+            "name": "Admin",
+            "displayName": "Admin",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "Admin"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.extensiblesso_platformsso",
+                    "parentSettingId": "com.apple.extensiblesso_platformsso"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.extensiblesso_platformsso_userauthorizationmode_2",
+            "description": null,
+            "helpText": null,
+            "name": "Groups",
+            "displayName": "Groups",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "Groups"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.extensiblesso_platformsso",
+                    "parentSettingId": "com.apple.extensiblesso_platformsso"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

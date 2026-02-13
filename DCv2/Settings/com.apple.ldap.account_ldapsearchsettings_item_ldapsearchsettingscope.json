@@ -1,0 +1,89 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "LDAP"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "LDAPSearchSettings/[{0}]/LDAPSearchSettingScope",
+    "rootDefinitionId": "com.apple.ldap.account_com.apple.ldap.account",
+    "categoryId": "9ba1b877-865a-4104-8376-b43a0c75b04b",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.ldap.account_ldapsearchsettings_item_ldapsearchsettingscope",
+    "description": "The type of recursion to use in the search. It is one of the following values:\r\n\r\nBase: Only the immediate node that the search base points to.\r\n\r\nOne Level: The node plus its immediate children.\r\n\r\nSubtree: The node plus all children, regardless of depth.",
+    "helpText": null,
+    "name": "LDAPSearchSettings_item_LDAPSearchSettingScope",
+    "displayName": "LDAP Search Setting Scope",
+    "defaultOptionId": "com.apple.ldap.account_ldapsearchsettings_item_ldapsearchsettingscope_2",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.ldap.account_ldapsearchsettings_item_ldapsearchsettingscope_0",
+            "description": null,
+            "helpText": null,
+            "name": "LDAPSearchSettingScopeBase",
+            "displayName": "Base",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "LDAPSearchSettingScopeBase"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.ldap.account_ldapsearchsettings",
+                    "parentSettingId": "com.apple.ldap.account_ldapsearchsettings"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.ldap.account_ldapsearchsettings_item_ldapsearchsettingscope_1",
+            "description": null,
+            "helpText": null,
+            "name": "LDAPSearchSettingScopeOneLevel",
+            "displayName": "OneLevel",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "LDAPSearchSettingScopeOneLevel"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.ldap.account_ldapsearchsettings",
+                    "parentSettingId": "com.apple.ldap.account_ldapsearchsettings"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.ldap.account_ldapsearchsettings_item_ldapsearchsettingscope_2",
+            "description": null,
+            "helpText": null,
+            "name": "LDAPSearchSettingScopeSubtree",
+            "displayName": "Subtree",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "LDAPSearchSettingScopeSubtree"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.ldap.account_ldapsearchsettings",
+                    "parentSettingId": "com.apple.ldap.account_ldapsearchsettings"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Cellular Private Network"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "Geofences",
+    "rootDefinitionId": "com.apple.cellularprivatenetwork.managed_com.apple.cellularprivatenetwork.managed",
+    "categoryId": "b6650a16-32bc-4344-ac98-8f20486c6b0b",
+    "settingUsage": "configuration",
+    "uxBehavior": "contextPane",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.cellularprivatenetwork.managed_geofences",
+    "description": "A list of up to 1000 geofences for private networks. Geofencing is only used on iPhone.",
+    "helpText": null,
+    "name": "Geofences",
+    "displayName": "Geofences",
+    "childIds": [
+        "com.apple.cellularprivatenetwork.managed_geofences_item_longitude",
+        "com.apple.cellularprivatenetwork.managed_geofences_item_latitude",
+        "com.apple.cellularprivatenetwork.managed_geofences_item_radius",
+        "com.apple.cellularprivatenetwork.managed_geofences_item_geofenceid"
+    ],
+    "maximumCount": 2147483647,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "iOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [
+        {
+            "dependentOn": "com.apple.cellularprivatenetwork.managed_com.apple.cellularprivatenetwork.managed",
+            "parentSettingId": "com.apple.cellularprivatenetwork.managed_com.apple.cellularprivatenetwork.managed"
+        }
+    ],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "com.apple.cellularprivatenetwork.managed_geofences_item_longitude",
+            "required": true
+        },
+        {
+            "dependedOnBy": "com.apple.cellularprivatenetwork.managed_geofences_item_latitude",
+            "required": true
+        },
+        {
+            "dependedOnBy": "com.apple.cellularprivatenetwork.managed_geofences_item_radius",
+            "required": true
+        },
+        {
+            "dependedOnBy": "com.apple.cellularprivatenetwork.managed_geofences_item_geofenceid",
+            "required": true
+        }
+    ]
+}

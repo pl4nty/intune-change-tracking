@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.InternetExplorerIntegrationTestingAllowed",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.internetexplorerintegrationtestingallowed",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.internetexplorerintegrationtestingallowed",
+    "description": "This policy is obsolete because it has been superseded by an improved feature. It doesn't work in Microsoft Edge after version 94. To allow users to open applications in Internet Explorer mode, use the \"InternetExplorerIntegrationReloadInIEModeAllowed\" policy instead. Alternatively, users can still use the --ie-mode-test flag.\n\nThis policy allows users to test applications in Internet Explorer mode by opening an Internet Explorer mode tab in Microsoft Edge.\n\nUsers can do so from within the \"More tools\" menu by selecting 'Open sites in Internet Explorer mode'.\n\nAdditionally, users can test their applications in a modern browser without removing applications from the site list using the option 'Open sites in Edge mode'.\n\nThis setting works in conjunction with:\n\"InternetExplorerIntegrationLevel\" is set to 'IEMode'.\n\nIf you enable this policy, the option to 'Open sites in Internet Explorer mode' will be visible under \"More tools\". Users can view their sites in Internet Explorer mode on this tab. Another option to 'Open sites in Edge mode' will also be visible under \"More tools\" to help testing sites in a modern browser without removing them from the site list. Note that if the \"InternetExplorerIntegrationReloadInIEModeAllowed\" policy is enabled, it takes precedence and these options will not be visible under \"More tools\".\n\nIf you disable or don't configure this policy, users can't see the options 'Open in Internet Explorer mode' and 'Open in Edge mode' under \"More tools\" menu. However, users can configure these options with the --ie-mode-test flag.",
+    "helpText": null,
+    "name": "InternetExplorerIntegrationTestingAllowed",
+    "displayName": "Allow Internet Explorer mode testing (Obsolete)",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.internetexplorerintegrationtestingallowed_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.internetexplorerintegrationtestingallowed_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

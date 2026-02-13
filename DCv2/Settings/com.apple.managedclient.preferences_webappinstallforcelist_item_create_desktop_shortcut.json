@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "WebAppInstallForceList/[{0}]/create_desktop_shortcut",
+    "rootDefinitionId": "com.apple.managedclient.preferences_webappinstallforcelist",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_webappinstallforcelist_item_create_desktop_shortcut",
+    "description": null,
+    "helpText": null,
+    "name": "WebAppInstallForceList_item_create_desktop_shortcut",
+    "displayName": "Create desktop shortcut",
+    "defaultOptionId": "com.apple.managedclient.preferences_webappinstallforcelist_item_create_desktop_shortcut_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_webappinstallforcelist_item_create_desktop_shortcut_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.managedclient.preferences_webappinstallforcelist",
+                    "parentSettingId": "com.apple.managedclient.preferences_webappinstallforcelist"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_webappinstallforcelist_item_create_desktop_shortcut_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.managedclient.preferences_webappinstallforcelist",
+                    "parentSettingId": "com.apple.managedclient.preferences_webappinstallforcelist"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

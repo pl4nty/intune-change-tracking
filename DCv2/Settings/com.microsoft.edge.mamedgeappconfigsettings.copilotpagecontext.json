@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.CopilotPageContext",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.copilotpagecontext",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.copilotpagecontext",
+    "description": "This policy controls access to page contents for Copilot in the Microsoft Edge sidebar when users are logged into their MSA Copilot account. This policy applies only to Microsoft Entra ID Microsoft Edge profiles. To summarize pages and interact with text selections, it needs to be able to access the page contents. This policy does not apply to MSA Microsoft Edge profiles. This policy doesn't control access for Copilot with enterprise data protection (EDP). Access for Copilot with enterprise data protection (EDP) is controlled by the \"EdgeEntraCopilotPageContext\" policy.\n\nIf you enable this policy, Copilot will have access to page content when logged in with Entra ID.\n\nIf this policy is not configured, the default behavior for non-EU countries is that access is initially enabled. For EU countries, the default behavior is that access is initially disabled. In both cases, if the policy is not configured, users can enable or disable Copilot's access to page content using the setting toggle in Microsoft Edge.\n\nIf you disable this policy, Copilot will not be able to access page context.",
+    "helpText": null,
+    "name": "CopilotPageContext",
+    "displayName": "Control Copilot access to page context for Microsoft Entra ID profiles",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.copilotpagecontext_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.copilotpagecontext_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

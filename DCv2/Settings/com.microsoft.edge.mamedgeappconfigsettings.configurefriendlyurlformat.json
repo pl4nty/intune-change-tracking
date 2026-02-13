@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.ConfigureFriendlyURLFormat",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.configurefriendlyurlformat",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.configurefriendlyurlformat",
+    "description": "If FriendlyURLs are enabled, Microsoft Edge will compute additional representations of the URL and place them on the clipboard.\n\nThis policy configures what format will be pasted when the user pastes in external applications, or inside Microsoft Edge without the 'Paste as' context menu item.\n\nIf configured, this policy makes a choice on behalf of the user. The options in edge://settings/shareCopyPaste will be grayed out, and the options in the 'Paste As' context menu will not be available.\n\n* Not configured = The user will be able to choose their preferred paste format. By default, this is set to the friendly URL format. The 'Paste As' menu will be available in Microsoft Edge.\n\n* 1 = No additional formats will be stored on the clipboard. There will be no 'Paste as' context menu item in Microsoft Edge and the only format available to paste will be the plain text URL format. Effectively, the friendly URL feature will be disabled.\n\n* 3 = The user will get a friendly URL whenever they paste into surfaces that accept rich text. The plain URL will still be available for non-rich surfaces. There will be no 'Paste As' menu in Microsoft Edge.\n\n* 4 = (Not currently used)\n\nThe richer formats may not be well-supported in some paste destinations and/or websites. In these scenarios, the plain URL option is recommended when configuring this policy.\n\nThe recommended policy is available in Microsoft Edge 105 or later.\n\nPolicy options mapping:\n\n* PlainText (1) = The plain URL without any extra information, such as the page's title. This is the recommended option when this policy is configured. For more information, see the description.\n\n* TitledHyperlink (3) = Titled Hyperlink: A hyperlink that points to the copied URL, but whose visible text is the title of the destination page. This is the Friendly URL format.\n\n* WebPreview (4) = Coming soon. If set, behaves the same as 'Plain URL'.\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "ConfigureFriendlyURLFormat",
+    "displayName": "Configure the default paste format of URLs copied from Microsoft Edge, and determine if additional formats will be available to users",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.configurefriendlyurlformat_plaintext",
+            "description": null,
+            "helpText": null,
+            "name": "The plain URL without any extra information, such as the page's title. This is the recommended option when this policy is configured. For more information, see the description.",
+            "displayName": "The plain URL without any extra information, such as the page's title. This is the recommended option when this policy is configured. For more information, see the description.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.configurefriendlyurlformat_titledhyperlink",
+            "description": null,
+            "helpText": null,
+            "name": "Titled Hyperlink: A hyperlink that points to the copied URL, but whose visible text is the title of the destination page. This is the Friendly URL format.",
+            "displayName": "Titled Hyperlink: A hyperlink that points to the copied URL, but whose visible text is the title of the destination page. This is the Friendly URL format.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.configurefriendlyurlformat_webpreview",
+            "description": null,
+            "helpText": null,
+            "name": "Coming soon. If set, behaves the same as 'Plain URL'.",
+            "displayName": "Coming soon. If set, behaves the same as 'Plain URL'.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 4
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

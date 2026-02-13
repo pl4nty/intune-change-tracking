@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Software Update"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "restrict-software-update-require-admin-to-install",
+    "rootDefinitionId": "com.apple.softwareupdate_com.apple.softwareupdate",
+    "categoryId": "f8f4d337-4c55-4518-91c4-f7f77703d843",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.softwareupdate_restrict-software-update-require-admin-to-install",
+    "description": "If true, restrict app installations to admin users. This key has the same function as the Restrict Store Require Admin To Install key in the App Store profile. ",
+    "helpText": null,
+    "name": "restrict-software-update-require-admin-to-install",
+    "displayName": "Restrict Software Update Require Admin To Install (Deprecated)",
+    "defaultOptionId": "com.apple.softwareupdate_restrict-software-update-require-admin-to-install_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.softwareupdate_restrict-software-update-require-admin-to-install_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.softwareupdate_com.apple.softwareupdate",
+                    "parentSettingId": "com.apple.softwareupdate_com.apple.softwareupdate"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.softwareupdate_restrict-software-update-require-admin-to-install_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.softwareupdate_com.apple.softwareupdate",
+                    "parentSettingId": "com.apple.softwareupdate_com.apple.softwareupdate"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Time Machine"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "AutoBackup",
+    "rootDefinitionId": "com.apple.mcx.timemachine_com.apple.mcx.timemachine",
+    "categoryId": "361859d9-1382-47c3-b9ec-9251a62fbb25",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.mcx.timemachine_autobackup",
+    "description": "If true, performs automatic backups at regular intervals.",
+    "helpText": null,
+    "name": "AutoBackup",
+    "displayName": "Auto Backup",
+    "defaultOptionId": "com.apple.mcx.timemachine_autobackup_true",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.mcx.timemachine_autobackup_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.mcx.timemachine_com.apple.mcx.timemachine",
+                    "parentSettingId": "com.apple.mcx.timemachine_com.apple.mcx.timemachine"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.mcx.timemachine_autobackup_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.mcx.timemachine_com.apple.mcx.timemachine",
+                    "parentSettingId": "com.apple.mcx.timemachine_com.apple.mcx.timemachine"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

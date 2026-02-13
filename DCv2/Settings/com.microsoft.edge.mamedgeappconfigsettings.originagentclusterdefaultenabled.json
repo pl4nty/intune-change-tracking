@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.OriginAgentClusterDefaultEnabled",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.originagentclusterdefaultenabled",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.originagentclusterdefaultenabled",
+    "description": "The Origin-Agent-Cluster: HTTP header controls whether a document is isolated in an origin-keyed agent cluster or in a site-keyed agent cluster. This has security implications because an origin-keyed agent cluster allows isolating documents by origin. The consequence of this for developers is that the document.domain accessor can no longer be set when origin-keyed agent clustering is enabled.\n\nIf you enable or don't configure this policy, documents without the Origin-Agent-Cluster: header will be assigned to origin-keyed agent clustering by default. On these documents, the document.domain accessor will not be settable.\n\nIf you disable this policy, documents without the Origin-Agent-Cluster: header will be assigned to site-keyed agent clusters by default. On these documents, the document.domain accessor will be settable.\n\nSee <a href=\"https://go.microsoft.com/fwlink/?linkid=2191896\">https://go.microsoft.com/fwlink/?linkid=2191896</a> for additional details.",
+    "helpText": null,
+    "name": "OriginAgentClusterDefaultEnabled",
+    "displayName": "Origin-keyed agent clustering enabled by default",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.originagentclusterdefaultenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.originagentclusterdefaultenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

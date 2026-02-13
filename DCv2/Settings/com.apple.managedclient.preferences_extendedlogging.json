@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Auto Update",
+        "Microsoft AutoUpdate (MAU)"
+    ],
+    "infoUrls": [
+        "https://macadmins.software/docs/MAU_38.pdf"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.autoupdate2/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "ExtendedLogging",
+    "rootDefinitionId": "com.apple.managedclient.preferences_extendedlogging",
+    "categoryId": "2373de26-8270-4e74-a53f-9aeb55d5553c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_extendedlogging",
+    "description": "Write verbose logging events to /Library/Logs/Microsoft/autoupdate.log",
+    "helpText": null,
+    "name": "ExtendedLogging",
+    "displayName": "Enable extended logging",
+    "defaultOptionId": "com.apple.managedclient.preferences_extendedlogging_true",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_extendedlogging_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_extendedlogging_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

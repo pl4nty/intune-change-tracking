@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Content Caching"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "AllowPersonalCaching",
+    "rootDefinitionId": "com.apple.assetcache.managed_com.apple.assetcache.managed",
+    "categoryId": "e95335ec-2704-47ab-8b40-f602b31eeb9d",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.assetcache.managed_allowpersonalcaching",
+    "description": "If true, caches the user's iCloud data. Clients may take some time (hours or days) to react to changes to this setting; it doesn't have an immediate effect.\r\nAt least one of the Allow Personal Caching or Allow Shared Caching settings must be true.",
+    "helpText": null,
+    "name": "AllowPersonalCaching",
+    "displayName": "Allow Personal Caching",
+    "defaultOptionId": "com.apple.assetcache.managed_allowpersonalcaching_true",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.assetcache.managed_allowpersonalcaching_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.assetcache.managed_com.apple.assetcache.managed",
+                    "parentSettingId": "com.apple.assetcache.managed_com.apple.assetcache.managed"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.assetcache.managed_allowpersonalcaching_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.assetcache.managed_com.apple.assetcache.managed",
+                    "parentSettingId": "com.apple.assetcache.managed_com.apple.assetcache.managed"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

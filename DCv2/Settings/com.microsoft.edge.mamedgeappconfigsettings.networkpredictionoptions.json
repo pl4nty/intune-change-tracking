@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.NetworkPredictionOptions",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.networkpredictionoptions",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.networkpredictionoptions",
+    "description": "Enables network prediction and prevents users from changing this setting.\n\nThis controls DNS prefetching, TCP and SSL preconnection, and prerendering of web pages.\n\nIf you don't configure this policy, network prediction is enabled but the user can change it.\n\nPolicy options mapping:\n\n* NetworkPredictionAlways (0) = Predict network actions on any network connection\n\n* NetworkPredictionWifiOnly (1) = Not supported, if this value is used it will be treated as if 'Predict network actions on any network connection' (0) was set\n\n* NetworkPredictionNever (2) = Don't predict network actions on any network connection\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "NetworkPredictionOptions",
+    "displayName": "Enable network prediction",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.networkpredictionoptions_networkpredictionalways",
+            "description": null,
+            "helpText": null,
+            "name": "Predict network actions on any network connection",
+            "displayName": "Predict network actions on any network connection",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.networkpredictionoptions_networkpredictionwifionly",
+            "description": null,
+            "helpText": null,
+            "name": "Not supported, if this value is used it will be treated as if 'Predict network actions on any network connection' (0) was set",
+            "displayName": "Not supported, if this value is used it will be treated as if 'Predict network actions on any network connection' (0) was set",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.networkpredictionoptions_networkpredictionnever",
+            "description": null,
+            "helpText": null,
+            "name": "Don't predict network actions on any network connection",
+            "displayName": "Don't predict network actions on any network connection",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

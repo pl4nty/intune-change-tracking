@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.ForceYouTubeRestrict",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.forceyoutuberestrict",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.forceyoutuberestrict",
+    "description": "Enforces a minimum Restricted Mode on YouTube and prevents users from picking a less restricted mode.\n\nSet to 'Strict' to enforce Strict Restricted Mode on YouTube.\n\nSet to 'Moderate' to enforce the user to only use Moderate Restricted Mode and Strict Restricted Mode on YouTube. They can't disable Restricted Mode.\n\nSet to 'Off' or don't configure this policy to not enforce Restricted Mode on YouTube. External policies such as YouTube policies might still enforce Restricted Mode.\n\nPolicy options mapping:\n\n* Off (0) = Do not enforce Restricted Mode on YouTube\n\n* Moderate (1) = Enforce at least Moderate Restricted Mode on YouTube\n\n* Strict (2) = Enforce Strict Restricted Mode for YouTube\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "ForceYouTubeRestrict",
+    "displayName": "Force minimum YouTube Restricted Mode",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.forceyoutuberestrict_off",
+            "description": null,
+            "helpText": null,
+            "name": "Do not enforce Restricted Mode on YouTube",
+            "displayName": "Do not enforce Restricted Mode on YouTube",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.forceyoutuberestrict_moderate",
+            "description": null,
+            "helpText": null,
+            "name": "Enforce at least Moderate Restricted Mode on YouTube",
+            "displayName": "Enforce at least Moderate Restricted Mode on YouTube",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.forceyoutuberestrict_strict",
+            "description": null,
+            "helpText": null,
+            "name": "Enforce Strict Restricted Mode for YouTube",
+            "displayName": "Enforce Strict Restricted Mode for YouTube",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

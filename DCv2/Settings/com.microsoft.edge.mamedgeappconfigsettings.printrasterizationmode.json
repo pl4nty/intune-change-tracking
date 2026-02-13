@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Printing"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.PrintRasterizationMode",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.printrasterizationmode",
+    "categoryId": "c6099521-a05f-480a-8562-7e71318e2cda",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.printrasterizationmode",
+    "description": "Controls how Microsoft Edge prints on Windows.\n\nWhen printing to a non-PostScript printer on Windows, sometimes print jobs need to be rasterized to print correctly.\n\nIf you set this policy to 'Full' or don't configure it, Microsoft Edge will do full page rasterization if necessary.\n\nIf you set this policy to 'Fast', Microsoft Edge will reduce the amount of rasterization which can help reduce print job sizes and increase printing speed.\n\nPolicy options mapping:\n\n* Full (0) = Full page rasterization\n\n* Fast (1) = Avoid rasterization if possible\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "PrintRasterizationMode",
+    "displayName": "Print Rasterization Mode",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.printrasterizationmode_full",
+            "description": null,
+            "helpText": null,
+            "name": "Full page rasterization",
+            "displayName": "Full page rasterization",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.printrasterizationmode_fast",
+            "description": null,
+            "helpText": null,
+            "name": "Avoid rasterization if possible",
+            "displayName": "Avoid rasterization if possible",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

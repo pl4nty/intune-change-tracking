@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Extensible Single Sign On (SSO)"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "PlatformSSO/AuthorizationGroups",
+    "rootDefinitionId": "com.apple.extensiblesso_com.apple.extensiblesso",
+    "categoryId": "7b6ddf4e-7136-4fde-adbf-38e6bdfcc962",
+    "settingUsage": "configuration",
+    "uxBehavior": "contextPane",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.extensiblesso_platformsso_authorizationgroups",
+    "description": "The pairing of Authorization Rights to group names. The Authorization Right will be updated to use the group when used.",
+    "helpText": null,
+    "name": "PlatformSSO_AuthorizationGroups",
+    "displayName": "Authorization Groups",
+    "childIds": [
+        "com.apple.extensiblesso_platformsso_authorizationgroups_generickey",
+        "com.apple.extensiblesso_platformsso_authorizationgroups_generickey_keytobereplaced",
+        "com.apple.extensiblesso_platformsso_authorizationgroups_group",
+        "com.apple.extensiblesso_platformsso_authorizationgroups_authorization right"
+    ],
+    "maximumCount": 2147483647,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "mdm"
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [
+        {
+            "dependentOn": "com.apple.extensiblesso_platformsso",
+            "parentSettingId": "com.apple.extensiblesso_platformsso"
+        }
+    ],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "com.apple.extensiblesso_platformsso_authorizationgroups_generickey",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.extensiblesso_platformsso_authorizationgroups_generickey_keytobereplaced",
+            "required": true
+        },
+        {
+            "dependedOnBy": "com.apple.extensiblesso_platformsso_authorizationgroups_group",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.extensiblesso_platformsso_authorizationgroups_authorization right",
+            "required": false
+        }
+    ]
+}

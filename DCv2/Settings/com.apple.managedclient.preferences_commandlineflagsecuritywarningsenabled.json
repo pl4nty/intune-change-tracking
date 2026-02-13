@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#commandlineflagsecuritywarningsenabled"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "CommandLineFlagSecurityWarningsEnabled",
+    "rootDefinitionId": "com.apple.managedclient.preferences_commandlineflagsecuritywarningsenabled",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_commandlineflagsecuritywarningsenabled",
+    "description": "If disabled, this policy prevents security warnings from appearing when Microsoft Edge is launched with potentially dangerous command-line flags.\n\nIf enabled or unset, security warnings are displayed when these command-line flags are used to launch Microsoft Edge.\n\nFor example, the --disable-gpu-sandbox flag generates this warning:  You're using an unsupported command-line flag: --disable-gpu-sandbox. This poses stability and security risks.\n\nOn Windows, this policy is only available on instances that are joined to a Microsoft Active Directory domain, or Windows 10 Pro (or Enterprise) instances that are enrolled for device management.",
+    "helpText": null,
+    "name": "CommandLineFlagSecurityWarningsEnabled",
+    "displayName": "Enable security warnings for command-line flags",
+    "defaultOptionId": "com.apple.managedclient.preferences_commandlineflagsecuritywarningsenabled_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_commandlineflagsecuritywarningsenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_commandlineflagsecuritywarningsenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

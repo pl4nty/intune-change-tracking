@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Network settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.LocalNetworkAccessRestrictionsTemporaryOptOut",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.localnetworkaccessrestrictionstemporaryoptout",
+    "categoryId": "3fbd3b29-bafd-4adf-89e4-3be612dee275",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.localnetworkaccessrestrictionstemporaryoptout",
+    "description": "This policy allows for opting out of restrictions on requests to local network endpoints.\n\nIf you enable this policy, Local Network Access requests will only display warnings in Edge DevTools when Local Network Access checks fail.\n\nIf you disable or don't configure this policy, Local Network Access requests will follow the default handling behavior.\n\nFor more information about Local Network Access restrictions, see Local Network Access .\n\nTo allow specific URL patterns that should automatically be granted Local Network Access permission, use the LocalNetworkAccessAllowedForUrls policy.\n\nNote: This opt-out policy is temporary and will be removed after Microsoft Edge version 152.",
+    "helpText": null,
+    "name": "LocalNetworkAccessRestrictionsTemporaryOptOut",
+    "displayName": "Specifies whether to opt out of Local Network Access restrictions",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.localnetworkaccessrestrictionstemporaryoptout_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.localnetworkaccessrestrictionstemporaryoptout_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

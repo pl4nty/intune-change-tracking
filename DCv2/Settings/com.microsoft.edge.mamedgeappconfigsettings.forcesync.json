@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.ForceSync",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.forcesync",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.forcesync",
+    "description": "Forces data synchronization in Microsoft Edge. This policy also prevents the user from turning sync off.\n\nIf you don't configure this policy, users will be able to turn sync on or off. If you enable this policy, users will not be able to turn sync off.\n\nFor this policy to work as intended,\n\"BrowserSignin\" policy must not be configured, or must be set to enabled. If \"BrowserSignin\" is set to disabled, then \"ForceSync\" will not take affect.\n\n\"SyncDisabled\" must not be configured or must be set to False. If this is set to True, \"ForceSync\" will not take affect. If you wish to ensure specific datatypes sync or do not sync, use the \"ForceSyncTypes\" policy and \"SyncTypesListDisabled\" policy.\n\n0 = Do not automatically start sync and show the sync consent (default)\n1 = Force sync to be turned on for Azure AD/Azure AD-Degraded user profile and do not show the sync consent prompt",
+    "helpText": null,
+    "name": "ForceSync",
+    "displayName": "Force synchronization of browser data and do not show the sync consent prompt",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.forcesync_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.forcesync_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

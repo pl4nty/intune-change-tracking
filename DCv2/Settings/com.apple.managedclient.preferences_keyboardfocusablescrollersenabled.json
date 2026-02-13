@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#keyboardfocusablescrollersenabled"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "KeyboardFocusableScrollersEnabled",
+    "rootDefinitionId": "com.apple.managedclient.preferences_keyboardfocusablescrollersenabled",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_keyboardfocusablescrollersenabled",
+    "description": "This policy provides a temporary opt-out for the new keyboard focusable scrollers behavior.\n\nWhen this policy is Enabled or unset, scrollers without focusable children are keyboard focusable by default. Further, scrollers are click focusable and programmatically focusable by default.\n\nWhen this policy is Disabled, scrollers are not focusable by default.\n\nThis policy is a temporary workaround and will be removed in Edge Stable 135.",
+    "helpText": null,
+    "name": "KeyboardFocusableScrollersEnabled",
+    "displayName": "Enable keyboard focusable scrollers",
+    "defaultOptionId": "com.apple.managedclient.preferences_keyboardfocusablescrollersenabled_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_keyboardfocusablescrollersenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_keyboardfocusablescrollersenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

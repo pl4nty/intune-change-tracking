@@ -1,0 +1,103 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Proxy server"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.ProxyMode",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.proxymode",
+    "categoryId": "fe845e81-5993-4a65-b22a-decfc5928c65",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.proxymode",
+    "description": "This policy is deprecated, use \"ProxySettings\" instead. It won't work in Microsoft Edge version 91.\n\nIf you set this policy to Enabled you can specify the proxy server Microsoft Edge uses and prevents users from changing proxy settings. Microsoft Edge ignores all proxy-related options specified from the command line. The policy is only applied if the \"ProxySettings\" policy isn't specified.\n\nOther options are ignored if you choose one of the following options:\n  * direct = Never use a proxy server and always connect directly\n  * system = Use system proxy settings\n  * auto_detect = Auto detect the proxy server\n\nIf you choose to use:\n  * fixed_servers = Fixed proxy servers. You can specify further options with \"ProxyServer\" and \"ProxyBypassList\".\n  * pac_script =  A .pac proxy script. Use \"ProxyPacUrl\" to set the URL to a proxy .pac file.\n\nFor detailed examples, go to <a href=\"https://go.microsoft.com/fwlink/?linkid=2094936\">https://go.microsoft.com/fwlink/?linkid=2094936</a>.\n\nIf you don't configure this policy, users can choose their own proxy settings.\n\nPolicy options mapping:\n\n* ProxyDisabled (direct) = Never use a proxy\n\n* ProxyAutoDetect (auto_detect) = Auto detect proxy settings\n\n* ProxyPacScript (pac_script) = Use a .pac proxy script\n\n* ProxyFixedServers (fixed_servers) = Use fixed proxy servers\n\n* ProxyUseSystem (system) = Use system proxy settings\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "ProxyMode",
+    "displayName": "Configure proxy server settings (Deprecated)",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.proxymode_proxydisabled",
+            "description": null,
+            "helpText": null,
+            "name": "Never use a proxy",
+            "displayName": "Never use a proxy",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "direct"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.proxymode_proxyautodetect",
+            "description": null,
+            "helpText": null,
+            "name": "Auto detect proxy settings",
+            "displayName": "Auto detect proxy settings",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "auto_detect"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.proxymode_proxypacscript",
+            "description": null,
+            "helpText": null,
+            "name": "Use a .pac proxy script",
+            "displayName": "Use a .pac proxy script",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "pac_script"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.proxymode_proxyfixedservers",
+            "description": null,
+            "helpText": null,
+            "name": "Use fixed proxy servers",
+            "displayName": "Use fixed proxy servers",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "fixed_servers"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.proxymode_proxyusesystem",
+            "description": null,
+            "helpText": null,
+            "name": "Use system proxy settings",
+            "displayName": "Use system proxy settings",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "system"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

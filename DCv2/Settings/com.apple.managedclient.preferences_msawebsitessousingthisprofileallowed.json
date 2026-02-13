@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#msawebsitessousingthisprofileallowed"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "MSAWebSiteSSOUsingThisProfileAllowed",
+    "rootDefinitionId": "com.apple.managedclient.preferences_msawebsitessousingthisprofileallowed",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_msawebsitessousingthisprofileallowed",
+    "description": "'Allow single sign-on for Microsoft personal sites using this profile' option allows non-MSA profiles to be able to use single sign-on for Microsoft sites using MSA credentials present on the machine. This option shows up for end-users as a toggle in Settings -> Profiles -> Profile Preferences for non-MSA profiles only.\n\nIf you disable this policy, non-MSA profiles will not be able to use single sign-on for Microsoft sites using MSA credentials present on the machine.\n\nIf you enable this policy or don't configure it, users will be able to use the Settings option to ensure non-MSA profiles are able to use single sign-on for Microsoft sites using MSA credentials present on the machine provided only a single MSA account exists on the machine.",
+    "helpText": null,
+    "name": "MSAWebSiteSSOUsingThisProfileAllowed",
+    "displayName": "Allow single sign-on for Microsoft personal sites using this profile",
+    "defaultOptionId": "com.apple.managedclient.preferences_msawebsitessousingthisprofileallowed_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_msawebsitessousingthisprofileallowed_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "Blocked",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_msawebsitessousingthisprofileallowed_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "Allowed",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

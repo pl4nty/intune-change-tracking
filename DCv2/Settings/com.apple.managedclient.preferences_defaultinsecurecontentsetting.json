@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#defaultinsecurecontentsetting"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "DefaultInsecureContentSetting",
+    "rootDefinitionId": "com.apple.managedclient.preferences_defaultinsecurecontentsetting",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_defaultinsecurecontentsetting",
+    "description": "Allows you to set whether users can add exceptions to allow mixed content for specific sites.\n\nThis policy can be overridden for specific URL patterns using the \"InsecureContentAllowedForUrls\" and \"InsecureContentBlockedForUrls\" policies.\n\nIf this policy isn't set, users will be allowed to add exceptions to allow blockable mixed content and disable autoupgrades for optionally blockable mixed content.\n\n* 2 = Do not allow any site to load blockable mixed content\n\n* 3 = Allow users to add exceptions to allow blockable mixed content",
+    "helpText": null,
+    "name": "DefaultInsecureContentSetting",
+    "displayName": "Control use of insecure content exceptions",
+    "defaultOptionId": "com.apple.managedclient.preferences_defaultinsecurecontentsetting_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultinsecurecontentsetting_0",
+            "description": null,
+            "helpText": null,
+            "name": "Do not allow any site to load mixed content",
+            "displayName": "Do not allow any site to load mixed content",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultinsecurecontentsetting_1",
+            "description": null,
+            "helpText": null,
+            "name": "Allow users to add exceptions to allow mixed content",
+            "displayName": "Allow users to add exceptions to allow mixed content",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

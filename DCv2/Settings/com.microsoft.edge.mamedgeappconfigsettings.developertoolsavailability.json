@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.DeveloperToolsAvailability",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.developertoolsavailability",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.developertoolsavailability",
+    "description": "Control where developer tools can be used.\n\nIf you set this policy to 'DeveloperToolsDisallowedForForceInstalledExtensions' (the default), users can access the developer tools and the JavaScript console in general, but not in the context of extensions installed by enterprise policy.\n\nIf you set this policy to 'DeveloperToolsAllowed', users can access the developer tools and the JavaScript console in all contexts, including extensions installed by enterprise policy.\n\nIf you set this policy to 'DeveloperToolsDisallowed', users can't access the developer tools or inspect website elements. Keyboard shortcuts and menu or context menu entries that open the developer tools or the JavaScript Console are disabled.\n\nAs of Microsoft Edge version 99, this setting also controls entry points for the 'View page source' feature. If you set this policy to 'DeveloperToolsDisallowed', users cannot access source viewing via keyboard shortcut or the context menu. To fully block source viewing, you must also add 'view-source:*' to the \"URLBlocklist\" policy.\n\nAs of Microsoft Edge version 119, this setting also controls whether developer mode for Isolated Web Apps can be activated and used.\n\nAs of Microsoft Edge version 128, this setting will not control developer mode on extensions page if \"ExtensionDeveloperModeSettings\" policy is set.\n\nPolicy options mapping:\n\n* DeveloperToolsDisallowedForForceInstalledExtensions (0) = Block the developer tools on extensions installed by enterprise policy, allow in other contexts\n\n* DeveloperToolsAllowed (1) = Allow using the developer tools\n\n* DeveloperToolsDisallowed (2) = Don't allow using the developer tools\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "DeveloperToolsAvailability",
+    "displayName": "Control where developer tools can be used",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.developertoolsavailability_developertoolsdisallowedforforceinstalledextensions",
+            "description": null,
+            "helpText": null,
+            "name": "Block the developer tools on extensions installed by enterprise policy, allow in other contexts",
+            "displayName": "Block the developer tools on extensions installed by enterprise policy, allow in other contexts",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.developertoolsavailability_developertoolsallowed",
+            "description": null,
+            "helpText": null,
+            "name": "Allow using the developer tools",
+            "displayName": "Allow using the developer tools",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.developertoolsavailability_developertoolsdisallowed",
+            "description": null,
+            "helpText": null,
+            "name": "Don't allow using the developer tools",
+            "displayName": "Don't allow using the developer tools",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

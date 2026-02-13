@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Default search provider"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.NewTabPageSearchBox_recommended",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.newtabpagesearchbox_recommended",
+    "categoryId": "8aa3383a-efac-4ec4-841d-06e3e18646d8",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.newtabpagesearchbox_recommended",
+    "description": "You can configure the new tab page search box to use \"Search box (Recommended)\" or \"Address bar\" to search on new tabs. This policy only works if you set the search engine to a value other than Bing by setting the following two policies: \"DefaultSearchProviderEnabled\" and \"DefaultSearchProviderSearchURL\".\n\n If you disable or don't configure this policy and:\n\n- If the address bar default search engine is Bing, the new tab page uses the search box to search on new tabs.\n- If the address bar default search engine is not Bing, users are offered an additional choice (use \"Address bar\") when searching on new tabs.\n\n\nIf you enable this policy and set it to:\n\n- \"Search box (Recommended)\" ('bing'), the new tab page uses the search box to search on new tabs.\n- \"Address bar\" ('redirect'), the new tab page search box uses the address bar to search on new tabs.\n\nPolicy options mapping:\n\n* bing (bing) = Search box (Recommended)\n\n* redirect (redirect) = Address bar\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "NewTabPageSearchBox_recommended",
+    "displayName": "Configure the new tab page search box experience (users can override)",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.newtabpagesearchbox_recommended_bing",
+            "description": null,
+            "helpText": null,
+            "name": "Search box (Recommended)",
+            "displayName": "Search box (Recommended)",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "bing"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.newtabpagesearchbox_recommended_redirect",
+            "description": null,
+            "helpText": null,
+            "name": "Address bar",
+            "displayName": "Address bar",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "redirect"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

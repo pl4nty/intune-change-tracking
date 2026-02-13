@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Extensible Single Sign On (SSO)"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "PlatformSSO/EnableAuthorization",
+    "rootDefinitionId": "com.apple.extensiblesso_com.apple.extensiblesso",
+    "categoryId": "7b6ddf4e-7136-4fde-adbf-38e6bdfcc962",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.extensiblesso_platformsso_enableauthorization",
+    "description": "Enables using identity provider accounts at authorization prompts. Requires 'UseSharedDeviceKeys' is true. The account will be assigned groups using the 'AdministratorGroups', 'AdditionalGroups', or 'AuthorizationGroups'.",
+    "helpText": null,
+    "name": "PlatformSSO_EnableAuthorization",
+    "displayName": "Enable Authorization",
+    "defaultOptionId": "com.apple.extensiblesso_platformsso_enableauthorization_false",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "mdm"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.extensiblesso_platformsso_enableauthorization_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.extensiblesso_platformsso",
+                    "parentSettingId": "com.apple.extensiblesso_platformsso"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.extensiblesso_platformsso_enableauthorization_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.extensiblesso_platformsso",
+                    "parentSettingId": "com.apple.extensiblesso_platformsso"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

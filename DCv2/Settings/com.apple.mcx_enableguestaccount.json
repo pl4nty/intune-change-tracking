@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Accounts"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "EnableGuestAccount",
+    "rootDefinitionId": "com.apple.mcx_com.apple.mcx-accounts",
+    "categoryId": "5214f1e7-a5a9-4de5-80b4-2f7084a8d068",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.mcx_enableguestaccount",
+    "description": "If true, enables the guest account.",
+    "helpText": null,
+    "name": "EnableGuestAccount",
+    "displayName": "Enable Guest Account",
+    "defaultOptionId": "com.apple.mcx_enableguestaccount_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.mcx_enableguestaccount_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.mcx_com.apple.mcx-accounts",
+                    "parentSettingId": "com.apple.mcx_com.apple.mcx-accounts"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.mcx_enableguestaccount_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.mcx_com.apple.mcx-accounts",
+                    "parentSettingId": "com.apple.mcx_com.apple.mcx-accounts"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

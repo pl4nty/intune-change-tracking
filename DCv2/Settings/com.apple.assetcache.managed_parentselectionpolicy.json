@@ -1,0 +1,127 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Content Caching"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "ParentSelectionPolicy",
+    "rootDefinitionId": "com.apple.assetcache.managed_com.apple.assetcache.managed",
+    "categoryId": "e95335ec-2704-47ab-8b40-f602b31eeb9d",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.assetcache.managed_parentselectionpolicy",
+    "description": "The policy to implement when choosing among more than one configured parent content cache. With every policy, parent caches that are temporarily unavailable are skipped.\r\nfirst-available: Always use the first available parent in the Parents list. Use this policy to designate permanent primary, secondary, and subsequent parents.\r\n\r\nurl-path-hash: Hash the path part of the requested URL so that the same parent is always used for the same URL. This is useful for maximizing the size of the combined caches of the parents.\r\n\r\nrandom: Choose a parent at random. Use this policy for load balancing.\r\n\r\nround-robin: Rotate through the parents in order. Use this policy for load balancing.\r\n\r\nsticky-available: Use the first available parent that is available in the Parents list until it becomes unavailable, then advance to the next one. Use this policy for designating floating primary, secondary, and subsequent parents. ",
+    "helpText": null,
+    "name": "ParentSelectionPolicy",
+    "displayName": "Parent Selection Policy",
+    "defaultOptionId": "com.apple.assetcache.managed_parentselectionpolicy_3",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.assetcache.managed_parentselectionpolicy_0",
+            "description": null,
+            "helpText": null,
+            "name": "first-available",
+            "displayName": "first-available",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "first-available"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.assetcache.managed_com.apple.assetcache.managed",
+                    "parentSettingId": "com.apple.assetcache.managed_com.apple.assetcache.managed"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.assetcache.managed_parentselectionpolicy_1",
+            "description": null,
+            "helpText": null,
+            "name": "url-path-hash",
+            "displayName": "url-path-hash",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "url-path-hash"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.assetcache.managed_com.apple.assetcache.managed",
+                    "parentSettingId": "com.apple.assetcache.managed_com.apple.assetcache.managed"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.assetcache.managed_parentselectionpolicy_2",
+            "description": null,
+            "helpText": null,
+            "name": "random",
+            "displayName": "random",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "random"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.assetcache.managed_com.apple.assetcache.managed",
+                    "parentSettingId": "com.apple.assetcache.managed_com.apple.assetcache.managed"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.assetcache.managed_parentselectionpolicy_3",
+            "description": null,
+            "helpText": null,
+            "name": "round-robin",
+            "displayName": "round-robin",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "round-robin"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.assetcache.managed_com.apple.assetcache.managed",
+                    "parentSettingId": "com.apple.assetcache.managed_com.apple.assetcache.managed"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.assetcache.managed_parentselectionpolicy_4",
+            "description": null,
+            "helpText": null,
+            "name": "sticky-available",
+            "displayName": "sticky-available",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "sticky-available"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.assetcache.managed_com.apple.assetcache.managed",
+                    "parentSettingId": "com.apple.assetcache.managed_com.apple.assetcache.managed"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

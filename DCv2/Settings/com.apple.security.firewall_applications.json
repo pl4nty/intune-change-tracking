@@ -1,0 +1,51 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Firewall"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "Applications",
+    "rootDefinitionId": "com.apple.security.firewall_com.apple.security.firewall",
+    "categoryId": "70b5da13-9c31-4857-890d-b7eb223729c3",
+    "settingUsage": "configuration",
+    "uxBehavior": "contextPane",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.security.firewall_applications",
+    "description": "The list of apps with connections controlled by the firewall.",
+    "helpText": null,
+    "name": "Applications",
+    "displayName": "Applications",
+    "childIds": [
+        "com.apple.security.firewall_applications_item_bundleid",
+        "com.apple.security.firewall_applications_item_allowed"
+    ],
+    "maximumCount": 2147483647,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [
+        {
+            "dependentOn": "com.apple.security.firewall_com.apple.security.firewall",
+            "parentSettingId": "com.apple.security.firewall_com.apple.security.firewall"
+        }
+    ],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "com.apple.security.firewall_applications_item_bundleid",
+            "required": true
+        },
+        {
+            "dependedOnBy": "com.apple.security.firewall_applications_item_allowed",
+            "required": true
+        }
+    ]
+}

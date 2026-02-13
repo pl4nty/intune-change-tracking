@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Extensible Single Sign On Kerberos"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "ExtensionData/delayUserSetup",
+    "rootDefinitionId": "com.apple.extensiblesso_com.apple.extensiblesso-kerberos_kerberos",
+    "categoryId": "f35cc803-3a06-4262-b38b-a5295321f756",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.extensiblesso_extensiondata_delayusersetup_kerberos",
+    "description": "If true, doesn’t prompt the user to setup the Kerberos extension until either the administrator enables it with the app-sso tool or a Kerberos challenge is received. Available in macOS 11 and later.",
+    "helpText": null,
+    "name": "ExtensionData_delayUserSetup",
+    "displayName": "Delay User Setup",
+    "defaultOptionId": "com.apple.extensiblesso_extensiondata_delayusersetup_kerberos_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.extensiblesso_extensiondata_delayusersetup_kerberos_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.extensiblesso_extensiondata_kerberos",
+                    "parentSettingId": "com.apple.extensiblesso_extensiondata_kerberos"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.extensiblesso_extensiondata_delayusersetup_kerberos_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.extensiblesso_extensiondata_kerberos",
+                    "parentSettingId": "com.apple.extensiblesso_extensiondata_kerberos"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

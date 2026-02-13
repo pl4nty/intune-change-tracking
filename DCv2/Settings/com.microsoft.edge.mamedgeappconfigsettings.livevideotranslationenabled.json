@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.LiveVideoTranslationEnabled",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.livevideotranslationenabled",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.livevideotranslationenabled",
+    "description": "This policy configures the on-device real-time video translation feature in Microsoft Edge.\nWith this feature, users can watch videos translated into their selected language in real time.\n\nWhen a user selects the Translate icon and chooses a source (video language) and target language (translated language),\ntranslation components are downloaded on first use (approximately 200 MB per language pair).\n\nThese components may be updated periodically to improve performance and translation quality.\nTranslation is performed locally on the user’s device and no data is sent outside of the device.\nThe feature is available only for non-DRM videos, on supported high-end devices, with select language pairs, and in select regions.\nFor more details, see https://www.microsoft.com/en-us/edge/features/real-time-video-translation.\n\nIf you enable or don’t configure this policy, the on-device real-time video translation feature is enabled and\nusers will see the Translate button when hovering over videos.\n\nIf you disable this policy, the on-device real-time video translation feature is disabled and the Translate button won’t be shown.",
+    "helpText": null,
+    "name": "LiveVideoTranslationEnabled",
+    "displayName": "Allows users to translate videos to different languages.",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.livevideotranslationenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.livevideotranslationenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

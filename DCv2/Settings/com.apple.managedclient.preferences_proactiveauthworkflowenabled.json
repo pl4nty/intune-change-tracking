@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#proactiveauthworkflowenabled"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "ProactiveAuthWorkflowEnabled",
+    "rootDefinitionId": "com.apple.managedclient.preferences_proactiveauthworkflowenabled",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_proactiveauthworkflowenabled",
+    "description": "This policy controls the proactive authentication in Microsoft Edge, that connects the signed-in user identity with Microsoft Bing, MSN and Copilot services for a smooth and consistent sign-in experience.\n\nIf you enable or don't configure this policy, Microsoft Edge authentication requests are automatically sent to the services using the account that is signed-in to the browser.\n\nIf you disable this policy, Microsoft Edge does not send authentications requests to these services and users will need to manually sign-in.",
+    "helpText": null,
+    "name": "ProactiveAuthWorkflowEnabled",
+    "displayName": "Enable proactive authentication",
+    "defaultOptionId": "com.apple.managedclient.preferences_proactiveauthworkflowenabled_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_proactiveauthworkflowenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_proactiveauthworkflowenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

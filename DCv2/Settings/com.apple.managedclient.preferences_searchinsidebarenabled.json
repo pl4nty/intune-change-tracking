@@ -1,0 +1,77 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#searchinsidebarenabled"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "SearchInSidebarEnabled",
+    "rootDefinitionId": "com.apple.managedclient.preferences_searchinsidebarenabled",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_searchinsidebarenabled",
+    "description": "Search in Sidebar allows users to open search result in sidebar (including sidebar search for Progressive Web Apps).\n\nIf you configure this policy to 'EnableSearchInSidebar' or don't configure it,  Search in sidebar will be enabled.\n\nIf you configure this policy to 'DisableSearchInSidebarForKidsMode', Search in sidebar will be disabled when in Kids mode. Some methods that would normally invoke sidebar search will invoke a traditional search instead.\n\nIf you configure this policy to 'DisableSearchInSidebar', Search in sidebar will be disabled. Some methods that would normally invoke sidebar search will invoke a traditional search instead.\n\nPolicy options mapping:\n\n* EnableSearchInSidebar (0) = Enable search in sidebar\n\n* DisableSearchInSidebarForKidsMode (1) = Disable search in sidebar for Kids Mode\n\n* DisableSearchInSidebar (2) = Disable search in sidebar\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "SearchInSidebarEnabled",
+    "displayName": "Search in Sidebar enabled",
+    "defaultOptionId": "com.apple.managedclient.preferences_searchinsidebarenabled_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_searchinsidebarenabled_0",
+            "description": null,
+            "helpText": null,
+            "name": "Enable search in sidebar",
+            "displayName": "Enable search in sidebar",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_searchinsidebarenabled_1",
+            "description": null,
+            "helpText": null,
+            "name": "Disable search in sidebar for Kids Mode",
+            "displayName": "Disable search in sidebar for Kids Mode",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_searchinsidebarenabled_2",
+            "description": null,
+            "helpText": null,
+            "name": "Disable search in sidebar",
+            "displayName": "Disable search in sidebar",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

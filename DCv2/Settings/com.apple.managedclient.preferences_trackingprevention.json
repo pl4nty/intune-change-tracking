@@ -1,0 +1,91 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#trackingprevention"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "TrackingPrevention",
+    "rootDefinitionId": "com.apple.managedclient.preferences_trackingprevention",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_trackingprevention",
+    "description": "Lets you decide whether to block websites from tracking users' web-browsing activity.\n\nIf you enable this policy, you have the following options for setting the level of tracking prevention:\n\n* 0 = Off (no tracking prevention)\n\n* 1 = Basic (blocks harmful trackers, content and ads will be personalized)\n\n* 2 = Balanced (blocks harmful trackers and trackers from sites user has not visited; content and ads will be less personalized)\n\n* 3 = Strict (blocks harmful trackers and majority of trackers from all sites; content and ads will have minimal personalization. Some parts of sites might not work)\n\nIf you disable this policy or don't configure it, users can set their own level of tracking prevention.",
+    "helpText": null,
+    "name": "TrackingPrevention",
+    "displayName": "Block tracking of users' web-browsing activity",
+    "defaultOptionId": "com.apple.managedclient.preferences_trackingprevention_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_trackingprevention_0",
+            "description": null,
+            "helpText": null,
+            "name": "Off (no tracking prevention)",
+            "displayName": "Off (no tracking prevention)",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_trackingprevention_1",
+            "description": null,
+            "helpText": null,
+            "name": "Basic (blocks harmful trackers, content and ads will be personalized)",
+            "displayName": "Basic (blocks harmful trackers, content and ads will be personalized)",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_trackingprevention_2",
+            "description": null,
+            "helpText": null,
+            "name": "Balanced (blocks harmful trackers and trackers from sites user has not visited; content and ads will be less personalized)",
+            "displayName": "Balanced (blocks harmful trackers and trackers from sites user has not visited; content and ads will be less personalized)",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_trackingprevention_3",
+            "description": null,
+            "helpText": null,
+            "name": "Strict (blocks harmful trackers and majority of trackers from all sites; content and ads will have minimal personalization. Some parts of sites might not work)",
+            "displayName": "Strict (blocks harmful trackers and majority of trackers from all sites; content and ads will have minimal personalization. Some parts of sites might not work)",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

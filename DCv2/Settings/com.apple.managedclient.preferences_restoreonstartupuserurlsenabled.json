@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#restoreonstartupuserurlsenabled"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "RestoreOnStartupUserURLsEnabled",
+    "rootDefinitionId": "com.apple.managedclient.preferences_restoreonstartupuserurlsenabled",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_restoreonstartupuserurlsenabled",
+    "description": "This policy only works if you set the \"RestoreOnStartup\" policy to 'Open a list of URLs' (4) and the \"RestoreOnStartupURLs\" policy as mandatory.\nIf you enable this policy, users are allowed to add and remove their own URLs to open when starting Edge while maintaining the admin specified mandatory list of sites specified by setting \"RestoreOnStartup\" policy to open a list of URLS and providing the list of sites in the \"RestoreOnStartupURLs\" policy.\n\nIf you disable or don't configure this policy, there is no change to how the \"RestoreOnStartup\" and \"RestoreOnStartupURLs\" policies work.",
+    "helpText": null,
+    "name": "RestoreOnStartupUserURLsEnabled",
+    "displayName": "Allow users to add and remove their own sites during startup when the RestoreOnStartupURLs policy is configured",
+    "defaultOptionId": "com.apple.managedclient.preferences_restoreonstartupuserurlsenabled_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_restoreonstartupuserurlsenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_restoreonstartupuserurlsenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

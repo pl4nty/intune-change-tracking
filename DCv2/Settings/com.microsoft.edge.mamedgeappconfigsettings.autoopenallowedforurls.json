@@ -1,0 +1,48 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.AutoOpenAllowedForURLs",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.autoopenallowedforurls",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "smallTextBox",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.autoopenallowedforurls",
+    "description": "A list of URLs to which \"AutoOpenFileTypes\" will apply to. This policy has no impact on automatically open values set by users via the download shelf ... > \"Always open files of this type\" menu entry.\n\nIf you set URLs in this policy, files will only automatically open by policy if the URL is part of this set and the file type is listed in \"AutoOpenFileTypes\". If either condition is false, the download won't automatically open by policy.\n\nIf you don't set this policy, all downloads where the file type is in \"AutoOpenFileTypes\" will automatically open.\n\nA URL pattern has to be formatted according to <a href=\"https://go.microsoft.com/fwlink/?linkid=2095322\">https://go.microsoft.com/fwlink/?linkid=2095322</a>.\n\nThis policy does not work as expected with file://* wildcards.",
+    "helpText": null,
+    "name": "AutoOpenAllowedForURLs",
+    "displayName": "URLs where AutoOpenFileTypes can apply",
+    "maximumCount": 600,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 0,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

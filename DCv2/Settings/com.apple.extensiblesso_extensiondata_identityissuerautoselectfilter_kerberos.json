@@ -1,0 +1,50 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Extensible Single Sign On Kerberos"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "ExtensionData/identityIssuerAutoSelectFilter",
+    "rootDefinitionId": "com.apple.extensiblesso_com.apple.extensiblesso-kerberos_kerberos",
+    "categoryId": "f35cc803-3a06-4262-b38b-a5295321f756",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.extensiblesso_extensiondata_identityissuerautoselectfilter_kerberos",
+    "description": "A string with wildcards that can use used to filter the list of available SmartCards by issuer.  e.g  \"*My CA2*\".  If there is one remaining, it will be auto-selected.  If there more than one remaining, then the list is shorter.  (macOS only)",
+    "helpText": null,
+    "name": "ExtensionData_identityIssuerAutoSelectFilter",
+    "displayName": "Identity Issuer Auto Select Filter",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "com.apple.extensiblesso_extensiondata_kerberos",
+            "parentSettingId": "com.apple.extensiblesso_extensiondata_kerberos"
+        }
+    ],
+    "dependedOnBy": []
+}

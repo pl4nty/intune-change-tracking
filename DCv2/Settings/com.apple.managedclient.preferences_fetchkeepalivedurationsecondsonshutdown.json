@@ -1,0 +1,44 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#fetchkeepalivedurationsecondsonshutdown"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "FetchKeepaliveDurationSecondsOnShutdown",
+    "rootDefinitionId": "com.apple.managedclient.preferences_fetchkeepalivedurationsecondsonshutdown",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_fetchkeepalivedurationsecondsonshutdown",
+    "description": "Controls the duration (in seconds) that keepalive requests are allowed to prevent the browser from completing its shutdown.\n\nIf you configure this policy, the browser will block completing shutdown while it processes any outstanding keepalive requests (see https://fetch.spec.whatwg.org/#request-keepalive-flag) up to the maximum period of time specified by this policy.\n\nIf you disable or don't configure this policy, the default value of 0 seconds is used and outstanding keepalive requests will be immediately cancelled during browser shutdown.",
+    "helpText": null,
+    "name": "FetchKeepaliveDurationSecondsOnShutdown",
+    "displayName": "Fetch keepalive duration on shutdown",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 2147483647,
+        "minimumValue": 0
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 0
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

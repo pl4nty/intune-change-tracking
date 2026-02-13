@@ -1,0 +1,69 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Cross",
+        "Profile",
+        "Policies",
+        "Show",
+        "Work",
+        "Contacts",
+        "In",
+        "Personal",
+        "Profile",
+        "General"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "/com.android.deviceRestrictionPolicy/",
+    "offsetUri": "/crossProfilePoliciesShowWorkContactsInPersonalProfile/",
+    "rootDefinitionId": "com.android.devicerestrictionpolicy.crossprofilepoliciesshowworkcontactsinpersonalprofile",
+    "categoryId": "b6733d23-eadc-486a-abfc-62b78698a16c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.android.devicerestrictionpolicy.crossprofilepoliciesshowworkcontactsinpersonalprofile",
+    "description": "In the personal profile, 'True' prevents users from searching work contacts, and showing work caller ID information. If 'False', Intune doesn't change or update this setting. By default, the OS might allow searching work contacts, and show work caller IDs. Available for corporate-owned work profile devices. Available in Android 8.0 and later.",
+    "helpText": null,
+    "name": "CrossProfilePoliciesShowWorkContactsInPersonalProfile",
+    "displayName": "Block searching of work contacts and displaying work contact caller-id in personal profile",
+    "defaultOptionId": "com.android.devicerestrictionpolicy.crossprofilepoliciesshowworkcontactsinpersonalprofile_false",
+    "applicability": {
+        "description": null,
+        "platform": "androidEnterprise",
+        "deviceMode": "none",
+        "technologies": "android"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.android.devicerestrictionpolicy.crossprofilepoliciesshowworkcontactsinpersonalprofile_false",
+            "description": "false",
+            "helpText": null,
+            "name": "SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_ALLOWED",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_ALLOWED"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.crossprofilepoliciesshowworkcontactsinpersonalprofile_true",
+            "description": "true",
+            "helpText": null,
+            "name": "SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_DISALLOWED",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_DISALLOWED"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

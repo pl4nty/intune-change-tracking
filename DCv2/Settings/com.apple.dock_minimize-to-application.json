@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Dock"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "minimize-to-application",
+    "rootDefinitionId": "com.apple.dock_com.apple.dock",
+    "categoryId": "cc388035-b49c-493e-a598-14b0d0de4359",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.dock_minimize-to-application",
+    "description": "If true, enables \"Minimize windows into application icon.\"",
+    "helpText": null,
+    "name": "minimize-to-application",
+    "displayName": "Minimize To Application",
+    "defaultOptionId": "com.apple.dock_minimize-to-application_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.dock_minimize-to-application_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.dock_com.apple.dock",
+                    "parentSettingId": "com.apple.dock_com.apple.dock"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.dock_minimize-to-application_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.dock_com.apple.dock",
+                    "parentSettingId": "com.apple.dock_com.apple.dock"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

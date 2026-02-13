@@ -1,0 +1,48 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.SerialAskForUrls",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.serialaskforurls",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "smallTextBox",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.serialaskforurls",
+    "description": "Specifies URL patterns for sites that are allowed to request access to a serial port.\n\nIf not configured, Microsoft Edge uses the value from the DefaultSerialGuardSetting policy (if set), or the user's settings.\n\nFor unmatched sites, the following order applies:\n\n1. \"SerialBlockedForUrls\" (if matched).\n\n2. DefaultSerialGuardSetting (if set).\n\n3. User's settings.\n\nIf URL patterns in this policy conflict with those in \"SerialBlockedForUrls\", they will be ignored.\n\nFor detailed information about valid url patterns, please see <a href=\"https://go.microsoft.com/fwlink/?linkid=2095322\">https://go.microsoft.com/fwlink/?linkid=2095322</a>.",
+    "helpText": null,
+    "name": "SerialAskForUrls",
+    "displayName": "Allow the Serial API on specific sites",
+    "maximumCount": 600,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 0,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

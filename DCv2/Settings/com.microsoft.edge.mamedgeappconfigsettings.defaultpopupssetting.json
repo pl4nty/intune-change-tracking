@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Content settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.DefaultPopupsSetting",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.defaultpopupssetting",
+    "categoryId": "92d69c43-75ac-49b1-a3ef-9350079eef86",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.defaultpopupssetting",
+    "description": "Set whether websites can show pop-up windows. You can allow them on all websites ('AllowPopups') or block them on all sites ('BlockPopups').\n\nIf you don't configure this policy, pop-up windows are blocked by default, and users can change this setting.\n\nPolicy options mapping:\n\n* AllowPopups (1) = Allow all sites to show pop-ups\n\n* BlockPopups (2) = Do not allow any site to show popups\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "DefaultPopupsSetting",
+    "displayName": "Default pop-up window setting",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.defaultpopupssetting_allowpopups",
+            "description": null,
+            "helpText": null,
+            "name": "Allow all sites to show pop-ups",
+            "displayName": "Allow all sites to show pop-ups",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.defaultpopupssetting_blockpopups",
+            "description": null,
+            "helpText": null,
+            "name": "Do not allow any site to show popups",
+            "displayName": "Do not allow any site to show popups",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

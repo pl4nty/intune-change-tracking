@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#encryptedclienthelloenabled"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "EncryptedClientHelloEnabled",
+    "rootDefinitionId": "com.apple.managedclient.preferences_encryptedclienthelloenabled",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_encryptedclienthelloenabled",
+    "description": "Encrypted ClientHello (ECH) is an extension to TLS that encrypts the sensitive fields of ClientHello to improve privacy.\n\nIf ECH is enabled, Microsoft Edge might or might not use ECH depending on server support, the availability of the HTTPS DNS record, or the rollout status.\n\nIf you enable or do not configure this policy, Microsoft Edge will follow the default rollout process for ECH.\n\nIf this policy is disabled, Microsoft Edge will not enable ECH.\n\nBecause ECH is an evolving protocol, Microsoft Edge's implementation is subject to change.\n\nAs such, this policy is a temporary measure to control the initial experimental implementation. It will be replaced with final controls as the protocol finalizes.",
+    "helpText": null,
+    "name": "EncryptedClientHelloEnabled",
+    "displayName": "TLS Encrypted ClientHello Enabled",
+    "defaultOptionId": "com.apple.managedclient.preferences_encryptedclienthelloenabled_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_encryptedclienthelloenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_encryptedclienthelloenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

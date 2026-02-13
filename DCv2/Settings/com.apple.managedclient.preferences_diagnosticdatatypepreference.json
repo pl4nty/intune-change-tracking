@@ -1,0 +1,76 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Office"
+    ],
+    "infoUrls": [
+        "https://aka.ms/macdiagpref"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.office/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "DiagnosticDataTypePreference",
+    "rootDefinitionId": "com.apple.managedclient.preferences_diagnosticdatatypepreference",
+    "categoryId": "b5169b74-41be-460a-9402-b13b6c22582b",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_diagnosticdatatypepreference",
+    "description": "Controls the amount of telemetry data sent by apps.",
+    "helpText": null,
+    "name": "DiagnosticDataTypePreference",
+    "displayName": "Diagnostic data level",
+    "defaultOptionId": "com.apple.managedclient.preferences_diagnosticdatatypepreference_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_diagnosticdatatypepreference_0",
+            "description": null,
+            "helpText": null,
+            "name": "Required data only",
+            "displayName": "Required data only",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "BasicDiagnosticData"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_diagnosticdatatypepreference_1",
+            "description": null,
+            "helpText": null,
+            "name": "Required and Optional data",
+            "displayName": "Required and Optional data",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "FullDiagnosticData"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_diagnosticdatatypepreference_2",
+            "description": null,
+            "helpText": null,
+            "name": "Do not send data",
+            "displayName": "Do not send data",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "ZeroDiagnosticData"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

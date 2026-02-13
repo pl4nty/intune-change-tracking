@@ -1,0 +1,46 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Scheduled scan configuration"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.wdav/Forced/[0]/mcx_preference_settings/scheduledScan",
+    "offsetUri": "weeklyConfiguration/dayOfWeek",
+    "rootDefinitionId": "com.apple.managedclient.preferences_weeklyconfiguration",
+    "categoryId": "64c8233f-3057-4485-b902-d71a312318d7",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_weeklyconfiguration_dayofweek",
+    "description": "Specifies the day of the week to perform a weekly scan. 0 indicates never. 1-7 indicates Sunday - Saturday. 8 indicates every day.",
+    "helpText": null,
+    "name": "weeklyConfiguration_dayOfWeek",
+    "displayName": "Day of week",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 8,
+        "minimumValue": 0
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 0
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "com.apple.managedclient.preferences_weeklyconfiguration",
+            "parentSettingId": "com.apple.managedclient.preferences_weeklyconfiguration"
+        }
+    ],
+    "dependedOnBy": []
+}

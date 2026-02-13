@@ -1,0 +1,189 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Idle Browser Actions"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.IdleTimeoutActions",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.idletimeoutactions",
+    "categoryId": "526e363a-84db-4256-a13c-e01c8c646e26",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.idletimeoutactions",
+    "description": "When the timeout from the IdleTimeout policy is reached, the browser runs the actions configured in this policy.\n\nIf you don't configure the IdleTimeout policy, this policy has no effect.\n\nIf you don't configure this policy or no actions are selected, the IdleTimeout policy has no effect.\n\nSupported actions are:\n\n'close_browsers': close all browser windows and PWAs for this profile.\n\n'reload_pages': reload all webpages. For some pages, the user might be prompted for confirmation first.\n\n'sign_out': sign out of browser. (This action only applies to iOS.)\n\n'close_tabs': close all open tabs and create an NTP (New Tab Page). Supported in Android and iOS.\n\n'clear_browsing_history', 'clear_download_history', 'clear_cookies_and_other_site_data', 'clear_cached_images_and_files', 'clear_password_signing', 'clear_autofill', 'clear_site_settings': clear the corresponding browsing data. Deleting cookies using this policy doesn't sign the user out of their profile, the user stays signed in.\n\nSetting 'clear_browsing_history', 'clear_password_signing', 'clear_autofill', and 'clear_site_settings' disables sync for the respective data types if sync isn't already disabled by setting either the SyncDisabled policy or BrowserSignin to disabled.\n\nPolicy options mapping:\n\n* close_browsers (close_browsers) = Close Browsers\n\n* clear_browsing_history (clear_browsing_history) = Clear Browsing History\n\n* clear_download_history (clear_download_history) = Clear Download History\n\n* clear_cookies_and_other_site_data (clear_cookies_and_other_site_data) = Clear Cookies and Other Site Data\n\n* clear_cached_images_and_files (clear_cached_images_and_files) = Clear Cached Images and Files\n\n* clear_password_signin (clear_password_signin) = Clear Password sign in\n\n* clear_autofill (clear_autofill) = Clear Autofill\n\n* clear_site_settings (clear_site_settings) = Clear Site Settings\n\n* reload_pages (reload_pages) = Reload Pages\n\n* sign_out (sign_out) = Sign Out\n\n* close_tabs (close_tabs) = Close Tabs\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "IdleTimeoutActions",
+    "displayName": "Actions to run when the computer is idle",
+    "defaultOptionId": null,
+    "maximumCount": 100,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.idletimeoutactions_close_browsers",
+            "description": null,
+            "helpText": null,
+            "name": "Close Browsers",
+            "displayName": "Close Browsers",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "close_browsers"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.idletimeoutactions_clear_browsing_history",
+            "description": null,
+            "helpText": null,
+            "name": "Clear Browsing History",
+            "displayName": "Clear Browsing History",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "clear_browsing_history"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.idletimeoutactions_clear_download_history",
+            "description": null,
+            "helpText": null,
+            "name": "Clear Download History",
+            "displayName": "Clear Download History",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "clear_download_history"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.idletimeoutactions_clear_cookies_and_other_site_data",
+            "description": null,
+            "helpText": null,
+            "name": "Clear Cookies and Other Site Data",
+            "displayName": "Clear Cookies and Other Site Data",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "clear_cookies_and_other_site_data"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.idletimeoutactions_clear_cached_images_and_files",
+            "description": null,
+            "helpText": null,
+            "name": "Clear Cached Images and Files",
+            "displayName": "Clear Cached Images and Files",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "clear_cached_images_and_files"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.idletimeoutactions_clear_password_signin",
+            "description": null,
+            "helpText": null,
+            "name": "Clear Password sign in",
+            "displayName": "Clear Password sign in",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "clear_password_signin"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.idletimeoutactions_clear_autofill",
+            "description": null,
+            "helpText": null,
+            "name": "Clear Autofill",
+            "displayName": "Clear Autofill",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "clear_autofill"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.idletimeoutactions_clear_site_settings",
+            "description": null,
+            "helpText": null,
+            "name": "Clear Site Settings",
+            "displayName": "Clear Site Settings",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "clear_site_settings"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.idletimeoutactions_reload_pages",
+            "description": null,
+            "helpText": null,
+            "name": "Reload Pages",
+            "displayName": "Reload Pages",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "reload_pages"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.idletimeoutactions_sign_out",
+            "description": null,
+            "helpText": null,
+            "name": "Sign Out",
+            "displayName": "Sign Out",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "sign_out"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.idletimeoutactions_close_tabs",
+            "description": null,
+            "helpText": null,
+            "name": "Close Tabs",
+            "displayName": "Close Tabs",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "close_tabs"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

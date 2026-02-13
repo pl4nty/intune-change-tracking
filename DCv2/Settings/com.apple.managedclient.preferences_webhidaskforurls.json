@@ -1,0 +1,50 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#webhidaskforurls"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "WebHidAskForUrls",
+    "rootDefinitionId": "com.apple.managedclient.preferences_webhidaskforurls",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_webhidaskforurls",
+    "description": "Setting the policy lets you list the URL patterns that specify which sites can ask users to grant them access to a HID device.\n\nLeaving the policy unset means \"DefaultWebHidGuardSetting\" applies for all sites, if it's set. If not, users' personal settings apply.\n\nFor URL patterns that don't match the policy, the following values are applied in order of precedence:\n\n  * \"WebHidBlockedForUrls\" (if there is a match),\n\n  * \"DefaultWebHidGuardSetting\" (if set), or\n\n  * Users' personal settings.\n\nURL patterns must not conflict with \"WebHidBlockedForUrls\". Neither policy takes precedence if a URL matches both patterns.\n\nFor detailed information about valid url patterns, see https://go.microsoft.com/fwlink/?linkid=2095322. * is not an accepted value for this policy.",
+    "helpText": null,
+    "name": "WebHidAskForUrls",
+    "displayName": "Allow the WebHID API on these sites",
+    "maximumCount": 600,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

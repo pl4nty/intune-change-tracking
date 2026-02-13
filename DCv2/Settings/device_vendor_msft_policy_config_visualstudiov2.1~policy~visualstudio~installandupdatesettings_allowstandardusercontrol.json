@@ -1,0 +1,79 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "AllowStandardUserControl",
+        "Allow standard users to execute installer operations",
+        "\\Visual Studio\\Install and Update Settings",
+        "Visual Studio\\Install and Update Settings",
+        "Install and Update Settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/VisualStudiov2.1~Policy~VisualStudio~InstallandUpdateSettings/AllowStandardUserControl",
+    "rootDefinitionId": "device_vendor_msft_policy_config_visualstudiov2.1~policy~visualstudio~installandupdatesettings_allowstandardusercontrol",
+    "categoryId": "175ddbac-b0ae-4d9d-b76e-4eb1a487fc93",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_visualstudiov2.1~policy~visualstudio~installandupdatesettings_allowstandardusercontrol",
+    "description": "Allows users without administrator permissions to manage their Visual Studio installations. \r\n        \r\nIf set to 0 (disabled) or missing entirely, the installer will prompt for administrator permissions using UAC.        \r\n\r\nIf set to 1 (enabled for Update and Rollback), users without administrator permissions can update or rollback without UAC. All other operations will ask for administrator permissions through UAC.  \r\n        \r\nIf set to 2 (enabled for all installer operations), users without administrator permissions can fully manage Visual Studio through the Visual Studio Installer without UAC.\r\n        \r\nFor more information, see http://aka.ms/vs/setup/policies.",
+    "helpText": "",
+    "name": "AllowStandardUserControl",
+    "displayName": "Allow standard users to execute installer operations",
+    "defaultOptionId": "device_vendor_msft_policy_config_visualstudiov2.1~policy~visualstudio~installandupdatesettings_allowstandardusercontrol_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_visualstudiov2.1~policy~visualstudio~installandupdatesettings_allowstandardusercontrol_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_visualstudiov2.1~policy~visualstudio~installandupdatesettings_allowstandardusercontrol_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_visualstudiov2.1~policy~visualstudio~installandupdatesettings_allowstandardusercontrol_allowstandardusercontroldropid",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

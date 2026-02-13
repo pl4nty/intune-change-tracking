@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#defaultimagessetting"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "DefaultImagesSetting",
+    "rootDefinitionId": "com.apple.managedclient.preferences_defaultimagessetting",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_defaultimagessetting",
+    "description": "Set whether websites can display images. You can allow images on all sites (1) or block them on all sites (2).\n\nIf you don't configure this policy, images are allowed by default, and the user can change this setting.\n\n* 1 = Allow all sites to show all images\n\n* 2 = Don't allow any site to show images",
+    "helpText": null,
+    "name": "DefaultImagesSetting",
+    "displayName": "Default images setting",
+    "defaultOptionId": "com.apple.managedclient.preferences_defaultimagessetting_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultimagessetting_0",
+            "description": null,
+            "helpText": null,
+            "name": "Allow all sites to show all images",
+            "displayName": "Allow all sites to show all images",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultimagessetting_1",
+            "description": null,
+            "helpText": null,
+            "name": "Don't allow any site to show images",
+            "displayName": "Don't allow any site to show images",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,77 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft OneDrive",
+        "Microsoft One Drive"
+    ],
+    "infoUrls": [
+        "https://learn.microsoft.com/sharepoint/deploy-and-configure-on-macos#kfmblockoptin"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.OneDrive/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "KFMBlockOptIn",
+    "rootDefinitionId": "com.apple.managedclient.preferences_kfmblockoptin",
+    "categoryId": "19ba782c-3594-45da-b829-72b54f6d45c7",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_kfmblockoptin",
+    "description": "This setting prevents users from moving their Documents and Desktop folders to any OneDrive account.",
+    "helpText": null,
+    "name": "KFMBlockOptIn",
+    "displayName": "Prevent users from using the Folder Backup feature (Known Folder Move)",
+    "defaultOptionId": "com.apple.managedclient.preferences_kfmblockoptin_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_kfmblockoptin_0",
+            "description": null,
+            "helpText": null,
+            "name": "No prevention",
+            "displayName": "No prevention",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_kfmblockoptin_1",
+            "description": null,
+            "helpText": null,
+            "name": "Prevent Folder Backup",
+            "displayName": "Prevent Folder Backup",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_kfmblockoptin_2",
+            "description": null,
+            "helpText": null,
+            "name": "Prevent Folder Backup and Redirect to local device",
+            "displayName": "Prevent Folder Backup and Redirect to local device",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

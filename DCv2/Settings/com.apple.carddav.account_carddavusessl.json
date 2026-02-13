@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Carddav"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "CardDAVUseSSL",
+    "rootDefinitionId": "com.apple.carddav.account_com.apple.carddav.account",
+    "categoryId": "45fe783f-a80b-42d9-ab3c-8c4081be8d05",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.carddav.account_carddavusessl",
+    "description": "If true, enables SSL.",
+    "helpText": null,
+    "name": "CardDAVUseSSL",
+    "displayName": "Card DAV Use SSL",
+    "defaultOptionId": "com.apple.carddav.account_carddavusessl_true",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.carddav.account_carddavusessl_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.carddav.account_com.apple.carddav.account",
+                    "parentSettingId": "com.apple.carddav.account_com.apple.carddav.account"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.carddav.account_carddavusessl_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.carddav.account_com.apple.carddav.account",
+                    "parentSettingId": "com.apple.carddav.account_com.apple.carddav.account"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

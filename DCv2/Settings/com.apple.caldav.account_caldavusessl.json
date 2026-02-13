@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Caldav"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "CalDAVUseSSL",
+    "rootDefinitionId": "com.apple.caldav.account_com.apple.caldav.account",
+    "categoryId": "831dcaee-a6fa-4893-a32d-e13fdf7d3777",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.caldav.account_caldavusessl",
+    "description": "If true, enables SSL.",
+    "helpText": null,
+    "name": "CalDAVUseSSL",
+    "displayName": "Cal DAV Use SSL",
+    "defaultOptionId": "com.apple.caldav.account_caldavusessl_true",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.caldav.account_caldavusessl_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.caldav.account_com.apple.caldav.account",
+                    "parentSettingId": "com.apple.caldav.account_com.apple.caldav.account"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.caldav.account_caldavusessl_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.caldav.account_com.apple.caldav.account",
+                    "parentSettingId": "com.apple.caldav.account_com.apple.caldav.account"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

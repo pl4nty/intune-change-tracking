@@ -1,0 +1,91 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensionmanifestv2availability"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "ExtensionManifestV2Availability",
+    "rootDefinitionId": "com.apple.managedclient.preferences_extensionmanifestv2availability",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_extensionmanifestv2availability",
+    "description": "Control if Manifest v2 extensions can be used by browser.\n\nManifest v2 extensions support will be deprecated and all extensions need to be migrated to v3 in the future. More information about, and the timeline of the migration has not been established.\n\nIf the policy is set to Default or not set, v2 extension loading is decided by browser. This will follow the preceding timeline when it's established.\n\nIf the policy is set to Disable, v2 extensions installation are blocked, and existing ones are disabled. This option is going to be treated the same as if the policy is unset after v2 support is turned off by default.\n\nIf the policy is set to Enable, v2 extensions are allowed. The option is going to be treated the same as if the policy isn't set before v2 support is turned off by default.\n\nIf the policy is set to EnableForForcedExtensions, force installed v2 extensions are allowed. This includes extensions that are listed by \"ExtensionInstallForcelist\" or \"ExtensionSettings\" with installation_mode \"force_installed\" or \"normal_installed\". All other v2 extensions are disabled. The option is always available regardless of the manifest migration state.\n\nExtensions availabilities are still controlled by other policies.\n\nPolicy options mapping:\n\n* Default (0) = Default browser behavior\n\n* Disable (1) = Manifest v2 is disabled\n\n* Enable (2) = Manifest v2 is enabled\n\n* EnableForForcedExtensions (3) = Manifest v2 is enabled for forced extensions only\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "ExtensionManifestV2Availability",
+    "displayName": "Control Manifest v2 extension availability",
+    "defaultOptionId": "com.apple.managedclient.preferences_extensionmanifestv2availability_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_extensionmanifestv2availability_0",
+            "description": null,
+            "helpText": null,
+            "name": "Default browser behavior",
+            "displayName": "Default browser behavior",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_extensionmanifestv2availability_1",
+            "description": null,
+            "helpText": null,
+            "name": "Manifest v2 is disabled",
+            "displayName": "Manifest v2 is disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_extensionmanifestv2availability_2",
+            "description": null,
+            "helpText": null,
+            "name": "Manifest v2 is enabled",
+            "displayName": "Manifest v2 is enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_extensionmanifestv2availability_3",
+            "description": null,
+            "helpText": null,
+            "name": "Manifest v2 is enabled for forced extensions only",
+            "displayName": "Manifest v2 is enabled for forced extensions only",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

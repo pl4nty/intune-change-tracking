@@ -1,0 +1,64 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Block",
+        "Screen",
+        "Screen Capture",
+        "Screen Capture Block",
+        "General"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "/com.android.deviceRestrictionPolicy/",
+    "offsetUri": "/screenCaptureBlocked/",
+    "rootDefinitionId": "com.android.devicerestrictionpolicy.screencaptureblocked",
+    "categoryId": "b6733d23-eadc-486a-abfc-62b78698a16c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.android.devicerestrictionpolicy.screencaptureblocked",
+    "description": "If 'True', prevents screenshots or screen captures on the device. It also prevents the content from being shown on display devices that don't have a secure video output. If 'False', Intune doesn't change or update this setting. By default, the OS might let users capture the screen contents as an image. Available for fully managed, dedicated and corporate-owned work profile devices (at work profile level).",
+    "helpText": "",
+    "name": "ScreenCaptureBlocked",
+    "displayName": "Block screen capture",
+    "defaultOptionId": "com.android.devicerestrictionpolicy.screencaptureblocked_false",
+    "applicability": {
+        "description": null,
+        "platform": "androidEnterprise",
+        "deviceMode": "none",
+        "technologies": "android"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.android.devicerestrictionpolicy.screencaptureblocked_false",
+            "description": "False",
+            "helpText": null,
+            "name": "False",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.screencaptureblocked_true",
+            "description": "True",
+            "helpText": null,
+            "name": "True",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

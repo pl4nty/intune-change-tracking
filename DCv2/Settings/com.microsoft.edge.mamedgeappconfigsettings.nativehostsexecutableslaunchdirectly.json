@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.NativeHostsExecutablesLaunchDirectly",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.nativehostsexecutableslaunchdirectly",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.nativehostsexecutableslaunchdirectly",
+    "description": "This policy controls whether native host executables launch directly on Windows.\n\nIf you enable this policy, Microsoft Edge is forced to launch native messaging hosts implemented as executables directly.\n\nIf you disable this policy, Microsoft Edge will launch hosts using cmd.exe as an intermediary process.\n\nIf you don't configure this policy, Microsoft Edge will decide which approach to use based on a progressive rollout from the legacy behavior to the Launch Directly behavior, guided by ecosystem compatibility.",
+    "helpText": null,
+    "name": "NativeHostsExecutablesLaunchDirectly",
+    "displayName": "Force Windows executable Native Messaging hosts to launch directly",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.nativehostsexecutableslaunchdirectly_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.nativehostsexecutableslaunchdirectly_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,51 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge - All",
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#sensorsallowedforurls"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "SensorsAllowedForUrls",
+    "rootDefinitionId": "com.apple.managedclient.preferences_sensorsallowedforurls",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_sensorsallowedforurls",
+    "description": "Define a list of sites, based on URL patterns, that can access and use sensors such as motion and light sensors.\n\nIf you don't configure this policy, the global default value from the \"DefaultSensorsSetting\" policy (if set) or the user's personal configuration is used for all sites.\n\nFor URL patterns that don't match this policy, the following order of precedence is used: The \"SensorsBlockedForUrls\" policy (if there is a match), the \"DefaultSensorsSetting\" policy (if set), or the user's personal settings.\n\nThe URL patterns defined in this policy can't conflict with those configured in the \"SensorsBlockedForUrls\" policy. You can't allow and block a URL.\n\nFor detailed information about valid URL patterns, please see https://go.microsoft.com/fwlink/?linkid=2095322.",
+    "helpText": null,
+    "name": "SensorsAllowedForUrls",
+    "displayName": "Allow access to sensors on specific sites",
+    "maximumCount": 600,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

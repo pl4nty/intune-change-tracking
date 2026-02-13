@@ -1,0 +1,64 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge - All",
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#defaultfilesystemreadguardsetting"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "DefaultFileSystemReadGuardSetting",
+    "rootDefinitionId": "com.apple.managedclient.preferences_defaultfilesystemreadguardsetting",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_defaultfilesystemreadguardsetting",
+    "description": "If you set this policy to 3, websites can ask for read access to the host operating system's filesystem using the File System API. If you set this policy to 2, access is denied.\n\nIf you don't set this policy, websites can ask for access. Users can change this setting.\n\nPolicy options mapping:\n\n* BlockFileSystemRead (2) = Don't allow any site to request read access to files and directories via the File System API\n\n* AskFileSystemRead (3) = Allow sites to ask the user to grant read access to files and directories via the File System API\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "DefaultFileSystemReadGuardSetting",
+    "displayName": "Control use of the File System API for reading",
+    "defaultOptionId": "com.apple.managedclient.preferences_defaultfilesystemreadguardsetting_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultfilesystemreadguardsetting_0",
+            "description": null,
+            "helpText": null,
+            "name": "Don't allow any site to request read access to files and directories via the File System API",
+            "displayName": "Don't allow any site to request read access to files and directories via the File System API",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultfilesystemreadguardsetting_1",
+            "description": null,
+            "helpText": null,
+            "name": "Allow sites to ask the user to grant read access to files and directories via the File System API",
+            "displayName": "Allow sites to ask the user to grant read access to files and directories via the File System API",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

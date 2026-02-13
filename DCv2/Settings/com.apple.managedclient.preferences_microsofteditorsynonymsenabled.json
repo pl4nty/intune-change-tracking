@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#microsofteditorsynonymsenabled"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "MicrosoftEditorSynonymsEnabled",
+    "rootDefinitionId": "com.apple.managedclient.preferences_microsofteditorsynonymsenabled",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_microsofteditorsynonymsenabled",
+    "description": "The Microsoft Editor service provides enhanced spell and grammar checking for editable text fields on web pages, and synonyms can be suggested as an integrated feature.\n\nIf you enable this policy, Microsoft Editor spell checker will provide synonyms for suggestions for misspelled words.\n\nIf you disable or don't configure this policy, Microsoft Editor spell checker will not provide synonyms for suggestions for misspelled words.\n\nIf the \"SpellcheckEnabled\" policy or the \"MicrosoftEditorProofingEnabled\" policy are set to disabled, or the user disables spell checking or chooses not to use Microsoft Editor spell checker in the settings page, this policy will have no effect.",
+    "helpText": null,
+    "name": "MicrosoftEditorSynonymsEnabled",
+    "displayName": "Synonyms are provided when using Microsoft Editor spell checker",
+    "defaultOptionId": "com.apple.managedclient.preferences_microsofteditorsynonymsenabled_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_microsofteditorsynonymsenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_microsofteditorsynonymsenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

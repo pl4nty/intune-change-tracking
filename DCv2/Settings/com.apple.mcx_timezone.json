@@ -1,0 +1,50 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Time Server"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "timeZone",
+    "rootDefinitionId": "com.apple.mcx_com.apple.mcx-timeserver",
+    "categoryId": "853f4181-42e8-411c-91cf-c06968c0a543",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.mcx_timezone",
+    "description": "The time zone path location string in /usr/share/zoneinfo/; for example, America/Denver or Zulu. ",
+    "helpText": null,
+    "name": "timeZone",
+    "displayName": "Time Zone",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "com.apple.mcx_com.apple.mcx-timeserver",
+            "parentSettingId": "com.apple.mcx_com.apple.mcx-timeserver"
+        }
+    ],
+    "dependedOnBy": []
+}

@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Network settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.BlockTruncatedCookies",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.blocktruncatedcookies",
+    "categoryId": "3fbd3b29-bafd-4adf-89e4-3be612dee275",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.blocktruncatedcookies",
+    "description": "This policy provides a temporary opt-out for changes to how Microsoft Edge handles cookies set via JavaScript that contain certain control characters (NULL, carriage return, and line feed).\nPreviously, the presence of any of these characters in a cookie string would cause it to be truncated but still set.\nNow, the presence of these characters will cause the whole cookie string to be ignored.\n\nIf you enable or don't configure this policy, the new behavior is enabled.\n\nIf you disable this policy, the old behavior is enabled.\n\nThis policy is obsolete because this policy was originally implemented as a safety measure in case of breakage, but none have been reported.",
+    "helpText": null,
+    "name": "BlockTruncatedCookies",
+    "displayName": "Block truncated cookies (Obsolete)",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.blocktruncatedcookies_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.blocktruncatedcookies_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

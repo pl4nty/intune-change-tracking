@@ -1,0 +1,65 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "AI",
+        "Circle to Search",
+        "Privileged Apps",
+        "Content",
+        "AI setting",
+        "General"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "/com.android.deviceRestrictionPolicy/",
+    "offsetUri": "/AssistContentPolicy/",
+    "rootDefinitionId": "com.android.devicerestrictionpolicy.assistcontentpolicy",
+    "categoryId": "b6733d23-eadc-486a-abfc-62b78698a16c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.android.devicerestrictionpolicy.assistcontentpolicy",
+    "description": "If 'True', blocks assist content (such as screenshots and app details) to be sent to a privileged app, like an assistant app. The setting can be used to block Circle to Search (AI feature). If set to 'False', Intune doesn't change or update this setting. By default, the OS might allow sharing assist content with privileged apps. Available for fully managed, dedicated, and corporate-owned work profile devices (at work profile level).",
+    "helpText": null,
+    "name": "AssistContentPolicy",
+    "displayName": "Block assist content sharing with privileged apps",
+    "defaultOptionId": "com.android.devicerestrictionpolicy.assistcontentpolicy_false",
+    "applicability": {
+        "description": null,
+        "platform": "androidEnterprise",
+        "deviceMode": "none",
+        "technologies": "android"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.android.devicerestrictionpolicy.assistcontentpolicy_false",
+            "description": "Assist content is allowed to be sent to a privileged app.",
+            "helpText": null,
+            "name": "ASSIST_CONTENT_ALLOWED",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "ASSIST_CONTENT_ALLOWED"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.assistcontentpolicy_true",
+            "description": "Assist content is blocked from being sent to a privileged app.",
+            "helpText": null,
+            "name": "ASSIST_CONTENT_DISALLOWED",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "ASSIST_CONTENT_DISALLOWED"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

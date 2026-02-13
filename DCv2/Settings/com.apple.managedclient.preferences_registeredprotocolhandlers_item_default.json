@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "RegisteredProtocolHandlers/[{0}]/default",
+    "rootDefinitionId": "com.apple.managedclient.preferences_registeredprotocolhandlers",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_registeredprotocolhandlers_item_default",
+    "description": "A boolean flag indicating if the protocol handler should be set as the default.",
+    "helpText": null,
+    "name": "RegisteredProtocolHandlers_item_default",
+    "displayName": "Default",
+    "defaultOptionId": "com.apple.managedclient.preferences_registeredprotocolhandlers_item_default_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_registeredprotocolhandlers_item_default_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.managedclient.preferences_registeredprotocolhandlers",
+                    "parentSettingId": "com.apple.managedclient.preferences_registeredprotocolhandlers"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_registeredprotocolhandlers_item_default_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.managedclient.preferences_registeredprotocolhandlers",
+                    "parentSettingId": "com.apple.managedclient.preferences_registeredprotocolhandlers"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

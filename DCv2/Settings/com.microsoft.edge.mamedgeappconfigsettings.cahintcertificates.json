@@ -1,0 +1,48 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Certificate management settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.CAHintCertificates",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.cahintcertificates",
+    "categoryId": "3abaf4c2-d5db-4b3b-a461-b1a208231b36",
+    "settingUsage": "configuration",
+    "uxBehavior": "smallTextBox",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.cahintcertificates",
+    "description": "This policy defines certificates that are not explicitly trusted or distrusted by Microsoft Edge but may be used as hints during certificate path-building.\n\nThe specified certificates will be considered as intermediates during path validation; the server's certificate must still chain to a trusted root to be considered valid.\n\nCertificates must be base64-encoded.",
+    "helpText": null,
+    "name": "CAHintCertificates",
+    "displayName": "TLS certificates that are not trusted or distrusted but can be used in path-building for server authentication",
+    "maximumCount": 600,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 0,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

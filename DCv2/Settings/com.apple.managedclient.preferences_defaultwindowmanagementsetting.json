@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#defaultwindowmanagementsetting"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "DefaultWindowManagementSetting",
+    "rootDefinitionId": "com.apple.managedclient.preferences_defaultwindowmanagementsetting",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_defaultwindowmanagementsetting",
+    "description": "Setting the policy to \"BlockWindowManagement\" (value 2) automatically denies the window management permission to sites by default. This limits the ability of sites to see information about the device's screens and use that information to open and place windows or request fullscreen on specific screens.\n\nSetting the policy to \"AskWindowManagement\" (value 3) by default prompts the user when the window management permission is requested. If users allow the permission, it extends the ability of sites to see information about the device's screens and use that information to open and place windows or request fullscreen on specific screens.\n\nNot configuring the policy means the \"AskWindowManagement\" policy applies, but users can change this setting.\n\nPolicy options mapping:\n\n* BlockWindowManagement (2) = Denies the Window Management permission on all sites by default\n\n* AskWindowManagement (3) = Ask every time a site wants obtain the Window Management permission\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "DefaultWindowManagementSetting",
+    "displayName": "Default Window Management permission setting",
+    "defaultOptionId": "com.apple.managedclient.preferences_defaultwindowmanagementsetting_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultwindowmanagementsetting_0",
+            "description": null,
+            "helpText": null,
+            "name": "Denies the Window Management permission on all sites by default",
+            "displayName": "Denies the Window Management permission on all sites by default",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultwindowmanagementsetting_1",
+            "description": null,
+            "helpText": null,
+            "name": "Ask every time a site wants obtain the Window Management permission",
+            "displayName": "Ask every time a site wants obtain the Window Management permission",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

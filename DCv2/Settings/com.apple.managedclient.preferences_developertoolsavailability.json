@@ -1,0 +1,77 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#developertoolsavailability"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "DeveloperToolsAvailability",
+    "rootDefinitionId": "com.apple.managedclient.preferences_developertoolsavailability",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_developertoolsavailability",
+    "description": "Control where developer tools can be used.\n\nIf you set this policy to 'DeveloperToolsDisallowedForForceInstalledExtensions' (0, the default), users can access the developer tools and the JavaScript console in general, but not in the context of extensions installed by enterprise policy.\n\nIf you set this policy to 'DeveloperToolsAllowed' (1), users can access the developer tools and the JavaScript console in all contexts, including extensions installed by enterprise policy.\n\nIf you set this policy to 'DeveloperToolsDisallowed' (2), users can't access the developer tools or inspect website elements. Keyboard shortcuts and menu or context menu entries that open the developer tools or the JavaScript Console are disabled.\n\n* 0 = Block the developer tools on extensions installed by enterprise policy, allow in other contexts\n\n* 1 = Allow using the developer tools\n\n* 2 = Don't allow using the developer tools",
+    "helpText": null,
+    "name": "DeveloperToolsAvailability",
+    "displayName": "Control where developer tools can be used",
+    "defaultOptionId": "com.apple.managedclient.preferences_developertoolsavailability_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_developertoolsavailability_0",
+            "description": null,
+            "helpText": null,
+            "name": "Block the developer tools on extensions installed by enterprise policy, allow in other contexts",
+            "displayName": "Block the developer tools on extensions installed by enterprise policy, allow in other contexts",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_developertoolsavailability_1",
+            "description": null,
+            "helpText": null,
+            "name": "Allow using the developer tools",
+            "displayName": "Allow using the developer tools",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_developertoolsavailability_2",
+            "description": null,
+            "helpText": null,
+            "name": "Don't allow using the developer tools",
+            "displayName": "Don't allow using the developer tools",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

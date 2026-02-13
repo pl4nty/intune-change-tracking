@@ -1,0 +1,94 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Cross",
+        "Profile",
+        "Policies",
+        "Allow",
+        "Data",
+        "Sharing",
+        "General"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "/com.android.deviceRestrictionPolicy/",
+    "offsetUri": "/CrossProfileDataSharing/",
+    "rootDefinitionId": "com.android.devicerestrictionpolicy.crossprofilepoliciesallowdatasharing",
+    "categoryId": "b6733d23-eadc-486a-abfc-62b78698a16c",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.android.devicerestrictionpolicy.crossprofilepoliciesallowdatasharing",
+    "description": "Choose if data can be shared between work and personal profiles. Available for corporate-owned work profile devices.",
+    "helpText": null,
+    "name": "CrossProfileDataSharing",
+    "displayName": "Data sharing between work and personal profile",
+    "defaultOptionId": "com.android.devicerestrictionpolicy.crossprofilepoliciesallowdatasharing_notconfigured",
+    "applicability": {
+        "description": null,
+        "platform": "androidEnterprise",
+        "deviceMode": "none",
+        "technologies": "android"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.android.devicerestrictionpolicy.crossprofilepoliciesallowdatasharing_notconfigured",
+            "description": "Not configured; this value defaults to CROSS_PROFILE_DATA_SHARING_UNSPECIFIED.",
+            "helpText": null,
+            "name": "CROSS_PROFILE_DATA_SHARING_UNSPECIFIED",
+            "displayName": "Device default",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "CROSS_PROFILE_DATA_SHARING_UNSPECIFIED"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.crossprofilepoliciesallowdatasharing_crossprofiledatasharingblocked",
+            "description": "Data cannot be shared from both the personal profile to work profile and the work profile to the personal profile.",
+            "helpText": null,
+            "name": "CROSS_PROFILE_DATA_SHARING_DISALLOWED",
+            "displayName": "Block all sharing between profiles",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "CROSS_PROFILE_DATA_SHARING_DISALLOWED"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.crossprofilepoliciesallowdatasharing_datasharingfromworktopersonalblocked",
+            "description": "Prevents users from sharing data from the work profile to apps in the personal profile. Personal data can be shared with work apps.",
+            "helpText": null,
+            "name": "DATA_SHARING_FROM_WORK_TO_PERSONAL_DISALLOWED",
+            "displayName": "Block sharing from work to personal profile",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "DATA_SHARING_FROM_WORK_TO_PERSONAL_DISALLOWED"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.crossprofilepoliciesallowdatasharing_crossprofiledatasharingallowed",
+            "description": "Data from either profile can be shared with the other profile.",
+            "helpText": null,
+            "name": "CROSS_PROFILE_DATA_SHARING_ALLOWED",
+            "displayName": "No restrictions on sharing",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "CROSS_PROFILE_DATA_SHARING_ALLOWED"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

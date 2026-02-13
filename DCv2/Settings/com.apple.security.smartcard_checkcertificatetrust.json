@@ -1,0 +1,108 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Smart Card"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "checkCertificateTrust",
+    "rootDefinitionId": "com.apple.security.smartcard_com.apple.security.smartcard",
+    "categoryId": "f4a8384f-9e4e-4fc6-9ee2-28fa5260347a",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.security.smartcard_checkcertificatetrust",
+    "description": "Disable certificate trust check:  Turns off certificate trust check.\r\n\r\nEnable certificate trust check and standard validity check:  Turns on certificate trust check. A standard validity check is performed but doesn't include additional revocation checks.\r\n\r\nEnable certificate trust check and soft revocation check:  Turns on certificate trust check. A soft revocation check is also performed. Until the certificate is explicitly rejected by CRL/OCSP, it's considered valid. This setting means that unavailable or unreachable CRL/OCSP allow this check to succeed.\r\n\r\nEnable certificate trust check and hard revocation check:  Turns on certificate trust check. A hard revocation check is also performed. Unless CRL/OCSP explicitly says \"This certificate is OK,\" it's considered invalid. This option is the most secure.",
+    "helpText": null,
+    "name": "checkCertificateTrust",
+    "displayName": "Check Certificate Trust",
+    "defaultOptionId": "com.apple.security.smartcard_checkcertificatetrust_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.security.smartcard_checkcertificatetrust_0",
+            "description": null,
+            "helpText": null,
+            "name": "0",
+            "displayName": "Disable certificate trust check",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.security.smartcard_com.apple.security.smartcard",
+                    "parentSettingId": "com.apple.security.smartcard_com.apple.security.smartcard"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.security.smartcard_checkcertificatetrust_1",
+            "description": null,
+            "helpText": null,
+            "name": "1",
+            "displayName": "Enable certificate trust check and standard validity check",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.security.smartcard_com.apple.security.smartcard",
+                    "parentSettingId": "com.apple.security.smartcard_com.apple.security.smartcard"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.security.smartcard_checkcertificatetrust_2",
+            "description": null,
+            "helpText": null,
+            "name": "2",
+            "displayName": "Enable certificate trust check and soft revocation check",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.security.smartcard_com.apple.security.smartcard",
+                    "parentSettingId": "com.apple.security.smartcard_com.apple.security.smartcard"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.security.smartcard_checkcertificatetrust_3",
+            "description": null,
+            "helpText": null,
+            "name": "3",
+            "displayName": "Enable certificate trust check and hard revocation check",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.security.smartcard_com.apple.security.smartcard",
+                    "parentSettingId": "com.apple.security.smartcard_com.apple.security.smartcard"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

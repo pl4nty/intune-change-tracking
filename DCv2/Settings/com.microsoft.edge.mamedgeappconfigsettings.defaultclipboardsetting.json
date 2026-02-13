@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.DefaultClipboardSetting",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.defaultclipboardsetting",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.defaultclipboardsetting",
+    "description": "This policy controls the default value for the clipboard site permission.\n\nSetting the policy to 2 blocks sites from using the clipboard site permission.\n\nSetting the policy to 3 or leaving it unset lets the user change the setting and decide if the clipboard APIs are available when a site wants to use an API.\n\nThis policy can be overridden for specific URL patterns using the \"ClipboardAllowedForUrls\" and \"ClipboardBlockedForUrls\" policies.\n\nThis policy only affects clipboard operations controlled by the clipboard site permission and doesn't affect sanitized clipboard writes or trusted copy and paste operations.\n\nPolicy options mapping:\n\n* BlockClipboard (2) = Do not allow any site to use the clipboard site permission\n\n* AskClipboard (3) = Allow sites to ask the user to grant the clipboard site permission\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "DefaultClipboardSetting",
+    "displayName": "Default clipboard site permission",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.defaultclipboardsetting_blockclipboard",
+            "description": null,
+            "helpText": null,
+            "name": "Do not allow any site to use the clipboard site permission",
+            "displayName": "Do not allow any site to use the clipboard site permission",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.defaultclipboardsetting_askclipboard",
+            "description": null,
+            "helpText": null,
+            "name": "Allow sites to ask the user to grant the clipboard site permission",
+            "displayName": "Allow sites to ask the user to grant the clipboard site permission",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

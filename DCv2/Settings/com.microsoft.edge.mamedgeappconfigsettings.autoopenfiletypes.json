@@ -1,0 +1,48 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.AutoOpenFileTypes",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.autoopenfiletypes",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "smallTextBox",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.autoopenfiletypes",
+    "description": "This policy sets a list of file types that should be automatically opened on download. Note: The leading separator should not be included when listing the file type, so list \"txt\" instead of \".txt\".\n\nBy default, these file types will be automatically opened on all URLs. You can use the \"AutoOpenAllowedForURLs\" policy to restrict the URLs for which these file types will be automatically opened on.\n\nFiles with types that should be automatically opened will still be subject to the enabled Microsoft Defender SmartScreen checks and won't be opened if they fail those checks.\n\nFile types that a user has already specified to automatically be opened will continue to do so when downloaded. The user will continue to be able to specify other file types to be automatically opened.\n\nIf you don't set this policy, only file types that a user has already specified to automatically be opened will do so when downloaded.\n\nThis policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, joined to Microsoft Azure Active Directory or instances that enrolled for device management.",
+    "helpText": null,
+    "name": "AutoOpenFileTypes",
+    "displayName": "List of file types that should be automatically opened on download",
+    "maximumCount": 600,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 0,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

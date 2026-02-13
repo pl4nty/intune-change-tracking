@@ -1,0 +1,53 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#webappinstallforcelist"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "WebAppInstallForceList",
+    "rootDefinitionId": "com.apple.managedclient.preferences_webappinstallforcelist",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_webappinstallforcelist",
+    "description": "Specifies a list of websites that are installed silently, without user interaction, and which can't be uninstalled or disabled by the user.\n\nEach list item of the policy is an object with the following members:\n  - \"url\", which is mandatory. \"url\" should be the URL of the web app to install.\n\nValues for the optional members are:\n  - \"launch_container\" should be either \"window\" or \"tab\" to indicate how the Web App will be opened after it's installed.\n  - \"create_desktop_shortcut\" should be true if a desktop shortcut should be created on Windows.\n\nIf \"default_launch_container\" is omitted, the app will open in a tab by default. Regardless of the value of \"default_launch_container\", users can change which container the app will open in. If \"create_desktop_shortcuts\" is omitted, no desktop shortcuts will be created.",
+    "helpText": null,
+    "name": "WebAppInstallForceList",
+    "displayName": "Web App Install Force List",
+    "childIds": [
+        "com.apple.managedclient.preferences_webappinstallforcelist_item_url",
+        "com.apple.managedclient.preferences_webappinstallforcelist_item_create_desktop_shortcut",
+        "com.apple.managedclient.preferences_webappinstallforcelist_item_default_launch_container"
+    ],
+    "maximumCount": 2147483647,
+    "minimumCount": 0,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm"
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "com.apple.managedclient.preferences_webappinstallforcelist_item_url",
+            "required": true
+        },
+        {
+            "dependedOnBy": "com.apple.managedclient.preferences_webappinstallforcelist_item_create_desktop_shortcut",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.managedclient.preferences_webappinstallforcelist_item_default_launch_container",
+            "required": false
+        }
+    ]
+}

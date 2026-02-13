@@ -1,0 +1,64 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge - All",
+        "Microsoft Edge Apple",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#defaultsearchprovidercontextmenuaccessallowed"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "DefaultSearchProviderContextMenuAccessAllowed",
+    "rootDefinitionId": "com.apple.managedclient.preferences_defaultsearchprovidercontextmenuaccessallowed",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_defaultsearchprovidercontextmenuaccessallowed",
+    "description": "Enables the use of a default search provider on the context menu.\n\nIf you set this policy to disabled the search context menu item that relies on your default search provider and sidebar search will not be available.\n\nIf this policy is set to enabled or not set, the context menu item for your default search provider and sidebar search will be available.\n\nThe policy value is only appled when the \"DefaultSearchProviderEnabled\" policy is enabled, and is not applicable otherwise.",
+    "helpText": null,
+    "name": "DefaultSearchProviderContextMenuAccessAllowed",
+    "displayName": "Allow default search provider context menu search access",
+    "defaultOptionId": "com.apple.managedclient.preferences_defaultsearchprovidercontextmenuaccessallowed_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultsearchprovidercontextmenuaccessallowed_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "Blocked",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultsearchprovidercontextmenuaccessallowed_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "Allowed",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

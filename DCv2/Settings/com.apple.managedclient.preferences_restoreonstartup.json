@@ -1,0 +1,91 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#restoreonstartup"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "RestoreOnStartup",
+    "rootDefinitionId": "com.apple.managedclient.preferences_restoreonstartup",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_restoreonstartup",
+    "description": "Specify how Microsoft Edge behaves when it starts.\n\nIf you want a new tab to always open on startup, choose 'Open new tab' (5).\n\nIf you want to reopen URLs that were open the last time Microsoft Edge closed, choose 'Restore the last session' (1). The browsing session will be restored as it was. Note that this option disables some settings that rely on sessions or that perform actions on exit (such as Clear browsing data on exit or session-only cookies).\n\nIf you want to open a specific set of URLs, choose 'Open a list of URLs' (4).\n\nDisabling this setting is equivalent to leaving it not configured. Users will be able to change it in Microsoft Edge.\n\nThis policy is available only on Windows instances that are joined to a Microsoft Active Directory domain or Windows 10 Pro or Enterprise instances enrolled for device management.\n\n* 5 = Open a new tab\n\n* 1 = Restore the last session\n\n* 4 = Open a list of URLs",
+    "helpText": null,
+    "name": "RestoreOnStartup",
+    "displayName": "Action to take on startup",
+    "defaultOptionId": "com.apple.managedclient.preferences_restoreonstartup_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_restoreonstartup_0",
+            "description": null,
+            "helpText": null,
+            "name": "Restore the last session",
+            "displayName": "Restore the last session",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_restoreonstartup_1",
+            "description": null,
+            "helpText": null,
+            "name": "Open a list of URLs",
+            "displayName": "Open a list of URLs",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 4
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_restoreonstartup_2",
+            "description": null,
+            "helpText": null,
+            "name": "Open a new tab",
+            "displayName": "Open a new tab",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 5
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_restoreonstartup_3",
+            "description": null,
+            "helpText": null,
+            "name": "Open a list of URLs and restore the last session",
+            "displayName": "Open a list of URLs and restore the last session",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 6
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

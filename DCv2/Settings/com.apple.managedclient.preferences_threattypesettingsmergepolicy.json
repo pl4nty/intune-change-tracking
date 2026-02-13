@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Defender - Antivirus engine",
+        "Antivirus engine"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/mac-preferences#threat-type-settings-merge-policy"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.wdav/Forced/[0]/mcx_preference_settings/antivirusEngine",
+    "offsetUri": "threatTypeSettingsMergePolicy",
+    "rootDefinitionId": "com.apple.managedclient.preferences_threattypesettingsmergepolicy",
+    "categoryId": "13467142-14e7-4380-8573-4866e842c7f6",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_threattypesettingsmergepolicy",
+    "description": "Specify the merge policy for threat type settings. This can be a combination of administrator-defined and user-defined settings (merge) or only administrator-defined settings (admin_only). This setting can be used to restrict local users from defining their own settings for different threat types.",
+    "helpText": null,
+    "name": "threatTypeSettingsMergePolicy",
+    "displayName": "Threat type settings merge",
+    "defaultOptionId": "com.apple.managedclient.preferences_threattypesettingsmergepolicy_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_threattypesettingsmergepolicy_0",
+            "description": null,
+            "helpText": null,
+            "name": "merge",
+            "displayName": "merge",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "merge"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_threattypesettingsmergepolicy_1",
+            "description": null,
+            "helpText": null,
+            "name": "admin_only",
+            "displayName": "admin_only",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "admin_only"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

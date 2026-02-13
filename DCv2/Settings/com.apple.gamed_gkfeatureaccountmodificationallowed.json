@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Parental Controls Game Center"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "GKFeatureAccountModificationAllowed",
+    "rootDefinitionId": "com.apple.gamed_com.apple.gamed",
+    "categoryId": "7ecdd7c9-6ab2-4dac-88ef-9bdad46e1f66",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.gamed_gkfeatureaccountmodificationallowed",
+    "description": "If true, allows account modifications.",
+    "helpText": null,
+    "name": "GKFeatureAccountModificationAllowed",
+    "displayName": "GK Feature Account Modification Allowed",
+    "defaultOptionId": "com.apple.gamed_gkfeatureaccountmodificationallowed_true",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.gamed_gkfeatureaccountmodificationallowed_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.gamed_com.apple.gamed",
+                    "parentSettingId": "com.apple.gamed_com.apple.gamed"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.gamed_gkfeatureaccountmodificationallowed_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.gamed_com.apple.gamed",
+                    "parentSettingId": "com.apple.gamed_com.apple.gamed"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

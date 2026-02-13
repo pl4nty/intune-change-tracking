@@ -1,0 +1,77 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#browsersignin"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "BrowserSignin",
+    "rootDefinitionId": "com.apple.managedclient.preferences_browsersignin",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_browsersignin",
+    "description": "Specify whether a user can sign into Microsoft Edge with their account and use account-related services like sync and single sign on. To control the availability of sync, use the \"SyncDisabled\" policy instead.\n\nIf you set this policy to 'Disable browser sign-in', make sure that you also set the \"NonRemovableProfileEnabled\" policy to disabled because \"NonRemovableProfileEnabled\" disables the creation of an automatically signed in browser profile. If both policies are set, Microsoft Edge will use the 'Disable browser sign-in' policy and behave as if \"NonRemovableProfileEnabled\" is set to disabled.\n\nIf you set this policy to 'Enable browser sign-in' (1), users can sign into the browser. Signing into the browser doesn't mean that sync is turned on by default; the user must separately opt-in to use this feature.\n\nIf you set this policy to 'Force browser sign-in' (2) users must sign into a profile to use the browser. By default, this will allow the user to choose whether they want to sync to their account, unless sync is disabled by the domain admin or with the \"SyncDisabled\" policy. The default value of \"BrowserGuestModeEnabled\" policy is set to false.\n\nIf you don't configure this policy users can decide if they want to enable the browser sign-in option and use it as they see fit.\n\n* 0 = Disable browser sign-in\n\n* 1 = Enable browser sign-in\n\n* 2 = Force users to sign-in to use the browser",
+    "helpText": null,
+    "name": "BrowserSignin",
+    "displayName": "Browser sign-in settings",
+    "defaultOptionId": "com.apple.managedclient.preferences_browsersignin_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_browsersignin_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disable browser sign-in",
+            "displayName": "Disable browser sign-in",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_browsersignin_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enable browser sign-in",
+            "displayName": "Enable browser sign-in",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_browsersignin_2",
+            "description": null,
+            "helpText": null,
+            "name": "Force users to sign-in to use the browser (all profiles)",
+            "displayName": "Force users to sign-in to use the browser",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Network Usage Rules"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "ApplicationRules/[{0}]/AppIdentifierMatches",
+    "rootDefinitionId": "com.apple.networkusagerules_com.apple.networkusagerules",
+    "categoryId": "06a85f5b-2614-4467-91cf-4a64d0c9326f",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.networkusagerules_applicationrules_item_appidentifiermatches",
+    "description": "A list of managed app identifiers, as strings, that must follow the associated rules. If this key is missing, the rules apply to all managed apps on the device. Each string in the AppIdentifierMatches array may either be an exact app identifier match (for example, com.mycompany.myapp) or it may specify a prefix match for the bundle ID by using the * wildcard character. If used, this character must appear after a period (.) and may only appear once, at the end of the string; for example, com.mycompany.*.",
+    "helpText": null,
+    "name": "ApplicationRules_item_AppIdentifierMatches",
+    "displayName": "App Identifier Matches",
+    "maximumCount": 600,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "iOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "com.apple.networkusagerules_applicationrules",
+            "parentSettingId": "com.apple.networkusagerules_applicationrules"
+        }
+    ],
+    "dependedOnBy": []
+}

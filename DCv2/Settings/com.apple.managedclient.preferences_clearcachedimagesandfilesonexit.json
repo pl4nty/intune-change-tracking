@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#clearcachedimagesandfilesonexit"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "ClearCachedImagesAndFilesOnExit",
+    "rootDefinitionId": "com.apple.managedclient.preferences_clearcachedimagesandfilesonexit",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_clearcachedimagesandfilesonexit",
+    "description": "Microsoft Edge doesn't clear cached images and files by default when it closes.\n\nIf you enable this policy, cached images and files will be deleted each time Microsoft Edge closes.\n\nIf you disable this policy, users cannot configure the cached images and files option in edge://settings/clearBrowsingDataOnClose.\n\nIf you don't configure this policy, users can choose whether cached images and files are cleared on exit.\n\nIf you disable this policy, don't enable the \"ClearBrowsingDataOnExit\" policy, because they both deal with deleting data. If you configure both, the \"ClearBrowsingDataOnExit\" policy takes precedence and deletes all data when Microsoft Edge closes, regardless of how you configured \"ClearCachedImagesAndFilesOnExit\".",
+    "helpText": null,
+    "name": "ClearCachedImagesAndFilesOnExit",
+    "displayName": "Clear cached images and files when Microsoft Edge closes",
+    "defaultOptionId": "com.apple.managedclient.preferences_clearcachedimagesandfilesonexit_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_clearcachedimagesandfilesonexit_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_clearcachedimagesandfilesonexit_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

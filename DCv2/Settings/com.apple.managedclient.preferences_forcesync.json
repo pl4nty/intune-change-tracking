@@ -1,0 +1,64 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge - All",
+        "Microsoft Edge Apple",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#forcesync"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "ForceSync",
+    "rootDefinitionId": "com.apple.managedclient.preferences_forcesync",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_forcesync",
+    "description": "Forces data synchronization in Microsoft Edge. This policy also prevents the user from turning sync off.\n\nIf you don't configure this policy, users will be able to turn sync on or off. If you enable this policy, users will not be able to turn sync off.\n\nFor this policy to work as intended,\n\"BrowserSignin\" policy must not be configured, or must be set to enabled. If \"BrowserSignin\" is set to disabled, then \"ForceSync\" will not take affect.\n\n\"SyncDisabled\" must not be configured or must be set to False. If this is set to True, \"ForceSync\" will not take affect.\n\n0 = Do not automatically start sync and show the sync consent (default)\n1 = Force sync to be turned on for Azure AD/Azure AD-Degraded user profile and do not show the sync consent prompt",
+    "helpText": null,
+    "name": "ForceSync",
+    "displayName": "Force synchronization of browser data and do not show the sync consent prompt",
+    "defaultOptionId": "com.apple.managedclient.preferences_forcesync_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_forcesync_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_forcesync_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

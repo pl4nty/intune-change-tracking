@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "File Provider"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "AllowManagedFileProvidersToRequestAttribution",
+    "rootDefinitionId": "com.apple.fileproviderd_com.apple.fileproviderd",
+    "categoryId": "768d9aa4-7407-4ed9-b97f-2385b8cadb47",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.fileproviderd_allowmanagedfileproviderstorequestattribution",
+    "description": "If true, enables file providers access to the path of the requesting process.",
+    "helpText": null,
+    "name": "AllowManagedFileProvidersToRequestAttribution",
+    "displayName": "Allow Managed File Providers To Request Attribution",
+    "defaultOptionId": "com.apple.fileproviderd_allowmanagedfileproviderstorequestattribution_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.fileproviderd_allowmanagedfileproviderstorequestattribution_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.fileproviderd_com.apple.fileproviderd",
+                    "parentSettingId": "com.apple.fileproviderd_com.apple.fileproviderd"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.fileproviderd_allowmanagedfileproviderstorequestattribution_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.fileproviderd_com.apple.fileproviderd",
+                    "parentSettingId": "com.apple.fileproviderd_com.apple.fileproviderd"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

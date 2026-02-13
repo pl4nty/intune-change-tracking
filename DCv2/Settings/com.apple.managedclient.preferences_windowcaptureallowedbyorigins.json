@@ -1,0 +1,50 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#windowcaptureallowedbyorigins"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "WindowCaptureAllowedByOrigins",
+    "rootDefinitionId": "com.apple.managedclient.preferences_windowcaptureallowedbyorigins",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_windowcaptureallowedbyorigins",
+    "description": "Setting the policy lets you set a list of URL patterns that can use Window and Tab Capture.\n\nLeaving the policy unset means that sites will not be considered for an override at this scope of Capture.\n\nThis policy is not considered if a site matches a URL pattern in any of the following policies: \"TabCaptureAllowedByOrigins\", \"SameOriginTabCaptureAllowedByOrigins\".\n\nIf a site matches a URL pattern in this policy, the following policies will not be considered: \"ScreenCaptureAllowedByOrigins\", \"ScreenCaptureAllowed\".\n\nFor detailed information on valid url patterns, please see https://go.microsoft.com/fwlink/?linkid=2095322.  This policy only matches based on origin, so any path in the URL pattern is ignored.",
+    "helpText": null,
+    "name": "WindowCaptureAllowedByOrigins",
+    "displayName": "Allow Window and Tab capture by these origins",
+    "maximumCount": 600,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

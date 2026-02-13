@@ -1,0 +1,160 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "EfficiencyMode",
+        "Configure when efficiency mode should become active",
+        "\\Microsoft Edge\\Performance",
+        "Microsoft Edge\\Performance",
+        "Performance"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev96.1~Policy~microsoft_edge~Performance/EfficiencyMode",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edgev96.1~policy~microsoft_edge~performance_efficiencymode",
+    "categoryId": "3edb2860-b77b-4240-af16-fb34d45d6ba1",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_microsoft_edgev96.1~policy~microsoft_edge~performance_efficiencymode_efficiencymode",
+    "description": "",
+    "helpText": "",
+    "name": "EfficiencyMode",
+    "displayName": "Configure when efficiency mode should become active (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edgev96.1~policy~microsoft_edge~performance_efficiencymode_efficiencymode_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev96.1~policy~microsoft_edge~performance_efficiencymode_efficiencymode_0",
+            "description": null,
+            "helpText": null,
+            "name": "Efficiency mode is always active",
+            "displayName": "Efficiency mode is always active",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_microsoft_edgev96.1~policy~microsoft_edge~performance_efficiencymode_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_microsoft_edgev96.1~policy~microsoft_edge~performance_efficiencymode"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev96.1~policy~microsoft_edge~performance_efficiencymode_efficiencymode_1",
+            "description": null,
+            "helpText": null,
+            "name": "Efficiency mode is never active",
+            "displayName": "Efficiency mode is never active",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_microsoft_edgev96.1~policy~microsoft_edge~performance_efficiencymode_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_microsoft_edgev96.1~policy~microsoft_edge~performance_efficiencymode"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev96.1~policy~microsoft_edge~performance_efficiencymode_efficiencymode_2",
+            "description": null,
+            "helpText": null,
+            "name": "Efficiency mode is active when the device is unplugged",
+            "displayName": "Efficiency mode is active when the device is unplugged",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_microsoft_edgev96.1~policy~microsoft_edge~performance_efficiencymode_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_microsoft_edgev96.1~policy~microsoft_edge~performance_efficiencymode"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev96.1~policy~microsoft_edge~performance_efficiencymode_efficiencymode_3",
+            "description": null,
+            "helpText": null,
+            "name": "Efficiency mode is active when the device is unplugged and the battery is low",
+            "displayName": "Efficiency mode is active when the device is unplugged and the battery is low",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "3"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_microsoft_edgev96.1~policy~microsoft_edge~performance_efficiencymode_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_microsoft_edgev96.1~policy~microsoft_edge~performance_efficiencymode"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev96.1~policy~microsoft_edge~performance_efficiencymode_efficiencymode_4",
+            "description": null,
+            "helpText": null,
+            "name": "When the device is unplugged, efficiency mode takes moderate steps to save battery. When the device is unplugged and the battery is low, efficiency mode takes additional steps to save battery.",
+            "displayName": "When the device is unplugged, efficiency mode takes moderate steps to save battery. When the device is unplugged and the battery is low, efficiency mode takes additional steps to save battery.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "4"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_microsoft_edgev96.1~policy~microsoft_edge~performance_efficiencymode_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_microsoft_edgev96.1~policy~microsoft_edge~performance_efficiencymode"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev96.1~policy~microsoft_edge~performance_efficiencymode_efficiencymode_5",
+            "description": null,
+            "helpText": null,
+            "name": "When the device is unplugged or unplugged and the battery is low, efficiency mode takes additional steps to save battery.",
+            "displayName": "When the device is unplugged or unplugged and the battery is low, efficiency mode takes additional steps to save battery.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "5"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_microsoft_edgev96.1~policy~microsoft_edge~performance_efficiencymode_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_microsoft_edgev96.1~policy~microsoft_edge~performance_efficiencymode"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

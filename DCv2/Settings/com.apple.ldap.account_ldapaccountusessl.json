@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "LDAP"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "LDAPAccountUseSSL",
+    "rootDefinitionId": "com.apple.ldap.account_com.apple.ldap.account",
+    "categoryId": "9ba1b877-865a-4104-8376-b43a0c75b04b",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.ldap.account_ldapaccountusessl",
+    "description": "If true, enables SSL.",
+    "helpText": null,
+    "name": "LDAPAccountUseSSL",
+    "displayName": "LDAP Account Use SSL",
+    "defaultOptionId": "com.apple.ldap.account_ldapaccountusessl_true",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.ldap.account_ldapaccountusessl_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.ldap.account_com.apple.ldap.account",
+                    "parentSettingId": "com.apple.ldap.account_com.apple.ldap.account"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.ldap.account_ldapaccountusessl_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.ldap.account_com.apple.ldap.account",
+                    "parentSettingId": "com.apple.ldap.account_com.apple.ldap.account"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Extensible Single Sign On (SSO)"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "AuthenticationMethod",
+    "rootDefinitionId": "com.apple.extensiblesso_com.apple.extensiblesso",
+    "categoryId": "7b6ddf4e-7136-4fde-adbf-38e6bdfcc962",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.extensiblesso_authenticationmethod",
+    "description": "The Platform SSO authentication method the extension uses. Requires that the SSO Extension also supports the method.\nAvailable in macOS 13 and later.",
+    "helpText": null,
+    "name": "AuthenticationMethod",
+    "displayName": "Authentication Method (Deprecated)",
+    "defaultOptionId": "com.apple.extensiblesso_authenticationmethod_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.extensiblesso_authenticationmethod_0",
+            "description": null,
+            "helpText": null,
+            "name": "Password",
+            "displayName": "Password",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "Password"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.extensiblesso_com.apple.extensiblesso",
+                    "parentSettingId": "com.apple.extensiblesso_com.apple.extensiblesso"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.extensiblesso_authenticationmethod_1",
+            "description": null,
+            "helpText": null,
+            "name": "UserSecureEnclaveKey",
+            "displayName": "UserSecureEnclaveKey",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "UserSecureEnclaveKey"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.extensiblesso_com.apple.extensiblesso",
+                    "parentSettingId": "com.apple.extensiblesso_com.apple.extensiblesso"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

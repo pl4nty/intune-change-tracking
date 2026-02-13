@@ -1,0 +1,71 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Defender - Antivirus engine",
+        "Antivirus engine"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.wdav/Forced/[0]/mcx_preference_settings/antivirusEngine",
+    "offsetUri": "exclusions/[{0}]/isDirectory",
+    "rootDefinitionId": "com.apple.managedclient.preferences_exclusions",
+    "categoryId": "13467142-14e7-4380-8573-4866e842c7f6",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_exclusions_item_isdirectory",
+    "description": "Directory if selected, or file if not selected",
+    "helpText": null,
+    "name": "exclusions_item_isDirectory",
+    "displayName": "Directory (selected) or file (not selected)",
+    "defaultOptionId": "com.apple.managedclient.preferences_exclusions_item_isdirectory_true",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement,microsoftSense"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_exclusions_item_isdirectory_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.managedclient.preferences_exclusions_item_$type_0",
+                    "parentSettingId": "com.apple.managedclient.preferences_exclusions_item_$type"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_exclusions_item_isdirectory_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.managedclient.preferences_exclusions_item_$type_0",
+                    "parentSettingId": "com.apple.managedclient.preferences_exclusions_item_$type"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

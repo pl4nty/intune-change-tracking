@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Network Usage Rules"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "SIMRules/[{0}]/WiFiAssistPolicy",
+    "rootDefinitionId": "com.apple.networkusagerules_com.apple.networkusagerules",
+    "categoryId": "06a85f5b-2614-4467-91cf-4a64d0c9326f",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.networkusagerules_simrules_item_wifiassistpolicy",
+    "description": "The Wi-Fi Assist policy to apply to the SIM cards specified in the ICCIDs. See About Wi-Fi Assist <https://support.apple.com/en-us/HT205296> to learn more.\n* '2': Use the default system policy for the specified SIM card(s).\n* '3': Make Wi-Fi Assist switch more aggressively from a poor Wi-Fi connection to cellular data for the specified SIM card(s). This setting may increase cellular data use and may impact battery life.",
+    "helpText": null,
+    "name": "SIMRules_item_WiFiAssistPolicy",
+    "displayName": "Wi Fi Assist Policy",
+    "defaultOptionId": "com.apple.networkusagerules_simrules_item_wifiassistpolicy_0",
+    "applicability": {
+        "description": null,
+        "platform": "iOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.networkusagerules_simrules_item_wifiassistpolicy_0",
+            "description": null,
+            "helpText": null,
+            "name": "2",
+            "displayName": "2",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.networkusagerules_simrules",
+                    "parentSettingId": "com.apple.networkusagerules_simrules"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.networkusagerules_simrules_item_wifiassistpolicy_1",
+            "description": null,
+            "helpText": null,
+            "name": "3",
+            "displayName": "3",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.networkusagerules_simrules",
+                    "parentSettingId": "com.apple.networkusagerules_simrules"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

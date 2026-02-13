@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.HttpsUpgradesEnabled",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.httpsupgradesenabled",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.httpsupgradesenabled",
+    "description": "As of Microsoft Edge version 120, Microsoft Edge tries to upgrade HTTP navigations to HTTPS whenever possible to improve security.  Navigations to captive portals, IP addresses, and non-unique hostnames are excluded from automatic upgrades.\n\nIf this policy is enabled or not configured, automatic HTTPS upgrades are turned on by default.\n\nIf this policy is disabled, Microsoft Edge won't attempt to upgrade HTTP connections to HTTPS.\n\nTo exempt specific hostnames or hostname patterns from being upgraded, use the HttpAllowlist policy.",
+    "helpText": null,
+    "name": "HttpsUpgradesEnabled",
+    "displayName": "Enable automatic HTTPS upgrades",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.httpsupgradesenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.httpsupgradesenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

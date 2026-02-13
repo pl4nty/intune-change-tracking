@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Privacy Preferences Policy Control"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "Services/SystemPolicyRemovableVolumes/[{0}]/Allowed",
+    "rootDefinitionId": "com.apple.tcc.configuration-profile-policy_com.apple.tcc.configuration-profile-policy",
+    "categoryId": "82d173f9-ba0b-4b09-bbb8-68cba4916162",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.tcc.configuration-profile-policy_services_systempolicyremovablevolumes_item_allowed",
+    "description": "If true, access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.",
+    "helpText": null,
+    "name": "Services_SystemPolicyRemovableVolumes_item_Allowed",
+    "displayName": "Allowed",
+    "defaultOptionId": "com.apple.tcc.configuration-profile-policy_services_systempolicyremovablevolumes_item_allowed_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.tcc.configuration-profile-policy_services_systempolicyremovablevolumes_item_allowed_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.tcc.configuration-profile-policy_services_systempolicyremovablevolumes",
+                    "parentSettingId": "com.apple.tcc.configuration-profile-policy_services_systempolicyremovablevolumes"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.tcc.configuration-profile-policy_services_systempolicyremovablevolumes_item_allowed_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.tcc.configuration-profile-policy_services_systempolicyremovablevolumes",
+                    "parentSettingId": "com.apple.tcc.configuration-profile-policy_services_systempolicyremovablevolumes"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

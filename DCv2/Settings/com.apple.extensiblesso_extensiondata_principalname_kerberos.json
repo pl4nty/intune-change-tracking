@@ -1,0 +1,50 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Extensible Single Sign On Kerberos"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "ExtensionData/principalName",
+    "rootDefinitionId": "com.apple.extensiblesso_com.apple.extensiblesso-kerberos_kerberos",
+    "categoryId": "f35cc803-3a06-4262-b38b-a5295321f756",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.extensiblesso_extensiondata_principalname_kerberos",
+    "description": "The principal (aka username) to use. You do not need to include the realm.",
+    "helpText": null,
+    "name": "ExtensionData_principalName",
+    "displayName": "Principal Name",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "mdm"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "variableReplacement",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": "{{USERPRINCIPALNAME}}"
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "com.apple.extensiblesso_extensiondata_kerberos",
+            "parentSettingId": "com.apple.extensiblesso_extensiondata_kerberos"
+        }
+    ],
+    "dependedOnBy": []
+}
