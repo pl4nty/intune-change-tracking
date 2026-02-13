@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DNS Settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "DNSSettings/DNSProtocol",
+    "rootDefinitionId": "com.apple.dnssettings.managed_com.apple.dnssettings.managed",
+    "categoryId": "bbe51018-a17d-46c4-9517-ff45c54d8d18",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.dnssettings.managed_dnssettings_dnsprotocol",
+    "description": "The encrypted transport protocol used to communicate with the DNS server.",
+    "helpText": null,
+    "name": "DNSSettings_DNSProtocol",
+    "displayName": "DNS Protocol",
+    "defaultOptionId": "com.apple.dnssettings.managed_dnssettings_dnsprotocol_0",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.dnssettings.managed_dnssettings_dnsprotocol_0",
+            "description": null,
+            "helpText": null,
+            "name": "HTTPS",
+            "displayName": "HTTPS",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "HTTPS"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.dnssettings.managed_dnssettings",
+                    "parentSettingId": "com.apple.dnssettings.managed_dnssettings"
+                }
+            ],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "com.apple.dnssettings.managed_dnssettings_serverurl",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "itemId": "com.apple.dnssettings.managed_dnssettings_dnsprotocol_1",
+            "description": null,
+            "helpText": null,
+            "name": "TLS",
+            "displayName": "TLS",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "TLS"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.dnssettings.managed_dnssettings",
+                    "parentSettingId": "com.apple.dnssettings.managed_dnssettings"
+                }
+            ],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "com.apple.dnssettings.managed_dnssettings_servername",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

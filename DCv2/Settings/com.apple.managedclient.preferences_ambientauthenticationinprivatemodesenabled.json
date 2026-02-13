@@ -1,0 +1,91 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#ambientauthenticationinprivatemodesenabled"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "AmbientAuthenticationInPrivateModesEnabled",
+    "rootDefinitionId": "com.apple.managedclient.preferences_ambientauthenticationinprivatemodesenabled",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_ambientauthenticationinprivatemodesenabled",
+    "description": "Configure this policy to allow/disallow ambient authentication for InPrivate and Guest profiles in Microsoft Edge.\n\nAmbient Authentication is http authentication with default credentials when explicit credentials aren't provided via NTLM/Kerberos/Negotiate challenge/response schemes.\n\nIf you set the policy to RegularOnly (value 0), it allows ambient authentication for Regular sessions only. InPrivate and Guest sessions won't be allowed to ambiently authenticate.\n\nIf you set the policy to InPrivateAndRegular (value 1), it allows ambient authentication for InPrivate and Regular sessions. Guest sessions won't be allowed to ambiently authenticate.\n\nIf you set the policy to GuestAndRegular (value 2), it allows ambient authentication for Guest and Regular sessions. InPrivate sessions won't be allowed to ambiently authenticate\n\nIf you set the policy to All (value 3), it allows ambient authentication for all sessions.\n\nNote that ambient authentication is always allowed on regular profiles.\n\nIf you don't configure this policy, InPrivate and Guest sessions will not be able to ambiently authenticate in future releases of Microsoft Edge, because they will be disallowed.",
+    "helpText": null,
+    "name": "AmbientAuthenticationInPrivateModesEnabled",
+    "displayName": "Enable Ambient Authentication for InPrivate and Guest profiles",
+    "defaultOptionId": "com.apple.managedclient.preferences_ambientauthenticationinprivatemodesenabled_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_ambientauthenticationinprivatemodesenabled_0",
+            "description": null,
+            "helpText": null,
+            "name": "Enable ambient authentication in regular sessions only",
+            "displayName": "Enable ambient authentication in regular sessions only.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_ambientauthenticationinprivatemodesenabled_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enable ambient authentication in InPrivate and regular sessions",
+            "displayName": "Enable ambient authentication in InPrivate and regular sessions",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_ambientauthenticationinprivatemodesenabled_2",
+            "description": null,
+            "helpText": null,
+            "name": "Enable ambient authentication in guest and regular sessions",
+            "displayName": "Enable ambient authentication in guest and regular sessions",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_ambientauthenticationinprivatemodesenabled_3",
+            "description": null,
+            "helpText": null,
+            "name": "Enable ambient authentication in regular, InPrivate and guest sessions",
+            "displayName": "Enable ambient authentication in regular, InPrivate and guest sessions",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

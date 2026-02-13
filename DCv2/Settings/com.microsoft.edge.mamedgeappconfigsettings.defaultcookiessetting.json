@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Content settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.DefaultCookiesSetting",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.defaultcookiessetting",
+    "categoryId": "92d69c43-75ac-49b1-a3ef-9350079eef86",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.defaultcookiessetting",
+    "description": "Control whether websites can create cookies on the user's device. This policy is all or nothing - you can let all websites create cookies, or no websites create cookies. You can't use this policy to enable cookies from specific websites.\n\nSet the policy to 'SessionOnly' to clear cookies when the session closes.\n\nIf you don't configure this policy, the default 'AllowCookies' is used, and users can change this setting in Microsoft Edge Settings. (If you don't want users to be able to change this setting, set the policy.)\n\nPolicy options mapping:\n\n* AllowCookies (1) = Let all sites create cookies\n\n* BlockCookies (2) = Don't let any site create cookies\n\n* SessionOnly (4) = Keep cookies for the duration of the session, except ones listed in \"SaveCookiesOnExit\"\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "DefaultCookiesSetting",
+    "displayName": "Configure cookies",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.defaultcookiessetting_allowcookies",
+            "description": null,
+            "helpText": null,
+            "name": "Let all sites create cookies",
+            "displayName": "Let all sites create cookies",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.defaultcookiessetting_blockcookies",
+            "description": null,
+            "helpText": null,
+            "name": "Don't let any site create cookies",
+            "displayName": "Don't let any site create cookies",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.defaultcookiessetting_sessiononly",
+            "description": null,
+            "helpText": null,
+            "name": "Keep cookies for the duration of the session, except ones listed in \"SaveCookiesOnExit\"",
+            "displayName": "Keep cookies for the duration of the session, except ones listed in \"SaveCookiesOnExit\"",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 4
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

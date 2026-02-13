@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "InsecurePrivateNetworkRequestsAllowed",
+    "rootDefinitionId": "com.apple.managedclient.preferences_insecureprivatenetworkrequestsallowed",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_insecureprivatenetworkrequestsallowed",
+    "description": "Controls whether websites are allowed to make requests to more-private network endpoints.\n\nWhen this policy is enabled, all Private Network Access checks are disabled for all origins. This may allow attackers to perform cross-site request forgery (CSRF) attacks on private network servers.\n\nWhen this policy is disabled or not configured, the default behavior for requests to more-private network endpoints will depend on the user's personal configuration for the BlockInsecurePrivateNetworkRequests, PrivateNetworkAccessSendPreflights, and PrivateNetworkAccessRespectPreflightResults feature flags. These flags may be controlled by experimentation or set via the command line.\n\nThis policy relates to the Private Network Access specification. See https://wicg.github.io/private-network-access/ for more details.\n\nA network endpoint is more private than another if:\n1) Its IP address is localhost and the other is not.\n2) Its IP address is private and the other is public.\nIn the future, depending on spec evolution, this policy might apply to all cross-origin requests directed at private IPs or localhost.\n\nWhen this policy enabled, websites are allowed to make requests to any network endpoint, subject to other cross-origin checks.",
+    "helpText": null,
+    "name": "InsecurePrivateNetworkRequestsAllowed",
+    "displayName": "Specifies whether to allow websites to make requests to any network endpoint in an insecure manner.",
+    "defaultOptionId": "com.apple.managedclient.preferences_insecureprivatenetworkrequestsallowed_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_insecureprivatenetworkrequestsallowed_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "Blocked",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_insecureprivatenetworkrequestsallowed_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "Allowed",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

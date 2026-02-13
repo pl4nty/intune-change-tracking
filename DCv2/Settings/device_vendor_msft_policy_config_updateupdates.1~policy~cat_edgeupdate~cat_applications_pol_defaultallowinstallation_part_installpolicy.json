@@ -1,0 +1,84 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Pol_DefaultAllowInstallation",
+        "Allow installation default",
+        "\\Microsoft Edge Update\\Applications",
+        "Microsoft Edge Update\\Applications",
+        "Applications"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/updateUpdates.1~Policy~Cat_EdgeUpdate~Cat_Applications/Pol_DefaultAllowInstallation",
+    "rootDefinitionId": "device_vendor_msft_policy_config_updateupdates.1~policy~cat_edgeupdate~cat_applications_pol_defaultallowinstallation",
+    "categoryId": "2c7e8e8e-47fe-48ba-8cb4-55ce296edced",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_updateupdates.1~policy~cat_edgeupdate~cat_applications_pol_defaultallowinstallation_part_installpolicy",
+    "description": "",
+    "helpText": "",
+    "name": "Part_InstallPolicy",
+    "displayName": "Install Policy (Device)",
+    "defaultOptionId": "device_vendor_msft_policy_config_updateupdates.1~policy~cat_edgeupdate~cat_applications_pol_defaultallowinstallation_part_installpolicy_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_updateupdates.1~policy~cat_edgeupdate~cat_applications_pol_defaultallowinstallation_part_installpolicy_1",
+            "description": null,
+            "helpText": null,
+            "name": "Always allow Installs (recommended)",
+            "displayName": "Always allow Installs (recommended)",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_updateupdates.1~policy~cat_edgeupdate~cat_applications_pol_defaultallowinstallation_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_updateupdates.1~policy~cat_edgeupdate~cat_applications_pol_defaultallowinstallation"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_updateupdates.1~policy~cat_edgeupdate~cat_applications_pol_defaultallowinstallation_part_installpolicy_0",
+            "description": null,
+            "helpText": null,
+            "name": "Installs disabled",
+            "displayName": "Installs disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_updateupdates.1~policy~cat_edgeupdate~cat_applications_pol_defaultallowinstallation_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_updateupdates.1~policy~cat_edgeupdate~cat_applications_pol_defaultallowinstallation"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

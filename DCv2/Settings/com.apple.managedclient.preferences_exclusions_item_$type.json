@@ -1,0 +1,109 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Defender - Antivirus engine",
+        "Antivirus engine"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.wdav/Forced/[0]/mcx_preference_settings/antivirusEngine",
+    "offsetUri": "exclusions/[{0}]/$type",
+    "rootDefinitionId": "com.apple.managedclient.preferences_exclusions",
+    "categoryId": "13467142-14e7-4380-8573-4866e842c7f6",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_exclusions_item_$type",
+    "description": null,
+    "helpText": null,
+    "name": "exclusions_item_$type",
+    "displayName": "Type",
+    "defaultOptionId": "com.apple.managedclient.preferences_exclusions_item_$type_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement,microsoftSense"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_exclusions_item_$type_0",
+            "description": null,
+            "helpText": null,
+            "name": "Path",
+            "displayName": "Path",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "excludedPath"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.managedclient.preferences_exclusions",
+                    "parentSettingId": "com.apple.managedclient.preferences_exclusions"
+                }
+            ],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "com.apple.managedclient.preferences_exclusions_item_isdirectory",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "com.apple.managedclient.preferences_exclusions_item_path",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_exclusions_item_$type_1",
+            "description": null,
+            "helpText": null,
+            "name": "File extension",
+            "displayName": "File extension",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "excludedFileExtension"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.managedclient.preferences_exclusions",
+                    "parentSettingId": "com.apple.managedclient.preferences_exclusions"
+                }
+            ],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "com.apple.managedclient.preferences_exclusions_item_extension",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_exclusions_item_$type_2",
+            "description": null,
+            "helpText": null,
+            "name": "Process name",
+            "displayName": "File name",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "excludedFileName"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.managedclient.preferences_exclusions",
+                    "parentSettingId": "com.apple.managedclient.preferences_exclusions"
+                }
+            ],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "com.apple.managedclient.preferences_exclusions_item_name",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

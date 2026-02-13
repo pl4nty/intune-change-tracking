@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Cellular"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "APNs/[{0}]/AuthenticationType",
+    "rootDefinitionId": "com.apple.cellular_com.apple.cellular",
+    "categoryId": "5c722b3f-9d77-428a-b859-3fb556162cd6",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.cellular_apns_item_authenticationtype",
+    "description": "The authentication type for logging in.",
+    "helpText": null,
+    "name": "APNs_item_AuthenticationType",
+    "displayName": "Authentication Type",
+    "defaultOptionId": "com.apple.cellular_apns_item_authenticationtype_1",
+    "applicability": {
+        "description": null,
+        "platform": "iOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.cellular_apns_item_authenticationtype_0",
+            "description": null,
+            "helpText": null,
+            "name": "CHAP",
+            "displayName": "CHAP",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "CHAP"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.cellular_apns",
+                    "parentSettingId": "com.apple.cellular_apns"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.cellular_apns_item_authenticationtype_1",
+            "description": null,
+            "helpText": null,
+            "name": "PAP",
+            "displayName": "PAP",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "PAP"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.cellular_apns",
+                    "parentSettingId": "com.apple.cellular_apns"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Extensible Single Sign On Kerberos"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "ExtensionData/includeManagedAppsInBundleIdACL",
+    "rootDefinitionId": "com.apple.extensiblesso_com.apple.extensiblesso-kerberos_kerberos",
+    "categoryId": "f35cc803-3a06-4262-b38b-a5295321f756",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.extensiblesso_extensiondata_includemanagedappsinbundleidacl_kerberos",
+    "description": "If true, the Kerberos extension allows only managed apps to access and use the credential. This is in addition to the Credential Bundle ID ACL, if it is specified. Available in iOS 14 and later, and macOS 12 and later.",
+    "helpText": null,
+    "name": "ExtensionData_includeManagedAppsInBundleIdACL",
+    "displayName": "Include Managed Apps In Bundle ID ACL",
+    "defaultOptionId": "com.apple.extensiblesso_extensiondata_includemanagedappsinbundleidacl_kerberos_false",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "mdm"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.extensiblesso_extensiondata_includemanagedappsinbundleidacl_kerberos_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.extensiblesso_extensiondata_kerberos",
+                    "parentSettingId": "com.apple.extensiblesso_extensiondata_kerberos"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.extensiblesso_extensiondata_includemanagedappsinbundleidacl_kerberos_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.extensiblesso_extensiondata_kerberos",
+                    "parentSettingId": "com.apple.extensiblesso_extensiondata_kerberos"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

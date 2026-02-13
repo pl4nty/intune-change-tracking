@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#sharedlinksenabled"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "SharedLinksEnabled",
+    "rootDefinitionId": "com.apple.managedclient.preferences_sharedlinksenabled",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_sharedlinksenabled",
+    "description": "Allows Microsoft Edge to display links recently shared by or shared with the user from Microsoft 365 apps in History.\n\nIf you enable or don't configure this policy, Microsoft Edge displays links recently shared by or shared with the user from Microsoft 365 apps in History.\n\nIf you disable this policy, Microsoft Edge does not display links recently shared by or shared with the user from Microsoft 365 apps in History. The control in Microsoft Edge settings is disabled and set to off.\n\nThis policy only applies for Microsoft Edge local user profiles and profiles signed in using Azure Active Directory.",
+    "helpText": null,
+    "name": "SharedLinksEnabled",
+    "displayName": "Show links shared from Microsoft 365 apps in History",
+    "defaultOptionId": "com.apple.managedclient.preferences_sharedlinksenabled_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_sharedlinksenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_sharedlinksenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

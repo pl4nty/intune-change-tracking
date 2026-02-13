@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Microphone",
+        "Force",
+        "Mute",
+        "General"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "/com.android.deviceRestrictionPolicy/",
+    "offsetUri": "/microphoneForceMute/",
+    "rootDefinitionId": "com.android.devicerestrictionpolicy.microphoneforcemute",
+    "categoryId": "b6733d23-eadc-486a-abfc-62b78698a16c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.android.devicerestrictionpolicy.microphoneforcemute",
+    "description": "If 'True', prevents users from unmuting the microphone and adjusting the microphone volume. If 'False', Intune doesn't change or update this setting. By default, the OS might allow users to use and adjust the volume of the microphone on the device. Available for fully managed, dedicated and corporate-owned work profile devices.",
+    "helpText": null,
+    "name": "MicrophoneForceMute",
+    "displayName": "Block microphone adjustment",
+    "defaultOptionId": "com.android.devicerestrictionpolicy.microphoneforcemute_false",
+    "applicability": {
+        "description": null,
+        "platform": "androidEnterprise",
+        "deviceMode": "none",
+        "technologies": "android"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.android.devicerestrictionpolicy.microphoneforcemute_true",
+            "description": "true",
+            "helpText": null,
+            "name": "True",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.microphoneforcemute_false",
+            "description": "false",
+            "helpText": null,
+            "name": "False",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

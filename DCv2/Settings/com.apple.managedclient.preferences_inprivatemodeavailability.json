@@ -1,0 +1,77 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#inprivatemodeavailability"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "InPrivateModeAvailability",
+    "rootDefinitionId": "com.apple.managedclient.preferences_inprivatemodeavailability",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_inprivatemodeavailability",
+    "description": "Specifies whether the user can open pages in InPrivate mode in Microsoft Edge.\n\nIf you don't configure this policy or set it to 'Enabled' (0), users can open pages in InPrivate mode.\n\nSet this policy to 'Disable' (1) to stop users from using InPrivate mode.\n\nSet this policy to 'Forced' (2) to always use InPrivate mode.\n\n* 0 = InPrivate mode available\n\n* 1 = InPrivate mode disabled\n\n* 2 = InPrivate mode forced",
+    "helpText": null,
+    "name": "InPrivateModeAvailability",
+    "displayName": "Configure InPrivate mode availability",
+    "defaultOptionId": "com.apple.managedclient.preferences_inprivatemodeavailability_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_inprivatemodeavailability_0",
+            "description": null,
+            "helpText": null,
+            "name": "InPrivate mode available",
+            "displayName": "InPrivate mode available",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_inprivatemodeavailability_1",
+            "description": null,
+            "helpText": null,
+            "name": "InPrivate mode disabled",
+            "displayName": "InPrivate mode disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_inprivatemodeavailability_2",
+            "description": null,
+            "helpText": null,
+            "name": "InPrivate mode forced",
+            "displayName": "InPrivate mode forced",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

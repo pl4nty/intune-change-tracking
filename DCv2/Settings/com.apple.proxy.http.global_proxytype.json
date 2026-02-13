@@ -1,0 +1,84 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Global HTTP Proxy"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "ProxyType",
+    "rootDefinitionId": "com.apple.proxy.http.global_com.apple.proxy.http.global",
+    "categoryId": "906df5cd-1d9e-49d0-ab32-cf5c5a041974",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.proxy.http.global_proxytype",
+    "description": "The proxy type. For a manual proxy type, the profile contains the proxy server address, including its port, and optionally a user name and password. For an auto proxy type, you can enter a PAC URL.",
+    "helpText": null,
+    "name": "ProxyType",
+    "displayName": "Proxy Type",
+    "defaultOptionId": "com.apple.proxy.http.global_proxytype_0",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.proxy.http.global_proxytype_0",
+            "description": null,
+            "helpText": null,
+            "name": "Manual",
+            "displayName": "Manual",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "Manual"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.proxy.http.global_com.apple.proxy.http.global",
+                    "parentSettingId": "com.apple.proxy.http.global_com.apple.proxy.http.global"
+                }
+            ],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "com.apple.proxy.http.global_proxyserver",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "com.apple.proxy.http.global_proxyserverport",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "itemId": "com.apple.proxy.http.global_proxytype_1",
+            "description": null,
+            "helpText": null,
+            "name": "Auto",
+            "displayName": "Auto",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "Auto"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.proxy.http.global_com.apple.proxy.http.global",
+                    "parentSettingId": "com.apple.proxy.http.global_com.apple.proxy.http.global"
+                }
+            ],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "com.apple.proxy.http.global_proxypacurl",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

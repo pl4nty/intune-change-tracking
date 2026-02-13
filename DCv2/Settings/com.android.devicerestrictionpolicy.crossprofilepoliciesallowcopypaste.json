@@ -1,0 +1,66 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Cross",
+        "Profile",
+        "Policies",
+        "Allow",
+        "Copy",
+        "Paste",
+        "General"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "/com.android.deviceRestrictionPolicy/",
+    "offsetUri": "/crossProfilePoliciesAllowCopyPaste/",
+    "rootDefinitionId": "com.android.devicerestrictionpolicy.crossprofilepoliciesallowcopypaste",
+    "categoryId": "b6733d23-eadc-486a-abfc-62b78698a16c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.android.devicerestrictionpolicy.crossprofilepoliciesallowcopypaste",
+    "description": "If 'True', allows users copy and paste data between the work and personal profiles. If 'False', Intune doesn't change or update this setting. By default, the OS might prevent users from pasting text into the personal profile that's copied from the work profile, allow users to copy text from the personal profile, and paste into the work profile or allow users to copy text from the work profile, and paste into the work profile. Available for corporate-owned work profile devices.",
+    "helpText": null,
+    "name": "CrossProfilePoliciesAllowCopyPaste",
+    "displayName": "Allow copy and paste between work and personal profiles ",
+    "defaultOptionId": "com.android.devicerestrictionpolicy.crossprofilepoliciesallowcopypaste_false",
+    "applicability": {
+        "description": null,
+        "platform": "androidEnterprise",
+        "deviceMode": "none",
+        "technologies": "android"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.android.devicerestrictionpolicy.crossprofilepoliciesallowcopypaste_false",
+            "description": "false",
+            "helpText": null,
+            "name": "COPY_FROM_WORK_TO_PERSONAL_DISALLOWED",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "COPY_FROM_WORK_TO_PERSONAL_DISALLOWED"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.crossprofilepoliciesallowcopypaste_true",
+            "description": "true",
+            "helpText": null,
+            "name": "CROSS_PROFILE_COPY_PASTE_ALLOWED",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "CROSS_PROFILE_COPY_PASTE_ALLOWED"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

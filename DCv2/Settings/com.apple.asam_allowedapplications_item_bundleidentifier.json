@@ -1,0 +1,50 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Autonomous Single App Mode"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "AllowedApplications/[{0}]/BundleIdentifier",
+    "rootDefinitionId": "com.apple.asam_com.apple.asam",
+    "categoryId": "daa2ea69-8026-465a-942c-75eb0396d5b9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.asam_allowedapplications_item_bundleidentifier",
+    "description": "The unique bundle identifier. If two dictionaries contain the same Bundle Identifier value but a different Team Identifier value, this will be considered an error and the profile won't be installed.",
+    "helpText": null,
+    "name": "AllowedApplications_item_BundleIdentifier",
+    "displayName": "Bundle Identifier",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "com.apple.asam_allowedapplications",
+            "parentSettingId": "com.apple.asam_allowedapplications"
+        }
+    ],
+    "dependedOnBy": []
+}

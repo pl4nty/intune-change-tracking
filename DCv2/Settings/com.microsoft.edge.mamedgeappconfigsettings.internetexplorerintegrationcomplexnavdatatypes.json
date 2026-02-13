@@ -1,0 +1,89 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.InternetExplorerIntegrationComplexNavDataTypes",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.internetexplorerintegrationcomplexnavdatatypes",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.internetexplorerintegrationcomplexnavdatatypes",
+    "description": "Starting with Microsoft Edge version 96, navigations that switch between Internet Explorer mode and Microsoft Edge will include form data.\n\nIf you enable this policy, you can specify which data types should be included in navigations between Microsoft Edge and Internet Explorer mode.\n\nIf you disable or don't configure this policy, Microsoft Edge will use the new behavior of including form data in navigations that change modes.\n\nTo learn more, see <a href=\"https://go.microsoft.com/fwlink/?linkid=2174004\">https://go.microsoft.com/fwlink/?linkid=2174004</a>\n\nPolicy options mapping:\n\n* IncludeNone (0) = Do not send form data or headers\n\n* IncludeFormDataOnly (1) = Send form data only\n\n* IncludeHeadersOnly (2) = Send additional headers only\n\n* IncludeFormDataAndHeaders (3) = Send form data and additional headers\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "InternetExplorerIntegrationComplexNavDataTypes",
+    "displayName": "Configure whether form data and HTTP headers will be sent when entering or exiting Internet Explorer mode",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.internetexplorerintegrationcomplexnavdatatypes_includenone",
+            "description": null,
+            "helpText": null,
+            "name": "Do not send form data or headers",
+            "displayName": "Do not send form data or headers",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.internetexplorerintegrationcomplexnavdatatypes_includeformdataonly",
+            "description": null,
+            "helpText": null,
+            "name": "Send form data only",
+            "displayName": "Send form data only",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.internetexplorerintegrationcomplexnavdatatypes_includeheadersonly",
+            "description": null,
+            "helpText": null,
+            "name": "Send additional headers only",
+            "displayName": "Send additional headers only",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.internetexplorerintegrationcomplexnavdatatypes_includeformdataandheaders",
+            "description": null,
+            "helpText": null,
+            "name": "Send form data and additional headers",
+            "displayName": "Send form data and additional headers",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

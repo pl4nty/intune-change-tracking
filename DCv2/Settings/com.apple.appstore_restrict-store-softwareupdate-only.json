@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "App Store"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "restrict-store-softwareupdate-only",
+    "rootDefinitionId": "com.apple.appstore_com.apple.appstore",
+    "categoryId": "f14014f5-a401-41e3-8a97-1a9e3c5e3614",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.appstore_restrict-store-softwareupdate-only",
+    "description": "If true, prevents App Store from launching. Available in macOS 10.14 and later. Restricts installations to software updates only in macOS 10.10 - 10.13.",
+    "helpText": null,
+    "name": "restrict-store-softwareupdate-only",
+    "displayName": "Restrict Store Software Update Only",
+    "defaultOptionId": "com.apple.appstore_restrict-store-softwareupdate-only_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.appstore_restrict-store-softwareupdate-only_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.appstore_com.apple.appstore",
+                    "parentSettingId": "com.apple.appstore_com.apple.appstore"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.appstore_restrict-store-softwareupdate-only_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.appstore_com.apple.appstore",
+                    "parentSettingId": "com.apple.appstore_com.apple.appstore"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

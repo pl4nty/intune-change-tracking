@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Restrictions"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "allowDefaultBrowserModification",
+    "rootDefinitionId": "com.apple.applicationaccess_com.apple.applicationaccess",
+    "categoryId": "eda31027-9270-4959-801b-397fa05512e2",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.applicationaccess_allowdefaultbrowsermodification",
+    "description": "If false, disables default browser preference modification. The MDM Settings command to set the default browser preference will still work when this is applied.",
+    "helpText": null,
+    "name": "allowDefaultBrowserModification",
+    "displayName": "Allow Default Browser Modification",
+    "defaultOptionId": "com.apple.applicationaccess_allowdefaultbrowsermodification_true",
+    "applicability": {
+        "description": null,
+        "platform": "iOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.applicationaccess_allowdefaultbrowsermodification_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.applicationaccess_com.apple.applicationaccess",
+                    "parentSettingId": "com.apple.applicationaccess_com.apple.applicationaccess"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.applicationaccess_allowdefaultbrowsermodification_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.applicationaccess_com.apple.applicationaccess",
+                    "parentSettingId": "com.apple.applicationaccess_com.apple.applicationaccess"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Web Content Filter"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "SafariHistoryRetentionEnabled",
+    "rootDefinitionId": "com.apple.webcontent-filter_com.apple.webcontent-filter",
+    "categoryId": "a6fe8038-136b-4d50-bf04-8e232409c0d2",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.webcontent-filter_safarihistoryretentionenabled",
+    "description": "If `true`, this payload enforces a policy which requires retention of browsing history. This causes Safari to disable clearing of browsing history, and prevents the use of private browsing mode because that mode doesn't keep browsing history.",
+    "helpText": null,
+    "name": "SafariHistoryRetentionEnabled",
+    "displayName": "Safari History Retention Enabled",
+    "defaultOptionId": "com.apple.webcontent-filter_safarihistoryretentionenabled_true",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.webcontent-filter_safarihistoryretentionenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.webcontent-filter_com.apple.webcontent-filter",
+                    "parentSettingId": "com.apple.webcontent-filter_com.apple.webcontent-filter"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.webcontent-filter_safarihistoryretentionenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.webcontent-filter_com.apple.webcontent-filter",
+                    "parentSettingId": "com.apple.webcontent-filter_com.apple.webcontent-filter"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

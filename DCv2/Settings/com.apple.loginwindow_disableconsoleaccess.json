@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Login Window Behavior"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "DisableConsoleAccess",
+    "rootDefinitionId": "com.apple.loginwindow_com.apple.loginwindow",
+    "categoryId": "8f831e0a-feb7-4cbb-acc1-2e583f3f4de3",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.loginwindow_disableconsoleaccess",
+    "description": "If true, disregards the >console special user name, which will provide a command line UI.",
+    "helpText": null,
+    "name": "DisableConsoleAccess",
+    "displayName": "Disable Console Access",
+    "defaultOptionId": "com.apple.loginwindow_disableconsoleaccess_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.loginwindow_disableconsoleaccess_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.loginwindow_com.apple.loginwindow",
+                    "parentSettingId": "com.apple.loginwindow_com.apple.loginwindow"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.loginwindow_disableconsoleaccess_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.loginwindow_com.apple.loginwindow",
+                    "parentSettingId": "com.apple.loginwindow_com.apple.loginwindow"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

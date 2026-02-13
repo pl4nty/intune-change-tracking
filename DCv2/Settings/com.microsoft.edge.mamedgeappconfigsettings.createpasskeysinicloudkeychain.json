@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.CreatePasskeysInICloudKeychain",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.createpasskeysinicloudkeychain",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.createpasskeysinicloudkeychain",
+    "description": "Microsoft Edge may direct\npasskey/WebAuthn creation requests directly to iCloud Keychain on macOS 13.5\nor later. If iCloud Keychain syncing is not enabled yet, this will\nprompt the user to sign in with iCloud, or might prompt them to enable iCloud\nKeychain syncing.\n\nIf this policy is set to \"true\" then iCloud Keychain will be the default\nwhenever the WebAuthn request is compatible with that choice.\n\nIf this policy isn't set then the default behavior depends on factors such as\nwhether iCloud Drive is enabled, or whether the user has recently used or\ncreated a credential in their\nMicrosoft Edge profile.\n\nIf this policy is set to false, iCloud Keychain will not be used by default\nand the previous behavior (of creating the credential in the Microsoft Edge profile) may be used\ninstead. Users will still be able to select iCloud Keychain as an option, and\nmay still see iCloud Keychain credentials when signing in.",
+    "helpText": null,
+    "name": "CreatePasskeysInICloudKeychain",
+    "displayName": "Control whether passkey creation will default to iCloud Keychain.",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.createpasskeysinicloudkeychain_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.createpasskeysinicloudkeychain_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

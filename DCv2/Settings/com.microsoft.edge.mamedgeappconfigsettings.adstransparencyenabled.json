@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.AdsTransparencyEnabled",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.adstransparencyenabled",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.adstransparencyenabled",
+    "description": "Lets you decide whether the ads transparency feature is enabled. This behavior only applies to the \"balanced\" mode of tracking prevention, and does not impact \"basic\" or \"strict\" modes. Your users' tracking prevention level can be configured using the \"TrackingPrevention\" policy. AdsTransparencyEnabled will only have an effect if \"TrackingPrevention\" is set to TrackingPreventionBalanced or is not configured.\n\nIf you enable or don't configure this policy, transparency metadata provided by ads will be available to the user when the feature is active.\n\nWhen the feature is enabled, Tracking Prevention will enable exceptions for the associated ad providers that have met Microsoft's privacy standards.\n\nIf you disable this policy, Tracking Prevention will not adjust its behavior even when transparency metadata is provided by ads.",
+    "helpText": null,
+    "name": "AdsTransparencyEnabled",
+    "displayName": "Configure if the ads transparency feature is enabled",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.adstransparencyenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.adstransparencyenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Startup, home page and new tab page"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.NewTabPageSetFeedType_recommended",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.newtabpagesetfeedtype_recommended",
+    "categoryId": "00d7396c-cadc-4d29-86ba-fe4df2ecb110",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.newtabpagesetfeedtype_recommended",
+    "description": "This policy is obsolete because the new version of the enterprise new tab page no longer requires choosing between different content types. Instead, the content that is presented to the user can be controlled via the Microsoft 365 admin center. To get to the Microsoft 365 admin center, sign in at https://admin.microsoft.com with your admin account.\n\nLets you choose either the Microsoft News or Office 365 feed experience for the new tab page.\n\nWhen you set this policy to 'News', users will see the Microsoft News feed experience on the new tab page.\n\nWhen you set this policy to 'Office', users with an Azure Active Directory browser sign-in will see the Office 365 feed experience on the new tab page.\n\nIf you disable or don't configure this policy:\n\n- Users with an Azure Active Directory browser sign-in are offered the Office 365 new tab page feed experience, as well as the standard new tab page feed experience.\n\n- Users without an Azure Active Directory browser sign-in will see the standard new tab page experience.\n\nIf you configure this policy *and* the \"NewTabPageLocation\" policy, \"NewTabPageLocation\" has precedence.\n\nDefault setting:  Disabled or not configured.\n\nPolicy options mapping:\n\n* News (0) = Microsoft News feed experience\n\n* Office (1) = Office 365 feed experience\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "NewTabPageSetFeedType_recommended",
+    "displayName": "Configure the Microsoft Edge new tab page experience (Obsolete) (users can override)",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.newtabpagesetfeedtype_recommended_news",
+            "description": null,
+            "helpText": null,
+            "name": "Microsoft News feed experience",
+            "displayName": "Microsoft News feed experience",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.newtabpagesetfeedtype_recommended_office",
+            "description": null,
+            "helpText": null,
+            "name": "Office 365 feed experience",
+            "displayName": "Office 365 feed experience",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

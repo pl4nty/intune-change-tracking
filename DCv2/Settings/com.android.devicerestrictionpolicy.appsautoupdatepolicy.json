@@ -1,0 +1,106 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Apps",
+        "Auto",
+        "Update",
+        "Policy",
+        "Applications"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "/com.android.deviceRestrictionPolicy/",
+    "offsetUri": "/AppsAutoUpdatePolicy/",
+    "rootDefinitionId": "com.android.devicerestrictionpolicy.appsautoupdatepolicy",
+    "categoryId": "2257f7e1-3e88-4d4d-a666-437bbe42baca",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.android.devicerestrictionpolicy.appsautoupdatepolicy",
+    "description": "Define the auto update policy for apps. Devices check for app updates daily. If set to 'User choice', the end user can set their preference in managed Google Play. If set to 'Never', apps will never auto-update. If set to 'Wi-Fi only', apps will only auto-update when the device is connected to Wi-Fi. If set to 'Always', apps will always auto-update. Available for fully managed, dedicated and corporate-owned work profile devices (at work profile level).",
+    "helpText": "",
+    "name": "AppsAutoUpdatePolicy",
+    "displayName": "App auto-updates (work profile-level)",
+    "defaultOptionId": "com.android.devicerestrictionpolicy.appsautoupdatepolicy_notconfigured",
+    "applicability": {
+        "description": null,
+        "platform": "androidEnterprise",
+        "deviceMode": "none",
+        "technologies": "android"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.android.devicerestrictionpolicy.appsautoupdatepolicy_notconfigured",
+            "description": "Not configured; this value is ignored.",
+            "helpText": null,
+            "name": "notConfigured",
+            "displayName": "Not configured",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "APP_AUTO_UPDATE_POLICY_UNSPECIFIED"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.appsautoupdatepolicy_userchoice",
+            "description": "The user can control auto-updates.",
+            "helpText": null,
+            "name": "userChoice",
+            "displayName": "User choice",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "CHOICE_TO_THE_USER"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.appsautoupdatepolicy_never",
+            "description": "Apps are never auto-updated.",
+            "helpText": null,
+            "name": "never",
+            "displayName": "Never",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "NEVER"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.appsautoupdatepolicy_wifionly",
+            "description": "Apps are auto-updated over Wi-Fi only.",
+            "helpText": null,
+            "name": "wiFiOnly",
+            "displayName": "Wi-Fi only",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "WIFI_ONLY"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.appsautoupdatepolicy_always",
+            "description": "Apps are auto-updated at any time. Data charges may apply.",
+            "helpText": null,
+            "name": "always",
+            "displayName": "Always",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "ALWAYS"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Mobile Accounts"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.apple.cachedaccounts.WarnOnCreate",
+    "rootDefinitionId": "com.apple.mcx_com.apple.mcx-mobileaccounts",
+    "categoryId": "ccea1cb0-55cd-4597-bfb1-e2d38b8a53ac",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.mcx_com.apple.cachedaccounts.warnoncreate",
+    "description": "If true, asks the user if the mobile account should be created and allow the user to not create it.",
+    "helpText": null,
+    "name": "com.apple.cachedaccounts.WarnOnCreate",
+    "displayName": "Warn On Create",
+    "defaultOptionId": "com.apple.mcx_com.apple.cachedaccounts.warnoncreate_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.mcx_com.apple.cachedaccounts.warnoncreate_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.mcx_com.apple.mcx-mobileaccounts",
+                    "parentSettingId": "com.apple.mcx_com.apple.mcx-mobileaccounts"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.mcx_com.apple.cachedaccounts.warnoncreate_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.mcx_com.apple.mcx-mobileaccounts",
+                    "parentSettingId": "com.apple.mcx_com.apple.mcx-mobileaccounts"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

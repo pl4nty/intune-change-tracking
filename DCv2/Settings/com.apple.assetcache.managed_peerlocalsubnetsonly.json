@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Content Caching"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "PeerLocalSubnetsOnly",
+    "rootDefinitionId": "com.apple.assetcache.managed_com.apple.assetcache.managed",
+    "categoryId": "e95335ec-2704-47ab-8b40-f602b31eeb9d",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.assetcache.managed_peerlocalsubnetsonly",
+    "description": "If true, the content cache only peers with other content caches on the same immediate local network, rather than with content caches that use the same public IP address as the device. When Peer Local Subnets Only is true, it overrides the configuration of Peer Filter Ranges and Peer Listen Ranges. If the network changes, the local network peering restrictions update appropriately. If false, the content cache defers to Peer Filter Ranges and Peer Listen Ranges for configuring the peering restrictions.",
+    "helpText": null,
+    "name": "PeerLocalSubnetsOnly",
+    "displayName": "Peer Local Subnets Only",
+    "defaultOptionId": "com.apple.assetcache.managed_peerlocalsubnetsonly_true",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.assetcache.managed_peerlocalsubnetsonly_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.assetcache.managed_com.apple.assetcache.managed",
+                    "parentSettingId": "com.apple.assetcache.managed_com.apple.assetcache.managed"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.assetcache.managed_peerlocalsubnetsonly_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.assetcache.managed_com.apple.assetcache.managed",
+                    "parentSettingId": "com.apple.assetcache.managed_com.apple.assetcache.managed"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

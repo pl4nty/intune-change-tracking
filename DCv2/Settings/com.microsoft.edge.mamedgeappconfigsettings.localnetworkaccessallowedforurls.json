@@ -1,0 +1,48 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Network settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.LocalNetworkAccessAllowedForUrls",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.localnetworkaccessallowedforurls",
+    "categoryId": "3fbd3b29-bafd-4adf-89e4-3be612dee275",
+    "settingUsage": "configuration",
+    "uxBehavior": "smallTextBox",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.localnetworkaccessallowedforurls",
+    "description": "Specifies a list of URL patterns for which requests initiated from matching origins are exempt from Local Network Access restrictions.\n\nIf an origin is specified by both this policy and the \"LocalNetworkAccessBlockedForUrls\" policy, the blocked list takes precedence.\n\nFor origins not covered by this policy, the user's personal settings and local network access restrictions will apply.\n\nFor guidance on valid URL pattern syntax, see:\nhttps://learn.microsoft.com/deployedge/edge-learnmore-ent-policy-url-patterns\n\nNote: This policy enables controlled exceptions to local network access restrictions. It allows specific public websites to access private IP addresses when necessary for trusted local communication scenarios. For more information about Local Network Access, see https://wicg.github.io/local-network-access/.",
+    "helpText": null,
+    "name": "LocalNetworkAccessAllowedForUrls",
+    "displayName": "Allow sites to make requests to local network endpoints.",
+    "maximumCount": 600,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 0,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "SmartScreen settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.SmartScreenForTrustedDownloadsEnabled",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.smartscreenfortrusteddownloadsenabled",
+    "categoryId": "08c5f391-e156-4a72-bbb9-3670f2f63a56",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.smartscreenfortrusteddownloadsenabled",
+    "description": "This policy setting lets you configure whether Microsoft Defender SmartScreen checks download reputation from a trusted source.\n\nIn Windows, the policy determines a trusted source by checking its Internet zone. If the source comes from the local system, intranet, or trusted sites zone, then the download is considered trusted and safe.\n\nIf you enable or don't configure this setting, Microsoft Defender SmartScreen checks the download's reputation regardless of source.\n\nIf you disable this setting, Microsoft Defender SmartScreen doesn't check the download's reputation when downloading from a trusted source.\n\nThis policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management.",
+    "helpText": null,
+    "name": "SmartScreenForTrustedDownloadsEnabled",
+    "displayName": "Force Microsoft Defender SmartScreen checks on downloads from trusted sources",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.smartscreenfortrusteddownloadsenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.smartscreenfortrusteddownloadsenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

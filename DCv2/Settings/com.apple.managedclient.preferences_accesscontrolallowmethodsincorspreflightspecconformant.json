@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#accesscontrolallowmethodsincorspreflightspecconformant"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "AccessControlAllowMethodsInCORSPreflightSpecConformant",
+    "rootDefinitionId": "com.apple.managedclient.preferences_accesscontrolallowmethodsincorspreflightspecconformant",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_accesscontrolallowmethodsincorspreflightspecconformant",
+    "description": "This policy controls whether request methods are uppercased when matching with Access-Control-Allow-Methods response headers in CORS preflight.\n\nIf you disable this policy, request methods are uppercased. This is the behavior on or before Microsoft Edge 108.\n\nIf you enable or don't configure this policy, request methods are not uppercased, unless matching case-insensitively with DELETE, GET, HEAD, OPTIONS, POST, or PUT.\n\nThis would reject fetch(url, {method: 'Foo'}) + \"Access-Control-Allow-Methods: FOO\" response header,\nand would accept fetch(url, {method: 'Foo'}) + \"Access-Control-Allow-Methods: Foo\" response header.\n\nNote: request methods \"post\" and \"put\" are not affected, while \"patch\" is affected.\n\nThis policy is intended to be temporary and will be removed in the future.",
+    "helpText": null,
+    "name": "AccessControlAllowMethodsInCORSPreflightSpecConformant",
+    "displayName": "Make Access-Control-Allow-Methods matching in CORS preflight spec conformant",
+    "defaultOptionId": "com.apple.managedclient.preferences_accesscontrolallowmethodsincorspreflightspecconformant_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_accesscontrolallowmethodsincorspreflightspecconformant_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "Blocked",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_accesscontrolallowmethodsincorspreflightspecconformant_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "Allowed",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

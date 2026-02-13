@@ -1,0 +1,89 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Privacy Preferences Policy Control"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "Services/SystemPolicyNetworkVolumes/[{0}]/Authorization",
+    "rootDefinitionId": "com.apple.tcc.configuration-profile-policy_com.apple.tcc.configuration-profile-policy",
+    "categoryId": "82d173f9-ba0b-4b09-bbb8-68cba4916162",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.tcc.configuration-profile-policy_services_systempolicynetworkvolumes_item_authorization",
+    "description": "The Authorization key is an optional replacement for the Allowed key. Every payload must specify either Authorization or Allowed, but not both.",
+    "helpText": null,
+    "name": "Services_SystemPolicyNetworkVolumes_item_Authorization",
+    "displayName": "Authorization",
+    "defaultOptionId": "com.apple.tcc.configuration-profile-policy_services_systempolicynetworkvolumes_item_authorization_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.tcc.configuration-profile-policy_services_systempolicynetworkvolumes_item_authorization_0",
+            "description": null,
+            "helpText": null,
+            "name": "Allow",
+            "displayName": "Allow",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "Allow"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.tcc.configuration-profile-policy_services_systempolicynetworkvolumes",
+                    "parentSettingId": "com.apple.tcc.configuration-profile-policy_services_systempolicynetworkvolumes"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.tcc.configuration-profile-policy_services_systempolicynetworkvolumes_item_authorization_1",
+            "description": null,
+            "helpText": null,
+            "name": "Deny",
+            "displayName": "Deny",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "Deny"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.tcc.configuration-profile-policy_services_systempolicynetworkvolumes",
+                    "parentSettingId": "com.apple.tcc.configuration-profile-policy_services_systempolicynetworkvolumes"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.tcc.configuration-profile-policy_services_systempolicynetworkvolumes_item_authorization_2",
+            "description": null,
+            "helpText": null,
+            "name": "AllowStandardUserToSetSystemService",
+            "displayName": "Allow Standard User To Set System Service",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "AllowStandardUserToSetSystemService"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.tcc.configuration-profile-policy_services_systempolicynetworkvolumes",
+                    "parentSettingId": "com.apple.tcc.configuration-profile-policy_services_systempolicynetworkvolumes"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

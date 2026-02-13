@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#originagentclusterdefaultenabled"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "OriginAgentClusterDefaultEnabled",
+    "rootDefinitionId": "com.apple.managedclient.preferences_originagentclusterdefaultenabled",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_originagentclusterdefaultenabled",
+    "description": "The Origin-Agent-Cluster: HTTP header controls whether a document is isolated in an origin-keyed agent cluster or in a site-keyed agent cluster. This has security implications because an origin-keyed agent cluster allows isolating documents by origin. The consequence of this for developers is that the document.domain accessor can no longer be set when origin-keyed agent clustering is enabled.\n\nIf you enable or don't configure this policy, documents without the Origin-Agent-Cluster: header will be assigned to origin-keyed agent clustering by default. On these documents, the document.domain accessor will not be settable.\n\nIf you disable this policy, documents without the Origin-Agent-Cluster: header will be assigned to site-keyed agent clusters by default. On these documents, the document.domain accessor will be settable.\n\nSee https://go.microsoft.com/fwlink/?linkid=2191896 for additional details.",
+    "helpText": null,
+    "name": "OriginAgentClusterDefaultEnabled",
+    "displayName": "Origin-keyed agent clustering enabled by default",
+    "defaultOptionId": "com.apple.managedclient.preferences_originagentclusterdefaultenabled_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_originagentclusterdefaultenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_originagentclusterdefaultenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

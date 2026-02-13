@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "FileVault"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "ForceEnableInSetupAssistant",
+    "rootDefinitionId": "com.apple.mcx.filevault2_com.apple.mcx.filevault2",
+    "categoryId": "3f56adc1-2207-4033-a6e2-07f64c08e3ff",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.mcx.filevault2_forceenableinsetupassistant",
+    "description": "If 'true', and installation of this payload occurs after enrolling with MDM in Setup Assistant, the system requests Setup Assistant to enable FileVault at setup time. In this case, the system also ignores all other keys in this payload, except for 'ShowRecoveryKey'.\nTo use this, enable the Await Device Configured DEP configuration option and send this profile with this key set, before sending the DeviceConfiguredCommand. An admin SecureToken user is required, otherwise the FileVault pane does not appear.",
+    "helpText": null,
+    "name": "ForceEnableInSetupAssistant",
+    "displayName": "Force Enable In Setup Assistant",
+    "defaultOptionId": "com.apple.mcx.filevault2_forceenableinsetupassistant_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.mcx.filevault2_forceenableinsetupassistant_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.mcx.filevault2_com.apple.mcx.filevault2",
+                    "parentSettingId": "com.apple.mcx.filevault2_com.apple.mcx.filevault2"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.mcx.filevault2_forceenableinsetupassistant_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.mcx.filevault2_com.apple.mcx.filevault2",
+                    "parentSettingId": "com.apple.mcx.filevault2_com.apple.mcx.filevault2"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

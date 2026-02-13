@@ -1,0 +1,77 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#experimentationandconfigurationservicecontrol"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "ExperimentationAndConfigurationServiceControl",
+    "rootDefinitionId": "com.apple.managedclient.preferences_experimentationandconfigurationservicecontrol",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_experimentationandconfigurationservicecontrol",
+    "description": "In Microsoft Edge, the Experimentation and Configuration Service is used to deploy Experimentation and Configuration payload.\n\nExperimentation payload consists of a list of early in development features that Microsoft is enabling for testing and feedback.\n\nConfiguration payload consists of a list of settings that Microsoft wants to deploy to Microsoft Edge to optimize user experience. For example, configuration payload may specify how often Microsoft Edge sends requests to the Experimentation and Configuration Service to retrieve the newest payload.\n\nIf you set this policy to \"Retrieve configurations and experiments\" mode, the full payload is downloaded from the Experimentation and Configuration Service. This includes both the experimentation and configuration payloads.\n\nIf you set this policy to \"Retrieve configurations only\" mode, only the configuration payload is delivered.\n\nIf you set this policy to \"Disable communication with the Experimentation and Configuration Service\" mode, the communication with the Experimentation and Configuration Service is stopped completely.\n\nIf you don't configure this policy, on a managed device on Stable and Beta channels the behavior is the same as the \"Retrieve configurations only\" mode.\n\nIf you don't configure this policy, on an unmanaged device the behavior is the same as the \"Retrieve configurations and experiments\" mode.",
+    "helpText": null,
+    "name": "ExperimentationAndConfigurationServiceControl",
+    "displayName": "Control communication with the Experimentation and Configuration Service",
+    "defaultOptionId": "com.apple.managedclient.preferences_experimentationandconfigurationservicecontrol_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_experimentationandconfigurationservicecontrol_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disable communication with the Experimentation and Configuration Service",
+            "displayName": "Retrieve configurations and experiments",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_experimentationandconfigurationservicecontrol_1",
+            "description": null,
+            "helpText": null,
+            "name": "Retrieve configurations only",
+            "displayName": "Retrieve configurations only",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_experimentationandconfigurationservicecontrol_2",
+            "description": null,
+            "helpText": null,
+            "name": "Retrieve configurations and experiments",
+            "displayName": "Disable communication with the Experimentation and Configuration Service",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

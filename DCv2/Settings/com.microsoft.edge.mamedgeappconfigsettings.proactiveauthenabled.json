@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.ProactiveAuthEnabled",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.proactiveauthenabled",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.proactiveauthenabled",
+    "description": "This policy is obsolete because it does not work independently of browser sign in. It does not work in Microsoft Edge after version 90. If you want to configure browser sign in, use the \"BrowserSignin\" policy.\n\nLets you configure whether to turn on Proactive Authentication in Microsoft Edge.\n\nIf you enable this policy, Microsoft Edge tries to seamlessly authenticate to websites and services using the account which is signed-in to the browser.\n\nIf you disable this policy, Microsoft Edge does not try to authenticate with websites or services using single sign-on (SSO). Authenticated experiences like the Enterprise New Tab Page will not work (e.g. recent and recommended Office documents will not be available).\n\nIf you don't configure this policy, Proactive Authentication is turned on.",
+    "helpText": null,
+    "name": "ProactiveAuthEnabled",
+    "displayName": "Enable Proactive Authentication (Obsolete)",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.proactiveauthenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.proactiveauthenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

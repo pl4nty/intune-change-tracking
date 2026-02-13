@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Web Content Filter"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "FilterSockets",
+    "rootDefinitionId": "com.apple.webcontent-filter_com.apple.webcontent-filter",
+    "categoryId": "a6fe8038-136b-4d50-bf04-8e232409c0d2",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.webcontent-filter_filtersockets",
+    "description": "If true, enables the filtering of socket traffic.",
+    "helpText": null,
+    "name": "FilterSockets",
+    "displayName": "Filter Sockets",
+    "defaultOptionId": "com.apple.webcontent-filter_filtersockets_false",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.webcontent-filter_filtersockets_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.webcontent-filter_com.apple.webcontent-filter",
+                    "parentSettingId": "com.apple.webcontent-filter_com.apple.webcontent-filter"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.webcontent-filter_filtersockets_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.webcontent-filter_com.apple.webcontent-filter",
+                    "parentSettingId": "com.apple.webcontent-filter_com.apple.webcontent-filter"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

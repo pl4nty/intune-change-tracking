@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Sleeping Tabs settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.AutoDiscardSleepingTabsEnabled",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.autodiscardsleepingtabsenabled",
+    "categoryId": "ae78ab75-2d0d-418c-be6f-9e64642de4e2",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.autodiscardsleepingtabsenabled",
+    "description": "Setting this policy enables inactive (sleeping) tabs to be automatically discarded after 1.5 days of inactivity. This is done to save memory. When the user switches back to a discarded tab, the tab will need to be reloaded.\n\nIf the \"SleepingTabsEnabled\" policy is enabled, then this feature will be enabled by default.\n\nIf the \"SleepingTabsEnabled\" is disabled, then this feature will be disabled by default and cannot be enabled.\n\nIf enabled, idle background tabs will be discarded after 1.5 days.\n\nIf disabled, idle background tab will not be discarded after 1.5 days. Tabs can still be discarded for other reasons if this policy is disabled.",
+    "helpText": null,
+    "name": "AutoDiscardSleepingTabsEnabled",
+    "displayName": "Configure auto discard sleeping tabs",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.autodiscardsleepingtabsenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.autodiscardsleepingtabsenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

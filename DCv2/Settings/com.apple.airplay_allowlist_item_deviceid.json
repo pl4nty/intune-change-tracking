@@ -1,0 +1,51 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Air Play",
+        "AirPlay"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "AllowList/[{0}]/DeviceID",
+    "rootDefinitionId": "com.apple.airplay_com.apple.airplay",
+    "categoryId": "132003c7-1130-4f59-96a7-dfb6adb8bd5d",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.airplay_allowlist_item_deviceid",
+    "description": "The device ID of the AirPlay destination in the format xx:xx:xx:xx:xx:xx. This field isn’t case-sensitive.",
+    "helpText": null,
+    "name": "AllowList_item_DeviceID",
+    "displayName": "Device ID",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": "^([0-9A-Fa-f]{2}:){5}([0-9A-Fa-f]{2})$",
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "com.apple.airplay_allowlist",
+            "parentSettingId": "com.apple.airplay_allowlist"
+        }
+    ],
+    "dependedOnBy": []
+}

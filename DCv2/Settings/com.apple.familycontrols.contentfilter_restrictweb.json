@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Parental Controls Content Filter"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "restrictWeb",
+    "rootDefinitionId": "com.apple.familycontrols.contentfilter_com.apple.familycontrols.contentfilter",
+    "categoryId": "dc270c70-1cf4-4d98-ad26-8c2d441173f1",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.familycontrols.contentfilter_restrictweb",
+    "description": "If true, enables web content filters.",
+    "helpText": null,
+    "name": "restrictWeb",
+    "displayName": "Restrict Web",
+    "defaultOptionId": "com.apple.familycontrols.contentfilter_restrictweb_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.familycontrols.contentfilter_restrictweb_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.familycontrols.contentfilter_com.apple.familycontrols.contentfilter",
+                    "parentSettingId": "com.apple.familycontrols.contentfilter_com.apple.familycontrols.contentfilter"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.familycontrols.contentfilter_restrictweb_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.familycontrols.contentfilter_com.apple.familycontrols.contentfilter",
+                    "parentSettingId": "com.apple.familycontrols.contentfilter_com.apple.familycontrols.contentfilter"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

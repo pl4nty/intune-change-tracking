@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Content Caching"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "AllowCacheDelete",
+    "rootDefinitionId": "com.apple.assetcache.managed_com.apple.assetcache.managed",
+    "categoryId": "e95335ec-2704-47ab-8b40-f602b31eeb9d",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.assetcache.managed_allowcachedelete",
+    "description": "Allow the system to purge content from the cache automatically when it needs disk space for other apps (i.e. when free disk space runs low on the computer). Customers who want Content Caching to be as effective as possible should turn this setting off.\r\nAvailable in macOS 10.15 and later.",
+    "helpText": null,
+    "name": "AllowCacheDelete",
+    "displayName": "Allow Cache Delete",
+    "defaultOptionId": "com.apple.assetcache.managed_allowcachedelete_true",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.assetcache.managed_allowcachedelete_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.assetcache.managed_com.apple.assetcache.managed",
+                    "parentSettingId": "com.apple.assetcache.managed_com.apple.assetcache.managed"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.assetcache.managed_allowcachedelete_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.assetcache.managed_com.apple.assetcache.managed",
+                    "parentSettingId": "com.apple.assetcache.managed_com.apple.assetcache.managed"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,89 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Printing"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.PrintStickySettings",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.printstickysettings",
+    "categoryId": "c6099521-a05f-480a-8562-7e71318e2cda",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.printstickysettings",
+    "description": "Specifies whether print preview should apply last used settings for Microsoft Edge PDF and webpages.\n\nIf you set this policy to 'EnableAll' or don't configure it, Microsoft Edge applies the last used print preview settings for both PDF and webpages.\n\nIf you set this policy to 'DisableAll', Microsoft Edge doesn't apply the last used print preview settings for both PDF and webpages.\n\nIf you set this policy to 'DisablePdf', Microsoft Edge doesn't apply the last used print preview settings for PDF printing and retains it for webpages.\n\nIf you set this policy to 'DisableWebpage', Microsoft Edge doesn't apply the last used print preview settings for webpage printing and retain it for PDF.\n\nThis policy is only available if you enable or don't configure the \"PrintingEnabled\" policy.\n\nPolicy options mapping:\n\n* EnableAll (0) = Enable sticky settings for PDF and Webpages\n\n* DisableAll (1) = Disable sticky settings for PDF and Webpages\n\n* DisablePdf (2) = Disable sticky settings for PDF\n\n* DisableWebpage (3) = Disable sticky settings for Webpages\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "PrintStickySettings",
+    "displayName": "Print preview sticky settings",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.printstickysettings_enableall",
+            "description": null,
+            "helpText": null,
+            "name": "Enable sticky settings for PDF and Webpages",
+            "displayName": "Enable sticky settings for PDF and Webpages",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.printstickysettings_disableall",
+            "description": null,
+            "helpText": null,
+            "name": "Disable sticky settings for PDF and Webpages",
+            "displayName": "Disable sticky settings for PDF and Webpages",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.printstickysettings_disablepdf",
+            "description": null,
+            "helpText": null,
+            "name": "Disable sticky settings for PDF",
+            "displayName": "Disable sticky settings for PDF",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.printstickysettings_disablewebpage",
+            "description": null,
+            "helpText": null,
+            "name": "Disable sticky settings for Webpages",
+            "displayName": "Disable sticky settings for Webpages",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

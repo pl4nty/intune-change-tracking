@@ -1,0 +1,53 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#registeredprotocolhandlers"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "RegisteredProtocolHandlers",
+    "rootDefinitionId": "com.apple.managedclient.preferences_registeredprotocolhandlers",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_registeredprotocolhandlers",
+    "description": "Register a list of protocol handlers. Set the protocol property to the scheme (like 'mailto') and the url property to the URL pattern of the application that handles the scheme. The pattern can include a '%s', which will be replaced by the handled URL.\n\nYou can recommend a specific value for this policy, but you can't require that your users use it.\n\nThe protocol handlers registered by policy are merged with any handlers registered by the user, and both are available for use. The user can override the protocol handlers installed by policy by installing a new default handler, but they can't remove a protocol handler registered by policy.",
+    "helpText": null,
+    "name": "RegisteredProtocolHandlers",
+    "displayName": "Registered Protocol Handlers",
+    "childIds": [
+        "com.apple.managedclient.preferences_registeredprotocolhandlers_item_default",
+        "com.apple.managedclient.preferences_registeredprotocolhandlers_item_url",
+        "com.apple.managedclient.preferences_registeredprotocolhandlers_item_protocol"
+    ],
+    "maximumCount": 2147483647,
+    "minimumCount": 0,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm"
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "com.apple.managedclient.preferences_registeredprotocolhandlers_item_default",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.managedclient.preferences_registeredprotocolhandlers_item_url",
+            "required": true
+        },
+        {
+            "dependedOnBy": "com.apple.managedclient.preferences_registeredprotocolhandlers_item_protocol",
+            "required": true
+        }
+    ]
+}

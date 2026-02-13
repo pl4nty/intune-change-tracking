@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Software Update"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "AutomaticallyInstallMacOSUpdates",
+    "rootDefinitionId": "com.apple.softwareupdate_com.apple.softwareupdate",
+    "categoryId": "f8f4d337-4c55-4518-91c4-f7f77703d843",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.softwareupdate_automaticallyinstallmacosupdates",
+    "description": "If false, restricts the \"Install macOS Updates\" option and prevents the user from changing the option.",
+    "helpText": null,
+    "name": "AutomaticallyInstallMacOSUpdates",
+    "displayName": "Automatically Install Mac OS Updates (Deprecated)",
+    "defaultOptionId": "com.apple.softwareupdate_automaticallyinstallmacosupdates_true",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.softwareupdate_automaticallyinstallmacosupdates_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.softwareupdate_com.apple.softwareupdate",
+                    "parentSettingId": "com.apple.softwareupdate_com.apple.softwareupdate"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.softwareupdate_automaticallyinstallmacosupdates_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.softwareupdate_com.apple.softwareupdate",
+                    "parentSettingId": "com.apple.softwareupdate_com.apple.softwareupdate"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

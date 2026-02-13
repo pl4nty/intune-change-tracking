@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Cellular Private Network"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "EnableNRStandalone",
+    "rootDefinitionId": "com.apple.cellularprivatenetwork.managed_com.apple.cellularprivatenetwork.managed",
+    "categoryId": "b6650a16-32bc-4344-ac98-8f20486c6b0b",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.cellularprivatenetwork.managed_enablenrstandalone",
+    "description": "Set to `true` if this private network is NR Standalone.",
+    "helpText": null,
+    "name": "EnableNRStandalone",
+    "displayName": "Enable NR Standalone",
+    "defaultOptionId": "com.apple.cellularprivatenetwork.managed_enablenrstandalone_false",
+    "applicability": {
+        "description": null,
+        "platform": "iOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.cellularprivatenetwork.managed_enablenrstandalone_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.cellularprivatenetwork.managed_com.apple.cellularprivatenetwork.managed",
+                    "parentSettingId": "com.apple.cellularprivatenetwork.managed_com.apple.cellularprivatenetwork.managed"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.cellularprivatenetwork.managed_enablenrstandalone_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.cellularprivatenetwork.managed_com.apple.cellularprivatenetwork.managed",
+                    "parentSettingId": "com.apple.cellularprivatenetwork.managed_com.apple.cellularprivatenetwork.managed"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.InternetExplorerIntegrationReloadInIEModeAllowed_recommended",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.internetexplorerintegrationreloadiniemodeallowed_recommended",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.internetexplorerintegrationreloadiniemodeallowed_recommended",
+    "description": "This policy allows users to reload unconfigured sites (that are not configured in the Enterprise Mode Site List) in Internet Explorer mode when browsing in Microsoft Edge and a site requires Internet Explorer for compatibility.\n\nAfter a site has been reloaded in Internet Explorer mode, \"in-page\" navigations will stay in Internet Explorer mode (for example, a link, script, or form on the page, or a server-side redirect from another \"in-page\" navigation). Users can choose to exit from Internet Explorer mode, or Microsoft Edge will automatically exit from Internet Explorer mode when a navigation that isn't \"in-page\" occurs (for example, using the address bar, the back button, or a favorite link).\n\nUsers can also optionally tell Microsoft Edge to use Internet Explorer mode for the site in the future. This choice will be remembered for a length of time managed by the \"InternetExplorerIntegrationLocalSiteListExpirationDays\" policy.\n\nIf the \"InternetExplorerIntegrationLevel\" policy is set to 'IEMode', then sites explicitly configured by the \"InternetExplorerIntegrationSiteList\" policy's site list to use Microsoft Edge can't be reloaded in Internet Explorer mode, and sites configured by the site list or by the \"SendIntranetToInternetExplorer\" policy to use Internet Explorer mode can't exit from Internet Explorer mode.\n\nIf you enable this policy, users are allowed to reload unconfigured sites in Internet Explorer mode.\n\nIf you disable this policy, users aren't allowed to reload unconfigured sites in Internet Explorer mode.\n\nNote that if you enable this policy, it takes precedence over how you configured the \"InternetExplorerIntegrationTestingAllowed\" policy, and that policy will be disabled.\n\nTo learn more about Internet Explorer mode, see <a href=\"https://go.microsoft.com/fwlink/?linkid=2094210\">https://go.microsoft.com/fwlink/?linkid=2094210</a>",
+    "helpText": null,
+    "name": "InternetExplorerIntegrationReloadInIEModeAllowed_recommended",
+    "displayName": "Allow unconfigured sites to be reloaded in Internet Explorer mode (users can override)",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.internetexplorerintegrationreloadiniemodeallowed_recommended_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.internetexplorerintegrationreloadiniemodeallowed_recommended_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

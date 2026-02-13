@@ -1,0 +1,105 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Printing"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.PrinterTypeDenyList",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.printertypedenylist",
+    "categoryId": "c6099521-a05f-480a-8562-7e71318e2cda",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.printertypedenylist",
+    "description": "The printer types on the deny list won't be discovered or have their capabilities fetched.\n\nPlacing all printer types on the deny list effectively disables printing, because there's no print destination for documents.\n\nIf you don't configure this policy, or the printer list is empty, all printer types are discoverable.\n\nPrinter destinations include extension printers and local printers. Extension printers are also known as print provider destinations, and include any destination that belongs to a Microsoft Edge extension.\nLocal printers are also known as native printing destinations, and include destinations available to the local machine and shared network printers.\n\nIn Microsoft version 93 or later, if you set this policy to 'pdf' it also disables the 'save as Pdf' option from the right click context menu.\n\nIn Microsoft version 103 or later, if you set this policy to 'onedrive' it also disables the 'save as Pdf (OneDrive)' option from print preview.\n\nPolicy options mapping:\n\n* privet (privet) = Zeroconf-based (mDNS + DNS-SD) protocol destinations\n\n* extension (extension) = Extension-based destinations\n\n* pdf (pdf) = The 'Save as PDF' destination. (93 or later, also disables from context menu)\n\n* local (local) = Local printer destinations\n\n* onedrive (onedrive) = Save as PDF (OneDrive) printer destinations. (103 or later)\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "PrinterTypeDenyList",
+    "displayName": "Disable printer types on the deny list",
+    "defaultOptionId": null,
+    "maximumCount": 100,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.printertypedenylist_privet",
+            "description": null,
+            "helpText": null,
+            "name": "Zeroconf-based (mDNS + DNS-SD) protocol destinations",
+            "displayName": "Zeroconf-based (mDNS + DNS-SD) protocol destinations",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "privet"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.printertypedenylist_extension",
+            "description": null,
+            "helpText": null,
+            "name": "Extension-based destinations",
+            "displayName": "Extension-based destinations",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "extension"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.printertypedenylist_pdf",
+            "description": null,
+            "helpText": null,
+            "name": "The 'Save as PDF' destination. (93 or later, also disables from context menu)",
+            "displayName": "The 'Save as PDF' destination. (93 or later, also disables from context menu)",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "pdf"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.printertypedenylist_local",
+            "description": null,
+            "helpText": null,
+            "name": "Local printer destinations",
+            "displayName": "Local printer destinations",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "local"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.printertypedenylist_onedrive",
+            "description": null,
+            "helpText": null,
+            "name": "Save as PDF (OneDrive) printer destinations. (103 or later)",
+            "displayName": "Save as PDF (OneDrive) printer destinations. (103 or later)",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "onedrive"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

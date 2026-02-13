@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgemanagementuserpolicyoverridescloudmachinepolicy"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "EdgeManagementUserPolicyOverridesCloudMachinePolicy",
+    "rootDefinitionId": "com.apple.managedclient.preferences_edgemanagementuserpolicyoverridescloudmachinepolicy",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_edgemanagementuserpolicyoverridescloudmachinepolicy",
+    "description": "If you enable this policy, cloud-based Microsoft Edge management service user policies takes precedence if it conflicts with local user policy.\n\nIf you disable or don't configure this policy, Microsoft Edge management service user policies will take precedence.\n\nThe policy can be combined with \"EdgeManagementPolicyOverridesPlatformPolicy\". If both policies are enabled, all cloud-based Microsoft Edge management service policies will take precedence over conflicting local service policies.",
+    "helpText": null,
+    "name": "EdgeManagementUserPolicyOverridesCloudMachinePolicy",
+    "displayName": "Allow cloud-based Microsoft Edge management service user policies to override local user policies.",
+    "defaultOptionId": "com.apple.managedclient.preferences_edgemanagementuserpolicyoverridescloudmachinepolicy_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_edgemanagementuserpolicyoverridescloudmachinepolicy_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_edgemanagementuserpolicyoverridescloudmachinepolicy_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

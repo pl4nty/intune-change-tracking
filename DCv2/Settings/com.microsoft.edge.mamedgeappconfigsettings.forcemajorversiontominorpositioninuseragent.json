@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.ForceMajorVersionToMinorPositionInUserAgent",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.forcemajorversiontominorpositioninuseragent",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.forcemajorversiontominorpositioninuseragent",
+    "description": "This policy was removed in Microsoft Edge 118 and is ignored if configured.\n\nThis policy controls whether the User-Agent string major\nversion should be frozen at 99.\n\nThe User-Agent request header lets websites identify the application,\noperating system, vendor, and/or version of the requesting user agent.\nSome websites make assumptions about how this header is formatted and may\nencounter issues with version strings that include three digits in the\nmajor position (for example, 100.0.0.0).\n\nSetting the policy to 'Default' or leaving it unset will default to\nbrowser settings for the User-Agent string major version.\nIf set to 'ForceEnabled', the User-Agent string will always report the\nmajor version as 99 and include the browser's major version in the minor\nposition. For example, browser version 101.0.0.0 would send a User-Agent\nrequest header that reports version 99.101.0.0.\nIf set to 'ForceDisabled', the User-Agent string will not freeze the\nmajor version.\n\nThis policy is temporary and will be deprecated in the future. Note that\nif this policy and\nUser-Agent Reduction are\nboth enabled, the User-Agent version string will always be 99.0.0.0.\n\nPolicy options mapping:\n\n* Default (0) = Default to browser settings for User-Agent string version.\n\n* ForceDisabled (1) = The User-Agent string will not freeze the major version.\n\n* ForceEnabled (2) = The User-Agent string will freeze the major version as 99 and include the browser's major version in the minor position.\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "ForceMajorVersionToMinorPositionInUserAgent",
+    "displayName": "Enable or disable freezing the User-Agent string at major version 99 (Obsolete)",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.forcemajorversiontominorpositioninuseragent_default",
+            "description": null,
+            "helpText": null,
+            "name": "Default to browser settings for User-Agent string version.",
+            "displayName": "Default to browser settings for User-Agent string version.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.forcemajorversiontominorpositioninuseragent_forcedisabled",
+            "description": null,
+            "helpText": null,
+            "name": "The User-Agent string will not freeze the major version.",
+            "displayName": "The User-Agent string will not freeze the major version.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.forcemajorversiontominorpositioninuseragent_forceenabled",
+            "description": null,
+            "helpText": null,
+            "name": "The User-Agent string will freeze the major version as 99 and include the browser's major version in the minor position.",
+            "displayName": "The User-Agent string will freeze the major version as 99 and include the browser's major version in the minor position.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

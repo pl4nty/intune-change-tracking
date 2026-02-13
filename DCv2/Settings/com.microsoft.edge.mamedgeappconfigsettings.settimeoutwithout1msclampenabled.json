@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.SetTimeoutWithout1MsClampEnabled",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.settimeoutwithout1msclampenabled",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.settimeoutwithout1msclampenabled",
+    "description": "This policy is obsolete and doesn't work in Microsoft Edge after version 109.\nThis policy was only provided temporarily to allow Enterprises to adapt to the new clamping behavior.\n\n   When the policy is set to Enabled, the Javascript setTimeout() with a timeout of 0ms will no longer be fixed to 1ms to schedule timer-based callbacks.\n   When the policy is set to Disabled, the Javascript setTimeout() with a timeout of 0ms will be fixed to 1ms to schedule timer-based callbacks.\n   When the policy is unset, use the browser's default behavior for setTimeout() function.\n\n   This is a web standards compliancy feature, but it may change task ordering on a web page, leading to unexpected behavior on sites that are dependent on a certain ordering.\n   It also may affect sites with a lot of setTimeout()s with a timeout of 0ms usage. For example, increasing CPU load.\n\n   For users where this policy is unset, Microsoft Edge Stable will roll out the change gradually on the stable channel.",
+    "helpText": null,
+    "name": "SetTimeoutWithout1MsClampEnabled",
+    "displayName": "Control Javascript setTimeout() function minimum timeout (Obsolete)",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.settimeoutwithout1msclampenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.settimeoutwithout1msclampenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

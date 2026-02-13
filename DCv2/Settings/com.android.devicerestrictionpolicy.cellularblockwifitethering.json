@@ -1,0 +1,65 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Cellular",
+        "Block",
+        "Wi",
+        "Fi",
+        "Tethering",
+        "General"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "/com.android.deviceRestrictionPolicy/",
+    "offsetUri": "/cellularBlockWiFiTethering/",
+    "rootDefinitionId": "com.android.devicerestrictionpolicy.cellularblockwifitethering",
+    "categoryId": "b6733d23-eadc-486a-abfc-62b78698a16c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.android.devicerestrictionpolicy.cellularblockwifitethering",
+    "description": "If 'True', prevents tethering and access to portable hotspots. If 'False', Intune doesn't change or update this setting. By default, the OS might allow tethering and access to portable hotspots. Available for fully managed, dedicated and corporate-owned work profile devices. ",
+    "helpText": null,
+    "name": "CellularBlockWiFiTethering",
+    "displayName": "Block tethering and access to hotspots",
+    "defaultOptionId": "com.android.devicerestrictionpolicy.cellularblockwifitethering_false",
+    "applicability": {
+        "description": null,
+        "platform": "androidEnterprise",
+        "deviceMode": "none",
+        "technologies": "android"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.android.devicerestrictionpolicy.cellularblockwifitethering_true",
+            "description": "true",
+            "helpText": null,
+            "name": "True",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.cellularblockwifitethering_false",
+            "description": "false",
+            "helpText": null,
+            "name": "False",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

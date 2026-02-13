@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Certificate management settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.CACertificateManagementAllowed",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.cacertificatemanagementallowed",
+    "categoryId": "3abaf4c2-d5db-4b3b-a461-b1a208231b36",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.cacertificatemanagementallowed",
+    "description": "This policy determines the level of access users have when managing CA certificates in Microsoft Edge.\n\nSetting the policy to UserOnly (1) allows users to manage only user-imported certificates. Trust settings for built-in certificates cannot be changed.\n\nSetting the policy to None (2) lets users view certificates but not manage them.\n\nNote: The certificate management experience is available starting in Microsoft Edge version 136.\n\nPolicy options mapping:\n\n* All (0) = Allow users to manage all certificates\n\n* UserOnly (1) = Allow users to manage user certificates\n\n* None (2) = Disallow users from managing certificates\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "CACertificateManagementAllowed",
+    "displayName": "Allow users to manage installed CA certificates.",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.cacertificatemanagementallowed_all",
+            "description": null,
+            "helpText": null,
+            "name": "Allow users to manage all certificates",
+            "displayName": "Allow users to manage all certificates",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.cacertificatemanagementallowed_useronly",
+            "description": null,
+            "helpText": null,
+            "name": "Allow users to manage user certificates",
+            "displayName": "Allow users to manage user certificates",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.cacertificatemanagementallowed_none",
+            "description": null,
+            "helpText": null,
+            "name": "Disallow users from managing certificates",
+            "displayName": "Disallow users from managing certificates",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

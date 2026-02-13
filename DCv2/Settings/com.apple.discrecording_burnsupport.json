@@ -1,0 +1,89 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Media Management Disc Burning"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "BurnSupport",
+    "rootDefinitionId": "com.apple.discrecording_com.apple.discrecording",
+    "categoryId": "87f460f4-8403-419c-bfb4-44dec5edcccb",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.discrecording_burnsupport",
+    "description": "If off, disables disc burning. If on, allows normal default operation. Setting this key to on doesn't enable disc burn support if it has already been disabled by other mechanisms or preferences. It also must be enabled with the Finder profile. If authenticate, requires authentication.",
+    "helpText": null,
+    "name": "BurnSupport",
+    "displayName": "Burn Support",
+    "defaultOptionId": "com.apple.discrecording_burnsupport_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.discrecording_burnsupport_0",
+            "description": null,
+            "helpText": null,
+            "name": "off",
+            "displayName": "off",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "off"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.discrecording_com.apple.discrecording",
+                    "parentSettingId": "com.apple.discrecording_com.apple.discrecording"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.discrecording_burnsupport_1",
+            "description": null,
+            "helpText": null,
+            "name": "authenticate",
+            "displayName": "authenticate",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "authenticate"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.discrecording_com.apple.discrecording",
+                    "parentSettingId": "com.apple.discrecording_com.apple.discrecording"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.discrecording_burnsupport_2",
+            "description": null,
+            "helpText": null,
+            "name": "on",
+            "displayName": "on",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "on"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.discrecording_com.apple.discrecording",
+                    "parentSettingId": "com.apple.discrecording_com.apple.discrecording"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

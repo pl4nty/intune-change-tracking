@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.CORSNonWildcardRequestHeadersSupport",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.corsnonwildcardrequestheaderssupport",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.corsnonwildcardrequestheaderssupport",
+    "description": "This policy lets you configure support of CORS non-wildcard request headers.\n\nMicrosoft Edge version 97 introduces support for CORS non-wildcard request headers. When a script makes a cross-origin network request via fetch() and XMLHttpRequest with a script-added Authorization header, the header must be explicitly allowed by the Access-Control-Allow-Headers header in the CORS preflight response. \"Explicitly\" here means that the wild card symbol \"*\" doesn't cover the Authorization header. See <a href=\"https://go.microsoft.com/fwlink/?linkid=2180022\">https://go.microsoft.com/fwlink/?linkid=2180022</a> for more detail.\n\nIf you enable or don't configure the policy, Microsoft Edge will support the CORS non-wildcard request headers and behave as previously described.\n\nIf you disable this policy, Microsoft Edge will allow the wildcard symbol (\"*\") in the Access-Control-Allow-Headers header in the CORS preflight response to cover the Authorization header.\n\nThis policy is a temporary workaround for the new CORS non-wildcard request header feature. It's intended to be removed in the future.",
+    "helpText": null,
+    "name": "CORSNonWildcardRequestHeadersSupport",
+    "displayName": "CORS non-wildcard request header support enabled",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.corsnonwildcardrequestheaderssupport_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.corsnonwildcardrequestheaderssupport_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

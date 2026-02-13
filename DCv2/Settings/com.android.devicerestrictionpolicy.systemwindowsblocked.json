@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "System",
+        "Windows",
+        "Blocked",
+        "General"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "/com.android.deviceRestrictionPolicy/",
+    "offsetUri": "/systemWindowsBlocked/",
+    "rootDefinitionId": "com.android.devicerestrictionpolicy.systemwindowsblocked",
+    "categoryId": "b6733d23-eadc-486a-abfc-62b78698a16c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.android.devicerestrictionpolicy.systemwindowsblocked",
+    "description": "If 'True', window notifications, including toasts, incoming calls, outgoing calls, system alerts, and system errors aren't shown on the device. If 'False', Intune doesn't change or update this setting. By default, the OS might show notifications. Available for fully managed and dedicated devices.",
+    "helpText": null,
+    "name": "SystemWindowsBlocked",
+    "displayName": "Block notification windows",
+    "defaultOptionId": "com.android.devicerestrictionpolicy.systemwindowsblocked_false",
+    "applicability": {
+        "description": null,
+        "platform": "androidEnterprise",
+        "deviceMode": "none",
+        "technologies": "android"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.android.devicerestrictionpolicy.systemwindowsblocked_true",
+            "description": "true",
+            "helpText": null,
+            "name": "True",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.systemwindowsblocked_false",
+            "description": "false",
+            "helpText": null,
+            "name": "False",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

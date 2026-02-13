@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Auto Update",
+        "Microsoft AutoUpdate (MAU)"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/en-us/deployoffice/privacy/mac-privacy-preferences#preference-setting-for-the-required-data-notice-dialog-for-microsoft-autoupdate"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.autoupdate2/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "AcknowledgedDataCollectionPolicy",
+    "rootDefinitionId": "com.apple.managedclient.preferences_acknowledgeddatacollectionpolicy",
+    "categoryId": "2373de26-8270-4e74-a53f-9aeb55d5553c",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_acknowledgeddatacollectionpolicy",
+    "description": "Suppress the Required Data Collection policy dialog from being shown to users.",
+    "helpText": null,
+    "name": "AcknowledgedDataCollectionPolicy",
+    "displayName": "Automatically acknowledge data collection policy",
+    "defaultOptionId": "com.apple.managedclient.preferences_acknowledgeddatacollectionpolicy_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_acknowledgeddatacollectionpolicy_0",
+            "description": null,
+            "helpText": null,
+            "name": "Acknowledge - send required data",
+            "displayName": "Acknowledge - send required data",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "RequiredDataOnly"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_acknowledgeddatacollectionpolicy_1",
+            "description": null,
+            "helpText": null,
+            "name": "Acknowledge - send required and optional data",
+            "displayName": "Acknowledge - send required and optional data (Deprecated)",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "RequiredAndOptionalData"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

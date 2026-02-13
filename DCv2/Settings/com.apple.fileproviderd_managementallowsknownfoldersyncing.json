@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "File Provider"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "ManagementAllowsKnownFolderSyncing",
+    "rootDefinitionId": "com.apple.fileproviderd_com.apple.fileproviderd",
+    "categoryId": "768d9aa4-7407-4ed9-b97f-2385b8cadb47",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.fileproviderd_managementallowsknownfoldersyncing",
+    "description": "If `false`, the device prevents the File Provider extension from using desktop and documents synchronization in any app. This does not impact the ability for apps to utilize the File Provider extension for file and folder syncing with remote storage.",
+    "helpText": null,
+    "name": "ManagementAllowsKnownFolderSyncing",
+    "displayName": "Management Allows Known Folder Syncing",
+    "defaultOptionId": "com.apple.fileproviderd_managementallowsknownfoldersyncing_true",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.fileproviderd_managementallowsknownfoldersyncing_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "Blocked",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.fileproviderd_com.apple.fileproviderd",
+                    "parentSettingId": "com.apple.fileproviderd_com.apple.fileproviderd"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.fileproviderd_managementallowsknownfoldersyncing_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "Allowed",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.fileproviderd_com.apple.fileproviderd",
+                    "parentSettingId": "com.apple.fileproviderd_com.apple.fileproviderd"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,77 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#networkpredictionoptions"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "NetworkPredictionOptions",
+    "rootDefinitionId": "com.apple.managedclient.preferences_networkpredictionoptions",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_networkpredictionoptions",
+    "description": "Enables network prediction and prevents users from changing this setting.\n\nThis controls DNS prefetching, TCP and SSL preconnection, and prerendering of web pages.\n\nIf you don't configure this policy, network prediction is enabled but the user can change it.\n\n* 0 = Predict network actions on any network connection\n\n* 2 = Don't predict network actions on any network connection",
+    "helpText": null,
+    "name": "NetworkPredictionOptions",
+    "displayName": "Enable network prediction",
+    "defaultOptionId": "com.apple.managedclient.preferences_networkpredictionoptions_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_networkpredictionoptions_0",
+            "description": null,
+            "helpText": null,
+            "name": "Predict network actions on any network connection",
+            "displayName": "Predict network actions on any network connection",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_networkpredictionoptions_1",
+            "description": null,
+            "helpText": null,
+            "name": "Not supported, if this value is used it will be treated as if 'Predict network actions on any network connection' (0) was set",
+            "displayName": "Predict network actions on any network that is not cellular. (Deprecated in 50, removed in 52. After 52, if value 1 is set, it will be treated as 0 - predict network actions on any network connection.)",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_networkpredictionoptions_2",
+            "description": null,
+            "helpText": null,
+            "name": "Don't predict network actions on any network connection",
+            "displayName": "Don't predict network actions on any network connection",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

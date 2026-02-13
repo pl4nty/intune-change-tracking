@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Auto Update",
+        "Microsoft AutoUpdate (MAU)"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.autoupdate2/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "UpdaterOptimization",
+    "rootDefinitionId": "com.apple.managedclient.preferences_updateroptimization",
+    "categoryId": "2373de26-8270-4e74-a53f-9aeb55d5553c",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_updateroptimization",
+    "description": "By default AutoUpdate will optimize for smaller packages on the network. However, this can cause larger CPU overheads when security agents (e.g. CrowdStrike) are installed. Alternatively, you can choose to lower the CPU overheads to process updates but accept larger download packages",
+    "helpText": null,
+    "name": "UpdaterOptimization",
+    "displayName": "Updater optimization technique",
+    "defaultOptionId": "com.apple.managedclient.preferences_updateroptimization_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_updateroptimization_0",
+            "description": null,
+            "helpText": null,
+            "name": "Lower network overhead",
+            "displayName": "Lower network overhead",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "Network"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_updateroptimization_1",
+            "description": null,
+            "helpText": null,
+            "name": "Lower processor overhead",
+            "displayName": "Lower processor overhead",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "CPU"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_updateroptimization_2",
+            "description": null,
+            "helpText": null,
+            "name": "Always use full updates",
+            "displayName": "Always use full updates",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "None"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

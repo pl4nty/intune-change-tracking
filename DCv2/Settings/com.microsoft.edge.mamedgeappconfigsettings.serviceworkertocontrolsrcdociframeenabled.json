@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.ServiceWorkerToControlSrcdocIframeEnabled",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.serviceworkertocontrolsrcdociframeenabled",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.serviceworkertocontrolsrcdociframeenabled",
+    "description": "https://github.com/w3c/ServiceWorker/issues/765 asks srcdoc iframe with the \"allow-same-origin\" sandbox attribute to be under ServiceWorker control.\n\nBy default (if left unset) or when set to Enabled, Microsoft Edge makes srcdoc iframes with \"allow-same-origin\" sandbox attributes to be under ServiceWorker control.\n\nSetting the policy to Disabled prevents ServiceWorker control over srcdoc iframes.\n\nThis policy is temporary and planned for deprecation in 2026.",
+    "helpText": null,
+    "name": "ServiceWorkerToControlSrcdocIframeEnabled",
+    "displayName": "Allow ServiceWorker to control srcdoc iframes",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.serviceworkertocontrolsrcdociframeenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.serviceworkertocontrolsrcdociframeenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

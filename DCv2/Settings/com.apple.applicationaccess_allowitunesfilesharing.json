@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Restrictions"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "allowiTunesFileSharing",
+    "rootDefinitionId": "com.apple.applicationaccess_com.apple.applicationaccess",
+    "categoryId": "eda31027-9270-4959-801b-397fa05512e2",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.applicationaccess_allowitunesfilesharing",
+    "description": "If false, disables iTunes file sharing services. Available in macOS 10.13 and later.",
+    "helpText": null,
+    "name": "allowiTunesFileSharing",
+    "displayName": "Allow iTunes File Sharing",
+    "defaultOptionId": "com.apple.applicationaccess_allowitunesfilesharing_true",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.applicationaccess_allowitunesfilesharing_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.applicationaccess_com.apple.applicationaccess",
+                    "parentSettingId": "com.apple.applicationaccess_com.apple.applicationaccess"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.applicationaccess_allowitunesfilesharing_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.applicationaccess_com.apple.applicationaccess",
+                    "parentSettingId": "com.apple.applicationaccess_com.apple.applicationaccess"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

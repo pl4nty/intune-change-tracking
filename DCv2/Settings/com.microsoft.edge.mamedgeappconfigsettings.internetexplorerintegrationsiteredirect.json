@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.InternetExplorerIntegrationSiteRedirect",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.internetexplorerintegrationsiteredirect",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.internetexplorerintegrationsiteredirect",
+    "description": "An \"in-page\" navigation is started from a link, a script, or a form on the current page. It can also be a server-side redirect of a previous \"in-page\" navigation attempt. Conversely, a user can start a navigation that isn't \"in-page\" that's independent of the current page in several ways by using the browser controls. For example, using the address bar, the back button, or a favorite link.\n\nThis setting lets you specify whether navigations from pages loaded in Internet Explorer mode to unconfigured sites (that are not configured in the Enterprise Mode Site List) switch back to Microsoft Edge or remain in Internet Explorer mode.\n\nThis setting works in conjunction with:\n\"InternetExplorerIntegrationLevel\" is set to 'IEMode'\nand\n\"InternetExplorerIntegrationSiteList\" policy where the list has at least one entry.\n\nIf you disable or don't configure this policy, only sites configured to open in Internet Explorer mode will open in that mode. Any site not configured to open in Internet Explorer mode will be redirected back to Microsoft Edge.\n\nIf you set this policy to 'Default', only sites configured to open in Internet Explorer mode will open in that mode. Any site not configured to open in Internet Explorer mode will be redirected back to Microsoft Edge.\n\nIf you set this policy to 'AutomaticNavigationsOnly', you get the default experience except that all automatic navigations (such as 302 redirects) to unconfigured sites will be kept in Internet Explorer mode.\n\nIf you set this policy to 'AllInPageNavigations', all navigations from pages loaded in IE mode to unconfigured sites are kept in Internet Explorer mode (Least Recommended).\n\nIf the \"InternetExplorerIntegrationReloadInIEModeAllowed\" policy allows users to reload sites in Internet Explorer mode, then all in-page navigations from unconfigured sites that users have chosen to reload in Internet Explorer mode will be kept in Internet Explorer mode, regardless of how this policy is configured.\n\nTo learn more about Internet Explorer mode, see <a href=\"https://go.microsoft.com/fwlink/?linkid=2105106\">https://go.microsoft.com/fwlink/?linkid=2105106</a>\n\nPolicy options mapping:\n\n* Default (0) = Default\n\n* AutomaticNavigationsOnly (1) = Keep only automatic navigations in Internet Explorer mode\n\n* AllInPageNavigations (2) = Keep all in-page navigations in Internet Explorer mode\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "InternetExplorerIntegrationSiteRedirect",
+    "displayName": "Specify how \"in-page\" navigations to unconfigured sites behave when started from Internet Explorer mode pages",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.internetexplorerintegrationsiteredirect_default",
+            "description": null,
+            "helpText": null,
+            "name": "Default",
+            "displayName": "Default",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.internetexplorerintegrationsiteredirect_automaticnavigationsonly",
+            "description": null,
+            "helpText": null,
+            "name": "Keep only automatic navigations in Internet Explorer mode",
+            "displayName": "Keep only automatic navigations in Internet Explorer mode",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.internetexplorerintegrationsiteredirect_allinpagenavigations",
+            "description": null,
+            "helpText": null,
+            "name": "Keep all in-page navigations in Internet Explorer mode",
+            "displayName": "Keep all in-page navigations in Internet Explorer mode",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

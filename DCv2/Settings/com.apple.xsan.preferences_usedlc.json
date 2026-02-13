@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Xsan Preferences"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "useDLC",
+    "rootDefinitionId": "com.apple.xsan.preferences_com.apple.xsan.preferences",
+    "categoryId": "fd3717c1-dcf8-4038-b7f7-4ad3359a9d32",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.xsan.preferences_usedlc",
+    "description": "If true, use the DLC for all volumes.",
+    "helpText": null,
+    "name": "useDLC",
+    "displayName": "Use DLC",
+    "defaultOptionId": "com.apple.xsan.preferences_usedlc_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.xsan.preferences_usedlc_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.xsan.preferences_com.apple.xsan.preferences",
+                    "parentSettingId": "com.apple.xsan.preferences_com.apple.xsan.preferences"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.xsan.preferences_usedlc_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.xsan.preferences_com.apple.xsan.preferences",
+                    "parentSettingId": "com.apple.xsan.preferences_com.apple.xsan.preferences"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

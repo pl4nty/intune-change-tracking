@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Cellular"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "APNs/[{0}]/EnableXLAT464",
+    "rootDefinitionId": "com.apple.cellular_com.apple.cellular",
+    "categoryId": "5c722b3f-9d77-428a-b859-3fb556162cd6",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.cellular_apns_item_enablexlat464",
+    "description": "If true, enables XLAT464. Available in iOS 16 and later.",
+    "helpText": null,
+    "name": "APNs_item_EnableXLAT464",
+    "displayName": "Enable XLAT464",
+    "defaultOptionId": "com.apple.cellular_apns_item_enablexlat464_false",
+    "applicability": {
+        "description": null,
+        "platform": "iOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.cellular_apns_item_enablexlat464_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.cellular_apns",
+                    "parentSettingId": "com.apple.cellular_apns"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.cellular_apns_item_enablexlat464_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.cellular_apns",
+                    "parentSettingId": "com.apple.cellular_apns"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

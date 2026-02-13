@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.UserAgentReduction",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.useragentreduction",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.useragentreduction",
+    "description": "The User-Agent HTTP request header has been reduced by default since Microsoft Edge version 119. To continue receiving detailed platform information, migrate to User-Agent Client Hints, which replace the deprecated detailed User-Agent header. For more information, visit: https://web.dev/articles/migrate-to-ua-ch\n\nIf you don't configure this policy or set it to Default, the User-Agent header will be reduced and controlled by experimentation.\n\nSet this policy to 'ForceEnabled' to force the reduced version of the  User-Agent request header for all origins.\n\nSet this policy to 'ForceDisabled' to always use the full (legacy)  User-Agent header.\n\nTo learn more about the User-Agent string, read here:\n\n<a href=\"https://go.microsoft.com/fwlink/?linkid=2186267\">https://go.microsoft.com/fwlink/?linkid=2186267</a>\n\nPolicy options mapping:\n\n* Default (0) = Reduced User Agent, or controlled by experimentation.\n\n* ForceDisabled (1) = Full (legacy) User Agent.\n\n* ForceEnabled (2) = Reduced User Agent.\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "UserAgentReduction",
+    "displayName": "Enable or disable the User-Agent Reduction (Deprecated)",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.useragentreduction_default",
+            "description": null,
+            "helpText": null,
+            "name": "Reduced User Agent, or controlled by experimentation.",
+            "displayName": "Reduced User Agent, or controlled by experimentation.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.useragentreduction_forcedisabled",
+            "description": null,
+            "helpText": null,
+            "name": "Full (legacy) User Agent.",
+            "displayName": "Full (legacy) User Agent.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.useragentreduction_forceenabled",
+            "description": null,
+            "helpText": null,
+            "name": "Reduced User Agent.",
+            "displayName": "Reduced User Agent.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

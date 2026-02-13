@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#defaultjavascriptsetting"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "DefaultJavaScriptSetting",
+    "rootDefinitionId": "com.apple.managedclient.preferences_defaultjavascriptsetting",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_defaultjavascriptsetting",
+    "description": "Set whether websites can run JavaScript. You can allow it for all sites (1) or block it for all sites (2).\n\nIf you don't configure this policy, all sites can run JavaScript by default, and the user can change this setting.\n\n* 1 = Allow all sites to run JavaScript\n\n* 2 = Don't allow any site to run JavaScript",
+    "helpText": null,
+    "name": "DefaultJavaScriptSetting",
+    "displayName": "Default JavaScript setting",
+    "defaultOptionId": "com.apple.managedclient.preferences_defaultjavascriptsetting_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultjavascriptsetting_0",
+            "description": null,
+            "helpText": null,
+            "name": "Allow all sites to run JavaScript",
+            "displayName": "Allow all sites to run JavaScript",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultjavascriptsetting_1",
+            "description": null,
+            "helpText": null,
+            "name": "Don't allow any site to run JavaScript",
+            "displayName": "Don't allow any site to run JavaScript",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Content settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.DefaultNotificationsSetting",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.defaultnotificationssetting",
+    "categoryId": "92d69c43-75ac-49b1-a3ef-9350079eef86",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.defaultnotificationssetting",
+    "description": "Set whether websites can display desktop notifications. You can allow them by default ('AllowNotifications'), deny them by default ('BlockNotifications'), or have the user be asked each time a website wants to show a notification ('AskNotifications').\n\nIf you don't configure this policy, notifications are allowed by default, and the user can change this setting.\n\nPolicy options mapping:\n\n* AllowNotifications (1) = Allow sites to show desktop notifications\n\n* BlockNotifications (2) = Don't allow any site to show desktop notifications\n\n* AskNotifications (3) = Ask every time a site wants to show desktop notifications\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "DefaultNotificationsSetting",
+    "displayName": "Default notification setting",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.defaultnotificationssetting_allownotifications",
+            "description": null,
+            "helpText": null,
+            "name": "Allow sites to show desktop notifications",
+            "displayName": "Allow sites to show desktop notifications",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.defaultnotificationssetting_blocknotifications",
+            "description": null,
+            "helpText": null,
+            "name": "Don't allow any site to show desktop notifications",
+            "displayName": "Don't allow any site to show desktop notifications",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.defaultnotificationssetting_asknotifications",
+            "description": null,
+            "helpText": null,
+            "name": "Ask every time a site wants to show desktop notifications",
+            "displayName": "Ask every time a site wants to show desktop notifications",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

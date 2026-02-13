@@ -1,0 +1,46 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Scheduled scan configuration"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.wdav/Forced/[0]/mcx_preference_settings/scheduledScan",
+    "offsetUri": "dailyConfiguration",
+    "rootDefinitionId": "com.apple.managedclient.preferences_dailyconfiguration",
+    "categoryId": "64c8233f-3057-4485-b902-d71a312318d7",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_dailyconfiguration",
+    "description": "Check for definitions update before initiating a scheduled scan",
+    "helpText": null,
+    "name": "dailyConfiguration",
+    "displayName": "Daily and Hourly quick scan configuration",
+    "childIds": [
+        "com.apple.managedclient.preferences_dailyconfiguration_timeofday",
+        "com.apple.managedclient.preferences_dailyconfiguration_interval"
+    ],
+    "maximumCount": 1,
+    "minimumCount": 0,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "com.apple.managedclient.preferences_dailyconfiguration_timeofday",
+            "required": true
+        },
+        {
+            "dependedOnBy": "com.apple.managedclient.preferences_dailyconfiguration_interval",
+            "required": true
+        }
+    ]
+}

@@ -1,0 +1,92 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Apps",
+        "Default",
+        "Permission",
+        "Policy",
+        "General"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "/com.android.deviceRestrictionPolicy/",
+    "offsetUri": "/AppsDefaultPermissionPolicy/",
+    "rootDefinitionId": "com.android.devicerestrictionpolicy.appsdefaultpermissionpolicy",
+    "categoryId": "b6733d23-eadc-486a-abfc-62b78698a16c",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.android.devicerestrictionpolicy.appsdefaultpermissionpolicy",
+    "description": "Define the default permission policy for requests for runtime permissions. Available for fully managed, dedicated and corporate-owned work profile (at work profile level) devices.",
+    "helpText": "",
+    "name": "AppsDefaultPermissionPolicy",
+    "displayName": "Default permission policy (work profile-level)",
+    "defaultOptionId": "com.android.devicerestrictionpolicy.appsdefaultpermissionpolicy_devicedefault",
+    "applicability": {
+        "description": null,
+        "platform": "androidEnterprise",
+        "deviceMode": "none",
+        "technologies": "android"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.android.devicerestrictionpolicy.appsdefaultpermissionpolicy_devicedefault",
+            "description": "Device default value, no intent.",
+            "helpText": null,
+            "name": "deviceDefault",
+            "displayName": "Device default",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "PERMISSION_POLICY_UNSPECIFIED"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.appsdefaultpermissionpolicy_prompt",
+            "description": "Prompt.",
+            "helpText": null,
+            "name": "prompt",
+            "displayName": "Prompt",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "PROMPT"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.appsdefaultpermissionpolicy_autogrant",
+            "description": "Auto grant.",
+            "helpText": null,
+            "name": "autoGrant",
+            "displayName": "Auto grant",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "GRANT"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.appsdefaultpermissionpolicy_autodeny",
+            "description": "Auto deny.",
+            "helpText": null,
+            "name": "autoDeny",
+            "displayName": "Auto deny",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "DENY"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

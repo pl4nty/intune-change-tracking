@@ -1,0 +1,46 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Restrictions"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "enforcedSoftwareUpdateMajorOSDeferredInstallDelay",
+    "rootDefinitionId": "com.apple.applicationaccess_com.apple.applicationaccess",
+    "categoryId": "eda31027-9270-4959-801b-397fa05512e2",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.applicationaccess_enforcedsoftwareupdatemajorosdeferredinstalldelay",
+    "description": "This restriction allows the admin to set how many days to delay a major software update on the device. When this restriction is in place the user sees a software update only after the specified delay after the release of the software update. This value controls the delay for Force Delayed Major Software Updates. Available in macOS 11.3 and later.",
+    "helpText": null,
+    "name": "enforcedSoftwareUpdateMajorOSDeferredInstallDelay",
+    "displayName": "Enforced Software Update Major OS Deferred Install Delay (Deprecated)",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 90,
+        "minimumValue": 1
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 30
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "com.apple.applicationaccess_com.apple.applicationaccess",
+            "parentSettingId": "com.apple.applicationaccess_com.apple.applicationaccess"
+        }
+    ],
+    "dependedOnBy": []
+}

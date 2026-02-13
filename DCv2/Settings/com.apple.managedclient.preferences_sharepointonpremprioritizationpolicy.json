@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft OneDrive",
+        "Microsoft One Drive"
+    ],
+    "infoUrls": [
+        "https://learn.microsoft.com/sharepoint/deploy-and-configure-on-macos#sharepointonpremprioritizationpolicy"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.OneDrive/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "SharePointOnPremPrioritizationPolicy",
+    "rootDefinitionId": "com.apple.managedclient.preferences_sharepointonpremprioritizationpolicy",
+    "categoryId": "19ba782c-3594-45da-b829-72b54f6d45c7",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_sharepointonpremprioritizationpolicy",
+    "description": "For hybrid scenarios where the email is the same for both SharePoint Server on-premises and SharePoint Online, determines whether or not the client should set up sync for SharePoint Server or SharePoint Online first during the first-run scenario.",
+    "helpText": null,
+    "name": "SharePointOnPremPrioritizationPolicy",
+    "displayName": "SharePoint Prioritization",
+    "defaultOptionId": "com.apple.managedclient.preferences_sharepointonpremprioritizationpolicy_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_sharepointonpremprioritizationpolicy_0",
+            "description": null,
+            "helpText": null,
+            "name": "Prioritize SharePoint Online",
+            "displayName": "Prioritize SharePoint Online",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_sharepointonpremprioritizationpolicy_1",
+            "description": null,
+            "helpText": null,
+            "name": "Prioritize SharePoint Server",
+            "displayName": "Prioritize SharePoint Server",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

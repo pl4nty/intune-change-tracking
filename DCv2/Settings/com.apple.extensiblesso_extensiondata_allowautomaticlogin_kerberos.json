@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Extensible Single Sign On Kerberos"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "ExtensionData/allowAutomaticLogin",
+    "rootDefinitionId": "com.apple.extensiblesso_com.apple.extensiblesso-kerberos_kerberos",
+    "categoryId": "f35cc803-3a06-4262-b38b-a5295321f756",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.extensiblesso_extensiondata_allowautomaticlogin_kerberos",
+    "description": "If false, passwords are not allowed to be saved to the keychain.",
+    "helpText": null,
+    "name": "ExtensionData_allowAutomaticLogin",
+    "displayName": "Allow Automatic Login",
+    "defaultOptionId": "com.apple.extensiblesso_extensiondata_allowautomaticlogin_kerberos_true",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "mdm"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.extensiblesso_extensiondata_allowautomaticlogin_kerberos_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.extensiblesso_extensiondata_kerberos",
+                    "parentSettingId": "com.apple.extensiblesso_extensiondata_kerberos"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.extensiblesso_extensiondata_allowautomaticlogin_kerberos_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.extensiblesso_extensiondata_kerberos",
+                    "parentSettingId": "com.apple.extensiblesso_extensiondata_kerberos"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

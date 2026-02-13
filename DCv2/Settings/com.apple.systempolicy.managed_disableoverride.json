@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "System Policy Managed"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "DisableOverride",
+    "rootDefinitionId": "com.apple.systempolicy.managed_com.apple.systempolicy.managed",
+    "categoryId": "64538726-8745-4e7a-b370-332f725b58bf",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.systempolicy.managed_disableoverride",
+    "description": "If true, disables the Finder's contextual menu item.",
+    "helpText": null,
+    "name": "DisableOverride",
+    "displayName": "Disable Override",
+    "defaultOptionId": "com.apple.systempolicy.managed_disableoverride_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.systempolicy.managed_disableoverride_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.systempolicy.managed_com.apple.systempolicy.managed",
+                    "parentSettingId": "com.apple.systempolicy.managed_com.apple.systempolicy.managed"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.systempolicy.managed_disableoverride_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.systempolicy.managed_com.apple.systempolicy.managed",
+                    "parentSettingId": "com.apple.systempolicy.managed_com.apple.systempolicy.managed"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

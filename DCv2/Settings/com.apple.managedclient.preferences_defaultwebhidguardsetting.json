@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#defaultwebhidguardsetting"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "DefaultWebHidGuardSetting",
+    "rootDefinitionId": "com.apple.managedclient.preferences_defaultwebhidguardsetting",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_defaultwebhidguardsetting",
+    "description": "Setting the policy to 3 lets websites ask for access to HID devices. Setting the policy to 2 denies access to HID devices.\n\nLeaving it unset lets websites ask for access, but users can change this setting.\n\nThis policy can be overridden for specific url patterns using the \"WebHidAskForUrls\" and \"WebHidBlockedForUrls\" policies.\n\nPolicy options mapping:\n\n* BlockWebHid (2) = Do not allow any site to request access to HID devices via the WebHID API\n\n* AskWebHid (3) = Allow sites to ask the user to grant access to a HID device\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "DefaultWebHidGuardSetting",
+    "displayName": "Control use of the WebHID API",
+    "defaultOptionId": "com.apple.managedclient.preferences_defaultwebhidguardsetting_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultwebhidguardsetting_0",
+            "description": null,
+            "helpText": null,
+            "name": "Do not allow any site to request access to HID devices via the WebHID API",
+            "displayName": "Do not allow any site to request access to HID devices via the WebHID API",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultwebhidguardsetting_1",
+            "description": null,
+            "helpText": null,
+            "name": "Allow sites to ask the user to grant access to a HID device",
+            "displayName": "Allow sites to ask the user to grant access to a HID device",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

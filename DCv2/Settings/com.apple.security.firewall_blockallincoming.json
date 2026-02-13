@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Firewall"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "BlockAllIncoming",
+    "rootDefinitionId": "com.apple.security.firewall_com.apple.security.firewall",
+    "categoryId": "70b5da13-9c31-4857-890d-b7eb223729c3",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.security.firewall_blockallincoming",
+    "description": "If true, enables blocking of all incoming connections. ",
+    "helpText": null,
+    "name": "BlockAllIncoming",
+    "displayName": "Block All Incoming",
+    "defaultOptionId": "com.apple.security.firewall_blockallincoming_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.security.firewall_blockallincoming_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.security.firewall_com.apple.security.firewall",
+                    "parentSettingId": "com.apple.security.firewall_com.apple.security.firewall"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.security.firewall_blockallincoming_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.security.firewall_com.apple.security.firewall",
+                    "parentSettingId": "com.apple.security.firewall_com.apple.security.firewall"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

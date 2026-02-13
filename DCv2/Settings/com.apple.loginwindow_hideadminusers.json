@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Login Window Behavior"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "HideAdminUsers",
+    "rootDefinitionId": "com.apple.loginwindow_com.apple.loginwindow",
+    "categoryId": "8f831e0a-feb7-4cbb-acc1-2e583f3f4de3",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.loginwindow_hideadminusers",
+    "description": "If true, hides administrator users when showing a user list.",
+    "helpText": null,
+    "name": "HideAdminUsers",
+    "displayName": "Hide Admin Users",
+    "defaultOptionId": "com.apple.loginwindow_hideadminusers_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.loginwindow_hideadminusers_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.loginwindow_com.apple.loginwindow",
+                    "parentSettingId": "com.apple.loginwindow_com.apple.loginwindow"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.loginwindow_hideadminusers_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.loginwindow_com.apple.loginwindow",
+                    "parentSettingId": "com.apple.loginwindow_com.apple.loginwindow"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Defender - Cloud delivered protection preferences",
+        "Cloud delivered protection preferences"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/mac-preferences#diagnostic-collection-level"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.wdav/Forced/[0]/mcx_preference_settings/cloudService",
+    "offsetUri": "diagnosticLevel",
+    "rootDefinitionId": "com.apple.managedclient.preferences_diagnosticlevel",
+    "categoryId": "93099bd4-c685-434b-9d72-f0cb6db5e753",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_diagnosticlevel",
+    "description": "Diagnostic data is used to keep Microsoft Defender ATP secure and up-to-date, detect, diagnose and fix problems, and also make product improvements. This setting determines the level of diagnostics sent by the product to Microsoft.",
+    "helpText": null,
+    "name": "diagnosticLevel",
+    "displayName": "Diagnostic collection level",
+    "defaultOptionId": "com.apple.managedclient.preferences_diagnosticlevel_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_diagnosticlevel_0",
+            "description": null,
+            "helpText": null,
+            "name": "optional",
+            "displayName": "optional",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "optional"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_diagnosticlevel_1",
+            "description": null,
+            "helpText": null,
+            "name": "required",
+            "displayName": "required",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "required"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.DisplayCapturePermissionsPolicyEnabled",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.displaycapturepermissionspolicyenabled",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.displaycapturepermissionspolicyenabled",
+    "description": "This policy is obsolete. The policy was a temporary workaround for non-spec-compliant enterprise applications.\n\nThis policy stopped working in Microsoft Edge 107 and was obsoleted in Microsoft Edge 110.\n\nThe display-capture permissions-policy gates access to getDisplayMedia(),\nas per this spec:\nhttps://www.w3.org/TR/screen-capture/#feature-policy-integration\nHowever, if this policy is Disabled, this requirement is not enforced,\nand getDisplayMedia() is allowed from contexts that would otherwise be\nforbidden.\n\nIf you enable or don't configure this policy, sites can only call getDisplayMedia() from\ncontexts which are allowlisted by the display-capture permissions-policy.\n\nIf you disable this policy, sites can call getDisplayMedia() even from contexts\nwhich are not allowlisted by the display-capture permissions policy.\nNote that other restrictions may still apply.",
+    "helpText": null,
+    "name": "DisplayCapturePermissionsPolicyEnabled",
+    "displayName": "Specifies whether the display-capture permissions-policy is checked or skipped (Obsolete)",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.displaycapturepermissionspolicyenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.displaycapturepermissionspolicyenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

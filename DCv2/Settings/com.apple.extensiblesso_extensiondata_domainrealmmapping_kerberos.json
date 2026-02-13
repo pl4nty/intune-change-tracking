@@ -1,0 +1,56 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Extensible Single Sign On Kerberos"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "ExtensionData/domainRealmMapping",
+    "rootDefinitionId": "com.apple.extensiblesso_com.apple.extensiblesso-kerberos_kerberos",
+    "categoryId": "f35cc803-3a06-4262-b38b-a5295321f756",
+    "settingUsage": "configuration",
+    "uxBehavior": "contextPane",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.extensiblesso_extensiondata_domainrealmmapping_kerberos",
+    "description": "A custom domain-realm mapping for Kerberos. This is used when the DNS name of hosts do not match the realm name. Most administrators will not need to customize this.",
+    "helpText": null,
+    "name": "ExtensionData_domainRealmMapping",
+    "displayName": "Domain Realm Mapping",
+    "childIds": [
+        "com.apple.extensiblesso_extensiondata_domainrealmmapping_realm_kerberos",
+        "com.apple.extensiblesso_extensiondata_domainrealmmapping_generickey_kerberos_keytobereplaced",
+        "com.apple.extensiblesso_ignored_kerberos_$typepicker"
+    ],
+    "maximumCount": 2147483647,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "mdm"
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [
+        {
+            "dependentOn": "com.apple.extensiblesso_extensiondata_kerberos",
+            "parentSettingId": "com.apple.extensiblesso_extensiondata_kerberos"
+        }
+    ],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "com.apple.extensiblesso_extensiondata_domainrealmmapping_realm_kerberos",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.extensiblesso_extensiondata_domainrealmmapping_generickey_kerberos_keytobereplaced",
+            "required": true
+        },
+        {
+            "dependedOnBy": "com.apple.extensiblesso_ignored_kerberos_$typepicker",
+            "required": false
+        }
+    ]
+}

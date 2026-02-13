@@ -1,0 +1,46 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.BrowsingDataLifetime",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.browsingdatalifetime",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "largeTextBox",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.browsingdatalifetime",
+    "description": "This policy controls how long specific types of browsing data are retained.\nIf Sync is enabled, this policy has no effect.\n\nYou can specify the following data types:\n'browsing_history'\n'download_history'\n'cookies_and_other_site_data'\n'cached_images_and_files'\n'password_signin'\n'autofill'\n'site_settings'\n'hosted_app_data'\n\nMicrosoft Edge periodically deletes data of the selected types that is older than the value set by 'time_to_live_in_hours'.\n\nExpired data is removed 15 seconds after browser startup and every hour while the browser is running.\n\nNote: Deleting cookies using this policy does not sign the user out of their profile, the user stays signed in.",
+    "helpText": null,
+    "name": "BrowsingDataLifetime",
+    "displayName": "Browsing Data Lifetime Settings",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 0,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

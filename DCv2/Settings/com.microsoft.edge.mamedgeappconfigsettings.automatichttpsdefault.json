@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.AutomaticHttpsDefault",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.automatichttpsdefault",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.automatichttpsdefault",
+    "description": "This policy lets you manage settings for \"AutomaticHttpsDefault\", which switches connections from HTTP to HTTPS.\n\nThis feature helps protect against man-in-the-middle attacks by enforcing more secure connections, but users might experience more connection errors.\n\nMicrosoft Edge attempts to upgrade some navigations from HTTP to HTTPS, when possible. This policy can be used to disable this behavior. If set to \"AlwaysUpgrade\" or left unset, this feature will be enabled by default.\n\nThe separate HttpAllowlist policy can be used to exempt specific hostnames or hostname patterns from being upgraded to HTTPS by this feature.\n\nThis policy is obsolete, and has been replaced with the policy \"HttpsUpgradesEnabled\".\n\nPolicy options mapping:\n\n* DisableAutomaticHttps (0) = Automatic HTTPS functionality is disabled.\n\n* UpgradeCapableDomains (1) = (Deprecated) Navigations delivered over HTTP are switched to HTTPS, only on domains likely to support HTTPS.\n\n* AlwaysUpgrade (2) = All navigations delivered over HTTP are switched to HTTPS. Connection errors might occur more often.\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "AutomaticHttpsDefault",
+    "displayName": "Configure Automatic HTTPS (Obsolete)",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.automatichttpsdefault_disableautomatichttps",
+            "description": null,
+            "helpText": null,
+            "name": "Automatic HTTPS functionality is disabled.",
+            "displayName": "Automatic HTTPS functionality is disabled.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.automatichttpsdefault_upgradecapabledomains",
+            "description": null,
+            "helpText": null,
+            "name": "(Deprecated) Navigations delivered over HTTP are switched to HTTPS, only on domains likely to support HTTPS.",
+            "displayName": "(Deprecated) Navigations delivered over HTTP are switched to HTTPS, only on domains likely to support HTTPS.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.automatichttpsdefault_alwaysupgrade",
+            "description": null,
+            "helpText": null,
+            "name": "All navigations delivered over HTTP are switched to HTTPS. Connection errors might occur more often.",
+            "displayName": "All navigations delivered over HTTP are switched to HTTPS. Connection errors might occur more often.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

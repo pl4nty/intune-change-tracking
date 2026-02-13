@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Dock"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "static-only",
+    "rootDefinitionId": "com.apple.dock_com.apple.dock",
+    "categoryId": "cc388035-b49c-493e-a598-14b0d0de4359",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.dock_static-only",
+    "description": "If true, uses the Static Apps and Static Others dictionaries for the dock and ignores any items in the Persistent Apps and Persistent Others dictionaries. If false, the contents are merged with the static items listed first.",
+    "helpText": null,
+    "name": "static-only",
+    "displayName": "Static Only",
+    "defaultOptionId": "com.apple.dock_static-only_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.dock_static-only_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.dock_com.apple.dock",
+                    "parentSettingId": "com.apple.dock_com.apple.dock"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.dock_static-only_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.dock_com.apple.dock",
+                    "parentSettingId": "com.apple.dock_com.apple.dock"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Notifications"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "NotificationSettings/[{0}]/ShowInLockScreen",
+    "rootDefinitionId": "com.apple.notificationsettings_com.apple.notificationsettings",
+    "categoryId": "ff90bf4b-0583-4761-a1c4-5aa4b50c5872",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.notificationsettings_notificationsettings_item_showinlockscreen",
+    "description": "If true, enables notifications on the lock screen for this app. Available in iOS 9.3 and later and macOS 10.15 and later.",
+    "helpText": null,
+    "name": "NotificationSettings_item_ShowInLockScreen",
+    "displayName": "Show In Lock Screen",
+    "defaultOptionId": "com.apple.notificationsettings_notificationsettings_item_showinlockscreen_true",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.notificationsettings_notificationsettings_item_showinlockscreen_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.notificationsettings_notificationsettings",
+                    "parentSettingId": "com.apple.notificationsettings_notificationsettings"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.notificationsettings_notificationsettings_item_showinlockscreen_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.notificationsettings_notificationsettings",
+                    "parentSettingId": "com.apple.notificationsettings_notificationsettings"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

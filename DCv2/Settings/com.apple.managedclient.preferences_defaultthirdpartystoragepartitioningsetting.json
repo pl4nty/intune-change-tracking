@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#defaultthirdpartystoragepartitioningsetting"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "DefaultThirdPartyStoragePartitioningSetting",
+    "rootDefinitionId": "com.apple.managedclient.preferences_defaultthirdpartystoragepartitioningsetting",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_defaultthirdpartystoragepartitioningsetting",
+    "description": "Third-party storage partitioning is on by default for some users starting with Microsoft Edge version 115, but it can be disabled with edge://flags.\n\nIf this policy is configured to \"AllowPartitioning\" or not configured, third-party storage partitioning can be enabled.\n\nIf this policy is set to \"BlockPartitioning\", third-party storage partitioning can't be enabled.\n\nPolicy options mapping:\n\n* AllowPartitioning (1) = Let third-party storage partitioning to be enabled.\n\n* BlockPartitioning (2) = Block third-party storage partitioning from being enabled.\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "DefaultThirdPartyStoragePartitioningSetting",
+    "displayName": "Default setting for third-party storage partitioning",
+    "defaultOptionId": "com.apple.managedclient.preferences_defaultthirdpartystoragepartitioningsetting_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultthirdpartystoragepartitioningsetting_0",
+            "description": null,
+            "helpText": null,
+            "name": "Let third-party storage partitioning to be enabled.",
+            "displayName": "Let third-party storage partitioning to be enabled.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultthirdpartystoragepartitioningsetting_1",
+            "description": null,
+            "helpText": null,
+            "name": "Block third-party storage partitioning from being enabled.",
+            "displayName": "Block third-party storage partitioning from being enabled.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

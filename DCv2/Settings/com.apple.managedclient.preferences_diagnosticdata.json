@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge - All",
+        "Microsoft Edge Apple",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#diagnosticdata"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "DiagnosticData",
+    "rootDefinitionId": "com.apple.managedclient.preferences_diagnosticdata",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_diagnosticdata",
+    "description": "This policy controls sending required and optional diagnostic data about browser usage to Microsoft.\n\nRequired diagnostic data is collected keep Microsoft Edge secure, up to date and performing as expected.\n\nOptional diagnostic data includes data about how you use the browser, websites you visit and crash reports to Microsoft for product and service improvement.\n\nThis policy is not supported on Windows 10 devices. To control this data collection on Windows 10, IT admins must use the Windows diagnostic data group policy. This policy will either be 'Allow Telemetry' or 'Allow Diagnostic Data', depending on the version of Windows. Learn more about Windows 10 diagnostic data collection: https://go.microsoft.com/fwlink/?linkid=2099569\n\nUse one of the following settings to configure this policy:\n\n'Off' turns off required and optional diagnostic data collection. This option is not recommended.\n\n'RequiredData' sends required diagnostic data but turns off optional diagnostic data collection. Microsoft Edge will send required diagnostic data to keep Microsoft Edge secure, up to date and performing as expected.\n\n'OptionalData' sends optional diagnostic data includes data about browser usage, websites that are visited, crash reports sent to Microsoft for product and service improvement.\n\nOn Windows 7/macOS, this policy controls sending required and optional data to Microsoft.\n\nIf you don't configure this policy or disable it, Microsoft Edge will default to the user's preference.\n\nPolicy options mapping:\n\n* Off (0) = Off (Not recommended)\n\n* RequiredData (1) = Required data\n\n* OptionalData (2) = Optional data\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "DiagnosticData",
+    "displayName": "Send required and optional diagnostic data about browser usage",
+    "defaultOptionId": "com.apple.managedclient.preferences_diagnosticdata_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_diagnosticdata_0",
+            "description": null,
+            "helpText": null,
+            "name": "Off (Not recommended)",
+            "displayName": "Off (Not recommended)",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_diagnosticdata_1",
+            "description": null,
+            "helpText": null,
+            "name": "Required data",
+            "displayName": "Required data",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_diagnosticdata_2",
+            "description": null,
+            "helpText": null,
+            "name": "Optional data",
+            "displayName": "Optional data",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#defaultsearchproviderimageurl"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "DefaultSearchProviderImageURL",
+    "rootDefinitionId": "com.apple.managedclient.preferences_defaultsearchproviderimageurl",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_defaultsearchproviderimageurl",
+    "description": "Specifies the URL to the search engine used for image search. Search requests are sent using the GET method.\n\nThis policy is optional. If you don't configure it, image search isn't available.\n\nSpecify Bing's Image Search URL as:\n'{bing:baseURL}images/detail/search?iss=sbiupload&FORM=ANCMS1#enterInsights'.\n\nSpecify Google's Image Search URL as: '{google:baseURL}searchbyimage/upload'.\n\nSee \"DefaultSearchProviderImageURLPostParams\" policy to finish configuring image search.\n\nThis policy is applied only if you enable the \"DefaultSearchProviderEnabled\" and \"DefaultSearchProviderSearchURL\" policies.",
+    "helpText": null,
+    "name": "DefaultSearchProviderImageURL",
+    "displayName": "Specifies the search-by-image feature for the default search provider",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

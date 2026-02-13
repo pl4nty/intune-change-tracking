@@ -1,0 +1,51 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Xsan"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "sanAuthMethod",
+    "rootDefinitionId": "com.apple.xsan_com.apple.xsan",
+    "categoryId": "46af3391-ed6d-4ada-aef7-02dac2a1b136",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.xsan_sanauthmethod",
+    "description": "The authentication method for the SAN. This key is required for all Xsan SANs. It's optional for StorNext SANs but should be set if the StorNext SAN uses an auth_secret file. Only one value is accepted: auth_secret",
+    "helpText": null,
+    "name": "sanAuthMethod",
+    "displayName": "San Auth Method",
+    "defaultOptionId": "com.apple.xsan_sanauthmethod_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.xsan_sanauthmethod_0",
+            "description": null,
+            "helpText": null,
+            "name": "auth_secret",
+            "displayName": "auth_secret",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "auth_secret"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.xsan_com.apple.xsan",
+                    "parentSettingId": "com.apple.xsan_com.apple.xsan"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

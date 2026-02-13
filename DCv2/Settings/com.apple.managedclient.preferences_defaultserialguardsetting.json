@@ -1,0 +1,64 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge - All",
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#defaultserialguardsetting"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "DefaultSerialGuardSetting",
+    "rootDefinitionId": "com.apple.managedclient.preferences_defaultserialguardsetting",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_defaultserialguardsetting",
+    "description": "Set whether websites can access serial ports. You can completely block access or ask the user each time a website wants to get access to a serial port.\n\nSetting the policy to 3 lets websites ask for access to serial ports. Setting the policy to 2 denies access to serial ports.\n\nYou can override this policy for specific URL patterns by using the \"SerialAskForUrls\" and \"SerialBlockedForUrls\" policies.\n\nIf you don't configure this policy, by default, websites can ask users whether they can access a serial port, and users can change this setting.\n\nPolicy options mapping:\n\n* BlockSerial (2) = Do not allow any site to request access to serial ports via the Serial API\n\n* AskSerial (3) = Allow sites to ask for user permission to access a serial port\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "DefaultSerialGuardSetting",
+    "displayName": "Control use of the Serial API",
+    "defaultOptionId": "com.apple.managedclient.preferences_defaultserialguardsetting_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultserialguardsetting_0",
+            "description": null,
+            "helpText": null,
+            "name": "Do not allow any site to request access to serial ports via the Serial API",
+            "displayName": "Do not allow any site to request access to serial ports via the Serial API",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultserialguardsetting_1",
+            "description": null,
+            "helpText": null,
+            "name": "Allow sites to ask for user permission to access a serial port",
+            "displayName": "Allow sites to ask for user permission to access a serial port",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

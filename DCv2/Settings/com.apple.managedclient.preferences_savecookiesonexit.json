@@ -1,0 +1,51 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge - All",
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#savecookiesonexit"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "SaveCookiesOnExit",
+    "rootDefinitionId": "com.apple.managedclient.preferences_savecookiesonexit",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_savecookiesonexit",
+    "description": "When this policy is enabled, the specified set of cookies is exempt from deletion when the browser closes. This policy is only effective when:\n- The 'Cookies and other site data' toggle is configured in Settings/Privacy and services/Clear browsing data on close or\n- The policy \"ClearBrowsingDataOnExit\" is enabled or\n- The policy \"DefaultCookiesSetting\" is set to 'Keep cookies for the duration of the session'.\n\nYou can define a list of sites, based on URL patterns, that will have their cookies preserved across sessions.\n\nNote: Users can still edit the cookie site list to add or remove URLs. However, they can't remove URLs that have been added by an Admin.\n\nIf you enable this policy, the list of cookies won't be cleared when the browser closes.\n\nIf you disable or don't configure this policy, the user's personal configuration is used.",
+    "helpText": null,
+    "name": "SaveCookiesOnExit",
+    "displayName": "Save cookies when Microsoft Edge closes",
+    "maximumCount": 600,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

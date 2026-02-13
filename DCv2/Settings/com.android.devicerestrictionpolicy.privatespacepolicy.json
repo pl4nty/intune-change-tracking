@@ -1,0 +1,64 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "private space",
+        "private profile",
+        "isolated environment",
+        "launcher",
+        "General"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "/com.android.deviceRestrictionPolicy/",
+    "offsetUri": "/privateSpacePolicy/",
+    "rootDefinitionId": "com.android.devicerestrictionpolicy.privatespacepolicy",
+    "categoryId": "b6733d23-eadc-486a-abfc-62b78698a16c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.android.devicerestrictionpolicy.privatespacepolicy",
+    "description": "If 'True', prevents users from creating or using private spaces on the device, ensuring that all data is stored within the corporate profile. All existing private spaces will be deleted. If 'False', Intune doesn't change or update this setting. By default, the OS might allow the creation of private spaces for personal data. Available for corporate-owned work profile devices (at work profile level).",
+    "helpText": null,
+    "name": "PrivateSpacePolicy",
+    "displayName": "Block private space",
+    "defaultOptionId": "com.android.devicerestrictionpolicy.privatespacepolicy_allowed",
+    "applicability": {
+        "description": null,
+        "platform": "androidEnterprise",
+        "deviceMode": "none",
+        "technologies": "android"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.android.devicerestrictionpolicy.privatespacepolicy_allowed",
+            "description": "Users can create a private space profile.",
+            "helpText": null,
+            "name": "PRIVATE_SPACE_ALLOWED",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "PRIVATE_SPACE_ALLOWED"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.privatespacepolicy_disallowed",
+            "description": "Users cannot create a private space profile. Supported only for company-owned devices with a work profile. Caution: Any existing private space will be removed.",
+            "helpText": null,
+            "name": "PRIVATE_SPACE_DISALLOWED",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "PRIVATE_SPACE_DISALLOWED"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

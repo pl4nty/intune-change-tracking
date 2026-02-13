@@ -1,0 +1,52 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Defender - EDR preferences",
+        "Endpoint Detection and Response (EDR) preferences"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.wdav/Forced/[0]/mcx_preference_settings/edr",
+    "offsetUri": "tags/[{0}]/key",
+    "rootDefinitionId": "com.apple.managedclient.preferences_tags",
+    "categoryId": "b77a3a7b-6fab-4240-b5c3-852aa78781d5",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_tags_item_key",
+    "description": "Specify a tag name and its value. The GROUP tag, tags the device with the specified value. The tag is reflected in the portal under the device page and can be used for filtering and grouping devices.",
+    "helpText": null,
+    "name": "tags_item_key",
+    "displayName": "Type of tag",
+    "defaultOptionId": "com.apple.managedclient.preferences_tags_item_key_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement,microsoftSense"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_tags_item_key_0",
+            "description": null,
+            "helpText": null,
+            "name": "GROUP",
+            "displayName": "GROUP",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "GROUP"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.managedclient.preferences_tags",
+                    "parentSettingId": "com.apple.managedclient.preferences_tags"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#sharedarraybufferunrestrictedaccessallowed"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "SharedArrayBufferUnrestrictedAccessAllowed",
+    "rootDefinitionId": "com.apple.managedclient.preferences_sharedarraybufferunrestrictedaccessallowed",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_sharedarraybufferunrestrictedaccessallowed",
+    "description": "Specifies whether SharedArrayBuffers can be used in a non cross-origin-isolated context.  A SharedArrayBuffer is a binary data buffer that can be used to create views on shared memory.  SharedArrayBuffers have a memory access vulnerability in several popular CPUs.\n\nIf you enable this policy, sites are allowed to use SharedArrayBuffers with no restrictions.\n\nIf you disable or don't configure this policy, sites are allowed to use SharedArrayBuffers only when cross-origin isolated.\n\nMicrosoft Edge will require cross-origin isolation when using SharedArrayBuffers from Microsoft Edge 91 onward for Web Compatibility reasons.",
+    "helpText": null,
+    "name": "SharedArrayBufferUnrestrictedAccessAllowed",
+    "displayName": "Specifies whether SharedArrayBuffers can be used in a non cross-origin-isolated context",
+    "defaultOptionId": "com.apple.managedclient.preferences_sharedarraybufferunrestrictedaccessallowed_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_sharedarraybufferunrestrictedaccessallowed_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "Blocked",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_sharedarraybufferunrestrictedaccessallowed_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "Allowed",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

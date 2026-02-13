@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Web Content Filter"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "FilterGrade",
+    "rootDefinitionId": "com.apple.webcontent-filter_com.apple.webcontent-filter",
+    "categoryId": "a6fe8038-136b-4d50-bf04-8e232409c0d2",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.webcontent-filter_filtergrade",
+    "description": "This value is for deriving the relative order of content filters. Filters with a grade of firewall see network traffic before filters with a grade of inspector. The system doesn’t define the order of filters within a grade.",
+    "helpText": null,
+    "name": "FilterGrade",
+    "displayName": "Filter Grade",
+    "defaultOptionId": "com.apple.webcontent-filter_filtergrade_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.webcontent-filter_filtergrade_0",
+            "description": null,
+            "helpText": null,
+            "name": "firewall",
+            "displayName": "firewall",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "firewall"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.webcontent-filter_com.apple.webcontent-filter",
+                    "parentSettingId": "com.apple.webcontent-filter_com.apple.webcontent-filter"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.webcontent-filter_filtergrade_1",
+            "description": null,
+            "helpText": null,
+            "name": "inspector",
+            "displayName": "inspector",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "inspector"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.webcontent-filter_com.apple.webcontent-filter",
+                    "parentSettingId": "com.apple.webcontent-filter_com.apple.webcontent-filter"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

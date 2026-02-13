@@ -1,0 +1,52 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Xsan"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "fsnameservers",
+    "rootDefinitionId": "com.apple.xsan_com.apple.xsan",
+    "categoryId": "46af3391-ed6d-4ada-aef7-02dac2a1b136",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.xsan_fsnameservers",
+    "description": "An array of storage area network (SAN) File System Name Server coordinators. The list should contain the same addresses in the same order as the metadata controller (MDC) /Library/Preferences/Xsan/fsnameservers file. Xsan SAN clients automatically receive updates to the fsnameservers list from the SAN configuration servers whenever this list changes. StorNext administrators should update their profile whenever the fsnameservers list changes. This key is required for StorNext SANs.",
+    "helpText": null,
+    "name": "fsnameservers",
+    "displayName": "FS Name Servers",
+    "maximumCount": 600,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "com.apple.xsan_com.apple.xsan",
+            "parentSettingId": "com.apple.xsan_com.apple.xsan"
+        }
+    ],
+    "dependedOnBy": []
+}

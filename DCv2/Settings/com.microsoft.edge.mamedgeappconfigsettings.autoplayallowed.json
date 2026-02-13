@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.AutoplayAllowed",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.autoplayallowed",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.autoplayallowed",
+    "description": "This policy sets the media autoplay policy for websites.\n\nThe default setting, \"Not configured\" respects the current media autoplay settings and lets users configure their autoplay settings.\n\nSetting to \"Enabled\" sets media autoplay to \"Allow\".  All websites are allowed to autoplay media. Users can't override this policy.\n\nSetting to \"Disabled\" sets media autoplay to \"Limit\".  This limits websites that are allowed to autoplay media to webpages with high media engagement and active WebRTC streams. Prior to Microsoft Edge version 92, this would set media autoplay to \"Block\". Users can't override this policy.\n\nA tab will need to be closed and re-opened for this policy to take effect.",
+    "helpText": null,
+    "name": "AutoplayAllowed",
+    "displayName": "Allow media autoplay for websites",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.autoplayallowed_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.autoplayallowed_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

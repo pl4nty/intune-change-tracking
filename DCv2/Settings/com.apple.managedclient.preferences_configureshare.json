@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#configureshare"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "ConfigureShare",
+    "rootDefinitionId": "com.apple.managedclient.preferences_configureshare",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_configureshare",
+    "description": "If you set this policy to 'ShareAllowed' (the default), users will be able to access the Share experience from the Settings and More Menu in Microsoft Edge to share with other apps on the system.\n\nIf you set this policy to 'ShareDisallowed', users won't be able to access the Share experience. If the Share button is on the toolbar, it will also be hidden.\n\nPolicy options mapping:\n\n* ShareAllowed (0) = Allow using the Share experience\n\n* ShareDisallowed (1) = Don't allow using the Share experience\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "ConfigureShare",
+    "displayName": "Configure the Share experience",
+    "defaultOptionId": "com.apple.managedclient.preferences_configureshare_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_configureshare_0",
+            "description": null,
+            "helpText": null,
+            "name": "Allow using the Share experience",
+            "displayName": "Allow using the Share experience",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_configureshare_1",
+            "description": null,
+            "helpText": null,
+            "name": "Don't allow using the Share experience",
+            "displayName": "Don't allow using the Share experience",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

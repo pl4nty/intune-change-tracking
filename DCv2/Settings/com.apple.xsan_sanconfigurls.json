@@ -1,0 +1,52 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Xsan"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "sanConfigURLs",
+    "rootDefinitionId": "com.apple.xsan_com.apple.xsan",
+    "categoryId": "46af3391-ed6d-4ada-aef7-02dac2a1b136",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.xsan_sanconfigurls",
+    "description": "An array of LDAP URLs where Xsan systems can obtain SAN configuration updates. This key is required for all Xsan SANs. There should be one entry for each Xsan MDC. Example URL: ldaps://mdc1.example.com:389",
+    "helpText": null,
+    "name": "sanConfigURLs",
+    "displayName": "San Config URLs",
+    "maximumCount": 600,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "com.apple.xsan_com.apple.xsan",
+            "parentSettingId": "com.apple.xsan_com.apple.xsan"
+        }
+    ],
+    "dependedOnBy": []
+}

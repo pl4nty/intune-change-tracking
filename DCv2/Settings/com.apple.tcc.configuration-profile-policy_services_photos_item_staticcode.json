@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Privacy Preferences Policy Control"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "Services/Photos/[{0}]/StaticCode",
+    "rootDefinitionId": "com.apple.tcc.configuration-profile-policy_com.apple.tcc.configuration-profile-policy",
+    "categoryId": "82d173f9-ba0b-4b09-bbb8-68cba4916162",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.tcc.configuration-profile-policy_services_photos_item_staticcode",
+    "description": "If true, statically validate the code requirement. Used only if the process invalidates its dynamic code signature.",
+    "helpText": null,
+    "name": "Services_Photos_item_StaticCode",
+    "displayName": "Static Code",
+    "defaultOptionId": "com.apple.tcc.configuration-profile-policy_services_photos_item_staticcode_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.tcc.configuration-profile-policy_services_photos_item_staticcode_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.tcc.configuration-profile-policy_services_photos",
+                    "parentSettingId": "com.apple.tcc.configuration-profile-policy_services_photos"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.tcc.configuration-profile-policy_services_photos_item_staticcode_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.tcc.configuration-profile-policy_services_photos",
+                    "parentSettingId": "com.apple.tcc.configuration-profile-policy_services_photos"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

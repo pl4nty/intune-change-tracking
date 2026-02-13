@@ -1,0 +1,51 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "AirPlay"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "AllowList",
+    "rootDefinitionId": "com.apple.airplay_com.apple.airplay",
+    "categoryId": "132003c7-1130-4f59-96a7-dfb6adb8bd5d",
+    "settingUsage": "configuration",
+    "uxBehavior": "contextPane",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.airplay_allowlist",
+    "description": "If present, only AirPlay destinations in this list are available to the device. This allow list applies to supervised devices.",
+    "helpText": null,
+    "name": "AllowList",
+    "displayName": "Allow List",
+    "childIds": [
+        "com.apple.airplay_allowlist_item_deviceid",
+        "com.apple.airplay_allowlist_item_devicename"
+    ],
+    "maximumCount": 2147483647,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [
+        {
+            "dependentOn": "com.apple.airplay_com.apple.airplay",
+            "parentSettingId": "com.apple.airplay_com.apple.airplay"
+        }
+    ],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "com.apple.airplay_allowlist_item_deviceid",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.airplay_allowlist_item_devicename",
+            "required": false
+        }
+    ]
+}

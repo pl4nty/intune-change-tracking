@@ -1,0 +1,48 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.SensorsBlockedForUrls",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.sensorsblockedforurls",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "smallTextBox",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.sensorsblockedforurls",
+    "description": "Define a list of sites, based on URL patterns, that can't access sensors such as motion and light sensors.\n\nIf you don't configure this policy, the global default value from the \"DefaultSensorsSetting\" policy (if set) or the user's personal configuration is used for all sites.\n\nFor URL patterns that don't match this policy, the following order of precedence is used: The \"SensorsAllowedForUrls\" policy (if there is a match), the \"DefaultSensorsSetting\" policy (if set), or the user's personal settings.\n\nThe URL patterns defined in this policy can't conflict with those configured in the \"SensorsAllowedForUrls\" policy. You can't allow and block a URL.\n\nFor detailed information about valid URL patterns, please see <a href=\"https://go.microsoft.com/fwlink/?linkid=2095322\">https://go.microsoft.com/fwlink/?linkid=2095322</a>.",
+    "helpText": null,
+    "name": "SensorsBlockedForUrls",
+    "displayName": "Block access to sensors on specific sites",
+    "maximumCount": 600,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 0,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

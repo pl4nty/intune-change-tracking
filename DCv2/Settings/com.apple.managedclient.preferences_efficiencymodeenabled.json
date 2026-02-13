@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#efficiencymodeenabled"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "EfficiencyModeEnabled",
+    "rootDefinitionId": "com.apple.managedclient.preferences_efficiencymodeenabled",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_efficiencymodeenabled",
+    "description": "Enables efficiency mode which helps extend battery life by saving computer resources. By default, efficiency mode is enabled for devices with a battery and disabled otherwise.\n\nIf you enable this policy, efficiency mode will become active according to the setting chosen by the user. You can configure the efficiency mode setting using the \"EfficiencyMode\" policy. If the device does not have a battery, efficiency mode will always be active.\n\nIf you disable this policy, efficiency mode will never become active. The \"EfficiencyMode\" and \"EfficiencyModeOnPowerEnabled\" policies will have no effect.\n\nIf you don't configure this policy, efficiency mode will be enabled for devices with a battery and disabled otherwise. Users can choose the efficiency mode option they want in edge://settings/system.\n\nLearn more about efficiency mode: https://go.microsoft.com/fwlink/?linkid=2173921",
+    "helpText": null,
+    "name": "EfficiencyModeEnabled",
+    "displayName": "Efficiency mode enabled",
+    "defaultOptionId": "com.apple.managedclient.preferences_efficiencymodeenabled_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_efficiencymodeenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_efficiencymodeenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

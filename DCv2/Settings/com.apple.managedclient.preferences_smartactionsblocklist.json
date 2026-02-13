@@ -1,0 +1,50 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#smartactionsblocklist"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "SmartActionsBlockList",
+    "rootDefinitionId": "com.apple.managedclient.preferences_smartactionsblocklist",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_smartactionsblocklist",
+    "description": "List specific services, such as PDFs, and websites that don't show smart actions. (Smart actions are actions like \"define\" which are available in full and mini context menus in Microsoft Edge.)\n\nIf you enable the policy:\n   - The smart action in the mini and full context menu will be disabled for all profiles for services that match the given list.\n   - Users will not see the smart action in the mini and full context menu on text selection for services that match the given list.\n   - In Microsoft Edge settings, the smart action in the mini and full context menu will be disabled for services that match the given list.\n\nIf you disable or don't configure this policy:\n   - The smart action in the mini and full context menu will be enabled for all profiles.\n   - Users will see the smart action in the mini and full context menu on text selection.\n   - In Microsoft Edge settings, the smart action in the mini and full context menu will be enabled.\n\nPolicy options mapping:\n\n* smart_actions (smart_actions) = Smart actions in pdfs and on websites\n\n* smart_actions_website (smart_actions_website) = Smart actions on websites\n\n* smart_actions_pdf (smart_actions_pdf) = Smart actions in PDF\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "SmartActionsBlockList",
+    "displayName": "Block smart actions for a list of services",
+    "maximumCount": 600,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

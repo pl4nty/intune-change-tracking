@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.DelayNavigationsForInitialSiteListDownload",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.delaynavigationsforinitialsitelistdownload",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.delaynavigationsforinitialsitelistdownload",
+    "description": "Lets you specify whether Microsoft Edge tabs wait to navigate until the browser has downloaded the initial Enterprise Mode Site List. This setting is intended for the scenario where the browser home page should load in Internet Explorer mode, and it is important that is does so on browser first run after IE mode is enabled. If this scenario does not exist, we recommend not enabling this setting because it can negatively impact the performance of loading the home page. The setting only applies when Microsoft Edge does not have a cached Enterprise Mode Site List, such as on browser first run after IE mode is enabled.\n\nThis setting works in conjunction with:\n\"InternetExplorerIntegrationLevel\" is set to 'IEMode'\nand one of either the\n\"InternetExplorerIntegrationSiteList\" or the \"InternetExplorerIntegrationCloudSiteList\" policy where the list has at least one entry.\n\nThe timeout behavior of this policy can be configured with the \"NavigationDelayForInitialSiteListDownloadTimeout\" policy.\n\nIf you set this policy to 'All', when Microsoft Edge does not have a cached version of the Enterprise Mode Site List, tabs delay navigating until the browser has downloaded the site list. Sites configured to open in Internet Explorer mode by the site list will load in Internet Explorer mode, even during the initial navigation of the browser. Sites that cannot possibly be configured to open in Internet Explorer, such as any site with a scheme other than http:, https:, file:, or ftp: do not delay navigating and load immediately in Edge mode.\n\nWhen used in conjunction with the \"InternetExplorerIntegrationCloudSiteList\" policy, during first launch of Microsoft Edge, there is a delay because implicit sign-in needs to finish before Microsoft Edge attempts to download the site list from the Microsoft cloud, since this requires authentication to the cloud service.\n\nIf you set this policy to 'None' or don't configure it, when Microsoft Edge does not have a cached version of the Enterprise Mode Site List, tabs will navigate immediately, and not wait for the browser to download the Enterprise Mode Site List. Sites configured to open in Internet Explorer mode by the site list will open in Microsoft Edge mode until the browser has finished downloading the Enterprise Mode Site List.\n\nPolicy options mapping:\n\n* None (0) = None\n\n* All (1) = All eligible navigations\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "DelayNavigationsForInitialSiteListDownload",
+    "displayName": "Require that the Enterprise Mode Site List is available before tab navigation",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.delaynavigationsforinitialsitelistdownload_none",
+            "description": null,
+            "helpText": null,
+            "name": "None",
+            "displayName": "None",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.delaynavigationsforinitialsitelistdownload_all",
+            "description": null,
+            "helpText": null,
+            "name": "All eligible navigations",
+            "displayName": "All eligible navigations",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

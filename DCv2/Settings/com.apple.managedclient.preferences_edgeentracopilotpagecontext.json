@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgeentracopilotpagecontext"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "EdgeEntraCopilotPageContext",
+    "rootDefinitionId": "com.apple.managedclient.preferences_edgeentracopilotpagecontext",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_edgeentracopilotpagecontext",
+    "description": "This policy controls access to page contents for Microsoft Copilot with enterprise data protection (EDP) in the Microsoft Edge sidebar for the web tab only. This policy controls whether Microsoft Copilot can perform page summarization and similar contextual queries.\n\nThis policy applies only to Microsoft Entra ID Microsoft Edge profiles. It does not apply to MSA Microsoft Edge profiles. For users with M365 Copilot license, this control applies only to the web tab in the Microsoft Edge sidebar and not the work tab.\n\nIf you enable this policy, Copilot will have access to page content when logged in with Entra ID.\n\nIf this policy is not configured, the default behavior for non-EU countries is that access is initially enabled. For EU countries, the default behavior is that access is initially disabled. In both cases, if the policy is not configured, users can enable or disable Copilot's access to page content using the setting toggle in Microsoft Edge.\n\nIf you disable this policy, Copilot will not be able to access page contents.\n\nExceptions to the preceding behavior include when a page is protected using data loss prevention (DLP) measures. In that case, the page content will not be shared to Copilot even when this policy is enabled. This behavior ensures the integrity of DLP.\n\nLearn more about Copilot's data usage and consent at https://go.microsoft.com/fwlink/?linkid=2288056",
+    "helpText": null,
+    "name": "EdgeEntraCopilotPageContext",
+    "displayName": "Control access to page content for Entra ID Profiles accessing Microsoft Copilot with Enterprise Data Protection (EDP) from the Microsoft Edge sidebar",
+    "defaultOptionId": "com.apple.managedclient.preferences_edgeentracopilotpagecontext_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_edgeentracopilotpagecontext_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_edgeentracopilotpagecontext_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

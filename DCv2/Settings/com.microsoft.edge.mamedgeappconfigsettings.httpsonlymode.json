@@ -1,0 +1,89 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.HttpsOnlyMode",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.httpsonlymode",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.httpsonlymode",
+    "description": "This policy controls whether users can enable HTTPS-Only Mode (Always Use Secure Connections) in Settings. HTTPS-Only Mode attempts to upgrade all navigations to HTTPS.\n\nIf this setting isn't set or is set to allowed, users are able to enable HTTPS-Only Mode.\nIf this setting is set to `disallowed`, users can't enable HTTPS-Only Mode.\nIf this setting is set to force_enabled, HTTPS-Only Mode is enabled in Strict mode and users can't disable it.\nIf this setting is set to force_balanced_enabled, HTTPS-Only Mode is enabled in Balanced mode and users can't disable it.\n\nIf you set this policy to a value that isn't supported by the version of Microsoft Edge that receives the policy, Microsoft Edge defaults to the allowed setting.\n\nThe separate HttpAllowlist policy can be used to exempt specific hostnames or hostname patterns from being upgraded to HTTPS by this feature.\n\nPolicy options mapping:\n\n* allowed (allowed) = Don't restrict users' HTTPS-Only Mode setting\n\n* disallowed (disallowed) = Don't allow users to enable any HTTPS-Only Mode\n\n* force_enabled (force_enabled) = Force enable HTTPS-Only Mode in Strict mode\n\n* force_balanced_enabled (force_balanced_enabled) = Force enable HTTPS-Only Mode in Balanced Mode\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "HttpsOnlyMode",
+    "displayName": "Allow HTTPS-Only Mode to be enabled",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.httpsonlymode_allowed",
+            "description": null,
+            "helpText": null,
+            "name": "Don't restrict users' HTTPS-Only Mode setting",
+            "displayName": "Don't restrict users' HTTPS-Only Mode setting",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "allowed"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.httpsonlymode_disallowed",
+            "description": null,
+            "helpText": null,
+            "name": "Don't allow users to enable any HTTPS-Only Mode",
+            "displayName": "Don't allow users to enable any HTTPS-Only Mode",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "disallowed"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.httpsonlymode_force_enabled",
+            "description": null,
+            "helpText": null,
+            "name": "Force enable HTTPS-Only Mode in Strict mode",
+            "displayName": "Force enable HTTPS-Only Mode in Strict mode",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "force_enabled"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.httpsonlymode_force_balanced_enabled",
+            "description": null,
+            "helpText": null,
+            "name": "Force enable HTTPS-Only Mode in Balanced Mode",
+            "displayName": "Force enable HTTPS-Only Mode in Balanced Mode",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "force_balanced_enabled"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

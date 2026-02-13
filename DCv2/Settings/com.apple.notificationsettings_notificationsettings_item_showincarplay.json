@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Notifications"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "NotificationSettings/[{0}]/ShowInCarPlay",
+    "rootDefinitionId": "com.apple.notificationsettings_com.apple.notificationsettings",
+    "categoryId": "ff90bf4b-0583-4761-a1c4-5aa4b50c5872",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.notificationsettings_notificationsettings_item_showincarplay",
+    "description": "If true, enables notifications in CarPlay for this app. Available in iOS 12 and later.",
+    "helpText": null,
+    "name": "NotificationSettings_item_ShowInCarPlay",
+    "displayName": "Show In Car Play",
+    "defaultOptionId": "com.apple.notificationsettings_notificationsettings_item_showincarplay_true",
+    "applicability": {
+        "description": null,
+        "platform": "iOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.notificationsettings_notificationsettings_item_showincarplay_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.notificationsettings_notificationsettings",
+                    "parentSettingId": "com.apple.notificationsettings_notificationsettings"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.notificationsettings_notificationsettings_item_showincarplay_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.notificationsettings_notificationsettings",
+                    "parentSettingId": "com.apple.notificationsettings_notificationsettings"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

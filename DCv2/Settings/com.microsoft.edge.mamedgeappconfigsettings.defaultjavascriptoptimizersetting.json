@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Content settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.DefaultJavaScriptOptimizerSetting",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.defaultjavascriptoptimizersetting",
+    "categoryId": "92d69c43-75ac-49b1-a3ef-9350079eef86",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.defaultjavascriptoptimizersetting",
+    "description": "Allows you to set whether Microsoft Edge will run the v8 JavaScript engine with more advanced JavaScript optimizations enabled.\n\nDisabling JavaScript optimizations (by setting this policy's value to 2) will mean that Microsoft Edge may render web content more slowly.\n\nThis policy can be overridden for specific URL patterns using the \"JavaScriptOptimizerAllowedForSites\" and \"JavaScriptOptimizerBlockedForSites\" policies.\n\nIf you don't configure this policy, JavaScript optimizations are enabled.\n\nPolicy options mapping:\n\n* AllowJavaScriptOptimizer (1) = Enable advanced JavaScript optimizations on all sites\n\n* BlockJavaScriptOptimizer (2) = Disable advanced JavaScript optimizations on all sites\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "DefaultJavaScriptOptimizerSetting",
+    "displayName": "Control use of JavaScript optimizers",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.defaultjavascriptoptimizersetting_allowjavascriptoptimizer",
+            "description": null,
+            "helpText": null,
+            "name": "Enable advanced JavaScript optimizations on all sites",
+            "displayName": "Enable advanced JavaScript optimizations on all sites",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.defaultjavascriptoptimizersetting_blockjavascriptoptimizer",
+            "description": null,
+            "helpText": null,
+            "name": "Disable advanced JavaScript optimizations on all sites",
+            "displayName": "Disable advanced JavaScript optimizations on all sites",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

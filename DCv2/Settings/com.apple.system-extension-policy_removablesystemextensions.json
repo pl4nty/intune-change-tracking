@@ -1,0 +1,51 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "System Extensions"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "RemovableSystemExtensions",
+    "rootDefinitionId": "com.apple.system-extension-policy_com.apple.system-extension-policy",
+    "categoryId": "cb33668b-933f-4424-8d2d-8bdf0e61bddd",
+    "settingUsage": "configuration",
+    "uxBehavior": "contextPane",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.system-extension-policy_removablesystemextensions",
+    "description": "A dictionary of system extensions that are allowed to remove themselves from the machine. The dictionary maps team identifiers (keys) to arrays of bundle identifiers, where the bundle identifier defines the system extension. An application using the OSSystemExtensionDeactivationRequest API can deactivate the specified system extensions without requiring an administrator to authorize the operation. Available in macOS 12 and later.",
+    "helpText": null,
+    "name": "RemovableSystemExtensions",
+    "displayName": "Removable System Extensions",
+    "childIds": [
+        "com.apple.system-extension-policy_removablesystemextensions_generickey",
+        "com.apple.system-extension-policy_removablesystemextensions_generickey_keytobereplaced"
+    ],
+    "maximumCount": 2147483647,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm"
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [
+        {
+            "dependentOn": "com.apple.system-extension-policy_com.apple.system-extension-policy",
+            "parentSettingId": "com.apple.system-extension-policy_com.apple.system-extension-policy"
+        }
+    ],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "com.apple.system-extension-policy_removablesystemextensions_generickey",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.system-extension-policy_removablesystemextensions_generickey_keytobereplaced",
+            "required": true
+        }
+    ]
+}

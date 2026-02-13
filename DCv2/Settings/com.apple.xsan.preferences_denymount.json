@@ -1,0 +1,52 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Xsan Preferences"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "denyMount",
+    "rootDefinitionId": "com.apple.xsan.preferences_com.apple.xsan.preferences",
+    "categoryId": "fd3717c1-dcf8-4038-b7f7-4ad3359a9d32",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.xsan.preferences_denymount",
+    "description": "An array of Xsan or StorNext volume names. If no Only Mount array is present, the Xsan client automatically attempts to mount all SAN volumes except the volumes in this array. The system administrator can mount those volumes manually by using the xsanctl(8) mount command.",
+    "helpText": null,
+    "name": "denyMount",
+    "displayName": "Deny Mount",
+    "maximumCount": 600,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "com.apple.xsan.preferences_com.apple.xsan.preferences",
+            "parentSettingId": "com.apple.xsan.preferences_com.apple.xsan.preferences"
+        }
+    ],
+    "dependedOnBy": []
+}

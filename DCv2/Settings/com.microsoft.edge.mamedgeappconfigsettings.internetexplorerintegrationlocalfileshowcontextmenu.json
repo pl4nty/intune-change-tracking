@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.InternetExplorerIntegrationLocalFileShowContextMenu",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.internetexplorerintegrationlocalfileshowcontextmenu",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.internetexplorerintegrationlocalfileshowcontextmenu",
+    "description": "This policy controls the visibility of the 'Open link in new Internet Explorer mode tab' option on the context menu for file:// links.\n\nThis setting works in conjunction with:\n\"InternetExplorerIntegrationLevel\" is set to 'IEMode'.\n\nIf you set this policy to true, the 'Open link in new Internet Explorer mode tab' context menu item will be available for file:// links.\n\nIf you set this policy to false or don't configure it, the context menu item will not be added.\n\nIf the \"InternetExplorerIntegrationReloadInIEModeAllowed\" policy allows users to reload sites in Internet Explorer mode, then the 'Open link in new Internet Explorer mode tab' context menu item will be available for all links, except links to sites explicitly configured by the site list to use Microsoft Edge mode. In this case, if you set this policy to true, the context menu item will be available for file:// links even for sites configured to use Microsoft Edge mode. If you set this policy to false or don't configure it, this policy has no effect.\n\nTo learn more about Internet Explorer mode, see <a href=\"https://go.microsoft.com/fwlink/?linkid=2094210\">https://go.microsoft.com/fwlink/?linkid=2094210</a>",
+    "helpText": null,
+    "name": "InternetExplorerIntegrationLocalFileShowContextMenu",
+    "displayName": "Show context menu to open a file:// link in Internet Explorer mode",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.internetexplorerintegrationlocalfileshowcontextmenu_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.internetexplorerintegrationlocalfileshowcontextmenu_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

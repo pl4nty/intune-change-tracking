@@ -1,0 +1,64 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Defender - Antivirus engine",
+        "Antivirus engine"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/mac-preferences#scan-exclusions"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.wdav/Forced/[0]/mcx_preference_settings/antivirusEngine",
+    "offsetUri": "exclusions",
+    "rootDefinitionId": "com.apple.managedclient.preferences_exclusions",
+    "categoryId": "13467142-14e7-4380-8573-4866e842c7f6",
+    "settingUsage": "configuration",
+    "uxBehavior": "contextPane",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_exclusions",
+    "description": "Entities that have been excluded from the scan. Exclusions can be specified by full paths, extensions, or file names.",
+    "helpText": null,
+    "name": "exclusions",
+    "displayName": "Scan exclusions",
+    "childIds": [
+        "com.apple.managedclient.preferences_exclusions_item_$type",
+        "com.apple.managedclient.preferences_exclusions_item_extension",
+        "com.apple.managedclient.preferences_exclusions_item_isdirectory",
+        "com.apple.managedclient.preferences_exclusions_item_name",
+        "com.apple.managedclient.preferences_exclusions_item_path"
+    ],
+    "maximumCount": 2147483647,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement,microsoftSense"
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "com.apple.managedclient.preferences_exclusions_item_$type",
+            "required": true
+        },
+        {
+            "dependedOnBy": "com.apple.managedclient.preferences_exclusions_item_extension",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.managedclient.preferences_exclusions_item_isdirectory",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.managedclient.preferences_exclusions_item_name",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.managedclient.preferences_exclusions_item_path",
+            "required": false
+        }
+    ]
+}

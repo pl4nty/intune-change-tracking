@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Parental Controls Dictionary"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "parentalControl",
+    "rootDefinitionId": "com.apple.dictionary_com.apple.dictionary",
+    "categoryId": "65087b94-7e45-4d74-a50d-df4377b67499",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.dictionary_parentalcontrol",
+    "description": "If true, enables parental controls dictionary restrictions.",
+    "helpText": null,
+    "name": "parentalControl",
+    "displayName": "Parental Control",
+    "defaultOptionId": "com.apple.dictionary_parentalcontrol_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.dictionary_parentalcontrol_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.dictionary_com.apple.dictionary",
+                    "parentSettingId": "com.apple.dictionary_com.apple.dictionary"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.dictionary_parentalcontrol_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.dictionary_com.apple.dictionary",
+                    "parentSettingId": "com.apple.dictionary_com.apple.dictionary"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

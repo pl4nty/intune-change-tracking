@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Edge Website Typo Protection settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.PreventTyposquattingPromptOverride",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.preventtyposquattingpromptoverride",
+    "categoryId": "fb1e99d0-b921-4b19-9842-17e3e7987528",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.preventtyposquattingpromptoverride",
+    "description": "This policy setting lets you decide whether users can override the Edge Website Typo Protection warnings about potential typosquatting websites.\n\nIf you enable this setting, users can't ignore Edge Website Typo Protection warnings and they are blocked from continuing to the site.\n\nIf you disable or don't configure this setting, users can ignore Edge Website Typo Protection warnings and continue to the site.\n\nThis will only take effect when TyposquattingCheckerEnabled policy is not set or set to enabled.\n\nThis policy is available only on Windows instances that are joined to a Microsoft Active Directory domain, Windows 10 Pro or Enterprise instances that enrolled for device management, or macOS instances that are that are managed via MDM or joined to a domain via MCX.",
+    "helpText": null,
+    "name": "PreventTyposquattingPromptOverride",
+    "displayName": "Prevent bypassing Edge Website Typo Protection prompts for sites",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.preventtyposquattingpromptoverride_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.preventtyposquattingpromptoverride_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

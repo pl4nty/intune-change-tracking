@@ -1,0 +1,64 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge - All",
+        "Microsoft Edge Apple",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#defaultsensorssetting"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "DefaultSensorsSetting",
+    "rootDefinitionId": "com.apple.managedclient.preferences_defaultsensorssetting",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_defaultsensorssetting",
+    "description": "Set whether websites can access and use sensors such as motion and light sensors. You can completely block or allow websites to get access to sensors.\n\nSetting the policy to 1 lets websites access and use sensors. Setting the policy to 2 denies acess to sensors.\n\nYou can override this policy for specific URL patterns by using the \"SensorsAllowedForUrls\" and \"SensorsBlockedForUrls\" policies.\n\nIf you don't configure this policy, websites can access and use sensors, and users can change this setting. This is the global default for \"SensorsAllowedForUrls\" and \"SensorsBlockedForUrls\".\n\nPolicy options mapping:\n\n* AllowSensors (1) = Allow sites to access sensors\n\n* BlockSensors (2) = Do not allow any site to access sensors\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "DefaultSensorsSetting",
+    "displayName": "Default sensors setting",
+    "defaultOptionId": "com.apple.managedclient.preferences_defaultsensorssetting_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultsensorssetting_0",
+            "description": null,
+            "helpText": null,
+            "name": "Allow sites to access sensors",
+            "displayName": "Allow sites to access sensors",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultsensorssetting_1",
+            "description": null,
+            "helpText": null,
+            "name": "Do not allow any site to access sensors",
+            "displayName": "Do not allow any site to access sensors",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

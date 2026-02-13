@@ -1,0 +1,50 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#javascriptjitallowedforsites"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "JavaScriptJitAllowedForSites",
+    "rootDefinitionId": "com.apple.managedclient.preferences_javascriptjitallowedforsites",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_javascriptjitallowedforsites",
+    "description": "Allows you to set a list of site url patterns that specify sites which are allowed to run JavaScript with JIT (Just In Time) compiler enabled.\n\nFor detailed information on valid site url patterns, please see https://go.microsoft.com/fwlink/?linkid=2095322. * is not an accepted value for this policy.\n\nJavaScript JIT policy exceptions will only be enforced at a site granularity (eTLD+1). A policy set for only subdomain.contoso.com will not correctly apply to contoso.com or subdomain.contoso.com since they both resolve to the same eTLD+1 (contoso.com) for which there is no policy. In this case, policy must be set on contoso.com to apply correctly for both contoso.com and subdomain.contoso.com.\n\nThis policy applies on a frame-by-frame basis and not based on top level origin url alone, so e.g. if contoso.com is listed in the JavaScriptJitAllowedForSites policy but contoso.com loads a frame containing fabrikam.com then contoso.com will have JavaScript JIT enabled, but fabrikam.com will use the policy from \"DefaultJavaScriptJitSetting\", if set, or default to JavaScript JIT enabled.\n\nIf you don't configure this policy for a site then the policy from \"DefaultJavaScriptJitSetting\" applies to the site, if set, otherwise Javascript JIT is enabled for the site.",
+    "helpText": null,
+    "name": "JavaScriptJitAllowedForSites",
+    "displayName": "Allow JavaScript to use JIT on these sites",
+    "maximumCount": 600,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

@@ -1,0 +1,64 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Accounts",
+        "Block",
+        "Modification",
+        "User and Accounts",
+        "Users and Accounts"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "/com.android.deviceRestrictionPolicy/",
+    "offsetUri": "/accountsBlockModification/",
+    "rootDefinitionId": "com.android.devicerestrictionpolicy.accountsblockmodification",
+    "categoryId": "aad0d3ef-88f5-4b22-831b-27093eafbc64",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.android.devicerestrictionpolicy.accountsblockmodification",
+    "description": "If 'True', prevents users from updating or changing accounts when in kiosk mode. If 'False', Intune doesn't change or update this setting. By default, the OS might allow users to update user accounts on the device. Available for dedicated devices.",
+    "helpText": null,
+    "name": "AccountsBlockModification",
+    "displayName": "Block account changes",
+    "defaultOptionId": "com.android.devicerestrictionpolicy.accountsblockmodification_false",
+    "applicability": {
+        "description": null,
+        "platform": "androidEnterprise",
+        "deviceMode": "none",
+        "technologies": "android"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.android.devicerestrictionpolicy.accountsblockmodification_true",
+            "description": "true",
+            "helpText": null,
+            "name": "True",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.accountsblockmodification_false",
+            "description": "false",
+            "helpText": null,
+            "name": "False",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

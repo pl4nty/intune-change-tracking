@@ -1,0 +1,48 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Network settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.LocalNetworkAccessBlockedForUrls",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.localnetworkaccessblockedforurls",
+    "categoryId": "3fbd3b29-bafd-4adf-89e4-3be612dee275",
+    "settingUsage": "configuration",
+    "uxBehavior": "smallTextBox",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.localnetworkaccessblockedforurls",
+    "description": "List of URL patterns. Requests initiated from websites served by matching origins are blocked from issuing Local Network Access requests.\n\nIf an origin is covered by both this policy and by \"LocalNetworkAccessAllowedForUrls\", this policy takes precedence.\n\nDepending on the stage of the rollout of Local Network Access, LocalNetworkAccessRestrictionsEnabled may also need to be enabled for this policy to block Local Network Access requests.\n\nFor origins not covered by the patterns specified here, the user's personal configuration will apply.\n\nFor detailed information on valid URL patterns, please see https://learn.microsoft.com/deployedge/edge-learnmore-ent-policy-url-patterns.\n\nNote: This policy improves local network security by blocking specified public websites from accessing private IP addresses. It helps prevent unauthorized external sites from reaching internal resources unless explicitly permitted. For more information about Local Network Access, see https://wicg.github.io/local-network-access/.",
+    "helpText": null,
+    "name": "LocalNetworkAccessBlockedForUrls",
+    "displayName": "Block sites from making requests to local network endpoints.",
+    "maximumCount": 600,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 0,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

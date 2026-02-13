@@ -1,0 +1,43 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Cloud delivered protection preferences"
+    ],
+    "infoUrls": [
+        "https://learn.microsoft.com/en-us/defender-endpoint/mac-preferences#security-intelligence-update-interval-in-seconds"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.wdav/Forced/[0]/mcx_preference_settings/cloudService",
+    "offsetUri": "definitionUpdatesInterval",
+    "rootDefinitionId": "com.apple.managedclient.preferences_definitionupdatesinterval",
+    "categoryId": "93099bd4-c685-434b-9d72-f0cb6db5e753",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_definitionupdatesinterval",
+    "description": "Specifies the time interval (in seconds) after which security intelligence updates will be checked.",
+    "helpText": null,
+    "name": "definitionUpdatesInterval",
+    "displayName": "Security intelligence update interval (in seconds)",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 86400,
+        "minimumValue": 60
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 28800
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

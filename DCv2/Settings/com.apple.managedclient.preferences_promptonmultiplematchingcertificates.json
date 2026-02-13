@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#promptonmultiplematchingcertificates"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "PromptOnMultipleMatchingCertificates",
+    "rootDefinitionId": "com.apple.managedclient.preferences_promptonmultiplematchingcertificates",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_promptonmultiplematchingcertificates",
+    "description": "This policy controls whether the user is prompted to select a client certificate when more than one certificate matches \"AutoSelectCertificateForUrls\".\nIf this policy is set to True, the user is prompted to select a client certificate whenever the auto-selection policy matches multiple certificates.\nIf this policy is set to False or not set, the user may only be prompted when no certificate matches the auto-selection.",
+    "helpText": null,
+    "name": "PromptOnMultipleMatchingCertificates",
+    "displayName": "Prompt the user to select a certificate when multiple certificates match",
+    "defaultOptionId": "com.apple.managedclient.preferences_promptonmultiplematchingcertificates_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_promptonmultiplematchingcertificates_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_promptonmultiplematchingcertificates_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

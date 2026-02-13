@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Smart Card"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "tokenRemovalAction",
+    "rootDefinitionId": "com.apple.security.smartcard_com.apple.security.smartcard",
+    "categoryId": "f4a8384f-9e4e-4fc6-9ee2-28fa5260347a",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.security.smartcard_tokenremovalaction",
+    "description": "If set to Enabled, the screen saver is enabled when the SmartCard is removed. Available in macOS 10.13.4 and later.",
+    "helpText": null,
+    "name": "tokenRemovalAction",
+    "displayName": "Token Removal Action",
+    "defaultOptionId": "com.apple.security.smartcard_tokenremovalaction_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.security.smartcard_tokenremovalaction_0",
+            "description": null,
+            "helpText": null,
+            "name": "0",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.security.smartcard_com.apple.security.smartcard",
+                    "parentSettingId": "com.apple.security.smartcard_com.apple.security.smartcard"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.security.smartcard_tokenremovalaction_1",
+            "description": null,
+            "helpText": null,
+            "name": "1",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.security.smartcard_com.apple.security.smartcard",
+                    "parentSettingId": "com.apple.security.smartcard_com.apple.security.smartcard"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

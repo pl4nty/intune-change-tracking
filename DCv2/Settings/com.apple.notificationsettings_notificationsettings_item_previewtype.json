@@ -1,0 +1,89 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Notifications"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "NotificationSettings/[{0}]/PreviewType",
+    "rootDefinitionId": "com.apple.notificationsettings_com.apple.notificationsettings",
+    "categoryId": "ff90bf4b-0583-4761-a1c4-5aa4b50c5872",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.notificationsettings_notificationsettings_item_previewtype",
+    "description": "The type previews for notifications. This key overrides the value at Settings>Notifications>Show Previews. Available in iOS 14 and later.",
+    "helpText": null,
+    "name": "NotificationSettings_item_PreviewType",
+    "displayName": "Preview Type",
+    "defaultOptionId": "com.apple.notificationsettings_notificationsettings_item_previewtype_0",
+    "applicability": {
+        "description": null,
+        "platform": "iOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.notificationsettings_notificationsettings_item_previewtype_0",
+            "description": null,
+            "helpText": null,
+            "name": "0",
+            "displayName": "Always: Previews will be shown when the device is locked and unlocked",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.notificationsettings_notificationsettings",
+                    "parentSettingId": "com.apple.notificationsettings_notificationsettings"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.notificationsettings_notificationsettings_item_previewtype_1",
+            "description": null,
+            "helpText": null,
+            "name": "1",
+            "displayName": "When Unlocked: Previews will only be shown when the device is unlocked",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.notificationsettings_notificationsettings",
+                    "parentSettingId": "com.apple.notificationsettings_notificationsettings"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.notificationsettings_notificationsettings_item_previewtype_2",
+            "description": null,
+            "helpText": null,
+            "name": "2",
+            "displayName": "Never: Previews will never be shown",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.notificationsettings_notificationsettings",
+                    "parentSettingId": "com.apple.notificationsettings_notificationsettings"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

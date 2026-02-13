@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Network Usage Rules"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "ApplicationRules/[{0}]/AllowCellularData",
+    "rootDefinitionId": "com.apple.networkusagerules_com.apple.networkusagerules",
+    "categoryId": "06a85f5b-2614-4467-91cf-4a64d0c9326f",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.networkusagerules_applicationrules_item_allowcellulardata",
+    "description": "If false, disables cellular data for all matching managed apps.",
+    "helpText": null,
+    "name": "ApplicationRules_item_AllowCellularData",
+    "displayName": "Allow Cellular Data",
+    "defaultOptionId": "com.apple.networkusagerules_applicationrules_item_allowcellulardata_true",
+    "applicability": {
+        "description": null,
+        "platform": "iOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.networkusagerules_applicationrules_item_allowcellulardata_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.networkusagerules_applicationrules",
+                    "parentSettingId": "com.apple.networkusagerules_applicationrules"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.networkusagerules_applicationrules_item_allowcellulardata_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.networkusagerules_applicationrules",
+                    "parentSettingId": "com.apple.networkusagerules_applicationrules"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

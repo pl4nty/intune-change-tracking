@@ -1,0 +1,62 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Outlook"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployoffice/mac/preferences-outlook#disable-import"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Outlook/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "DisableImport",
+    "rootDefinitionId": "com.apple.managedclient.preferences_disableimport",
+    "categoryId": "191a84f2-13b5-4609-808f-8b743b7f0247",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_disableimport",
+    "description": "Prevent users importing data from the local file system.",
+    "helpText": null,
+    "name": "DisableImport",
+    "displayName": "Disable import from OLM and PST files",
+    "defaultOptionId": "com.apple.managedclient.preferences_disableimport_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_disableimport_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_disableimport_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

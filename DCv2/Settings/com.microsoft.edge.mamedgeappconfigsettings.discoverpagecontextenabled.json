@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.DiscoverPageContextEnabled",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.discoverpagecontextenabled",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.discoverpagecontextenabled",
+    "description": "This policy has been obsoleted as of Edge 127. Two new Edge Policies have taken its place. Those policies are CopilotPageContext (Control Copilot access to page contents for AAD profiles), and CopilotCDPPageContext (Control Copilot with Commercial Data Protection access to page contents for AAD profiles).\n\nThis policy did not allow for separate control of Copilot and Copilot with Commercial Data Protection. The new policies allow separate control of these versions of Copilot. The new policies also allow admins to force-enable Copilot access to Edge page contents by enabling the policy, whereas DiscoverPageContextEnabled only allowed force-disabling of Copilot page access.\n\nThis policy controls Discover access to page contents for AAD profiles. Discover is an extension that hosts Bing Chat. In order to summarize pages and interact with text selections, it needs to be able to access the page contents. When enabled, page contents will be sent to Bing. This policy does not affect MSA profiles.\n\nIf you enable or don't configure this policy, Discover will have access to page contents.\n\nIf you disable this policy, Discover will not be able to access page contents.",
+    "helpText": null,
+    "name": "DiscoverPageContextEnabled",
+    "displayName": "Enable Discover access to page contents for AAD profiles (Obsolete)",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.discoverpagecontextenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.discoverpagecontextenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

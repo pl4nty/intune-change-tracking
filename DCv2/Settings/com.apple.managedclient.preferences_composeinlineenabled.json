@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#composeinlineenabled"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "ComposeInlineEnabled",
+    "rootDefinitionId": "com.apple.managedclient.preferences_composeinlineenabled",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_composeinlineenabled",
+    "description": "This policy lets you configure Compose in Microsoft Edge. Compose provides help for writing with AI-generated text, which lets the user get ideas for writing. This includes elaborating on text, re-writing, changing tone, formatting the text, and more.\n\nIf you enable or don't configure this policy, Compose can provide text generation for eligible fields, which are text editable and don't have an autocomplete attribute.\n\nIf you disable this policy, Compose will not be able to provide text generation for eligible fields. Compose will still be available for prompt-based text generation through the sidebar and must be managed with either \"EdgeDiscoverEnabled\" policy or \"HubsSidebarEnabled\" policy.",
+    "helpText": null,
+    "name": "ComposeInlineEnabled",
+    "displayName": "Compose is enabled for writing on the web",
+    "defaultOptionId": "com.apple.managedclient.preferences_composeinlineenabled_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_composeinlineenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_composeinlineenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

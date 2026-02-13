@@ -1,0 +1,66 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Wifi direct",
+        "bluetooth",
+        "connection",
+        "Wi-Fi direct",
+        "direct",
+        "Wi-Fi",
+        "General"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "/com.android.deviceRestrictionPolicy/",
+    "offsetUri": "/wifiDirectSettings/",
+    "rootDefinitionId": "com.android.devicerestrictionpolicy.wifidirectsettings",
+    "categoryId": "b6733d23-eadc-486a-abfc-62b78698a16c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.android.devicerestrictionpolicy.wifidirectsettings",
+    "description": "If 'True', blocks Wi-Fi Direct (a direct, peer-to-peer connection between devices using Wi-Fi frequencies). If set to 'False', Intune doesn't change or update this setting. By default, the OS might allow Wi-Fi Direct. Available for fully managed, dedicated, and corporate-owned work profile devices.",
+    "helpText": null,
+    "name": "WifiDirectSettings",
+    "displayName": "Block Wi-Fi Direct",
+    "defaultOptionId": "com.android.devicerestrictionpolicy.wifidirectsettings_allowed",
+    "applicability": {
+        "description": null,
+        "platform": "androidEnterprise",
+        "deviceMode": "none",
+        "technologies": "android"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.android.devicerestrictionpolicy.wifidirectsettings_allowed",
+            "description": "The user is allowed to use Wi-Fi direct.",
+            "helpText": null,
+            "name": "ALLOW_WIFI_DIRECT",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "ALLOW_WIFI_DIRECT"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.wifidirectsettings_disallowed",
+            "description": "The user is not allowed to use Wi-Fi direct. A NonComplianceDetail with API_LEVEL is reported if the Android version is less than 13.",
+            "helpText": null,
+            "name": "DISALLOW_WIFI_DIRECT",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "DISALLOW_WIFI_DIRECT"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

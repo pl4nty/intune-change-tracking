@@ -1,0 +1,49 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Defender - EDR preferences",
+        "Endpoint Detection and Response (EDR) preferences"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/mac-preferences#device-tags"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.wdav/Forced/[0]/mcx_preference_settings/edr",
+    "offsetUri": "tags",
+    "rootDefinitionId": "com.apple.managedclient.preferences_tags",
+    "categoryId": "b77a3a7b-6fab-4240-b5c3-852aa78781d5",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_tags",
+    "description": null,
+    "helpText": null,
+    "name": "tags",
+    "displayName": "Device tags",
+    "childIds": [
+        "com.apple.managedclient.preferences_tags_item_key",
+        "com.apple.managedclient.preferences_tags_item_value"
+    ],
+    "maximumCount": 1,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement,microsoftSense"
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "com.apple.managedclient.preferences_tags_item_key",
+            "required": true
+        },
+        {
+            "dependedOnBy": "com.apple.managedclient.preferences_tags_item_value",
+            "required": true
+        }
+    ]
+}

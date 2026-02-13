@@ -1,0 +1,48 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Private Network Request Settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.InsecurePrivateNetworkRequestsAllowedForUrls",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.insecureprivatenetworkrequestsallowedforurls",
+    "categoryId": "43057320-7058-46d5-86f9-a56c80bbf8b9",
+    "settingUsage": "configuration",
+    "uxBehavior": "smallTextBox",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.insecureprivatenetworkrequestsallowedforurls",
+    "description": "List of URL patterns. Requests initiated from websites served by matching origins aren't subject to Private Network Access checks.\n\nIf this policy isn't set, this policy behaves as if set to the empty list.\n\nFor origins not covered by the patterns specified here, the global default value is used either from the \"InsecurePrivateNetworkRequestsAllowed\" policy, if it's set, or the user's personal configuration otherwise.\n\nFor detailed information on valid URL patterns, see [Filter format for URL list-based policies](/DeployEdge/edge-learnmmore-url-list-filter%20format).\n\nThis policy is obsolete. The previous blanket override has been replaced by the permission-based Local Network Access model, which blocks cross-space requests until users grant explicit consent.",
+    "helpText": null,
+    "name": "InsecurePrivateNetworkRequestsAllowedForUrls",
+    "displayName": "Allow the listed sites to make requests to more-private network endpoints from in an insecure manner (Obsolete)",
+    "maximumCount": 600,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 0,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

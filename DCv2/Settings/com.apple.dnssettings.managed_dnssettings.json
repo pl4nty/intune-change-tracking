@@ -1,0 +1,66 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DNS Settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "DNSSettings",
+    "rootDefinitionId": "com.apple.dnssettings.managed_com.apple.dnssettings.managed",
+    "categoryId": "bbe51018-a17d-46c4-9517-ff45c54d8d18",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.dnssettings.managed_dnssettings",
+    "description": "A dictionary that defines a configuration for an encrypted DNS server.",
+    "helpText": null,
+    "name": "DNSSettings",
+    "displayName": "DNS Settings",
+    "childIds": [
+        "com.apple.dnssettings.managed_dnssettings_dnsprotocol",
+        "com.apple.dnssettings.managed_dnssettings_serveraddresses",
+        "com.apple.dnssettings.managed_dnssettings_servername",
+        "com.apple.dnssettings.managed_dnssettings_serverurl",
+        "com.apple.dnssettings.managed_dnssettings_supplementalmatchdomains"
+    ],
+    "maximumCount": 1,
+    "minimumCount": 0,
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [
+        {
+            "dependentOn": "com.apple.dnssettings.managed_com.apple.dnssettings.managed",
+            "parentSettingId": "com.apple.dnssettings.managed_com.apple.dnssettings.managed"
+        }
+    ],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "com.apple.dnssettings.managed_dnssettings_dnsprotocol",
+            "required": true
+        },
+        {
+            "dependedOnBy": "com.apple.dnssettings.managed_dnssettings_serveraddresses",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.dnssettings.managed_dnssettings_servername",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.dnssettings.managed_dnssettings_serverurl",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.dnssettings.managed_dnssettings_supplementalmatchdomains",
+            "required": false
+        }
+    ]
+}

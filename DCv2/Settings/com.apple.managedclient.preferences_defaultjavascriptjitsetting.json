@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge",
+        "Microsoft Edge Apple"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#defaultjavascriptjitsetting"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "DefaultJavaScriptJitSetting",
+    "rootDefinitionId": "com.apple.managedclient.preferences_defaultjavascriptjitsetting",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_defaultjavascriptjitsetting",
+    "description": "Allows you to set whether Microsoft Edge will run the v8 JavaScript engine with JIT (Just In Time) compiler enabled or not.\n\nDisabling the JavaScript JIT will mean that Microsoft Edge may render web content more slowly, and may also disable parts of JavaScript including WebAssembly. Disabling the JavaScript JIT may allow Microsoft Edge to render web content in a more secure configuration.\n\nThis policy can be overridden for specific URL patterns using the \"JavaScriptJitAllowedForSites\" and \"JavaScriptJitBlockedForSites\" policies.\n\nIf you don't configure this policy, JavaScript JIT is enabled.\n\nPolicy options mapping:\n\n* AllowJavaScriptJit (1) = Allow any site to run JavaScript JIT\n\n* BlockJavaScriptJit (2) = Do not allow any site to run JavaScript JIT\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "DefaultJavaScriptJitSetting",
+    "displayName": "Control use of JavaScript JIT",
+    "defaultOptionId": "com.apple.managedclient.preferences_defaultjavascriptjitsetting_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultjavascriptjitsetting_0",
+            "description": null,
+            "helpText": null,
+            "name": "Allow any site to run JavaScript JIT",
+            "displayName": "Allow any site to run JavaScript JIT",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultjavascriptjitsetting_1",
+            "description": null,
+            "helpText": null,
+            "name": "Do not allow any site to run JavaScript JIT",
+            "displayName": "Do not allow any site to run JavaScript JIT",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}
