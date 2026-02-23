@@ -2,30 +2,28 @@
     "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
     "accessTypes": "none",
     "keywords": [
-        "Endpoint Detection and Response (EDR) preferences"
+        "AirPlay"
     ],
-    "infoUrls": [
-        "https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/mac-preferences#group-identifiers"
-    ],
+    "infoUrls": [],
     "occurrence": null,
-    "baseUri": "PayloadContent/com.microsoft.wdav/Forced/[0]/mcx_preference_settings/edr",
-    "offsetUri": "groupIds",
-    "rootDefinitionId": "com.apple.managedclient.preferences_groupids",
-    "categoryId": "b77a3a7b-6fab-4240-b5c3-852aa78781d5",
+    "baseUri": "",
+    "offsetUri": "AllowList/[{0}]/DeviceName",
+    "rootDefinitionId": "com.apple.airplay_com.apple.airplay",
+    "categoryId": "132003c7-1130-4f59-96a7-dfb6adb8bd5d",
     "settingUsage": "configuration",
     "uxBehavior": "default",
     "visibility": "settingsCatalog,template",
     "riskLevel": "low",
-    "id": "com.apple.managedclient.preferences_groupids",
-    "description": "",
+    "id": "com.apple.airplay_allowlist_item_devicename",
+    "description": "The name of the AirPlay device.\n\nThe system limits the list of visible AirPlay destinations to devices that are present in the `AllowList` field of all installed AirPlay payloads.",
     "helpText": null,
-    "name": "groupIds",
-    "displayName": "Group identifier",
+    "name": "AllowList_item_DeviceName",
+    "displayName": "Device Name",
     "applicability": {
         "description": null,
-        "platform": "macOS",
+        "platform": "iOS,macOS",
         "deviceMode": "none",
-        "technologies": "mdm,appleRemoteManagement,microsoftSense"
+        "technologies": "mdm,appleRemoteManagement"
     },
     "referredSettingInformationList": [],
     "valueDefinition": {
@@ -42,6 +40,11 @@
         "settingValueTemplateReference": null,
         "value": ""
     },
-    "dependentOn": [],
+    "dependentOn": [
+        {
+            "dependentOn": "com.apple.airplay_allowlist",
+            "parentSettingId": "com.apple.airplay_allowlist"
+        }
+    ],
     "dependedOnBy": []
 }

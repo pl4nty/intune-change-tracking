@@ -17,11 +17,10 @@
     "visibility": "settingsCatalog,template",
     "riskLevel": "low",
     "id": "device_vendor_msft_remoteremediation_cloudremediationsettings_autoremediationsettings_settimetoreboot",
-    "description": "Refers to the time in minutes that a device will spend in the recovery environment before attempting to reboot. The maximum time to reboot possible is 72 hours, should be greater than or equal to the retry interval, and only takes effect if auto remediation is on. Otherwise an invalid argument error will be returned and no changes will be made.\r\n This setting is only available to Windows Insiders",
+    "description": "Get/set the time to reboot (in minutes) during auto cloud remediation. The maximum time to reboot possible is 72 hours. \"SetTimeToReboot\" is dependent on \"EnableAutoRemediation\" and only takes effect if \"EnableAutoRemediation\" is set to true. Otherwise an invalid argument error will be returned and no changes will be made.\r\n This setting is only available to Windows Insiders",
     "helpText": "",
     "name": "SetTimeToReboot",
     "displayName": "Set Time To Reboot (Windows Insiders only)",
-    "defaultValue": null,
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
         "description": null,
@@ -35,20 +34,20 @@
             "windowsEnterprise",
             "windowsProfessional",
             "windowsHome",
+            "surfaceHub",
             "windowsEducation",
+            "holoLens",
             "holographicForBusiness",
             "windowsMultiSession",
             "iotEnterprise",
             "windowsCloudN",
-            "windows11SE",
-            "iotEnterpriseSEval",
-            "windowsCPC"
+            "windows11SE"
         ],
         "requiresAzureAd": false,
         "requiredAzureAdTrustType": "none"
     },
     "occurrence": {
-        "minDeviceOccurrence": 0,
+        "minDeviceOccurrence": 1,
         "maxDeviceOccurrence": 1
     },
     "referredSettingInformationList": [],
@@ -56,6 +55,11 @@
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
         "maximumValue": 4320,
         "minimumValue": 1
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 180
     },
     "dependentOn": [
         {
