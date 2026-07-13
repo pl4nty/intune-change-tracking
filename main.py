@@ -16,6 +16,7 @@ import re
 import os
 import hashlib
 import json
+import msal
 import asyncio
 import aiohttp
 from dotenv import load_dotenv
@@ -228,10 +229,11 @@ async def main():
     # The token still rotates on each run, so this self-heals once refreshed.
     source = 'Inventory'
     try:
-        client = GraphServiceClient(IbizaTokenCredential(
-            os.environ['AZURE_INTUNEPORTAL_RT'],
-            'Microsoft_Intune_DeviceSettings',
-            'microsoft.graph'
+        client = GraphServiceClient(BrokerTokenCredential(
+            '5926fc8e-304e-4f59-8bed-58ca97cc39a4',  # Intune portal SPA client
+            'c44b4083-3bb0-49c1-b47d-974e53cbdf3c',  # broker client
+            'AZURE_INTUNEPORTAL_RT',
+            'https://intune.microsoft.com/',
         ), ['https://graph.microsoft.com/.default'])
         data = await client.device_management.with_url('https://graph.microsoft.com/beta/deviceManagement/inventorySettings').get(request_configuration=request_config)
         os.makedirs(Path(output, source))
@@ -420,6 +422,62 @@ class RefreshTokenCredential(object):
                        '--body', data['refresh_token'], '--repo', os.environ['REPO']])
 
         return AccessToken(token=data['access_token'], expires_on=int(time.time()+data['expires_in']))
+
+
+class BrokerTokenCredential(object):
+    # The Intune portal used to mint tokens via its DelegationToken API, but
+    # that endpoint now 404s. Instead redeem a broker-issued refresh token
+    # directly against AAD the way the portal SPA does, via a brokered
+    # (brk_client_id) refresh_token grant.
+    def __init__(self, client_id, brk_client_id, token_envvar, redirect_host):
+        self._client_id = client_id
+        self._brk_client_id = brk_client_id
+        self._token_envvar = token_envvar
+        self._redirect_host = redirect_host  # e.g. https://intune.microsoft.com/
+
+    def get_token(self, *scopes: str, claims=None, tenant_id=None, **kwargs):
+        host = self._redirect_host.split('//')[1].strip('/')
+        session = requests.Session()
+        session.headers.update({
+            'Origin': f'https://{host}',
+            'Referer': self._redirect_host,
+        })
+        app = msal.PublicClientApplication(
+            self._client_id,
+            authority=f'https://login.microsoftonline.com/{os.environ["AZURE_TENANT_ID"]}',
+            client_capabilities=['CP1'],
+            http_client=session,
+        )
+        result = app.acquire_token_by_refresh_token(
+            os.environ[self._token_envvar],
+            scopes=list(scopes),
+            params={'brk_client_id': self._brk_client_id,
+                    'brk_redirect_uri': self._redirect_host},
+            data={
+                'redirect_uri': f'brk-{self._brk_client_id}://{host}',
+                'brk_client_id': self._brk_client_id,
+                'brk_redirect_uri': self._redirect_host,
+            },
+        )
+        if 'access_token' not in result:
+            print(f'::error::broker token request failed: '
+                  f'{result.get("error")}: {result.get("error_description")}')
+            raise Exception('broker token request failed')
+
+        # rotate the stored refresh token; acquire_token_by_refresh_token keeps
+        # the new one in the cache rather than the return value
+        new_rt = result.get('refresh_token')
+        if not new_rt:
+            cached = app.token_cache.find(msal.TokenCache.CredentialType.REFRESH_TOKEN)
+            new_rt = cached[0]['secret'] if cached else None
+        if new_rt:
+            subprocess.run(['gh', 'secret', 'set', self._token_envvar,
+                           '--body', new_rt, '--repo', os.environ['REPO']])
+        else:
+            print('::warning::broker token response had no refresh_token to rotate')
+
+        return AccessToken(token=result['access_token'],
+                           expires_on=int(time.time()+result['expires_in']))
 
 
 asyncio.run(main())
