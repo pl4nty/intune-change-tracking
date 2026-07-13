@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_AllowedCOMAddins",
+        "List of allowed COM/VSTO add-ins registered in HKCU",
+        "\\Microsoft Office 2016\\Security Settings",
+        "User",
+        "software\\policies\\microsoft\\office\\16.0\\common\\security\\allowedcomaddins",
+        "Security Settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/office16v21~Policy~L_MicrosoftOfficeSystem~L_SecuritySettings/L_AllowedCOMAddins",
+    "rootDefinitionId": "user_vendor_msft_policy_config_office16v21~policy~l_microsoftofficesystem~l_securitysettings_l_allowedcomaddins",
+    "categoryId": "50b4bc60-802c-477a-9366-80e09154595f",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_office16v21~policy~l_microsoftofficesystem~l_securitysettings_l_allowedcomaddins",
+    "description": "This policy setting allows you to specify COM/VSTO add-ins registered in HKEY_CURRENT_USER (HKCU) that should be allowed to load, overriding the \"Block loading of COM/VSTO add-ins registered in HKCU\" policy.\r\n\r\nSome legitimate add-ins may be installed in HKCU even when deployed by administrators, due to how the independent software vendor (ISV) designed their installer. This policy provides an administrative override to allow specific add-ins to load despite being registered in HKCU.\r\n\r\nIf you enable this policy setting, you can specify a list of COM/VSTO add-ins that are allowed to load from HKCU. Enter each add-in using its ProgID as the name.\r\n\r\nIf you disable or don't configure this policy setting, the standard HKCU blocking behavior applies when that policy is enabled.",
+    "helpText": "",
+    "name": "L_AllowedCOMAddins",
+    "displayName": "List of allowed COM/VSTO add-ins registered in HKCU (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_office16v21~policy~l_microsoftofficesystem~l_securitysettings_l_allowedcomaddins_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v21~policy~l_microsoftofficesystem~l_securitysettings_l_allowedcomaddins_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v21~policy~l_microsoftofficesystem~l_securitysettings_l_allowedcomaddins_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_office16v21~policy~l_microsoftofficesystem~l_securitysettings_l_allowedcomaddins_l_allowedcomaddinslist",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

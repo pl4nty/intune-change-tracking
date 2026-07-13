@@ -1,0 +1,76 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#cacertificatemanagementallowed"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "CACertificateManagementAllowed",
+    "rootDefinitionId": "com.apple.managedclient.preferences_cacertificatemanagementallowed",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_cacertificatemanagementallowed",
+    "description": "This policy determines the level of access users have when managing CA certificates in Microsoft Edge.\n\nSetting the policy to UserOnly (1) allows users to manage only user-imported certificates. Trust settings for built-in certificates cannot be changed.\n\nSetting the policy to None (2) lets users view certificates but not manage them.\n\nNote: The certificate management experience is available starting in Microsoft Edge version 136.\n\nPolicy options mapping:\n\n* All (0) = Allow users to manage all certificates\n\n* UserOnly (1) = Allow users to manage user certificates\n\n* None (2) = Disallow users from managing certificates\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "CACertificateManagementAllowed",
+    "displayName": "Allow users to manage installed CA certificates.",
+    "defaultOptionId": "com.apple.managedclient.preferences_cacertificatemanagementallowed_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_cacertificatemanagementallowed_0",
+            "description": null,
+            "helpText": null,
+            "name": "Allow users to manage all certificates",
+            "displayName": "Allow users to manage all certificates",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_cacertificatemanagementallowed_1",
+            "description": null,
+            "helpText": null,
+            "name": "Allow users to manage user certificates",
+            "displayName": "Allow users to manage user certificates",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_cacertificatemanagementallowed_2",
+            "description": null,
+            "helpText": null,
+            "name": "Disallow users from managing certificates",
+            "displayName": "Disallow users from managing certificates",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Startup, home page and new tab page"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.ConfigureNTPFeedTabVisibility",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.configurentpfeedtabvisibility",
+    "categoryId": "00d7396c-cadc-4d29-86ba-fe4df2ecb110",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.configurentpfeedtabvisibility",
+    "description": "This policy configures whether the Discover or Work feed tabs are shown on the New Tab Page. By default, both Work and Discover tabs are enabled.\n\nIf you set this policy to 'EnableBothWorkDiscover' (0) or do not configure this policy, Microsoft Edge shows both the Work and Discover feed tabs on the new tab page.\n\nIf you set this policy to 'EnableOnlyWork' (1), Microsoft Edge shows only the Work feed tab on the new tab page.\n\nIf you set this policy to 'EnableOnlyDiscover' (2), Microsoft Edge shows only the Discover feed tab on the new tab page.\n\nThis policy works with the SetNTPDefaultFeedTab policy, which controls which feed tab is selected by default when both tabs are available.\n\nPolicy options mapping:\n\n* EnableBothWorkDiscover (0) = Enable both Work and Discover tabs\n\n* EnableOnlyWork (1) = Enable only Work tab\n\n* EnableOnlyDiscover (2) = Enable only Discover tab\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "ConfigureNTPFeedTabVisibility",
+    "displayName": "Configure whether the Discover or Work feed tabs are shown on the New Tab Page.",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.configurentpfeedtabvisibility_enablebothworkdiscover",
+            "description": null,
+            "helpText": null,
+            "name": "Enable both Work and Discover tabs",
+            "displayName": "Enable both Work and Discover tabs",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.configurentpfeedtabvisibility_enableonlywork",
+            "description": null,
+            "helpText": null,
+            "name": "Enable only Work tab",
+            "displayName": "Enable only Work tab",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.configurentpfeedtabvisibility_enableonlydiscover",
+            "description": null,
+            "helpText": null,
+            "name": "Enable only Discover tab",
+            "displayName": "Enable only Discover tab",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

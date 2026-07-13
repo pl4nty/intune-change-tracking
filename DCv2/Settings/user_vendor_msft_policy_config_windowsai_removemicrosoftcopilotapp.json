@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Remove Microsoft Copilot App",
+        "Windows AI"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-WindowsAI#removemicrosoftcopilotapp"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/WindowsAI/RemoveMicrosoftCopilotApp",
+    "rootDefinitionId": "user_vendor_msft_policy_config_windowsai_removemicrosoftcopilotapp",
+    "categoryId": "33a43c22-104b-4683-995b-5652cfd5b490",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_windowsai_removemicrosoftcopilotapp",
+    "description": "This policy setting allows you to uninstall Microsoft Copilot from devices in a targeted way. It will apply to devices/users that meet the below conditions: Microsoft 365 Copilot and Microsoft Copilot are both installed; the Microsoft Copilot app was not installed by the user; the Microsoft Copilot app was not launched in the last 14 days. If this policy is enabled, the Microsoft Copilot app will be uninstalled. Users can still re-install if they choose to. This setting applies to Enterprise, Professional and Education client SKUs only.",
+    "helpText": "",
+    "name": "RemoveMicrosoftCopilotApp",
+    "displayName": "Remove Microsoft Copilot App (User)",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26100",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsEducation",
+            "iotEnterprise",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_windowsai_removemicrosoftcopilotapp_0",
+            "description": "Removal Disabled.",
+            "helpText": null,
+            "name": "Removal Disabled.",
+            "displayName": "Removal Disabled.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_windowsai_removemicrosoftcopilotapp_1",
+            "description": "Removal Enabled.",
+            "helpText": null,
+            "name": "Removal Enabled.",
+            "displayName": "Removal Enabled.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,90 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#httpsonlymode"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "HttpsOnlyMode",
+    "rootDefinitionId": "com.apple.managedclient.preferences_httpsonlymode",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_httpsonlymode",
+    "description": "This policy controls whether users can enable HTTPS-Only Mode (Always Use Secure Connections) in Settings. HTTPS-Only Mode attempts to upgrade all navigations to HTTPS.\n\nIf this setting isn't set or is set to allowed, users are able to enable HTTPS-Only Mode.\nIf this setting is set to `disallowed`, users can't enable HTTPS-Only Mode.\nIf this setting is set to force_enabled, HTTPS-Only Mode is enabled in Strict mode and users can't disable it.\nIf this setting is set to force_balanced_enabled, HTTPS-Only Mode is enabled in Balanced mode and users can't disable it.\n\nIf you set this policy to a value that isn't supported by the version of Microsoft Edge that receives the policy, Microsoft Edge defaults to the allowed setting.\n\nThe separate HttpAllowlist policy can be used to exempt specific hostnames or hostname patterns from being upgraded to HTTPS by this feature.\n\nPolicy options mapping:\n\n* allowed (allowed) = Don't restrict users' HTTPS-Only Mode setting\n\n* disallowed (disallowed) = Don't allow users to enable any HTTPS-Only Mode\n\n* force_enabled (force_enabled) = Force enable HTTPS-Only Mode in Strict mode\n\n* force_balanced_enabled (force_balanced_enabled) = Force enable HTTPS-Only Mode in Balanced Mode\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "HttpsOnlyMode",
+    "displayName": "Allow HTTPS-Only Mode to be enabled",
+    "defaultOptionId": "com.apple.managedclient.preferences_httpsonlymode_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_httpsonlymode_0",
+            "description": null,
+            "helpText": null,
+            "name": "Don't restrict users' HTTPS-Only Mode setting",
+            "displayName": "Don't restrict users' HTTPS-Only Mode setting",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "allowed"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_httpsonlymode_1",
+            "description": null,
+            "helpText": null,
+            "name": "Don't allow users to enable any HTTPS-Only Mode",
+            "displayName": "Don't allow users to enable any HTTPS-Only Mode",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "disallowed"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_httpsonlymode_2",
+            "description": null,
+            "helpText": null,
+            "name": "Force enable HTTPS-Only Mode in Balanced Mode",
+            "displayName": "Force enable HTTPS-Only Mode in Balanced Mode",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "force_balanced_enabled"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_httpsonlymode_3",
+            "description": null,
+            "helpText": null,
+            "name": "Force enable HTTPS-Only Mode in Strict mode",
+            "displayName": "Force enable HTTPS-Only Mode in Strict mode",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "force_enabled"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Startup, home page and new tab page"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.SetNTPDefaultFeedTab",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.setntpdefaultfeedtab",
+    "categoryId": "00d7396c-cadc-4d29-86ba-fe4df2ecb110",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.setntpdefaultfeedtab",
+    "description": "This policy sets the default feed tab on the New Tab Page to Work or Discover.\n\nIf you set this policy to 'Work' (0) or don't configure this policy, Microsoft Edge sets the default feed tab to Work.\n\nIf you set this policy to 'Discover' (1), Microsoft Edge sets the default feed tab to Discover.\n\nThis policy only takes effect when \"ConfigureNTPFeedTabVisibility\" is set to 'EnableBothWorkDiscover' (0) or is not configured. If only one tab is visible, this policy has no effect.\n\nPolicy options mapping:\n\n* NTPDefaultFeedTabWork (0) = Work\n\n* NTPDefaultFeedTabDiscover (1) = Discover\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "SetNTPDefaultFeedTab",
+    "displayName": "Set the default New Tab Page feed tab to Work or Discover",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.setntpdefaultfeedtab_ntpdefaultfeedtabwork",
+            "description": null,
+            "helpText": null,
+            "name": "Work",
+            "displayName": "Work",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.setntpdefaultfeedtab_ntpdefaultfeedtabdiscover",
+            "description": null,
+            "helpText": null,
+            "name": "Discover",
+            "displayName": "Discover",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

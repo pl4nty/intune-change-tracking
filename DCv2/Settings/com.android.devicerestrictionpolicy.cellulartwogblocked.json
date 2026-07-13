@@ -1,0 +1,64 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "cellular",
+        "mobile network",
+        "cellular 2G",
+        "2G",
+        "Connectivity"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "/com.android.deviceRestrictionPolicy/",
+    "offsetUri": "/cellularTwoGBlocked/",
+    "rootDefinitionId": "com.android.devicerestrictionpolicy.cellulartwogblocked",
+    "categoryId": "929c169a-3480-467c-9f47-d1836b359ef7",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.android.devicerestrictionpolicy.cellulartwogblocked",
+    "description": "If 'True', the device prevents cellular 2G functionality, restricting user access to the setting. If 'False', Intune doesn't change or update this setting. By default, the OS follows the default cellular 2G behavior. Available for fully managed, dedicated, and corporate-owned work profile devices.",
+    "helpText": null,
+    "name": "CellularTwoGBlocked",
+    "displayName": "Block cellular 2G",
+    "defaultOptionId": "com.android.devicerestrictionpolicy.cellulartwogblocked_false",
+    "applicability": {
+        "description": null,
+        "platform": "androidEnterprise",
+        "deviceMode": "none",
+        "technologies": "android"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.android.devicerestrictionpolicy.cellulartwogblocked_false",
+            "description": "The user is allowed to toggle cellular 2G on or off.",
+            "helpText": null,
+            "name": "CELLULAR_TWO_G_USER_CHOICE",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "CELLULAR_TWO_G_USER_CHOICE"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.cellulartwogblocked_true",
+            "description": "Cellular 2G is disabled. The user is not allowed to toggle cellular 2G on or off.",
+            "helpText": null,
+            "name": "CELLULAR_TWO_G_DISABLED",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "CELLULAR_TWO_G_DISABLED"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

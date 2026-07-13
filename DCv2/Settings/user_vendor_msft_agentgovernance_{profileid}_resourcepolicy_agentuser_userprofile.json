@@ -1,0 +1,69 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "AgentGovernance",
+        "Agent Governance",
+        "Container Policy"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/AgentGovernance",
+    "offsetUri": "/{PolicyId}_{TargetAgentId}/ResourcePolicy",
+    "rootDefinitionId": "user_vendor_msft_agentgovernance",
+    "categoryId": "ea5fabb0-6eec-4c3e-8c6d-7523739207c3",
+    "settingUsage": "configuration",
+    "uxBehavior": "contextPane",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_agentgovernance_{profileid}_resourcepolicy_agentuser_userprofile",
+    "description": "The Entra user profile (UPN or SID) to run the agent as.",
+    "helpText": "",
+    "name": "UserProfile",
+    "displayName": "Identity profile",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26100",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 512,
+        "minimumLength": 1,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "user_vendor_msft_agentgovernance_{profileid}_resourcepolicy_agentuser_0",
+            "parentSettingId": "user_vendor_msft_agentgovernance_{profileid}_resourcepolicy_agentuser"
+        }
+    ],
+    "dependedOnBy": []
+}

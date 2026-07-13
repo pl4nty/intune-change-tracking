@@ -1,0 +1,62 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#silentprintingenabled"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "SilentPrintingEnabled",
+    "rootDefinitionId": "com.apple.managedclient.preferences_silentprintingenabled",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_silentprintingenabled",
+    "description": "This policy controls whether Microsoft Edge uses silent printing.\n\nIf you enable this policy, Edge automatically closes the print preview window and prints to the default printer using its default settings. If the default printer is Save as PDF, the file is saved to the user's Downloads folder.\n\nIf you disable or don't configure this policy, silent printing is disabled. The print preview window stays open and the user must choose print settings as usual.",
+    "helpText": null,
+    "name": "SilentPrintingEnabled",
+    "displayName": "Enable Silent Printing",
+    "defaultOptionId": "com.apple.managedclient.preferences_silentprintingenabled_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_silentprintingenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_silentprintingenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

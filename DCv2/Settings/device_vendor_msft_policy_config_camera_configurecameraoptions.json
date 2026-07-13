@@ -1,0 +1,96 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Configure Camera Options",
+        "Camera"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Camera#configurecameraoptions"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Camera/ConfigureCameraOptions",
+    "rootDefinitionId": "device_vendor_msft_policy_config_camera_configurecameraoptions",
+    "categoryId": "18893f00-c309-4695-bcaf-b66286ad99c1",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_camera_configurecameraoptions",
+    "description": "This policy will allow camera mode to be managed by IT admins and enable camera to run in safe or auto share mode.",
+    "helpText": "",
+    "name": "ConfigureCameraOptions",
+    "displayName": "Configure Camera Options",
+    "defaultOptionId": "device_vendor_msft_policy_config_camera_configurecameraoptions_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26100",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_camera_configurecameraoptions_0",
+            "description": "Disabled.",
+            "helpText": null,
+            "name": "Disabled.",
+            "displayName": "Disabled.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_camera_configurecameraoptions_1",
+            "description": "AutoShare - Allow camera access by multiple applications simultaneously.",
+            "helpText": null,
+            "name": "AutoShare - Allow camera access by multiple applications simultaneously.",
+            "displayName": "AutoShare - Allow camera access by multiple applications simultaneously.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_camera_configurecameraoptions_2",
+            "description": "SafeMode - The camera is configured to auto‑share and operate in a non‑accelerated mode, bypassing OEM/IHV‑provided plugins where applicable.",
+            "helpText": null,
+            "name": "SafeMode - The camera is configured to auto‑share and operate in a non‑accelerated mode, bypassing OEM/IHV‑provided plugins where applicable.",
+            "displayName": "SafeMode - The camera is configured to auto‑share and operate in a non‑accelerated mode, bypassing OEM/IHV‑provided plugins where applicable.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

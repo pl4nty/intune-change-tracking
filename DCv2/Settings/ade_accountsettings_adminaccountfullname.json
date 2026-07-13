@@ -1,0 +1,52 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "ADE profile",
+        "enrollment",
+        "Account settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "./enrollment/ade",
+    "offsetUri": "/accountSettings/adminAccountFullName",
+    "rootDefinitionId": "ade_macos_awaitconfiguration",
+    "categoryId": "6c217eb1-e939-4a7d-8a27-da4b6dbf9513",
+    "settingUsage": "configuration",
+    "uxBehavior": "smallTextBox",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "ade_accountsettings_adminaccountfullname",
+    "description": "The full name for the administrator account. This field is to be defaulted to 'Admin'.",
+    "helpText": "",
+    "name": "AdminAccountFullName",
+    "displayName": "Admin account full name",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "enrollment"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": "^[^!@#$%^&*()<>?+=:\"|,]+$",
+        "maximumLength": 255,
+        "minimumLength": 1,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": "Admin"
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "ade_accountsettings_createlocaladmin_1",
+            "parentSettingId": "ade_accountsettings_createlocaladmin"
+        }
+    ],
+    "dependedOnBy": []
+}

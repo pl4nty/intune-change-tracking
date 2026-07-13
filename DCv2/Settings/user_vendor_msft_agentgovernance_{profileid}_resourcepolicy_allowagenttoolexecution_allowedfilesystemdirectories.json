@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "AgentGovernance",
+        "Agent Governance",
+        "Container Policy"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/AgentGovernance",
+    "offsetUri": "/{PolicyId}_{TargetAgentId}/ResourcePolicy",
+    "rootDefinitionId": "user_vendor_msft_agentgovernance",
+    "categoryId": "ea5fabb0-6eec-4c3e-8c6d-7523739207c3",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_agentgovernance_{profileid}_resourcepolicy_allowagenttoolexecution_allowedfilesystemdirectories",
+    "description": "Specifies filesystem directories the contained agent can access. If no directories are configured, filesystem access is denied by default.",
+    "helpText": "",
+    "name": "AllowedFilesystemDirectories",
+    "displayName": "Allowed filesystem directories",
+    "childIds": [
+        "user_vendor_msft_agentgovernance_{profileid}_resourcepolicy_allowagenttoolexecution_allowedfilesystemdirectories_directorypath",
+        "user_vendor_msft_agentgovernance_{profileid}_resourcepolicy_allowagenttoolexecution_allowedfilesystemdirectories_accesslevel"
+    ],
+    "maximumCount": 100,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26100",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 100
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [
+        {
+            "dependentOn": "user_vendor_msft_agentgovernance_{profileid}_resourcepolicy_allowagenttoolexecution_1",
+            "parentSettingId": "user_vendor_msft_agentgovernance_{profileid}_resourcepolicy_allowagenttoolexecution"
+        }
+    ],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "user_vendor_msft_agentgovernance_{profileid}_resourcepolicy_allowagenttoolexecution_allowedfilesystemdirectories_directorypath",
+            "required": true
+        },
+        {
+            "dependedOnBy": "user_vendor_msft_agentgovernance_{profileid}_resourcepolicy_allowagenttoolexecution_allowedfilesystemdirectories_accesslevel",
+            "required": true
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "LoopbackNetworkAllowedForUrls",
+        "Allow sites to make network requests to the local device.",
+        "\\Microsoft Edge\\Network settings",
+        "Both",
+        "Software\\Policies\\Microsoft\\Edge",
+        "Network settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev146~Policy~microsoft_edge~Network/LoopbackNetworkAllowedForUrls",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edgev146~policy~microsoft_edge~network_loopbacknetworkallowedforurls",
+    "categoryId": "3fbd3b29-bafd-4adf-89e4-3be612dee275",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_microsoft_edgev146~policy~microsoft_edge~network_loopbacknetworkallowedforurls",
+    "description": "Specifies a list of URL patterns for which requests initiated from matching origins are exempt from Local Network Access restrictions when accessing loopback addresses (127.0.0.1, ::1, localhost).\r\n\r\nIf a requesting origin matches a URL pattern specified in this policy, requests to loopback addresses are allowed and are not subject to Local Network Access restrictions.\r\n\r\nFor origins not covered by this policy, the user's personal settings and local network access restrictions apply.\r\n\r\nIf this policy is disabled or not configured, no additional exemptions are granted beyond the user's existing configuration.\r\n\r\nMultiple policies can specify origins that affect requests to the local device. If an origin matches more than one of the following policies, they are applied in the following order of precedence:\r\n- LoopbackNetworkBlockedForUrls\r\n- LoopbackNetworkAllowedForUrls\r\n- LocalNetworkAccessBlockedForUrls\r\n- LocalNetworkAccessAllowedForUrls\r\n\r\nFor guidance on valid URL pattern syntax, see https://learn.microsoft.com/deployedge/edge-learnmore-ent-policy-url-patterns .\r\n\r\nExample value:\r\n\r\nhttp://www.example.com:8080\r\n[*.]example.edu\r\n*",
+    "helpText": "",
+    "name": "LoopbackNetworkAllowedForUrls",
+    "displayName": "Allow sites to make network requests to the local device. (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edgev146~policy~microsoft_edge~network_loopbacknetworkallowedforurls_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev146~policy~microsoft_edge~network_loopbacknetworkallowedforurls_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev146~policy~microsoft_edge~network_loopbacknetworkallowedforurls_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_microsoft_edgev146~policy~microsoft_edge~network_loopbacknetworkallowedforurls_loopbacknetworkallowedforurlsdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

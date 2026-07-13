@@ -20,9 +20,14 @@
     "name": "com.apple.fileproviderd",
     "displayName": "Top Level Setting Group Collection",
     "childIds": [
+        "com.apple.fileproviderd_managementallowsremotesyncing",
+        "com.apple.fileproviderd_managementremotesyncingallowlist",
         "com.apple.fileproviderd_allowmanagedfileproviderstorequestattribution",
         "com.apple.fileproviderd_managementallowsknownfoldersyncing",
-        "com.apple.fileproviderd_managementknownfoldersyncingallowlist"
+        "com.apple.fileproviderd_managementknownfoldersyncingallowlist",
+        "com.apple.fileproviderd_managementallowsexternalvolumesyncing",
+        "com.apple.fileproviderd_managementexternalvolumesyncingallowlist",
+        "com.apple.fileproviderd_managementdomainautoenablementlist"
     ],
     "maximumCount": 1,
     "minimumCount": 0,
@@ -36,6 +41,14 @@
     "dependentOn": [],
     "dependedOnBy": [
         {
+            "dependedOnBy": "com.apple.fileproviderd_managementallowsremotesyncing",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.fileproviderd_managementremotesyncingallowlist",
+            "required": false
+        },
+        {
             "dependedOnBy": "com.apple.fileproviderd_allowmanagedfileproviderstorequestattribution",
             "required": false
         },
@@ -45,6 +58,18 @@
         },
         {
             "dependedOnBy": "com.apple.fileproviderd_managementknownfoldersyncingallowlist",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.fileproviderd_managementallowsexternalvolumesyncing",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.fileproviderd_managementexternalvolumesyncingallowlist",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.fileproviderd_managementdomainautoenablementlist",
             "required": false
         }
     ]

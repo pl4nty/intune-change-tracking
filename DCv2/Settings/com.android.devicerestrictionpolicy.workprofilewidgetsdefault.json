@@ -1,0 +1,65 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Widget",
+        "View",
+        "App",
+        "Work Profile",
+        "Work profile apps",
+        "Applications"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "/com.android.deviceRestrictionPolicy/",
+    "offsetUri": "/workProfileWidgetsDefault/",
+    "rootDefinitionId": "com.android.devicerestrictionpolicy.workprofilewidgetsdefault",
+    "categoryId": "2257f7e1-3e88-4d4d-a666-437bbe42baca",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.android.devicerestrictionpolicy.workprofilewidgetsdefault",
+    "description": "If 'True', prevents users from adding widgets exposed by work profile apps to the home screen. If set to 'False', Intune doesn't change or update this setting. By default, the OS might allow adding work profile widgets to the home screen. Available for corporate-owned work profile devices (at work profile level).",
+    "helpText": null,
+    "name": "WorkProfileWidgetsDefault",
+    "displayName": "Block widgets from work profile apps",
+    "defaultOptionId": "com.android.devicerestrictionpolicy.workprofilewidgetsdefault_false",
+    "applicability": {
+        "description": null,
+        "platform": "androidEnterprise",
+        "deviceMode": "none",
+        "technologies": "android"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.android.devicerestrictionpolicy.workprofilewidgetsdefault_false",
+            "description": "Work profile widgets are allowed. Users can add widgets exposed by work profile apps to the home screen.",
+            "helpText": null,
+            "name": "WORK_PROFILE_WIDGETS_DEFAULT_ALLOWED",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "WORK_PROFILE_WIDGETS_DEFAULT_ALLOWED"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.workprofilewidgetsdefault_true",
+            "description": "Work profile widgets are disallowed. Users cannot add widgets from work profile apps to the home screen.",
+            "helpText": null,
+            "name": "WORK_PROFILE_WIDGETS_DEFAULT_DISALLOWED",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "WORK_PROFILE_WIDGETS_DEFAULT_DISALLOWED"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Restrictions"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "allowRosettaUsageAwareness",
+    "rootDefinitionId": "com.apple.applicationaccess_com.apple.applicationaccess",
+    "categoryId": "eda31027-9270-4959-801b-397fa05512e2",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.applicationaccess_allowrosettausageawareness",
+    "description": "If `false`, disables Rosetta usage awareness. When Rosetta usage awareness is active, a pop-up dialog is displayed to the user when an app that is using Rosetta is launched. The pop-up dialog indicates that Rosetta will be removed in a future version of the operating system so that the user can contact the app vendor regarding a replacement for the current app.",
+    "helpText": null,
+    "name": "allowRosettaUsageAwareness",
+    "displayName": "Allow Rosetta Usage Awareness",
+    "defaultOptionId": "com.apple.applicationaccess_allowrosettausageawareness_true",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.applicationaccess_allowrosettausageawareness_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.applicationaccess_com.apple.applicationaccess",
+                    "parentSettingId": "com.apple.applicationaccess_com.apple.applicationaccess"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.applicationaccess_allowrosettausageawareness_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.applicationaccess_com.apple.applicationaccess",
+                    "parentSettingId": "com.apple.applicationaccess_com.apple.applicationaccess"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -37,6 +37,7 @@
     "samlMetadataUrl": null,
     "samlSLOBindingType": "httpRedirect",
     "servicePrincipalNames": [
+        "https://teams.cloud.microsoft",
         "https://middletier.dod.teams.microsoft.us",
         "https://teams.microsoft.com/",
         "https://api.gcc.teams.microsoft.com",
@@ -57,6 +58,32 @@
         "resourceSpecificApplicationPermissions": []
     },
     "appRoles": [
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Read and write Teams team data for team lifecycle (OnTeamUpdated, OnTeamSoftDeleted, OnTeamSoftUndeleted).",
+            "displayName": "Read and write Teams team data",
+            "id": "400ef46e-3c0a-45d4-bb3d-4eb2d94f832a",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "Team.ReadWrite.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Read and write Teams team member data for member lifecycle (onMembersRemoved, onOwnersRemoved).",
+            "displayName": "Read and write Teams team member data",
+            "id": "eb12f503-edcc-4d03-93d7-3462546aeace",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "TeamMember.ReadWrite.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
         {
             "allowedMemberTypes": [
                 "Application"
@@ -195,6 +222,6 @@
     "verifiedPublisher": {
         "displayName": "Microsoft Corporation",
         "verifiedPublisherId": "5206095",
-        "addedDateTime": "2026-01-16T19:25:15Z"
+        "addedDateTime": "2026-06-24T16:26:41Z"
     }
 }

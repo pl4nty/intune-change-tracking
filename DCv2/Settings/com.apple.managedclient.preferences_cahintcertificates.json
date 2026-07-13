@@ -1,0 +1,49 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#cahintcertificates"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "CAHintCertificates",
+    "rootDefinitionId": "com.apple.managedclient.preferences_cahintcertificates",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_cahintcertificates",
+    "description": "This policy defines certificates that are not explicitly trusted or distrusted by Microsoft Edge but may be used as hints during certificate path-building.\n\nThe specified certificates will be considered as intermediates during path validation; the server's certificate must still chain to a trusted root to be considered valid.\n\nCertificates must be base64-encoded.",
+    "helpText": null,
+    "name": "CAHintCertificates",
+    "displayName": "TLS certificates that are not trusted or distrusted but can be used in path-building for server authentication",
+    "maximumCount": 600,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

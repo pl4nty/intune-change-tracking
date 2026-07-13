@@ -1,0 +1,71 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Antivirus engine"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/microsoft-365/security/defender-endpoint/linux-preferences#enable--offlineDefinitionUpdate"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/antivirusEngine",
+    "offsetUri": "offlineDefinitionUpdate",
+    "rootDefinitionId": "linux_mdatp_managed_antivirusengine_offlinedefinitionupdate",
+    "categoryId": "13467142-14e7-4380-8573-4866e842c7f6",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "linux_mdatp_managed_antivirusengine_offlinedefinitionupdate",
+    "description": "Determines whether offline security intelligence updates are enabled for antivirus.",
+    "helpText": null,
+    "name": "offlineDefinitionUpdate",
+    "displayName": "Enable offline security intelligence update",
+    "defaultOptionId": "linux_mdatp_managed_antivirusengine_offlinedefinitionupdate_disabled",
+    "applicability": {
+        "description": null,
+        "platform": "linux",
+        "deviceMode": "none",
+        "technologies": "microsoftSense"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "linux_mdatp_managed_antivirusengine_offlinedefinitionupdate_disabled",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "disabled"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "linux_mdatp_managed_antivirusengine_offlinedefinitionupdate_enabled",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "enabled"
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "linux_mdatp_managed_antivirusengine_offlinedefinitionupdateurl",
+                    "required": false
+                },
+                {
+                    "dependedOnBy": "linux_mdatp_managed_antivirusengine_offlinedefinitionupdatefallbacktocloud",
+                    "required": false
+                }
+            ]
+        }
+    ]
+}

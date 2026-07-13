@@ -1,0 +1,62 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#webaudiooutputbufferingenabled"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "WebAudioOutputBufferingEnabled",
+    "rootDefinitionId": "com.apple.managedclient.preferences_webaudiooutputbufferingenabled",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_webaudiooutputbufferingenabled",
+    "description": "This policy determines whether the browser enables adaptive buffering\nfor Web Audio. Adaptive buffering can reduce audio glitches but may\nincrease latency to varying degrees.\n\nEnabled: The browser will always use adaptive buffering.\nDisabled or Not Set: The browser will automatically decide during the\n  feature launch process whether to use adaptive buffering.",
+    "helpText": null,
+    "name": "WebAudioOutputBufferingEnabled",
+    "displayName": "Enable adaptive buffering for Web Audio",
+    "defaultOptionId": "com.apple.managedclient.preferences_webaudiooutputbufferingenabled_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_webaudiooutputbufferingenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_webaudiooutputbufferingenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

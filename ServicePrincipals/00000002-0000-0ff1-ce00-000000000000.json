@@ -75,6 +75,19 @@
             "allowedMemberTypes": [
                 "Application"
             ],
+            "description": "Allows the app to manage a limited set of Exchange Online configuration objects without user interaction, for specific scenarios supported by the adminapi/v2.0 endpoint. To enable management actions an admin must also assign the appropriate Exchange RBAC roles directly to the app. This permission replaces the previous Exchange.ManageAsAppV2 permission.",
+            "displayName": "Manage Exchange Online Admin API as App",
+            "id": "95930782-af91-4e2e-89b7-e34ce33a0450",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "Exchange.AdminAPI.ManageAsApp",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
             "description": "Allows the app to manage a limited set of Exchange Online configuration objects without user interaction, for specific scenarios supported by the adminapi/v2.0 endpoint. To enable management actions an admin must also assign the appropriate Exchange RBAC roles directly to the app.",
             "displayName": "Manage Exchange as application v2",
             "id": "ea3d980d-ebc7-4be4-8298-a167e5b8797c",
@@ -432,6 +445,17 @@
     },
     "keyCredentials": [],
     "publishedPermissionScopes": [
+        {
+            "adminConsentDescription": "Allows the app to manage a limited set of Exchange Online configuration objects via the adminapi/v2.0 endpoint. This permission is intended for specific scenarios and requires appropriate Exchange RBAC role assignments. This permission replaces the previous Exchange.ManageV2 permission.",
+            "adminConsentDisplayName": "Manage Exchange Online Admin API",
+            "id": "9f021f4d-e924-4317-bf46-8db5e8340c6c",
+            "isEnabled": true,
+            "type": "User",
+            "userConsentDescription": " Allows the app to manage a limited set of Exchange Online configuration objects via the adminapi/v2.0 endpoint. This permission is intended for specific scenarios and requires admin to assign you appropriate Exchange RBAC role assignments.",
+            "userConsentDisplayName": "Manage Exchange configuration v2",
+            "value": "Exchange.AdminAPI.Manage",
+            "isPrivate": false
+        },
         {
             "adminConsentDescription": "Allows the app to manage a limited set of Exchange Online configuration objects via the adminapi/v2.0 endpoint. This permission is intended for specific scenarios and requires appropriate Exchange RBAC role assignments.",
             "adminConsentDisplayName": "Manage Exchange configuration v2",

@@ -1,0 +1,72 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Antivirus engine"
+    ],
+    "infoUrls": [
+        "https://learn.microsoft.com/microsoft-365/security/defender-endpoint/offline-Definition-Update-FallbackToCloud"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/antivirusEngine",
+    "offsetUri": "offlineDefinitionUpdateFallbackToCloud",
+    "rootDefinitionId": "mde_managed_antivirusengine_offlinedefinitionupdate",
+    "categoryId": "13467142-14e7-4380-8573-4866e842c7f6",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "mde_managed_antivirusengine_offlinedefinitionupdatefallbacktocloud",
+    "description": "Whether to fall back to cloud updates if offline updates fail.",
+    "helpText": "Choose True to allow fallback to cloud update when offline update fails.",
+    "name": "offlineDefinitionUpdateFallbackToCloud",
+    "displayName": "Offline Definition Update Fallback To Cloud",
+    "defaultOptionId": "mde_managed_antivirusengine_offlinedefinitionupdatefallbacktocloud_false",
+    "applicability": {
+        "description": null,
+        "platform": "linux",
+        "deviceMode": "none",
+        "technologies": "microsoftSense"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "mde_managed_antivirusengine_offlinedefinitionupdatefallbacktocloud_false",
+            "description": null,
+            "helpText": null,
+            "name": "False",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "mde_managed_antivirusengine_offlinedefinitionupdate_true",
+                    "parentSettingId": "mde_managed_antivirusengine_offlinedefinitionupdate"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "mde_managed_antivirusengine_offlinedefinitionupdatefallbacktocloud_true",
+            "description": null,
+            "helpText": null,
+            "name": "True",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "mde_managed_antivirusengine_offlinedefinitionupdate_true",
+                    "parentSettingId": "mde_managed_antivirusengine_offlinedefinitionupdate"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

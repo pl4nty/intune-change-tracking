@@ -1,0 +1,66 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "choose network",
+        "network",
+        "cellular data",
+        "preferential network",
+        "5G",
+        "network slicing",
+        "Connectivity"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "/com.android.deviceRestrictionPolicy/",
+    "offsetUri": "/preferentialNetworkService/",
+    "rootDefinitionId": "com.android.devicerestrictionpolicy.preferentialnetworkservice",
+    "categoryId": "929c169a-3480-467c-9f47-d1836b359ef7",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.android.devicerestrictionpolicy.preferentialnetworkservice",
+    "description": "If 'True', the device will give priority to the specified network service over other available options (e.g., enterprise slice on 5G networks). If 'False', Intune doesn't change or update this setting. By default, the device connects using its default network selection process. Available for fully managed, dedicated, and corporate-owned work profile devices.",
+    "helpText": null,
+    "name": "PreferentialNetworkService",
+    "displayName": "Allow selection of a preferential network service",
+    "defaultOptionId": "com.android.devicerestrictionpolicy.preferentialnetworkservice_false",
+    "applicability": {
+        "description": null,
+        "platform": "androidEnterprise",
+        "deviceMode": "none",
+        "technologies": "android"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.android.devicerestrictionpolicy.preferentialnetworkservice_false",
+            "description": "Preferential network service is disabled.",
+            "helpText": null,
+            "name": "PREFERENTIAL_NETWORK_SERVICE_DISABLED",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "PREFERENTIAL_NETWORK_SERVICE_DISABLED"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.preferentialnetworkservice_true",
+            "description": "Preferential network service is enabled on the device.",
+            "helpText": null,
+            "name": "PREFERENTIAL_NETWORK_SERVICE_ENABLED",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "PREFERENTIAL_NETWORK_SERVICE_ENABLED"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

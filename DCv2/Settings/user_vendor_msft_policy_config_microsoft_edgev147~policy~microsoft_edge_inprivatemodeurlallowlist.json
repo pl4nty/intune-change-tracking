@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "InPrivateModeUrlAllowlist",
+        "Allow access to a list of URLs in InPrivate mode.",
+        "\\Microsoft Edge",
+        "Both",
+        "Software\\Policies\\Microsoft\\Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev147~Policy~microsoft_edge/InPrivateModeUrlAllowlist",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edgev147~policy~microsoft_edge_inprivatemodeurlallowlist",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_microsoft_edgev147~policy~microsoft_edge_inprivatemodeurlallowlist",
+    "description": "This policy allows administrators to specify a list of URL patterns that are permitted to open in InPrivate mode. It can be used to create exceptions for URL patterns defined in 'InPrivateModeUrlBlocklist' (Block access to a list of URLs in InPrivate mode.). See how to format a URL pattern (https://go.microsoft.com/fwlink/?linkid=2095322).\r\n\r\nIf both this policy and 'InPrivateModeUrlBlocklist' are configured, the allowlist takes precedence. URLs that match a pattern on this allowlist are allowed. URLs that match the blocklist but not this allowlist are blocked. URLs that match neither list fall back to 'URLBlocklist' (Block access to a list of URLs) and 'URLAllowlist' (Define a list of allowed URLs).\r\n\r\nIf this policy is configured and 'InPrivateModeUrlBlocklist' is not configured, only the URLs specified in this allowlist can be opened in InPrivate mode. All other URLs are blocked.\r\n\r\nIf 'InPrivateModeAvailability' (Configure InPrivate mode availability) is set to disallow (value 1) but this policy is configured, InPrivate mode is available only for URLs that match the allowlist.\r\n\r\nIf this policy is not configured, no exceptions are applied to 'InPrivateModeUrlBlocklist' or 'InPrivateModeAvailability'.\r\n\r\nThis policy applies only to InPrivate mode. To allow URLs across all browsing modes and profiles, use the 'URLAllowlist' policy.\r\n\r\nThis policy supports up to 1000 entries.\r\n\r\nExample value:\r\n\r\nexample.com\r\nhttps://ssl.server.com\r\nhosting.com/bad_path\r\nhttps://server:8080/path\r\n.exact.hostname.com\r\nfile://*\r\ncustom_scheme:*\r\n*",
+    "helpText": "",
+    "name": "InPrivateModeUrlAllowlist",
+    "displayName": "Allow access to a list of URLs in InPrivate mode. (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edgev147~policy~microsoft_edge_inprivatemodeurlallowlist_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev147~policy~microsoft_edge_inprivatemodeurlallowlist_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev147~policy~microsoft_edge_inprivatemodeurlallowlist_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_microsoft_edgev147~policy~microsoft_edge_inprivatemodeurlallowlist_inprivatemodeurlallowlistdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

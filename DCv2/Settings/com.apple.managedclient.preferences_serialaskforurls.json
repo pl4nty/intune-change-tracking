@@ -19,7 +19,7 @@
     "visibility": "settingsCatalog,template",
     "riskLevel": "low",
     "id": "com.apple.managedclient.preferences_serialaskforurls",
-    "description": "Define a list of sites, based on URL patterns, that can ask the user for access to a serial port.\n\nIf you don't configure this policy, the global default value from the \"DefaultSerialGuardSetting\" policy (if set) or the user's personal configuration is used for all sites.\n\nFor URL patterns that don't match this policy, the following order of precedence is used: The \"SerialBlockedForUrls\" policy (if there is a match), the \"DefaultSerialGuardSetting\" policy (if set), or the user's personal settings.\n\nThe URL patterns defined in this policy can't conflict with those configured in the \"SerialBlockedForUrls\" policy. You can't allow and block a URL.\n\nFor detailed information about valid url patterns, please see https://go.microsoft.com/fwlink/?linkid=2095322.",
+    "description": "Specifies URL patterns for sites that are allowed to request access to a serial port.\n\nIf not configured, Microsoft Edge uses the value from the DefaultSerialGuardSetting policy (if set), or the user's settings.\n\nFor unmatched sites, the following order applies:\n\n1. \"SerialBlockedForUrls\" (if matched).\n\n2. DefaultSerialGuardSetting (if set).\n\n3. User's settings.\n\nIf URL patterns in this policy conflict with those in \"SerialBlockedForUrls\", they will be ignored.\n\nFor detailed information about valid url patterns, please see https://go.microsoft.com/fwlink/?linkid=2095322.",
     "helpText": null,
     "name": "SerialAskForUrls",
     "displayName": "Allow the Serial API on specific sites",

@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "SetNTPDefaultFeedTab_recommended",
+        "Set the default New Tab Page feed tab to Work or Discover",
+        "\\Microsoft Edge - Default Settings (users can override)\\Startup, home page and new tab page",
+        "Both",
+        "Software\\Policies\\Microsoft\\Edge\\Recommended",
+        "Startup, home page and new tab page"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev148~Policy~microsoft_edge_recommended~Startup_recommended/SetNTPDefaultFeedTab_recommended",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edgev148~policy~microsoft_edge_recommended~startup_recommended_setntpdefaultfeedtab_recommended",
+    "categoryId": "1653fa6c-aa99-4918-92c7-1df85d8843e1",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_microsoft_edgev148~policy~microsoft_edge_recommended~startup_recommended_setntpdefaultfeedtab_recommended",
+    "description": "This policy sets the default feed tab on the New Tab Page to Work or Discover.\r\n\r\nIf you set this policy to 'Work' (0) or don't configure this policy, Microsoft Edge sets the default feed tab to Work.\r\n\r\nIf you set this policy to 'Discover' (1), Microsoft Edge sets the default feed tab to Discover.\r\n\r\nThis policy only takes effect when 'ConfigureNTPFeedTabVisibility' (Configure whether the Discover or Work feed tabs are shown on the New Tab Page.) is set to 'EnableBothWorkDiscover' (0) or is not configured. If only one tab is visible, this policy has no effect.\r\n\r\nPolicy options mapping:\r\n\r\n* NTPDefaultFeedTabWork (0) = Work\r\n\r\n* NTPDefaultFeedTabDiscover (1) = Discover\r\n\r\nUse the preceding information when configuring this policy.",
+    "helpText": "",
+    "name": "SetNTPDefaultFeedTab_recommended",
+    "displayName": "Set the default New Tab Page feed tab to Work or Discover (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edgev148~policy~microsoft_edge_recommended~startup_recommended_setntpdefaultfeedtab_recommended_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev148~policy~microsoft_edge_recommended~startup_recommended_setntpdefaultfeedtab_recommended_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev148~policy~microsoft_edge_recommended~startup_recommended_setntpdefaultfeedtab_recommended_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_microsoft_edgev148~policy~microsoft_edge_recommended~startup_recommended_setntpdefaultfeedtab_recommended_setntpdefaultfeedtab",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

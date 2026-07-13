@@ -1,0 +1,48 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.BrowsingWithCopilotBlockList",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.browsingwithcopilotblocklist",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "smallTextBox",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.browsingwithcopilotblocklist",
+    "description": "Controls the list of URLs where browsing with Copilot is blocked. Users can't modify this list.\n\nUse this policy to define exceptions to broader allowlists. For example, you can set \"BrowsingWithCopilotAllowList\" to '*' to allow all sites, and then use this policy to block access to specific URLs.\n\nThis policy supports blocking by scheme, subdomain, or port. When multiple URL patterns apply, the most specific match determines whether access is allowed or blocked. Blocklist entries take precedence over allowlist entries.\n\nIf you don't configure this policy, no exceptions are applied to \"BrowsingWithCopilotAllowList\".\n\nBrowsing with Copilot supports only HTTP and HTTPS protocols. Wildcards (*) are supported, and subdomains are matched even without wildcards. URL matching is based on the site origin only; any path specified in the pattern is ignored.\n\nFor information about URL pattern format, see <a href=\"https://go.microsoft.com/fwlink/?linkid=2095322\">https://go.microsoft.com/fwlink/?linkid=2095322</a>.",
+    "helpText": null,
+    "name": "BrowsingWithCopilotBlockList",
+    "displayName": "Browsing with Copilot Blocked URLs",
+    "maximumCount": 600,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 0,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

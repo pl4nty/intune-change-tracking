@@ -1,0 +1,73 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Autopilot",
+        "Device Preparation",
+        "EnableCUE",
+        "Desktop onboarding settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./enrollment/autopilot/DevicePreparation",
+    "offsetUri": "/DesktopOnboardingSettings/EnableCUE",
+    "rootDefinitionId": "enrollment_autopilot_dpp_enablecue",
+    "categoryId": "cb87b1bb-252b-4515-bb27-f8d0e5ff57b6",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "enrollment_autopilot_dpp_enablecue",
+    "description": "If the Company Portal app is not configured to install in system context, assigned to the Device group, and selected in the list of Apps, it will not launch automatically and display onboarding status.",
+    "helpText": "",
+    "name": "EnableCUE",
+    "displayName": "Automatically launch the Company Portal app and display status for remaining configuration",
+    "defaultOptionId": "enrollment_autopilot_dpp_enablecue_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "enrollment",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "enrollment_autopilot_dpp_enablecue_0",
+            "description": null,
+            "helpText": null,
+            "name": "No",
+            "displayName": "No",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "enrollment_autopilot_dpp_enablecue_1",
+            "description": null,
+            "helpText": null,
+            "name": "Yes",
+            "displayName": "Yes",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

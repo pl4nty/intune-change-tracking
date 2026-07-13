@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Siri Settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "AllowUserGeneratedContent",
+    "rootDefinitionId": "sirisettings_sirisettings",
+    "categoryId": "b85d9c04-4923-4fdf-a425-424686d47859",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "sirisettings_allowusergeneratedcontent",
+    "description": "If `false`, disables Siri user-generated content.",
+    "helpText": null,
+    "name": "AllowUserGeneratedContent",
+    "displayName": "Allow User Generated Content",
+    "defaultOptionId": "sirisettings_allowusergeneratedcontent_true",
+    "applicability": {
+        "description": null,
+        "platform": "iOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "sirisettings_allowusergeneratedcontent_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "Blocked",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "sirisettings_sirisettings",
+                    "parentSettingId": "sirisettings_sirisettings"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "sirisettings_allowusergeneratedcontent_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "Allowed",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "sirisettings_sirisettings",
+                    "parentSettingId": "sirisettings_sirisettings"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

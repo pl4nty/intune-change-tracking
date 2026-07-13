@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Intelligence Settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "AllowImagePlayground",
+    "rootDefinitionId": "intelligencesettings_intelligencesettings",
+    "categoryId": "11d26400-1d13-4dd6-ab4b-cb323494b127",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "intelligencesettings_allowimageplayground",
+    "description": "If `false`, disables Image Playground.",
+    "helpText": null,
+    "name": "AllowImagePlayground",
+    "displayName": "Allow Image Playground",
+    "defaultOptionId": "intelligencesettings_allowimageplayground_true",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "intelligencesettings_allowimageplayground_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "Blocked",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "intelligencesettings_intelligencesettings",
+                    "parentSettingId": "intelligencesettings_intelligencesettings"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "intelligencesettings_allowimageplayground_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "Allowed",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "intelligencesettings_intelligencesettings",
+                    "parentSettingId": "intelligencesettings_intelligencesettings"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

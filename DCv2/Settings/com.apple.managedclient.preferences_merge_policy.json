@@ -1,0 +1,62 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Performance Profiles Configuration"
+    ],
+    "infoUrls": [
+        "https://learn.microsoft.com/en-us/defender-endpoint/performance-profiles"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.wdav/Forced/[0]/mcx_preference_settings/performanceProfilesConfiguration",
+    "offsetUri": "merge_policy",
+    "rootDefinitionId": "com.apple.managedclient.preferences_merge_policy",
+    "categoryId": "d40a32e1-ab3e-4cbc-aa03-4766792e563e",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_merge_policy",
+    "description": "Specify the merge policy for performance profiles. This can be a combination of administrator-defined and user-defined profiles (merge) or only administrator-defined profiles (admin_only).",
+    "helpText": null,
+    "name": "merge_policy",
+    "displayName": "Performance profiles merge policy",
+    "defaultOptionId": "com.apple.managedclient.preferences_merge_policy_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement,microsoftSense"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_merge_policy_0",
+            "description": null,
+            "helpText": null,
+            "name": "merge",
+            "displayName": "merge",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "merge"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_merge_policy_1",
+            "description": null,
+            "helpText": null,
+            "name": "admin_only",
+            "displayName": "admin_only",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "admin_only"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

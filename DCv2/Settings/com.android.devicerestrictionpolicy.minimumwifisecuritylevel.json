@@ -1,0 +1,97 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "wi-fi",
+        "wifi",
+        "wifi security level",
+        "security level",
+        "enterprise wi-fi",
+        "wep",
+        "wpa2-psk",
+        "eap",
+        "192-bit",
+        "Connectivity"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "/com.android.deviceRestrictionPolicy/",
+    "offsetUri": "/minimumWifiSecurityLevel/",
+    "rootDefinitionId": "com.android.devicerestrictionpolicy.minimumwifisecuritylevel",
+    "categoryId": "929c169a-3480-467c-9f47-d1836b359ef7",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.android.devicerestrictionpolicy.minimumwifisecuritylevel",
+    "description": "Select what Wi-Fi security levels are required to connect to Wi-Fi networks. 'Open network security' allows the device to connect to all types of Wi-Fi networks. 'Personal network security' requires personal networks such as WEP, WPA2-PSK. 'Enterprise network security' requires enterprise EAP networks. 'Enterprise 192-bit network security' requires 192-bit networks. Available for fully managed, dedicated, and corporate-owned work profile devices.",
+    "helpText": null,
+    "name": "MinimumWifiSecurityLevel",
+    "displayName": "Select minimum Wi-Fi security level",
+    "defaultOptionId": "com.android.devicerestrictionpolicy.minimumwifisecuritylevel_opennetworksecurity",
+    "applicability": {
+        "description": null,
+        "platform": "androidEnterprise",
+        "deviceMode": "none",
+        "technologies": "android"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.android.devicerestrictionpolicy.minimumwifisecuritylevel_opennetworksecurity",
+            "description": "The device is able to connect to all types of Wi-Fi networks.",
+            "helpText": null,
+            "name": "OPEN_NETWORK_SECURITY",
+            "displayName": "Open network security",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "OPEN_NETWORK_SECURITY"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.minimumwifisecuritylevel_personalnetworksecurity",
+            "description": "A personal network such as WEP, WPA2-PSK is the minimum required security.",
+            "helpText": null,
+            "name": "PERSONAL_NETWORK_SECURITY",
+            "displayName": "Personal network security",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "PERSONAL_NETWORK_SECURITY"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.minimumwifisecuritylevel_enterprisenetworksecurity",
+            "description": "An enterprise EAP network is the minimum required security level.",
+            "helpText": null,
+            "name": "ENTERPRISE_NETWORK_SECURITY",
+            "displayName": "Enterprise network security",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "ENTERPRISE_NETWORK_SECURITY"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.minimumwifisecuritylevel_enterprisebit192networksecurity",
+            "description": "A 192-bit enterprise network is the minimum required security level.",
+            "helpText": null,
+            "name": "ENTERPRISE_BIT192_NETWORK_SECURITY",
+            "displayName": "Enterprise 192-bit network security",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "ENTERPRISE_BIT192_NETWORK_SECURITY"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

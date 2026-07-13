@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "StaticStorageQuotaEnabled",
+        "Control whether storage quota APIs will return static values",
+        "\\Microsoft Edge",
+        "Both",
+        "Software\\Policies\\Microsoft\\Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev145~Policy~microsoft_edge/StaticStorageQuotaEnabled",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edgev145~policy~microsoft_edge_staticstoragequotaenabled",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_microsoft_edgev145~policy~microsoft_edge_staticstoragequotaenabled",
+    "description": "Controls how the Storage Quota APIs report the available quota to websites.\r\n\r\nWhen enabled, the Storage Quota APIs return a static quota value equal to the current usage plus the smaller of 10 GiB or the device's total storage rounded up to the nearest 1 GiB.\r\n\r\nWhen disabled, the Storage Quota APIs return a dynamic quota value that reflects the actual available device storage.\r\n\r\nWhen unset, the browser uses the default platform behavior.\r\n\r\nThis policy does not affect sites with unlimited storage permissions or enforced quota settings.",
+    "helpText": "",
+    "name": "StaticStorageQuotaEnabled",
+    "displayName": "Control whether storage quota APIs will return static values",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edgev145~policy~microsoft_edge_staticstoragequotaenabled_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev145~policy~microsoft_edge_staticstoragequotaenabled_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev145~policy~microsoft_edge_staticstoragequotaenabled_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

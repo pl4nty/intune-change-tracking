@@ -1,0 +1,62 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#tls13earlydataenabled"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "TLS13EarlyDataEnabled",
+    "rootDefinitionId": "com.apple.managedclient.preferences_tls13earlydataenabled",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_tls13earlydataenabled",
+    "description": "This policy controls whether TLS 1.3 Early Data is enabled in Microsoft Edge.\n\nTLS 1.3 Early Data is an extension that allows an HTTP request to be sent in parallel with the TLS handshake. When enabled and supported by the server, this can improve page load performance.\n\nEnabled – Microsoft Edge enables TLS 1.3 Early Data.\n\nDisabled – Microsoft Edge disables TLS 1.3 Early Data.\n\nNot configured – Microsoft Edge follows the default rollout process for TLS 1.3 Early Data.\n\nNOTE: When this feature is enabled, whether TLS 1.3 Early Data is used depends on server support. Most modern TLS servers and middleware can handle or reject Early Data without interrupting the connection. However, improperly implemented TLS stacks may cause connection failures. If such issues occur, contact the device or software vendor for a resolution.\n\nThis policy is temporary and intended to help test for compatibility issues. It may be removed in a future release once the feature is fully rolled out.",
+    "helpText": null,
+    "name": "TLS13EarlyDataEnabled",
+    "displayName": "Control whether TLS 1.3 Early Data is enabled in Microsoft Edge",
+    "defaultOptionId": "com.apple.managedclient.preferences_tls13earlydataenabled_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_tls13earlydataenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_tls13earlydataenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

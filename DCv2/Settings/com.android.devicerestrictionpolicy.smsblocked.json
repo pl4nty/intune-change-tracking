@@ -1,0 +1,65 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "SMS",
+        "text message",
+        "messaging",
+        "communication",
+        "block SMS",
+        "Connectivity"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "/com.android.deviceRestrictionPolicy/",
+    "offsetUri": "/smsBlocked/",
+    "rootDefinitionId": "com.android.devicerestrictionpolicy.smsblocked",
+    "categoryId": "929c169a-3480-467c-9f47-d1836b359ef7",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.android.devicerestrictionpolicy.smsblocked",
+    "description": "If 'True', the device is prevented from sending and receiving SMS messages. If 'False', Intune doesn't change or update this setting. By default, the OS might allow SMS messaging. Available for fully managed, dedicated, and corporate-owned work profile devices.",
+    "helpText": "",
+    "name": "SmsBlocked",
+    "displayName": "Block SMS",
+    "defaultOptionId": "com.android.devicerestrictionpolicy.smsblocked_false",
+    "applicability": {
+        "description": null,
+        "platform": "androidEnterprise",
+        "deviceMode": "none",
+        "technologies": "android"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.android.devicerestrictionpolicy.smsblocked_false",
+            "description": "False",
+            "helpText": null,
+            "name": "False",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.smsblocked_true",
+            "description": "True",
+            "helpText": null,
+            "name": "True",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

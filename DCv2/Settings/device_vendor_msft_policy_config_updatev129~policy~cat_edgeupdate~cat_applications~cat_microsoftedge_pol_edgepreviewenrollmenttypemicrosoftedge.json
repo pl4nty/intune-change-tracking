@@ -1,0 +1,81 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Pol_EdgePreviewEnrollmentTypeMicrosoftEdge",
+        "Edge preview enrollment type",
+        "\\Microsoft Edge Update\\Applications\\Microsoft Edge",
+        "Machine",
+        "Software\\Policies\\Microsoft\\EdgeUpdate",
+        "EdgePreviewEnrollmentType{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/updatev129~Policy~Cat_EdgeUpdate~Cat_Applications~Cat_MicrosoftEdge/Pol_EdgePreviewEnrollmentTypeMicrosoftEdge",
+    "rootDefinitionId": "device_vendor_msft_policy_config_updatev129~policy~cat_edgeupdate~cat_applications~cat_microsoftedge_pol_edgepreviewenrollmenttypemicrosoftedge",
+    "categoryId": "3bb9ca38-645e-479c-ac5f-01959aec9c30",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_updatev129~policy~cat_edgeupdate~cat_applications~cat_microsoftedge_pol_edgepreviewenrollmenttypemicrosoftedge",
+    "description": "Specifies how a device is enrolled in Edge Preview.\r\n\r\nThis policy is only effective if the TargetChannel policy is set to Beta or Dev.\r\n\r\nIf you set this policy to Allow Opt-out (1) or don't configure it, the channel in the Edge Stable application will be determined by TargetChannel. End users will be able to exit the Edge Preview experience, to return to the Stable channel, at any time.\r\n\r\nIf you set this policy to Required (3), the channel within the Edge Stable application is determined by TargetChannel. End users won't be able to leave the Edge Preview experience.\r\n\r\nThis policy is available on Microsoft Edge version 143.0.3650.66 or later, and applies only to Windows devices joined to a Microsoft® Active Directory® domain.\r\n\r\nFor more details, see: https://go.microsoft.com/fwlink/?linkid=2348937.",
+    "helpText": "",
+    "name": "Pol_EdgePreviewEnrollmentTypeMicrosoftEdge",
+    "displayName": "Edge preview enrollment type",
+    "defaultOptionId": "device_vendor_msft_policy_config_updatev129~policy~cat_edgeupdate~cat_applications~cat_microsoftedge_pol_edgepreviewenrollmenttypemicrosoftedge_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_updatev129~policy~cat_edgeupdate~cat_applications~cat_microsoftedge_pol_edgepreviewenrollmenttypemicrosoftedge_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_updatev129~policy~cat_edgeupdate~cat_applications~cat_microsoftedge_pol_edgepreviewenrollmenttypemicrosoftedge_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_updatev129~policy~cat_edgeupdate~cat_applications~cat_microsoftedge_pol_edgepreviewenrollmenttypemicrosoftedge_part_edgepreviewenrollmenttype",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

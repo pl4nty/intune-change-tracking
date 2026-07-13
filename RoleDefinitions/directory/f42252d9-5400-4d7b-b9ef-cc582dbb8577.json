@@ -1,0 +1,32 @@
+{
+    "id": "f42252d9-5400-4d7b-b9ef-cc582dbb8577",
+    "assignmentMode": "allowed",
+    "categories": "identity",
+    "description": "Read all aspects of Microsoft Entra Backup, such as list all preview jobs, recovery jobs, backup snapshots, and create preview jobs.",
+    "displayName": "Entra Backup Reader",
+    "isBuiltIn": true,
+    "isEnabled": true,
+    "isPrivileged": false,
+    "resourceScopes": [
+        "/"
+    ],
+    "richDescription": "Assign the Entra Backup Reader role to users who need to do the following tasks:\n- List all the snapshots in a tenant  \n- Create a difference report (preview job) of a backup in the past and optionally include scoping filters\n- Compare states of changed directory objects that are in backup and recovery scope \n- Filter directory objects with supported scoping filters \n- Read status of a job \n- View all the jobs including preview and recovery jobs",
+    "templateId": "f42252d9-5400-4d7b-b9ef-cc582dbb8577",
+    "version": "1",
+    "rolePermissions": [
+        {
+            "allowedResourceActions": [
+                "microsoft.directory/backup/preview/cancel",
+                "microsoft.directory/backup/preview/create",
+                "microsoft.directory/backup/standard/read"
+            ],
+            "condition": null
+        }
+    ],
+    "inheritsPermissionsFrom@odata.context": "https://graph.microsoft.com/beta/$metadata#roleManagement/directory/roleDefinitions('f42252d9-5400-4d7b-b9ef-cc582dbb8577')/inheritsPermissionsFrom",
+    "inheritsPermissionsFrom": [
+        {
+            "id": "88d8e3e3-8f55-4a1e-953a-9b9898b8876b"
+        }
+    ]
+}

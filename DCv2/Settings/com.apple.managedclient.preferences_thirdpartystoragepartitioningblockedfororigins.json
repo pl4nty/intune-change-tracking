@@ -18,10 +18,10 @@
     "visibility": "settingsCatalog,template",
     "riskLevel": "low",
     "id": "com.apple.managedclient.preferences_thirdpartystoragepartitioningblockedfororigins",
-    "description": "Lets you set a list of url patterns that specify top-level origins (the url in the tab's address bar) that block third-party (cross-origin iframe) storage partitioning.\n\nIf this policy isn't set or a top-level origin doesn't match, then the value from \"DefaultThirdPartyStoragePartitioningSetting\" will be used.\n\nNote that the patterns you list are treated as origins, not URLs, so you shouldn't specify a path.",
+    "description": "This policy lets you set a list of URL patterns that specify top-level origins for which third-party storage partitioning (partitioning of cross-origin iframe storage) should be disabled.\n\nIf this policy isn't set or a top-level origin doesn't match one of the URL patterns, then the value from \"DefaultThirdPartyStoragePartitioningSetting\" will be used.\n\nNote that the patterns you list are treated as origins, not URLs, so you shouldn't specify a path. For detailed information about valid origin patterns, see https://go.microsoft.com/fwlink/?linkid=2095322.\n\nThis feature will be removed starting in Microsoft Edge version 145. To ensure compatibility, use the requestStorageAccess method instead. For more information, see https://developer.mozilla.org/en-US/docs/Web/API/Document/requestStorageAccess.",
     "helpText": null,
     "name": "ThirdPartyStoragePartitioningBlockedForOrigins",
-    "displayName": "Block third-party storage partitioning for these origins",
+    "displayName": "Disable third-party storage partitioning for specific top-level origins (deprecated)",
     "maximumCount": 600,
     "minimumCount": 1,
     "applicability": {

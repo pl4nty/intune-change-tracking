@@ -1,0 +1,43 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Schedule Scan"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/microsoft-365/security/defender-endpoint/linux-preferences#scheduled-scan"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/scheduledScan",
+    "offsetUri": "randomizeScanStartTime",
+    "rootDefinitionId": "linux_mdatp_managed_antivirusengine_scheduledscan_randomizescanstarttime",
+    "categoryId": "0e1122f8-2bbf-475b-bce0-9e43a2f5e475",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "linux_mdatp_managed_antivirusengine_scheduledscan_randomizescanstarttime",
+    "description": "Only applicable for daily quick scans or weekly quick/full scans. Randomize the start time of the scan by up to specified number of hours. For example, if a scan is scheduled for 2 p.m and randomizeScanStartTime is set to 2, the scan commences at a random time between 2 p.m and 4 p.m. Set to 0 to disable randomization.",
+    "helpText": "Sets the number of hours (0–23) by which the scan start time is randomized. 0 disables randomization.",
+    "name": "scheduledScan/randomizeScanStartTime",
+    "displayName": "Randomize scan start time",
+    "applicability": {
+        "description": null,
+        "platform": "linux",
+        "deviceMode": "none",
+        "technologies": "microsoftSense"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 23,
+        "minimumValue": 0
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 0
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

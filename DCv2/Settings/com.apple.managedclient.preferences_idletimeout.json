@@ -1,0 +1,43 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#idletimeout"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "IdleTimeout",
+    "rootDefinitionId": "com.apple.managedclient.preferences_idletimeout",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_idletimeout",
+    "description": "Triggers an action when the computer is idle.\n\nIf you set this policy, it specifies the length of time without user input (in minutes) before the browser runs actions configured via the IdleTimeoutActions policy.\n\nIf you do not set this policy, no action will run.\n\nThe minimum threshold is 1 minute.\n\n\"User input\" is defined by Operating System APIs, and includes things like moving the mouse or typing on the keyboard.",
+    "helpText": null,
+    "name": "IdleTimeout",
+    "displayName": "Delay before running idle actions",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 2147483647,
+        "minimumValue": 0
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 0
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

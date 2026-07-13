@@ -1,0 +1,52 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Antivirus engine"
+    ],
+    "infoUrls": [
+        "https://learn.microsoft.com/microsoft-365/security/defender-endpoint/offline-definition-update-Url"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/antivirusEngine",
+    "offsetUri": "offlineDefinitionUpdateUrl",
+    "rootDefinitionId": "linux_mdatp_managed_antivirusengine_offlinedefinitionupdate",
+    "categoryId": "13467142-14e7-4380-8573-4866e842c7f6",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "linux_mdatp_managed_antivirusengine_offlinedefinitionupdateurl",
+    "description": "The URL or directory path where offline security intelligence updates are served.",
+    "helpText": "Specify the location where security intelligence updates are served. This can either be a local server URL (e.g., http://172.22.199.67:8000/linux/production/) or an absolute directory path (e.g., /tmp/wdav-update/linux/production).",
+    "name": "offlineDefinitionUpdateUrl",
+    "displayName": "Offline security intelligence update URL or directory",
+    "applicability": {
+        "description": null,
+        "platform": "linux",
+        "deviceMode": "none",
+        "technologies": "microsoftSense"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": "{\"type\": \"string\", \"anyOf\": [{\"format\": \"uri\", \"pattern\": \"^https?://.*\"}, {\"pattern\": \"^/.*\"}], \"examples\": [\"http://172.22.199.67:8000/linux/production/\", \"/tmp/wdav-update/linux/production\"], \"minLength\": 1}",
+        "maximumLength": 0,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "linux_mdatp_managed_antivirusengine_offlinedefinitionupdate_enabled",
+            "parentSettingId": "linux_mdatp_managed_antivirusengine_offlinedefinitionupdate"
+        }
+    ],
+    "dependedOnBy": []
+}

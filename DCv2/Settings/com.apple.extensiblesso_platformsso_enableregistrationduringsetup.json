@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Extensible Single Sign On (SSO)"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "PlatformSSO/EnableRegistrationDuringSetup",
+    "rootDefinitionId": "com.apple.extensiblesso_com.apple.extensiblesso",
+    "categoryId": "7b6ddf4e-7136-4fde-adbf-38e6bdfcc962",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.extensiblesso_platformsso_enableregistrationduringsetup",
+    "description": "If `true`, the system enables the PlatformSSO registration process during Setup Assistant on devices running macOS 26 and later. Set this key to `true` when configuring PlatformSSO before enrollment using the `com.apple.psso.required` error response.",
+    "helpText": null,
+    "name": "PlatformSSO_EnableRegistrationDuringSetup",
+    "displayName": "Enable Registration During Setup",
+    "defaultOptionId": "com.apple.extensiblesso_platformsso_enableregistrationduringsetup_false",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "mdm"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.extensiblesso_platformsso_enableregistrationduringsetup_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.extensiblesso_platformsso",
+                    "parentSettingId": "com.apple.extensiblesso_platformsso"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.extensiblesso_platformsso_enableregistrationduringsetup_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.extensiblesso_platformsso",
+                    "parentSettingId": "com.apple.extensiblesso_platformsso"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

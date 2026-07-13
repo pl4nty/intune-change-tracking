@@ -1,0 +1,62 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#scarewareblockerprotectionenabled"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "ScarewareBlockerProtectionEnabled",
+    "rootDefinitionId": "com.apple.managedclient.preferences_scarewareblockerprotectionenabled",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_scarewareblockerprotectionenabled",
+    "description": "This policy setting allows administrators to control whether Microsoft Edge enables Scareware blocker, an AI-powered feature for protecting users from potential tech scams. To support this feature, Microsoft Edge downloads a machine learning model file from Microsoft to the device.\n\nIf you enable or don’t configure this policy, Microsoft Edge Scareware blocker uses local AI to detect potential tech scams.\n\nIf you disable this policy, Microsoft Edge Scareware blocker is disabled. The machine learning model file doesn't download to the device, and if downloaded deletion occurs.\n\nWhen this policy is enabled, the policies \"ScarewareBlockerBlocksDetectedSitesEnabled\", \"ScarewareBlockerSendDetectedSitesToSmartScreenEnabled\", and \"ScarewareBlockerAllowListDomains\" can be used to configure the behavior of the Scareware blocker feature. If both of those policies are disabled, enabling this policy has no effect.\n\nWhen this policy is disabled, the policies \"ScarewareBlockerBlocksDetectedSitesEnabled\", \"ScarewareBlockerSendDetectedSitesToSmartScreenEnabled\", and \"ScarewareBlockerAllowListDomains\" have no effect.",
+    "helpText": null,
+    "name": "ScarewareBlockerProtectionEnabled",
+    "displayName": "Configure Microsoft Edge Scareware blocker protection",
+    "defaultOptionId": "com.apple.managedclient.preferences_scarewareblockerprotectionenabled_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_scarewareblockerprotectionenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_scarewareblockerprotectionenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

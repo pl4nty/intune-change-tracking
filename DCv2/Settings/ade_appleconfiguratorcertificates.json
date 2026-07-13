@@ -1,0 +1,51 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "ADE profile",
+        "enrollment",
+        "Management settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "./enrollment/ade",
+    "offsetUri": "/appleConfiguratorCertificates",
+    "rootDefinitionId": "ade_appleconfiguratorcertificates",
+    "categoryId": "75e27534-3163-45b1-b34e-ca79b077b286",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "ade_appleconfiguratorcertificates",
+    "description": "Required to sync data with a supervised device. Make sure you save a local copy of the certificate that you can access later. You won't be able to make changes to the uploaded copy.",
+    "helpText": "",
+    "name": "AppleConfiguratorCertificates",
+    "displayName": "Apple Configurator certificates",
+    "maximumCount": 600,
+    "minimumCount": 0,
+    "applicability": {
+        "description": null,
+        "platform": "iOS",
+        "deviceMode": "none",
+        "technologies": "enrollment"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "base64",
+        "inputValidationSchema": null,
+        "maximumLength": 8192,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": [
+            "cer"
+        ]
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

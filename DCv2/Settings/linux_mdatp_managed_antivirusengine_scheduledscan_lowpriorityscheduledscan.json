@@ -1,0 +1,62 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Schedule Scan"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/microsoft-365/security/defender-endpoint/linux-preferences#scheduled-scan"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/scheduledScan",
+    "offsetUri": "lowPriorityScheduledScan",
+    "rootDefinitionId": "linux_mdatp_managed_antivirusengine_scheduledscan_lowpriorityscheduledscan",
+    "categoryId": "0e1122f8-2bbf-475b-bce0-9e43a2f5e475",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "linux_mdatp_managed_antivirusengine_scheduledscan_lowpriorityscheduledscan",
+    "description": "This policy setting allows you to enable or disable low CPU priority for scheduled scans. If you enable this setting, low CPU priority will be used during scheduled scans. If you disable or do not configure this setting, not changes will be made to CPU priority for scheduled scans.",
+    "helpText": null,
+    "name": "scheduledScan/lowPriorityScheduledScan",
+    "displayName": "Run with low CPU priority",
+    "defaultOptionId": "linux_mdatp_managed_antivirusengine_scheduledscan_lowpriorityscheduledscan_false",
+    "applicability": {
+        "description": null,
+        "platform": "linux",
+        "deviceMode": "none",
+        "technologies": "microsoftSense"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "linux_mdatp_managed_antivirusengine_scheduledscan_lowpriorityscheduledscan_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "linux_mdatp_managed_antivirusengine_scheduledscan_lowpriorityscheduledscan_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

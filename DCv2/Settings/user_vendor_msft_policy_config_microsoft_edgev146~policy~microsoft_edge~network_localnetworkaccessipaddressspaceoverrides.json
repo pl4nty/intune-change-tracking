@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "LocalNetworkAccessIpAddressSpaceOverrides",
+        "Override IP address space mappings",
+        "\\Microsoft Edge\\Network settings",
+        "Both",
+        "Software\\Policies\\Microsoft\\Edge",
+        "Network settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev146~Policy~microsoft_edge~Network/LocalNetworkAccessIpAddressSpaceOverrides",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edgev146~policy~microsoft_edge~network_localnetworkaccessipaddressspaceoverrides",
+    "categoryId": "3fbd3b29-bafd-4adf-89e4-3be612dee275",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_microsoft_edgev146~policy~microsoft_edge~network_localnetworkaccessipaddressspaceoverrides",
+    "description": "Specifies IP address space overrides for Local Network Access restrictions. This policy allows administrators to treat specific IP address ranges as public (exempt from Local Network Access restrictions) or as local (subject to Local Network Access restrictions).\r\n\r\nIP address space overrides can be specified using one of the following formats:\r\n\r\n• [cidr]=[public|local|loopback]\r\nwhere [cidr] is an IP address range in CIDR notation. CIDR overrides apply to all ports.\r\n\r\n• [ip-address]:[port]=[public|local|loopback]\r\n\r\nIPv6 addresses must be specified in URL-safe (bracketed) format.\r\n\r\nFor more information about Local Network Access, see https://wicg.github.io/local-network-access/.\r\n\r\nExample value:\r\n\r\n100.64.0.0/10=public\r\n[2001:db8::]/32=local\r\n192.168.0.1:8000=public\r\n[2001:DB8::8:800:200C:417A]:8080=local",
+    "helpText": "",
+    "name": "LocalNetworkAccessIpAddressSpaceOverrides",
+    "displayName": "Override IP address space mappings (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edgev146~policy~microsoft_edge~network_localnetworkaccessipaddressspaceoverrides_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev146~policy~microsoft_edge~network_localnetworkaccessipaddressspaceoverrides_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev146~policy~microsoft_edge~network_localnetworkaccessipaddressspaceoverrides_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_microsoft_edgev146~policy~microsoft_edge~network_localnetworkaccessipaddressspaceoverrides_localnetworkaccessipaddressspaceoverridesdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

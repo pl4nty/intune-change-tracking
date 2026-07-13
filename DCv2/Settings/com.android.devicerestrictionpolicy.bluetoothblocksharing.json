@@ -1,0 +1,66 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Bluetooth",
+        "Bluetooth sharing",
+        "Content Sharing",
+        "Sharing",
+        "File transfer",
+        "Nearby sharing",
+        "General"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "/com.android.deviceRestrictionPolicy/",
+    "offsetUri": "/bluetoothBlockSharing/",
+    "rootDefinitionId": "com.android.devicerestrictionpolicy.bluetoothblocksharing",
+    "categoryId": "b6733d23-eadc-486a-abfc-62b78698a16c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.android.devicerestrictionpolicy.bluetoothblocksharing",
+    "description": "If 'True', the device cannot share content over Bluetooth. If set to 'False', Intune doesn't change or update this setting. By default, the OS might allow Bluetooth sharing. Available for fully managed, dedicated, and corporate-owned work profile devices.",
+    "helpText": "",
+    "name": "BluetoothBlockSharing",
+    "displayName": "Block Bluetooth sharing",
+    "defaultOptionId": "com.android.devicerestrictionpolicy.bluetoothblocksharing_allowed",
+    "applicability": {
+        "description": null,
+        "platform": "androidEnterprise",
+        "deviceMode": "none",
+        "technologies": "android"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.android.devicerestrictionpolicy.bluetoothblocksharing_allowed",
+            "description": "Bluetooth sharing is allowed.",
+            "helpText": null,
+            "name": "BLUETOOTH_SHARING_ALLOWED",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "BLUETOOTH_SHARING_ALLOWED"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.bluetoothblocksharing_disallowed",
+            "description": "Bluetooth sharing is not allowed.",
+            "helpText": null,
+            "name": "BLUETOOTH_SHARING_DISALLOWED",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "BLUETOOTH_SHARING_DISALLOWED"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

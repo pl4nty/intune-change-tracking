@@ -1,0 +1,84 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "PreferSlowCiphers",
+        "Prefer specific encryption cipher algorithms for TLS",
+        "\\Microsoft Edge\\Cryptography compliance policies",
+        "Microsoft Edge\\Cryptography compliance policies",
+        "Cryptography compliance policies"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev146~Policy~microsoft_edge~CryptographyCompliance/PreferSlowCiphers",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edgev146~policy~microsoft_edge~cryptographycompliance_preferslowciphers",
+    "categoryId": "120b24dd-c04a-4291-8f24-9c48fcdc1434",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_microsoft_edgev146~policy~microsoft_edge~cryptographycompliance_preferslowciphers_preferslowciphers",
+    "description": "",
+    "helpText": "",
+    "name": "PreferSlowCiphers",
+    "displayName": "Prefer specific encryption cipher algorithms for TLS (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edgev146~policy~microsoft_edge~cryptographycompliance_preferslowciphers_preferslowciphers_cnsa",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev146~policy~microsoft_edge~cryptographycompliance_preferslowciphers_preferslowciphers_cnsa",
+            "description": null,
+            "helpText": null,
+            "name": "Prefer ciphers satisfying the requirements of CNSA 1.0 and 2.0",
+            "displayName": "Prefer ciphers satisfying the requirements of CNSA 1.0 and 2.0",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "cnsa"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_microsoft_edgev146~policy~microsoft_edge~cryptographycompliance_preferslowciphers_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_microsoft_edgev146~policy~microsoft_edge~cryptographycompliance_preferslowciphers"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev146~policy~microsoft_edge~cryptographycompliance_preferslowciphers_preferslowciphers_default",
+            "description": null,
+            "helpText": null,
+            "name": "Use Microsoft Edge's default cipher order",
+            "displayName": "Use Microsoft Edge's default cipher order",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "default"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_microsoft_edgev146~policy~microsoft_edge~cryptographycompliance_preferslowciphers_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_microsoft_edgev146~policy~microsoft_edge~cryptographycompliance_preferslowciphers"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

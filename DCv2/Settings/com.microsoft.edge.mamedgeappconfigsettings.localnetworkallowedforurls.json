@@ -1,0 +1,48 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Network settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.LocalNetworkAllowedForUrls",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.localnetworkallowedforurls",
+    "categoryId": "3fbd3b29-bafd-4adf-89e4-3be612dee275",
+    "settingUsage": "configuration",
+    "uxBehavior": "smallTextBox",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.localnetworkallowedforurls",
+    "description": "Controls which website origins are exempt from Local Network Access checks when accessing local network endpoints.\n\nNetwork requests initiated from websites that match the specified URL patterns are not subject to Local Network Access checks.\n\nFor origins not covered by the patterns specified in this policy, the user's personal configuration applies.\n\nFor detailed information about valid URL patterns, see https://learn.microsoft.com/deployedge/edge-learnmore-ent-policy-url-patterns.\n\nFor more information about Local Network Access restrictions, see https://wicg.github.io/local-network-access/.\n\nMultiple policies can list origins that affect requests to local network endpoints. If an origin matches more than one of the following policies, they take precedence in the following order:\n- LocalNetworkBlockedForUrls\n- LocalNetworkAllowedForUrls\n- LoopbackNetworkBlockedForUrls\n- LoopbackNetworkAllowedForUrls\n- LocalNetworkAccessBlockedForUrls\n- LocalNetworkAccessAllowedForUrls\n\nThis policy controls access to local network endpoints (private IP addresses) and can be used to allow specific websites to access local network resources.",
+    "helpText": null,
+    "name": "LocalNetworkAllowedForUrls",
+    "displayName": "Allow sites to make network requests to local network endpoints.",
+    "maximumCount": 600,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 0,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

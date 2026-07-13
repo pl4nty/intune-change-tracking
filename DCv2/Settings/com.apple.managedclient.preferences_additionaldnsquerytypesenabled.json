@@ -1,0 +1,62 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#additionaldnsquerytypesenabled"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "AdditionalDnsQueryTypesEnabled",
+    "rootDefinitionId": "com.apple.managedclient.preferences_additionaldnsquerytypesenabled",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_additionaldnsquerytypesenabled",
+    "description": "This policy controls whether Microsoft Edge can query more DNS record types when making insecure (non-Secure DNS) requests.\n\nIf this policy is unset or set to Enabled, more record types such as HTTPS (DNS type 65) may be queried in addition to A (DNS type 1) and AAAA (DNS type 28).\n\nIf this policy is set to Disabled, Microsoft Edge will only query A and AAAA record types for insecure DNS requests.\n\nThis setting doesn't affect DNS queries made via Secure DNS, which may always use more record types.\n\nNote: This is a temporary policy and is planned for removal in a future version of Microsoft Edge. After removal, Microsoft Edge will always be able to query more DNS types during insecure requests.",
+    "helpText": null,
+    "name": "AdditionalDnsQueryTypesEnabled",
+    "displayName": "Allow DNS queries for more DNS record types",
+    "defaultOptionId": "com.apple.managedclient.preferences_additionaldnsquerytypesenabled_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_additionaldnsquerytypesenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_additionaldnsquerytypesenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

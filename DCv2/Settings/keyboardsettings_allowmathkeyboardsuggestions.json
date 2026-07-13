@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Keyboard Settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "AllowMathKeyboardSuggestions",
+    "rootDefinitionId": "keyboardsettings_keyboardsettings",
+    "categoryId": "dba26132-cba6-4178-93c3-f02476532f08",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "keyboardsettings_allowmathkeyboardsuggestions",
+    "description": "If `false`, disables keyboard suggestions that include math solutions. This key is also supported by the math.settings configuration.",
+    "helpText": null,
+    "name": "AllowMathKeyboardSuggestions",
+    "displayName": "Allow Math Keyboard Suggestions",
+    "defaultOptionId": "keyboardsettings_allowmathkeyboardsuggestions_true",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "keyboardsettings_allowmathkeyboardsuggestions_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "Blocked",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "keyboardsettings_keyboardsettings",
+                    "parentSettingId": "keyboardsettings_keyboardsettings"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "keyboardsettings_allowmathkeyboardsuggestions_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "Allowed",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "keyboardsettings_keyboardsettings",
+                    "parentSettingId": "keyboardsettings_keyboardsettings"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

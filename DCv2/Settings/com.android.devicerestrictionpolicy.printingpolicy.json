@@ -1,0 +1,66 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "print",
+        "printing",
+        "block printing",
+        "disable printing",
+        "document",
+        "documents",
+        "General"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "/com.android.deviceRestrictionPolicy/",
+    "offsetUri": "/printingPolicy/",
+    "rootDefinitionId": "com.android.devicerestrictionpolicy.printingpolicy",
+    "categoryId": "b6733d23-eadc-486a-abfc-62b78698a16c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.android.devicerestrictionpolicy.printingpolicy",
+    "description": "If 'True', the device is prevented from printing documents. If 'False', Intune doesn't change or update this setting. By default, the OS follows the default printing behavior. Available for fully managed, dedicated, and corporate-owned work profile devices.",
+    "helpText": null,
+    "name": "PrintingPolicy",
+    "displayName": "Block printing",
+    "defaultOptionId": "com.android.devicerestrictionpolicy.printingpolicy_false",
+    "applicability": {
+        "description": null,
+        "platform": "androidEnterprise",
+        "deviceMode": "none",
+        "technologies": "android"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.android.devicerestrictionpolicy.printingpolicy_false",
+            "description": "The user is allowed to print.",
+            "helpText": null,
+            "name": "PRINTING_ALLOWED",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "PRINTING_ALLOWED"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.printingpolicy_true",
+            "description": "The user is not allowed to print.",
+            "helpText": null,
+            "name": "PRINTING_DISALLOWED",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "PRINTING_DISALLOWED"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

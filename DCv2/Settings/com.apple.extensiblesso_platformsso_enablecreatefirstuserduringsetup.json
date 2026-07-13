@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Extensible Single Sign On (SSO)"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "PlatformSSO/EnableCreateFirstUserDuringSetup",
+    "rootDefinitionId": "com.apple.extensiblesso_com.apple.extensiblesso",
+    "categoryId": "7b6ddf4e-7136-4fde-adbf-38e6bdfcc962",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.extensiblesso_platformsso_enablecreatefirstuserduringsetup",
+    "description": "If `true`, the device uses Platform SSO to create the first user account on the Mac during `Setup Assistant`.",
+    "helpText": null,
+    "name": "PlatformSSO_EnableCreateFirstUserDuringSetup",
+    "displayName": "Enable Create First User During Setup",
+    "defaultOptionId": "com.apple.extensiblesso_platformsso_enablecreatefirstuserduringsetup_true",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "mdm"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.extensiblesso_platformsso_enablecreatefirstuserduringsetup_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.extensiblesso_platformsso",
+                    "parentSettingId": "com.apple.extensiblesso_platformsso"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.extensiblesso_platformsso_enablecreatefirstuserduringsetup_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "com.apple.extensiblesso_platformsso",
+                    "parentSettingId": "com.apple.extensiblesso_platformsso"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

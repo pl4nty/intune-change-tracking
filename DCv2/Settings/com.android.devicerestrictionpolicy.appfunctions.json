@@ -1,0 +1,64 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "App functions",
+        "App function",
+        "Expose app functions",
+        "Block app functions",
+        "Applications"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "/com.android.deviceRestrictionPolicy/",
+    "offsetUri": "/appFunctions/",
+    "rootDefinitionId": "com.android.devicerestrictionpolicy.appfunctions",
+    "categoryId": "2257f7e1-3e88-4d4d-a666-437bbe42baca",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.android.devicerestrictionpolicy.appfunctions",
+    "description": "If 'True', apps on fully managed devices, and apps in the work profile on corporate-owned devices with a work profile, are blocked from exposing app functions. If 'False', apps are allowed to expose app functions, which is the default OS behavior. Available for fully managed, dedicated, and corporate-owned work profile devices (at work profile level).",
+    "helpText": null,
+    "name": "AppFunctions",
+    "displayName": "Block apps from exposing app functions",
+    "defaultOptionId": "com.android.devicerestrictionpolicy.appfunctions_false",
+    "applicability": {
+        "description": null,
+        "platform": "androidEnterprise",
+        "deviceMode": "none",
+        "technologies": "android"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.android.devicerestrictionpolicy.appfunctions_false",
+            "description": "Apps are allowed to expose app functions.",
+            "helpText": null,
+            "name": "APP_FUNCTIONS_ALLOWED",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "APP_FUNCTIONS_ALLOWED"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.appfunctions_true",
+            "description": "Apps are blocked from exposing app functions.",
+            "helpText": null,
+            "name": "APP_FUNCTIONS_DISALLOWED",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "APP_FUNCTIONS_DISALLOWED"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

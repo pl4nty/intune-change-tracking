@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Siri Settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "AllowWhileLocked",
+    "rootDefinitionId": "sirisettings_sirisettings",
+    "categoryId": "b85d9c04-4923-4fdf-a425-424686d47859",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "sirisettings_allowwhilelocked",
+    "description": "If `false`, disables Siri while locked.",
+    "helpText": null,
+    "name": "AllowWhileLocked",
+    "displayName": "Allow While Locked",
+    "defaultOptionId": "sirisettings_allowwhilelocked_true",
+    "applicability": {
+        "description": null,
+        "platform": "iOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "sirisettings_allowwhilelocked_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "Blocked",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "sirisettings_sirisettings",
+                    "parentSettingId": "sirisettings_sirisettings"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "sirisettings_allowwhilelocked_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "Allowed",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "sirisettings_sirisettings",
+                    "parentSettingId": "sirisettings_sirisettings"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

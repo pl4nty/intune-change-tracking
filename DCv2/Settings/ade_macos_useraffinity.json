@@ -1,0 +1,67 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "ADE profile",
+        "enrollment",
+        "Management settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "./enrollment/ade",
+    "offsetUri": "/AppleMacOSUserAffinity",
+    "rootDefinitionId": "ade_macos_useraffinity",
+    "categoryId": "75e27534-3163-45b1-b34e-ca79b077b286",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "ade_macos_useraffinity",
+    "description": "User affinity associates devices with users. Users must authenticate to enroll with user affinity.",
+    "helpText": "",
+    "name": "AppleMacOSUserAffinity",
+    "displayName": "User affinity",
+    "defaultOptionId": "ade_macos_useraffinity_1",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "enrollment"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "ade_macos_useraffinity_1",
+            "description": null,
+            "helpText": null,
+            "name": "EnrollWithUserAffinity",
+            "displayName": "Enroll with user affinity",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "ade_macos_authenticationmethod",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "itemId": "ade_macos_useraffinity_0",
+            "description": null,
+            "helpText": null,
+            "name": "EnrollWithoutUserAffinity",
+            "displayName": "Enroll without user affinity",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

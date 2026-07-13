@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "HttpsOnlyMode_recommended",
+        "Allow HTTPS-Only Mode to be enabled",
+        "\\Microsoft Edge - Default Settings (users can override)",
+        "Both",
+        "Software\\Policies\\Microsoft\\Edge\\Recommended",
+        "Microsoft Edge - Default Settings (users can override)"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev145~Policy~microsoft_edge_recommended/HttpsOnlyMode_recommended",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edgev145~policy~microsoft_edge_recommended_httpsonlymode_recommended",
+    "categoryId": "43593f1a-6e4d-44a9-b1d4-99b375a9baa6",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_microsoft_edgev145~policy~microsoft_edge_recommended_httpsonlymode_recommended",
+    "description": "This policy controls whether users can enable HTTPS-Only Mode (Always Use Secure Connections) in Settings. HTTPS-Only Mode attempts to upgrade all navigations to HTTPS.\r\n\r\nIf this setting isn't set or is set to `allowed`, users are able to enable HTTPS-Only Mode.\r\nIf this setting is set to `disallowed`, HTTPS-Only Mode will be disabled.\r\nIf this setting is set to `force_enabled`, HTTPS-Only Mode is enabled in Strict mode.\r\nIf this setting is set to `force_balanced_enabled`, HTTPS-Only Mode is enabled in Balanced mode.\r\n\r\nThe settings `force_enabled` and `force_balanced_enabled` can be recommended to users. HTTPS-Only Mode will be set to Strict or Balanced initially, but users are allowed to change it.\r\n\r\nIf you set this policy to a value that isn't supported by the version of Microsoft Edge that receives the policy, Microsoft Edge defaults to the `allowed` setting.\r\n\r\nThe separate HttpAllowlist policy can be used to exempt specific hostnames or hostname patterns from being upgraded to HTTPS by this feature.\r\n\r\nPolicy options mapping:\r\n\r\n* allowed (allowed) = Don't restrict users' HTTPS-Only Mode setting\r\n\r\n* disallowed (disallowed) = Disable HTTPS-Only Mode\r\n\r\n* force_enabled (force_enabled) = Force enable HTTPS-Only Mode in Strict mode\r\n\r\n* force_balanced_enabled (force_balanced_enabled) = Force enable HTTPS-Only Mode in Balanced Mode\r\n\r\nUse the preceding information when configuring this policy.\r\n\r\nExample value: disallowed",
+    "helpText": "",
+    "name": "HttpsOnlyMode_recommended",
+    "displayName": "Allow HTTPS-Only Mode to be enabled",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edgev145~policy~microsoft_edge_recommended_httpsonlymode_recommended_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev145~policy~microsoft_edge_recommended_httpsonlymode_recommended_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edgev145~policy~microsoft_edge_recommended_httpsonlymode_recommended_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_microsoft_edgev145~policy~microsoft_edge_recommended_httpsonlymode_recommended_httpsonlymode",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

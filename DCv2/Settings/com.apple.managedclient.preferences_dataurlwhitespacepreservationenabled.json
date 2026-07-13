@@ -1,0 +1,62 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#dataurlwhitespacepreservationenabled"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "DataURLWhitespacePreservationEnabled",
+    "rootDefinitionId": "com.apple.managedclient.preferences_dataurlwhitespacepreservationenabled",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_dataurlwhitespacepreservationenabled",
+    "description": "This policy provides a temporary opt-out for changes to how Edge handles whitepsace in data URLS.\nPreviously, whitespace would be kept only if the top level media type was text or contained the media type string xml.\nNow, whitespace will be preserved in all data URLs, regardless of media type.\n\nIf this policy is left unset or is set to True, the new behavior is enabled.\n\nWhen this policy is set to False, the old behavior is enabled.",
+    "helpText": null,
+    "name": "DataURLWhitespacePreservationEnabled",
+    "displayName": "DataURL Whitespace Preservation for all media types",
+    "defaultOptionId": "com.apple.managedclient.preferences_dataurlwhitespacepreservationenabled_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_dataurlwhitespacepreservationenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_dataurlwhitespacepreservationenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

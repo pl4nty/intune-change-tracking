@@ -1,0 +1,62 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#adhoccodesigningforpwasenabled"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "AdHocCodeSigningForPWAsEnabled",
+    "rootDefinitionId": "com.apple.managedclient.preferences_adhoccodesigningforpwasenabled",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_adhoccodesigningforpwasenabled",
+    "description": "Enabling this policy or leaving it unset enables the use of ad-hoc signatures for the native application that's created when installing a Progressive Web Application (PWA). This ensures that each installed application has a unique identity to macOS system components.\n\nDisabling this policy will result in every native application created when installing Progressive Web Applications having the same identity. This can interfere with macOS functionality.\n\nOnly turn off the policy if you are using an endpoint security solution that blocks applications with an ad-hoc signature.",
+    "helpText": null,
+    "name": "AdHocCodeSigningForPWAsEnabled",
+    "displayName": "Native application signing during Progressive Web Application installation",
+    "defaultOptionId": "com.apple.managedclient.preferences_adhoccodesigningforpwasenabled_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_adhoccodesigningforpwasenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_adhoccodesigningforpwasenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

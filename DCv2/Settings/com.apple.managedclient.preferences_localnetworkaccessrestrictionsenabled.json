@@ -1,0 +1,62 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#localnetworkaccessrestrictionsenabled"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "LocalNetworkAccessRestrictionsEnabled",
+    "rootDefinitionId": "com.apple.managedclient.preferences_localnetworkaccessrestrictionsenabled",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_localnetworkaccessrestrictionsenabled",
+    "description": "Local Network Access restrictions prevent public websites from making\nrequests to devices on a user's local network without explicit user permission.\n\nIf you enable this policy, Microsoft Edge blocks\nany request that would otherwise trigger a DevTools warning\ndue to Local Network Access checks.\nThese requests are denied without prompting the user.\n\nIf you disable or don't configure this policy, Microsoft Edge handles\nthese requests using the default behavior, which may include showing warnings in DevTools\nand allowing the request to proceed depending on the context.\n\nNote: This feature improves local network security by deprecating direct access to private IP addresses from public websites\nunless explicitly granted by the user. For more information about Local Network Access, see https://wicg.github.io/local-network-access/.\n\nStarting in version 140, Microsoft Edge introduces support for policies that manage Local Network Access behavior on a per-URL basis.\n\nYou can configure exceptions to allow specific URLs to bypass Local Network Access restrictions.\n\nYou can also block specific URLs from making Local Network Access requests.\n\nStarting from Microsoft Edge version 144, this policy is deprecated because Local Network Access restrictions is enabled by default. The policy will be removed in a future release.",
+    "helpText": null,
+    "name": "LocalNetworkAccessRestrictionsEnabled",
+    "displayName": "Specifies whether to block requests from public websites to devices on a user's local network. (deprecated)",
+    "defaultOptionId": "com.apple.managedclient.preferences_localnetworkaccessrestrictionsenabled_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_localnetworkaccessrestrictionsenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_localnetworkaccessrestrictionsenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

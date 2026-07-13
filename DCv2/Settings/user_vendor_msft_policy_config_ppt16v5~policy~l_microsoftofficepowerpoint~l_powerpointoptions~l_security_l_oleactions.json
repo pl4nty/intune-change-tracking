@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_OLEActions",
+        "OLE Active Content",
+        "\\Microsoft PowerPoint 2016\\PowerPoint Options\\Security",
+        "User",
+        "software\\policies\\microsoft\\office\\16.0\\powerpoint\\security",
+        "Security"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ppt16v5~Policy~L_MicrosoftOfficePowerPoint~L_PowerPointOptions~L_Security/L_OLEActions",
+    "rootDefinitionId": "user_vendor_msft_policy_config_ppt16v5~policy~l_microsoftofficepowerpoint~l_powerpointoptions~l_security_l_oleactions",
+    "categoryId": "85810387-3320-4056-bae2-953beeb246f7",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_ppt16v5~policy~l_microsoftofficepowerpoint~l_powerpointoptions~l_security_l_oleactions",
+    "description": "This policy setting controls the prompting and activation behavior for the \"OLE Active Content\" option in PowerPoint.\r\n\r\nIf you enable this policy setting, you can choose from three options to control how the \"OLE Active Content\" option functions:\r\n\r\n- Disable (don't activate any OLE Active Content). If users click an action button with the \"Object action\" action assigned to it, nothing will happen.\r\n\r\n- Enable (prompt user before activating OLE Active Content). If users click an action button with the \"Object action\" action assigned to it, PowerPoint will prompt them to continue before activating the action. This option enforces the default configuration in PowerPoint.\r\n\r\n- Enable all (allow activating OLE Active Content without prompting). If users click an action button with the \"Object action\" action assigned to it. PowerPoint will activate the action automatically, without prompting.\r\n\r\nIf you do not configure this policy setting, PowerPoint follows the Enable (prompt user before activating OLE Active Content) option.",
+    "helpText": "",
+    "name": "L_OLEActions",
+    "displayName": "OLE Active Content (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_ppt16v5~policy~l_microsoftofficepowerpoint~l_powerpointoptions~l_security_l_oleactions_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_ppt16v5~policy~l_microsoftofficepowerpoint~l_powerpointoptions~l_security_l_oleactions_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_ppt16v5~policy~l_microsoftofficepowerpoint~l_powerpointoptions~l_security_l_oleactions_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_ppt16v5~policy~l_microsoftofficepowerpoint~l_powerpointoptions~l_security_l_oleactions_l_empty",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

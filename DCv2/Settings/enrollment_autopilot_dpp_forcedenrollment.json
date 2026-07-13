@@ -1,0 +1,73 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Autopilot",
+        "Device Preparation",
+        "ForcedEnrollment",
+        "Out-of-box experience settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./enrollment/autopilot/DevicePreparation",
+    "offsetUri": "/OobeSettings/ForcedEnrollment",
+    "rootDefinitionId": "enrollment_autopilot_dpp_forcedenrollment",
+    "categoryId": "72e4d72b-e01e-427c-a3b6-05bdcf04ef8d",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "enrollment_autopilot_dpp_forcedenrollment",
+    "description": "Options to change account and start over with a different account appear, respectively, during initial device setup on the company sign-in page, and on the domain error page. To hide these options, you must configure company branding in Microsoft Entra ID",
+    "helpText": "",
+    "name": "ForcedEnrollment",
+    "displayName": "Hide change account options",
+    "defaultOptionId": "enrollment_autopilot_dpp_forcedenrollment_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "enrollment",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "enrollment_autopilot_dpp_forcedenrollment_0",
+            "description": null,
+            "helpText": null,
+            "name": "Show",
+            "displayName": "Show",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "enrollment_autopilot_dpp_forcedenrollment_1",
+            "description": null,
+            "helpText": null,
+            "name": "Hide",
+            "displayName": "Hide",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

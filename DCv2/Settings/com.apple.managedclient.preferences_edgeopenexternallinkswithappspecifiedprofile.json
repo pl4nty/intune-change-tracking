@@ -1,0 +1,62 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgeopenexternallinkswithappspecifiedprofile"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "EdgeOpenExternalLinksWithAppSpecifiedProfile",
+    "rootDefinitionId": "com.apple.managedclient.preferences_edgeopenexternallinkswithappspecifiedprofile",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_edgeopenexternallinkswithappspecifiedprofile",
+    "description": "This policy controls whether the profile specified by an app (such as Microsoft Teams or Outlook) is given priority when opening external links, instead of the profile selected in the Default profile for external links setting.\n\nPolicy behavior:\n1. Enabled or not configured: The app-specified profile is prioritized for opening external links. This behavior overrides the profile selected in settings, and the behavior defined by the EdgeDefaultProfileEnabled and EdgeOpenExternalLinksWithPrimaryWorkProfileEnabled policies. If the app doesn't specify a profile, this policy has no effect.\n2. Disabled: The profile selected in settings—along with the EdgeDefaultProfileEnabled and EdgeOpenExternalLinksWithPrimaryWorkProfileEnabled policies—will be used to determine which profile opens external links.\n\nNOTE:\nThis policy doesn't override user-defined preferences set through Automatic profile switching, including the Custom site switch setting located within it. If a user has configured specific sites to open in designated profiles, those preferences take precedence.",
+    "helpText": null,
+    "name": "EdgeOpenExternalLinksWithAppSpecifiedProfile",
+    "displayName": "Prioritize App specified profile to open external links",
+    "defaultOptionId": "com.apple.managedclient.preferences_edgeopenexternallinkswithappspecifiedprofile_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_edgeopenexternallinkswithappspecifiedprofile_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_edgeopenexternallinkswithappspecifiedprofile_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "id": "b6a27b2b-f905-4b2e-81b5-0d90e0ef1fdb",
+    "assignmentMode": "allowed",
+    "categories": "identity",
+    "description": "Manage all aspects of Microsoft Entra Backup, such as create recovery jobs and manage backup snapshots.",
+    "displayName": "Entra Backup Administrator",
+    "isBuiltIn": true,
+    "isEnabled": true,
+    "isPrivileged": false,
+    "resourceScopes": [
+        "/"
+    ],
+    "richDescription": "Assign the Entra Backup Administrator role to users who need to do the following tasks:\n- List all the snapshots in a tenant  \n- Create a difference report (preview job) of a backup in the past and optionally include scoping filters\n- Compare states of changed directory objects that are in backup and recovery scope \n- Filter directory objects with supported scoping filters \n- Read status of a job \n- List all the jobs including preview and recovery jobs \n- Trigger recovery jobs and optionally include scoping filters",
+    "templateId": "b6a27b2b-f905-4b2e-81b5-0d90e0ef1fdb",
+    "version": "1",
+    "rolePermissions": [
+        {
+            "allowedResourceActions": [
+                "microsoft.directory/backup/preview/cancel",
+                "microsoft.directory/backup/preview/create",
+                "microsoft.directory/backup/recovery/cancel",
+                "microsoft.directory/backup/recovery/create",
+                "microsoft.directory/backup/standard/read"
+            ],
+            "condition": null
+        }
+    ],
+    "inheritsPermissionsFrom@odata.context": "https://graph.microsoft.com/beta/$metadata#roleManagement/directory/roleDefinitions('b6a27b2b-f905-4b2e-81b5-0d90e0ef1fdb')/inheritsPermissionsFrom",
+    "inheritsPermissionsFrom": [
+        {
+            "id": "88d8e3e3-8f55-4a1e-953a-9b9898b8876b"
+        }
+    ]
+}

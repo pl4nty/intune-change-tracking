@@ -1,0 +1,62 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#oopprintdriversallowed"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "OopPrintDriversAllowed",
+    "rootDefinitionId": "com.apple.managedclient.preferences_oopprintdriversallowed",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_oopprintdriversallowed",
+    "description": "This policy determines whether Microsoft Edge handles interactions with printer drivers through a separate service process.\n\nUsing a service process for tasks like querying available printers, retrieving print driver settings, and submitting documents to local printers improves browser stability and prevents UI freezing during Print Preview.\n\nEnabled or Not Set: Microsoft Edge will use a separate service process for these printing tasks.\n\nDisabled: Microsoft Edge will perform these printing tasks within the browser process.\n\nNote: This policy will be deprecated in the future once the transition to out-of-process print drivers is fully implemented.",
+    "helpText": null,
+    "name": "OopPrintDriversAllowed",
+    "displayName": "Out-of-process print drivers allowed",
+    "defaultOptionId": "com.apple.managedclient.preferences_oopprintdriversallowed_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_oopprintdriversallowed_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "Blocked",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_oopprintdriversallowed_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "Allowed",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,62 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#defaultjavascriptoptimizersetting"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "DefaultJavaScriptOptimizerSetting",
+    "rootDefinitionId": "com.apple.managedclient.preferences_defaultjavascriptoptimizersetting",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_defaultjavascriptoptimizersetting",
+    "description": "Allows you to set whether Microsoft Edge will run the v8 JavaScript engine with more advanced JavaScript optimizations enabled.\n\nDisabling JavaScript optimizations (by setting this policy's value to 2) will mean that Microsoft Edge may render web content more slowly.\n\nThis policy can be overridden for specific URL patterns using the \"JavaScriptOptimizerAllowedForSites\" and \"JavaScriptOptimizerBlockedForSites\" policies.\n\nIf you don't configure this policy, JavaScript optimizations are enabled.\n\nPolicy options mapping:\n\n* AllowJavaScriptOptimizer (1) = Enable advanced JavaScript optimizations on all sites\n\n* BlockJavaScriptOptimizer (2) = Disable advanced JavaScript optimizations on all sites\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "DefaultJavaScriptOptimizerSetting",
+    "displayName": "Control use of JavaScript optimizers",
+    "defaultOptionId": "com.apple.managedclient.preferences_defaultjavascriptoptimizersetting_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultjavascriptoptimizersetting_0",
+            "description": null,
+            "helpText": null,
+            "name": "Enable advanced JavaScript optimizations on all sites",
+            "displayName": "Enable advanced JavaScript optimizations on all sites",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultjavascriptoptimizersetting_1",
+            "description": null,
+            "helpText": null,
+            "name": "Disable advanced JavaScript optimizations on all sites",
+            "displayName": "Disable advanced JavaScript optimizations on all sites",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

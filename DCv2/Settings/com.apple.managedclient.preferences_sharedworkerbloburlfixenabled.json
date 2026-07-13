@@ -1,0 +1,62 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#sharedworkerbloburlfixenabled"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "SharedWorkerBlobURLFixEnabled",
+    "rootDefinitionId": "com.apple.managedclient.preferences_sharedworkerbloburlfixenabled",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_sharedworkerbloburlfixenabled",
+    "description": "According to Service Worker specification\nhttps://w3c.github.io/ServiceWorker/#control-and-use-worker-client, workers\nshould inherit controllers for blob URLs. Currently, only DedicatedWorkers\ninherit the controller, while SharedWorkers do not.\n\nEnabled/Unset: Microsoft Edge inherits\nthe controller for SharedWorker blob URLs, aligning with the specification.\n\nDisabled: Behavior remains unchanged, not aligning with the specification.\n\nThis policy is temporary and will be removed in a future update.",
+    "helpText": null,
+    "name": "SharedWorkerBlobURLFixEnabled",
+    "displayName": "Make SharedWorker blob URL behavior aligned with the specification",
+    "defaultOptionId": "com.apple.managedclient.preferences_sharedworkerbloburlfixenabled_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_sharedworkerbloburlfixenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_sharedworkerbloburlfixenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "LocalNetworkBlockedForUrls",
+        "Block sites from making network requests to local network endpoints.",
+        "\\Microsoft Edge\\Network settings",
+        "Both",
+        "Software\\Policies\\Microsoft\\Edge",
+        "Network settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edgev146~Policy~microsoft_edge~Network/LocalNetworkBlockedForUrls",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edgev146~policy~microsoft_edge~network_localnetworkblockedforurls",
+    "categoryId": "3fbd3b29-bafd-4adf-89e4-3be612dee275",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_microsoft_edgev146~policy~microsoft_edge~network_localnetworkblockedforurls",
+    "description": "Controls which website origins are blocked from making Local Network Access requests to local network endpoints.\r\n\r\nNetwork requests initiated from websites that match the specified URL patterns are blocked from issuing Local Network Access requests.\r\n\r\nFor origins not covered by the patterns specified in this policy, the user's personal configuration applies.\r\n\r\nFor detailed information about valid URL patterns, see https://learn.microsoft.com/deployedge/edge-learnmore-ent-policy-url-patterns.\r\n\r\nFor more information about Local Network Access restrictions, see https://wicg.github.io/local-network-access/.\r\n\r\nMultiple policies can list origins that affect requests to local network endpoints. If an origin matches more than one of the following policies, they take precedence in the following order:\r\n- LocalNetworkBlockedForUrls\r\n- LocalNetworkAllowedForUrls\r\n- LoopbackNetworkBlockedForUrls\r\n- LoopbackNetworkAllowedForUrls\r\n- LocalNetworkAccessBlockedForUrls\r\n- LocalNetworkAccessAllowedForUrls\r\n\r\nThis policy controls access to local network endpoints (private IP addresses) and can be used to block specific websites from accessing local network resources.\r\n\r\nExample value:\r\n\r\nhttp://www.example.com:8080\r\n[*.]example.edu\r\n*",
+    "helpText": "",
+    "name": "LocalNetworkBlockedForUrls",
+    "displayName": "Block sites from making network requests to local network endpoints. (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edgev146~policy~microsoft_edge~network_localnetworkblockedforurls_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev146~policy~microsoft_edge~network_localnetworkblockedforurls_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edgev146~policy~microsoft_edge~network_localnetworkblockedforurls_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_microsoft_edgev146~policy~microsoft_edge~network_localnetworkblockedforurls_localnetworkblockedforurlsdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

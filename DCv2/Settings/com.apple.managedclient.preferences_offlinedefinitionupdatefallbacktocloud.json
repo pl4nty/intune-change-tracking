@@ -1,0 +1,62 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Antivirus engine"
+    ],
+    "infoUrls": [
+        "https://learn.microsoft.com/en-us/defender-endpoint/mac-support-offline-security-intelligence-update#configure-the-endpoints"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.wdav/Forced/[0]/mcx_preference_settings/antivirusEngine",
+    "offsetUri": "offlineDefinitionUpdateFallbackToCloud",
+    "rootDefinitionId": "com.apple.managedclient.preferences_offlinedefinitionupdatefallbacktocloud",
+    "categoryId": "13467142-14e7-4380-8573-4866e842c7f6",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_offlinedefinitionupdatefallbacktocloud",
+    "description": "Determine the Defender for Endpoint security intelligence update approach when offline mirror server fails to serve the update request. If set to true, the update is retried via the Microsoft cloud when offline security intelligence update failed.",
+    "helpText": null,
+    "name": "offlineDefinitionUpdateFallbackToCloud",
+    "displayName": "Fallback to Microsoft cloud updates",
+    "defaultOptionId": "com.apple.managedclient.preferences_offlinedefinitionupdatefallbacktocloud_true",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement,microsoftSense"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_offlinedefinitionupdatefallbacktocloud_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_offlinedefinitionupdatefallbacktocloud_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

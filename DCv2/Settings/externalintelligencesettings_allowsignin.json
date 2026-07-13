@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "External Intelligence Settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "AllowSignIn",
+    "rootDefinitionId": "externalintelligencesettings_externalintelligencesettings",
+    "categoryId": "d9654cb3-57c8-487c-90a5-454e15336731",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "externalintelligencesettings_allowsignin",
+    "description": "If `false`, disables sign-in for external intelligence integrations.",
+    "helpText": null,
+    "name": "AllowSignIn",
+    "displayName": "Allow Sign In",
+    "defaultOptionId": "externalintelligencesettings_allowsignin_true",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "externalintelligencesettings_allowsignin_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "Blocked",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "externalintelligencesettings_externalintelligencesettings",
+                    "parentSettingId": "externalintelligencesettings_externalintelligencesettings"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "externalintelligencesettings_allowsignin_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "Allowed",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "externalintelligencesettings_externalintelligencesettings",
+                    "parentSettingId": "externalintelligencesettings_externalintelligencesettings"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

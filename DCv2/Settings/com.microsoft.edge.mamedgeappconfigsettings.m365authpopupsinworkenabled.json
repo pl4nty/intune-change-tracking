@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Identity and sign-in"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.M365AuthPopupsInWorkEnabled",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.m365authpopupsinworkenabled",
+    "categoryId": "45a89c1f-0a34-4f78-b28f-d30b623fa423",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.m365authpopupsinworkenabled",
+    "description": "This policy controls whether Microsoft Edge allows Microsoft 365 authentication pop-ups to bypass the pop-up blocker in work profiles.\n\nWhen users are signed in with a work account, some Microsoft 365 sites (for example, microsoft.com, cloud.microsoft, and visualstudio.com) may open authentication pop-ups to login.microsoftonline.com, login.live.com, or login.microsoft.com. These pop-ups are required to complete sign-in.\n\nIf you enable this policy or don't configure it, Microsoft 365 authentication pop-ups are allowed in work profiles.\n\nIf you disable this policy, Microsoft 365 authentication pop-ups follow the default settings like other pop-ups.",
+    "helpText": null,
+    "name": "M365AuthPopupsInWorkEnabled",
+    "displayName": "Allow M365 authentication popups in work profiles",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.m365authpopupsinworkenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.m365authpopupsinworkenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

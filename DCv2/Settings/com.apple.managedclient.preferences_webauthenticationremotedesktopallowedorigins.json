@@ -1,0 +1,49 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#webauthenticationremotedesktopallowedorigins"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "WebAuthenticationRemoteDesktopAllowedOrigins",
+    "rootDefinitionId": "com.apple.managedclient.preferences_webauthenticationremotedesktopallowedorigins",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_webauthenticationremotedesktopallowedorigins",
+    "description": "This policy defines a list of allowed HTTPS origins for remote desktop client applications that initiate WebAuthn API requests from a browsing session on a remote host.\n\nOrigins specified in this policy can request WebAuthn authentication for Relying Party IDs (RP IDs) they would not typically be authorized to claim.\n\nOnly HTTPS origins are supported. Wildcards are not permitted. Entries that do not\nmeet these requirements will be ignored.\n\nFor more information about the WebAuthn Remote Desktop Support feature, please see https://github.com/w3c/webauthn/wiki/Explainer:-Remote-Desktop-Support/a4e158c569f456c759d0ddd294a9015bd4d4eb9a.",
+    "helpText": null,
+    "name": "WebAuthenticationRemoteDesktopAllowedOrigins",
+    "displayName": "Allowed Origins for Proxied WebAuthn Requests from Remote Desktop Applications.",
+    "maximumCount": 600,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

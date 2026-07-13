@@ -1,0 +1,76 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_BlockMOTWMacroInTrustedOrSigned",
+        "Block all internet macros (ignore trusted locations or publishers)",
+        "\\Microsoft Office 2016\\Security Settings",
+        "User",
+        "software\\policies\\microsoft\\office\\16.0\\common\\security",
+        "blockmotwmacrointrustedorsigned",
+        "Security Settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/office16v21~Policy~L_MicrosoftOfficeSystem~L_SecuritySettings/L_BlockMOTWMacroInTrustedOrSigned",
+    "rootDefinitionId": "user_vendor_msft_policy_config_office16v21~policy~l_microsoftofficesystem~l_securitysettings_l_blockmotwmacrointrustedorsigned",
+    "categoryId": "50b4bc60-802c-477a-9366-80e09154595f",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_office16v21~policy~l_microsoftofficesystem~l_securitysettings_l_blockmotwmacrointrustedorsigned",
+    "description": "This policy setting removes the trusted location and trusted publisher exceptions for files downloaded from the internet with Mark of the Web (MOTW).\r\n\r\nBy default, Office blocks macros from the internet but allows exceptions for files that are either in trusted locations or signed by trusted publishers.\r\n\r\nIf you enable this policy setting, all macros in files downloaded from the internet will be blocked, including those in trusted locations or signed by trusted publishers. This provides maximum protection against internet-based macro threats.\r\n\r\nIf you disable or don't configure this policy setting, the default behavior applies where macros from the internet are blocked except when the file is in a trusted location or signed by a trusted publisher.",
+    "helpText": "",
+    "name": "L_BlockMOTWMacroInTrustedOrSigned",
+    "displayName": "Block all internet macros (ignore trusted locations or publishers) (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_office16v21~policy~l_microsoftofficesystem~l_securitysettings_l_blockmotwmacrointrustedorsigned_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v21~policy~l_microsoftofficesystem~l_securitysettings_l_blockmotwmacrointrustedorsigned_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_office16v21~policy~l_microsoftofficesystem~l_securitysettings_l_blockmotwmacrointrustedorsigned_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

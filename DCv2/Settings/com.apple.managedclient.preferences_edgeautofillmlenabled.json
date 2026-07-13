@@ -1,0 +1,62 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgeautofillmlenabled"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "EdgeAutofillMlEnabled",
+    "rootDefinitionId": "com.apple.managedclient.preferences_edgeautofillmlenabled",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_edgeautofillmlenabled",
+    "description": "Allows ML technology to predict and fill in forms and text fields for better browsing. Your personal data is secure and will not be used elsewhere.\n\nIf you enable this policy or don't configure it, users can benefit from machine learning powered autofill suggestions, which improve efficiency by offering more accurate, context aware form recommendations based on historical autofill data.\n\nIf you disable this policy, machine learning powered autofill suggestions will not be shown, and autofill will no longer use cloud-based machine learning models to enhance form filling with smarter, context aware suggestions. Instead, autofill will rely on basic form data without the benefits of machine learning.\n\nThis policy will be disabled if you disable \"AutofillAddressEnabled\"..",
+    "helpText": null,
+    "name": "EdgeAutofillMlEnabled",
+    "displayName": "Machine learning powered autofill suggestions",
+    "defaultOptionId": "com.apple.managedclient.preferences_edgeautofillmlenabled_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_edgeautofillmlenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_edgeautofillmlenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,62 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#enableunsafeswiftshader"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "EnableUnsafeSwiftShader",
+    "rootDefinitionId": "com.apple.managedclient.preferences_enableunsafeswiftshader",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_enableunsafeswiftshader",
+    "description": "Controls whether SwiftShader is used as a fallback for WebGL when hardware GPU acceleration isn't available.\n\nWhen enabled, Microsoft Edge uses SwiftShader to support WebGL on systems without GPU acceleration, such as headless environments or virtual machines.\n\nStarting in Microsoft Edge version 144, SwiftShader has been deprecated due to security concerns. As a result, WebGL context creation fails in scenarios where SwiftShader would have been used. Enabling this policy allows organizations to temporarily defer the deprecation and continue using SwiftShader.\n\nIf you disable or don't configure this policy, WebGL context creation may fail on systems without hardware acceleration. This could cause web content relying on WebGL to function incorrectly if it doesn't handle context creation failures.\n\nNote: This policy is temporary and scheduled for removal in a future release. Microsoft does not guarantee the security of environments where this policy is enabled.",
+    "helpText": null,
+    "name": "EnableUnsafeSwiftShader",
+    "displayName": "Allow software WebGL fallback using SwiftShader",
+    "defaultOptionId": "com.apple.managedclient.preferences_enableunsafeswiftshader_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_enableunsafeswiftshader_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_enableunsafeswiftshader_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}
