@@ -14,11 +14,26 @@ import subprocess
 import shutil
 import re
 import os
+import hashlib
 import json
 import asyncio
 import aiohttp
 from dotenv import load_dotenv
 load_dotenv()
+
+
+def safeFilename(id, suffix='.json'):
+    # Most filesystems cap a path component at 255 bytes. Some setting ids
+    # exceed this, so truncate and append a short stable hash of the full id
+    # to keep the name unique. Names that already fit are returned unchanged.
+    name = id + suffix
+    if len(name.encode('utf-8')) <= 255:
+        return name
+    digest = hashlib.sha1(id.encode('utf-8')).hexdigest()[:8]
+    tail = f'-{digest}{suffix}'
+    keep = 255 - len(tail.encode('utf-8'))
+    truncated = id.encode('utf-8')[:keep].decode('utf-8', 'ignore')
+    return truncated + tail
 
 
 def cleanDCv1Ids(setting):
@@ -76,7 +91,7 @@ async def main():
                         # id_10699 -> id
                         id = '_'.join(setting.get('id').split('_')[:-1])
                         cleanDCv1Ids(setting)
-                        path = Path(output, source, id + '.json')
+                        path = Path(output, source, safeFilename(id))
                         with open(path, 'w', encoding='utf-8') as f:
                             json.dump(setting, f, ensure_ascii=False, indent=4)
 
@@ -117,7 +132,7 @@ async def main():
         if data:
             for x in data:
                 id = x.get('id')
-                with open(f'RoleDefinitions/{provider}/{id}.json', 'w', encoding='utf-8') as f:
+                with open(f'RoleDefinitions/{provider}/{safeFilename(id)}', 'w', encoding='utf-8') as f:
                     json.dump(x, f, ensure_ascii=False, indent=4)
 
      # Resource operations
@@ -129,7 +144,7 @@ async def main():
     if data:
         for x in data:
             id = x.get('id')
-            with open(f'ResourceOperations/{id}.json', 'w', encoding='utf-8') as f:
+            with open(f'ResourceOperations/{safeFilename(id)}', 'w', encoding='utf-8') as f:
                 json.dump(x, f, ensure_ascii=False, indent=4)
 
     for table in [
@@ -168,7 +183,7 @@ async def main():
     os.makedirs(Path(output, source))
     data = await client.device_management.with_url('https://graph.microsoft.com/beta/deviceManagement/settingDefinitions').get(request_configuration=request_config)
     for item in data.json().get('value'):
-        path = Path(output, source, item.get('id') + '.json')
+        path = Path(output, source, safeFilename(item.get('id')))
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(item, f, ensure_ascii=False, indent=4)
 
@@ -181,7 +196,7 @@ async def main():
     data = await client.device_management.with_url('https://graph.microsoft.com/beta/deviceManagement/configurationSettings').get(request_configuration=request_config)
     for item in data.json().get('value'):
         item.pop('version')
-        path = Path(output, source, item.get('id') + '.json')
+        path = Path(output, source, safeFilename(item.get('id')))
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(item, f, ensure_ascii=False, indent=4)
 
@@ -191,7 +206,7 @@ async def main():
     data = await client.device_management.with_url('https://graph.microsoft.com/beta/deviceManagement/complianceSettings').get(request_configuration=request_config)
     for item in data.json().get('value'):
         item.pop('version')
-        path = Path(output, source, item.get('id') + '.json')
+        path = Path(output, source, safeFilename(item.get('id')))
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(item, f, ensure_ascii=False, indent=4)
 
@@ -201,7 +216,7 @@ async def main():
     # kiota 1.9.1 started dropping deviceManagement from endpoint
     data = await client.device_management.with_url('https://graph.microsoft.com/beta/deviceManagement/configurationPolicyTemplates').get(request_configuration=request_config)
     for item in data.json().get('value'):
-        path = Path(output, source, item.get('id') + '.json')
+        path = Path(output, source, safeFilename(item.get('id')))
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(item, f, ensure_ascii=False, indent=4)
 
@@ -216,7 +231,7 @@ async def main():
     data = await client.device_management.with_url('https://graph.microsoft.com/beta/deviceManagement/inventorySettings').get(request_configuration=request_config)
     for item in data.json().get('value'):
         item.pop('version')
-        path = Path(output, source, item.get('id') + '.json')
+        path = Path(output, source, safeFilename(item.get('id')))
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(item, f, ensure_ascii=False, indent=4)
 
