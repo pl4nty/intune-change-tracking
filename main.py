@@ -367,9 +367,23 @@ class IbizaTokenCredential(object):
         }
 
     def get_token(self, *scopes: str, claims=None, tenant_id=None, **kwargs):
-        data = requests.post('https://intune.microsoft.com/api/DelegationToken', json=self._body,
+        resp = requests.post('https://intune.microsoft.com/api/DelegationToken', json=self._body,
                              # authHeader is null without portalId
-                             cookies={'portalId': 'f4a17c62-20c9-44b4-bde0-9206b1578bd2'}).json()
+                             cookies={'portalId': 'f4a17c62-20c9-44b4-bde0-9206b1578bd2'})
+        try:
+            data = resp.json()
+        except ValueError:
+            print(f'::error::DelegationToken returned non-JSON (HTTP {resp.status_code}): {resp.text[:1000]}')
+            raise
+
+        if 'portalAuthorization' not in data:
+            # Redact token material, surface everything else (error codes/messages)
+            redacted = {k: ('<redacted>' if k in ('portalAuthorization', 'value') else v)
+                        for k, v in data.items()}
+            print(f'::error::DelegationToken response missing portalAuthorization '
+                  f'(HTTP {resp.status_code}): {json.dumps(redacted)[:2000]}')
+            raise Exception('DelegationToken did not return portalAuthorization')
+
         subprocess.run(['gh', 'secret', 'set', 'AZURE_INTUNEPORTAL_RT', '--body',
                        data['portalAuthorization'], '--repo', os.environ['REPO']])
 
