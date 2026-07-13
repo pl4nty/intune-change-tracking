@@ -14,11 +14,27 @@ import subprocess
 import shutil
 import re
 import os
+import hashlib
 import json
+import msal
 import asyncio
 import aiohttp
 from dotenv import load_dotenv
 load_dotenv()
+
+
+def safeFilename(id, suffix='.json'):
+    # Most filesystems cap a path component at 255 bytes. Some setting ids
+    # exceed this, so truncate and append a short stable hash of the full id
+    # to keep the name unique. Names that already fit are returned unchanged.
+    name = id + suffix
+    if len(name.encode('utf-8')) <= 255:
+        return name
+    digest = hashlib.sha1(id.encode('utf-8')).hexdigest()[:8]
+    tail = f'-{digest}{suffix}'
+    keep = 255 - len(tail.encode('utf-8'))
+    truncated = id.encode('utf-8')[:keep].decode('utf-8', 'ignore')
+    return truncated + tail
 
 
 def cleanDCv1Ids(setting):
@@ -39,7 +55,11 @@ def cleanDCv1Ids(setting):
 
 async def main():
     # Setting status errors
-    async with aiohttp.ClientSession() as session, session.get('https://intune.microsoft.com/signin/idpRedirect.js') as resp:
+    # A browser User-Agent is required, otherwise the portal returns a WAF block page
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    }
+    async with aiohttp.ClientSession(headers=headers) as session, session.get('https://intune.microsoft.com/') as resp:
         versions = await resp.text()
         versions = re.search(
             r'\"extensionsPageVersion\":({[^}]+})', versions).group(1)
@@ -72,7 +92,7 @@ async def main():
                         # id_10699 -> id
                         id = '_'.join(setting.get('id').split('_')[:-1])
                         cleanDCv1Ids(setting)
-                        path = Path(output, source, id + '.json')
+                        path = Path(output, source, safeFilename(id))
                         with open(path, 'w', encoding='utf-8') as f:
                             json.dump(setting, f, ensure_ascii=False, indent=4)
 
@@ -113,7 +133,7 @@ async def main():
         if data:
             for x in data:
                 id = x.get('id')
-                with open(f'RoleDefinitions/{provider}/{id}.json', 'w', encoding='utf-8') as f:
+                with open(f'RoleDefinitions/{provider}/{safeFilename(id)}', 'w', encoding='utf-8') as f:
                     json.dump(x, f, ensure_ascii=False, indent=4)
 
      # Resource operations
@@ -125,7 +145,7 @@ async def main():
     if data:
         for x in data:
             id = x.get('id')
-            with open(f'ResourceOperations/{id}.json', 'w', encoding='utf-8') as f:
+            with open(f'ResourceOperations/{safeFilename(id)}', 'w', encoding='utf-8') as f:
                 json.dump(x, f, ensure_ascii=False, indent=4)
 
     for table in [
@@ -164,7 +184,7 @@ async def main():
     os.makedirs(Path(output, source))
     data = await client.device_management.with_url('https://graph.microsoft.com/beta/deviceManagement/settingDefinitions').get(request_configuration=request_config)
     for item in data.json().get('value'):
-        path = Path(output, source, item.get('id') + '.json')
+        path = Path(output, source, safeFilename(item.get('id')))
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(item, f, ensure_ascii=False, indent=4)
 
@@ -177,7 +197,7 @@ async def main():
     data = await client.device_management.with_url('https://graph.microsoft.com/beta/deviceManagement/configurationSettings').get(request_configuration=request_config)
     for item in data.json().get('value'):
         item.pop('version')
-        path = Path(output, source, item.get('id') + '.json')
+        path = Path(output, source, safeFilename(item.get('id')))
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(item, f, ensure_ascii=False, indent=4)
 
@@ -187,7 +207,7 @@ async def main():
     data = await client.device_management.with_url('https://graph.microsoft.com/beta/deviceManagement/complianceSettings').get(request_configuration=request_config)
     for item in data.json().get('value'):
         item.pop('version')
-        path = Path(output, source, item.get('id') + '.json')
+        path = Path(output, source, safeFilename(item.get('id')))
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(item, f, ensure_ascii=False, indent=4)
 
@@ -197,24 +217,36 @@ async def main():
     # kiota 1.9.1 started dropping deviceManagement from endpoint
     data = await client.device_management.with_url('https://graph.microsoft.com/beta/deviceManagement/configurationPolicyTemplates').get(request_configuration=request_config)
     for item in data.json().get('value'):
-        path = Path(output, source, item.get('id') + '.json')
+        path = Path(output, source, safeFilename(item.get('id')))
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(item, f, ensure_ascii=False, indent=4)
 
     # DCv2 inventorySettings eg Properties catalog
-    client = GraphServiceClient(IbizaTokenCredential(
-        os.environ['AZURE_INTUNEPORTAL_RT'],
-        'Microsoft_Intune_DeviceSettings',
-        'microsoft.graph'
-    ), ['https://graph.microsoft.com/.default'])
+    # Uses a portal refresh token (AZURE_INTUNEPORTAL_RT) that is auto-rotated
+    # only on successful runs, so it goes stale if the pipeline is down for a
+    # while. Don't let a stale token fail the whole run (which would discard
+    # everything fetched above) - warn and keep the previously committed data.
+    # The token still rotates on each run, so this self-heals once refreshed.
     source = 'Inventory'
-    os.makedirs(Path(output, source))
-    data = await client.device_management.with_url('https://graph.microsoft.com/beta/deviceManagement/inventorySettings').get(request_configuration=request_config)
-    for item in data.json().get('value'):
-        item.pop('version')
-        path = Path(output, source, item.get('id') + '.json')
-        with open(path, 'w', encoding='utf-8') as f:
-            json.dump(item, f, ensure_ascii=False, indent=4)
+    try:
+        client = GraphServiceClient(BrokerTokenCredential(
+            '5926fc8e-304e-4f59-8bed-58ca97cc39a4',  # Intune portal SPA client
+            'c44b4083-3bb0-49c1-b47d-974e53cbdf3c',  # broker client
+            'AZURE_INTUNEPORTAL_RT',
+            'https://intune.microsoft.com/',
+        ), ['https://graph.microsoft.com/.default'])
+        data = await client.device_management.with_url('https://graph.microsoft.com/beta/deviceManagement/inventorySettings').get(request_configuration=request_config)
+        os.makedirs(Path(output, source))
+        for item in data.json().get('value'):
+            item.pop('version')
+            path = Path(output, source, safeFilename(item.get('id')))
+            with open(path, 'w', encoding='utf-8') as f:
+                json.dump(item, f, ensure_ascii=False, indent=4)
+    except Exception as e:
+        print(f'::warning::Skipping DCv2 {source} refresh, AZURE_INTUNEPORTAL_RT may be expired: {e}')
+        # DCv2 was cleared earlier in the run, so restore the previously
+        # committed data to avoid deleting it from the repo
+        subprocess.run(['git', 'checkout', '--', str(Path(output, source))])
 
     # could only find 24-hour SPA token :(
     # # Planned changes or new features in Microsoft Entra via ChangeManagementHub client
@@ -337,9 +369,23 @@ class IbizaTokenCredential(object):
         }
 
     def get_token(self, *scopes: str, claims=None, tenant_id=None, **kwargs):
-        data = requests.post('https://intune.microsoft.com/api/DelegationToken', json=self._body,
+        resp = requests.post('https://intune.microsoft.com/api/DelegationToken', json=self._body,
                              # authHeader is null without portalId
-                             cookies={'portalId': 'f4a17c62-20c9-44b4-bde0-9206b1578bd2'}).json()
+                             cookies={'portalId': 'f4a17c62-20c9-44b4-bde0-9206b1578bd2'})
+        try:
+            data = resp.json()
+        except ValueError:
+            print(f'::error::DelegationToken returned non-JSON (HTTP {resp.status_code}): {resp.text[:1000]}')
+            raise
+
+        if 'portalAuthorization' not in data:
+            # Redact token material, surface everything else (error codes/messages)
+            redacted = {k: ('<redacted>' if k in ('portalAuthorization', 'value') else v)
+                        for k, v in data.items()}
+            print(f'::error::DelegationToken response missing portalAuthorization '
+                  f'(HTTP {resp.status_code}): {json.dumps(redacted)[:2000]}')
+            raise Exception('DelegationToken did not return portalAuthorization')
+
         subprocess.run(['gh', 'secret', 'set', 'AZURE_INTUNEPORTAL_RT', '--body',
                        data['portalAuthorization'], '--repo', os.environ['REPO']])
 
@@ -375,6 +421,29 @@ class RefreshTokenCredential(object):
         subprocess.run(['gh', 'secret', 'set', self._token_envvar,
                        '--body', data['refresh_token'], '--repo', os.environ['REPO']])
 
+        return AccessToken(token=data['access_token'], expires_on=int(time.time()+data['expires_in']))
+
+
+class BrokerTokenCredential(object):
+    # DelegationToken API is gone, so redeem the refresh token via a brokered SPA grant
+    def __init__(self, client_id, brk_client_id, token_envvar, redirect_uri):
+        host = redirect_uri.split('//')[1].strip('/')
+        session = requests.Session()
+        session.headers['Origin'] = f'https://{host}'  # SPA clients redeem cross-origin only
+        self._app = msal.PublicClientApplication(client_id, client_capabilities=['CP1'], http_client=session,
+            authority=f'https://login.microsoftonline.com/{os.environ["AZURE_TENANT_ID"]}')
+        self._brk = {'brk_client_id': brk_client_id, 'brk_redirect_uri': redirect_uri}
+        self._data = {**self._brk, 'redirect_uri': f'brk-{brk_client_id}://{host}'}
+        self._token_envvar = token_envvar
+
+    def get_token(self, *scopes: str, claims=None, tenant_id=None, **kwargs):
+        data = self._app.acquire_token_by_refresh_token(
+            os.environ[self._token_envvar], list(scopes), params=self._brk, data=self._data)
+        if 'access_token' not in data:
+            raise Exception(data.get('error_description'))
+        rt = self._app.token_cache.find(msal.TokenCache.CredentialType.REFRESH_TOKEN)[0]['secret']
+        subprocess.run(['gh', 'secret', 'set', self._token_envvar,
+                       '--body', rt, '--repo', os.environ['REPO']])
         return AccessToken(token=data['access_token'], expires_on=int(time.time()+data['expires_in']))
 
 
