@@ -39,7 +39,11 @@ def cleanDCv1Ids(setting):
 
 async def main():
     # Setting status errors
-    async with aiohttp.ClientSession() as session, session.get('https://intune.microsoft.com/signin/idpRedirect.js') as resp:
+    # A browser User-Agent is required, otherwise the portal returns a WAF block page
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    }
+    async with aiohttp.ClientSession(headers=headers) as session, session.get('https://intune.microsoft.com/') as resp:
         versions = await resp.text()
         versions = re.search(
             r'\"extensionsPageVersion\":({[^}]+})', versions).group(1)
