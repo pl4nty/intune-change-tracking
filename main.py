@@ -221,19 +221,30 @@ async def main():
             json.dump(item, f, ensure_ascii=False, indent=4)
 
     # DCv2 inventorySettings eg Properties catalog
-    client = GraphServiceClient(IbizaTokenCredential(
-        os.environ['AZURE_INTUNEPORTAL_RT'],
-        'Microsoft_Intune_DeviceSettings',
-        'microsoft.graph'
-    ), ['https://graph.microsoft.com/.default'])
+    # Uses a portal refresh token (AZURE_INTUNEPORTAL_RT) that is auto-rotated
+    # only on successful runs, so it goes stale if the pipeline is down for a
+    # while. Don't let a stale token fail the whole run (which would discard
+    # everything fetched above) - warn and keep the previously committed data.
+    # The token still rotates on each run, so this self-heals once refreshed.
     source = 'Inventory'
-    os.makedirs(Path(output, source))
-    data = await client.device_management.with_url('https://graph.microsoft.com/beta/deviceManagement/inventorySettings').get(request_configuration=request_config)
-    for item in data.json().get('value'):
-        item.pop('version')
-        path = Path(output, source, safeFilename(item.get('id')))
-        with open(path, 'w', encoding='utf-8') as f:
-            json.dump(item, f, ensure_ascii=False, indent=4)
+    try:
+        client = GraphServiceClient(IbizaTokenCredential(
+            os.environ['AZURE_INTUNEPORTAL_RT'],
+            'Microsoft_Intune_DeviceSettings',
+            'microsoft.graph'
+        ), ['https://graph.microsoft.com/.default'])
+        data = await client.device_management.with_url('https://graph.microsoft.com/beta/deviceManagement/inventorySettings').get(request_configuration=request_config)
+        os.makedirs(Path(output, source))
+        for item in data.json().get('value'):
+            item.pop('version')
+            path = Path(output, source, safeFilename(item.get('id')))
+            with open(path, 'w', encoding='utf-8') as f:
+                json.dump(item, f, ensure_ascii=False, indent=4)
+    except Exception as e:
+        print(f'::warning::Skipping DCv2 {source} refresh, AZURE_INTUNEPORTAL_RT may be expired: {e}')
+        # DCv2 was cleared earlier in the run, so restore the previously
+        # committed data to avoid deleting it from the repo
+        subprocess.run(['git', 'checkout', '--', str(Path(output, source))])
 
     # could only find 24-hour SPA token :(
     # # Planned changes or new features in Microsoft Entra via ChangeManagementHub client
