@@ -425,59 +425,26 @@ class RefreshTokenCredential(object):
 
 
 class BrokerTokenCredential(object):
-    # The Intune portal used to mint tokens via its DelegationToken API, but
-    # that endpoint now 404s. Instead redeem a broker-issued refresh token
-    # directly against AAD the way the portal SPA does, via a brokered
-    # (brk_client_id) refresh_token grant.
-    def __init__(self, client_id, brk_client_id, token_envvar, redirect_host):
-        self._client_id = client_id
-        self._brk_client_id = brk_client_id
+    # DelegationToken API is gone, so redeem the refresh token via a brokered SPA grant
+    def __init__(self, client_id, brk_client_id, token_envvar, redirect_uri):
+        host = redirect_uri.split('//')[1].strip('/')
+        session = requests.Session()
+        session.headers['Origin'] = f'https://{host}'  # SPA clients redeem cross-origin only
+        self._app = msal.PublicClientApplication(client_id, client_capabilities=['CP1'], http_client=session,
+            authority=f'https://login.microsoftonline.com/{os.environ["AZURE_TENANT_ID"]}')
+        self._brk = {'brk_client_id': brk_client_id, 'brk_redirect_uri': redirect_uri}
+        self._data = {**self._brk, 'redirect_uri': f'brk-{brk_client_id}://{host}'}
         self._token_envvar = token_envvar
-        self._redirect_host = redirect_host  # e.g. https://intune.microsoft.com/
 
     def get_token(self, *scopes: str, claims=None, tenant_id=None, **kwargs):
-        host = self._redirect_host.split('//')[1].strip('/')
-        session = requests.Session()
-        session.headers.update({
-            'Origin': f'https://{host}',
-            'Referer': self._redirect_host,
-        })
-        app = msal.PublicClientApplication(
-            self._client_id,
-            authority=f'https://login.microsoftonline.com/{os.environ["AZURE_TENANT_ID"]}',
-            client_capabilities=['CP1'],
-            http_client=session,
-        )
-        result = app.acquire_token_by_refresh_token(
-            os.environ[self._token_envvar],
-            scopes=list(scopes),
-            params={'brk_client_id': self._brk_client_id,
-                    'brk_redirect_uri': self._redirect_host},
-            data={
-                'redirect_uri': f'brk-{self._brk_client_id}://{host}',
-                'brk_client_id': self._brk_client_id,
-                'brk_redirect_uri': self._redirect_host,
-            },
-        )
-        if 'access_token' not in result:
-            print(f'::error::broker token request failed: '
-                  f'{result.get("error")}: {result.get("error_description")}')
-            raise Exception('broker token request failed')
-
-        # rotate the stored refresh token; acquire_token_by_refresh_token keeps
-        # the new one in the cache rather than the return value
-        new_rt = result.get('refresh_token')
-        if not new_rt:
-            cached = app.token_cache.find(msal.TokenCache.CredentialType.REFRESH_TOKEN)
-            new_rt = cached[0]['secret'] if cached else None
-        if new_rt:
-            subprocess.run(['gh', 'secret', 'set', self._token_envvar,
-                           '--body', new_rt, '--repo', os.environ['REPO']])
-        else:
-            print('::warning::broker token response had no refresh_token to rotate')
-
-        return AccessToken(token=result['access_token'],
-                           expires_on=int(time.time()+result['expires_in']))
+        data = self._app.acquire_token_by_refresh_token(
+            os.environ[self._token_envvar], list(scopes), params=self._brk, data=self._data)
+        if 'access_token' not in data:
+            raise Exception(data.get('error_description'))
+        rt = self._app.token_cache.find(msal.TokenCache.CredentialType.REFRESH_TOKEN)[0]['secret']
+        subprocess.run(['gh', 'secret', 'set', self._token_envvar,
+                       '--body', rt, '--repo', os.environ['REPO']])
+        return AccessToken(token=data['access_token'], expires_on=int(time.time()+data['expires_in']))
 
 
 asyncio.run(main())
