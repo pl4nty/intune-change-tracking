@@ -1,0 +1,33 @@
+{
+    "id": "58f930cc-fcf4-4152-852c-1d7dbf502139",
+    "assignmentMode": "allowed",
+    "categories": "securityAndCompliance",
+    "description": "Perform identity containment actions for SOC incident response, including disabling users, revoking sessions, and resetting passwords.",
+    "displayName": "Entra SOC Identity Responder",
+    "isBuiltIn": true,
+    "isEnabled": true,
+    "isPrivileged": true,
+    "resourceScopes": [
+        "/"
+    ],
+    "richDescription": "Assign the Entra SOC Identity Responder role to users who need to do the following tasks:\n- Disable and enable user accounts during active security incidents\n- Revoke active sign-in sessions for compromised users by invalidating their refresh tokens\n- Reset passwords for compromised user accounts\nThis role is designed for Security Operations Center (SOC) analysts who perform identity\ncontainment actions from the Microsoft Defender portal. You can scope assignments to an\nadministrative unit for geographic or organizational segmentation.",
+    "templateId": "58f930cc-fcf4-4152-852c-1d7dbf502139",
+    "version": "1",
+    "rolePermissions": [
+        {
+            "allowedResourceActions": [
+                "microsoft.directory/users/disable",
+                "microsoft.directory/users/enable",
+                "microsoft.directory/users/invalidateAllRefreshTokens",
+                "microsoft.directory/users/password/update"
+            ],
+            "condition": null
+        }
+    ],
+    "inheritsPermissionsFrom@odata.context": "https://graph.microsoft.com/beta/$metadata#roleManagement/directory/roleDefinitions('58f930cc-fcf4-4152-852c-1d7dbf502139')/inheritsPermissionsFrom",
+    "inheritsPermissionsFrom": [
+        {
+            "id": "88d8e3e3-8f55-4a1e-953a-9b9898b8876b"
+        }
+    ]
+}
