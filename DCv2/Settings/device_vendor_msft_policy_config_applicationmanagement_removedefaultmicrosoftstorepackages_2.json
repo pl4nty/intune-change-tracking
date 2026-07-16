@@ -1,0 +1,189 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "RemoveDefaultMicrosoftStorePackages_2",
+        "Remove Default Microsoft Store packages from the system.",
+        "\\Windows Components\\App Package Deployment",
+        "Machine",
+        "Software\\Policies\\Microsoft\\Windows\\Appx\\RemoveDefaultMicrosoftStorePackages",
+        "Enabled",
+        "App Package Deployment"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-removedefaultmicrosoftstorepackages-2"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ApplicationManagement/RemoveDefaultMicrosoftStorePackages",
+    "rootDefinitionId": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2",
+    "categoryId": "ffb6de77-8f2d-4b45-9cd4-00bb75cd496c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2",
+    "description": "Removes Default Microsoft Store packages from the system.\r\n\r\nIf you enable this policy, the selected Microsoft Store apps in the provided list will be uninstalled from the system. You can make adjustments to the default settings.\r\n\r\nUnselected apps in the list will not be removed.\r\n\r\n* This is a headless app (no UI)\r\n\r\n** This app is the default handler for a common file type or protocol. Removing this app might result in a degraded user experience. We do not recommend removing this app.\r\n\r\nIf you enable this policy, you can also remove an app by entering the app's package family name(e.g., Microsoft.WindowsCalculator_8wekyb3d8bbwe) in the dynamic list under \"Specify additional package family names to remove.\".\r\n\r\nIf this policy is enabled, reinstallation of a previously removed app requires de-selecting the app from the provided list or removing the app's package family name from the dynamic list.\r\n\r\nYou cannot remove Windows System components via the dynamic app removal list.\r\n\r\nValidation of package family names in the dynamic app removal list occurs upon user login, not at policy configuration time.\r\n\r\nDefault is 'disabled' (key not present).\r\n\r\nIf the policy is disabled or not configured, no Default apps will be removed from the system.\r\n      ",
+    "helpText": "",
+    "name": "RemoveDefaultMicrosoftStorePackages_2",
+    "displayName": "Remove Microsoft Store apps with dynamic list",
+    "defaultOptionId": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26100.8116",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_windowsfeedbackhub",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_microsoftofficehub",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_clipchamp",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_copilot",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_bingnews",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_photos",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_microsoftsolitairecollection",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_microsoftstickynotes",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_msteams",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_todo",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_bingweather",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_outlookforwindows",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_paint",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_quickassist",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_screensketch",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_windowscalculator",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_windowscamera",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_mediaplayer",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_windowsnotepad",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_windowssoundrecorder",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_windowsterminal",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_gamingapp",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_xboxidentityprovider",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_xboxspeechtotextoverlay",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_xboxtcui",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_applicationmanagement_removedefaultmicrosoftstorepackages_2_dynamicremovallist",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

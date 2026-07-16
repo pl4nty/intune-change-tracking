@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "get,replace",
+    "keywords": [
+        "Disable Accessibility Settings",
+        "Keyboard Filter"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/KeyboardFilter-csp/"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/KeyboardFilter",
+    "offsetUri": "/DisableAccessibilitySettings",
+    "rootDefinitionId": "device_vendor_msft_keyboardfilter_disableaccessibilitysettings",
+    "categoryId": "717b634f-72a6-44f6-92c5-e1397bb10f40",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_keyboardfilter_disableaccessibilitysettings",
+    "description": "Determines if Accessibility settings (e.g. Ease of Access) are disabled. Defaults to false.\r\n This setting is only available to Windows Insiders",
+    "helpText": "",
+    "name": "DisableAccessibilitySettings",
+    "displayName": "Disable Accessibility Settings (Windows Insiders only)",
+    "defaultOptionId": "device_vendor_msft_keyboardfilter_disableaccessibilitysettings_false",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.25272",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_keyboardfilter_disableaccessibilitysettings_false",
+            "description": "Accessibility settings are honored",
+            "helpText": null,
+            "name": "Accessibility settings are honored",
+            "displayName": "Accessibility settings are honored",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_keyboardfilter_disableaccessibilitysettings_true",
+            "description": "Accessibility settings are disabled",
+            "helpText": null,
+            "name": "Accessibility settings are disabled",
+            "displayName": "Accessibility settings are disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

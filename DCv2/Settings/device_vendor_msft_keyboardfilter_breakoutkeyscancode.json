@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "get,replace",
+    "keywords": [
+        "Breakout Key Scancode",
+        "Keyboard Filter"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/KeyboardFilter-csp/"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/KeyboardFilter",
+    "offsetUri": "/BreakoutKeyScancode",
+    "rootDefinitionId": "device_vendor_msft_keyboardfilter_breakoutkeyscancode",
+    "categoryId": "717b634f-72a6-44f6-92c5-e1397bb10f40",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_keyboardfilter_breakoutkeyscancode",
+    "description": "Get or set the scancode that forces the device to the login screen when pressed five times consecutively. The value is the string representation of the hexadecimal scancode (without the \"0x\" prefix). Defaults to \"5b\", the scancode for the \"left windows key\". Only set a single scancode; scancode combinations are not supported. After setting this value, a reboot is required for the change to take effect.\r\n This setting is only available to Windows Insiders",
+    "helpText": "",
+    "name": "BreakoutKeyScancode",
+    "displayName": "Breakout Key Scancode (Windows Insiders only)",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.25272",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 87516,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": "5b"
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

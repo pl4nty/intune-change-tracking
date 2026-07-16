@@ -1,0 +1,72 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "get,replace",
+    "keywords": [
+        "Blocked Scancodes",
+        "Keyboard Filter"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/KeyboardFilter-csp/"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/KeyboardFilter",
+    "offsetUri": "/BlockedScancodes",
+    "rootDefinitionId": "device_vendor_msft_keyboardfilter_blockedscancodes",
+    "categoryId": "717b634f-72a6-44f6-92c5-e1397bb10f40",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_keyboardfilter_blockedscancodes",
+    "description": "Get operations return a comma-delimited string of scancodes and modifier+scancode combinations that are currently blocked in hexadecimal format without the \"0x\" prefix. Returned list does not include keys that have been blocked. Use GetBlockedKeys to retrieve blocked keys and key combinations.\nReplace operations expect a comma-delimited string of scancodes or modifier(s)+scancode values in hexadecimal and sets them as blocked scancodes. When specifying hexadecimal values, do not include the \"0x\" prefix. Invalid inputs result in an error. Examples of modifier names can be found here: https://learn.microsoft.com/en-us/windows/configuration/keyboard-filter/keyboardfilter-key-names. Valid scancodes can be found here: https://learn.microsoft.com/en-us/windows/win32/inputdev/about-keyboard-input#scan-codes\n\r\n This setting is only available to Windows Insiders",
+    "helpText": "",
+    "name": "BlockedScancodes",
+    "displayName": "Blocked Scancodes (Windows Insiders only)",
+    "maximumCount": 1000,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.25272",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 87516,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": "\"\""
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}
