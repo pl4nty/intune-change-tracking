@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "WINAPP_UpdatePolicy",
+        "Turn off automatic updates for Windows App",
+        "\\Windows App",
+        "Machine",
+        "SOFTWARE\\Policies\\WindowsApp",
+        "Windows App"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/windowsApp~Policy~WINAPP_NODE/WINAPP_UpdatePolicy",
+    "rootDefinitionId": "device_vendor_msft_policy_config_windowsapp~policy~winapp_node_winapp_updatepolicy",
+    "categoryId": "fa45b2a8-738c-4bac-acc8-7e5bcd6ea6cb",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_windowsapp~policy~winapp_node_winapp_updatepolicy",
+    "description": "Controls how the Windows App checks for and installs updates.\n\nIf you enable this policy, choose one of the following options:\n  \n  Enable updates: Windows App will automatically check for and install updates from all sources.\n  Disable updates from all locations: Windows App will not check for or install updates from any source.\n  Disable updates from the Microsoft Store: Windows App will not download updates from the Microsoft Store but may still update from other sources.\n  Disable updates from non-store CDN location: Windows App will not download updates from non-store CDN sources but may still update from the Microsoft Store.\n\nIf you disable or do not configure this policy, automatic updates are enabled for Windows App.\n      ",
+    "helpText": "",
+    "name": "WINAPP_UpdatePolicy",
+    "displayName": "Turn off automatic updates for Windows App",
+    "defaultOptionId": "device_vendor_msft_policy_config_windowsapp~policy~winapp_node_winapp_updatepolicy_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_windowsapp~policy~winapp_node_winapp_updatepolicy_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_windowsapp~policy~winapp_node_winapp_updatepolicy_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_windowsapp~policy~winapp_node_winapp_updatepolicy_winapp_updatemode",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

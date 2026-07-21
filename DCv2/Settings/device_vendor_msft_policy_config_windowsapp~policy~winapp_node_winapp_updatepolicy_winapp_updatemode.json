@@ -1,0 +1,121 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "WINAPP_UpdatePolicy",
+        "Turn off automatic updates for Windows App",
+        "\\Windows App",
+        "Windows App"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/windowsApp~Policy~WINAPP_NODE/WINAPP_UpdatePolicy",
+    "rootDefinitionId": "device_vendor_msft_policy_config_windowsapp~policy~winapp_node_winapp_updatepolicy",
+    "categoryId": "fa45b2a8-738c-4bac-acc8-7e5bcd6ea6cb",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_windowsapp~policy~winapp_node_winapp_updatepolicy_winapp_updatemode",
+    "description": "",
+    "helpText": "",
+    "name": "WINAPP_UpdateMode",
+    "displayName": "Update restriction:",
+    "defaultOptionId": "device_vendor_msft_policy_config_windowsapp~policy~winapp_node_winapp_updatepolicy_winapp_updatemode_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": null
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_windowsapp~policy~winapp_node_winapp_updatepolicy_winapp_updatemode_0",
+            "description": null,
+            "helpText": null,
+            "name": "Enable updates",
+            "displayName": "Enable updates",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_windowsapp~policy~winapp_node_winapp_updatepolicy_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_windowsapp~policy~winapp_node_winapp_updatepolicy"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_windowsapp~policy~winapp_node_winapp_updatepolicy_winapp_updatemode_1",
+            "description": null,
+            "helpText": null,
+            "name": "Disable updates from all locations",
+            "displayName": "Disable updates from all locations",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_windowsapp~policy~winapp_node_winapp_updatepolicy_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_windowsapp~policy~winapp_node_winapp_updatepolicy"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_windowsapp~policy~winapp_node_winapp_updatepolicy_winapp_updatemode_2",
+            "description": null,
+            "helpText": null,
+            "name": "Disable updates from the Microsoft Store",
+            "displayName": "Disable updates from the Microsoft Store",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_windowsapp~policy~winapp_node_winapp_updatepolicy_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_windowsapp~policy~winapp_node_winapp_updatepolicy"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_windowsapp~policy~winapp_node_winapp_updatepolicy_winapp_updatemode_3",
+            "description": null,
+            "helpText": null,
+            "name": "Disable updates from non-store CDN location",
+            "displayName": "Disable updates from non-store CDN location",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "3"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_windowsapp~policy~winapp_node_winapp_updatepolicy_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_windowsapp~policy~winapp_node_winapp_updatepolicy"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

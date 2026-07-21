@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "AddedFolderHardDeleteOnUnmount",
+        "Hard-delete the contents of an added folder when unmounted",
+        "\\OneDrive",
+        "Machine",
+        "SOFTWARE\\Policies\\Microsoft\\OneDrive",
+        "OneDrive"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/OneDriveNGSC~Policy~OneDriveNGSC/AddedFolderHardDeleteOnUnmount",
+    "rootDefinitionId": "device_vendor_msft_policy_config_onedrivengsc~policy~onedrivengsc_addedfolderharddeleteonunmount",
+    "categoryId": "5ee629c1-94da-49b3-b7a1-a24b279f36d4",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_onedrivengsc~policy~onedrivengsc_addedfolderharddeleteonunmount",
+    "description": "This setting determines the behavior of the Sync client when encounters a request to unmount an added folder.\n\nIf admins enable this setting (value 1), when an unmount of an Added Folder is received, the Sync client will hard-delete all the contents of the folder.\n\nIf admins disable (value 0) or do not configure this setting, Sync will by default move the contents of the unmounted folder to the recycle-bin.\n      ",
+    "helpText": "",
+    "name": "AddedFolderHardDeleteOnUnmount",
+    "displayName": "Hard-delete the contents of an added folder when unmounted",
+    "defaultOptionId": "device_vendor_msft_policy_config_onedrivengsc~policy~onedrivengsc_addedfolderharddeleteonunmount_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_onedrivengsc~policy~onedrivengsc_addedfolderharddeleteonunmount_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_onedrivengsc~policy~onedrivengsc_addedfolderharddeleteonunmount_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -21,9 +21,11 @@
     "displayName": "com.apple.configuration.siri.settings",
     "childIds": [
         "sirisettings_enabled",
+        "sirisettings_allowsiriai",
         "sirisettings_allowusergeneratedcontent",
         "sirisettings_allowwhilelocked",
-        "sirisettings_forceprofanityfilter"
+        "sirisettings_forceprofanityfilter",
+        "sirisettings_forcereducesensitivecontent"
     ],
     "maximumCount": 1,
     "minimumCount": 0,
@@ -41,6 +43,10 @@
             "required": false
         },
         {
+            "dependedOnBy": "sirisettings_allowsiriai",
+            "required": false
+        },
+        {
             "dependedOnBy": "sirisettings_allowusergeneratedcontent",
             "required": false
         },
@@ -50,6 +56,10 @@
         },
         {
             "dependedOnBy": "sirisettings_forceprofanityfilter",
+            "required": false
+        },
+        {
+            "dependedOnBy": "sirisettings_forcereducesensitivecontent",
             "required": false
         }
     ]

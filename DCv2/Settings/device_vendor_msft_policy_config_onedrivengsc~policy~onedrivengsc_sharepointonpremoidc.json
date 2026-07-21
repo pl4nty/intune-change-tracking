@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "SharePointOnPremOIDC",
+        "Enable OpenID Connect (OIDC) authentication for syncing content from an on-prem SharePoint Server using the OneDrive sync app",
+        "\\OneDrive",
+        "Machine",
+        "SOFTWARE\\Policies\\Microsoft\\OneDrive",
+        "OneDrive"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/OneDriveNGSC~Policy~OneDriveNGSC/SharePointOnPremOIDC",
+    "rootDefinitionId": "device_vendor_msft_policy_config_onedrivengsc~policy~onedrivengsc_sharepointonpremoidc",
+    "categoryId": "5ee629c1-94da-49b3-b7a1-a24b279f36d4",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_onedrivengsc~policy~onedrivengsc_sharepointonpremoidc",
+    "description": "When enabled, this setting allows the OneDrive sync app (OneDrive.exe) to authenticate requests to an on-premises SharePoint Server using OIDC authentication, if supported by the server. To use this setting, you must also enable \"Specify SharePoint Server URL and organization name\". This setting affects only OneDrive for Business sync functionality. It does not impact syncing team sites in SharePoint Online.\n\nIf you enable this setting, you can select one of two options:\n\nDisable OIDC Authentication: The Sync app will not attempt to use OIDC authentication for communicating with SharePoint Server, even if the server is configured to support it.\n\nEnable OIDC Authentication: The Sync app will attempt to use OIDC authentication for communicating with SharePoint Server if the server is configured to support it.\n\nIf you disable or do not configure this setting, the Sync app will attempt to use legacy network authentication schemes that the server supports.",
+    "helpText": "",
+    "name": "SharePointOnPremOIDC",
+    "displayName": "Enable OpenID Connect (OIDC) authentication for syncing content from an on-prem SharePoint Server using the OneDrive sync app",
+    "defaultOptionId": "device_vendor_msft_policy_config_onedrivengsc~policy~onedrivengsc_sharepointonpremoidc_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_onedrivengsc~policy~onedrivengsc_sharepointonpremoidc_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_onedrivengsc~policy~onedrivengsc_sharepointonpremoidc_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_onedrivengsc~policy~onedrivengsc_sharepointonpremoidc_sharepointonpremoidc_dropdown",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

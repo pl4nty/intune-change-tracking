@@ -1,0 +1,89 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "WinRE",
+        "Recovery",
+        "Quick Machine Recovery",
+        "Auto Remediation",
+        "Win RE"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/OpenExtensibilitySettings/IntunePolicyAdaptor/Device_Vendor_MSFT_Policy_Config_WinRE_QuickMachineRecovery_AllowAutoRemediation",
+    "rootDefinitionId": "device_vendor_msft_policy_config_winre_enablewinre",
+    "categoryId": "cba65aaf-9580-4729-89b3-a814b74d2193",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_winre_quickmachinerecovery_allowautoremediation",
+    "description": "",
+    "helpText": null,
+    "name": "AllowAutoRemediation",
+    "displayName": "Allow auto remediation",
+    "defaultOptionId": "device_vendor_msft_policy_config_winre_quickmachinerecovery_allowautoremediation_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "intuneOpenExtensibility",
+        "configurationServiceProviderVersion": null,
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041",
+        "windowsSkus": [
+            "windowsProfessional",
+            "windowsEnterprise",
+            "windowsEducation",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_winre_quickmachinerecovery_allowautoremediation_1",
+            "description": "On",
+            "helpText": null,
+            "name": "On",
+            "displayName": "On",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_winre_enablewinre_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_winre_enablewinre"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_winre_quickmachinerecovery_allowautoremediation_0",
+            "description": "Off",
+            "helpText": null,
+            "name": "Off",
+            "displayName": "Off",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_winre_enablewinre_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_winre_enablewinre"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}
