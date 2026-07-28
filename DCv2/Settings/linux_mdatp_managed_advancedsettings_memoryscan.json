@@ -2,26 +2,24 @@
     "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
     "accessTypes": "none",
     "keywords": [
-        "Antivirus engine"
+        "Advanced Protection"
     ],
-    "infoUrls": [
-        "https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/linux-preferences?view=o365-worldwide#enabledisable-behavior-monitoring"
-    ],
+    "infoUrls": [],
     "occurrence": null,
-    "baseUri": "PayloadContent/antivirusEngine",
-    "offsetUri": "behaviorMonitoring",
-    "rootDefinitionId": "linux_mdatp_managed_antivirusengine_behaviormonitoring",
-    "categoryId": "13467142-14e7-4380-8573-4866e842c7f6",
+    "baseUri": "PayloadContent/advancedSettings",
+    "offsetUri": "memoryScan",
+    "rootDefinitionId": "linux_mdatp_managed_advancedsettings_memoryscan",
+    "categoryId": "1ae2f430-e0ca-4c68-ba28-aacbc6e33af3",
     "settingUsage": "configuration",
     "uxBehavior": "toggle",
-    "visibility": "settingsCatalog,template",
+    "visibility": "template",
     "riskLevel": "low",
-    "id": "linux_mdatp_managed_antivirusengine_behaviormonitoring",
-    "description": "Detects and blocks malicious processes and suspicious behaviours",
+    "id": "linux_mdatp_managed_advancedsettings_memoryscan",
+    "description": "Detects and blocks fileless and in-memory threats at runtime",
     "helpText": null,
-    "name": "behaviorMonitoring",
-    "displayName": "Enable behavior monitoring (Requires Realtime/Audit Enforcement level)",
-    "defaultOptionId": "linux_mdatp_managed_antivirusengine_behaviormonitoring_0",
+    "name": "advancedSettings/memoryScan",
+    "displayName": "Memory scan (preview) (Requires Behavior Monitoring for protection)",
+    "defaultOptionId": "linux_mdatp_managed_advancedsettings_memoryscan_disabled",
     "applicability": {
         "description": null,
         "platform": "linux",
@@ -31,7 +29,7 @@
     "referredSettingInformationList": [],
     "options": [
         {
-            "itemId": "linux_mdatp_managed_antivirusengine_behaviormonitoring_0",
+            "itemId": "linux_mdatp_managed_advancedsettings_memoryscan_disabled",
             "description": null,
             "helpText": null,
             "name": "Disabled",
@@ -45,7 +43,7 @@
             "dependedOnBy": []
         },
         {
-            "itemId": "linux_mdatp_managed_antivirusengine_behaviormonitoring_1",
+            "itemId": "linux_mdatp_managed_advancedsettings_memoryscan_enabled",
             "description": null,
             "helpText": null,
             "name": "Enabled",

@@ -1,0 +1,52 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Platform Update"
+    ],
+    "infoUrls": [
+        "https://learn.microsoft.com/microsoft-365/security/defender-endpoint/linux-preferences#platform-update-preferences"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/platformUpdateControls",
+    "offsetUri": "version",
+    "rootDefinitionId": "linux_platformupdatecontrols_version",
+    "categoryId": "20af2e37-4e39-4e47-ba5d-d1cadbfb4b0a",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "linux_platformupdatecontrols_version_fixedvalue",
+    "description": "Specify the exact platform version to pin to, e.g. 101.26021.0002",
+    "helpText": "101.26021.0002",
+    "name": "version_fixedValue",
+    "displayName": "Platform Update Fixed Version",
+    "applicability": {
+        "description": null,
+        "platform": "linux",
+        "deviceMode": "none",
+        "technologies": "microsoftSense"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": "^\\d+\\.\\d+\\.\\d+$",
+        "maximumLength": 50,
+        "minimumLength": 1,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "linux_platformupdatecontrols_version_fixed",
+            "parentSettingId": "linux_platformupdatecontrols_version"
+        }
+    ],
+    "dependedOnBy": []
+}

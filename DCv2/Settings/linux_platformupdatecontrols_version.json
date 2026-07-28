@@ -1,0 +1,95 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Platform Update"
+    ],
+    "infoUrls": [
+        "https://learn.microsoft.com/microsoft-365/security/defender-endpoint/linux-preferences#platform-update-preferences"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/platformUpdateControls",
+    "offsetUri": "version",
+    "rootDefinitionId": "linux_platformupdatecontrols_version",
+    "categoryId": "20af2e37-4e39-4e47-ba5d-d1cadbfb4b0a",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "linux_platformupdatecontrols_version",
+    "description": "Specifies the update channel for platform updates. 'N' is the latest version, 'N-1' is the previous version, 'N-2' is two versions back. Select 'Fixed' to pin to a specific version number.",
+    "helpText": null,
+    "name": "version",
+    "displayName": "Platform Update Version",
+    "defaultOptionId": "linux_platformupdatecontrols_version_n",
+    "applicability": {
+        "description": null,
+        "platform": "linux",
+        "deviceMode": "none",
+        "technologies": "microsoftSense"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "linux_platformupdatecontrols_version_n",
+            "description": null,
+            "helpText": null,
+            "name": "N",
+            "displayName": "N",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "n"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "linux_platformupdatecontrols_version_n1",
+            "description": null,
+            "helpText": null,
+            "name": "N-1",
+            "displayName": "N-1",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "n-1"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "linux_platformupdatecontrols_version_n2",
+            "description": null,
+            "helpText": null,
+            "name": "N-2",
+            "displayName": "N-2",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "n-2"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "linux_platformupdatecontrols_version_fixed",
+            "description": null,
+            "helpText": null,
+            "name": "Fixed",
+            "displayName": "Fixed",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "fixed"
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "linux_platformupdatecontrols_version_fixedvalue",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

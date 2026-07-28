@@ -2,26 +2,26 @@
     "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
     "accessTypes": "none",
     "keywords": [
-        "Antivirus engine"
+        "Platform Update"
     ],
     "infoUrls": [
-        "https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/linux-preferences?view=o365-worldwide#enabledisable-behavior-monitoring"
+        "https://learn.microsoft.com/microsoft-365/security/defender-endpoint/linux-preferences#platform-update-preferences"
     ],
     "occurrence": null,
-    "baseUri": "PayloadContent/antivirusEngine",
-    "offsetUri": "behaviorMonitoring",
-    "rootDefinitionId": "linux_mdatp_managed_antivirusengine_behaviormonitoring",
-    "categoryId": "13467142-14e7-4380-8573-4866e842c7f6",
+    "baseUri": "PayloadContent/features",
+    "offsetUri": "platformUpdateControls",
+    "rootDefinitionId": "linux_features_platformupdatecontrols",
+    "categoryId": "20af2e37-4e39-4e47-ba5d-d1cadbfb4b0a",
     "settingUsage": "configuration",
     "uxBehavior": "toggle",
     "visibility": "settingsCatalog,template",
     "riskLevel": "low",
-    "id": "linux_mdatp_managed_antivirusengine_behaviormonitoring",
-    "description": "Detects and blocks malicious processes and suspicious behaviours",
+    "id": "linux_features_platformupdatecontrols",
+    "description": "Enable or disable platform update controls. Must be set to Enabled for platform update settings to take effect.",
     "helpText": null,
-    "name": "behaviorMonitoring",
-    "displayName": "Enable behavior monitoring (Requires Realtime/Audit Enforcement level)",
-    "defaultOptionId": "linux_mdatp_managed_antivirusengine_behaviormonitoring_0",
+    "name": "features/platformUpdateControls",
+    "displayName": "Platform Update Controls",
+    "defaultOptionId": "linux_features_platformupdatecontrols_disabled",
     "applicability": {
         "description": null,
         "platform": "linux",
@@ -31,21 +31,7 @@
     "referredSettingInformationList": [],
     "options": [
         {
-            "itemId": "linux_mdatp_managed_antivirusengine_behaviormonitoring_0",
-            "description": null,
-            "helpText": null,
-            "name": "Disabled",
-            "displayName": "Disabled",
-            "optionValue": {
-                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
-                "settingValueTemplateReference": null,
-                "value": "disabled"
-            },
-            "dependentOn": [],
-            "dependedOnBy": []
-        },
-        {
-            "itemId": "linux_mdatp_managed_antivirusengine_behaviormonitoring_1",
+            "itemId": "linux_features_platformupdatecontrols_enabled",
             "description": null,
             "helpText": null,
             "name": "Enabled",
@@ -54,6 +40,20 @@
                 "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
                 "settingValueTemplateReference": null,
                 "value": "enabled"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "linux_features_platformupdatecontrols_disabled",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "disabled"
             },
             "dependentOn": [],
             "dependedOnBy": []
