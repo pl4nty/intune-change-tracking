@@ -52,12 +52,12 @@
             "allowedMemberTypes": [
                 "Application"
             ],
-            "description": "Grant Sba Appliance permissions",
-            "displayName": "Permission for Survivable Branch Appliance (SBA) only",
-            "id": "2becb389-af30-4221-8e0a-3384b5a0c656",
-            "isEnabled": true,
+            "description": "Get communication data for the tenant.",
+            "displayName": "Get Communication data",
+            "id": "f9d2a51f-70e2-41af-b617-3fceaa33ae55",
+            "isEnabled": false,
             "origin": "Application",
-            "value": "application_access_custom_sba_appliance",
+            "value": "Communications.Get",
             "isPreAuthorizationRequired": false,
             "isPrivate": false
         },
@@ -78,12 +78,12 @@
             "allowedMemberTypes": [
                 "Application"
             ],
-            "description": "Get communication data for the tenant.",
-            "displayName": "Get Communication data",
-            "id": "f9d2a51f-70e2-41af-b617-3fceaa33ae55",
-            "isEnabled": false,
+            "description": "Grant Sba Appliance permissions",
+            "displayName": "Permission for Survivable Branch Appliance (SBA) only",
+            "id": "2becb389-af30-4221-8e0a-3384b5a0c656",
+            "isEnabled": true,
             "origin": "Application",
-            "value": "Communications.Get",
+            "value": "application_access_custom_sba_appliance",
             "isPreAuthorizationRequired": false,
             "isPrivate": false
         }
@@ -98,47 +98,14 @@
     "keyCredentials": [],
     "publishedPermissionScopes": [
         {
-            "adminConsentDescription": "Allows the middletier service to connect with MSGraph",
-            "adminConsentDisplayName": "Allows the middletier service to connect with MSGraph",
-            "id": "8191c578-e296-4c54-9cdb-bec01858c081",
+            "adminConsentDescription": "For O365 CA only",
+            "adminConsentDisplayName": "MailboxSettings.Read",
+            "id": "0e276de4-189b-47b3-8c80-ce726cfb7671",
             "isEnabled": true,
             "type": "Admin",
-            "userConsentDescription": "Allows the middletier service to connect with MSGraph",
-            "userConsentDisplayName": "Allows the middletier service to connect with MSGraph",
-            "value": "middletier_service",
-            "isPrivate": false
-        },
-        {
-            "adminConsentDescription": "Allows the app to connect with share point",
-            "adminConsentDisplayName": "Allows the app to connect with share point",
-            "id": "98a74943-4bc4-416e-8028-288cf2f36197",
-            "isEnabled": true,
-            "type": "Admin",
-            "userConsentDescription": "Allows the app to connect with share point",
-            "userConsentDisplayName": "Allows the app to connect with share point",
-            "value": "sharepoint_service",
-            "isPrivate": false
-        },
-        {
-            "adminConsentDescription": "this allows non admin users to access configAPI",
-            "adminConsentDisplayName": "CEH_service",
-            "id": "44351fcc-b88d-4077-982f-3367f5078db1",
-            "isEnabled": false,
-            "type": "Admin",
-            "userConsentDescription": "this allows non admin users to access configAPI",
-            "userConsentDisplayName": "CEH_service",
-            "value": "CEH_service",
-            "isPrivate": false
-        },
-        {
-            "adminConsentDescription": "Access Microsoft Teams and Skype for Business data based on the user's role membership",
-            "adminConsentDisplayName": "Access Microsoft Teams and Skype for Business data as the signed in user",
-            "id": "e60370c1-e451-437e-aa6e-d76df38e5f15",
-            "isEnabled": true,
-            "type": "Admin",
-            "userConsentDescription": "Access Microsoft Teams and Skype for Business data based on the user's role membership",
-            "userConsentDisplayName": "Access Microsoft Teams and Skype for Business data as the signed in user",
-            "value": "user_impersonation",
+            "userConsentDescription": "For O365 only",
+            "userConsentDisplayName": "MailboxSettings.Read",
+            "value": "MailboxSettings.Read",
             "isPrivate": false
         },
         {
@@ -153,14 +120,47 @@
             "isPrivate": false
         },
         {
-            "adminConsentDescription": "For O365 CA only",
-            "adminConsentDisplayName": "MailboxSettings.Read",
-            "id": "0e276de4-189b-47b3-8c80-ce726cfb7671",
+            "adminConsentDescription": "Access Microsoft Teams and Skype for Business data based on the user's role membership",
+            "adminConsentDisplayName": "Access Microsoft Teams and Skype for Business data as the signed in user",
+            "id": "e60370c1-e451-437e-aa6e-d76df38e5f15",
             "isEnabled": true,
             "type": "Admin",
-            "userConsentDescription": "For O365 only",
-            "userConsentDisplayName": "MailboxSettings.Read",
-            "value": "MailboxSettings.Read",
+            "userConsentDescription": "Access Microsoft Teams and Skype for Business data based on the user's role membership",
+            "userConsentDisplayName": "Access Microsoft Teams and Skype for Business data as the signed in user",
+            "value": "user_impersonation",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "this allows non admin users to access configAPI",
+            "adminConsentDisplayName": "CEH_service",
+            "id": "44351fcc-b88d-4077-982f-3367f5078db1",
+            "isEnabled": false,
+            "type": "Admin",
+            "userConsentDescription": "this allows non admin users to access configAPI",
+            "userConsentDisplayName": "CEH_service",
+            "value": "CEH_service",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to connect with share point",
+            "adminConsentDisplayName": "Allows the app to connect with share point",
+            "id": "98a74943-4bc4-416e-8028-288cf2f36197",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to connect with share point",
+            "userConsentDisplayName": "Allows the app to connect with share point",
+            "value": "sharepoint_service",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the middletier service to connect with MSGraph",
+            "adminConsentDisplayName": "Allows the middletier service to connect with MSGraph",
+            "id": "8191c578-e296-4c54-9cdb-bec01858c081",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the middletier service to connect with MSGraph",
+            "userConsentDisplayName": "Allows the middletier service to connect with MSGraph",
+            "value": "middletier_service",
             "isPrivate": false
         }
     ],
