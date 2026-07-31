@@ -12,7 +12,7 @@
     "baseUri": "./Device/Vendor/MSFT/Policy",
     "offsetUri": "/Config/ADMX_EventViewer/EventViewer_RedirectionProgramCommandLineParameters",
     "rootDefinitionId": "device_vendor_msft_policy_config_admx_eventviewer_eventviewer_redirectionprogramcommandlineparameters",
-    "categoryId": "d4bdfec1-2e40-49d2-b8f2-e5b15f072b10",
+    "categoryId": "3453c694-bc38-4082-9d3d-886e385df927",
     "settingUsage": "configuration",
     "uxBehavior": "default",
     "visibility": "settingsCatalog,template",
@@ -21,7 +21,7 @@
     "description": null,
     "helpText": "",
     "name": "EventViewer_RedirectionProgramCommandLineParameters",
-    "displayName": "Events.asp program command line parameters (Device)",
+    "displayName": "Events.asp program command line parameters",
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
         "description": null,
@@ -46,15 +46,15 @@
         "requiredAzureAdTrustType": "none"
     },
     "occurrence": {
-        "minDeviceOccurrence": 1,
-        "maxDeviceOccurrence": 1
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": null
     },
     "referredSettingInformationList": [],
     "valueDefinition": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
         "format": "none",
         "inputValidationSchema": null,
-        "maximumLength": 1023,
+        "maximumLength": 2048,
         "minimumLength": 0,
         "isSecret": false,
         "fileTypes": []
@@ -62,7 +62,7 @@
     "defaultValue": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
         "settingValueTemplateReference": null,
-        "value": null
+        "value": "-url hcp://services/centers/support?topic=%s"
     },
     "dependentOn": [
         {

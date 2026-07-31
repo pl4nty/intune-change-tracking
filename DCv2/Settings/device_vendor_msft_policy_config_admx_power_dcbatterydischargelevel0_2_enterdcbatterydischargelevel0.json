@@ -12,7 +12,7 @@
     "baseUri": "./Device/Vendor/MSFT/Policy",
     "offsetUri": "/Config/ADMX_Power/DCBatteryDischargeLevel0_2",
     "rootDefinitionId": "device_vendor_msft_policy_config_admx_power_dcbatterydischargelevel0_2",
-    "categoryId": "d5585700-13a0-4ab4-9b19-4c15c1ead170",
+    "categoryId": "7226f8a2-c542-471a-8d9e-e0df527325d3",
     "settingUsage": "configuration",
     "uxBehavior": "default",
     "visibility": "settingsCatalog,template",
@@ -21,7 +21,8 @@
     "description": null,
     "helpText": "",
     "name": "EnterDCBatteryDischargeLevel0",
-    "displayName": "Critical Battery Notification Level (Device)",
+    "displayName": "Critical Battery Notification Level",
+    "defaultValue": null,
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
         "description": null,
@@ -46,19 +47,14 @@
         "requiredAzureAdTrustType": "none"
     },
     "occurrence": {
-        "minDeviceOccurrence": 1,
-        "maxDeviceOccurrence": 1
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": null
     },
     "referredSettingInformationList": [],
     "valueDefinition": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
         "maximumValue": 100,
         "minimumValue": 0
-    },
-    "defaultValue": {
-        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
-        "settingValueTemplateReference": null,
-        "value": 1
     },
     "dependentOn": [
         {

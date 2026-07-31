@@ -1,18 +1,19 @@
 {
     "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
-    "accessTypes": "add,delete,get,replace",
+    "accessTypes": "none",
     "keywords": [
         "TrustedHosts",
         "Trusted Hosts",
         "\\Windows Components\\Windows Remote Management (WinRM)\\WinRM Client",
         "Administrative Templates\\Windows Components\\Windows Remote Management (WinRM)\\WinRM Client",
-        "WinRM Client"
+        "WinRM Client",
+        "Win RM Client"
     ],
     "infoUrls": [],
     "baseUri": "./Device/Vendor/MSFT/Policy",
     "offsetUri": "/Config/RemoteManagement/TrustedHosts",
     "rootDefinitionId": "device_vendor_msft_policy_config_remotemanagement_trustedhosts",
-    "categoryId": "c919e047-97fc-489f-ab0e-bcb070e36c55",
+    "categoryId": "0f6d725e-2c2d-4926-8e78-3d2d5867eef5",
     "settingUsage": "configuration",
     "uxBehavior": "default",
     "visibility": "settingsCatalog,template",
@@ -21,7 +22,8 @@
     "description": "",
     "helpText": "",
     "name": "TrustedHosts_List",
-    "displayName": "TrustedHostsList: (Device)",
+    "displayName": "TrustedHostsList:",
+    "defaultValue": null,
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
         "description": null,
@@ -46,7 +48,7 @@
     },
     "occurrence": {
         "minDeviceOccurrence": 0,
-        "maxDeviceOccurrence": 1
+        "maxDeviceOccurrence": null
     },
     "referredSettingInformationList": [],
     "valueDefinition": {
@@ -57,11 +59,6 @@
         "minimumLength": 0,
         "isSecret": false,
         "fileTypes": []
-    },
-    "defaultValue": {
-        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
-        "settingValueTemplateReference": null,
-        "value": null
     },
     "dependentOn": [
         {

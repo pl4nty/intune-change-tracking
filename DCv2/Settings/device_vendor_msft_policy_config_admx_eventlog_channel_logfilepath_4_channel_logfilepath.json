@@ -12,7 +12,7 @@
     "baseUri": "./Device/Vendor/MSFT/Policy",
     "offsetUri": "/Config/ADMX_EventLog/Channel_LogFilePath_4",
     "rootDefinitionId": "device_vendor_msft_policy_config_admx_eventlog_channel_logfilepath_4",
-    "categoryId": "9d26f3a1-6a54-4043-bda2-bfeb84e80524",
+    "categoryId": "55a61bb8-e023-4741-8213-99995c5902e5",
     "settingUsage": "configuration",
     "uxBehavior": "default",
     "visibility": "settingsCatalog,template",
@@ -21,7 +21,8 @@
     "description": null,
     "helpText": "",
     "name": "Channel_LogFilePath",
-    "displayName": "Log File Path (Device)",
+    "displayName": "Log File Path",
+    "defaultValue": null,
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
         "description": null,
@@ -46,23 +47,18 @@
         "requiredAzureAdTrustType": "none"
     },
     "occurrence": {
-        "minDeviceOccurrence": 1,
-        "maxDeviceOccurrence": 1
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": null
     },
     "referredSettingInformationList": [],
     "valueDefinition": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
         "format": "none",
         "inputValidationSchema": null,
-        "maximumLength": 1023,
+        "maximumLength": 2048,
         "minimumLength": 0,
         "isSecret": false,
         "fileTypes": []
-    },
-    "defaultValue": {
-        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
-        "settingValueTemplateReference": null,
-        "value": null
     },
     "dependentOn": [
         {

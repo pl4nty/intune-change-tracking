@@ -12,7 +12,7 @@
     "baseUri": "./Device/Vendor/MSFT/Policy",
     "offsetUri": "/Config/ADMX_EventLog/Channel_Log_FileLogAccess_7",
     "rootDefinitionId": "device_vendor_msft_policy_config_admx_eventlog_channel_log_filelogaccess_7",
-    "categoryId": "66448b13-cc0a-4ffe-9ad5-62c4821dc77f",
+    "categoryId": "1a2a4fc8-c54b-4906-a422-7dd51a196211",
     "settingUsage": "configuration",
     "uxBehavior": "default",
     "visibility": "settingsCatalog,template",
@@ -21,7 +21,8 @@
     "description": null,
     "helpText": "",
     "name": "Channel_Log_FileLogAccess",
-    "displayName": "Log Access (Device)",
+    "displayName": "Log Access",
+    "defaultValue": null,
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
         "description": null,
@@ -46,23 +47,18 @@
         "requiredAzureAdTrustType": "none"
     },
     "occurrence": {
-        "minDeviceOccurrence": 1,
-        "maxDeviceOccurrence": 1
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": null
     },
     "referredSettingInformationList": [],
     "valueDefinition": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
         "format": "none",
         "inputValidationSchema": null,
-        "maximumLength": 1023,
+        "maximumLength": 2048,
         "minimumLength": 0,
         "isSecret": false,
         "fileTypes": []
-    },
-    "defaultValue": {
-        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
-        "settingValueTemplateReference": null,
-        "value": null
     },
     "dependentOn": [
         {

@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DefaultLocalFontsSetting",
+        "Default Local Fonts permission setting",
+        "\\Microsoft Edge\\Content settings",
+        "Both",
+        "Software\\Policies\\Microsoft\\Edge",
+        "Content settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edge~Policy~microsoft_edge~ContentSettings/DefaultLocalFontsSetting",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~contentsettings_defaultlocalfontssetting",
+    "categoryId": "92d69c43-75ac-49b1-a3ef-9350079eef86",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~contentsettings_defaultlocalfontssetting",
+    "description": "Setting this policy controls the default behavior for the local fonts permission.\n\nIf you set the policy to BlockLocalFonts (value 2), access to local fonts is denied by default. Sites are prevented from accessing information about local fonts.\n\nIf you set the policy to AskLocalFonts (value 3), users are prompted when a site requests access to local fonts. If permission is granted, the site can access information about local fonts.\n\nIf a site is included in 'LocalFontsAllowedForUrls' (Allow Local Fonts permission on these sites) or 'LocalFontsBlockedForUrls' (Block Local Fonts permission on these sites), then that setting overrides the value set for this policy.\n\nIf you don't configure this policy, users are prompted by default and can change this setting.\n\nPolicy options mapping:\n\n* BlockLocalFonts (2) = Denies the Local Fonts permission on all sites by default\n\n* AskLocalFonts (3) = Ask every time a site wants to obtain the Local Fonts permission\n\nUse the preceding information when configuring this policy.",
+    "helpText": "",
+    "name": "DefaultLocalFontsSetting",
+    "displayName": "Default Local Fonts permission setting (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~contentsettings_defaultlocalfontssetting_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~contentsettings_defaultlocalfontssetting_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~contentsettings_defaultlocalfontssetting_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~contentsettings_defaultlocalfontssetting_defaultlocalfontssetting",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

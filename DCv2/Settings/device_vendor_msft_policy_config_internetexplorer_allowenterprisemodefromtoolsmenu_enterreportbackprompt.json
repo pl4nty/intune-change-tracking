@@ -1,6 +1,6 @@
 {
     "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
-    "accessTypes": "add,delete,get,replace",
+    "accessTypes": "none",
     "keywords": [
         "EnterpriseModeEnable",
         "Let users turn on and use Enterprise Mode from the Tools menu",
@@ -11,7 +11,7 @@
     "baseUri": "./Device/Vendor/MSFT/Policy",
     "offsetUri": "/Config/InternetExplorer/AllowEnterpriseModeFromToolsMenu",
     "rootDefinitionId": "device_vendor_msft_policy_config_internetexplorer_allowenterprisemodefromtoolsmenu",
-    "categoryId": "f60cd3c8-a91b-4542-b09f-129dfc7e589c",
+    "categoryId": "005ddf8f-da22-4b23-ab02-289f8f6c7960",
     "settingUsage": "configuration",
     "uxBehavior": "default",
     "visibility": "settingsCatalog,template",
@@ -21,6 +21,7 @@
     "helpText": "",
     "name": "EnterReportBackPrompt",
     "displayName": "Type the location (URL) of where to receive reports about the websites for which users turn on and use Enterprise Mode",
+    "defaultValue": null,
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
         "description": null,
@@ -45,22 +46,17 @@
     },
     "occurrence": {
         "minDeviceOccurrence": 0,
-        "maxDeviceOccurrence": 1
+        "maxDeviceOccurrence": null
     },
     "referredSettingInformationList": [],
     "valueDefinition": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
         "format": "none",
         "inputValidationSchema": null,
-        "maximumLength": 1023,
+        "maximumLength": 2048,
         "minimumLength": 0,
         "isSecret": false,
         "fileTypes": []
-    },
-    "defaultValue": {
-        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
-        "settingValueTemplateReference": null,
-        "value": null
     },
     "dependentOn": [
         {

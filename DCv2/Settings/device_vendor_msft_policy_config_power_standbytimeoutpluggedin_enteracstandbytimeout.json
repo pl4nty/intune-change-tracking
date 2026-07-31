@@ -1,6 +1,6 @@
 {
     "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
-    "accessTypes": "add,delete,get,replace",
+    "accessTypes": "none",
     "keywords": [
         "ACStandbyTimeOut_2",
         "Specify the system sleep timeout (plugged in)",
@@ -12,7 +12,7 @@
     "baseUri": "./Device/Vendor/MSFT/Policy",
     "offsetUri": "/Config/Power/StandbyTimeoutPluggedIn",
     "rootDefinitionId": "device_vendor_msft_policy_config_power_standbytimeoutpluggedin",
-    "categoryId": "4b2f3557-98e9-48d2-9b78-bcb100f72372",
+    "categoryId": "3b64e99d-0359-4264-be38-c544c647f493",
     "settingUsage": "configuration",
     "uxBehavior": "default",
     "visibility": "settingsCatalog,template",
@@ -22,6 +22,7 @@
     "helpText": "",
     "name": "EnterACStandbyTimeOut",
     "displayName": "System Sleep Timeout (seconds):",
+    "defaultValue": null,
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
         "description": null,
@@ -47,18 +48,13 @@
     },
     "occurrence": {
         "minDeviceOccurrence": 0,
-        "maxDeviceOccurrence": 1
+        "maxDeviceOccurrence": null
     },
     "referredSettingInformationList": [],
     "valueDefinition": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
         "maximumValue": 4294967295,
         "minimumValue": 0
-    },
-    "defaultValue": {
-        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
-        "settingValueTemplateReference": null,
-        "value": 1
     },
     "dependentOn": [
         {

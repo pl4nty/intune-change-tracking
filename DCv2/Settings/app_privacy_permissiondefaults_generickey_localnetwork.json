@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "App Settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "Privacy/PermissionDefaults/{0}/LocalNetwork",
+    "rootDefinitionId": "app_app",
+    "categoryId": "8c86f511-1729-4fe9-b0b2-111d9044e1ba",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "app_privacy_permissiondefaults_generickey_localnetwork",
+    "description": "Controls whether an app privacy permission default is set.\n* `None`: No app privacy permission default is set for use of the local network.\n* `Allow`: The app privacy permission default is set to allow use of the local network.",
+    "helpText": null,
+    "name": "Privacy_PermissionDefaults_genericKey_LocalNetwork",
+    "displayName": "Local Network",
+    "defaultOptionId": "app_privacy_permissiondefaults_generickey_localnetwork_0",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "app_privacy_permissiondefaults_generickey_localnetwork_0",
+            "description": null,
+            "helpText": null,
+            "name": "None",
+            "displayName": "None",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "None"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "app_privacy_permissiondefaults_generickey",
+                    "parentSettingId": "app_privacy_permissiondefaults_generickey"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "app_privacy_permissiondefaults_generickey_localnetwork_1",
+            "description": null,
+            "helpText": null,
+            "name": "Allow",
+            "displayName": "Allow",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "Allow"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "app_privacy_permissiondefaults_generickey",
+                    "parentSettingId": "app_privacy_permissiondefaults_generickey"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

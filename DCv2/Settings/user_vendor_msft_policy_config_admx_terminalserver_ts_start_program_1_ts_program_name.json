@@ -12,7 +12,7 @@
     "baseUri": "./User/Vendor/MSFT/Policy",
     "offsetUri": "/Config/ADMX_TerminalServer/TS_START_PROGRAM_1",
     "rootDefinitionId": "user_vendor_msft_policy_config_admx_terminalserver_ts_start_program_1",
-    "categoryId": "ce572b49-4d47-47b6-b787-ac1252753581",
+    "categoryId": "5f28f9ff-58f8-43af-9692-3d06e083bbd9",
     "settingUsage": "configuration",
     "uxBehavior": "default",
     "visibility": "settingsCatalog,template",
@@ -22,6 +22,7 @@
     "helpText": "",
     "name": "TS_PROGRAM_NAME",
     "displayName": "Program path and file name (User)",
+    "defaultValue": null,
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
         "description": null,
@@ -46,23 +47,18 @@
         "requiredAzureAdTrustType": "none"
     },
     "occurrence": {
-        "minDeviceOccurrence": 1,
-        "maxDeviceOccurrence": 1
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": null
     },
     "referredSettingInformationList": [],
     "valueDefinition": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
         "format": "none",
         "inputValidationSchema": null,
-        "maximumLength": 1023,
+        "maximumLength": 2048,
         "minimumLength": 0,
         "isSecret": false,
         "fileTypes": []
-    },
-    "defaultValue": {
-        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
-        "settingValueTemplateReference": null,
-        "value": null
     },
     "dependentOn": [
         {

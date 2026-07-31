@@ -1,0 +1,140 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Deployment Channel",
+        "Defender"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/Defender-csp/"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Defender",
+    "offsetUri": "/Configuration/DeploymentChannel",
+    "rootDefinitionId": "device_vendor_msft_defender_configuration_deploymentchannel",
+    "categoryId": "e8400c82-34c8-4d6e-bbf9-85220f3205ea",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_defender_configuration_deploymentchannel",
+    "description": "Enable this policy to specify when devices receive Microsoft Defender binary updates based on the chosen deployment channel rollout.",
+    "helpText": "",
+    "name": "DeploymentChannel",
+    "displayName": "Deployment Channel",
+    "defaultOptionId": "device_vendor_msft_defender_configuration_deploymentchannel_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.3",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.14393",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_defender_configuration_deploymentchannel_0",
+            "description": "Not Configured (Default). If you don't configure this policy, devices are added to the release channel. Microsoft determines whether devices receive updates earlier or later within the release channel.",
+            "helpText": null,
+            "name": "Not Configured (Default). If you don't configure this policy, devices are added to the release channel. Microsoft determines whether devices receive updates earlier or later within the release channel.",
+            "displayName": "Not Configured (Default). If you don't configure this policy, devices are added to the release channel. Microsoft determines whether devices receive updates earlier or later within the release channel.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_defender_configuration_deploymentchannel_10",
+            "description": "Validation Channel: Devices set to this channel are the first to receive new monthly binary (platform and engine) updates. The likelihood of new issues occurring is higher, so add only devices with the highest risk tolerance to this channel (recommended for 1% or less of devices in your environment).",
+            "helpText": null,
+            "name": "Validation Channel: Devices set to this channel are the first to receive new monthly binary (platform and engine) updates. The likelihood of new issues occurring is higher, so add only devices with the highest risk tolerance to this channel (recommended for 1% or less of devices in your environment).",
+            "displayName": "Validation Channel: Devices set to this channel are the first to receive new monthly binary (platform and engine) updates. The likelihood of new issues occurring is higher, so add only devices with the highest risk tolerance to this channel (recommended for 1% or less of devices in your environment).",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 10
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_defender_configuration_deploymentchannel_20",
+            "description": "Release Channel - Early: The release channel is appropriate for most of your production environment. Devices set to this channel are offered updates earliest in the release channel. Distribute devices across early, fast and broad depending on their risk tolerance. Add devices in the earlier channels to surface issues sooner and avoid impacting the rest of your environment.",
+            "helpText": null,
+            "name": "Release Channel - Early: The release channel is appropriate for most of your production environment. Devices set to this channel are offered updates earliest in the release channel. Distribute devices across early, fast and broad depending on their risk tolerance. Add devices in the earlier channels to surface issues sooner and avoid impacting the rest of your environment.",
+            "displayName": "Release Channel - Early: The release channel is appropriate for most of your production environment. Devices set to this channel are offered updates earliest in the release channel. Distribute devices across early, fast and broad depending on their risk tolerance. Add devices in the earlier channels to surface issues sooner and avoid impacting the rest of your environment.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 20
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_defender_configuration_deploymentchannel_30",
+            "description": "Release Channel - Fast: The release channel is appropriate for most of your production environment. Devices are offered updates later during the gradual release cycle. Distribute devices across early, fast and broad depending on their risk tolerance. Use devices in the earlier channels to surface issues sooner and avoid impacting the rest of your environment.",
+            "helpText": null,
+            "name": "Release Channel - Fast: The release channel is appropriate for most of your production environment. Devices are offered updates later during the gradual release cycle. Distribute devices across early, fast and broad depending on their risk tolerance. Use devices in the earlier channels to surface issues sooner and avoid impacting the rest of your environment.",
+            "displayName": "Release Channel - Fast: The release channel is appropriate for most of your production environment. Devices are offered updates later during the gradual release cycle. Distribute devices across early, fast and broad depending on their risk tolerance. Use devices in the earlier channels to surface issues sooner and avoid impacting the rest of your environment.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 30
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_defender_configuration_deploymentchannel_40",
+            "description": "Release Channel - Broad: The release channel is appropriate for most of your production environment. Devices in this channel receive updates at the end of the gradual release cycle. Distribute devices across early, fast and broad depending on their risk tolerance. Use devices in the earlier channels to surface issues sooner and avoid impacting the rest of your environment.",
+            "helpText": null,
+            "name": "Release Channel - Broad: The release channel is appropriate for most of your production environment. Devices in this channel receive updates at the end of the gradual release cycle. Distribute devices across early, fast and broad depending on their risk tolerance. Use devices in the earlier channels to surface issues sooner and avoid impacting the rest of your environment.",
+            "displayName": "Release Channel - Broad: The release channel is appropriate for most of your production environment. Devices in this channel receive updates at the end of the gradual release cycle. Distribute devices across early, fast and broad depending on their risk tolerance. Use devices in the earlier channels to surface issues sooner and avoid impacting the rest of your environment.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 40
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_defender_configuration_deploymentchannel_50",
+            "description": "Delayed Channel: Devices in this channel are offered updates approximately 48 hours after the devices in the release channel (broad). Use this channel for critical infrastructure and high value assets (~1% or less of devices).",
+            "helpText": null,
+            "name": "Delayed Channel: Devices in this channel are offered updates approximately 48 hours after the devices in the release channel (broad). Use this channel for critical infrastructure and high value assets (~1% or less of devices).",
+            "displayName": "Delayed Channel: Devices in this channel are offered updates approximately 48 hours after the devices in the release channel (broad). Use this channel for critical infrastructure and high value assets (~1% or less of devices).",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 50
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

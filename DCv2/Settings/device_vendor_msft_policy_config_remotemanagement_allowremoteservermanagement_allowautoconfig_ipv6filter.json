@@ -1,18 +1,19 @@
 {
     "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
-    "accessTypes": "add,delete,get,replace",
+    "accessTypes": "none",
     "keywords": [
         "AllowAutoConfig",
         "Allow remote server management through WinRM",
         "\\Windows Components\\Windows Remote Management (WinRM)\\WinRM Service",
         "Administrative Templates\\Windows Components\\Windows Remote Management (WinRM)\\WinRM Service",
-        "WinRM Service"
+        "WinRM Service",
+        "Win RM Service"
     ],
     "infoUrls": [],
     "baseUri": "./Device/Vendor/MSFT/Policy",
     "offsetUri": "/Config/RemoteManagement/AllowRemoteServerManagement",
     "rootDefinitionId": "device_vendor_msft_policy_config_remotemanagement_allowremoteservermanagement",
-    "categoryId": "023116df-a32c-43b0-a384-d6fe7ad9fabe",
+    "categoryId": "b83cafe6-7d8b-4e3b-890d-ce50e548cfc6",
     "settingUsage": "configuration",
     "uxBehavior": "default",
     "visibility": "settingsCatalog,template",
@@ -21,7 +22,8 @@
     "description": "",
     "helpText": "",
     "name": "AllowAutoConfig_IPv6Filter",
-    "displayName": "IPv6 filter: (Device)",
+    "displayName": "IPv6 filter:",
+    "defaultValue": null,
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
         "description": null,
@@ -46,7 +48,7 @@
     },
     "occurrence": {
         "minDeviceOccurrence": 0,
-        "maxDeviceOccurrence": 1
+        "maxDeviceOccurrence": null
     },
     "referredSettingInformationList": [],
     "valueDefinition": {
@@ -57,11 +59,6 @@
         "minimumLength": 0,
         "isSecret": false,
         "fileTypes": []
-    },
-    "defaultValue": {
-        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
-        "settingValueTemplateReference": null,
-        "value": null
     },
     "dependentOn": [
         {

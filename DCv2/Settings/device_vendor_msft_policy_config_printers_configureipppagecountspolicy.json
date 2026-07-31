@@ -1,12 +1,13 @@
 {
     "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
-    "accessTypes": "none",
+    "accessTypes": "add,delete,get,replace",
     "keywords": [
         "ConfigureIppPageCountsPolicy",
         "Always send job page count information for IPP printers",
         "\\Printers",
         "Administrative Templates\\Printers",
-        "Printers"
+        "Printers",
+        ""
     ],
     "infoUrls": [
         "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-printers#printers-configureipppagecountspolicy"
@@ -14,13 +15,13 @@
     "baseUri": "./Device/Vendor/MSFT/Policy",
     "offsetUri": "/Config/Printers/ConfigureIppPageCountsPolicy",
     "rootDefinitionId": "device_vendor_msft_policy_config_printers_configureipppagecountspolicy",
-    "categoryId": "2becddf1-d8ea-49ec-8560-c8c401faa9bb",
+    "categoryId": "3334730b-b9f7-4c99-bde8-57f6b2cd826f",
     "settingUsage": "configuration",
     "uxBehavior": "toggle",
     "visibility": "settingsCatalog,template",
     "riskLevel": "low",
     "id": "device_vendor_msft_policy_config_printers_configureipppagecountspolicy",
-    "description": "\r\nDetermines whether to always send page count information for accounting purposes for printers using the Microsoft IPP Class Driver.\r\n\r\nBy default, pages are sent to the printer as soon as they are rendered and page count information is not sent to the printer unless pages must be reordered.\r\n\r\nIf you enable this setting the system will render all print job pages up front and send the printer the total page count for the print job.\r\n\r\nIf you disable this setting or do not configure it, pages are printed as soon as they are rendered and page counts are only sent when page reordering is required to process the job.\r\n      ",
+    "description": "\nDetermines whether to always send page count information for accounting purposes for printers using the Microsoft IPP Class Driver.\n\nBy default, pages are sent to the printer as soon as they are rendered and page count information is not sent to the printer unless pages must be reordered.\n\nIf you enable this setting the system will render all print job pages up front and send the printer the total page count for the print job.\n\nIf you disable this setting or do not configure it, pages are printed as soon as they are rendered and page counts are only sent when page reordering is required to process the job.\n      ",
     "helpText": "",
     "name": "ConfigureIppPageCountsPolicy",
     "displayName": "Always send job page count information for IPP printers",
@@ -48,7 +49,7 @@
         "requiredAzureAdTrustType": "none"
     },
     "occurrence": {
-        "minDeviceOccurrence": 1,
+        "minDeviceOccurrence": 0,
         "maxDeviceOccurrence": 1
     },
     "referredSettingInformationList": [],

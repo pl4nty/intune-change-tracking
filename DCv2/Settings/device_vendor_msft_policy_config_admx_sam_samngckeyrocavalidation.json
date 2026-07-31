@@ -1,6 +1,6 @@
 {
     "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
-    "accessTypes": "none",
+    "accessTypes": "add,delete,get,replace",
     "keywords": [
         "SamNGCKeyROCAValidation",
         "Configure validation of ROCA-vulnerable WHfB keys during authentication",
@@ -16,13 +16,13 @@
     "baseUri": "./Device/Vendor/MSFT/Policy",
     "offsetUri": "/Config/ADMX_sam/SamNGCKeyROCAValidation",
     "rootDefinitionId": "device_vendor_msft_policy_config_admx_sam_samngckeyrocavalidation",
-    "categoryId": "65873bfe-2798-42fc-ae33-02295b23b3d3",
+    "categoryId": "03a966f7-8f8e-4ecb-aab3-055fe907f5ab",
     "settingUsage": "configuration",
     "uxBehavior": "toggle",
     "visibility": "settingsCatalog,template",
     "riskLevel": "low",
     "id": "device_vendor_msft_policy_config_admx_sam_samngckeyrocavalidation",
-    "description": "This policy setting allows you to configure how domain controllers handle Windows Hello for Business (WHfB) keys that are vulnerable to the \"Return of Coppersmith's attack\" (ROCA) vulnerability.\r\n\r\nFor more information on the ROCA vulnerability, please see:\r\n\r\nhttps://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-15361\r\n\r\nhttps://en.wikipedia.org/wiki/ROCA_vulnerability\r\n\r\nIf you enable this policy setting the following options are supported:\r\n\r\nIgnore: during authentication the domain controller will not probe any WHfB keys for the ROCA vulnerability.\r\n\r\nAudit: during authentication the domain controller will emit audit events for WHfB keys that are subject to the ROCA vulnerability (authentications will still succeed).\r\n\r\nBlock: during authentication the domain controller will block the use of WHfB keys that are subject to the ROCA vulnerability (authentications will fail).\r\n\r\nThis setting only takes effect on domain controllers.\r\n\r\nIf not configured, domain controllers will default to using their local configuration. The default local configuration is Audit.\r\n\r\nA reboot is not required for changes to this setting to take effect.\r\n\r\nNote: to avoid unexpected disruptions this setting should not be set to Block until appropriate mitigations have been performed, for example patching of vulnerable TPMs.\r\n\r\nMore information is available at https://go.microsoft.com/fwlink/?linkid=2116430.\r\n",
+    "description": "This policy setting allows you to configure how domain controllers handle Windows Hello for Business (WHfB) keys that are vulnerable to the \"Return of Coppersmith's attack\" (ROCA) vulnerability.\n\nFor more information on the ROCA vulnerability, please see:\n\nhttps://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-15361\n\nhttps://en.wikipedia.org/wiki/ROCA_vulnerability\n\nIf you enable this policy setting the following options are supported:\n\nIgnore: during authentication the domain controller will not probe any WHfB keys for the ROCA vulnerability.\n\nAudit: during authentication the domain controller will emit audit events for WHfB keys that are subject to the ROCA vulnerability (authentications will still succeed).\n\nBlock: during authentication the domain controller will block the use of WHfB keys that are subject to the ROCA vulnerability (authentications will fail).\n\nThis setting only takes effect on domain controllers.\n\nIf not configured, domain controllers will default to using their local configuration. The default local configuration is Audit.\n\nA reboot is not required for changes to this setting to take effect.\n\nNote: to avoid unexpected disruptions this setting should not be set to Block until appropriate mitigations have been performed, for example patching of vulnerable TPMs.\n\nMore information is available at https://go.microsoft.com/fwlink/?linkid=2116430.\n",
     "helpText": "",
     "name": "SamNGCKeyROCAValidation",
     "displayName": "Configure validation of ROCA-vulnerable WHfB keys during authentication",
@@ -51,7 +51,7 @@
         "requiredAzureAdTrustType": "none"
     },
     "occurrence": {
-        "minDeviceOccurrence": 1,
+        "minDeviceOccurrence": 0,
         "maxDeviceOccurrence": 1
     },
     "referredSettingInformationList": [],

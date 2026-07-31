@@ -1,6 +1,6 @@
 {
     "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
-    "accessTypes": "none",
+    "accessTypes": "add,delete,get,replace",
     "keywords": [
         "TS_DISCONNECT_ON_LOCK_AAD_POLICY",
         "Disconnect remote session on lock for Microsoft identity platform authentication",
@@ -14,13 +14,13 @@
     "baseUri": "./Device/Vendor/MSFT/Policy",
     "offsetUri": "/Config/RemoteDesktopServices/DisconnectOnLockMicrosoftIdentityAuthn",
     "rootDefinitionId": "device_vendor_msft_policy_config_remotedesktopservices_disconnectonlockmicrosoftidentityauthn",
-    "categoryId": "bd1bf2cb-c806-479b-a68c-af9dffd438c9",
+    "categoryId": "579d6272-8708-4b22-a352-89cbd705ca82",
     "settingUsage": "configuration",
     "uxBehavior": "toggle",
     "visibility": "settingsCatalog,template",
     "riskLevel": "low",
     "id": "device_vendor_msft_policy_config_remotedesktopservices_disconnectonlockmicrosoftidentityauthn",
-    "description": "This policy setting allows you to configure the user experience when the Remote Desktop session is locked by the user or by a policy. You can specify whether the remote session will show the remote lock screen or disconnect when the remote session is locked. Disconnecting the remote session ensures that a remote session cannot be left on the lock screen and cannot reconnect automatically due to loss of network connectivity.\r\n\r\nThis policy applies only when using an identity provider that uses the Microsoft identity platform, such as Microsoft Entra ID, to authenticate to the remote PC. This policy doesn't apply when using Legacy authentication which includes the NTLM, CredSSP, RDSTLS, TLS, and RDP basic authentication protocols.\r\n\r\nIf you enable or do not configure this policy setting, Remote Desktop connections using the Microsoft identity platform will disconnect the remote session when the remote session is locked. Users can reconnect when they're ready and can use passwordless authentication if configured.\r\n\r\nIf you disable this policy setting, Remote Desktop connections using the Microsoft identity platform will show the remote lock screen when the remote session is locked. Users can unlock the remote session using their username and password, or certificates.\r\n",
+    "description": "This policy setting allows you to configure the user experience when the Remote Desktop session is locked by the user or by a policy. You can specify whether the remote session will show the remote lock screen or disconnect when the remote session is locked. Disconnecting the remote session ensures that a remote session cannot be left on the lock screen and cannot reconnect automatically due to loss of network connectivity.\n\nThis policy applies only when using an identity provider that uses the Microsoft identity platform, such as Microsoft Entra ID, to authenticate to the remote PC. This policy doesn't apply when using Legacy authentication which includes the NTLM, CredSSP, RDSTLS, TLS, and RDP basic authentication protocols.\n\nIf you enable or do not configure this policy setting, Remote Desktop connections using the Microsoft identity platform will disconnect the remote session when the remote session is locked. Users can reconnect when they're ready and can use passwordless authentication if configured.\n\nIf you disable this policy setting, Remote Desktop connections using the Microsoft identity platform will show the remote lock screen when the remote session is locked. Users can unlock the remote session using their username and password, or certificates.\n",
     "helpText": "",
     "name": "TS_DISCONNECT_ON_LOCK_AAD_POLICY",
     "displayName": "Disconnect remote session on lock for Microsoft identity platform authentication",
@@ -49,7 +49,7 @@
         "requiredAzureAdTrustType": "none"
     },
     "occurrence": {
-        "minDeviceOccurrence": 1,
+        "minDeviceOccurrence": 0,
         "maxDeviceOccurrence": 1
     },
     "referredSettingInformationList": [],

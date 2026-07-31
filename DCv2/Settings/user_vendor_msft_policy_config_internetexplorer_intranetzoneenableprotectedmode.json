@@ -1,0 +1,91 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "IZ_Policy_TurnOnProtectedMode_3",
+        "Turn on Protected Mode",
+        "\\Internet Explorer\\Internet Control Panel\\Security Page\\Intranet Zone",
+        "Both",
+        "Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\1",
+        "Intranet Zone"
+    ],
+    "infoUrls": [
+        "https://learn.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-intranetzoneenableprotectedmode"
+    ],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/InternetExplorer/IntranetZoneEnableProtectedMode",
+    "rootDefinitionId": "user_vendor_msft_policy_config_internetexplorer_intranetzoneenableprotectedmode",
+    "categoryId": "8e5e115e-ab37-4dc7-94bc-35a28bf5f4df",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_internetexplorer_intranetzoneenableprotectedmode",
+    "description": "This policy setting allows you to turn on Protected Mode. Protected Mode helps protect Internet Explorer from exploited vulnerabilities by reducing the locations that Internet Explorer can write to in the registry and the file system.\n\nIf you enable this policy setting, Protected Mode is turned on. The user cannot turn off Protected Mode.\n\nIf you disable this policy setting, Protected Mode is turned off. The user cannot turn on Protected Mode.\n\nIf you do not configure this policy setting, the user can turn on or turn off Protected Mode.",
+    "helpText": "",
+    "name": "IZ_Policy_TurnOnProtectedMode_3",
+    "displayName": "Turn on Protected Mode (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_internetexplorer_intranetzoneenableprotectedmode_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26100.7309",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_internetexplorer_intranetzoneenableprotectedmode_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_internetexplorer_intranetzoneenableprotectedmode_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_internetexplorer_intranetzoneenableprotectedmode_iz_partname2500",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

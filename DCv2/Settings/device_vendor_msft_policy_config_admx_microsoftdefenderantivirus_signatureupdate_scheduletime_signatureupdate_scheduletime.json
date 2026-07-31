@@ -12,7 +12,7 @@
     "baseUri": "./Device/Vendor/MSFT/Policy",
     "offsetUri": "/Config/ADMX_MicrosoftDefenderAntivirus/SignatureUpdate_ScheduleTime",
     "rootDefinitionId": "device_vendor_msft_policy_config_admx_microsoftdefenderantivirus_signatureupdate_scheduletime",
-    "categoryId": "ad100c6c-9a9a-42cf-8f42-b31c406c1a56",
+    "categoryId": "94b5c25e-3af3-4c08-b738-a0527f91dc22",
     "settingUsage": "configuration",
     "uxBehavior": "default",
     "visibility": "settingsCatalog,template",
@@ -21,7 +21,8 @@
     "description": null,
     "helpText": "",
     "name": "SignatureUpdate_ScheduleTime",
-    "displayName": "Specify the time to check for security intelligence updates (Device)",
+    "displayName": "Specify the time to check for security intelligence updates",
+    "defaultValue": null,
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
         "description": null,
@@ -46,19 +47,14 @@
         "requiredAzureAdTrustType": "none"
     },
     "occurrence": {
-        "minDeviceOccurrence": 1,
-        "maxDeviceOccurrence": 1
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": null
     },
     "referredSettingInformationList": [],
     "valueDefinition": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
         "maximumValue": 1440,
         "minimumValue": 0
-    },
-    "defaultValue": {
-        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
-        "settingValueTemplateReference": null,
-        "value": 1
     },
     "dependentOn": [
         {

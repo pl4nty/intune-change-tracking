@@ -1,0 +1,52 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "App Settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "Allowed/AllowedApps",
+    "rootDefinitionId": "app_app",
+    "categoryId": "8c86f511-1729-4fe9-b0b2-111d9044e1ba",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "app_allowed_allowedapps",
+    "description": "If present, the device only shows or launches apps with bundle IDs in the array. Include the value `com.apple.webapp` to allow all webclips. This applies to App Store apps, marketplace apps, and locally installed apps (using Configurator, Xcode, and so forth).",
+    "helpText": null,
+    "name": "Allowed_AllowedApps",
+    "displayName": "Allowed Apps",
+    "maximumCount": 600,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "iOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "app_allowed",
+            "parentSettingId": "app_allowed"
+        }
+    ],
+    "dependedOnBy": []
+}

@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "App Settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "Allowed/AlwaysAllowManagedApps",
+    "rootDefinitionId": "app_app",
+    "categoryId": "8c86f511-1729-4fe9-b0b2-111d9044e1ba",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "app_allowed_alwaysallowmanagedapps",
+    "description": "If `true`, the device implicitly includes managed apps in the effective allow list when `AllowedApps` or `AllowedBinaries` is present.",
+    "helpText": null,
+    "name": "Allowed_AlwaysAllowManagedApps",
+    "displayName": "Always Allow Managed Apps",
+    "defaultOptionId": "app_allowed_alwaysallowmanagedapps_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "app_allowed_alwaysallowmanagedapps_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "Blocked",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "app_allowed",
+                    "parentSettingId": "app_allowed"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "app_allowed_alwaysallowmanagedapps_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "Allowed",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "app_allowed",
+                    "parentSettingId": "app_allowed"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

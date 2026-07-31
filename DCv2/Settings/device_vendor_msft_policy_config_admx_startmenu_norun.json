@@ -1,12 +1,13 @@
 {
     "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
-    "accessTypes": "none",
+    "accessTypes": "add,delete,get,replace",
     "keywords": [
         "NoRun",
         "Remove Run menu from Start Menu",
         "\\Start Menu and Taskbar",
         "Administrative Templates\\Start Menu and Taskbar",
-        "Start Menu and Taskbar"
+        "Start Menu and Taskbar",
+        ""
     ],
     "infoUrls": [
         "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-startmenu#admx-startmenu-norun"
@@ -14,13 +15,13 @@
     "baseUri": "./Device/Vendor/MSFT/Policy",
     "offsetUri": "/Config/ADMX_StartMenu/NoRun",
     "rootDefinitionId": "device_vendor_msft_policy_config_admx_startmenu_norun",
-    "categoryId": "5161db41-7947-49ea-b9b3-dd92539e6783",
+    "categoryId": "3334730b-b9f7-4c99-bde8-57f6b2cd826f",
     "settingUsage": "configuration",
     "uxBehavior": "toggle",
     "visibility": "settingsCatalog,template",
     "riskLevel": "low",
     "id": "device_vendor_msft_policy_config_admx_startmenu_norun",
-    "description": "Allows you to remove the Run command from the Start menu, Internet Explorer, and Task Manager.\r\n\r\nIf you enable this setting, the following changes occur:\r\n\r\n(1) The Run command is removed from the Start menu.\r\n\r\n(2) The New Task (Run) command is removed from Task Manager.\r\n\r\n(3) The user will be blocked from entering the following into the Internet Explorer Address Bar:\r\n\r\n--- A UNC path: \\\\<server>\\<share>\r\n\r\n---Accessing local drives:  e.g., C:\r\n\r\n--- Accessing local folders: e.g., \\temp>\r\n\r\nAlso, users with extended keyboards will no longer be able to display the Run dialog box by pressing the Application key (the key with the Windows logo) + R.\r\n\r\nIf you disable or do not configure this setting, users will be able to access the Run command in the Start menu and in Task Manager and use the Internet Explorer Address Bar.\r\n\r\n\r\n\r\nNote:This setting affects the specified interface only. It does not prevent users from using other methods to run programs.\r\n\r\nNote: It is a requirement for third-party applications with Windows 2000 or later certification to adhere to this setting.",
+    "description": "Allows you to remove the Run command from the Start menu, Internet Explorer, and Task Manager.\n\nIf you enable this setting, the following changes occur:\n\n(1) The Run command is removed from the Start menu.\n\n(2) The New Task (Run) command is removed from Task Manager.\n\n(3) The user will be blocked from entering the following into the Internet Explorer Address Bar:\n\n--- A UNC path: \\\\<server>\\<share>\n\n---Accessing local drives:  e.g., C:\n\n--- Accessing local folders: e.g., \\temp>\n\nAlso, users with extended keyboards will no longer be able to display the Run dialog box by pressing the Application key (the key with the Windows logo) + R.\n\nIf you disable or do not configure this setting, users will be able to access the Run command in the Start menu and in Task Manager and use the Internet Explorer Address Bar.\n\n\n\nNote:This setting affects the specified interface only. It does not prevent users from using other methods to run programs.\n\nNote: It is a requirement for third-party applications with Windows 2000 or later certification to adhere to this setting.",
     "helpText": "",
     "name": "NoRun",
     "displayName": "Remove Run menu from Start Menu",
@@ -49,7 +50,7 @@
         "requiredAzureAdTrustType": "none"
     },
     "occurrence": {
-        "minDeviceOccurrence": 1,
+        "minDeviceOccurrence": 0,
         "maxDeviceOccurrence": 1
     },
     "referredSettingInformationList": [],

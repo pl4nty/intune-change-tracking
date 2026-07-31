@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "AllowSocketPoolSizeRandomizationForProxies",
+        "Allow socket pool size randomization for proxies",
+        "\\Microsoft Edge",
+        "Both",
+        "Software\\Policies\\Microsoft\\Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edge~Policy~microsoft_edge/AllowSocketPoolSizeRandomizationForProxies",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_allowsocketpoolsizerandomizationforproxies",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_allowsocketpoolsizerandomizationforproxies",
+    "description": "Controls whether Microsoft Edge randomizes socket pool sizes for proxy connections.\n\nSocket pool size randomization is a security mechanism that helps prevent attackers from using deterministic connection limits to infer cross-site information. For example, if the configured proxy socket pool limit is 128, Microsoft Edge can randomly set the effective limit between 128 and 256. This can allow up to twice as many proxy connections, though the expected increase is closer to 1.2x in practice.\n\nThis policy affects the limits configured by the 'MaxConnectionsPerProxy' (Maximum number of concurrent connections to the proxy server for non-WebSocket requests) and 'MaxConnectionsPerProxyForWebSocket' (Maximum number of concurrent connections to the proxy server for WebSocket requests) policies. When this policy is enabled, the effective upper limit can be randomized up to 2x the values configured by those policies.\n\nIf you enable this policy or don't configure it, Microsoft Edge enables socket pool size randomization for proxy connections.\n\nIf you disable this policy, Microsoft Edge disables socket pool size randomization for proxy connections. The values configured by 'MaxConnectionsPerProxy' and 'MaxConnectionsPerProxyForWebSocket' are used as the upper limits without randomization.",
+    "helpText": "",
+    "name": "AllowSocketPoolSizeRandomizationForProxies",
+    "displayName": "Allow socket pool size randomization for proxies",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_allowsocketpoolsizerandomizationforproxies_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_allowsocketpoolsizerandomizationforproxies_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_allowsocketpoolsizerandomizationforproxies_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

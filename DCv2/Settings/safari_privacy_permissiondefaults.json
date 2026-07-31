@@ -1,0 +1,51 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Safari Browser"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "Privacy/PermissionDefaults",
+    "rootDefinitionId": "safari_safari",
+    "categoryId": "e0ab6868-4b53-4310-b665-f7c979941db7",
+    "settingUsage": "configuration",
+    "uxBehavior": "contextPane",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "safari_privacy_permissiondefaults",
+    "description": "The dictionary of website permission defaults. Each key in the dictionary represents a single website, or a website and its sub-domains. The dictionary values represent the permission defaults that Safari applies for each website that matches the key.\n\nSafari supports the following patterns for the website key:\n\n- A specific domain such as \"example.com\" or \"www.example.com\". The permission defaults apply to that website only.\n- A wildcard domain that uses a single \"\\*\" character as a prefix for the domain, such as \"\\*example.com\". The permission defaults apply to both the exact domain \"example.com\", and any sub-domains such as \"www.example.com\". It won't match other domains with a similar string suffix such as \"myexample.com\".\n\nWhen multiple patterns match a website, Safari uses the most precise pattern. For example, for the website \"www.example.com\", if rules \"www.example.com\" and \"*example.com\" match, Safari uses the former.",
+    "helpText": null,
+    "name": "Privacy_PermissionDefaults",
+    "displayName": "Permission Defaults",
+    "childIds": [
+        "safari_privacy_permissiondefaults_generickey",
+        "safari_privacy_permissiondefaults_generickey_keytobereplaced"
+    ],
+    "maximumCount": 2147483647,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [
+        {
+            "dependentOn": "safari_privacy",
+            "parentSettingId": "safari_privacy"
+        }
+    ],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "safari_privacy_permissiondefaults_generickey",
+            "required": false
+        },
+        {
+            "dependedOnBy": "safari_privacy_permissiondefaults_generickey_keytobereplaced",
+            "required": true
+        }
+    ]
+}

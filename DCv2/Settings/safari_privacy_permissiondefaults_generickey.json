@@ -1,0 +1,56 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Safari Browser"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "Privacy/PermissionDefaults/{0}",
+    "rootDefinitionId": "safari_safari",
+    "categoryId": "e0ab6868-4b53-4310-b665-f7c979941db7",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "safari_privacy_permissiondefaults_generickey",
+    "description": "The dictionary that defines the website privacy permission defaults. Each key represents a website.",
+    "helpText": null,
+    "name": "Privacy_PermissionDefaults_genericKey",
+    "displayName": "ANY",
+    "childIds": [
+        "safari_privacy_permissiondefaults_generickey_organizationjustification",
+        "safari_privacy_permissiondefaults_generickey_camera",
+        "safari_privacy_permissiondefaults_generickey_microphone"
+    ],
+    "maximumCount": 1,
+    "minimumCount": 0,
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [
+        {
+            "dependentOn": "safari_privacy_permissiondefaults",
+            "parentSettingId": "safari_privacy_permissiondefaults"
+        }
+    ],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "safari_privacy_permissiondefaults_generickey_organizationjustification",
+            "required": true
+        },
+        {
+            "dependedOnBy": "safari_privacy_permissiondefaults_generickey_camera",
+            "required": false
+        },
+        {
+            "dependedOnBy": "safari_privacy_permissiondefaults_generickey_microphone",
+            "required": false
+        }
+    ]
+}

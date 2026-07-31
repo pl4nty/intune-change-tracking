@@ -6,13 +6,14 @@
         "Restrict these programs from being launched from Help",
         "\\System",
         "Administrative Templates\\System",
-        "System"
+        "System",
+        ""
     ],
     "infoUrls": [],
     "baseUri": "./User/Vendor/MSFT/Policy",
     "offsetUri": "/Config/ADMX_Help/RestrictRunFromHelp",
     "rootDefinitionId": "user_vendor_msft_policy_config_admx_help_restrictrunfromhelp",
-    "categoryId": "fd66cd4e-474b-4d6c-8dec-65a6a49e75d7",
+    "categoryId": "3334730b-b9f7-4c99-bde8-57f6b2cd826f",
     "settingUsage": "configuration",
     "uxBehavior": "default",
     "visibility": "settingsCatalog,template",
@@ -22,6 +23,7 @@
     "helpText": "",
     "name": "RestrictRunFromHelp_Edit",
     "displayName": "Enter executables separated by commas: (User)",
+    "defaultValue": null,
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
         "description": null,
@@ -46,23 +48,18 @@
         "requiredAzureAdTrustType": "none"
     },
     "occurrence": {
-        "minDeviceOccurrence": 1,
-        "maxDeviceOccurrence": 1
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": null
     },
     "referredSettingInformationList": [],
     "valueDefinition": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
         "format": "none",
         "inputValidationSchema": null,
-        "maximumLength": 1023,
+        "maximumLength": 2048,
         "minimumLength": 0,
         "isSecret": false,
         "fileTypes": []
-    },
-    "defaultValue": {
-        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
-        "settingValueTemplateReference": null,
-        "value": null
     },
     "dependentOn": [
         {

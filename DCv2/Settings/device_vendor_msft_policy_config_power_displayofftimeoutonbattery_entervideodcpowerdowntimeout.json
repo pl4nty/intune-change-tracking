@@ -1,6 +1,6 @@
 {
     "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
-    "accessTypes": "add,delete,get,replace",
+    "accessTypes": "none",
     "keywords": [
         "VideoPowerDownTimeOutDC_2",
         "Turn off the display (on battery)",
@@ -12,7 +12,7 @@
     "baseUri": "./Device/Vendor/MSFT/Policy",
     "offsetUri": "/Config/Power/DisplayOffTimeoutOnBattery",
     "rootDefinitionId": "device_vendor_msft_policy_config_power_displayofftimeoutonbattery",
-    "categoryId": "01bbe7c3-10eb-40a3-8387-c74c33c294b1",
+    "categoryId": "01da0c26-af30-4eb2-a899-7d5e7ecb9738",
     "settingUsage": "configuration",
     "uxBehavior": "default",
     "visibility": "settingsCatalog,template",
@@ -22,6 +22,7 @@
     "helpText": "",
     "name": "EnterVideoDCPowerDownTimeOut",
     "displayName": "On battery power, turn display off after (seconds)",
+    "defaultValue": null,
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
         "description": null,
@@ -47,18 +48,13 @@
     },
     "occurrence": {
         "minDeviceOccurrence": 0,
-        "maxDeviceOccurrence": 1
+        "maxDeviceOccurrence": null
     },
     "referredSettingInformationList": [],
     "valueDefinition": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
         "maximumValue": 4294967295,
         "minimumValue": 0
-    },
-    "defaultValue": {
-        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
-        "settingValueTemplateReference": null,
-        "value": 1
     },
     "dependentOn": [
         {

@@ -1,6 +1,6 @@
 {
     "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
-    "accessTypes": "add,delete,get,replace",
+    "accessTypes": "none",
     "keywords": [
         "Integration_Roaming_File_Exclusions",
         "Roaming File Exclusions",
@@ -13,7 +13,7 @@
     "baseUri": "./Device/Vendor/MSFT/Policy",
     "offsetUri": "/Config/AppVirtualization/AllowRoamingFileExclusions",
     "rootDefinitionId": "device_vendor_msft_policy_config_appvirtualization_allowroamingfileexclusions",
-    "categoryId": "0ef80736-8b59-4c6a-8bdc-e2b246b30e92",
+    "categoryId": "ea9a092f-dd93-41d4-9bbb-118de1213578",
     "settingUsage": "configuration",
     "uxBehavior": "default",
     "visibility": "settingsCatalog,template",
@@ -23,6 +23,7 @@
     "helpText": "",
     "name": "Integration_Roaming_File_Exclusions_Prompt",
     "displayName": "Roaming Registry Exclusions",
+    "defaultValue": null,
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
         "description": null,
@@ -43,22 +44,17 @@
     },
     "occurrence": {
         "minDeviceOccurrence": 0,
-        "maxDeviceOccurrence": 1
+        "maxDeviceOccurrence": null
     },
     "referredSettingInformationList": [],
     "valueDefinition": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
         "format": "none",
         "inputValidationSchema": null,
-        "maximumLength": 1023,
+        "maximumLength": 2048,
         "minimumLength": 0,
         "isSecret": false,
         "fileTypes": []
-    },
-    "defaultValue": {
-        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
-        "settingValueTemplateReference": null,
-        "value": null
     },
     "dependentOn": [
         {

@@ -1,6 +1,6 @@
 {
     "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
-    "accessTypes": "none",
+    "accessTypes": "add,delete,get,replace",
     "keywords": [
         "EnableBypassCertificatePinningForMicrosoftStore",
         "Enable App Installer Microsoft Store Source Certificate Validation Bypass",
@@ -14,13 +14,13 @@
     "baseUri": "./Device/Vendor/MSFT/Policy",
     "offsetUri": "/Config/DesktopAppInstaller/EnableBypassCertificatePinningForMicrosoftStore",
     "rootDefinitionId": "device_vendor_msft_policy_config_desktopappinstaller_enablebypasscertificatepinningformicrosoftstore",
-    "categoryId": "70063d93-03f0-462e-9943-b0241b88d54d",
+    "categoryId": "cd9fbd32-93e5-4cbc-a51f-a2212cb9d1c2",
     "settingUsage": "configuration",
     "uxBehavior": "toggle",
     "visibility": "settingsCatalog,template",
     "riskLevel": "low",
     "id": "device_vendor_msft_policy_config_desktopappinstaller_enablebypasscertificatepinningformicrosoftstore",
-    "description": "This policy controls whether the Windows Package Manager will validate the Microsoft Store certificate hash matches to a known Microsoft Store certificate when initiating a connection to the Microsoft Store Source. \r\n\r\nIf you enable this policy, the Windows Package Manager will bypass the Microsoft Store certificate validation. \r\n\r\nIf you disable this policy, the Windows Package Manager will validate the Microsoft Store certificate used is valid and belongs to the Microsoft Store before communicating with the Microsoft Store source. \r\n\r\nIf you do not configure this policy, the Windows Package Manager administrator settings will be adhered to.",
+    "description": "This policy controls whether the Windows Package Manager will validate the Microsoft Store certificate hash matches to a known Microsoft Store certificate when initiating a connection to the Microsoft Store Source. \n\nIf you enable this policy, the Windows Package Manager will bypass the Microsoft Store certificate validation. \n\nIf you disable this policy, the Windows Package Manager will validate the Microsoft Store certificate used is valid and belongs to the Microsoft Store before communicating with the Microsoft Store source. \n\nIf you do not configure this policy, the Windows Package Manager administrator settings will be adhered to.",
     "helpText": "",
     "name": "EnableBypassCertificatePinningForMicrosoftStore",
     "displayName": "Enable App Installer Microsoft Store Source Certificate Validation Bypass",
@@ -47,7 +47,7 @@
         "requiredAzureAdTrustType": "none"
     },
     "occurrence": {
-        "minDeviceOccurrence": 1,
+        "minDeviceOccurrence": 0,
         "maxDeviceOccurrence": 1
     },
     "referredSettingInformationList": [],

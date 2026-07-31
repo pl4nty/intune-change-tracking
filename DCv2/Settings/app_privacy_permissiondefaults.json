@@ -1,0 +1,51 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "App Settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "Privacy/PermissionDefaults",
+    "rootDefinitionId": "app_app",
+    "categoryId": "8c86f511-1729-4fe9-b0b2-111d9044e1ba",
+    "settingUsage": "configuration",
+    "uxBehavior": "contextPane",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "app_privacy_permissiondefaults",
+    "description": "The dictionary of app privacy permission defaults. Each key in the dictionary is an app identifier. The dictionary values represent the permission defaults that the device applies for each matching app.\n\nIn iOS, the app identifier is a bundle ID, for example, \"com.example.app\".\n\nIn macOS, the app identifier is a composed identifier. The format of the composed identifier is either \"Bundle-ID\", \"Bundle-ID (Team-ID)\", or \"Bundle-ID {Designated-Requirement}\". \"Bundle-ID\" is the bundle identifier string of the app. \"Team-ID\" is the team identifier from the app's code signature. \"Designated-Requirement\" is the designated requirement string from the code signature of the app. For example, \"com.example.app\" for the bundle ID format, \"com.example.app (ABCD1234)\" for the team ID format, or \"com.example.app {anchor apple generic}\" for the designated requirement format. The device only applies defaults for an app if its code signature matches the composed identifier.",
+    "helpText": null,
+    "name": "Privacy_PermissionDefaults",
+    "displayName": "Permission Defaults",
+    "childIds": [
+        "app_privacy_permissiondefaults_generickey",
+        "app_privacy_permissiondefaults_generickey_keytobereplaced"
+    ],
+    "maximumCount": 2147483647,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [
+        {
+            "dependentOn": "app_privacy",
+            "parentSettingId": "app_privacy"
+        }
+    ],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "app_privacy_permissiondefaults_generickey",
+            "required": false
+        },
+        {
+            "dependedOnBy": "app_privacy_permissiondefaults_generickey_keytobereplaced",
+            "required": true
+        }
+    ]
+}

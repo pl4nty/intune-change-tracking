@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "L_WritingAssistantFirstRunExperienceAdminChoice",
+        "Writing Assistance First Run Experience Mode",
+        "\\Microsoft Office 2016\\Writing Assistance",
+        "User",
+        "software\\policies\\microsoft\\office\\16.0\\writingassistant",
+        "Writing Assistance"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/office16~Policy~L_MicrosoftOfficeSystem~L_WritingAssistance/L_WritingAssistantFirstRunExperienceAdminChoice",
+    "rootDefinitionId": "user_vendor_msft_policy_config_office16~policy~l_microsoftofficesystem~l_writingassistance_l_writingassistantfirstrunexperienceadminchoice",
+    "categoryId": "05a6f86f-dab7-4888-97a1-db3457f00974",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_office16~policy~l_microsoftofficesystem~l_writingassistance_l_writingassistantfirstrunexperienceadminchoice",
+    "description": "This policy setting controls the Writing Assistance first run experience (FRE).If you enable this policy setting, choose one of the following options:Skip FRE entirely - Writing Assistance marks the first run experience as completed without showing it.Informational only - Writing Assistance shows the first run experience once without requiring user approval or sign-in. The experience is marked completed immediately, uses Next on page 1 and Okay on page 2, removes No Thanks, and is still completed if the user dismisses it.Approval required - Writing Assistance keeps the existing approval-required first run experience behavior.If you disable or don’t configure this policy setting, Writing Assistance uses the existing default first run experience behavior.Note: This policy setting only applies to subscription versions of Office, such as Microsoft 365 Apps for Enterprise.",
+    "helpText": "",
+    "name": "L_WritingAssistantFirstRunExperienceAdminChoice",
+    "displayName": "Writing Assistance First Run Experience Mode (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_office16~policy~l_microsoftofficesystem~l_writingassistance_l_writingassistantfirstrunexperienceadminchoice_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_office16~policy~l_microsoftofficesystem~l_writingassistance_l_writingassistantfirstrunexperienceadminchoice_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_office16~policy~l_microsoftofficesystem~l_writingassistance_l_writingassistantfirstrunexperienceadminchoice_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_office16~policy~l_microsoftofficesystem~l_writingassistance_l_writingassistantfirstrunexperienceadminchoice_l_writingassistantfirstrunexperienceadminchoicedropid",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

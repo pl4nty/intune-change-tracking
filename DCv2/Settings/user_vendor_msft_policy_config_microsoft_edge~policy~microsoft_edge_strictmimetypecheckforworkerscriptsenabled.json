@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "StrictMimetypeCheckForWorkerScriptsEnabled",
+        "Enable strict MIME type checking for worker scripts",
+        "\\Microsoft Edge",
+        "Both",
+        "Software\\Policies\\Microsoft\\Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edge~Policy~microsoft_edge/StrictMimetypeCheckForWorkerScriptsEnabled",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_strictmimetypecheckforworkerscriptsenabled",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_strictmimetypecheckforworkerscriptsenabled",
+    "description": "This policy controls whether strict MIME type checking is used for worker scripts.\n\nIf you enable or don't configure this policy, worker scripts use strict MIME type checking for JavaScript. Worker scripts that use legacy MIME types are rejected.\n\nIf you disable this policy, worker scripts use lax MIME type checking. This allows worker scripts that use legacy MIME types, such as text/ascii, to continue to load and run.\n\nBrowsers traditionally used lax MIME type checking, which allowed JavaScript resources to load with several legacy MIME types. This behavior can create security risks by allowing resources to load as scripts when they weren't intended to be used that way.\n\nMicrosoft Edge uses strict MIME type checking by default. Enabling this policy follows the default behavior. Disabling this policy lets admins temporarily retain the legacy behavior for compatibility.\n\nFor more information about JavaScript and ECMAScript media types, see https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguage.",
+    "helpText": "",
+    "name": "StrictMimetypeCheckForWorkerScriptsEnabled",
+    "displayName": "Enable strict MIME type checking for worker scripts (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_strictmimetypecheckforworkerscriptsenabled_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_strictmimetypecheckforworkerscriptsenabled_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_strictmimetypecheckforworkerscriptsenabled_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

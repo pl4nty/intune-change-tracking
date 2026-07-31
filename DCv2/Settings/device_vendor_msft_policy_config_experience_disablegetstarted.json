@@ -1,0 +1,78 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Disable Get Started",
+        "Experience"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Experience#disablegetstarted"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Experience/DisableGetStarted",
+    "rootDefinitionId": "device_vendor_msft_policy_config_experience_disablegetstarted",
+    "categoryId": "139974ad-f615-442b-b3dc-84a44e3ec663",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_experience_disablegetstarted",
+    "description": "Specifies whether Get Started is disabled for the current user. If you enable this setting, Get Started is disabled. If you disable or don't configure this setting, Get Started is enabled.",
+    "helpText": "",
+    "name": "DisableGetStarted",
+    "displayName": "Disable Get Started",
+    "defaultOptionId": "device_vendor_msft_policy_config_experience_disablegetstarted_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26100.8524",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsEducation",
+            "iotEnterprise",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_experience_disablegetstarted_0",
+            "description": "Get Started is enabled.",
+            "helpText": null,
+            "name": "Get Started is enabled.",
+            "displayName": "Get Started is enabled.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_experience_disablegetstarted_1",
+            "description": "Get Started is disabled.",
+            "helpText": null,
+            "name": "Get Started is disabled.",
+            "displayName": "Get Started is disabled.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -6,13 +6,14 @@
         "Set Teredo Server Name",
         "\\Network\\TCPIP Settings\\IPv6 Transition Technologies",
         "Administrative Templates\\Network\\TCPIP Settings\\IPv6 Transition Technologies",
-        "IPv6 Transition Technologies"
+        "IPv6 Transition Technologies",
+        "I Pv6 Transition Technologies"
     ],
     "infoUrls": [],
     "baseUri": "./Device/Vendor/MSFT/Policy",
     "offsetUri": "/Config/ADMX_tcpip/Teredo_Server_Name",
     "rootDefinitionId": "device_vendor_msft_policy_config_admx_tcpip_teredo_server_name",
-    "categoryId": "f52d9745-eaf4-4e39-84b2-6b32c3b15aa3",
+    "categoryId": "486f25cc-c865-446e-95b2-c5b061883a7a",
     "settingUsage": "configuration",
     "uxBehavior": "default",
     "visibility": "settingsCatalog,template",
@@ -21,7 +22,8 @@
     "description": null,
     "helpText": "",
     "name": "TeredoServerNameBox",
-    "displayName": "Enter a Teredo server name: (Device)",
+    "displayName": "Enter a Teredo server name:",
+    "defaultValue": null,
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
         "description": null,
@@ -46,23 +48,18 @@
         "requiredAzureAdTrustType": "none"
     },
     "occurrence": {
-        "minDeviceOccurrence": 1,
-        "maxDeviceOccurrence": 1
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": null
     },
     "referredSettingInformationList": [],
     "valueDefinition": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
         "format": "none",
         "inputValidationSchema": null,
-        "maximumLength": 1023,
+        "maximumLength": 2048,
         "minimumLength": 0,
         "isSecret": false,
         "fileTypes": []
-    },
-    "defaultValue": {
-        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
-        "settingValueTemplateReference": null,
-        "value": null
     },
     "dependentOn": [
         {

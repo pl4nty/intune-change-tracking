@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Antivirus engine"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "PayloadContent/advancedSettings",
+    "offsetUri": "memoryScan",
+    "rootDefinitionId": "linux_advancedsettings",
+    "categoryId": "13467142-14e7-4380-8573-4866e842c7f6",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "linux_advancedsettings_memoryscan",
+    "description": "Provides visibility in Passive/Realtime/OnDemand enforcement and protection requires behaviour monitoring to be enabled",
+    "helpText": null,
+    "name": "advancedSettings/memoryScan",
+    "displayName": "Memory scan (preview)",
+    "defaultOptionId": "linux_advancedsettings_memoryscan_disabled",
+    "applicability": {
+        "description": null,
+        "platform": "linux",
+        "deviceMode": "none",
+        "technologies": "microsoftSense"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "linux_advancedsettings_memoryscan_disabled",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "disabled"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "linux_advancedsettings",
+                    "parentSettingId": "linux_advancedsettings"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "linux_advancedsettings_memoryscan_enabled",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "enabled"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "linux_advancedsettings",
+                    "parentSettingId": "linux_advancedsettings"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

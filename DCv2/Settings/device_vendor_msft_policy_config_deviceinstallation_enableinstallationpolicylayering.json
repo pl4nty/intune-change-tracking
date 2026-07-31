@@ -1,6 +1,6 @@
 {
     "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
-    "accessTypes": "none",
+    "accessTypes": "add,delete,get,replace",
     "keywords": [
         "DeviceInstall_Allow_Deny_Layered",
         "Apply layered order of evaluation for Allow and Prevent device installation policies across all device match criteria",
@@ -14,13 +14,13 @@
     "baseUri": "./Device/Vendor/MSFT/Policy",
     "offsetUri": "/Config/DeviceInstallation/EnableInstallationPolicyLayering",
     "rootDefinitionId": "device_vendor_msft_policy_config_deviceinstallation_enableinstallationpolicylayering",
-    "categoryId": "979412d7-6716-440c-9a64-5889026d73da",
+    "categoryId": "68237832-f376-4f0e-ba26-4e06fce7a35d",
     "settingUsage": "configuration",
     "uxBehavior": "toggle",
     "visibility": "settingsCatalog,template",
     "riskLevel": "low",
     "id": "device_vendor_msft_policy_config_deviceinstallation_enableinstallationpolicylayering",
-    "description": "This policy setting will change the evaluation order in which Allow and Prevent policy settings are applied when more than one install policy setting is applicable for a given device. Enable this policy setting to ensure that overlapping device match criteria is applied based on an established hierarchy where more specific match criteria supersedes less specific match criteria. The hierarchical order of evaluation for policy settings that specify device match criteria is as follows:\r\n\r\nDevice instance IDs > Device IDs > Device setup class > Removable devices\r\n\r\nDevice instance IDs\r\n1. Prevent installation of devices using drivers that match these device instance IDs\r\n2. Allow installation of devices using drivers that match these device instance IDs\r\n\r\nDevice IDs\r\n3. Prevent installation of devices using drivers that match these device IDs\r\n4. Allow installation of devices using drivers that match these device IDs\r\n\r\nDevice setup class\r\n5. Prevent installation of devices using drivers that match these device setup classes\r\n6. Allow installation of devices using drivers that match these device setup classes\r\n\r\nRemovable devices\r\n7. Prevent installation of removable devices\r\n\r\nNOTE: This policy setting provides more granular control than the \"Prevent installation of devices not described by other policy settings\" policy setting. If these conflicting policy settings are enabled at the same time, the \"Apply layered order of evaluation for Allow and Prevent device installation policies across all device match criteria\" policy setting will be enabled and the other policy setting will be ignored.\r\n\r\nIf you disable or do not configure this policy setting, the default evaluation is used. By default, all \"Prevent installation...\" policy settings have precedence over any other policy setting that allows Windows to install a device.",
+    "description": "This policy setting will change the evaluation order in which Allow and Prevent policy settings are applied when more than one install policy setting is applicable for a given device. Enable this policy setting to ensure that overlapping device match criteria is applied based on an established hierarchy where more specific match criteria supersedes less specific match criteria. The hierarchical order of evaluation for policy settings that specify device match criteria is as follows:\n\nDevice instance IDs > Device IDs > Device setup class > Removable devices\n\nDevice instance IDs\n1. Prevent installation of devices using drivers that match these device instance IDs\n2. Allow installation of devices using drivers that match these device instance IDs\n\nDevice IDs\n3. Prevent installation of devices using drivers that match these device IDs\n4. Allow installation of devices using drivers that match these device IDs\n\nDevice setup class\n5. Prevent installation of devices using drivers that match these device setup classes\n6. Allow installation of devices using drivers that match these device setup classes\n\nRemovable devices\n7. Prevent installation of removable devices\n\nNOTE: This policy setting provides more granular control than the \"Prevent installation of devices not described by other policy settings\" policy setting. If these conflicting policy settings are enabled at the same time, the \"Apply layered order of evaluation for Allow and Prevent device installation policies across all device match criteria\" policy setting will be enabled and the other policy setting will be ignored.\n\nIf you disable or do not configure this policy setting, the default evaluation is used. By default, all \"Prevent installation...\" policy settings have precedence over any other policy setting that allows Windows to install a device.",
     "helpText": "",
     "name": "DeviceInstall_Allow_Deny_Layered",
     "displayName": "Apply layered order of evaluation for Allow and Prevent device installation policies across all device match criteria",
@@ -48,7 +48,7 @@
         "requiredAzureAdTrustType": "none"
     },
     "occurrence": {
-        "minDeviceOccurrence": 1,
+        "minDeviceOccurrence": 0,
         "maxDeviceOccurrence": 1
     },
     "referredSettingInformationList": [],

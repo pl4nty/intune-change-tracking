@@ -1,0 +1,66 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "App Settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "Allowed/AllowedBinaries",
+    "rootDefinitionId": "app_app",
+    "categoryId": "8c86f511-1729-4fe9-b0b2-111d9044e1ba",
+    "settingUsage": "configuration",
+    "uxBehavior": "contextPane",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "app_allowed_allowedbinaries",
+    "description": "If present, the device only allows binaries that match the binary identifier properties to run. A binary only matches when all the binary identifiers match. The device always runs system critical processes. Use \"codesign -dvvv <path_to_binary>\" to show the information you need to generate these values.",
+    "helpText": null,
+    "name": "Allowed_AllowedBinaries",
+    "displayName": "Allowed Binaries",
+    "childIds": [
+        "app_allowed_allowedbinaries_item_cdhash",
+        "app_allowed_allowedbinaries_item_signingid",
+        "app_allowed_allowedbinaries_item_teamid",
+        "app_allowed_allowedbinaries_item_pathprefix",
+        "app_allowed_allowedbinaries_item_signingstate"
+    ],
+    "maximumCount": 2147483647,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [
+        {
+            "dependentOn": "app_allowed",
+            "parentSettingId": "app_allowed"
+        }
+    ],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "app_allowed_allowedbinaries_item_cdhash",
+            "required": false
+        },
+        {
+            "dependedOnBy": "app_allowed_allowedbinaries_item_signingid",
+            "required": false
+        },
+        {
+            "dependedOnBy": "app_allowed_allowedbinaries_item_teamid",
+            "required": false
+        },
+        {
+            "dependedOnBy": "app_allowed_allowedbinaries_item_pathprefix",
+            "required": false
+        },
+        {
+            "dependedOnBy": "app_allowed_allowedbinaries_item_signingstate",
+            "required": false
+        }
+    ]
+}

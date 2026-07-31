@@ -6,13 +6,14 @@
         "List of Approved USB-connected print devices",
         "\\Printers",
         "Administrative Templates\\Printers",
-        "Printers"
+        "Printers",
+        ""
     ],
     "infoUrls": [],
     "baseUri": "./Device/Vendor/MSFT/Policy",
     "offsetUri": "/Config/Printers/ApprovedUsbPrintDevices",
     "rootDefinitionId": "device_vendor_msft_policy_config_printers_approvedusbprintdevices",
-    "categoryId": "2becddf1-d8ea-49ec-8560-c8c401faa9bb",
+    "categoryId": "3334730b-b9f7-4c99-bde8-57f6b2cd826f",
     "settingUsage": "configuration",
     "uxBehavior": "default",
     "visibility": "settingsCatalog,template",
@@ -21,7 +22,8 @@
     "description": "",
     "helpText": "",
     "name": "ApprovedUsbPrintDevices_List",
-    "displayName": "vid/pid (Device)",
+    "displayName": "vid/pid",
+    "defaultValue": null,
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
         "description": null,
@@ -45,8 +47,8 @@
         "requiredAzureAdTrustType": "none"
     },
     "occurrence": {
-        "minDeviceOccurrence": 1,
-        "maxDeviceOccurrence": 1
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": null
     },
     "referredSettingInformationList": [],
     "valueDefinition": {
@@ -57,11 +59,6 @@
         "minimumLength": 0,
         "isSecret": false,
         "fileTypes": []
-    },
-    "defaultValue": {
-        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
-        "settingValueTemplateReference": null,
-        "value": null
     },
     "dependentOn": [
         {
