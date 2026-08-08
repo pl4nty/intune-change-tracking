@@ -22,7 +22,6 @@
     "helpText": "",
     "name": "IdentificationField",
     "displayName": "BitLocker identification field:",
-    "defaultValue": null,
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
         "description": null,
@@ -37,8 +36,8 @@
         "requiredAzureAdTrustType": "none"
     },
     "occurrence": {
-        "minDeviceOccurrence": 0,
-        "maxDeviceOccurrence": null
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
     },
     "referredSettingInformationList": [],
     "valueDefinition": {
@@ -49,6 +48,11 @@
         "minimumLength": 0,
         "isSecret": false,
         "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
     },
     "dependentOn": [
         {

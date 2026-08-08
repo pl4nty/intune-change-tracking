@@ -21,7 +21,6 @@
     "helpText": "",
     "name": "EnterReportBackPrompt",
     "displayName": "Type the location (URL) of where to receive reports about the websites for which users turn on and use Enterprise Mode (User)",
-    "defaultValue": null,
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
         "description": null,
@@ -46,7 +45,7 @@
     },
     "occurrence": {
         "minDeviceOccurrence": 0,
-        "maxDeviceOccurrence": null
+        "maxDeviceOccurrence": 1
     },
     "referredSettingInformationList": [],
     "valueDefinition": {
@@ -57,6 +56,11 @@
         "minimumLength": 0,
         "isSecret": false,
         "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
     },
     "dependentOn": [
         {

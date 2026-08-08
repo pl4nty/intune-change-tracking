@@ -22,7 +22,6 @@
     "helpText": "",
     "name": "SignatureUpdate_DefinitionUpdateFileSharesSources",
     "displayName": "Define file shares for downloading security intelligence updates",
-    "defaultValue": null,
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
         "description": null,
@@ -47,8 +46,8 @@
         "requiredAzureAdTrustType": "none"
     },
     "occurrence": {
-        "minDeviceOccurrence": 0,
-        "maxDeviceOccurrence": null
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
     },
     "referredSettingInformationList": [],
     "valueDefinition": {
@@ -59,6 +58,11 @@
         "minimumLength": 0,
         "isSecret": false,
         "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
     },
     "dependentOn": [
         {

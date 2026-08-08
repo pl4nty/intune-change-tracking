@@ -22,7 +22,6 @@
     "helpText": "",
     "name": "PointAndPrint_TrustedServers_Edit",
     "displayName": "Enter fully qualified server names separated by semicolons (User)",
-    "defaultValue": null,
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
         "description": null,
@@ -47,7 +46,7 @@
     },
     "occurrence": {
         "minDeviceOccurrence": 0,
-        "maxDeviceOccurrence": null
+        "maxDeviceOccurrence": 1
     },
     "referredSettingInformationList": [],
     "valueDefinition": {
@@ -58,6 +57,11 @@
         "minimumLength": 0,
         "isSecret": false,
         "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
     },
     "dependentOn": [
         {
