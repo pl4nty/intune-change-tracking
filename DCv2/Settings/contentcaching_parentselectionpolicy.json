@@ -1,0 +1,127 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Content Cache Settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "ParentSelectionPolicy",
+    "rootDefinitionId": "contentcaching_contentcaching",
+    "categoryId": "5c9e9aaf-a36c-437f-b85a-cb78a527a80f",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "contentcaching_parentselectionpolicy",
+    "description": "The policy to implement when choosing among more than one configured parent content cache. With every policy, the system skips parent caches that are temporarily unavailable. Allowed values:\n\n- `first-available`: Always use the first available parent in the Parents list. Use this policy to designate permanent primary, secondary, and subsequent parents.\n- `url-path-hash`: Hash the path part of the requested URL so that the same parent is always used for the same URL. This is useful for maximizing the size of the combined caches of     the parents.\n- `random`: Choose a parent at random. Use this policy for load balancing.\n- `round-robin`: Rotate through the parents in order. Use this policy for load balancing.\n- `sticky-available`: Use the first available parent in the Parents list until it becomes unavailable, then advance to the next one. Use this policy for designating floating primary, secondary, and subsequent parents.",
+    "helpText": null,
+    "name": "ParentSelectionPolicy",
+    "displayName": "Parent Selection Policy",
+    "defaultOptionId": "contentcaching_parentselectionpolicy_3",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "contentcaching_parentselectionpolicy_0",
+            "description": null,
+            "helpText": null,
+            "name": "first-available",
+            "displayName": "first-available",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "first-available"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "contentcaching_contentcaching",
+                    "parentSettingId": "contentcaching_contentcaching"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "contentcaching_parentselectionpolicy_1",
+            "description": null,
+            "helpText": null,
+            "name": "url-path-hash",
+            "displayName": "url-path-hash",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "url-path-hash"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "contentcaching_contentcaching",
+                    "parentSettingId": "contentcaching_contentcaching"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "contentcaching_parentselectionpolicy_2",
+            "description": null,
+            "helpText": null,
+            "name": "random",
+            "displayName": "random",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "random"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "contentcaching_contentcaching",
+                    "parentSettingId": "contentcaching_contentcaching"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "contentcaching_parentselectionpolicy_3",
+            "description": null,
+            "helpText": null,
+            "name": "round-robin",
+            "displayName": "round-robin",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "round-robin"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "contentcaching_contentcaching",
+                    "parentSettingId": "contentcaching_contentcaching"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "contentcaching_parentselectionpolicy_4",
+            "description": null,
+            "helpText": null,
+            "name": "sticky-available",
+            "displayName": "sticky-available",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "sticky-available"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "contentcaching_contentcaching",
+                    "parentSettingId": "contentcaching_contentcaching"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

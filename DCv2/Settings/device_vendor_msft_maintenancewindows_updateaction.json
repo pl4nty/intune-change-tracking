@@ -1,0 +1,106 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Maintenance Window",
+        "Update Action",
+        "Maintenance Windows"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/MaintenanceWindows",
+    "offsetUri": "/UpdateAction",
+    "rootDefinitionId": "device_vendor_msft_maintenancewindows_enablemaintenancewindows",
+    "categoryId": "d7b2000f-6aae-42d1-a64b-7339544fa2e0",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_maintenancewindows_updateaction",
+    "description": "Select the update action to perform during the maintenance window.",
+    "helpText": "",
+    "name": "UpdateAction",
+    "displayName": "Update action",
+    "defaultOptionId": "device_vendor_msft_maintenancewindows_updateaction_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26100.7840",
+        "windowsSkus": [
+            "windowsProfessional",
+            "windowsEnterprise",
+            "windowsEducation",
+            "iotEnterprise"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_maintenancewindows_updateaction_1",
+            "description": "Download, install and restart the device",
+            "helpText": null,
+            "name": "DownloadInstallRestart",
+            "displayName": "Download, install and restart",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_maintenancewindows_enablemaintenancewindows_1",
+                    "parentSettingId": "device_vendor_msft_maintenancewindows_enablemaintenancewindows"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_maintenancewindows_updateaction_2",
+            "description": "Install and restart the device",
+            "helpText": null,
+            "name": "InstallRestart",
+            "displayName": "Install and restart",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_maintenancewindows_enablemaintenancewindows_1",
+                    "parentSettingId": "device_vendor_msft_maintenancewindows_enablemaintenancewindows"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_maintenancewindows_updateaction_3",
+            "description": "Restart the device only",
+            "helpText": null,
+            "name": "RestartOnly",
+            "displayName": "Restart only",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_maintenancewindows_enablemaintenancewindows_1",
+                    "parentSettingId": "device_vendor_msft_maintenancewindows_enablemaintenancewindows"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

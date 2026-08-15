@@ -1,0 +1,97 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Maintenance Window Monthly Schedule",
+        "Update",
+        "Windows Update For Business"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Update#maintenancewindowmonthlyschedule"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Update/MaintenanceWindowMonthlySchedule",
+    "rootDefinitionId": "device_vendor_msft_policy_config_update_maintenancewindowmonthlyschedule",
+    "categoryId": "0e6c9053-73d6-4c56-9147-53513f6eefd8",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "none",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_update_maintenancewindowmonthlyschedule",
+    "description": "If the maintenance window repeat schedule is set to monthly, configure whether to repeat on the same date each month (the 1st of every month), a day within a specific week (for example, the second Tuesday of every month), or on the last day of each month. 1=repeat on same date each month, 2=repeat on a day of a specific week, 3=repeat on the last day of each month.",
+    "helpText": "",
+    "name": "MaintenanceWindowMonthlySchedule",
+    "displayName": "Maintenance Window Monthly Schedule",
+    "defaultOptionId": "device_vendor_msft_policy_config_update_maintenancewindowmonthlyschedule_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26100.7840",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_update_maintenancewindowmonthlyschedule_1",
+            "description": "Date-based",
+            "helpText": null,
+            "name": "Date-based",
+            "displayName": "Date-based",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_update_maintenancewindowmonthlyschedule_2",
+            "description": "Week-based",
+            "helpText": null,
+            "name": "Week-based",
+            "displayName": "Week-based",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_update_maintenancewindowmonthlyschedule_3",
+            "description": "Last day of the month",
+            "helpText": null,
+            "name": "Last day of the month",
+            "displayName": "Last day of the month",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

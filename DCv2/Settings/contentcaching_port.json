@@ -1,0 +1,46 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Content Cache Settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "Port",
+    "rootDefinitionId": "contentcaching_contentcaching",
+    "categoryId": "5c9e9aaf-a36c-437f-b85a-cb78a527a80f",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "contentcaching_port",
+    "description": "The TCP port number on which the content cache accepts requests for uploads or downloads. Set to `0` to pick a random, available port.",
+    "helpText": null,
+    "name": "Port",
+    "displayName": "Port",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 2147483647,
+        "minimumValue": 0
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 0
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "contentcaching_contentcaching",
+            "parentSettingId": "contentcaching_contentcaching"
+        }
+    ],
+    "dependedOnBy": []
+}

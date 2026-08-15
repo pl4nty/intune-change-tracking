@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Maintenance Window",
+        "Duration",
+        "Maintenance Windows"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/MaintenanceWindows",
+    "offsetUri": "/Duration",
+    "rootDefinitionId": "device_vendor_msft_maintenancewindows_enablemaintenancewindows",
+    "categoryId": "d7b2000f-6aae-42d1-a64b-7339544fa2e0",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_maintenancewindows_duration",
+    "description": "Specify the duration of the maintenance window in hours. Value must be between 2 and 24 hours.",
+    "helpText": "Between 2 and 24 hours.",
+    "name": "Duration",
+    "displayName": "Duration (hours)",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26100.7840",
+        "windowsSkus": [
+            "windowsProfessional",
+            "windowsEnterprise",
+            "windowsEducation",
+            "iotEnterprise"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 24,
+        "minimumValue": 2
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 2
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "device_vendor_msft_maintenancewindows_enablemaintenancewindows_1",
+            "parentSettingId": "device_vendor_msft_maintenancewindows_enablemaintenancewindows"
+        }
+    ],
+    "dependedOnBy": []
+}

@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "eSIM",
+        "embedded SIM",
+        "SIM",
+        "SIM card",
+        "carrier profile",
+        "cellular",
+        "mobile network",
+        "wipe device",
+        "remove eSIM",
+        "managed eSIM",
+        "General"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "/com.android.deviceRestrictionPolicy/",
+    "offsetUri": "/wipeDataFlag/",
+    "rootDefinitionId": "com.android.devicerestrictionpolicy.wipedataflag",
+    "categoryId": "b6733d23-eadc-486a-abfc-62b78698a16c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.android.devicerestrictionpolicy.wipedataflag",
+    "description": "If 'True', all eSIMs are removed when a device is wiped. If 'False', Intune doesn't change or update this setting. By default, eSIMs are not removed during a device wipe, except where required by the OS. Available for fully managed, dedicated, and corporate-owned work profile devices.",
+    "helpText": null,
+    "name": "WipeDataFlag",
+    "displayName": "Remove all eSIMs during a device wipe",
+    "defaultOptionId": "com.android.devicerestrictionpolicy.wipedataflag_false",
+    "applicability": {
+        "description": null,
+        "platform": "androidEnterprise",
+        "deviceMode": "none",
+        "technologies": "android"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.android.devicerestrictionpolicy.wipedataflag_false",
+            "description": "eSIMs are not removed during a device wipe, except where required by the OS.",
+            "helpText": null,
+            "name": "WIPE_DATA_FLAG_UNSPECIFIED",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "WIPE_DATA_FLAG_UNSPECIFIED"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.wipedataflag_true",
+            "description": "All eSIMs are removed when the device is wiped.",
+            "helpText": null,
+            "name": "WIPE_ESIMS",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "WIPE_ESIMS"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

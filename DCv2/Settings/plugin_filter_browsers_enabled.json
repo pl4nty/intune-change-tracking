@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Web Content Filter"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "Filter/Browsers/Enabled",
+    "rootDefinitionId": "plugin_plugin",
+    "categoryId": "27f47083-6e1b-4fc7-938b-ecd846b79d78",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "plugin_filter_browsers_enabled",
+    "description": "If `true`, the system enables filtering WebKit traffic.",
+    "helpText": null,
+    "name": "Filter_Browsers_Enabled",
+    "displayName": "Enabled",
+    "defaultOptionId": "plugin_filter_browsers_enabled_false",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "plugin_filter_browsers_enabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "plugin_filter_browsers",
+                    "parentSettingId": "plugin_filter_browsers"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "plugin_filter_browsers_enabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "plugin_filter_browsers",
+                    "parentSettingId": "plugin_filter_browsers"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

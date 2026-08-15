@@ -1,0 +1,51 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Web Content Filter"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "Filter/Packets",
+    "rootDefinitionId": "plugin_plugin",
+    "categoryId": "27f47083-6e1b-4fc7-938b-ecd846b79d78",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "plugin_filter_packets",
+    "description": "Settings that control the packet filter. If not present, the system doesn't use packet filtering.",
+    "helpText": null,
+    "name": "Filter_Packets",
+    "displayName": "Packets",
+    "childIds": [
+        "plugin_filter_packets_enabled",
+        "plugin_filter_packets_providercomposedidentifier"
+    ],
+    "maximumCount": 1,
+    "minimumCount": 0,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [
+        {
+            "dependentOn": "plugin_filter",
+            "parentSettingId": "plugin_filter"
+        }
+    ],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "plugin_filter_packets_enabled",
+            "required": true
+        },
+        {
+            "dependedOnBy": "plugin_filter_packets_providercomposedidentifier",
+            "required": false
+        }
+    ]
+}

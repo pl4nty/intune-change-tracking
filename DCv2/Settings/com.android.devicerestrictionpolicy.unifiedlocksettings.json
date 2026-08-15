@@ -1,0 +1,66 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "One lock",
+        "Password",
+        "Passcode",
+        "PIN",
+        "Work profile",
+        "Unified lock",
+        "Work profile password"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "/com.android.deviceRestrictionPolicy/",
+    "offsetUri": "/unifiedLockSettings/",
+    "rootDefinitionId": "com.android.devicerestrictionpolicy.unifiedlocksettings",
+    "categoryId": "70c4566f-a079-4a8e-ac97-0736b405df1d",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.android.devicerestrictionpolicy.unifiedlocksettings",
+    "description": "If 'True', requires a separate lock for the work profile, preventing use of a unified lock for both device and work profile. If set to 'False', Intune doesn't change or update this setting. By default, the OS might allow a common lock for the device and the work profile. Available for corporate-owned work profile devices (at work profile level).",
+    "helpText": null,
+    "name": "UnifiedLockSettings",
+    "displayName": "Require separate work lock",
+    "defaultOptionId": "com.android.devicerestrictionpolicy.unifiedlocksettings_false",
+    "applicability": {
+        "description": null,
+        "platform": "androidEnterprise",
+        "deviceMode": "none",
+        "technologies": "android"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.android.devicerestrictionpolicy.unifiedlocksettings_false",
+            "description": "A common lock for the device and the work profile is allowed.",
+            "helpText": null,
+            "name": "ALLOW_UNIFIED_WORK_AND_PERSONAL_LOCK",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "ALLOW_UNIFIED_WORK_AND_PERSONAL_LOCK"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.unifiedlocksettings_true",
+            "description": "A separate lock for the work profile is required.",
+            "helpText": null,
+            "name": "REQUIRE_SEPARATE_WORK_LOCK",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "REQUIRE_SEPARATE_WORK_LOCK"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

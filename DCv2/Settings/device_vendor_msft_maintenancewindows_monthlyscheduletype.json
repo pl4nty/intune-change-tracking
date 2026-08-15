@@ -1,0 +1,120 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Maintenance Window",
+        "Monthly Schedule Type",
+        "Maintenance Windows"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/MaintenanceWindows",
+    "offsetUri": "/MonthlyScheduleType",
+    "rootDefinitionId": "device_vendor_msft_maintenancewindows_enablemaintenancewindows",
+    "categoryId": "d7b2000f-6aae-42d1-a64b-7339544fa2e0",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_maintenancewindows_monthlyscheduletype",
+    "description": "Select the type of monthly schedule for the maintenance window.",
+    "helpText": "",
+    "name": "MonthlyScheduleType",
+    "displayName": "Monthly – Schedule type",
+    "defaultOptionId": "device_vendor_msft_maintenancewindows_monthlyscheduletype_1",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26100.7840",
+        "windowsSkus": [
+            "windowsProfessional",
+            "windowsEnterprise",
+            "windowsEducation",
+            "iotEnterprise"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_maintenancewindows_monthlyscheduletype_1",
+            "description": "Schedule by a specific day of the month",
+            "helpText": null,
+            "name": "DayBased",
+            "displayName": "Day-based",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_maintenancewindows_repeatschedule_4",
+                    "parentSettingId": "device_vendor_msft_maintenancewindows_repeatschedule"
+                }
+            ],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_maintenancewindows_dayofmonth",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "itemId": "device_vendor_msft_maintenancewindows_monthlyscheduletype_2",
+            "description": "Schedule by a specific week and day of the month",
+            "helpText": null,
+            "name": "WeekBased",
+            "displayName": "Week-based",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_maintenancewindows_repeatschedule_4",
+                    "parentSettingId": "device_vendor_msft_maintenancewindows_repeatschedule"
+                }
+            ],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_maintenancewindows_weekinmonth",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_maintenancewindows_dayoftheweek",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "itemId": "device_vendor_msft_maintenancewindows_monthlyscheduletype_3",
+            "description": "Schedule on the last day of every month",
+            "helpText": null,
+            "name": "LastDayOfMonth",
+            "displayName": "Last day of month",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_maintenancewindows_repeatschedule_4",
+                    "parentSettingId": "device_vendor_msft_maintenancewindows_repeatschedule"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

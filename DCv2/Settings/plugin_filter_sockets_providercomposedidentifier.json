@@ -1,0 +1,50 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Web Content Filter"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "Filter/Sockets/ProviderComposedIdentifier",
+    "rootDefinitionId": "plugin_plugin",
+    "categoryId": "27f47083-6e1b-4fc7-938b-ecd846b79d78",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "plugin_filter_sockets_providercomposedidentifier",
+    "description": "The data provider identifier. This string identifies the filter data provider when the filter starts running. Required when Enabled is true.\n\nIn iOS and visionOS, the identifier is a bundle ID, for example, \"com.example.app\".\n\nIn macOS, the identifier is a composed identifier. The format of the composed identifier is \"Bundle-ID {Designated-Requirement}\". \"Bundle-ID\" is the bundle identifier string of the provider. \"Designated-Requirement\" is the designated requirement string from the code signature of the provider. For example, \"com.example.app {anchor apple generic}\".",
+    "helpText": null,
+    "name": "Filter_Sockets_ProviderComposedIdentifier",
+    "displayName": "Provider Composed Identifier",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "plugin_filter_sockets",
+            "parentSettingId": "plugin_filter_sockets"
+        }
+    ],
+    "dependedOnBy": []
+}

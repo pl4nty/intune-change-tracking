@@ -1,0 +1,63 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Maintenance Window",
+        "Start Date",
+        "Maintenance Windows"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/MaintenanceWindows",
+    "offsetUri": "/StartDate",
+    "rootDefinitionId": "device_vendor_msft_maintenancewindows_enablemaintenancewindows",
+    "categoryId": "d7b2000f-6aae-42d1-a64b-7339544fa2e0",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_maintenancewindows_startdate",
+    "description": "Specify the start date for the maintenance window in YYYY-MM-DD format.",
+    "helpText": "Pick a date",
+    "name": "StartDate",
+    "displayName": "Start date",
+    "defaultValue": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26100.7840",
+        "windowsSkus": [
+            "windowsProfessional",
+            "windowsEnterprise",
+            "windowsEducation",
+            "iotEnterprise"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "regEx",
+        "inputValidationSchema": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$",
+        "maximumLength": 10,
+        "minimumLength": 10,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "device_vendor_msft_maintenancewindows_enablemaintenancewindows_1",
+            "parentSettingId": "device_vendor_msft_maintenancewindows_enablemaintenancewindows"
+        }
+    ],
+    "dependedOnBy": []
+}

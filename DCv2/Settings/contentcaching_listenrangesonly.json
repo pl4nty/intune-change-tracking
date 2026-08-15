@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Content Cache Settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "ListenRangesOnly",
+    "rootDefinitionId": "contentcaching_contentcaching",
+    "categoryId": "5c9e9aaf-a36c-437f-b85a-cb78a527a80f",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "contentcaching_listenrangesonly",
+    "description": "If `true`, the content cache provides content to the clients in the `ListenRanges`.",
+    "helpText": null,
+    "name": "ListenRangesOnly",
+    "displayName": "Listen Ranges Only",
+    "defaultOptionId": "contentcaching_listenrangesonly_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "contentcaching_listenrangesonly_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "contentcaching_contentcaching",
+                    "parentSettingId": "contentcaching_contentcaching"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "contentcaching_listenrangesonly_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "contentcaching_contentcaching",
+                    "parentSettingId": "contentcaching_contentcaching"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

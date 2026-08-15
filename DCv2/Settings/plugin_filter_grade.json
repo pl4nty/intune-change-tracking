@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Web Content Filter"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "Filter/Grade",
+    "rootDefinitionId": "plugin_plugin",
+    "categoryId": "27f47083-6e1b-4fc7-938b-ecd846b79d78",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "plugin_filter_grade",
+    "description": "The system uses this value to derive the relative order of content filters. Filters with a grade of `firewall` see network traffic before filters with a grade of `inspector`. However, the system doesn't define the order of filters within a grade.",
+    "helpText": null,
+    "name": "Filter_Grade",
+    "displayName": "Grade",
+    "defaultOptionId": "plugin_filter_grade_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "plugin_filter_grade_0",
+            "description": null,
+            "helpText": null,
+            "name": "firewall",
+            "displayName": "firewall",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "firewall"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "plugin_filter",
+                    "parentSettingId": "plugin_filter"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "plugin_filter_grade_1",
+            "description": null,
+            "helpText": null,
+            "name": "inspector",
+            "displayName": "inspector",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "inspector"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "plugin_filter",
+                    "parentSettingId": "plugin_filter"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

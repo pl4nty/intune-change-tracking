@@ -1,0 +1,46 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Content Cache Settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "PersonalCacheLimit",
+    "rootDefinitionId": "contentcaching_contentcaching",
+    "categoryId": "5c9e9aaf-a36c-437f-b85a-cb78a527a80f",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "contentcaching_personalcachelimit",
+    "description": "The maximum number of bytes of disk space to use for the personal content cache. The content cache limits the maximum value to the `CacheLimit` value. Set to `0` to use the overall `CacheLimit`.",
+    "helpText": null,
+    "name": "PersonalCacheLimit",
+    "displayName": "Personal Cache Limit",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 2147483647,
+        "minimumValue": 0
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 0
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "contentcaching_contentcaching",
+            "parentSettingId": "contentcaching_contentcaching"
+        }
+    ],
+    "dependedOnBy": []
+}

@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Content Cache Settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "AllowPersonalCaching",
+    "rootDefinitionId": "contentcaching_contentcaching",
+    "categoryId": "5c9e9aaf-a36c-437f-b85a-cb78a527a80f",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "contentcaching_allowpersonalcaching",
+    "description": "If `true`, the system caches the user's iCloud data. Changes to this value don't have an immediate effect. Clients may take some time to react to changes.\n\n> Note:\n> At least one of the `AllowPersonalCaching` or `AllowSharedCaching` keys need to be `true`.",
+    "helpText": null,
+    "name": "AllowPersonalCaching",
+    "displayName": "Allow Personal Caching",
+    "defaultOptionId": "contentcaching_allowpersonalcaching_true",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "contentcaching_allowpersonalcaching_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "Blocked",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "contentcaching_contentcaching",
+                    "parentSettingId": "contentcaching_contentcaching"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "contentcaching_allowpersonalcaching_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "Allowed",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "contentcaching_contentcaching",
+                    "parentSettingId": "contentcaching_contentcaching"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

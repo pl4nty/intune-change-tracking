@@ -1,0 +1,65 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingCollectionDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Maintenance Window",
+        "Workload Type",
+        "Maintenance Windows"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/MaintenanceWindows",
+    "offsetUri": "/WorkloadType",
+    "rootDefinitionId": "device_vendor_msft_maintenancewindows_workloadtype",
+    "categoryId": "d7b2000f-6aae-42d1-a64b-7339544fa2e0",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_maintenancewindows_workloadtype",
+    "description": "Select one or more workloads for the maintenance window.",
+    "helpText": "Select one or more workloads.",
+    "name": "WorkloadType",
+    "displayName": "Workload type",
+    "defaultOptionId": null,
+    "maximumCount": 100,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26100.7840",
+        "windowsSkus": [
+            "windowsProfessional",
+            "windowsEnterprise",
+            "windowsEducation",
+            "iotEnterprise"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_maintenancewindows_workloadtype_1",
+            "description": "Windows Updates workload",
+            "helpText": null,
+            "name": "Updates",
+            "displayName": "Updates",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}
