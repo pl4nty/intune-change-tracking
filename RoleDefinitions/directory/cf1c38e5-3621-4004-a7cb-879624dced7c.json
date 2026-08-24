@@ -21,6 +21,26 @@
                 "microsoft.directory/servicePrincipals/createAsOwner"
             ],
             "condition": null
+        },
+        {
+            "allowedResourceActions": [
+                "microsoft.directory/applications/appRoles/update",
+                "microsoft.directory/applications/audience/update",
+                "microsoft.directory/applications/authentication/update",
+                "microsoft.directory/applications/basic/update",
+                "microsoft.directory/applications/credentials/update",
+                "microsoft.directory/applications/delete",
+                "microsoft.directory/applications/disablement/update",
+                "microsoft.directory/applications/extensionProperties/update",
+                "microsoft.directory/applications/notes/update",
+                "microsoft.directory/applications/owners/update",
+                "microsoft.directory/applications/permissions/update",
+                "microsoft.directory/applications/policies/update",
+                "microsoft.directory/applications/tag/update",
+                "microsoft.directory/applications/verification/update",
+                "microsoft.directory/deletedItems.applications/delete"
+            ],
+            "condition": "$SubjectIsOwner"
         }
     ],
     "inheritsPermissionsFrom@odata.context": "https://graph.microsoft.com/beta/$metadata#roleManagement/directory/roleDefinitions('cf1c38e5-3621-4004-a7cb-879624dced7c')/inheritsPermissionsFrom",
