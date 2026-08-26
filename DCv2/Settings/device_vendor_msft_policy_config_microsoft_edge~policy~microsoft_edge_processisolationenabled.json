@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ProcessIsolationEnabled",
+        "Enable Process Isolation",
+        "\\Microsoft Edge",
+        "Both",
+        "Software\\Policies\\Microsoft\\Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edge~Policy~microsoft_edge/ProcessIsolationEnabled",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_processisolationenabled",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_processisolationenabled",
+    "description": "This policy controls Process Isolation in Microsoft Edge.\n\nWhen this policy is enabled, Microsoft Edge uses Process Isolation to help improve browser security by preventing authorized applications on the device from reading or modifying the contents of Microsoft Edge's running processes. This also helps prevent other applications from accessing encrypted data used by Microsoft Edge.\n\nEnabling Process Isolation may cause incompatibilities with third party applications that rely on being able to inject or tamper with Microsoft Edge's processes, such as antivirus, screen reader or window manager applications.\n\nSetting the policy to Enabled turns on process isolation in Microsoft Edge.\n\nSetting the policy to Disabled turns off process isolation in Microsoft Edge.\n\nIf this policy is unset, Microsoft Edge will follow the default rollout process for the Process Isolation feature, which means that the feature will be gradually rolled out to an increasing number of users.\n\nNote: This policy is applied when Microsoft Edge starts. If the policy is changed while Microsoft Edge is running, the new setting will take effect on the next restart.",
+    "helpText": "",
+    "name": "ProcessIsolationEnabled",
+    "displayName": "Enable Process Isolation",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_processisolationenabled_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_processisolationenabled_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_processisolationenabled_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}
