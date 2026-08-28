@@ -57,14 +57,15 @@
     "appRoles": [
         {
             "allowedMemberTypes": [
-                "Application"
+                "Application",
+                "User"
             ],
-            "description": "OrganizationAnalytics.EssStream.Read.All",
-            "displayName": "OrganizationAnalytics.EssStream.Read.All",
-            "id": "fcd57aa7-c2b4-4b41-aa8b-266b6c42e1a5",
+            "description": "Allows read-write access to org-wide analytics e.g Custom Nudges ",
+            "displayName": "OrganizationAnalytics.ReadWrite",
+            "id": "00a72033-22db-4037-9c68-f8b0d437bce4",
             "isEnabled": true,
             "origin": "Application",
-            "value": "OrganizationAnalytics.EssStream.Read.All",
+            "value": "OrganizationAnalytics.ReadWrite",
             "isPreAuthorizationRequired": false,
             "isPrivate": false
         },
@@ -72,25 +73,12 @@
             "allowedMemberTypes": [
                 "Application"
             ],
-            "description": "This allows access to check whether a given user is currently in their quiet time window",
-            "displayName": "QuietTimeStatus.Read.All",
-            "id": "97073fc4-341a-4124-94ec-ea70cff53f9f",
+            "description": "AnalyticsConfig.Read",
+            "displayName": "AnalyticsConfig.Read",
+            "id": "9dc0bf61-2c27-4f46-a5ad-84d524c9cba4",
             "isEnabled": true,
             "origin": "Application",
-            "value": "QuietTimeStatus.Read.All",
-            "isPreAuthorizationRequired": false,
-            "isPrivate": false
-        },
-        {
-            "allowedMemberTypes": [
-                "Application"
-            ],
-            "description": "This allows access to read and write Organization Settings.",
-            "displayName": "OrganizationSettings.ReadWrite",
-            "id": "2bf589c4-d055-4872-a96d-15d99b610750",
-            "isEnabled": true,
-            "origin": "Application",
-            "value": "OrganizationSettings.ReadWrite",
+            "value": "AnalyticsConfig.Read",
             "isPreAuthorizationRequired": false,
             "isPrivate": false
         },
@@ -111,26 +99,38 @@
             "allowedMemberTypes": [
                 "Application"
             ],
-            "description": "AnalyticsConfig.Read",
-            "displayName": "AnalyticsConfig.Read",
-            "id": "9dc0bf61-2c27-4f46-a5ad-84d524c9cba4",
+            "description": "This allows access to read and write Organization Settings.",
+            "displayName": "OrganizationSettings.ReadWrite",
+            "id": "2bf589c4-d055-4872-a96d-15d99b610750",
             "isEnabled": true,
             "origin": "Application",
-            "value": "AnalyticsConfig.Read",
+            "value": "OrganizationSettings.ReadWrite",
             "isPreAuthorizationRequired": false,
             "isPrivate": false
         },
         {
             "allowedMemberTypes": [
-                "Application",
-                "User"
+                "Application"
             ],
-            "description": "Allows read-write access to org-wide analytics e.g Custom Nudges ",
-            "displayName": "OrganizationAnalytics.ReadWrite",
-            "id": "00a72033-22db-4037-9c68-f8b0d437bce4",
+            "description": "This allows access to check whether a given user is currently in their quiet time window",
+            "displayName": "QuietTimeStatus.Read.All",
+            "id": "97073fc4-341a-4124-94ec-ea70cff53f9f",
             "isEnabled": true,
             "origin": "Application",
-            "value": "OrganizationAnalytics.ReadWrite",
+            "value": "QuietTimeStatus.Read.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "OrganizationAnalytics.EssStream.Read.All",
+            "displayName": "OrganizationAnalytics.EssStream.Read.All",
+            "id": "fcd57aa7-c2b4-4b41-aa8b-266b6c42e1a5",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "OrganizationAnalytics.EssStream.Read.All",
             "isPreAuthorizationRequired": false,
             "isPrivate": false
         }
@@ -145,17 +145,6 @@
     "keyCredentials": [],
     "publishedPermissionScopes": [
         {
-            "adminConsentDescription": "This allows access to read and write Organization Settings.",
-            "adminConsentDisplayName": "OrganizationSettings.ReadWrite",
-            "id": "67a10836-5c70-4e46-87b1-15b75194beed",
-            "isEnabled": true,
-            "type": "Admin",
-            "userConsentDescription": "This allows access to read and write Organization Settings.",
-            "userConsentDisplayName": "OrganizationSettings.ReadWrite",
-            "value": "OrganizationSettings.ReadWrite",
-            "isPrivate": false
-        },
-        {
             "adminConsentDescription": "permission to read for praise elegibility",
             "adminConsentDisplayName": "PraiseEligibility.Read",
             "id": "dba71b3d-90a6-4853-be6c-cee31058795a",
@@ -164,6 +153,17 @@
             "userConsentDescription": "permission to read for praise elegibility",
             "userConsentDisplayName": "PraiseEligibility.Read",
             "value": "PraiseEligibility.Read",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "This allows access to read and write Organization Settings.",
+            "adminConsentDisplayName": "OrganizationSettings.ReadWrite",
+            "id": "67a10836-5c70-4e46-87b1-15b75194beed",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "This allows access to read and write Organization Settings.",
+            "userConsentDisplayName": "OrganizationSettings.ReadWrite",
+            "value": "OrganizationSettings.ReadWrite",
             "isPrivate": false
         }
     ],
