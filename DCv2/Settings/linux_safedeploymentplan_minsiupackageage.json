@@ -1,0 +1,91 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Safe Deployment Plan",
+        "Defender Safe Deployment Plan"
+    ],
+    "infoUrls": [
+        "https://learn.microsoft.com/microsoft-365/security/defender-endpoint/linux-preferences"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/safeDeploymentPlan",
+    "offsetUri": "minSiuPackageAge",
+    "rootDefinitionId": "linux_safedeploymentplan_minsiupackageage",
+    "categoryId": "bdde6ae4-2d87-4ef0-976e-ae2a57dfbf6b",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "linux_safedeploymentplan_minsiupackageage",
+    "description": "Sets a minimum age for Security Intelligence Update (SIU) packages before they are applied, providing a buffer against early-stage issues. 'Real-time' applies packages as soon as they are available; '4 hours', '16 hours', and '24 hours' require the package to have aged at least that long before it is applied.",
+    "helpText": null,
+    "name": "minSiuPackageAge",
+    "displayName": "Minimum SIU Package Age",
+    "defaultOptionId": "linux_safedeploymentplan_minsiupackageage_realtime",
+    "applicability": {
+        "description": null,
+        "platform": "linux",
+        "deviceMode": "none",
+        "technologies": "microsoftSense"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "linux_safedeploymentplan_minsiupackageage_realtime",
+            "description": null,
+            "helpText": null,
+            "name": "Real-time",
+            "displayName": "Real-time",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "realtime"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "linux_safedeploymentplan_minsiupackageage_4h",
+            "description": null,
+            "helpText": null,
+            "name": "4 hours",
+            "displayName": "4 hours",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "4h"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "linux_safedeploymentplan_minsiupackageage_16h",
+            "description": null,
+            "helpText": null,
+            "name": "16 hours",
+            "displayName": "16 hours",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "16h"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "linux_safedeploymentplan_minsiupackageage_24h",
+            "description": null,
+            "helpText": null,
+            "name": "24 hours",
+            "displayName": "24 hours",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "24h"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

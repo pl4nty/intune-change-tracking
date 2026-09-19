@@ -1,0 +1,64 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Volume Change",
+        "Volume",
+        "Volume configuration",
+        "Loudness",
+        "General"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "/com.android.deviceRestrictionPolicy/",
+    "offsetUri": "/volumeBlockAdjustmentAosp/",
+    "rootDefinitionId": "com.android.devicerestrictionpolicy.volumeblockadjustmentaosp",
+    "categoryId": "b6733d23-eadc-486a-abfc-62b78698a16c",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.android.devicerestrictionpolicy.volumeblockadjustmentaosp",
+    "description": "If 'True', prevents users from adjusting the device's volume settings and also mutes the master volume. If 'False', Intune doesn't change or update this setting. By default, the OS might allow users to modify the volume level. Available for AOSP user-based and userless devices.",
+    "helpText": "",
+    "name": "VolumeBlockAdjustment",
+    "displayName": "Block volume changes",
+    "defaultOptionId": "com.android.devicerestrictionpolicy.volumeblockadjustmentaosp_false",
+    "applicability": {
+        "description": null,
+        "platform": "aosp",
+        "deviceMode": "none",
+        "technologies": "android"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.android.devicerestrictionpolicy.volumeblockadjustmentaosp_false",
+            "description": "False",
+            "helpText": null,
+            "name": "False",
+            "displayName": "False",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.volumeblockadjustmentaosp_true",
+            "description": "True",
+            "helpText": null,
+            "name": "True",
+            "displayName": "True",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,69 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Agent execution",
+        "Agent Governance",
+        "AI agents",
+        "Default tool behavior"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/AgentGovernance",
+    "offsetUri": "/Policy/{AgentId}/SandboxPolicy",
+    "rootDefinitionId": "user_vendor_msft_agentgovernance_agentexecution",
+    "categoryId": "143135a0-e155-4761-b7ad-d20df7b998cc",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_agentgovernance_agentexecution_defaulttoolpermission_defaulttoolrunmode_defaultcontainersettingsreference",
+    "description": "Reusable settings describing the properties of Microsoft Execution Containers.",
+    "helpText": "",
+    "name": "DefaultContainerSettingsReference",
+    "displayName": "Default container settings",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26100",
+        "windowsSkus": [
+            "windowsEnterprise"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [
+        {
+            "settingDefinitionId": "user_vendor_msft_agentgovernance_containersettings"
+        }
+    ],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 64,
+        "minimumLength": 1,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "user_vendor_msft_agentgovernance_agentexecution_defaulttoolpermission_defaulttoolrunmode_runincontainer",
+            "parentSettingId": "user_vendor_msft_agentgovernance_agentexecution_defaulttoolpermission_defaulttoolrunmode"
+        }
+    ],
+    "dependedOnBy": []
+}

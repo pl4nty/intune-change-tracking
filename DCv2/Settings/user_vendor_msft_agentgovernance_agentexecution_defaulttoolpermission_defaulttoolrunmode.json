@@ -1,0 +1,90 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Agent execution",
+        "Agent Governance",
+        "AI agents",
+        "Default tool behavior"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/AgentGovernance",
+    "offsetUri": "/Policy/{AgentId}/SandboxPolicy",
+    "rootDefinitionId": "user_vendor_msft_agentgovernance_agentexecution",
+    "categoryId": "143135a0-e155-4761-b7ad-d20df7b998cc",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_agentgovernance_agentexecution_defaulttoolpermission_defaulttoolrunmode",
+    "description": "",
+    "helpText": "",
+    "name": "DefaultToolRunMode",
+    "displayName": "Run tools in a container by default",
+    "defaultOptionId": "user_vendor_msft_agentgovernance_agentexecution_defaulttoolpermission_defaulttoolrunmode_rununrestricted",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26100",
+        "windowsSkus": [
+            "windowsEnterprise"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_agentgovernance_agentexecution_defaulttoolpermission_defaulttoolrunmode_rununrestricted",
+            "description": null,
+            "helpText": null,
+            "name": "RunUnrestricted",
+            "displayName": "Run unrestricted",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "unrestricted"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_agentgovernance_agentexecution_defaulttoolpermission_allowbydefault",
+                    "parentSettingId": "user_vendor_msft_agentgovernance_agentexecution_defaulttoolpermission"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_agentgovernance_agentexecution_defaulttoolpermission_defaulttoolrunmode_runincontainer",
+            "description": null,
+            "helpText": null,
+            "name": "RunInContainer",
+            "displayName": "Run in container",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "container"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_agentgovernance_agentexecution_defaulttoolpermission_allowbydefault",
+                    "parentSettingId": "user_vendor_msft_agentgovernance_agentexecution_defaulttoolpermission"
+                }
+            ],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_agentgovernance_agentexecution_defaulttoolpermission_defaulttoolrunmode_defaultcontainersettingsreference",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

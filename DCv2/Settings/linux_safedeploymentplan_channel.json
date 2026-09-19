@@ -1,0 +1,105 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Safe Deployment Plan",
+        "Defender Safe Deployment Plan"
+    ],
+    "infoUrls": [
+        "https://learn.microsoft.com/microsoft-365/security/defender-endpoint/linux-preferences"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/safeDeploymentPlan",
+    "offsetUri": "channel",
+    "rootDefinitionId": "linux_safedeploymentplan_channel",
+    "categoryId": "bdde6ae4-2d87-4ef0-976e-ae2a57dfbf6b",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "linux_safedeploymentplan_channel",
+    "description": "Assigns the device to a Safe Deployment Plan channel for phased rollout of Defender updates. 'Validation' sources pre-Production content for early validation. 'Release' sources Production content at one of three velocities: 'Release - Early' is the first Production wave, 'Release - Fast' follows after early dwell and health, and 'Release - Broad' follows after fast dwell and health. 'Delayed' sources the Production artifact after additional dwell.",
+    "helpText": null,
+    "name": "channel",
+    "displayName": "SDP Channel Assignment",
+    "defaultOptionId": "linux_safedeploymentplan_channel_release_fast",
+    "applicability": {
+        "description": null,
+        "platform": "linux",
+        "deviceMode": "none",
+        "technologies": "microsoftSense"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "linux_safedeploymentplan_channel_validation",
+            "description": null,
+            "helpText": null,
+            "name": "Validation",
+            "displayName": "Validation",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "Validation"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "linux_safedeploymentplan_channel_release_early",
+            "description": null,
+            "helpText": null,
+            "name": "Release - Early",
+            "displayName": "Release - Early",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "Release_Early"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "linux_safedeploymentplan_channel_release_fast",
+            "description": null,
+            "helpText": null,
+            "name": "Release - Fast",
+            "displayName": "Release - Fast",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "Release_Fast"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "linux_safedeploymentplan_channel_release_broad",
+            "description": null,
+            "helpText": null,
+            "name": "Release - Broad",
+            "displayName": "Release - Broad",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "Release_Broad"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "linux_safedeploymentplan_channel_delayed",
+            "description": null,
+            "helpText": null,
+            "name": "Delayed",
+            "displayName": "Delayed",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "Delayed"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,199 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingCollectionDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Keyguard",
+        "Lock screen",
+        "Secure lock screen",
+        "Disabled lock screen features",
+        "Camera",
+        "Notifications",
+        "Trust agents",
+        "Fingerprint",
+        "Biometrics",
+        "Face",
+        "Iris",
+        "Device password"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "/com.android.deviceRestrictionPolicy/",
+    "offsetUri": "/keyguardDisabledFeatures/",
+    "rootDefinitionId": "com.android.devicerestrictionpolicy.keyguarddisabledfeatures",
+    "categoryId": "f350f9a2-3a91-4d6d-90ed-7e3849b0d5f1",
+    "settingUsage": "configuration",
+    "uxBehavior": "dropdown",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.android.devicerestrictionpolicy.keyguarddisabledfeatures",
+    "description": "When the device is locked, choose the features that can't be used. These features are accessible to users when the device is locked; users will not be able to see or access the features that are disabled. When this setting is configured by more than one assigned policy, the selected features are merged (union) across those policies.",
+    "helpText": "Options marked '(fully managed or dedicated)' apply only to fully managed and dedicated devices; options marked '(work profile-level)' apply at the work profile level on corporate-owned work profile devices.",
+    "name": "KeyguardDisabledFeatures",
+    "displayName": "Disabled lock screen features",
+    "defaultOptionId": null,
+    "maximumCount": 100,
+    "minimumCount": 0,
+    "applicability": {
+        "description": null,
+        "platform": "androidEnterprise",
+        "deviceMode": "none",
+        "technologies": "android"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.android.devicerestrictionpolicy.keyguarddisabledfeatures_camera",
+            "description": null,
+            "helpText": null,
+            "name": "Secure camera (fully managed or dedicated)",
+            "displayName": "Secure camera (fully managed or dedicated)",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "CAMERA"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.keyguarddisabledfeatures_notifications",
+            "description": null,
+            "helpText": null,
+            "name": "All notifications (fully managed or dedicated)",
+            "displayName": "All notifications (fully managed or dedicated)",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "NOTIFICATIONS"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.keyguarddisabledfeatures_unredactednotifications",
+            "description": null,
+            "helpText": null,
+            "name": "Unredacted notifications",
+            "displayName": "Unredacted notifications",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "UNREDACTED_NOTIFICATIONS"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.keyguarddisabledfeatures_remoteinput",
+            "description": null,
+            "helpText": null,
+            "name": "Text entry in notifications (fully managed or dedicated)",
+            "displayName": "Text entry in notifications (fully managed or dedicated)",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "DISABLE_REMOTE_INPUT"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.keyguarddisabledfeatures_trustagents",
+            "description": null,
+            "helpText": null,
+            "name": "Trust agents (work profile-level)",
+            "displayName": "Trust agents (work profile-level)",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "TRUST_AGENTS"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.keyguarddisabledfeatures_fingerprint",
+            "description": null,
+            "helpText": null,
+            "name": "Fingerprint unlock (work profile-level)",
+            "displayName": "Fingerprint unlock (work profile-level)",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "DISABLE_FINGERPRINT"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.keyguarddisabledfeatures_face",
+            "description": null,
+            "helpText": null,
+            "name": "Face authentication",
+            "displayName": "Face authentication",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "FACE"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.keyguarddisabledfeatures_iris",
+            "description": null,
+            "helpText": null,
+            "name": "Iris authentication",
+            "displayName": "Iris authentication",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "IRIS"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.keyguarddisabledfeatures_biometrics",
+            "description": null,
+            "helpText": null,
+            "name": "Biometrics authentication",
+            "displayName": "Biometrics authentication",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "BIOMETRICS"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.keyguarddisabledfeatures_shortcuts",
+            "description": null,
+            "helpText": null,
+            "name": "Shortcuts",
+            "displayName": "Shortcuts",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "SHORTCUTS"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.android.devicerestrictionpolicy.keyguarddisabledfeatures_allfeatures",
+            "description": null,
+            "helpText": null,
+            "name": "All features",
+            "displayName": "All features",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "ALL_FEATURES"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

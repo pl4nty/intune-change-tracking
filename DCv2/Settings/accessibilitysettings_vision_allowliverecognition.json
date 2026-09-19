@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Accessibility"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "Vision/AllowLiveRecognition",
+    "rootDefinitionId": "accessibilitysettings_accessibilitysettings",
+    "categoryId": "c3c7f584-8be0-4ef7-be2d-390f0226ef0b",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "accessibilitysettings_vision_allowliverecognition",
+    "description": "If `false`, disables the Live Recognition accessibility feature.",
+    "helpText": null,
+    "name": "Vision_AllowLiveRecognition",
+    "displayName": "Allow Live Recognition",
+    "defaultOptionId": "accessibilitysettings_vision_allowliverecognition_true",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "accessibilitysettings_vision_allowliverecognition_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "Blocked",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "accessibilitysettings_vision",
+                    "parentSettingId": "accessibilitysettings_vision"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "accessibilitysettings_vision_allowliverecognition_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "Allowed",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "accessibilitysettings_vision",
+                    "parentSettingId": "accessibilitysettings_vision"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

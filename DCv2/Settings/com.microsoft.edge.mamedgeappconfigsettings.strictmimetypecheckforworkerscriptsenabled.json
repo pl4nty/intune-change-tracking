@@ -1,0 +1,61 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Uncategorized"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "com.microsoft.edge.StrictMimetypeCheckForWorkerScriptsEnabled",
+    "rootDefinitionId": "com.microsoft.edge.mamedgeappconfigsettings.strictmimetypecheckforworkerscriptsenabled",
+    "categoryId": "ce3ba7d1-c101-4ab6-bf2a-0c683e921bf8",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog",
+    "riskLevel": "low",
+    "id": "com.microsoft.edge.mamedgeappconfigsettings.strictmimetypecheckforworkerscriptsenabled",
+    "description": "This policy controls whether strict MIME type checking is used for worker scripts.\n\nIf you enable or don't configure this policy, worker scripts use strict MIME type checking for JavaScript. Worker scripts that use legacy MIME types are rejected.\n\nIf you disable this policy, worker scripts use lax MIME type checking. This allows worker scripts that use legacy MIME types, such as text/ascii, to continue to load and run.\n\nBrowsers traditionally used lax MIME type checking, which allowed JavaScript resources to load with several legacy MIME types. This behavior can create security risks by allowing resources to load as scripts when they weren't intended to be used that way.\n\nMicrosoft Edge uses strict MIME type checking by default. Enabling this policy follows the default behavior. Disabling this policy lets admins temporarily retain the legacy behavior for compatibility.\n\nFor more information about JavaScript and ECMAScript media types, see https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguage.",
+    "helpText": null,
+    "name": "StrictMimetypeCheckForWorkerScriptsEnabled",
+    "displayName": "Enable strict MIME type checking for worker scripts",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability",
+        "description": null,
+        "platform": "macOS,windows10",
+        "deviceMode": "none",
+        "technologies": "mobileApplicationManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.strictmimetypecheckforworkerscriptsenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.microsoft.edge.mamedgeappconfigsettings.strictmimetypecheckforworkerscriptsenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Agent execution",
+        "Agent Governance",
+        "AI agents",
+        "Tool-specific overrides"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/AgentGovernance",
+    "offsetUri": "/Policy/{AgentId}/SandboxPolicy",
+    "rootDefinitionId": "user_vendor_msft_agentgovernance_agentexecution",
+    "categoryId": "143135a0-e155-4761-b7ad-d20df7b998cc",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_agentgovernance_agentexecution_tooloverrideentries_toolpermission_argumentlist_argumentmatch",
+    "description": "",
+    "helpText": "",
+    "name": "ArgumentMatch",
+    "displayName": "Match",
+    "defaultOptionId": "user_vendor_msft_agentgovernance_agentexecution_tooloverrideentries_toolpermission_argumentlist_argumentmatch_exact",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26100",
+        "windowsSkus": [
+            "windowsEnterprise"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_agentgovernance_agentexecution_tooloverrideentries_toolpermission_argumentlist_argumentmatch_exact",
+            "description": null,
+            "helpText": null,
+            "name": "Exact",
+            "displayName": "Exact",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "exact"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_agentgovernance_agentexecution_tooloverrideentries_toolpermission_argumentlist",
+                    "parentSettingId": "user_vendor_msft_agentgovernance_agentexecution_tooloverrideentries_toolpermission_argumentlist"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_agentgovernance_agentexecution_tooloverrideentries_toolpermission_argumentlist_argumentmatch_partial",
+            "description": null,
+            "helpText": null,
+            "name": "Partial",
+            "displayName": "Partial",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "partial"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_agentgovernance_agentexecution_tooloverrideentries_toolpermission_argumentlist",
+                    "parentSettingId": "user_vendor_msft_agentgovernance_agentexecution_tooloverrideentries_toolpermission_argumentlist"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

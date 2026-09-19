@@ -26,11 +26,13 @@
         "com.apple.loginwindow_hideadminusers",
         "com.apple.loginwindow_showotherusers_managed",
         "com.apple.loginwindow_adminhostinfo",
+        "com.apple.loginwindow_adminmaydisablemcx",
         "com.apple.loginwindow_allowlist",
         "com.apple.loginwindow_denylist",
         "com.apple.loginwindow_hidemobileaccounts",
         "com.apple.loginwindow_shutdowndisabled",
         "com.apple.loginwindow_restartdisabled",
+        "com.apple.loginwindow_retriesuntilhint",
         "com.apple.loginwindow_sleepdisabled",
         "com.apple.loginwindow_disableconsoleaccess",
         "com.apple.loginwindow_loginwindowtext",
@@ -41,7 +43,9 @@
         "com.apple.loginwindow_disablescreenlockimmediate",
         "com.apple.loginwindow_showinputmenu",
         "com.apple.loginwindow_autologinusername",
-        "com.apple.loginwindow_autologinpassword"
+        "com.apple.loginwindow_autologinpassword",
+        "com.apple.loginwindow_forcewificonfigurationonlockscreen",
+        "com.apple.loginwindow_forcecaptiveportalconnectionfromlockscreen"
     ],
     "maximumCount": 1,
     "minimumCount": 0,
@@ -79,6 +83,10 @@
             "required": false
         },
         {
+            "dependedOnBy": "com.apple.loginwindow_adminmaydisablemcx",
+            "required": false
+        },
+        {
             "dependedOnBy": "com.apple.loginwindow_allowlist",
             "required": false
         },
@@ -96,6 +104,10 @@
         },
         {
             "dependedOnBy": "com.apple.loginwindow_restartdisabled",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.loginwindow_retriesuntilhint",
             "required": false
         },
         {
@@ -140,6 +152,14 @@
         },
         {
             "dependedOnBy": "com.apple.loginwindow_autologinpassword",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.loginwindow_forcewificonfigurationonlockscreen",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.loginwindow_forcecaptiveportalconnectionfromlockscreen",
             "required": false
         }
     ]

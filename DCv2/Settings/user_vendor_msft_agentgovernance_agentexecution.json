@@ -1,0 +1,65 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Agent execution",
+        "Agent Governance",
+        "AI agents"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/AgentGovernance",
+    "offsetUri": "/Policy/{AgentId}/SandboxPolicy",
+    "rootDefinitionId": "user_vendor_msft_agentgovernance_agentexecution",
+    "categoryId": "143135a0-e155-4761-b7ad-d20df7b998cc",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_agentgovernance_agentexecution",
+    "description": "These settings control how AI agents use local tools and run code on managed Windows devices. Policies can apply to all Microsoft Executable Container (MXC)-capable agents or to a specific MXC-capable agent. Policies assigned to a specific agent override policies assigned to all agents. Tool-specific settings override default policy behavior. This feature is in preview. Availability depends on Windows platform capabilities and may vary by device. Settings and behavior are subject to change.",
+    "helpText": "",
+    "name": "AgentExecution",
+    "displayName": "Agent execution",
+    "childIds": [
+        "user_vendor_msft_agentgovernance_agentexecution_policyscope",
+        "user_vendor_msft_agentgovernance_agentexecution_defaulttoolpermission",
+        "user_vendor_msft_agentgovernance_agentexecution_tooloverrideentries"
+    ],
+    "maximumCount": 1,
+    "minimumCount": 1,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26100",
+        "windowsSkus": [
+            "windowsEnterprise"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "user_vendor_msft_agentgovernance_agentexecution_policyscope",
+            "required": true
+        },
+        {
+            "dependedOnBy": "user_vendor_msft_agentgovernance_agentexecution_defaulttoolpermission",
+            "required": true
+        },
+        {
+            "dependedOnBy": "user_vendor_msft_agentgovernance_agentexecution_tooloverrideentries",
+            "required": false
+        }
+    ]
+}

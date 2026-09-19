@@ -1,0 +1,71 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Agent execution",
+        "Agent Governance",
+        "AI agents",
+        "Tool-specific overrides"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/AgentGovernance",
+    "offsetUri": "/Policy/{AgentId}/SandboxPolicy",
+    "rootDefinitionId": "user_vendor_msft_agentgovernance_agentexecution",
+    "categoryId": "143135a0-e155-4761-b7ad-d20df7b998cc",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_agentgovernance_agentexecution_tooloverrideentries",
+    "description": "Override the default behavior for specific tools. Tools not listed here use the default settings above.",
+    "helpText": "",
+    "name": "ToolOverrideEntries",
+    "displayName": "Tool override entries",
+    "childIds": [
+        "user_vendor_msft_agentgovernance_agentexecution_tooloverrideentries_toolname",
+        "user_vendor_msft_agentgovernance_agentexecution_tooloverrideentries_toolsource",
+        "user_vendor_msft_agentgovernance_agentexecution_tooloverrideentries_toolpermission"
+    ],
+    "maximumCount": 100,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26100",
+        "windowsSkus": [
+            "windowsEnterprise"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 100
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [
+        {
+            "dependentOn": "user_vendor_msft_agentgovernance_agentexecution",
+            "parentSettingId": "user_vendor_msft_agentgovernance_agentexecution"
+        }
+    ],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "user_vendor_msft_agentgovernance_agentexecution_tooloverrideentries_toolname",
+            "required": true
+        },
+        {
+            "dependedOnBy": "user_vendor_msft_agentgovernance_agentexecution_tooloverrideentries_toolsource",
+            "required": false
+        },
+        {
+            "dependedOnBy": "user_vendor_msft_agentgovernance_agentexecution_tooloverrideentries_toolpermission",
+            "required": true
+        }
+    ]
+}

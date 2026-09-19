@@ -1,0 +1,44 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Safe Deployment Plan",
+        "Defender Safe Deployment Plan"
+    ],
+    "infoUrls": [
+        "https://learn.microsoft.com/microsoft-365/security/defender-endpoint/linux-preferences"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/safeDeploymentPlan",
+    "offsetUri": "siuUpdateWindow",
+    "rootDefinitionId": "linux_safedeploymentplan_siuupdatewindow",
+    "categoryId": "bdde6ae4-2d87-4ef0-976e-ae2a57dfbf6b",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "linux_safedeploymentplan_siuupdatewindow",
+    "description": "Defines a maintenance window (in minutes, 0-1440) during which Security Intelligence Update (SIU) updates can be installed, giving control over when updates land. 0 disables the window (updates any time).",
+    "helpText": null,
+    "name": "siuUpdateWindow",
+    "displayName": "SIU Update Window",
+    "defaultValue": null,
+    "applicability": {
+        "description": null,
+        "platform": "linux",
+        "deviceMode": "none",
+        "technologies": "microsoftSense"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": "^([0-9]|[1-9][0-9]|1[0-3][0-9]|14[0-4][0-9]|1440)$",
+        "maximumLength": 4,
+        "minimumLength": 1,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}
