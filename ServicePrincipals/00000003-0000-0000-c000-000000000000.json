@@ -1118,6 +1118,32 @@
             "allowedMemberTypes": [
                 "Application"
             ],
+            "description": "Allows the app to read all trusted certificate authority configurations which can be used to restrict application certificates based on their issuing authority, without a signed-in user.",
+            "displayName": "Read all trusted certificate authority configurations for applications",
+            "id": "f0d7f93b-6fce-4221-a197-ace5848da396",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "AppCertTrustConfiguration.Read.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to create, read, update and delete all trusted certificate authority configurations which can be used to restrict application certificates based on their issuing authority, without a signed-in user.",
+            "displayName": "Read and write all trusted certificate authority configurations for applications",
+            "id": "e508b0bc-7b1a-4b59-8646-d12066f4a72f",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "AppCertTrustConfiguration.ReadWrite.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
             "description": "Allows the app to read and write the remote desktop security configuration for all apps in your organization, without a signed-in user.",
             "displayName": "Read and write the remote desktop security configuration for all apps",
             "id": "3be0012a-cc4e-426b-895b-f9c836bf6381",
@@ -2567,6 +2593,32 @@
             "isEnabled": true,
             "origin": "Application",
             "value": "CopilotPolicySettings.ReadWrite",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to read your tenant's all cross tenant content migration job details without a signed-in user.",
+            "displayName": "Read all cross tenant content migration job details",
+            "id": "0ef71a66-690d-439b-96ef-41705a240606",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "CrossTenantContentMigration.Read.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to read and write your tenant's all cross tenant content migration job details without a signed-in user.",
+            "displayName": "Read and write all cross tenant content migration job details",
+            "id": "c5a29fd1-4629-4f52-8316-4d639ffa95d0",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "CrossTenantContentMigration.ReadWrite.All",
             "isPreAuthorizationRequired": false,
             "isPrivate": false
         },
@@ -9022,8 +9074,8 @@
             "allowedMemberTypes": [
                 "Application"
             ],
-            "description": "Allows the app to run hunting queries, without a signed-in user.",
-            "displayName": "Run hunting queries",
+            "description": "Allows the app to run hunting queries and read shared saved hunting queries, without a signed-in user.",
+            "displayName": "Run hunting queries and read shared saved hunting queries",
             "id": "dd98c7f5-2d42-42d3-a0e4-633161547251",
             "isEnabled": true,
             "origin": "Application",
@@ -10068,6 +10120,32 @@
             "isEnabled": true,
             "origin": "Application",
             "value": "WindowsUpdates.ReadWrite.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to read all workbooks without a signed-in user.",
+            "displayName": "Read all workbooks",
+            "id": "d6559210-2a3e-46f8-90b3-e69ef5507772",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "Workbooks.Read.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to read and write all workbooks without a signed-in user.",
+            "displayName": "Read and write all workbooks",
+            "id": "164a9e2c-8434-444a-a250-b8c70dded2af",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "Workbooks.ReadWrite.All",
             "isPreAuthorizationRequired": false,
             "isPrivate": false
         },
@@ -18028,13 +18106,13 @@
             "isPrivate": false
         },
         {
-            "adminConsentDescription": "Allows the app to run hunting queries, on behalf of the signed-in user.",
-            "adminConsentDisplayName": "Run hunting queries",
+            "adminConsentDescription": "Allows the app to run hunting queries and read saved hunting queries, on behalf of the signed-in user.",
+            "adminConsentDisplayName": "Run hunting queries and read saved hunting queries",
             "id": "b152eca8-ea73-4a48-8c98-1a6742673d99",
             "isEnabled": true,
             "type": "Admin",
-            "userConsentDescription": "Allows the app to run hunting queries that you can execute.",
-            "userConsentDisplayName": "Run hunting queries",
+            "userConsentDescription": "Allows the app to run hunting queries that you can execute and read saved hunting queries that you can access.",
+            "userConsentDisplayName": "Run hunting queries and read saved hunting queries",
             "value": "ThreatHunting.Read.All",
             "isPrivate": false
         },
@@ -19158,6 +19236,28 @@
             "userConsentDescription": "Allows the app to read and write all Windows update deployment settings for the organization on your behalf.",
             "userConsentDisplayName": "Read and write all Windows update deployment settings",
             "value": "WindowsUpdates.ReadWrite.All",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to read all workbooks on behalf of the signed-in user.",
+            "adminConsentDisplayName": "Read all workbooks",
+            "id": "e37141d2-4e2c-459d-8e5b-5214ae4af482",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to read all workbooks on your behalf.",
+            "userConsentDisplayName": "Read all workbooks",
+            "value": "Workbooks.Read.All",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to read and write all workbooks on behalf of the signed-in user.",
+            "adminConsentDisplayName": "Read and write all workbooks",
+            "id": "5cf5c2d4-f542-4e67-b524-51ab19ef7584",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to read and write all workbooks on your behalf.",
+            "userConsentDisplayName": "Read and write all workbooks",
+            "value": "Workbooks.ReadWrite.All",
             "isPrivate": false
         },
         {
