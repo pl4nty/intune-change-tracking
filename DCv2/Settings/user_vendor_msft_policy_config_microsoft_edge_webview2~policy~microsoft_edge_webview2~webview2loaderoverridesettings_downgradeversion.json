@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DowngradeVersion",
+        "Configure per-application WebView2 downgrade version",
+        "\\Microsoft Edge WebView2\\Loader Override Settings",
+        "Both",
+        "Software\\Policies\\Microsoft\\Edge\\WebView2",
+        "Loader Override Settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edge_webview2~Policy~microsoft_edge_webview2~WebView2LoaderOverrideSettings/DowngradeVersion",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edge_webview2~policy~microsoft_edge_webview2~webview2loaderoverridesettings_downgradeversion",
+    "categoryId": "13cc3b63-a150-4cf2-8d76-309975603c8e",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_microsoft_edge_webview2~policy~microsoft_edge_webview2~webview2loaderoverridesettings_downgradeversion",
+    "description": "This policy lets you specify the exact 4-part version of the WebView2 Runtime that specific applications should use in enterprise downgrade scenarios.\n\nConfigure the policy by setting the value name to the Application User Model ID or the executable file name (for example, teams.exe). Set the value to the target full version string using the 4-part numeric format (for example, 151.0.2178.0).\n\nMajor-only values (for example, 151), wildcard values (for example, 151.*), and values that are not exact 4-part numeric versions are not supported.\n\nThe WebView2 loader resolves the runtime installation directory only when a folder that exactly matches the configured full version exists (for example, 151.0.2178.0 must match 151.0.2178.0 exactly). If no exact matching folder is found, the policy has no effect and the runtime defaults to the BrowserExecutableFolder policy or the Evergreen runtime (the default auto-updating runtime).\n\nExample value:\n\nName: teams.exe, Value: 151.0.2178.0\nName: outlook.exe, Value: 152.0.2164.0",
+    "helpText": "",
+    "name": "DowngradeVersion",
+    "displayName": "Configure per-application WebView2 downgrade version (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edge_webview2~policy~microsoft_edge_webview2~webview2loaderoverridesettings_downgradeversion_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edge_webview2~policy~microsoft_edge_webview2~webview2loaderoverridesettings_downgradeversion_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edge_webview2~policy~microsoft_edge_webview2~webview2loaderoverridesettings_downgradeversion_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_microsoft_edge_webview2~policy~microsoft_edge_webview2~webview2loaderoverridesettings_downgradeversion_downgradeversiondesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}
