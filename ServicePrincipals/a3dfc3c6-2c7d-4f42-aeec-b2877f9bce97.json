@@ -53,7 +53,34 @@
     "api": {
         "resourceSpecificApplicationPermissions": []
     },
-    "appRoles": [],
+    "appRoles": [
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the application to CA policy information without a signed-in user.",
+            "displayName": "Read all CA policies",
+            "id": "70be0778-0406-4e29-9a59-8202bee90e63",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "Policy.Read.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the application to read risky agent information without a signed-in user.",
+            "displayName": "Read all risky agents information",
+            "id": "0c28ca26-b7ba-4a45-bd58-48432e56f93c",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "IdentityRiskyAgent.Read.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        }
+    ],
     "info": {
         "termsOfServiceUrl": null,
         "supportUrl": null,
