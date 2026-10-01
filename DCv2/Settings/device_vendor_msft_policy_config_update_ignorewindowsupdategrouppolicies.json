@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Ignore Windows Update Group Policies",
+        "Update",
+        "Windows Update For Business"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Update#ignorewindowsupdategrouppolicies"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Update/IgnoreWindowsUpdateGroupPolicies",
+    "rootDefinitionId": "device_vendor_msft_policy_config_update_ignorewindowsupdategrouppolicies",
+    "categoryId": "0e6c9053-73d6-4c56-9147-53513f6eefd8",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_update_ignorewindowsupdategrouppolicies",
+    "description": "When enabled, Group Policy settings for Windows Update are ignored and only MDM policy values are applied. This allows MDM-managed devices to bypass conflicting Group Policy configurations.",
+    "helpText": "",
+    "name": "IgnoreWindowsUpdateGroupPolicies",
+    "displayName": "Ignore Windows Update Group Policies",
+    "defaultOptionId": "device_vendor_msft_policy_config_update_ignorewindowsupdategrouppolicies_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26100.8973",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_update_ignorewindowsupdategrouppolicies_0",
+            "description": "Disabled. Group Policy settings are applied normally.",
+            "helpText": null,
+            "name": "Disabled. Group Policy settings are applied normally.",
+            "displayName": "Disabled. Group Policy settings are applied normally.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_update_ignorewindowsupdategrouppolicies_1",
+            "description": "Enabled. Group Policy settings for Windows Update are ignored.",
+            "helpText": null,
+            "name": "Enabled. Group Policy settings for Windows Update are ignored.",
+            "displayName": "Enabled. Group Policy settings for Windows Update are ignored.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

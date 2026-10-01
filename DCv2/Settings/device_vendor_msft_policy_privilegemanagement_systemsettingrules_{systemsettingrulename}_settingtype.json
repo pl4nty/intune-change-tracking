@@ -9,7 +9,7 @@
     "infoUrls": [],
     "baseUri": "./Device/Vendor/MSFT/Policy",
     "offsetUri": "/PrivilegeManagement/SystemSettingRules/{0}/SettingType",
-    "rootDefinitionId": "device_vendor_msft_policy_privilegemanagement_systemsettingrules_{systemsettingrulename}",
+    "rootDefinitionId": "device_vendor_msft_policy_privilegemanagement_systemsettingrules_{systemsettingrulename}_settingtype",
     "categoryId": "4f3a6fca-a74c-448d-95b1-9d6d7a5d4449",
     "settingUsage": "configuration",
     "uxBehavior": "default",
@@ -20,7 +20,7 @@
     "helpText": null,
     "name": "SettingType",
     "displayName": "Setting type",
-    "defaultOptionId": "device_vendor_msft_policy_privilegemanagement_systemsettingrules_{systemsettingrulename}_networksettings",
+    "defaultOptionId": "device_vendor_msft_policy_privilegemanagement_systemsettingrules_{systemsettingrulename}_disabled",
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
         "description": null,
@@ -46,23 +46,37 @@
     "referredSettingInformationList": [],
     "options": [
         {
+            "itemId": "device_vendor_msft_policy_privilegemanagement_systemsettingrules_{systemsettingrulename}_disabled",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "disabled"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
             "itemId": "device_vendor_msft_policy_privilegemanagement_systemsettingrules_{systemsettingrulename}_networksettings",
             "description": null,
             "helpText": null,
-            "name": "NetworkSettings",
-            "displayName": "Network settings",
+            "name": "Enabled",
+            "displayName": "Enabled",
             "optionValue": {
                 "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
                 "settingValueTemplateReference": null,
                 "value": "networksettings"
             },
-            "dependentOn": [
+            "dependentOn": [],
+            "dependedOnBy": [
                 {
-                    "dependentOn": "device_vendor_msft_policy_privilegemanagement_systemsettingrules_{systemsettingrulename}",
-                    "parentSettingId": "device_vendor_msft_policy_privilegemanagement_systemsettingrules_{systemsettingrulename}"
+                    "dependedOnBy": "device_vendor_msft_policy_privilegemanagement_systemsettingrules_{systemsettingrulename}_elevationaction",
+                    "required": true
                 }
-            ],
-            "dependedOnBy": []
+            ]
         }
     ]
 }

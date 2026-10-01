@@ -1,0 +1,95 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Configure Audio On Lock Screen",
+        "Above Lock"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-AboveLock#configureaudioonlockscreen"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/AboveLock/ConfigureAudioOnLockScreen",
+    "rootDefinitionId": "device_vendor_msft_policy_config_abovelock_configureaudioonlockscreen",
+    "categoryId": "ef8b8f2d-7791-4c44-a4f2-e39051f2e715",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_abovelock_configureaudioonlockscreen",
+    "description": "This policy will allow the audio above lock screen to be managed by IT admins and allow apps like digital signage to play audio above lock screen without having a user signed on.",
+    "helpText": "",
+    "name": "ConfigureAudioOnLockScreen",
+    "displayName": "Configure Audio On Lock Screen",
+    "defaultOptionId": "device_vendor_msft_policy_config_abovelock_configureaudioonlockscreen_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26100",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_abovelock_configureaudioonlockscreen_0",
+            "description": "No audio playback or recording on lock screen (aside from OS defined exceptions).",
+            "helpText": null,
+            "name": "No audio playback or recording on lock screen (aside from OS defined exceptions).",
+            "displayName": "No audio playback or recording on lock screen (aside from OS defined exceptions).",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_abovelock_configureaudioonlockscreen_1",
+            "description": "Audio playback allowed on lock screen. Audio recording is not allowed.",
+            "helpText": null,
+            "name": "Audio playback allowed on lock screen. Audio recording is not allowed.",
+            "displayName": "Audio playback allowed on lock screen. Audio recording is not allowed.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_abovelock_configureaudioonlockscreen_2",
+            "description": "Audio playback and recording allowed on lock screen.",
+            "helpText": null,
+            "name": "Audio playback and recording allowed on lock screen.",
+            "displayName": "Audio playback and recording allowed on lock screen.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

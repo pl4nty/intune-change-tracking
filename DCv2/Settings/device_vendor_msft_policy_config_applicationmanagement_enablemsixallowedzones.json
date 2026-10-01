@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Enable Msix Allowed Zones",
+        "Application Management",
+        "Microsoft App Store"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-ApplicationManagement#enablemsixallowedzones"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/ApplicationManagement/EnableMsixAllowedZones",
+    "rootDefinitionId": "device_vendor_msft_policy_config_applicationmanagement_enablemsixallowedzones",
+    "categoryId": "a0c9f0b7-aa25-4e9c-a393-516145847b8b",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_applicationmanagement_enablemsixallowedzones",
+    "description": "This policy controls whether MSIX packages originating from specific URL Zones are allowed to install. A package's origin is determined by its URI and whether a Mart-of-the-Web (MotW) is present. If multiple URIs are involved, all of them are considered.",
+    "helpText": "",
+    "name": "EnableMsixAllowedZones",
+    "displayName": "Enable Msix Allowed Zones",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "10.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.26000",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsEducation",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "iotEnterpriseSEval"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_applicationmanagement_enablemsixallowedzones_0",
+            "description": "Disabled. Users will be able to install MSIX packages from any zone except for Untrusted.",
+            "helpText": null,
+            "name": "Disabled. Users will be able to install MSIX packages from any zone except for Untrusted.",
+            "displayName": "Disabled. Users will be able to install MSIX packages from any zone except for Untrusted.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_applicationmanagement_enablemsixallowedzones_1",
+            "description": "Enabled. Users will be able to install MSIX packages according to the configuration for each zone.",
+            "helpText": null,
+            "name": "Enabled. Users will be able to install MSIX packages according to the configuration for each zone.",
+            "displayName": "Enabled. Users will be able to install MSIX packages according to the configuration for each zone.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}
