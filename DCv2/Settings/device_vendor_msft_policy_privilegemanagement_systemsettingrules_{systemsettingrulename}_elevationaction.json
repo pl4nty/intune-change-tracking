@@ -19,7 +19,7 @@
     "description": "Specifies the elevation action for this system setting rule.",
     "helpText": null,
     "name": "ElevationAction",
-    "displayName": "Elevation action",
+    "displayName": "Elevation type",
     "defaultOptionId": "device_vendor_msft_policy_privilegemanagement_systemsettingrules_{systemsettingrulename}_self",
     "applicability": {
         "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
@@ -58,8 +58,8 @@
             },
             "dependentOn": [
                 {
-                    "dependentOn": "device_vendor_msft_policy_privilegemanagement_systemsettingrules_{systemsettingrulename}",
-                    "parentSettingId": "device_vendor_msft_policy_privilegemanagement_systemsettingrules_{systemsettingrulename}"
+                    "dependentOn": "device_vendor_msft_policy_privilegemanagement_systemsettingrules_{systemsettingrulename}_networksettings",
+                    "parentSettingId": "device_vendor_msft_policy_privilegemanagement_systemsettingrules_{systemsettingrulename}_settingtype"
                 }
             ],
             "dependedOnBy": [
@@ -82,8 +82,8 @@
             },
             "dependentOn": [
                 {
-                    "dependentOn": "device_vendor_msft_policy_privilegemanagement_systemsettingrules_{systemsettingrulename}",
-                    "parentSettingId": "device_vendor_msft_policy_privilegemanagement_systemsettingrules_{systemsettingrulename}"
+                    "dependentOn": "device_vendor_msft_policy_privilegemanagement_systemsettingrules_{systemsettingrulename}_networksettings",
+                    "parentSettingId": "device_vendor_msft_policy_privilegemanagement_systemsettingrules_{systemsettingrulename}_settingtype"
                 }
             ],
             "dependedOnBy": []
