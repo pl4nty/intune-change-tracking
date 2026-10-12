@@ -95,12 +95,25 @@
             "allowedMemberTypes": [
                 "Application"
             ],
-            "description": "Can only access the things made available to them by their organization.",
-            "displayName": "Basic user",
-            "id": "16beb6e1-c277-4b64-97fa-5c90295a5c84",
+            "description": "A configured management tool can distribute app licenses that have been acquired in the Windows Store for Business Portal to users and devices within an organization.",
+            "displayName": "Management Tool",
+            "id": "e4c00fbe-aea4-4c3b-b803-335d512be9d6",
             "isEnabled": true,
             "origin": "Application",
-            "value": "basicuser",
+            "value": "bspmdm",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Has access to the device guard signing page, can sign policies and catalogs.",
+            "displayName": "Device Guard signer",
+            "id": "4c7bcbe9-70eb-42d2-a8b1-a66d985811c3",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "deviceguardsigner",
             "isPreAuthorizationRequired": false,
             "isPrivate": false
         },
@@ -109,11 +122,11 @@
                 "Application"
             ],
             "description": "Can buy products for inventory, assign and reclaim licenses.",
-            "displayName": "Basic purchaser",
-            "id": "cf498509-9a5c-4d83-aa26-2b70fcbd0e1c",
+            "displayName": "Purchaser",
+            "id": "20220577-b1fd-4061-bfed-05a068857ffc",
             "isEnabled": true,
             "origin": "Application",
-            "value": "basicpurchaser",
+            "value": "bsppurchaser",
             "isPreAuthorizationRequired": false,
             "isPrivate": false
         },
@@ -135,11 +148,11 @@
                 "Application"
             ],
             "description": "Can buy products for inventory, assign and reclaim licenses.",
-            "displayName": "Purchaser",
-            "id": "20220577-b1fd-4061-bfed-05a068857ffc",
+            "displayName": "Basic purchaser",
+            "id": "cf498509-9a5c-4d83-aa26-2b70fcbd0e1c",
             "isEnabled": true,
             "origin": "Application",
-            "value": "bsppurchaser",
+            "value": "basicpurchaser",
             "isPreAuthorizationRequired": false,
             "isPrivate": false
         },
@@ -147,25 +160,12 @@
             "allowedMemberTypes": [
                 "Application"
             ],
-            "description": "Has access to the device guard signing page, can sign policies and catalogs.",
-            "displayName": "Device Guard signer",
-            "id": "4c7bcbe9-70eb-42d2-a8b1-a66d985811c3",
+            "description": "Can only access the things made available to them by their organization.",
+            "displayName": "Basic user",
+            "id": "16beb6e1-c277-4b64-97fa-5c90295a5c84",
             "isEnabled": true,
             "origin": "Application",
-            "value": "deviceguardsigner",
-            "isPreAuthorizationRequired": false,
-            "isPrivate": false
-        },
-        {
-            "allowedMemberTypes": [
-                "Application"
-            ],
-            "description": "A configured management tool can distribute app licenses that have been acquired in the Windows Store for Business Portal to users and devices within an organization.",
-            "displayName": "Management Tool",
-            "id": "e4c00fbe-aea4-4c3b-b803-335d512be9d6",
-            "isEnabled": true,
-            "origin": "Application",
-            "value": "bspmdm",
+            "value": "basicuser",
             "isPreAuthorizationRequired": false,
             "isPrivate": false
         }
@@ -180,17 +180,6 @@
     "keyCredentials": [],
     "publishedPermissionScopes": [
         {
-            "adminConsentDescription": "Allow the application to access Windows Store for Business on behalf of the signed-in user.",
-            "adminConsentDisplayName": "Access Windows Store for Business",
-            "id": "56cee9a4-2b49-4d48-a5c1-b26a2e48aada",
-            "isEnabled": true,
-            "type": "User",
-            "userConsentDescription": "Allow the application to access Windows Store for Business on your behalf.",
-            "userConsentDisplayName": "Access Windows Store for Business",
-            "value": "user_impersonation",
-            "isPrivate": false
-        },
-        {
             "adminConsentDescription": "Allows user to view purchased products and subscriptions",
             "adminConsentDisplayName": "Assets.Read",
             "id": "30000000-aaaa-bbbb-cccc-100000000002",
@@ -199,6 +188,17 @@
             "userConsentDescription": "Allows you to view purchased products and subscriptions",
             "userConsentDisplayName": "View Purchases",
             "value": "Assets.Read",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allow the application to access Windows Store for Business on behalf of the signed-in user.",
+            "adminConsentDisplayName": "Access Windows Store for Business",
+            "id": "56cee9a4-2b49-4d48-a5c1-b26a2e48aada",
+            "isEnabled": true,
+            "type": "User",
+            "userConsentDescription": "Allow the application to access Windows Store for Business on your behalf.",
+            "userConsentDisplayName": "Access Windows Store for Business",
+            "value": "user_impersonation",
             "isPrivate": false
         }
     ],
