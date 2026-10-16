@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "HttpHeaderInjection",
+        "Configure HTTP Header Injection for specific URL patterns",
+        "\\Microsoft Edge\\Network settings",
+        "Both",
+        "Software\\Policies\\Microsoft\\Edge",
+        "Network settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edge~Policy~microsoft_edge~Network/HttpHeaderInjection",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~network_httpheaderinjection",
+    "categoryId": "3fbd3b29-bafd-4adf-89e4-3be612dee275",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~network_httpheaderinjection",
+    "description": "This policy lets you define rules that inject custom HTTP headers into web requests matching specific URL patterns. Headers injected by this policy take precedence over headers already present in the request and over modifications made by users or extensions.\n\nA common use case for this policy is enforcing tenant access controls by injecting custom headers (for example, X-Tenant-ID).\n\nThe policy accepts a list of Rules. Each Rule contains:\n\n* patterns: A list of URL patterns to match. For information about URL pattern format, see https://go.microsoft.com/fwlink/?linkid=2095322.\n\n* headers: A list of header objects to inject. Each object contains:\n\n* name: The name of the header to inject.\n\n* value: The value of the header to inject.\n\nIf multiple rules match a request, headers from all matching rules are applied. If multiple matching rules specify the same header name, the header from the most specific URL pattern is applied. If multiple matching patterns are equally specific, the header from the rule that appears last in the list is applied.\n\nHeader names must comply with RFC 2616 (https://www.rfc-editor.org/rfc/rfc2616). Header values must not contain NUL, CR, or LF characters. Individual headers can't exceed 8 KB. Invalid headers and URL patterns are ignored.\n\nThis policy supports a maximum of 500 URL patterns across all rules. Each rule can contain up to 20 headers. URL patterns and headers that exceed these limits are ignored.\n\nExample value:\n\n[\n  {\n    \"patterns\": [\n      \"example.com\",\n      \".example.org\"\n    ],\n    \"headers\": [\n      {\n        \"name\": \"X-Tenant-ID\",\n        \"value\": \"123456\"\n      },\n      {\n        \"name\": \"X-Custom-Header\",\n        \"value\": \"CustomValue\"\n      }\n    ]\n  }\n]",
+    "helpText": "",
+    "name": "HttpHeaderInjection",
+    "displayName": "Configure HTTP Header Injection for specific URL patterns (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~network_httpheaderinjection_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~network_httpheaderinjection_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~network_httpheaderinjection_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~network_httpheaderinjection_httpheaderinjection",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "PacMyIpAddressIPv6ProbeAddress",
+        "Set the IPv6 route-probe address for PAC scripts",
+        "\\Microsoft Edge\\Proxy server",
+        "Both",
+        "Software\\Policies\\Microsoft\\Edge",
+        "Proxy server"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edge~Policy~microsoft_edge~Proxy/PacMyIpAddressIPv6ProbeAddress",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~proxy_pacmyipaddressipv6probeaddress",
+    "categoryId": "fe845e81-5993-4a65-b22a-decfc5928c65",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~proxy_pacmyipaddressipv6probeaddress",
+    "description": "This policy sets the IPv6 destination that Microsoft Edge uses to determine the local network address or addresses returned to PAC scripts by the myIpAddress() and myIpAddressEx() helper functions. The route probe sends no application data.\n\nThis policy applies only when Microsoft Edge uses its built-in proxy resolver to evaluate PAC scripts. It doesn't apply when a native or system resolver is used.\n\nIf you configure this policy, set it to a valid IPv6 address literal. Host names, malformed values, IPv4 addresses, loopback addresses, link-local addresses, and multicast addresses are rejected. IPv4-mapped IPv6 addresses and the unspecified address are also rejected. Private addresses are supported.\n\nIf you don't configure this policy or configure it with an empty string, Microsoft Edge uses its built-in default IPv6 destination. The built-in destination can change between versions.\n\nA browser restart is required for changes to take effect.\n\nExample value: 2001:db8::1",
+    "helpText": "",
+    "name": "PacMyIpAddressIPv6ProbeAddress",
+    "displayName": "Set the IPv6 route-probe address for PAC scripts",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~proxy_pacmyipaddressipv6probeaddress_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~proxy_pacmyipaddressipv6probeaddress_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~proxy_pacmyipaddressipv6probeaddress_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~proxy_pacmyipaddressipv6probeaddress_pacmyipaddressipv6probeaddress",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}
