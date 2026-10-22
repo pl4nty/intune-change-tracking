@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "RemixAvailability",
+        "Control Remix availability",
+        "\\Microsoft Edge\\Remix settings",
+        "Both",
+        "Software\\Policies\\Microsoft\\Edge",
+        "Remix settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edge~Policy~microsoft_edge~Remix/RemixAvailability",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~remix_remixavailability",
+    "categoryId": "d18eaf40-9d60-4c92-902b-5586a6331f2b",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~remix_remixavailability",
+    "description": "This policy allows your organization to control whether users can pin and use Remix in Microsoft Edge.\n\nIf you set this policy to 'Disabled', Remix is unavailable. The Remix setting is disabled, Remix isn't shown on the toolbar, and users can't launch Remix from another entry point.\n\nIf you set this policy to 'Force enabled', Remix is available. The Remix setting is enabled and pinned to the toolbar. Users can't disable or remove it from the toolbar.\n\nUnlike availability policies that expose a 'User controlled' value, this policy uses the unconfigured state for user choice.\n\nIf you don't configure this policy, users can choose whether Remix is pinned to the toolbar.\n\nPolicy options mapping:\n\n* Disabled (0) = Disable Remix\n\n* ForceEnabled (1) = Force Enable Remix\n\nUse the preceding information when configuring this policy.",
+    "helpText": "",
+    "name": "RemixAvailability",
+    "displayName": "Control Remix availability",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~remix_remixavailability_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~remix_remixavailability_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~remix_remixavailability_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~remix_remixavailability_remixavailability",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}
