@@ -38,6 +38,8 @@ jobs:
           AZURE_TEAMS_RT: ${{ secrets.AZURE_TEAMS_RT }}
 
       - id: summary
+        # push runs keep the static message
+        if: github.event_name != 'push'
         uses: ./.github/actions/claude-commit-message
         with:
           model: ${{ vars.CLAUDE_MODEL || 'claude-opus-5-5' }}
