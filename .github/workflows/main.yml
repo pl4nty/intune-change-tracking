@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: dev
     permissions:
-      id-token: write # Graph and Claude auth
+      id-token: write # Graph auth
       contents: write # committing
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -41,6 +41,8 @@ jobs:
         # push runs keep the static message
         if: github.event_name != 'push'
         uses: ./.github/actions/claude-commit-message
+        with:
+          oauth-token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
       - uses: EndBug/add-and-commit@cc9c08ba6c8df3b93a8f2db63e89b98368ae2ae8 # v11.1.1
         with:
           default_author: github_actions

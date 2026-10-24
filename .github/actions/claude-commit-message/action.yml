@@ -1,8 +1,13 @@
 name: Claude commit message
 description: >-
   Stage all changes and have Claude Code (anthropics/claude-code-action) summarise them as a commit message.
-  Authenticates with GitHub OIDC via Anthropic Workload Identity Federation, so no API key is stored.
+  Authenticates with a Claude Code OAuth token (`claude setup-token`), billed to the Claude plan.
   Never fails the job: on any error the message output is empty and callers should fall back.
+
+inputs:
+  oauth-token:
+    description: Claude Code OAuth token from `claude setup-token`
+    required: true
 
 outputs:
   changed:
@@ -41,9 +46,7 @@ runs:
       with:
         github_token: ${{ github.token }}
         allowed_bots: renovate[bot]
-        # not secrets: access is gated by the federation rule's claim matching
-        anthropic_federation_rule_id: fdrl_01QXKt7MkESuyJnEKY7b37kU
-        anthropic_organization_id: d0fde0af-21ed-4bdb-a811-98c036938f83
+        claude_code_oauth_token: ${{ inputs.oauth-token }}
         path_to_claude_code_executable: ${{ steps.install-windows.outputs.path }}
         prompt: |
           This repository tracks changes to scraped vendor data and decompiled code. The changes are already staged.
@@ -57,3 +60,11 @@ runs:
           --allowedTools "Bash(git diff:*),Bash(git status:*),Bash(git show:*),Bash(git log:*),Read,Grep,Glob"
           --disallowedTools "Edit,Write,NotebookEdit,WebFetch,WebSearch"
           --json-schema '{"type":"object","properties":{"message":{"type":"string","description":"The full commit message"}},"required":["message"],"additionalProperties":false}'
+
+    # the action hides Claude's output; surface only the final result so failures are debuggable
+    - if: steps.claude.outcome == 'failure' && steps.claude.outputs.execution_file != ''
+      shell: bash
+      env:
+        EXECUTION_FILE: ${{ steps.claude.outputs.execution_file }}
+      run: |
+        jq -r '.[] | select(.type == "result") | "::warning::Claude Code failed: \(.result // .subtype)"' "$EXECUTION_FILE" || true
