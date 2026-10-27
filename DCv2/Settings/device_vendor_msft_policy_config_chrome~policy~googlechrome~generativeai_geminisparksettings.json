@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "GeminiSparkSettings",
+        "Allows Gemini Spark to connect to and use Google Chrome auto browse",
+        "\\Google Chrome\\Generative AI",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Generative AI"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chrome~Policy~googlechrome~GenerativeAI/GeminiSparkSettings",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_geminisparksettings",
+    "categoryId": "5ee1e57c-db64-4f8e-a9ec-5308b5c633c4",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_geminisparksettings",
+    "description": "Controls if the Gemini Spark agent is allowed to connect to Google Chrome and use auto browse.\n\n0 = Gemini Spark is allowed to connect to and use Google Chrome auto browse\n\n1 = Gemini Spark is not allowed to connect to or use Google Chrome auto browse\n\nWarning: Enabling Gemini Spark to connect to Google Chrome and use auto browse permits the Gemini Spark agent to perform autonomous, multi-step actions on Google Chrome clients using the active browser session. This entails significant security risks, including credential risks, Local Network Ingress and loss of context aware signals. Existing management and security controls might not be respected.\n\nAdministrators are advised to carefully evaluate their organization's network threat model, compliance and privacy guidelines before enabling this feature.\n\nThis policy has no effect when the Google Gemini app or Google Chrome auto browse policies are disabled. For example, the Google Gemini app can be disabled by GeminiSettings policy. For more information on Google Gemini in Google Chrome, please see https://support.google.com/chrome/a?p=gemini_in_chrome.\n\nGoogle Chrome auto browse and Gemini Spark are not available in all countries or all languages. Setting this policy to 0 - Enabled does not guarantee the feature will be enabled; it remains subject to availability. For more info on the roll-out, check the Enterprise Release Notes: https://chromeenterprise.google/resources/release-notes/.",
+    "helpText": "",
+    "name": "GeminiSparkSettings",
+    "displayName": "Allows Gemini Spark to connect to and use Google Chrome auto browse",
+    "defaultOptionId": "device_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_geminisparksettings_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_geminisparksettings_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_geminisparksettings_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_geminisparksettings_geminisparksettings",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

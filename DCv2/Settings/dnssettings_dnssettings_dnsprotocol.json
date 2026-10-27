@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DNS Settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "DNSSettings/DNSProtocol",
+    "rootDefinitionId": "dnssettings_toplevel",
+    "categoryId": "bf998b9d-1a7b-49c5-9a57-d56402609f6e",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "dnssettings_dnssettings_dnsprotocol",
+    "description": "The encrypted transport protocol used to communicate with the DNS server.",
+    "helpText": null,
+    "name": "DNSSettings_DNSProtocol",
+    "displayName": "DNS Protocol",
+    "defaultOptionId": "dnssettings_dnssettings_dnsprotocol_0",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "dnssettings_dnssettings_dnsprotocol_0",
+            "description": null,
+            "helpText": null,
+            "name": "HTTPS",
+            "displayName": "HTTPS",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "HTTPS"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "dnssettings_dnssettings",
+                    "parentSettingId": "dnssettings_dnssettings"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "dnssettings_dnssettings_dnsprotocol_1",
+            "description": null,
+            "helpText": null,
+            "name": "TLS",
+            "displayName": "TLS",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "TLS"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "dnssettings_dnssettings",
+                    "parentSettingId": "dnssettings_dnssettings"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

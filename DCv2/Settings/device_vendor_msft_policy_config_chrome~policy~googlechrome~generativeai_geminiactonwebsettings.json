@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "GeminiActOnWebSettings",
+        "Allows Gemini app integrations to directly act on web pages",
+        "\\Google Chrome\\Generative AI",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Generative AI"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chrome~Policy~googlechrome~GenerativeAI/GeminiActOnWebSettings",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_geminiactonwebsettings",
+    "categoryId": "5ee1e57c-db64-4f8e-a9ec-5308b5c633c4",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_geminiactonwebsettings",
+    "description": "Controls if the Gemini app is allowed to take action on the web pages on behalf of the user.\n\n0/unset  = Gemini app is allowed to take action on the web pages.\n\n1 = Gemini app is not allowed to take action on the web pages.\n\nThis policy has no effect when the Gemini app is disabled. For example, the Gemini app can be disabled by GeminiSettings policy.\n\nFor more information on Gemini in Chrome, please see https://support.google.com/chrome/a/answer/16291696.\n\nGemini's actuation is not available in all countries or all languages. Setting this policy does not guarantee the feature will be enabled; it remains subject to availability. For more info on the roll-out, check the Enterprise Release Notes: https://support.google.com/chrome/a/answer/7679408?hl=en",
+    "helpText": "",
+    "name": "GeminiActOnWebSettings",
+    "displayName": "Allows Gemini app integrations to directly act on web pages",
+    "defaultOptionId": "device_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_geminiactonwebsettings_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_geminiactonwebsettings_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_geminiactonwebsettings_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_geminiactonwebsettings_geminiactonwebsettings",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,84 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "PreferSlowKexAlgorithms",
+        "Prefer specific key exchange algorithms for TLS",
+        "\\Google Chrome\\Cryptography compliance policies",
+        "Google Chrome\\Cryptography compliance policies",
+        "Cryptography compliance policies"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chrome~Policy~googlechrome~CryptographyCompliance/PreferSlowKexAlgorithms",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~cryptographycompliance_preferslowkexalgorithms",
+    "categoryId": "c4377075-71b0-4865-824f-63b8de441547",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_chrome~policy~googlechrome~cryptographycompliance_preferslowkexalgorithms_preferslowkexalgorithms",
+    "description": "",
+    "helpText": "",
+    "name": "PreferSlowKexAlgorithms",
+    "displayName": "Prefer specific key exchange algorithms for TLS (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~cryptographycompliance_preferslowkexalgorithms_preferslowkexalgorithms_cnsa2",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~cryptographycompliance_preferslowkexalgorithms_preferslowkexalgorithms_cnsa2",
+            "description": null,
+            "helpText": null,
+            "name": "Prefer key exchange methods satisfying the requirements of CNSA 2.0",
+            "displayName": "Prefer key exchange methods satisfying the requirements of CNSA 2.0",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "cnsa2"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_chrome~policy~googlechrome~cryptographycompliance_preferslowkexalgorithms_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~cryptographycompliance_preferslowkexalgorithms"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~cryptographycompliance_preferslowkexalgorithms_preferslowkexalgorithms_default",
+            "description": null,
+            "helpText": null,
+            "name": "Use Google Chrome's default supported groups",
+            "displayName": "Use Google Chrome's default supported groups",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "default"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_chrome~policy~googlechrome~cryptographycompliance_preferslowkexalgorithms_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~cryptographycompliance_preferslowkexalgorithms"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

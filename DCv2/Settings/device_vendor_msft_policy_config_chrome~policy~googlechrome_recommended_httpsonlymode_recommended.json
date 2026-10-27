@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "HttpsOnlyMode_recommended",
+        "Allow HTTPS-Only Mode to be enabled",
+        "\\Google Chrome - Default Settings (users can override)",
+        "Both",
+        "Software\\Policies\\Google\\Chrome\\Recommended",
+        "Google Chrome - Default Settings users can override"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chrome~Policy~googlechrome_recommended/HttpsOnlyMode_recommended",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chrome~policy~googlechrome_recommended_httpsonlymode_recommended",
+    "categoryId": "c3857f91-3df8-472f-9b5a-b10778c715c0",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_chrome~policy~googlechrome_recommended_httpsonlymode_recommended",
+    "description": "This policy controls whether users can enable HTTPS-Only Mode (Always Use Secure Connections) in Settings. HTTPS-Only Mode upgrades all navigations to HTTPS.\n\nIf this setting is not set or set to \"allowed\", users will be allowed to enable HTTPS-Only Mode.\n\nIf this setting is set to \"disallowed\", HTTPS-Only Mode will be disabled.\n\nIf this setting is set to \"force_enabled\", HTTPS-Only Mode will be enabled in Strict mode.\n\nIf this setting is set to \"force_balanced_enabled\", HTTPS-Only Mode will be enabled in Balanced mode.\n\n\"force_enabled\" is supported from M112 onwards, \"force_balanced_enabled\" is supported from M129 onwards.\n\n\"force_enabled\" and \"force_balanced_enabled\" can be recommended to users too.\nHTTPS-Only Mode will be set Strict or Balanced initially but users are allowed to\nchange it.\n\nIf you set this policy to a value that is not supported by the version of Chrome that receives the policy, Chrome will default to the allowed setting.\n\nThe separate HttpAllowlist policy\ncan be used to exempt specific hostnames or hostname patterns from being\nupgraded to HTTPS by this feature.\n\nExample value: disallowed",
+    "helpText": "",
+    "name": "HttpsOnlyMode_recommended",
+    "displayName": "Allow HTTPS-Only Mode to be enabled",
+    "defaultOptionId": "device_vendor_msft_policy_config_chrome~policy~googlechrome_recommended_httpsonlymode_recommended_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chrome~policy~googlechrome_recommended_httpsonlymode_recommended_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chrome~policy~googlechrome_recommended_httpsonlymode_recommended_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_chrome~policy~googlechrome_recommended_httpsonlymode_recommended_httpsonlymode",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

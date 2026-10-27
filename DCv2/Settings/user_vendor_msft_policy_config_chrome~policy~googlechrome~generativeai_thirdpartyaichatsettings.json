@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "ThirdPartyAiChatSettings",
+        "Settings for 3rd party AI Mode integrations in the address bar and New Tab page search box.",
+        "\\Google Chrome\\Generative AI",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Generative AI"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chrome~Policy~googlechrome~GenerativeAI/ThirdPartyAiChatSettings",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_thirdpartyaichatsettings",
+    "categoryId": "5ee1e57c-db64-4f8e-a9ec-5308b5c633c4",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_thirdpartyaichatsettings",
+    "description": "This policy controls 3rd party AI Mode integrations in the address bar and the New Tab page search box.\n\nTo access this feature, a 3rd party search engine that supports AI Mode must be set as the user's default search engine.\n\n0 = The feature will be available to users.\n\n1 = The feature will not be available to users.\n\nIf the policy is unset, its behavior is determined by the GenAiDefaultSettings policy.",
+    "helpText": "",
+    "name": "ThirdPartyAiChatSettings",
+    "displayName": "Settings for 3rd party AI Mode integrations in the address bar and New Tab page search box. (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_thirdpartyaichatsettings_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_thirdpartyaichatsettings_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_thirdpartyaichatsettings_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_thirdpartyaichatsettings_thirdpartyaichatsettings",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

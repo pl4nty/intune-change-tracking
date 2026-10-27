@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "XSLTEnabled",
+        "Control the availability of the XSLT feature",
+        "\\Google Chrome",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Google Chrome"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chrome~Policy~googlechrome/XSLTEnabled",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chrome~policy~googlechrome_xsltenabled",
+    "categoryId": "36c83fb3-c18c-472b-b39e-617c2f8a7fbd",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_chrome~policy~googlechrome_xsltenabled",
+    "description": "This policy controls the availability of the XSLT feature (the XSLTProcessor Javascript API and the XSL processing instruction).\nIf this policy is set to Enabled, XSLT will be available, regardless of the default state of the feature in the browser.\nIf this policy is set to Disabled, XSLT will be unavailable, regardless of the default state of the feature in the browser.\nIf this policy is left unset, XSLT availability will be determined by the browser's default settings and field trials.\nThis policy is a temporary measure, and will be removed in M164.",
+    "helpText": "",
+    "name": "XSLTEnabled",
+    "displayName": "Control the availability of the XSLT feature (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chrome~policy~googlechrome_xsltenabled_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chrome~policy~googlechrome_xsltenabled_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chrome~policy~googlechrome_xsltenabled_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

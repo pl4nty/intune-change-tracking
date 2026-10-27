@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DataUrlInWebWorkerOpaqueOriginEnabled",
+        "Enable opaque origins for data URLs in Web Workers",
+        "\\Google Chrome",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Google Chrome"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chrome~Policy~googlechrome/DataUrlInWebWorkerOpaqueOriginEnabled",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chrome~policy~googlechrome_dataurlinwebworkeropaqueoriginenabled",
+    "categoryId": "36c83fb3-c18c-472b-b39e-617c2f8a7fbd",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_chrome~policy~googlechrome_dataurlinwebworkeropaqueoriginenabled",
+    "description": "Controls whether Web Workers created from data URLs are assigned a unique opaque origin.\n\nWeb Workers can be created using a data URL containing the worker's script. Previously, these workers inherited the origin of the page that created them, allowing them to access the same local storage, cookies, and other origin-bound data. To improve security and align with the HTML specification, Chrome is changing its default behavior in milestone 149 so that workers created from data URLs will now have a unique, opaque origin. This isolates them from the creator page's data.\n\nIf this policy is set to Enabled or left unset, the new default (more secure) behavior is used, and Web Workers created from data URLs will have a unique opaque origin.\n\nIf this policy is set to Disabled, Chrome reverts to the legacy behavior, and Web Workers created from data URLs will inherit the origin of their creator. This allows administrators to temporarily resolve compatibility issues if internal applications break due to the security change.\n\nThis policy is intended to be temporary and will be removed in milestone 157.",
+    "helpText": "",
+    "name": "DataUrlInWebWorkerOpaqueOriginEnabled",
+    "displayName": "Enable opaque origins for data URLs in Web Workers",
+    "defaultOptionId": "device_vendor_msft_policy_config_chrome~policy~googlechrome_dataurlinwebworkeropaqueoriginenabled_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chrome~policy~googlechrome_dataurlinwebworkeropaqueoriginenabled_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chrome~policy~googlechrome_dataurlinwebworkeropaqueoriginenabled_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "SearchContentSharingSettings",
+        "Enable content sharing with Google AI Mode and Lens integrations",
+        "\\Google Chrome\\Generative AI",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Generative AI"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chrome~Policy~googlechrome~GenerativeAI/SearchContentSharingSettings",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_searchcontentsharingsettings",
+    "categoryId": "5ee1e57c-db64-4f8e-a9ec-5308b5c633c4",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_searchcontentsharingsettings",
+    "description": "This policy controls sharing of page and file content with Google AI Mode and Lens through Google Chrome side panel or tabs.\n\nNote that this policy doesn't affect Google AI Mode on the web. It only controls how users can share information with it when using Google Chrome.\n\n0 = users can share page or file content with Google AI Mode.\n\n1 = users cannot share page or file content with Google AI Mode. The entry points for sharing context and the side panel will be disabled or hidden.\n\nThis policy will be ignored when Google Search is not users' default search engine as the feature is disabled.\n\nThis policy is independent of the AIModeSettings policy. The AIModeSettings policy only controls entry points on omnibox or NTP search box, while this policy controls context sharing through side panel or tabs.\n\nThis policy also doesn't control Google Gemini integration which can be disabled by GeminiSettings.\n\nIf this policy is unset, its behavior is determined by the GenAiDefaultSettings policy.\n\nFor more information on data handling for generative AI features, please see https://support.google.com/chrome/a?p=generative_ai_settings.",
+    "helpText": "",
+    "name": "SearchContentSharingSettings",
+    "displayName": "Enable content sharing with Google AI Mode and Lens integrations (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_searchcontentsharingsettings_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_searchcontentsharingsettings_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_searchcontentsharingsettings_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_searchcontentsharingsettings_searchcontentsharingsettings",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

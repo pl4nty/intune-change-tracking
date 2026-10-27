@@ -1,0 +1,127 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "WinRE",
+        "Recovery",
+        "Point-in-Time Restore",
+        "Retention",
+        "Win RE"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/OpenExtensibilitySettings/IntunePolicyAdaptor/Device_Vendor_MSFT_Policy_Config_WinRE_PointInTimeRestore_RestorePointRetention",
+    "rootDefinitionId": "device_vendor_msft_policy_config_winre_enablewinre",
+    "categoryId": "cba65aaf-9580-4729-89b3-a814b74d2193",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_winre_pointintimerestore_restorepointretention",
+    "description": "",
+    "helpText": null,
+    "name": "RestorePointRetention",
+    "displayName": "Restore point retention",
+    "defaultOptionId": "device_vendor_msft_policy_config_winre_pointintimerestore_restorepointretention_2",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "intuneOpenExtensibility",
+        "configurationServiceProviderVersion": null,
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041",
+        "windowsSkus": [
+            "windowsProfessional",
+            "windowsEnterprise",
+            "windowsEducation",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_winre_pointintimerestore_restorepointretention_0",
+            "description": "0 days",
+            "helpText": null,
+            "name": "0 days",
+            "displayName": "0 days",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_winre_pointintimerestore_allowpointintimerestore_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_winre_pointintimerestore_allowpointintimerestore"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_winre_pointintimerestore_restorepointretention_1",
+            "description": "1 day",
+            "helpText": null,
+            "name": "1 day",
+            "displayName": "1 day",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_winre_pointintimerestore_allowpointintimerestore_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_winre_pointintimerestore_allowpointintimerestore"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_winre_pointintimerestore_restorepointretention_2",
+            "description": "2 days",
+            "helpText": null,
+            "name": "2 days",
+            "displayName": "2 days",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_winre_pointintimerestore_allowpointintimerestore_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_winre_pointintimerestore_allowpointintimerestore"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_winre_pointintimerestore_restorepointretention_3",
+            "description": "3 days",
+            "helpText": null,
+            "name": "3 days",
+            "displayName": "3 days",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_winre_pointintimerestore_allowpointintimerestore_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_winre_pointintimerestore_allowpointintimerestore"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

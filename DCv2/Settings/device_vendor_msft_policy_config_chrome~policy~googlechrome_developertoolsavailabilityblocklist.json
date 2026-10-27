@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DeveloperToolsAvailabilityBlocklist",
+        "List of URL patterns for which Chrome DevTools are blocked",
+        "\\Google Chrome",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Google Chrome"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chrome~Policy~googlechrome/DeveloperToolsAvailabilityBlocklist",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chrome~policy~googlechrome_developertoolsavailabilityblocklist",
+    "categoryId": "36c83fb3-c18c-472b-b39e-617c2f8a7fbd",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_chrome~policy~googlechrome_developertoolsavailabilityblocklist",
+    "description": "This policy can be used to block Chrome DevTools on specific URLs. For information on the URL format, see https://support.google.com/chrome/a?p=url_blocklist_filter_format.\n\nURL patterns are matched against the URL of every frame on the page being inspected. The resulting behavior depends on whether the DeveloperToolsAvailabilityAllowlist policy is also set.\n\nIf this policy is set and DeveloperToolsAvailabilityAllowlist is not, any frame's URL matching a pattern on this blocklist will block Chrome DevTools for the entire page. If a frame's URL doesn't match any pattern, the availability is determined by the DeveloperToolsAvailability policy.\n\nIf both this and the DeveloperToolsAvailabilityAllowlist policies are set, the allowlist takes precedence. If a frame's URL matches a pattern on the allowlist, it will be allowed, even if it also matches a pattern in this blocklist. If a URL matches a pattern on this blocklist (but not the allowlist), it will be blocked. If a URL matches neither, the DeveloperToolsAvailability policy will be used as a fallback.\n\nIf this policy is not set, the availability of Chrome DevTools is determined by the DeveloperToolsAvailabilityAllowlist and DeveloperToolsAvailability policies.\n\nThis policy is limited to 1,000 entries.\n\nExample value:\n\nhttps://example.com\nexample.com\nhttps://ssl.server.com\nhosting.com/bad_path\nhttps://server:8080/path\n.exact.hostname.com\n*\nfile://*",
+    "helpText": "",
+    "name": "DeveloperToolsAvailabilityBlocklist",
+    "displayName": "List of URL patterns for which Chrome DevTools are blocked",
+    "defaultOptionId": "device_vendor_msft_policy_config_chrome~policy~googlechrome_developertoolsavailabilityblocklist_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chrome~policy~googlechrome_developertoolsavailabilityblocklist_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chrome~policy~googlechrome_developertoolsavailabilityblocklist_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_chrome~policy~googlechrome_developertoolsavailabilityblocklist_developertoolsavailabilityblocklistdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

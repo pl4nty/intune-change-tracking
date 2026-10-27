@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "HttpHeaderInjection",
+        "Configure HTTP Header Injection for specific URL patterns",
+        "\\Google Chrome\\Network settings",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Network settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chrome~Policy~googlechrome~Network/HttpHeaderInjection",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chrome~policy~googlechrome~network_httpheaderinjection",
+    "categoryId": "fa2722a8-dcfd-4e14-a429-2b0041642c77",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_chrome~policy~googlechrome~network_httpheaderinjection",
+    "description": "This policy enables defining a list of rules to inject custom HTTP headers into web requests matching specific URL patterns. Headers set by this policy take precedence over those that initially were present in the request, as well as modifications attempted by users or extensions.\n\nA common use case for this policy is to enforce tenant access controls by injecting custom headers (e.g., X-Tenant-ID).\n\nThe policy accepts a list of Rules. Each Rule contains:\n\n* patterns: A list of URL patterns to match. See how to format a URL pattern ( https://support.google.com/chrome/a?p=url_blocklist_filter_format ).\n\n* headers: A list of objects representing headers to inject, each containing:\n\n* name: The name of the header to inject.\n\n* value: The value of the header to inject.\n\nIf multiple rules match a request, headers from all matching rules will be applied. In case there're multiple headers with the same name, the one with the most specific URL pattern will be applied. If patterns are equally specific, the one that appears last in the list will be applied.\n\nHeader names must be compliant with RFC 2616 ( https://www.rfc-editor.org/rfc/rfc2616 ). Header values must not contain NUL, CR or LF symbols. Individual headers must not exceed 8KB in size. Invalid headers and URL patterns will be ignored.\n\nThis policy is limited to a total of 500 URL patterns across all rules. Each rule can contain at most 20 headers. Patterns and headers beyond these thresholds will be ignored.\nSee https://chromeenterprise.google/policies/?policy=HttpHeaderInjection for more information about schema and formatting.\n\n\nExample value:\n\n[\n  {\n    \"patterns\": [\n      \"example.com\",\n      \".example.org\"\n    ],\n    \"headers\": [\n      {\n        \"name\": \"X-Tenant-ID\",\n        \"value\": \"123456\"\n      },\n      {\n        \"name\": \"X-Custom-Header\",\n        \"value\": \"CustomValue\"\n      }\n    ]\n  }\n]",
+    "helpText": "",
+    "name": "HttpHeaderInjection",
+    "displayName": "Configure HTTP Header Injection for specific URL patterns",
+    "defaultOptionId": "device_vendor_msft_policy_config_chrome~policy~googlechrome~network_httpheaderinjection_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chrome~policy~googlechrome~network_httpheaderinjection_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chrome~policy~googlechrome~network_httpheaderinjection_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_chrome~policy~googlechrome~network_httpheaderinjection_httpheaderinjection",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

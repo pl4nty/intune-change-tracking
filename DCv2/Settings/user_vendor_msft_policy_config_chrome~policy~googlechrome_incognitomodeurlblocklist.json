@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "IncognitoModeUrlBlocklist",
+        "Block access to a list of URLs in Incognito mode.",
+        "\\Google Chrome",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Google Chrome"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chrome~Policy~googlechrome/IncognitoModeUrlBlocklist",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chrome~policy~googlechrome_incognitomodeurlblocklist",
+    "categoryId": "36c83fb3-c18c-472b-b39e-617c2f8a7fbd",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_chrome~policy~googlechrome_incognitomodeurlblocklist",
+    "description": "Setting the IncognitoModeUrlBlocklist policy stops web pages with prohibited URLs from loading in Incognito mode. Administrators can specify the list of URL patterns to be blocked. See how to format a URL pattern ( https://support.google.com/chrome/a?p=url_blocklist_filter_format ).\n\nIf both this and the IncognitoModeUrlAllowlist are set, the allowlist takes precedence. If a URL matches a pattern on the allowlist, it will be allowed. If it matches a pattern on the blocklist but not the allowlist, it will be blocked. If a URL matches neither, the general URLBlocklist/URLAllowlist policies will be used as a fallback.\n\nIf the IncognitoModeUrlAllowlist policy is set and this policy is not, any URL not on the allowlist will be blocked in Incognito mode.\n\nIf IncognitoModeAvailability is set to disallow (value 1), but the IncognitoModeUrlAllowlist policy is configured, Incognito mode will be available only for the URLs matching the allowlist.\n\nThis policy only affects Incognito mode. To block URLs for all user profiles, please use the URLBlocklist policy.\n\nThis policy is limited to 1000 entries.\n\nExample value:\n\nexample.com\nhttps://ssl.server.com\nhosting.com/bad_path\nhttps://server:8080/path\n.exact.hostname.com\nfile://*\ncustom_scheme:*\n*",
+    "helpText": "",
+    "name": "IncognitoModeUrlBlocklist",
+    "displayName": "Block access to a list of URLs in Incognito mode. (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chrome~policy~googlechrome_incognitomodeurlblocklist_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chrome~policy~googlechrome_incognitomodeurlblocklist_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chrome~policy~googlechrome_incognitomodeurlblocklist_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_chrome~policy~googlechrome_incognitomodeurlblocklist_incognitomodeurlblocklistdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

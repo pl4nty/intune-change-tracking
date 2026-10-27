@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "PreferSlowKexAlgorithms",
+        "Prefer specific key exchange algorithms for TLS",
+        "\\Google Chrome\\Cryptography compliance policies",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Cryptography compliance policies"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chrome~Policy~googlechrome~CryptographyCompliance/PreferSlowKexAlgorithms",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~cryptographycompliance_preferslowkexalgorithms",
+    "categoryId": "c4377075-71b0-4865-824f-63b8de441547",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_chrome~policy~googlechrome~cryptographycompliance_preferslowkexalgorithms",
+    "description": "This policy configures Google Chrome to order its preferred key agreement algorithms (supported groups) in TLS 1.3 to reflect a preference for algorithms that have been approved by a specific compliance regime.\n\nSetting this policy does not guarantee that any specific algorithms will be negotiated.\n\nThis policy exists to allow server operators who wish to support clients with and without compliance requirements to differentiate between those clients, and only use certain non-default algorithms with increased cryptographic strength for those explicitly configured to prefer them.\n\nSetting the policy to 'cnsa2' configures Google Chrome to prefer key exchange methods required for compliance with the Commercial National Security Algorithm Suite 2.0 (CNSA 2.0).\n\nNot setting the policy, or setting it to 'default', configures Google Chrome to use its default key exchange methods.\n\nSetting this policy is not required for security. The default cryptography used by Google Chrome is strong enough to withstand a brute force attack using the entire power of the Sun.\n\nSetting this policy will cause Google Chrome to be slower when accessing websites.\n\nThis policy only affects TLS 1.3 and QUIC; it does not affect earlier versions of TLS.\n\nExample value: cnsa2",
+    "helpText": "",
+    "name": "PreferSlowKexAlgorithms",
+    "displayName": "Prefer specific key exchange algorithms for TLS (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~cryptographycompliance_preferslowkexalgorithms_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~cryptographycompliance_preferslowkexalgorithms_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~cryptographycompliance_preferslowkexalgorithms_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_chrome~policy~googlechrome~cryptographycompliance_preferslowkexalgorithms_preferslowkexalgorithms",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

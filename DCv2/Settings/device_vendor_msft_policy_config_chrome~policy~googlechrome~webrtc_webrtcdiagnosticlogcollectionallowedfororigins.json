@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "WebRtcDiagnosticLogCollectionAllowedForOrigins",
+        "Enable WebRTC diagnostic log collection for specific origins",
+        "\\Google Chrome\\WebRtc settings",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Web Rtc settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chrome~Policy~googlechrome~WebRtc/WebRtcDiagnosticLogCollectionAllowedForOrigins",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chrome~policy~googlechrome~webrtc_webrtcdiagnosticlogcollectionallowedfororigins",
+    "categoryId": "b811c4fe-7ff0-4bd1-a454-0918d4e2f896",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_chrome~policy~googlechrome~webrtc_webrtcdiagnosticlogcollectionallowedfororigins",
+    "description": "This policy allows enabling diagnostic log collection for WebRTC for specific origins.\n\nFor detailed information on valid input patterns, please see https://chromeenterprise.google/policies/url-patterns. * is not an accepted value for this policy. This policy only matches based on origin, so any path in the URL pattern is ignored. Scheme and subdomains are supported.\n\nIf the policy is set, diagnostic log collection will be enabled for the origins matched by the patterns in the list.\n\nIf the policy is not set, diagnostic log collection will be disabled by default.\n\nExample value:\n\nhttps://www.example.com\nexample.com\n[*.]example.com\n*://example.edu:*/\nhttps://example.com:8080",
+    "helpText": "",
+    "name": "WebRtcDiagnosticLogCollectionAllowedForOrigins",
+    "displayName": "Enable WebRTC diagnostic log collection for specific origins",
+    "defaultOptionId": "device_vendor_msft_policy_config_chrome~policy~googlechrome~webrtc_webrtcdiagnosticlogcollectionallowedfororigins_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chrome~policy~googlechrome~webrtc_webrtcdiagnosticlogcollectionallowedfororigins_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chrome~policy~googlechrome~webrtc_webrtcdiagnosticlogcollectionallowedfororigins_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_chrome~policy~googlechrome~webrtc_webrtcdiagnosticlogcollectionallowedfororigins_webrtcdiagnosticlogcollectionallowedfororiginsdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

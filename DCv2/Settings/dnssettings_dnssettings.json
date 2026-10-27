@@ -1,0 +1,76 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DNS Settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "DNSSettings",
+    "rootDefinitionId": "dnssettings_toplevel",
+    "categoryId": "bf998b9d-1a7b-49c5-9a57-d56402609f6e",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "dnssettings_dnssettings",
+    "description": "A dictionary that defines a configuration for an encrypted DNS server.",
+    "helpText": null,
+    "name": "DNSSettings",
+    "displayName": "DNS Settings",
+    "childIds": [
+        "dnssettings_dnssettings_dnsprotocol",
+        "dnssettings_dnssettings_serverurl",
+        "dnssettings_dnssettings_servername",
+        "dnssettings_dnssettings_serveraddresses",
+        "dnssettings_dnssettings_allowfailover",
+        "dnssettings_dnssettings_identityassetreference",
+        "dnssettings_dnssettings_supplementalmatchdomains"
+    ],
+    "maximumCount": 1,
+    "minimumCount": 0,
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [
+        {
+            "dependentOn": "dnssettings_toplevel",
+            "parentSettingId": "dnssettings_toplevel"
+        }
+    ],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "dnssettings_dnssettings_dnsprotocol",
+            "required": true
+        },
+        {
+            "dependedOnBy": "dnssettings_dnssettings_serverurl",
+            "required": false
+        },
+        {
+            "dependedOnBy": "dnssettings_dnssettings_servername",
+            "required": false
+        },
+        {
+            "dependedOnBy": "dnssettings_dnssettings_serveraddresses",
+            "required": false
+        },
+        {
+            "dependedOnBy": "dnssettings_dnssettings_allowfailover",
+            "required": false
+        },
+        {
+            "dependedOnBy": "dnssettings_dnssettings_identityassetreference",
+            "required": false
+        },
+        {
+            "dependedOnBy": "dnssettings_dnssettings_supplementalmatchdomains",
+            "required": false
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "MaxConnectionsPerProxyForWebSocket",
+        "Maximal number of concurrent connections per proxy server for WebSocket requests",
+        "\\Google Chrome",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Google Chrome"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chrome~Policy~googlechrome/MaxConnectionsPerProxyForWebSocket",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chrome~policy~googlechrome_maxconnectionsperproxyforwebsocket",
+    "categoryId": "36c83fb3-c18c-472b-b39e-617c2f8a7fbd",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_chrome~policy~googlechrome_maxconnectionsperproxyforwebsocket",
+    "description": "Setting the policy specifies the maximal number of simultaneous connections per proxy server for WebSocket requests.\n\nTo modify non-WebSocket request limits, see MaxConnectionsPerProxy.\n\nLeaving the policy unset means a default of 128 is used.\n\nSome web apps are known to consume many connections with hanging GETs, so setting a value below 128 may lead to browser networking hangs if there are too many web apps with hanging connections open.\nSome proxy servers can't handle a high number of concurrent connections per client, which is solved by setting this policy to a lower value.\n\nThe value should be equal to or higher than 6.\nSetting a value below that limit will cause 6 to be used.\nLower below the default (128) at your own risk.\n\nThe value should be equal to or lower than 256.\nSetting a value above that limit will cause 256 to be used.\nRaise above the default (128) at your own risk.\n\nPlease note that the enforced limits are impacted by AllowSocketPoolSizeRandomizationForProxies.",
+    "helpText": "",
+    "name": "MaxConnectionsPerProxyForWebSocket",
+    "displayName": "Maximal number of concurrent connections per proxy server for WebSocket requests (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chrome~policy~googlechrome_maxconnectionsperproxyforwebsocket_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chrome~policy~googlechrome_maxconnectionsperproxyforwebsocket_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chrome~policy~googlechrome_maxconnectionsperproxyforwebsocket_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_chrome~policy~googlechrome_maxconnectionsperproxyforwebsocket_maxconnectionsperproxyforwebsocket",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

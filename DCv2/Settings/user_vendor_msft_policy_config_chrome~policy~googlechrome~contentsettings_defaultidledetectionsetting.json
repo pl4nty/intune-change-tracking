@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "DefaultIdleDetectionSetting",
+        "Default idle detection setting",
+        "\\Google Chrome\\Content settings",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Content settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chrome~Policy~googlechrome~ContentSettings/DefaultIdleDetectionSetting",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~contentsettings_defaultidledetectionsetting",
+    "categoryId": "59d29716-55b0-4014-a458-38b408ff9530",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_chrome~policy~googlechrome~contentsettings_defaultidledetectionsetting",
+    "description": "Allows you to set whether websites are allowed to use the Idle Detection API.\n\nWhen this policy is set to 1 - AllowIdleDetection, websites can use the API without asking the user for permission.\n\nWhen this policy is set to 2 - BlockIdleDetection, websites can't use the API, regardless of the user's permission.\n\nWhen this policy is set to 3 - AskIdleDetection or not set, websites can't use the API without the user's permission.",
+    "helpText": "",
+    "name": "DefaultIdleDetectionSetting",
+    "displayName": "Default idle detection setting (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~contentsettings_defaultidledetectionsetting_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~contentsettings_defaultidledetectionsetting_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~contentsettings_defaultidledetectionsetting_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_chrome~policy~googlechrome~contentsettings_defaultidledetectionsetting_defaultidledetectionsetting",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

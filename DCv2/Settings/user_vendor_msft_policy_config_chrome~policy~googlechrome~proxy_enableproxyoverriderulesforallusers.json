@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "EnableProxyOverrideRulesForAllUsers",
+        "Controls which managed users can set the ProxyOverrideRules policy.",
+        "\\Google Chrome\\Proxy server",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Proxy server"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chrome~Policy~googlechrome~Proxy/EnableProxyOverrideRulesForAllUsers",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~proxy_enableproxyoverriderulesforallusers",
+    "categoryId": "d33197ca-f674-4e3d-9afa-0ff7ef7b4dc7",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_chrome~policy~googlechrome~proxy_enableproxyoverriderulesforallusers",
+    "description": "When this policy is set to 0 or left unset, the ProxyOverrideRules policy will only be applied at the user scope for affiliated users.\nWhen this policy is set to 1, the ProxyOverrideRules policy will be applied at the user scope, even that user is unaffiliated.",
+    "helpText": "",
+    "name": "EnableProxyOverrideRulesForAllUsers",
+    "displayName": "Controls which managed users can set the ProxyOverrideRules policy. (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~proxy_enableproxyoverriderulesforallusers_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~proxy_enableproxyoverriderulesforallusers_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~proxy_enableproxyoverriderulesforallusers_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_chrome~policy~googlechrome~proxy_enableproxyoverriderulesforallusers_enableproxyoverriderulesforallusers",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

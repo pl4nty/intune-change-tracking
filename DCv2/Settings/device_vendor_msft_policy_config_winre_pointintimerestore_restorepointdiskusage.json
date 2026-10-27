@@ -1,0 +1,65 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "WinRE",
+        "Recovery",
+        "Point-in-Time Restore",
+        "Disk Usage",
+        "Win RE"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/OpenExtensibilitySettings/IntunePolicyAdaptor/Device_Vendor_MSFT_Policy_Config_WinRE_PointInTimeRestore_RestorePointDiskUsage",
+    "rootDefinitionId": "device_vendor_msft_policy_config_winre_enablewinre",
+    "categoryId": "cba65aaf-9580-4729-89b3-a814b74d2193",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_winre_pointintimerestore_restorepointdiskusage",
+    "description": "",
+    "helpText": null,
+    "name": "RestorePointDiskUsage",
+    "displayName": "Restore point disk usage",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "intuneOpenExtensibility",
+        "configurationServiceProviderVersion": null,
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.19041",
+        "windowsSkus": [
+            "windowsProfessional",
+            "windowsEnterprise",
+            "windowsEducation",
+            "windows11SE"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 50,
+        "minimumValue": 2
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 2
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "device_vendor_msft_policy_config_winre_pointintimerestore_allowpointintimerestore_1",
+            "parentSettingId": "device_vendor_msft_policy_config_winre_pointintimerestore_allowpointintimerestore"
+        }
+    ],
+    "dependedOnBy": []
+}

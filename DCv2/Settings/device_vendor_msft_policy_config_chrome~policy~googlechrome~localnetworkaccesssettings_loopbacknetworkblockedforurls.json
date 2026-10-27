@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "LoopbackNetworkBlockedForUrls",
+        "Block sites from making network requests to the local device.",
+        "\\Google Chrome\\Local Network Access settings",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Local Network Access settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chrome~Policy~googlechrome~LocalNetworkAccessSettings/LoopbackNetworkBlockedForUrls",
+    "rootDefinitionId": "device_vendor_msft_policy_config_chrome~policy~googlechrome~localnetworkaccesssettings_loopbacknetworkblockedforurls",
+    "categoryId": "f66e6bf2-a437-4d36-b46c-e965b31a5d4f",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_chrome~policy~googlechrome~localnetworkaccesssettings_loopbacknetworkblockedforurls",
+    "description": "List of URL patterns. Network requests initiated from websites served by matching origins to the local device are blocked from issuing Local Network Access requests.\n\nFor origins not covered by the patterns specified here, the user's personal configuration will apply.\n\nFor detailed information on valid URL patterns, please see https://chromeenterprise.google/policies/url-patterns/.\n\nSee https://wicg.github.io/local-network-access/ for Local Network Access restrictions.\n\nThere are multiple policies listing origins that impact requests to the local device. If an origin is matched by more than one of the following policies, the policies take precedence in the following order:\n\n- LoopbackNetworkBlockedForUrls\n- LoopbackNetworkAllowedForUrls\n- LocalNetworkAccessBlockedForUrls\n- LocalNetworkAccessAllowedForUrls\n\nExample value:\n\nhttp://www.example.com:8080\n[*.]example.edu\n*",
+    "helpText": "",
+    "name": "LoopbackNetworkBlockedForUrls",
+    "displayName": "Block sites from making network requests to the local device.",
+    "defaultOptionId": "device_vendor_msft_policy_config_chrome~policy~googlechrome~localnetworkaccesssettings_loopbacknetworkblockedforurls_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_chrome~policy~googlechrome~localnetworkaccesssettings_loopbacknetworkblockedforurls_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_chrome~policy~googlechrome~localnetworkaccesssettings_loopbacknetworkblockedforurls_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_chrome~policy~googlechrome~localnetworkaccesssettings_loopbacknetworkblockedforurls_loopbacknetworkblockedforurlsdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

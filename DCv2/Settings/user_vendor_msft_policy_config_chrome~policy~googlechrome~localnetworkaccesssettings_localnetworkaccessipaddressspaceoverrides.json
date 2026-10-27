@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "LocalNetworkAccessIpAddressSpaceOverrides",
+        "Override IP address space mappings",
+        "\\Google Chrome\\Local Network Access settings",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Local Network Access settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chrome~Policy~googlechrome~LocalNetworkAccessSettings/LocalNetworkAccessIpAddressSpaceOverrides",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~localnetworkaccesssettings_localnetworkaccessipaddressspaceoverrides",
+    "categoryId": "f66e6bf2-a437-4d36-b46c-e965b31a5d4f",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_chrome~policy~googlechrome~localnetworkaccesssettings_localnetworkaccessipaddressspaceoverrides",
+    "description": "This can be used to treat certain internal address ranges as \"public\" and thus not subject to Local Network Access checks. Conversely, this can be used to treat certain public address ranges that might be used internally as \"local\" so that they are protected by Local Network Access checks.\n\nIP address space overrides have two forms:\n\n[cidr]=[public|local|loopback]\n\nwhere [cidr] is a IP address range in CIDR notation (see section 3.1 of https://tools.ietf.org/html/rfc4632 for IPv4 and section 2.3 of https://tools.ietf.org/html/rfc4291 for IPv6). IPv6 addresses must be specified in URL-safe (bracketed) format. CIDR overrides apply to all ports.\n\nor\n\n[ip-address]:[port]=[public|local|loopback]\n\nFor more information on Local Network Access, see https://wicg.github.io/local-network-access/ and https://developer.chrome.com/blog/local-network-access.\n\nThis policy does not support dynamic refresh.\n\nOverrides from the command-line switch --ip-address-space-overrides take precedence over overrides set by this policy.\n\nExample value:\n\n100.64.0.0/10=public\n[2001:db8::]/32=local\n192.168.0.1:8000=public\n[2001:DB8::8:800:200C:417A]:8080=local",
+    "helpText": "",
+    "name": "LocalNetworkAccessIpAddressSpaceOverrides",
+    "displayName": "Override IP address space mappings (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~localnetworkaccesssettings_localnetworkaccessipaddressspaceoverrides_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~localnetworkaccesssettings_localnetworkaccessipaddressspaceoverrides_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~localnetworkaccesssettings_localnetworkaccessipaddressspaceoverrides_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_chrome~policy~googlechrome~localnetworkaccesssettings_localnetworkaccessipaddressspaceoverrides_localnetworkaccessipaddressspaceoverridesdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "IdleDetectionAllowedForUrls",
+        "Allow idle detection on these sites",
+        "\\Google Chrome\\Content settings",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Content settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chrome~Policy~googlechrome~ContentSettings/IdleDetectionAllowedForUrls",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~contentsettings_idledetectionallowedforurls",
+    "categoryId": "59d29716-55b0-4014-a458-38b408ff9530",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_chrome~policy~googlechrome~contentsettings_idledetectionallowedforurls",
+    "description": "Allows you to set a list of URL patterns that specify the sites that are allowed to use the Idle Detection API witout asking the user. Blocklist entries have higher priority than allowlist entries, which in turn have higher priority than the configured default value.\n\nFor detailed information on valid site url patterns, please see https://chromeenterprise.google/policies/url-patterns. Wildcards, *, are allowed. This policy only matches based on origin, so any path in the URL pattern is ignored.\n\nIf this policy is not set, the global default value will be used for all sites, which is configured by the DefaultIdleDetectionSetting (Default idle detection setting) policy, if set, or by the user's personal configuration otherwise.\n\nExample value:\n\nhttps://www.example.com\n[*.]example.edu",
+    "helpText": "",
+    "name": "IdleDetectionAllowedForUrls",
+    "displayName": "Allow idle detection on these sites (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~contentsettings_idledetectionallowedforurls_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~contentsettings_idledetectionallowedforurls_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~contentsettings_idledetectionallowedforurls_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_chrome~policy~googlechrome~contentsettings_idledetectionallowedforurls_idledetectionallowedforurlsdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

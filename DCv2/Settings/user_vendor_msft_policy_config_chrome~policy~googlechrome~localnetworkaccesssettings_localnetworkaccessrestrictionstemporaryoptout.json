@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "LocalNetworkAccessRestrictionsTemporaryOptOut",
+        "Specifies whether to (temporarily) opt out of Local Network Access restrictions",
+        "\\Google Chrome\\Local Network Access settings",
+        "Both",
+        "Software\\Policies\\Google\\Chrome",
+        "Local Network Access settings"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chrome~Policy~googlechrome~LocalNetworkAccessSettings/LocalNetworkAccessRestrictionsTemporaryOptOut",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~localnetworkaccesssettings_localnetworkaccessrestrictionstemporaryoptout",
+    "categoryId": "f66e6bf2-a437-4d36-b46c-e965b31a5d4f",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_chrome~policy~googlechrome~localnetworkaccesssettings_localnetworkaccessrestrictionstemporaryoptout",
+    "description": "When this policy is set to Enabled, Local Network Access\nrequests will only display warnings in Chrome DevTools due to Local Network Access checks failing.\n\nWhen this policy is set to Disabled or unset, Local Network Access requests will use the\ndefault handling of these requests.\n\nSee https://wicg.github.io/local-network-access/ for Local Network Access restrictions.\n\nThis enterprise policy is temporary, and will be removed after M156.\n\nLong term, the policy LocalNetworkAccessAllowedForUrls\ncan be used to allowlist URL patterns that should be automatically granted\nthe Local Network Access permission.",
+    "helpText": "",
+    "name": "LocalNetworkAccessRestrictionsTemporaryOptOut",
+    "displayName": "Specifies whether to (temporarily) opt out of Local Network Access restrictions (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~localnetworkaccesssettings_localnetworkaccessrestrictionstemporaryoptout_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~localnetworkaccesssettings_localnetworkaccessrestrictionstemporaryoptout_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~localnetworkaccesssettings_localnetworkaccessrestrictionstemporaryoptout_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

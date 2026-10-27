@@ -1,0 +1,84 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "GeminiActOnWebSettings",
+        "Allows Gemini app integrations to directly act on web pages",
+        "\\Google Chrome\\Generative AI",
+        "Google Chrome\\Generative AI",
+        "Generative AI"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/chrome~Policy~googlechrome~GenerativeAI/GeminiActOnWebSettings",
+    "rootDefinitionId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_geminiactonwebsettings",
+    "categoryId": "5ee1e57c-db64-4f8e-a9ec-5308b5c633c4",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_geminiactonwebsettings_geminiactonwebsettings",
+    "description": "",
+    "helpText": "",
+    "name": "GeminiActOnWebSettings",
+    "displayName": "Allows Gemini app integrations to directly act on web pages (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_geminiactonwebsettings_geminiactonwebsettings_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_geminiactonwebsettings_geminiactonwebsettings_0",
+            "description": null,
+            "helpText": null,
+            "name": "Allow the Gemini app to take action on the web pages.",
+            "displayName": "Allow the Gemini app to take action on the web pages.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_geminiactonwebsettings_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_geminiactonwebsettings"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_geminiactonwebsettings_geminiactonwebsettings_1",
+            "description": null,
+            "helpText": null,
+            "name": "Disallow the Gemini app to take action on the web pages.",
+            "displayName": "Disallow the Gemini app to take action on the web pages.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_geminiactonwebsettings_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_chrome~policy~googlechrome~generativeai_geminiactonwebsettings"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}
