@@ -4330,6 +4330,19 @@
             "allowedMemberTypes": [
                 "Application"
             ],
+            "description": "Allows the app to enable hard deletion protection settings on users, applications, groups, and service principals without a signed-in user. Requires Global Administrator or Backup Administrator role.",
+            "displayName": "Enable hard deletion protection settings",
+            "id": "87f25f46-ce1e-47ed-935c-9d70b296f060",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "HardDeletionSetting.ReadWrite.Enable",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
             "description": "Allows the app to read all scenario health monitoring alerts, without a signed-in user.",
             "displayName": "Read all scenario health monitoring alert",
             "id": "5183ed5d-b7f8-4e9a-915e-dafb46b9cb62",
@@ -7118,6 +7131,97 @@
             "isEnabled": true,
             "origin": "Application",
             "value": "ReportSettings.ReadWrite.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to read all resource policy assignments, without a signed-in user.",
+            "displayName": "Read all resource policy assignments",
+            "id": "6ea4f0cd-532a-415b-b82f-9b9d84ca5cfd",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "ResourcePolicyAssignment.Read.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to read and write all resource policy assignments, without a signed-in user.",
+            "displayName": "Read and write all resource policy assignments",
+            "id": "4ebf7277-a0b3-4fb6-866e-9ade27c776c7",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "ResourcePolicyAssignment.ReadWrite.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to read the tenant-wide resource policy configuration, including the configured privileged-read app ID, without a signed-in user.",
+            "displayName": "Read tenant resource policy configuration",
+            "id": "f5d5d13d-82db-4ee7-b7c9-4b9bc48299dc",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "ResourcePolicyConfiguration.Read.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to read and write the tenant-wide resource policy configuration, including setting the privileged-read app ID used by all fetch() calls during policy evaluation, without a signed-in user.",
+            "displayName": "Read and write tenant resource policy configuration",
+            "id": "f415468b-cf6a-4567-867d-a965e4d31e87",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "ResourcePolicyConfiguration.ReadWrite.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to read all resource policy definitions, without a signed-in user.",
+            "displayName": "Read all resource policy definitions",
+            "id": "1de97903-f478-4d01-9cc2-b70fb1236a80",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "ResourcePolicyDefinition.Read.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to read and write all resource policy definitions, without a signed-in user.",
+            "displayName": "Read and write all resource policy definitions",
+            "id": "365dc158-5200-4b0e-9c5d-be9a2068cb4c",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "ResourcePolicyDefinition.ReadWrite.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to evaluate resource policies, without a signed-in user.",
+            "displayName": "Evaluate resource policies",
+            "id": "6642843d-a7e1-4fb6-9d68-9f7e75455c2b",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "ResourcePolicyEvaluation.Read.All",
             "isPreAuthorizationRequired": false,
             "isPrivate": false
         },
@@ -13984,6 +14088,17 @@
             "isPrivate": false
         },
         {
+            "adminConsentDescription": "Allows the app to enable hard deletion protection settings on users, applications, groups, and service principals on behalf of the signed-in user. Requires Global Administrator or Backup Administrator role.",
+            "adminConsentDisplayName": "Enable hard deletion protection settings",
+            "id": "969ac762-bace-4685-8f56-a496211ea8e8",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to enable hard deletion protection settings on users, applications, groups, and service principals on your behalf. Requires Global Administrator or Backup Administrator role.",
+            "userConsentDisplayName": "Enable hard deletion protection settings",
+            "value": "HardDeletionSetting.ReadWrite.Enable",
+            "isPrivate": false
+        },
+        {
             "adminConsentDescription": "Allows the app to read all scenario health monitoring alerts",
             "adminConsentDisplayName": "Read all scenario health monitoring alerts",
             "id": "74b4ff32-4917-4536-a66d-38a4861e6220",
@@ -16764,6 +16879,83 @@
             "userConsentDescription": "Allows the app to read and manage your organization's connected security content repositories on your behalf.",
             "userConsentDisplayName": "Read and write security content repositories",
             "value": "Repository.ReadWrite.All",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to read resource policy assignments, on behalf of the signed-in user.",
+            "adminConsentDisplayName": "Read resource policy assignments",
+            "id": "38e416e3-8cc7-4969-b90e-43d9b5dbac5c",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to read resource policy assignments, on your behalf.",
+            "userConsentDisplayName": "Read resource policy assignments",
+            "value": "ResourcePolicyAssignment.Read.All",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to read and write resource policy assignments, on behalf of the signed-in user.",
+            "adminConsentDisplayName": "Read and write resource policy assignments",
+            "id": "52539709-8326-4b50-8ed5-aa675504e94d",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to read and write resource policy assignments, on your behalf.",
+            "userConsentDisplayName": "Read and write resource policy assignments",
+            "value": "ResourcePolicyAssignment.ReadWrite.All",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to read the tenant-wide resource policy configuration, including the configured privileged-read app ID, on behalf of the signed-in user.",
+            "adminConsentDisplayName": "Read tenant resource policy configuration",
+            "id": "6c6ae21d-90c1-4bb4-bde9-a8c5aec7879d",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to read the tenant-wide resource policy configuration, including the configured privileged-read app ID, on your behalf.",
+            "userConsentDisplayName": "Read tenant resource policy configuration",
+            "value": "ResourcePolicyConfiguration.Read.All",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to read and write the tenant-wide resource policy configuration, including setting the privileged-read app ID used by all fetch() calls during policy evaluation, on behalf of the signed-in user.",
+            "adminConsentDisplayName": "Read and write tenant resource policy configuration",
+            "id": "5c14c2cb-d32d-45ce-8026-96ce3eb78aaf",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to read and write the tenant-wide resource policy configuration, including setting the privileged-read app ID used by all fetch() calls during policy evaluation, on your behalf.",
+            "userConsentDisplayName": "Read and write tenant resource policy configuration",
+            "value": "ResourcePolicyConfiguration.ReadWrite.All",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to read resource policy definitions, on behalf of the signed-in user.",
+            "adminConsentDisplayName": "Read resource policy definitions",
+            "id": "79f3c575-c4ca-426f-ab61-1ff946f0806b",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to read resource policy definitions, on your behalf.",
+            "userConsentDisplayName": "Read resource policy definitions",
+            "value": "ResourcePolicyDefinition.Read.All",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to read and write resource policy definitions, on behalf of the signed-in user.",
+            "adminConsentDisplayName": "Read and write resource policy definitions",
+            "id": "18a6e3c6-487b-493d-8d75-eaaeb423148b",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to read and write resource policy definitions, on your behalf.",
+            "userConsentDisplayName": "Read and write resource policy definitions",
+            "value": "ResourcePolicyDefinition.ReadWrite.All",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to evaluate resource policies, on behalf of the signed-in user.",
+            "adminConsentDisplayName": "Evaluate resource policies",
+            "id": "4df0af95-e674-4791-9c92-47278dacc30f",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to evaluate resource policies, on your behalf.",
+            "userConsentDisplayName": "Evaluate resource policies",
+            "value": "ResourcePolicyEvaluation.Read.All",
             "isPrivate": false
         },
         {
