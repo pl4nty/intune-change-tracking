@@ -735,9 +735,7 @@
                             "retainValuesOnDeSelection": false,
                             "deleteValuesOnDeSelection": false,
                             "hidden": false,
-                            "enabled": false,
-                            "flightingFeatureName": "enableWpa3SupportAE",
-                            "flightingFeatureAlwaysOverridesSprintFlighting": true
+                            "enabled": true
                         },
                         {
                             "nameResourceKey": "wPA3StrictEnterpriseOption",
@@ -747,48 +745,7 @@
                             "retainValuesOnDeSelection": false,
                             "deleteValuesOnDeSelection": false,
                             "hidden": false,
-                            "enabled": false,
-                            "flightingFeatureName": "enableWpa3SupportAE",
-                            "flightingFeatureAlwaysOverridesSprintFlighting": true
-                        },
-                        {
-                            "nameResourceKey": "wPA3Enterprise192BitOption",
-                            "value": "wpa3Enterprise192Bit",
-                            "children": [
-                                {
-                                    "hideIcon": false,
-                                    "hideUrl": true,
-                                    "removeBottomMargin": false,
-                                    "useStandardInfoBox": true,
-                                    "id": "AndroidDeviceOwnerWiFi_DeviceRestrictions_wPA3Enterprise192BitGuidance",
-                                    "dataType": 10,
-                                    "category": 44,
-                                    "nameResourceKey": "wPA3Enterprise192BitGuidance",
-                                    "inputControlLength": 0,
-                                    "validation": [],
-                                    "childSettings": [],
-                                    "options": [],
-                                    "isRequired": false,
-                                    "booleanActions": 0,
-                                    "policyType": 9,
-                                    "flipChildrenEnabledLogic": false,
-                                    "readOnly": false,
-                                    "writeOnce": false,
-                                    "enabled": true,
-                                    "multiItemIncludeSelectAll": false
-                                }
-                            ],
-                            "isRequired": false,
-                            "isDisabled": false,
-                            "retainValuesOnDeSelection": false,
-                            "deleteValuesOnDeSelection": false,
-                            "hidden": false,
-                            "enabled": false,
-                            "flightingFeatureNames": [
-                                "enableEccScepCertificateProfileUxAE",
-                                "enableEccPkcsCertificateProfileUxAE"
-                            ],
-                            "flightingFeatureAlwaysOverridesSprintFlighting": true
+                            "enabled": true
                         }
                     ],
                     "isRequired": true,
@@ -798,7 +755,9 @@
                     "flipChildrenEnabledLogic": false,
                     "readOnly": false,
                     "writeOnce": false,
-                    "enabled": true,
+                    "enabled": false,
+                    "flightingFeatureName": "enableWpa3SupportAE",
+                    "flightingFeatureAlwaysOverridesSprintFlighting": true,
                     "multiItemIncludeSelectAll": false
                 },
                 {
@@ -1143,7 +1102,6 @@
                                                                 6
                                                             ],
                                                             "linkedCert": true,
-                                                            "cnsaSecurityTypeEntityKey": "wiFiSecurityType",
                                                             "id": "AndroidDeviceOwnerWiFi_DeviceRestrictions_certificatesOption",
                                                             "dataType": 4,
                                                             "category": 44,
@@ -1173,7 +1131,6 @@
                                                                 6
                                                             ],
                                                             "linkedCert": true,
-                                                            "cnsaSecurityTypeEntityKey": "wiFiSecurityType",
                                                             "id": "AndroidDeviceOwnerWiFi_DeviceRestrictions_certificatesOption",
                                                             "dataType": 4,
                                                             "category": 44,
@@ -2329,12 +2286,6 @@
                     "readOnly": false,
                     "writeOnce": false,
                     "enabled": true,
-                    "linkedValidation": {
-                        "entityKey": "wiFiSecurityType",
-                        "linkedValidationType": 3,
-                        "linkedValidationArguments": "validateEapTypeForWpa3Enterprise192Bit",
-                        "validationMessageKey": "wPA3Enterprise192BitEapValidation"
-                    },
                     "multiItemIncludeSelectAll": false
                 },
                 {
