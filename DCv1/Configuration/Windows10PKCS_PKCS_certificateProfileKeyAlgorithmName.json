@@ -1,0 +1,68 @@
+{
+    "id": "Windows10PKCS_PKCS_certificateProfileKeyAlgorithmName",
+    "dataType": 16,
+    "category": 93,
+    "nameResourceKey": "certificateProfileKeyAlgorithmName",
+    "descriptionResourceKey": "certificateProfileKeyAlgorithmDescription",
+    "inputControlLength": 50,
+    "validation": [],
+    "childSettings": [],
+    "options": [
+        {
+            "nameResourceKey": "certificateProfileKeyAlgorithmRsa",
+            "value": "rsa",
+            "isRequired": false,
+            "isDisabled": false,
+            "retainValuesOnDeSelection": false,
+            "deleteValuesOnDeSelection": true,
+            "hidden": false,
+            "enabled": true
+        },
+        {
+            "nameResourceKey": "certificateProfileKeyAlgorithmEcc",
+            "value": "ecc",
+            "children": [
+                {
+                    "hideIcon": false,
+                    "hideUrl": true,
+                    "removeBottomMargin": false,
+                    "useStandardInfoBox": true,
+                    "id": "Windows10PKCS_PKCS_certificateProfileEccPkcsGuidance",
+                    "dataType": 10,
+                    "category": 93,
+                    "nameResourceKey": "certificateProfileEccPkcsGuidance",
+                    "inputControlLength": 0,
+                    "validation": [],
+                    "childSettings": [],
+                    "options": [],
+                    "isRequired": false,
+                    "booleanActions": 0,
+                    "policyType": 82,
+                    "flipChildrenEnabledLogic": false,
+                    "readOnly": false,
+                    "writeOnce": false,
+                    "enabled": true,
+                    "multiItemIncludeSelectAll": false
+                }
+            ],
+            "isRequired": false,
+            "isDisabled": false,
+            "retainValuesOnDeSelection": false,
+            "deleteValuesOnDeSelection": true,
+            "hidden": false,
+            "enabled": true
+        }
+    ],
+    "isRequired": true,
+    "entityKey": "keyAlgorithm",
+    "booleanActions": 0,
+    "defaultValue": "rsa",
+    "policyType": 82,
+    "flipChildrenEnabledLogic": false,
+    "readOnly": false,
+    "writeOnce": true,
+    "enabled": true,
+    "flightingFeatureName": "enableEccPkcsCertificateProfileUxWindows",
+    "flightingFeatureAlwaysOverridesSprintFlighting": true,
+    "multiItemIncludeSelectAll": false
+}

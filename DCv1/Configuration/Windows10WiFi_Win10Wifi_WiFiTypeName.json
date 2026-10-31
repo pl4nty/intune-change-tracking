@@ -867,7 +867,48 @@
                             "retainValuesOnDeSelection": false,
                             "deleteValuesOnDeSelection": false,
                             "hidden": false,
-                            "enabled": true
+                            "enabled": false,
+                            "flightingFeatureName": "enableWpa3SupportWindows",
+                            "flightingFeatureAlwaysOverridesSprintFlighting": true
+                        },
+                        {
+                            "nameResourceKey": "wPA3Enterprise192BitOption",
+                            "value": "wpa3Enterprise192Bit",
+                            "children": [
+                                {
+                                    "hideIcon": false,
+                                    "hideUrl": true,
+                                    "removeBottomMargin": false,
+                                    "useStandardInfoBox": true,
+                                    "id": "Windows10WiFi_Win10Wifi_wPA3Enterprise192BitGuidance",
+                                    "dataType": 10,
+                                    "category": 122,
+                                    "nameResourceKey": "wPA3Enterprise192BitGuidance",
+                                    "inputControlLength": 0,
+                                    "validation": [],
+                                    "childSettings": [],
+                                    "options": [],
+                                    "isRequired": false,
+                                    "booleanActions": 0,
+                                    "policyType": 90,
+                                    "flipChildrenEnabledLogic": false,
+                                    "readOnly": false,
+                                    "writeOnce": false,
+                                    "enabled": true,
+                                    "multiItemIncludeSelectAll": false
+                                }
+                            ],
+                            "isRequired": false,
+                            "isDisabled": false,
+                            "retainValuesOnDeSelection": false,
+                            "deleteValuesOnDeSelection": false,
+                            "hidden": false,
+                            "enabled": false,
+                            "flightingFeatureNames": [
+                                "enableEccScepCertificateProfileUxWindows",
+                                "enableEccPkcsCertificateProfileUxWindows"
+                            ],
+                            "flightingFeatureAlwaysOverridesSprintFlighting": true
                         }
                     ],
                     "isRequired": false,
@@ -877,9 +918,7 @@
                     "flipChildrenEnabledLogic": false,
                     "readOnly": false,
                     "writeOnce": false,
-                    "enabled": false,
-                    "flightingFeatureName": "enableWpa3SupportWindows",
-                    "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                    "enabled": true,
                     "multiItemIncludeSelectAll": false
                 },
                 {
@@ -1939,6 +1978,7 @@
                                                                 84
                                                             ],
                                                             "linkedCert": true,
+                                                            "cnsaSecurityTypeEntityKey": "wifiSecurityType",
                                                             "id": "Windows10WiFi_Win10Wifi_selectCertificateProfile",
                                                             "dataType": 4,
                                                             "category": 122,
@@ -2001,6 +2041,7 @@
                                                                 82
                                                             ],
                                                             "linkedCert": true,
+                                                            "cnsaSecurityTypeEntityKey": "wifiSecurityType",
                                                             "id": "Windows10WiFi_Win10Wifi_selectCertificateProfile",
                                                             "dataType": 4,
                                                             "category": 122,
@@ -2135,6 +2176,7 @@
                                                                 83
                                                             ],
                                                             "linkedCert": true,
+                                                            "cnsaSecurityTypeEntityKey": "wifiSecurityType",
                                                             "id": "Windows10WiFi_Win10Wifi_selectCertificateProfile",
                                                             "dataType": 4,
                                                             "category": 122,
@@ -2274,6 +2316,7 @@
                                                 84
                                             ],
                                             "linkedCert": true,
+                                            "cnsaSecurityTypeEntityKey": "wifiSecurityType",
                                             "id": "Windows10WiFi_Win10Wifi_selectCertificateProfile",
                                             "dataType": 4,
                                             "category": 122,
@@ -4002,6 +4045,12 @@
                     "readOnly": false,
                     "writeOnce": false,
                     "enabled": true,
+                    "linkedValidation": {
+                        "entityKey": "wifiSecurityType",
+                        "linkedValidationType": 3,
+                        "linkedValidationArguments": "validateEapTypeForWpa3Enterprise192Bit",
+                        "validationMessageKey": "wPA3Enterprise192BitEapValidation"
+                    },
                     "multiItemIncludeSelectAll": false
                 },
                 {
@@ -4470,7 +4519,48 @@
                             "retainValuesOnDeSelection": false,
                             "deleteValuesOnDeSelection": false,
                             "hidden": false,
-                            "enabled": true
+                            "enabled": false,
+                            "flightingFeatureName": "enableWpa3SupportWindows",
+                            "flightingFeatureAlwaysOverridesSprintFlighting": true
+                        },
+                        {
+                            "nameResourceKey": "wPA3Enterprise192BitOption",
+                            "value": "wpa3Enterprise192Bit",
+                            "children": [
+                                {
+                                    "hideIcon": false,
+                                    "hideUrl": true,
+                                    "removeBottomMargin": false,
+                                    "useStandardInfoBox": true,
+                                    "id": "Windows10WiFi_Win10Wifi_wPA3Enterprise192BitGuidance",
+                                    "dataType": 10,
+                                    "category": 122,
+                                    "nameResourceKey": "wPA3Enterprise192BitGuidance",
+                                    "inputControlLength": 0,
+                                    "validation": [],
+                                    "childSettings": [],
+                                    "options": [],
+                                    "isRequired": false,
+                                    "booleanActions": 0,
+                                    "policyType": 90,
+                                    "flipChildrenEnabledLogic": false,
+                                    "readOnly": false,
+                                    "writeOnce": false,
+                                    "enabled": true,
+                                    "multiItemIncludeSelectAll": false
+                                }
+                            ],
+                            "isRequired": false,
+                            "isDisabled": false,
+                            "retainValuesOnDeSelection": false,
+                            "deleteValuesOnDeSelection": false,
+                            "hidden": false,
+                            "enabled": false,
+                            "flightingFeatureNames": [
+                                "enableEccScepCertificateProfileUxWindows",
+                                "enableEccPkcsCertificateProfileUxWindows"
+                            ],
+                            "flightingFeatureAlwaysOverridesSprintFlighting": true
                         }
                     ],
                     "isRequired": false,
@@ -4480,9 +4570,7 @@
                     "flipChildrenEnabledLogic": false,
                     "readOnly": false,
                     "writeOnce": false,
-                    "enabled": false,
-                    "flightingFeatureName": "enableWpa3SupportWindows",
-                    "flightingFeatureAlwaysOverridesSprintFlighting": true,
+                    "enabled": true,
                     "multiItemIncludeSelectAll": false
                 },
                 {
@@ -5542,6 +5630,7 @@
                                                                 84
                                                             ],
                                                             "linkedCert": true,
+                                                            "cnsaSecurityTypeEntityKey": "wifiSecurityType",
                                                             "id": "Windows10WiFi_Win10Wifi_selectCertificateProfile",
                                                             "dataType": 4,
                                                             "category": 122,
@@ -5604,6 +5693,7 @@
                                                                 82
                                                             ],
                                                             "linkedCert": true,
+                                                            "cnsaSecurityTypeEntityKey": "wifiSecurityType",
                                                             "id": "Windows10WiFi_Win10Wifi_selectCertificateProfile",
                                                             "dataType": 4,
                                                             "category": 122,
@@ -5738,6 +5828,7 @@
                                                                 83
                                                             ],
                                                             "linkedCert": true,
+                                                            "cnsaSecurityTypeEntityKey": "wifiSecurityType",
                                                             "id": "Windows10WiFi_Win10Wifi_selectCertificateProfile",
                                                             "dataType": 4,
                                                             "category": 122,
@@ -5878,6 +5969,7 @@
                                                 82
                                             ],
                                             "linkedCert": true,
+                                            "cnsaSecurityTypeEntityKey": "wifiSecurityType",
                                             "id": "Windows10WiFi_Win10Wifi_selectCertificateProfile",
                                             "dataType": 4,
                                             "category": 122,
@@ -7608,6 +7700,12 @@
                     "readOnly": false,
                     "writeOnce": false,
                     "enabled": true,
+                    "linkedValidation": {
+                        "entityKey": "wifiSecurityType",
+                        "linkedValidationType": 3,
+                        "linkedValidationArguments": "validateEapTypeForWpa3Enterprise192Bit",
+                        "validationMessageKey": "wPA3Enterprise192BitEapValidation"
+                    },
                     "multiItemIncludeSelectAll": false
                 },
                 {
