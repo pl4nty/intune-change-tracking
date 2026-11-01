@@ -701,6 +701,45 @@
                             "enabled": false,
                             "flightingFeatureName": "enableWpa3SupportIos",
                             "flightingFeatureAlwaysOverridesSprintFlighting": true
+                        },
+                        {
+                            "nameResourceKey": "wPA3Enterprise192BitOption",
+                            "value": "wpa3Enterprise192Bit",
+                            "children": [
+                                {
+                                    "hideIcon": false,
+                                    "hideUrl": true,
+                                    "removeBottomMargin": false,
+                                    "useStandardInfoBox": true,
+                                    "id": "IosWiFi_WiFi_wPA3Enterprise192BitGuidance",
+                                    "dataType": 10,
+                                    "category": 121,
+                                    "nameResourceKey": "wPA3Enterprise192BitGuidance",
+                                    "inputControlLength": 0,
+                                    "validation": [],
+                                    "childSettings": [],
+                                    "options": [],
+                                    "isRequired": false,
+                                    "booleanActions": 0,
+                                    "policyType": 54,
+                                    "flipChildrenEnabledLogic": false,
+                                    "readOnly": false,
+                                    "writeOnce": false,
+                                    "enabled": true,
+                                    "multiItemIncludeSelectAll": false
+                                }
+                            ],
+                            "isRequired": false,
+                            "isDisabled": false,
+                            "retainValuesOnDeSelection": false,
+                            "deleteValuesOnDeSelection": false,
+                            "hidden": false,
+                            "enabled": false,
+                            "flightingFeatureNames": [
+                                "enableEccScepCertificateProfileUxIos",
+                                "enableEccPkcsCertificateProfileUxIos"
+                            ],
+                            "flightingFeatureAlwaysOverridesSprintFlighting": true
                         }
                     ],
                     "isRequired": true,
@@ -1179,6 +1218,7 @@
                                                                 48
                                                             ],
                                                             "linkedCert": true,
+                                                            "cnsaSecurityTypeEntityKey": "wiFiSecurityType",
                                                             "id": "IosWiFi_WiFi_certificatesOption",
                                                             "dataType": 4,
                                                             "category": 121,
@@ -1209,6 +1249,7 @@
                                                                 47
                                                             ],
                                                             "linkedCert": true,
+                                                            "cnsaSecurityTypeEntityKey": "wiFiSecurityType",
                                                             "id": "IosWiFi_WiFi_certificatesOption",
                                                             "dataType": 4,
                                                             "category": 121,
@@ -2364,6 +2405,12 @@
                     "readOnly": false,
                     "writeOnce": false,
                     "enabled": true,
+                    "linkedValidation": {
+                        "entityKey": "wiFiSecurityType",
+                        "linkedValidationType": 3,
+                        "linkedValidationArguments": "validateEapTypeForWpa3Enterprise192Bit",
+                        "validationMessageKey": "wPA3Enterprise192BitEapValidation"
+                    },
                     "multiItemIncludeSelectAll": false
                 },
                 {
