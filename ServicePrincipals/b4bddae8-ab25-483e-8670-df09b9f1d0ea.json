@@ -143,12 +143,12 @@
             "allowedMemberTypes": [
                 "Application"
             ],
-            "description": "Allows the apps to create tenant, save tenant profile and add company tags",
-            "displayName": "Tenant.Create",
-            "id": "fca3dabc-fd9a-4d63-bc1f-196bfa2df787",
+            "description": "Allows apps to call ModernPostPurchaseProvisioning API",
+            "displayName": "ModernPostPurchaseProvisioning.Execute",
+            "id": "8339ddc4-fc04-4ad0-b7d5-b7d83667da93",
             "isEnabled": true,
             "origin": "Application",
-            "value": "Tenant.Create",
+            "value": "ModernPostPurchaseProvisioning.Execute",
             "isPreAuthorizationRequired": false,
             "isPrivate": false
         },
@@ -156,12 +156,12 @@
             "allowedMemberTypes": [
                 "Application"
             ],
-            "description": "Allows apps to call ModernPostPurchaseProvisioning API",
-            "displayName": "ModernPostPurchaseProvisioning.Execute",
-            "id": "8339ddc4-fc04-4ad0-b7d5-b7d83667da93",
+            "description": "Allows the apps to create tenant, save tenant profile and add company tags",
+            "displayName": "Tenant.Create",
+            "id": "fca3dabc-fd9a-4d63-bc1f-196bfa2df787",
             "isEnabled": true,
             "origin": "Application",
-            "value": "ModernPostPurchaseProvisioning.Execute",
+            "value": "Tenant.Create",
             "isPreAuthorizationRequired": false,
             "isPrivate": false
         }
@@ -176,36 +176,14 @@
     "keyCredentials": [],
     "publishedPermissionScopes": [
         {
-            "adminConsentDescription": "Allows the app to assign license for a product",
-            "adminConsentDisplayName": "License.Assign",
-            "id": "8a82ad6b-9201-4f8e-a324-b97e0fcd3e46",
+            "adminConsentDescription": "Allows the caller to perform low friction trial for the given user.",
+            "adminConsentDisplayName": "LowFriction.ReadWrite",
+            "id": "0ec94f6b-7dfb-43d3-a076-648593587760",
             "isEnabled": true,
             "type": "User",
-            "userConsentDescription": "Allows the app to assign license for a product",
-            "userConsentDisplayName": "License.Assign",
-            "value": "License.Assign",
-            "isPrivate": false
-        },
-        {
-            "adminConsentDescription": "Allows the app to send distributed emails to impacted users post system outage",
-            "adminConsentDisplayName": "Soar.SendEmail",
-            "id": "83e1ccc9-47d7-4632-8fbd-1a4392c87254",
-            "isEnabled": true,
-            "type": "User",
-            "userConsentDescription": "This allows the app to send distributed emails to impacted users post system outage",
-            "userConsentDisplayName": "Send distributed emails",
-            "value": "Soar.SendEmail",
-            "isPrivate": false
-        },
-        {
-            "adminConsentDescription": "Allows the app to add managed subscriptions to a tenant",
-            "adminConsentDisplayName": "Add subscriptions",
-            "id": "dc13fe4e-f936-494b-8b88-09d4e9a5cde0",
-            "isEnabled": true,
-            "type": "Admin",
-            "userConsentDescription": "Allows the app to add managed subscriptions to a tenant",
-            "userConsentDisplayName": "Add subscriptions",
-            "value": "Subscription.Add",
+            "userConsentDescription": "Allows the caller to perform low friction trial for the given user.",
+            "userConsentDisplayName": "LowFriction.ReadWrite",
+            "value": "LowFriction.ReadWrite",
             "isPrivate": false
         },
         {
@@ -220,14 +198,36 @@
             "isPrivate": false
         },
         {
-            "adminConsentDescription": "Allows the caller to perform low friction trial for the given user.",
-            "adminConsentDisplayName": "LowFriction.ReadWrite",
-            "id": "0ec94f6b-7dfb-43d3-a076-648593587760",
+            "adminConsentDescription": "Allows the app to add managed subscriptions to a tenant",
+            "adminConsentDisplayName": "Add subscriptions",
+            "id": "dc13fe4e-f936-494b-8b88-09d4e9a5cde0",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to add managed subscriptions to a tenant",
+            "userConsentDisplayName": "Add subscriptions",
+            "value": "Subscription.Add",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to send distributed emails to impacted users post system outage",
+            "adminConsentDisplayName": "Soar.SendEmail",
+            "id": "83e1ccc9-47d7-4632-8fbd-1a4392c87254",
             "isEnabled": true,
             "type": "User",
-            "userConsentDescription": "Allows the caller to perform low friction trial for the given user.",
-            "userConsentDisplayName": "LowFriction.ReadWrite",
-            "value": "LowFriction.ReadWrite",
+            "userConsentDescription": "This allows the app to send distributed emails to impacted users post system outage",
+            "userConsentDisplayName": "Send distributed emails",
+            "value": "Soar.SendEmail",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to assign license for a product",
+            "adminConsentDisplayName": "License.Assign",
+            "id": "8a82ad6b-9201-4f8e-a324-b97e0fcd3e46",
+            "isEnabled": true,
+            "type": "User",
+            "userConsentDescription": "Allows the app to assign license for a product",
+            "userConsentDisplayName": "License.Assign",
+            "value": "License.Assign",
             "isPrivate": false
         }
     ],
