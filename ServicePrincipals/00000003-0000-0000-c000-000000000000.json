@@ -1509,6 +1509,32 @@
             "allowedMemberTypes": [
                 "Application"
             ],
+            "description": "Allows the app to read all security automation rules and runs, without a signed-in user.",
+            "displayName": "Read all security automation rules and runs",
+            "id": "d80433ba-c09b-4b88-a6bf-1082396453c1",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "AutomationRules.Read.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to read and write all security automation rules, and read their runs, without a signed-in user.",
+            "displayName": "Read and write all security automation rules",
+            "id": "7204d4f0-1c22-42ce-adf2-a9f29db01c68",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "AutomationRules.ReadWrite.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
             "description": "Allows the app to read all backup configurations, and lists of Microsoft 365 service resources to be backed-up, without a signed-in user.",
             "displayName": "Read all backup configuration policies",
             "id": "5fbb5982-3230-4882-93c0-2167523ce0c2",
@@ -2419,6 +2445,19 @@
             "allowedMemberTypes": [
                 "Application"
             ],
+            "description": "Allows an approved app to claim and unclaim supported product licenses for users in the tenant, without a signed-in user.",
+            "displayName": "Claim and unclaim cloud licenses",
+            "id": "4c0843c0-d623-4e87-b4c1-93777f7be9e8",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "CloudLicensing.ClaimLicenses.All",
+            "isPreAuthorizationRequired": true,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
             "description": "Allows the app to read the properties of Cloud PCs, without a signed-in user.",
             "displayName": "Read Cloud PCs",
             "id": "a9e09520-8ed4-4cde-838e-4fdea192c227",
@@ -2659,6 +2698,84 @@
             "isEnabled": true,
             "origin": "Application",
             "value": "Contracts.Read.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to read which users and security groups each Copilot spending policy applies to, without a signed-in user. This exposes the identifiers of the security groups and the users that are targeted by each policy.",
+            "displayName": "Read Copilot spending policy assignments",
+            "id": "8e41e0e4-d03a-475a-8ece-129d8cde33f2",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "CopilotCostManagement-Assignment.Read.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to read and change which users and security groups each Copilot spending policy applies to, without a signed-in user. Adding or removing an assignment immediately changes which users are subject to that policy's spending limits, and may grant or remove their ability to consume Copilot credits. This also exposes the identifiers of the security groups targeted by each policy.",
+            "displayName": "Read and write Copilot spending policy assignments",
+            "id": "e8d341e1-ddd7-422e-83ee-b3cd34f21d0a",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "CopilotCostManagement-Assignment.ReadWrite.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to read Copilot spending policies and their configuration without a signed-in user, including budget limits and alert thresholds. This also exposes the identities of the users who created and last modified each policy and of the users who receive its alert notifications.",
+            "displayName": "Read Copilot spending policies",
+            "id": "7f06c49d-bf28-43b5-bad0-0805f51d0bf7",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "CopilotCostManagement-Policy.Read.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to read, create, update, and delete Copilot spending policies without a signed-in user. It can set the initial audience, read and change alert recipients, and select a billing method. New or changed policies may take effect immediately and restrict user spending. The app can also see who created and last modified each policy.",
+            "displayName": "Read and write Copilot spending policies",
+            "id": "14b35599-28a4-4a40-bc65-7cdca3d4e141",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "CopilotCostManagement-Policy.ReadWrite.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to read the organization's aggregate Copilot cost data without a signed-in user, including its credit balance and usage and spending reports. It can also check Copilot cost export job status and download completed exports, which may contain full report details. This permission is separate from Reports.Read.All for Microsoft 365 Copilot usage reporting.",
+            "displayName": "Read Copilot cost reports and export results",
+            "id": "ec42fb68-397f-40ab-baa1-c8d0b745a680",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "CopilotCostManagement-Reports.Read.All",
+            "isPreAuthorizationRequired": false,
+            "isPrivate": false
+        },
+        {
+            "allowedMemberTypes": [
+                "Application"
+            ],
+            "description": "Allows the app to read all organizational Copilot cost management data without a signed-in user, including any user's credit balance, per-user rankings and itemized usage, usage by security group, spending policies, their configuration and assignments, and the identities of policy creators, modifiers, and alert recipients. This is the broadest Copilot cost management read permission.",
+            "displayName": "Read all Copilot cost management data",
+            "id": "f033faa1-6d51-46ba-824a-ad86f514eed1",
+            "isEnabled": true,
+            "origin": "Application",
+            "value": "CopilotCostManagement.Read.All",
             "isPreAuthorizationRequired": false,
             "isPrivate": false
         },
@@ -11507,6 +11624,28 @@
             "isPrivate": false
         },
         {
+            "adminConsentDescription": "Allows the app to read all security automation rules and runs, on behalf of the signed-in user.",
+            "adminConsentDisplayName": "Read all security automation rules and runs",
+            "id": "bca94595-72ec-4c72-9d5b-dd0161da49bb",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to read all security automation rules and runs that you have access to.",
+            "userConsentDisplayName": "Read all security automation rules and runs",
+            "value": "AutomationRules.Read.All",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to read and write all security automation rules, and read their runs, on behalf of the signed-in user.",
+            "adminConsentDisplayName": "Read and write all security automation rules",
+            "id": "8319ce7f-47f7-4c79-b118-9690338f9356",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to read and write all security automation rules, and read their runs, that you have access to.",
+            "userConsentDisplayName": "Read and write all security automation rules",
+            "value": "AutomationRules.ReadWrite.All",
+            "isPrivate": false
+        },
+        {
             "adminConsentDescription": "Allows the app to read the backup configuration, and list of Microsoft 365 service resources to be backed-up, on behalf of the signed in user.",
             "adminConsentDisplayName": "Read backup configuration policies",
             "id": "444ed4b6-0554-4dc6-8e9c-3f9a34ee3ff6",
@@ -12516,6 +12655,17 @@
             "userConsentDescription": "Allows the app to read, create, update, and delete your organization's Copilot spending policies on your behalf, including changing who receives a policy's spending alerts. Creating a policy also sets who it applies to, may take effect immediately and begin restricting how much users can spend, and may include selecting the billing method that funds it.",
             "userConsentDisplayName": "Read and write Copilot spending policies",
             "value": "CopilotCostManagement-Policy.ReadWrite.All",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to read the organization's aggregate Copilot cost data on behalf of the signed-in user, including its credit balance and usage and spending reports. It can also check Copilot cost export job status and download completed exports, which may contain full report details. This permission is separate from Reports.Read.All for Microsoft 365 Copilot usage reporting.",
+            "adminConsentDisplayName": "Read Copilot cost reports and export results",
+            "id": "db3b53cd-01a9-45db-8f48-b97de4e9e8ff",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to read your organization's aggregate Copilot cost data on your behalf, including its Copilot credit balance and aggregate usage and spending reports, and to check and download the results of Copilot cost export jobs.",
+            "userConsentDisplayName": "Read Copilot cost reports and export results",
+            "value": "CopilotCostManagement-Reports.Read.All",
             "isPrivate": false
         },
         {
@@ -14576,6 +14726,17 @@
             "isPrivate": false
         },
         {
+            "adminConsentDescription": "Allows the app to read the attribute values the signed-in user can apply to a document.",
+            "adminConsentDisplayName": "Read your information protection attribute assignments.",
+            "id": "249ac77a-2c50-4a29-a441-5f5ea69e8dae",
+            "isEnabled": true,
+            "type": "User",
+            "userConsentDescription": "Allows the app to read the attribute values you can apply to a document.",
+            "userConsentDisplayName": "Read your information protection attribute assignments.",
+            "value": "InfoProtectAttributeAssignment.Read",
+            "isPrivate": false
+        },
+        {
             "adminConsentDescription": "Allows the app to read ABAC attribute assignments for users, on behalf of the signed-in user.",
             "adminConsentDisplayName": "Read information protection attribute assignments.",
             "id": "53216fbf-d31e-415b-9c4c-486a30f2aa8f",
@@ -15200,6 +15361,17 @@
             "userConsentDescription": "Allows the app to read and write all managed tenant information on your behalf.",
             "userConsentDisplayName": "Read and write all managed tenant information",
             "value": "ManagedTenants.ReadWrite.All",
+            "isPrivate": false
+        },
+        {
+            "adminConsentDescription": "Allows the app to connect to and call the Microsoft Graph Model Context Protocol (MCP) server on behalf of the signed-in user.",
+            "adminConsentDisplayName": "Access the Microsoft Graph MCP server",
+            "id": "e0cdafaf-ffab-413a-9fe4-c85afbe0fa56",
+            "isEnabled": true,
+            "type": "Admin",
+            "userConsentDescription": "Allows the app to connect to the Microsoft Graph MCP server on your behalf.",
+            "userConsentDisplayName": "Access the Microsoft Graph MCP server",
+            "value": "MCP.Server.Access",
             "isPrivate": false
         },
         {
