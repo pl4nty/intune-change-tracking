@@ -1,0 +1,62 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#m365authpopupsinworkenabled"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "M365AuthPopupsInWorkEnabled",
+    "rootDefinitionId": "com.apple.managedclient.preferences_m365authpopupsinworkenabled",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_m365authpopupsinworkenabled",
+    "description": "This policy controls whether Microsoft Edge allows Microsoft 365 authentication pop-ups to bypass the pop-up blocker in work profiles.\n\nWhen users are signed in with a work account, some Microsoft 365 sites (for example, microsoft.com, cloud.microsoft, and visualstudio.com) may open authentication pop-ups to login.microsoftonline.com, login.live.com, or login.microsoft.com. These pop-ups are required to complete sign-in.\n\nIf you enable this policy or don't configure it, Microsoft 365 authentication pop-ups are allowed in work profiles.\n\nIf you disable this policy, Microsoft 365 authentication pop-ups follow the default settings like other pop-ups.",
+    "helpText": null,
+    "name": "M365AuthPopupsInWorkEnabled",
+    "displayName": "Allow M365 authentication popups in work profiles",
+    "defaultOptionId": "com.apple.managedclient.preferences_m365authpopupsinworkenabled_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_m365authpopupsinworkenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_m365authpopupsinworkenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

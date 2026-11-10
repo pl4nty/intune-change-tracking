@@ -1,0 +1,95 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Source Trust Level",
+        "App Update"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/AppUpdate-csp/"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/AppUpdate",
+    "offsetUri": "/Sources/{0}/SourceTrustLevel",
+    "rootDefinitionId": "device_vendor_msft_appupdate_sources_{sourceid}",
+    "categoryId": "f62a9ae3-5ad4-4a12-867f-e3b4acfe920a",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_appupdate_sources_{sourceid}_sourcetrustlevel",
+    "description": "Source trust level matching Windows Package Manager: 0 is None and 1 is Trusted. The default is None.\r\n This setting is only available to Windows Insiders",
+    "helpText": "",
+    "name": "SourceTrustLevel",
+    "displayName": "Source Trust Level (Windows Insiders only)",
+    "defaultOptionId": "device_vendor_msft_appupdate_sources_{sourceid}_sourcetrustlevel_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.25272",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_appupdate_sources_{sourceid}_sourcetrustlevel_0",
+            "description": "None.",
+            "helpText": null,
+            "name": "None.",
+            "displayName": "None.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_appupdate_sources_{sourceid}",
+                    "parentSettingId": "device_vendor_msft_appupdate_sources_{sourceid}"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_appupdate_sources_{sourceid}_sourcetrustlevel_1",
+            "description": "Trusted.",
+            "helpText": null,
+            "name": "Trusted.",
+            "displayName": "Trusted.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_appupdate_sources_{sourceid}",
+                    "parentSettingId": "device_vendor_msft_appupdate_sources_{sourceid}"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#pacmyipaddressipv6probeaddress"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "PacMyIpAddressIPv6ProbeAddress",
+    "rootDefinitionId": "com.apple.managedclient.preferences_pacmyipaddressipv6probeaddress",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_pacmyipaddressipv6probeaddress",
+    "description": "This policy sets the IPv6 destination that Microsoft Edge uses to determine the local network address or addresses returned to PAC scripts by the myIpAddress() and myIpAddressEx() helper functions. The route probe sends no application data.\n\nThis policy applies only when Microsoft Edge uses its built-in proxy resolver to evaluate PAC scripts. It doesn't apply when a native or system resolver is used.\n\nIf you configure this policy, set it to a valid IPv6 address literal. Host names, malformed values, IPv4 addresses, loopback addresses, link-local addresses, and multicast addresses are rejected. IPv4-mapped IPv6 addresses and the unspecified address are also rejected. Private addresses are supported.\n\nIf you don't configure this policy or configure it with an empty string, Microsoft Edge uses its built-in default IPv6 destination. The built-in destination can change between versions.\n\nA browser restart is required for changes to take effect.",
+    "helpText": null,
+    "name": "PacMyIpAddressIPv6ProbeAddress",
+    "displayName": "Set the IPv6 route-probe address for PAC scripts",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

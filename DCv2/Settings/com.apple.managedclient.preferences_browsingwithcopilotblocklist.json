@@ -1,0 +1,49 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#browsingwithcopilotblocklist"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "BrowsingWithCopilotBlockList",
+    "rootDefinitionId": "com.apple.managedclient.preferences_browsingwithcopilotblocklist",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_browsingwithcopilotblocklist",
+    "description": "Controls the list of URLs where browsing with Copilot is blocked. Users can't modify this list.\n\nUse this policy to define exceptions to broader allowlists. For example, you can set \"BrowsingWithCopilotAllowList\" to '*' to allow all sites, and then use this policy to block access to specific URLs.\n\nThis policy supports blocking by scheme, subdomain, or port. When multiple URL patterns apply, the most specific match determines whether access is allowed or blocked. Blocklist entries take precedence over allowlist entries.\n\nIf you don't configure this policy, no exceptions are applied to \"BrowsingWithCopilotAllowList\".\n\nBrowsing with Copilot supports only HTTP and HTTPS protocols. Wildcards (*) are supported, and subdomains are matched even without wildcards. URL matching is based on the site origin only; any path specified in the pattern is ignored.\n\nFor information about URL pattern format, see https://go.microsoft.com/fwlink/?linkid=2095322.",
+    "helpText": null,
+    "name": "BrowsingWithCopilotBlockList",
+    "displayName": "Browsing with Copilot Blocked URLs",
+    "maximumCount": 600,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

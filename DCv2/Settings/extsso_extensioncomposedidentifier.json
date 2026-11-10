@@ -1,0 +1,50 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Extensible SSO"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "ExtensionComposedIdentifier",
+    "rootDefinitionId": "extsso_extensiblesso",
+    "categoryId": "63ce76b9-0ac3-4561-9ca4-ad87a08322d7",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "extsso_extensioncomposedidentifier",
+    "description": "The identifier of the provider to use for this configuration. Useful for apps that contain more than one DNS proxy extension.\n\nIn iOS and visionOS, the identifier is a bundle ID, for example, \"com.example.app.sso-extension\".\n\nIn macOS, the identifier is a composed identifier. The format of the composed identifier is \"Bundle-ID (Team-ID)\". \"Bundle-ID\" is the bundle identifier string of the app extension. \"Team-ID\" is the team identifier from the app extension's code signature. For example, \"com.example.app.sso-extension (ABCD1234)\".",
+    "helpText": null,
+    "name": "ExtensionComposedIdentifier",
+    "displayName": "Extension Composed Identifier",
+    "applicability": {
+        "description": null,
+        "platform": "iOS,macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "extsso_extensiblesso",
+            "parentSettingId": "extsso_extensiblesso"
+        }
+    ],
+    "dependedOnBy": []
+}

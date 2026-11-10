@@ -17,7 +17,7 @@
     "visibility": "settingsCatalog,template",
     "riskLevel": "low",
     "id": "com.apple.managedclient.preferences_idletimeout",
-    "description": "Triggers an action when the computer is idle.\n\nIf you set this policy, it specifies the length of time without user input (in minutes) before the browser runs actions configured via the IdleTimeoutActions policy.\n\nIf you do not set this policy, no action will run.\n\nThe minimum threshold is 1 minute.\n\n\"User input\" is defined by Operating System APIs, and includes things like moving the mouse or typing on the keyboard.",
+    "description": "Triggers an action when the computer is idle.\n\nIf you set this policy, it specifies the length of time without user input, in minutes, before the browser runs actions configured via the IdleTimeoutActions policy.\n\nIf you don't set this policy, the browser doesn't run any actions.\n\nThe minimum threshold is 1 minute.\n\n\"User input\" is defined by operating system APIs and includes actions such as moving the mouse or typing on the keyboard.\n\nOn Android, the operating system doesn't report the time since the user last interacted with the device. Instead, idle time is measured from the moment the device screen turns off, and it resets to zero when the user unlocks the device. While the screen is on, idle time is always zero, no matter how long the browser is left untouched. Idle actions therefore run after the device stays locked for longer than the configured timeout. The user sees the result the next time they unlock the device.",
     "helpText": null,
     "name": "IdleTimeout",
     "displayName": "Delay before running idle actions",

@@ -1,0 +1,49 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#localnetworkblockedforurls"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "LocalNetworkBlockedForUrls",
+    "rootDefinitionId": "com.apple.managedclient.preferences_localnetworkblockedforurls",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_localnetworkblockedforurls",
+    "description": "Controls which website origins are blocked from making Local Network Access requests to local network endpoints.\n\nNetwork requests initiated from websites that match the specified URL patterns are blocked from issuing Local Network Access requests.\n\nFor origins not covered by the patterns specified in this policy, the user's personal configuration applies.\n\nFor detailed information about valid URL patterns, see https://learn.microsoft.com/deployedge/edge-learnmore-ent-policy-url-patterns.\n\nFor more information about Local Network Access restrictions, see https://wicg.github.io/local-network-access/.\n\nMultiple policies can list origins that affect requests to local network endpoints. If an origin matches more than one of the following policies, they take precedence in the following order:\n- LocalNetworkBlockedForUrls\n- LocalNetworkAllowedForUrls\n- LocalNetworkAccessBlockedForUrls\n- LocalNetworkAccessAllowedForUrls\n\nThis policy controls access to local network endpoints (private IP addresses) and can be used to block specific websites from accessing local network resources.",
+    "helpText": null,
+    "name": "LocalNetworkBlockedForUrls",
+    "displayName": "Block sites from making network requests to local network endpoints.",
+    "maximumCount": 600,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

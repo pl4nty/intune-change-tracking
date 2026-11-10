@@ -18,10 +18,10 @@
     "visibility": "settingsCatalog,template",
     "riskLevel": "low",
     "id": "com.apple.managedclient.preferences_maxconnectionsperproxy",
-    "description": "Specifies the maximum number of simultaneous connections to the proxy server.\n\nSome proxy servers can't handle a high number of concurrent connections per client - you can solve this by setting this policy to a lower value.\n\nThe value of this policy should be lower than 100 and higher than 6. The default value is 32.\n\nSome web apps are known to consume many connections with hanging GETs - lowering the maximum connections below 32 may lead to browser networking hangs if too many of these kind of web apps are open.\n\nIf you don't configure this policy, the default value (32) is used.",
+    "description": "This policy configures the maximum number of simultaneous connections to a proxy server.\n\nSome web applications maintain multiple long-lived connections, such as hanging GET requests. Setting this policy to a value lower than the default might cause browser networking issues when many of these applications are open.\n\nTo configure WebSocket request limits, use the \"MaxConnectionsPerProxyForWebSocket\" policy.\n\nIf you don't configure this policy, the default value of 128 is used.\n\nThe value must be between 6 and 256:\n- Values lower than 6 are treated as 6.\n- Values higher than 256 are treated as 256. In Microsoft Edge version 148 and earlier, values higher than 99 are treated as 99.\n\nWhen the \"AllowSocketPoolSizeRandomizationForProxies\" policy is enabled, which is the default, the effective upper limit can be randomized up to two times the value specified by this policy as a security mechanism.\n\nWe recommend changing this value from the default only when required by your proxy server configuration.",
     "helpText": null,
     "name": "MaxConnectionsPerProxy",
-    "displayName": "Maximum number of concurrent connections to the proxy server",
+    "displayName": "Maximum number of concurrent connections to the proxy server for non-WebSocket requests",
     "applicability": {
         "description": null,
         "platform": "macOS",

@@ -1,0 +1,101 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Apps Deadline Enabled",
+        "Update",
+        "Windows Update For Business",
+        "Windows update client policy"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Update#appsdeadlineenabled"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Update/AppsDeadlineEnabled",
+    "rootDefinitionId": "device_vendor_msft_policy_config_update_appsdeadlineenabled",
+    "categoryId": "0e6c9053-73d6-4c56-9147-53513f6eefd8",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_update_appsdeadlineenabled",
+    "description": "Specifies whether app update compliance deadline policies are enabled.\r\n This setting is only available to Windows Insiders",
+    "helpText": "",
+    "name": "AppsDeadlineEnabled",
+    "displayName": "Apps Deadline Enabled (Windows Insiders only)",
+    "defaultOptionId": "device_vendor_msft_policy_config_update_appsdeadlineenabled_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.25272",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_update_appsdeadlineenabled_0",
+            "description": "Disabled",
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_update_appsdeadlineenabled_1",
+            "description": "Enabled",
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_update_configurealloweddeadlineprovidersforappupdates",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_update_configuredeadlineforappupdates",
+                    "required": true
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_update_configuredeadlinegraceperiodforappupdates",
+                    "required": false
+                },
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_update_configuredeadlinenoautorebootforappupdates",
+                    "required": false
+                }
+            ]
+        }
+    ]
+}

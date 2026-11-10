@@ -41,6 +41,7 @@
         "com.apple.extensiblesso_platformsso_filevaultpolicy",
         "com.apple.extensiblesso_platformsso_loginpolicy",
         "com.apple.extensiblesso_platformsso_unlockpolicy",
+        "com.apple.extensiblesso_platformsso_alwaysuseloginui",
         "com.apple.extensiblesso_platformsso_offlinegraceperiod",
         "com.apple.extensiblesso_platformsso_authenticationgraceperiod",
         "com.apple.extensiblesso_platformsso_nonplatformssoaccounts",
@@ -49,7 +50,8 @@
         "com.apple.extensiblesso_platformsso_temporarysessionquicklogin",
         "com.apple.extensiblesso_platformsso_enableregistrationduringsetup",
         "com.apple.extensiblesso_platformsso_webloginurlallowlist",
-        "com.apple.extensiblesso_platformsso_allowwebloginpasswordsync"
+        "com.apple.extensiblesso_platformsso_allowwebloginpasswordsync",
+        "com.apple.extensiblesso_platformsso_additionalhttpheaders"
     ],
     "maximumCount": 1,
     "minimumCount": 0,
@@ -152,6 +154,10 @@
             "required": false
         },
         {
+            "dependedOnBy": "com.apple.extensiblesso_platformsso_alwaysuseloginui",
+            "required": false
+        },
+        {
             "dependedOnBy": "com.apple.extensiblesso_platformsso_offlinegraceperiod",
             "required": false
         },
@@ -185,6 +191,10 @@
         },
         {
             "dependedOnBy": "com.apple.extensiblesso_platformsso_allowwebloginpasswordsync",
+            "required": false
+        },
+        {
+            "dependedOnBy": "com.apple.extensiblesso_platformsso_additionalhttpheaders",
             "required": false
         }
     ]

@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Source Id",
+        "App Update"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/AppUpdate-csp/"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/AppUpdate",
+    "offsetUri": "/Apps/{0}/SourceId",
+    "rootDefinitionId": "device_vendor_msft_appupdate_apps_{appid}",
+    "categoryId": "f62a9ae3-5ad4-4a12-867f-e3b4acfe920a",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_appupdate_apps_{appid}_sourceid",
+    "description": "GUID referencing an app update source, with or without braces. An invalid or unavailable explicit binding blocks the affected content without fallback to another source.\r\n This setting is only available to Windows Insiders",
+    "helpText": "",
+    "name": "SourceId",
+    "displayName": "Source Id (Windows Insiders only)",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.25272",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "regEx",
+        "inputValidationSchema": "^([0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}|\\{[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}\\})$",
+        "maximumLength": 87516,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "device_vendor_msft_appupdate_apps_{appid}",
+            "parentSettingId": "device_vendor_msft_appupdate_apps_{appid}"
+        }
+    ],
+    "dependedOnBy": []
+}

@@ -1,0 +1,62 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#defaultlocalfontssetting"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "DefaultLocalFontsSetting",
+    "rootDefinitionId": "com.apple.managedclient.preferences_defaultlocalfontssetting",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_defaultlocalfontssetting",
+    "description": "Setting this policy controls the default behavior for the local fonts permission.\n\nIf you set the policy to BlockLocalFonts (value 2), access to local fonts is denied by default. Sites are prevented from accessing information about local fonts.\n\nIf you set the policy to AskLocalFonts (value 3), users are prompted when a site requests access to local fonts. If permission is granted, the site can access information about local fonts.\n\nIf a site is included in \"LocalFontsAllowedForUrls\" or \"LocalFontsBlockedForUrls\", then that setting overrides the value set for this policy.\n\nIf you don't configure this policy, users are prompted by default and can change this setting.\n\nPolicy options mapping:\n\n* BlockLocalFonts (2) = Denies the Local Fonts permission on all sites by default\n\n* AskLocalFonts (3) = Ask every time a site wants to obtain the Local Fonts permission\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "DefaultLocalFontsSetting",
+    "displayName": "Default Local Fonts permission setting",
+    "defaultOptionId": "com.apple.managedclient.preferences_defaultlocalfontssetting_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultlocalfontssetting_0",
+            "description": null,
+            "helpText": null,
+            "name": "Denies the Local Fonts permission on all sites by default",
+            "displayName": "Denies the Local Fonts permission on all sites by default",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultlocalfontssetting_1",
+            "description": null,
+            "helpText": null,
+            "name": "Ask every time a site wants to obtain the Local Fonts permission",
+            "displayName": "Ask every time a site wants to obtain the Local Fonts permission",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

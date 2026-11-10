@@ -1,0 +1,62 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#forceforegroundpriorityforalltabs"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "ForceForegroundPriorityForAllTabs",
+    "rootDefinitionId": "com.apple.managedclient.preferences_forceforegroundpriorityforalltabs",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_forceforegroundpriorityforalltabs",
+    "description": "This policy controls whether background web content runs at foreground priority.\n\nBy default, the browser optimizes resource usage by lowering the scheduling\npriority of content in background tabs. This helps improve overall system\nresponsiveness and performance for the active tab.\n\nIf you enable this policy, background web content runs at the same foreground\npriority as the active tab, regardless of visibility state.\n\nIf you disable or don't configure this policy, the browser determines the\npriority of web content based on standard heuristics. For example, content\nthat is not visible, not playing audio, and not participating in video calls\nmay be deprioritized.",
+    "helpText": null,
+    "name": "ForceForegroundPriorityForAllTabs",
+    "displayName": "Force foreground priority for all tabs",
+    "defaultOptionId": "com.apple.managedclient.preferences_forceforegroundpriorityforalltabs_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_forceforegroundpriorityforalltabs_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_forceforegroundpriorityforalltabs_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

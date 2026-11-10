@@ -1,0 +1,49 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#idledetectionallowedforurls"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "IdleDetectionAllowedForUrls",
+    "rootDefinitionId": "com.apple.managedclient.preferences_idledetectionallowedforurls",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_idledetectionallowedforurls",
+    "description": "Allows you to specify a list of URL patterns for sites that are allowed to use the Idle Detection API.\n\nIf you don't configure this policy, the default behavior applies to all sites. The default behavior is determined by the DefaultIdleDetectionSetting policy, if configured, or by the user’s personal settings otherwise.\n\nOnly the origin of the URL is evaluated. Any path specified in a URL pattern is ignored. Wildcards, *, are supported. For detailed information about valid URL pattern formats, see https://go.microsoft.com/fwlink/?linkid=209532.\n\nURL patterns specified in the blocklist take precedence over this allowlist. This allowlist takes precedence over the DefaultIdleDetectionSetting policy.",
+    "helpText": null,
+    "name": "IdleDetectionAllowedForUrls",
+    "displayName": "Allow idle detection on these sites",
+    "maximumCount": 600,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

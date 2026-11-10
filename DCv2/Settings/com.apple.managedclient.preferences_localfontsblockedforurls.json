@@ -1,0 +1,49 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#localfontsblockedforurls"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "LocalFontsBlockedForUrls",
+    "rootDefinitionId": "com.apple.managedclient.preferences_localfontsblockedforurls",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_localfontsblockedforurls",
+    "description": "Specifies a list of site URL patterns for which the local fonts permission is automatically denied. Sites in this list are prevented from accessing information about local fonts.\n\nFor detailed information about valid URL patterns, see https://go.microsoft.com/fwlink/?linkid=2095322. Wildcards, *, are supported. This policy matches based on origin only; any path in the URL pattern is ignored.\n\nIf a site isn't included in this policy, the \"DefaultLocalFontsSetting\" policy applies if configured. Otherwise, the browser default behavior applies, and users can choose the permission on a per-site basis.",
+    "helpText": null,
+    "name": "LocalFontsBlockedForUrls",
+    "displayName": "Block Local Fonts permission on these sites",
+    "maximumCount": 600,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

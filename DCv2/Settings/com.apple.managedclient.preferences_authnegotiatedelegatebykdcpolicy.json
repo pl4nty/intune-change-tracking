@@ -1,0 +1,62 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#authnegotiatedelegatebykdcpolicy"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "AuthNegotiateDelegateByKdcPolicy",
+    "rootDefinitionId": "com.apple.managedclient.preferences_authnegotiatedelegatebykdcpolicy",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_authnegotiatedelegatebykdcpolicy",
+    "description": "If you enable this policy, HTTP authentication honors approval from the Key Distribution Center (KDC). Microsoft Edge delegates user credentials to the requested service only when the KDC sets the OK-AS-DELEGATE flag on the service ticket, as defined in RFC 5896 (https://tools.ietf.org/html/rfc5896.html). The service must also be included in the AuthNegotiateDelegateAllowlist policy.\n\nIf you disable or don't configure this policy, Microsoft Edge ignores approval from the Key Distribution Center (KDC) on supported platforms and delegates credentials only to services specified in AuthNegotiateDelegateAllowlist.",
+    "helpText": null,
+    "name": "AuthNegotiateDelegateByKdcPolicy",
+    "displayName": "Use KDC policy to delegate credentials.",
+    "defaultOptionId": "com.apple.managedclient.preferences_authnegotiatedelegatebykdcpolicy_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_authnegotiatedelegatebykdcpolicy_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_authnegotiatedelegatebykdcpolicy_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

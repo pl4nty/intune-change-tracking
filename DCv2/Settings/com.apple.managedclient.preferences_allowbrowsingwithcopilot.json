@@ -1,0 +1,62 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#allowbrowsingwithcopilot"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "AllowBrowsingWithCopilot",
+    "rootDefinitionId": "com.apple.managedclient.preferences_allowbrowsingwithcopilot",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_allowbrowsingwithcopilot",
+    "description": "When browsing with Copilot is enabled, users can explicitly invoke it for a query. It isn't invoked automatically.\n\nBrowsing with Copilot is available only on domains specified in the \"BrowsingWithCopilotAllowList\" policy and is blocked on domains specified in the \"BrowsingWithCopilotBlockList\" policy. If no domains are configured in the allow list, browsing with Copilot is effectively disabled.\n\nThis feature is available only to users with an active Microsoft 365 Copilot subscription.\n\nFor more information about configuring browsing with Copilot, see https://go.microsoft.com/fwlink/?LinkId=2341535.\n\nIf you enable this policy, browsing with Copilot is turned on for all users who receive the policy, and users can't turn it off.\n\nIf you disable this policy, browsing with Copilot is turned off for all users who receive the policy, and users can't turn it on.\n\nIf you don't configure this policy, browsing with Copilot is off by default, and users can turn it on.",
+    "helpText": null,
+    "name": "AllowBrowsingWithCopilot",
+    "displayName": "Controls the availability of browsing with Copilot in Microsoft Edge.",
+    "defaultOptionId": "com.apple.managedclient.preferences_allowbrowsingwithcopilot_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_allowbrowsingwithcopilot_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "Blocked",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_allowbrowsingwithcopilot_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "Allowed",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

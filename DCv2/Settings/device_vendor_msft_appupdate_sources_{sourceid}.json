@@ -1,0 +1,94 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "add,delete,get",
+    "keywords": [
+        " Source Id",
+        "App Update"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/AppUpdate",
+    "offsetUri": "/Sources/{0}",
+    "rootDefinitionId": "device_vendor_msft_appupdate_sources_{sourceid}",
+    "categoryId": "f62a9ae3-5ad4-4a12-867f-e3b4acfe920a",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_appupdate_sources_{sourceid}",
+    "description": "App update source GUID.\r\n This setting is only available to Windows Insiders",
+    "helpText": "",
+    "name": "{SourceId}",
+    "displayName": " Source Id (Windows Insiders only)",
+    "childIds": [
+        "device_vendor_msft_appupdate_sources_{sourceid}_sourceid",
+        "device_vendor_msft_appupdate_sources_{sourceid}_sourcecatalogid",
+        "device_vendor_msft_appupdate_sources_{sourceid}_sourceuri",
+        "device_vendor_msft_appupdate_sources_{sourceid}_sourcehandler",
+        "device_vendor_msft_appupdate_sources_{sourceid}_sourcetype",
+        "device_vendor_msft_appupdate_sources_{sourceid}_sourcetrustlevel",
+        "device_vendor_msft_appupdate_sources_{sourceid}_acceptsourceagreements"
+    ],
+    "maximumCount": 100,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.25272",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 100
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "device_vendor_msft_appupdate_sources_{sourceid}_sourceid",
+            "required": false
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_appupdate_sources_{sourceid}_sourcecatalogid",
+            "required": false
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_appupdate_sources_{sourceid}_sourceuri",
+            "required": false
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_appupdate_sources_{sourceid}_sourcehandler",
+            "required": false
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_appupdate_sources_{sourceid}_sourcetype",
+            "required": false
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_appupdate_sources_{sourceid}_sourcetrustlevel",
+            "required": false
+        },
+        {
+            "dependedOnBy": "device_vendor_msft_appupdate_sources_{sourceid}_acceptsourceagreements",
+            "required": false
+        }
+    ]
+}

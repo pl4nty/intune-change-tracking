@@ -1,0 +1,62 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#localnetworkaccesspermissionspolicydefaultenabled"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "LocalNetworkAccessPermissionsPolicyDefaultEnabled",
+    "rootDefinitionId": "com.apple.managedclient.preferences_localnetworkaccesspermissionspolicydefaultenabled",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_localnetworkaccesspermissionspolicydefaultenabled",
+    "description": "Controls whether Local Network Access (LNA) permissions are inherited by cross-origin subframes.\n\nBy default, Local Network Access permissions can be requested in cross-origin subframes only if they are explicitly delegated.\n\nIf you enable this policy, subframes inherit all LNA Permissions Policy features by default and can make local network requests, which trigger the permission prompt.\n\nIf you disable or don't configure this policy, subframes must be explicitly delegated the Permissions Policy feature to make local network requests and trigger the permission prompt.\n\nThis policy applies to the Permissions Policy features \"local-network-access\", \"loopback-network\", and \"local-network\".\n\nFor more information about Local Network Access, see https://learn.microsoft.com/deployedge/ms-edge-local-network-access.",
+    "helpText": null,
+    "name": "LocalNetworkAccessPermissionsPolicyDefaultEnabled",
+    "displayName": "Allow Local Network Access (LNA) requests in subframes without explicit delegation",
+    "defaultOptionId": "com.apple.managedclient.preferences_localnetworkaccesspermissionspolicydefaultenabled_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_localnetworkaccesspermissionspolicydefaultenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_localnetworkaccesspermissionspolicydefaultenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

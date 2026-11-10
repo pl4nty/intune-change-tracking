@@ -1,0 +1,50 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Extensible SSO"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "PlatformSSO/AdditionalHTTPHeaders",
+    "rootDefinitionId": "extsso_extensiblesso",
+    "categoryId": "63ce76b9-0ac3-4561-9ca4-ad87a08322d7",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "extsso_platformsso_additionalhttpheaders_generickey_keytobereplaced",
+    "description": "A dictionary with keys and values that are strings. The keys are HTTP header names, and the values are HTTP header values. The device adds these headers to nonce, pre-authentication, login, key and key exchange requests for Platform SSO. The device limits the number of headers to 20, the length of the header name to 128 characters, and the length of the header value to 2048 characters.",
+    "helpText": null,
+    "name": "PlatformSSO_AdditionalHTTPHeaders",
+    "displayName": "Additional HTTP Headers",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "regEx",
+        "inputValidationSchema": "^.*",
+        "maximumLength": 128,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "extsso_platformsso_additionalhttpheaders",
+            "parentSettingId": "extsso_platformsso_additionalhttpheaders"
+        }
+    ],
+    "dependedOnBy": []
+}

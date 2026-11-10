@@ -1,0 +1,75 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Source Type",
+        "App Update"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/AppUpdate-csp/"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/AppUpdate",
+    "offsetUri": "/Sources/{0}/SourceType",
+    "rootDefinitionId": "device_vendor_msft_appupdate_sources_{sourceid}",
+    "categoryId": "f62a9ae3-5ad4-4a12-867f-e3b4acfe920a",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_appupdate_sources_{sourceid}_sourcetype",
+    "description": "Protocol used to communicate with the source.\r\n This setting is only available to Windows Insiders",
+    "helpText": "",
+    "name": "SourceType",
+    "displayName": "Source Type (Windows Insiders only)",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.25272",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 87516,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": null
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "device_vendor_msft_appupdate_sources_{sourceid}",
+            "parentSettingId": "device_vendor_msft_appupdate_sources_{sourceid}"
+        }
+    ],
+    "dependedOnBy": []
+}

@@ -1,0 +1,95 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Automatic Update Enabled",
+        "App Update"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/AppUpdate-csp/"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/AppUpdate",
+    "offsetUri": "/Apps/{0}/AutomaticUpdateEnabled",
+    "rootDefinitionId": "device_vendor_msft_appupdate_apps_{appid}",
+    "categoryId": "f62a9ae3-5ad4-4a12-867f-e3b4acfe920a",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_appupdate_apps_{appid}_automaticupdateenabled",
+    "description": "Per-app update override: 0 disables updates and 1 opts in unless globally disabled. Absence follows the global opt-in or opt-out mode.\r\n This setting is only available to Windows Insiders",
+    "helpText": "",
+    "name": "AutomaticUpdateEnabled",
+    "displayName": "Automatic Update Enabled (Windows Insiders only)",
+    "defaultOptionId": null,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.25272",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_appupdate_apps_{appid}_automaticupdateenabled_0",
+            "description": "Disable downloads for this app.",
+            "helpText": null,
+            "name": "Disable downloads for this app.",
+            "displayName": "Disable downloads for this app.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_appupdate_apps_{appid}",
+                    "parentSettingId": "device_vendor_msft_appupdate_apps_{appid}"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_appupdate_apps_{appid}_automaticupdateenabled_1",
+            "description": "Enable downloads for this app unless global scanning is disabled.",
+            "helpText": null,
+            "name": "Enable downloads for this app unless global scanning is disabled.",
+            "displayName": "Enable downloads for this app unless global scanning is disabled.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_appupdate_apps_{appid}",
+                    "parentSettingId": "device_vendor_msft_appupdate_apps_{appid}"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

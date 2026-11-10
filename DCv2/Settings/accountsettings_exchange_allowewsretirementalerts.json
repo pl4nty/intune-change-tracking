@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Account Settings"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "Exchange/AllowEWSRetirementAlerts",
+    "rootDefinitionId": "accountsettings_accountsettings",
+    "categoryId": "36cf25aa-9cf2-4cbe-beb9-e1f00d06c804",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "accountsettings_exchange_allowewsretirementalerts",
+    "description": "If `false`, the system doesn't alert the user that an Exchange account has lost, or is about to lose, access because Microsoft is ending support for Exchange Web Services. Only applies to Exchange accounts installed by an organization.",
+    "helpText": null,
+    "name": "Exchange_AllowEWSRetirementAlerts",
+    "displayName": "Allow EWS Retirement Alerts",
+    "defaultOptionId": "accountsettings_exchange_allowewsretirementalerts_true",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "accountsettings_exchange_allowewsretirementalerts_false",
+            "description": null,
+            "helpText": null,
+            "name": "Blocked",
+            "displayName": "Blocked",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "accountsettings_exchange",
+                    "parentSettingId": "accountsettings_exchange"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "accountsettings_exchange_allowewsretirementalerts_true",
+            "description": null,
+            "helpText": null,
+            "name": "Allowed",
+            "displayName": "Allowed",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "accountsettings_exchange",
+                    "parentSettingId": "accountsettings_exchange"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

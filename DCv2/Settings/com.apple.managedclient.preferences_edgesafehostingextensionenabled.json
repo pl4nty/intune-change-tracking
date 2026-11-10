@@ -1,0 +1,62 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgesafehostingextensionenabled"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "EdgeSafeHostingExtensionEnabled",
+    "rootDefinitionId": "com.apple.managedclient.preferences_edgesafehostingextensionenabled",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_edgesafehostingextensionenabled",
+    "description": "This policy controls whether the Microsoft Edge Safe Hosting component extension is installed automatically when users visit supported Microsoft services, such as Microsoft 365 Copilot app.\n\nThe Microsoft Edge Safe Hosting extension provides additional security capabilities for these services. When a user accesses a supported service, the extension installs automatically to enable those protections.\n\nIf you enable or don't configure this policy, the extension installs automatically and remains installed for 90 days after the user's last visit, then is removed if no further activity occurs.\n\nIf you disable this policy, the extension won't install automatically. If it’s already installed, it will be removed.\n\nNote: This policy controls only automatic installation. It doesn’t prevent users from manually installing other extensions from the Microsoft Edge Add-ons website.",
+    "helpText": null,
+    "name": "EdgeSafeHostingExtensionEnabled",
+    "displayName": "Control Microsoft Edge Safe Hosting Extension",
+    "defaultOptionId": "com.apple.managedclient.preferences_edgesafehostingextensionenabled_false",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_edgesafehostingextensionenabled_false",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "false"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_edgesafehostingextensionenabled_true",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "true"
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

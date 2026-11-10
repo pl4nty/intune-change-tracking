@@ -1,0 +1,49 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#localnetworkaccessipaddressspaceoverrides"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "LocalNetworkAccessIpAddressSpaceOverrides",
+    "rootDefinitionId": "com.apple.managedclient.preferences_localnetworkaccessipaddressspaceoverrides",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_localnetworkaccessipaddressspaceoverrides",
+    "description": "Specifies IP address space overrides for Local Network Access restrictions. This policy allows administrators to treat specific IP address ranges as public (exempt from Local Network Access restrictions) or as local (subject to Local Network Access restrictions).\n\nIP address space overrides can be specified using one of the following formats:\n\n• [cidr]=[public|local|loopback]\nwhere [cidr] is an IP address range in CIDR notation. CIDR overrides apply to all ports.\n\n• [ip-address]:[port]=[public|local|loopback]\n\nIPv6 addresses must be specified in URL-safe (bracketed) format.\n\nFor more information about Local Network Access, see https://wicg.github.io/local-network-access/.\n\nThis policy does not support dynamic refresh. Changes take effect only after browser restart.\n\nOverrides from the command-line switch --ip-address-space-overrides take precedence over overrides set by this policy.",
+    "helpText": null,
+    "name": "LocalNetworkAccessIpAddressSpaceOverrides",
+    "displayName": "Override IP address space mappings",
+    "maximumCount": 600,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

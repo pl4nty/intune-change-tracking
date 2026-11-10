@@ -1,0 +1,70 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Configure Deadline Grace Period For App Updates",
+        "Update",
+        "Windows Update For Business",
+        "Windows update client policy"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Update#configuredeadlinegraceperiodforappupdates"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Update/ConfigureDeadlineGracePeriodForAppUpdates",
+    "rootDefinitionId": "device_vendor_msft_policy_config_update_appsdeadlineenabled",
+    "categoryId": "0e6c9053-73d6-4c56-9147-53513f6eefd8",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_update_configuredeadlinegraceperiodforappupdates",
+    "description": "Minimum number of days from update installation until restarts occur automatically for app updates. This policy only takes effect when the respective provider ID has been specified in the Update/ConfigureAllowedDeadlineProvidersForAppUpdates policy and Update/ConfigureDeadlineForAppUpdates is configured. If the provider ID is specified in Update/ConfigureAllowedDeadlineProvidersForAppUpdates and Update/ConfigureDeadlineForAppUpdates is configured but this policy is not, then the default value of 5 days will take effect.\r\n This setting is only available to Windows Insiders",
+    "helpText": "",
+    "name": "ConfigureDeadlineGracePeriodForAppUpdates",
+    "displayName": "Configure Deadline Grace Period For App Updates (Windows Insiders only)",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.25272",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition",
+        "maximumValue": 7,
+        "minimumValue": 2
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+        "settingValueTemplateReference": null,
+        "value": 5
+    },
+    "dependentOn": [
+        {
+            "dependentOn": "device_vendor_msft_policy_config_update_appsdeadlineenabled_1",
+            "parentSettingId": "device_vendor_msft_policy_config_update_appsdeadlineenabled"
+        }
+    ],
+    "dependedOnBy": []
+}

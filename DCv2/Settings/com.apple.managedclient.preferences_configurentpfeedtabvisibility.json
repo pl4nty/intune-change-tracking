@@ -1,0 +1,76 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#configurentpfeedtabvisibility"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "ConfigureNTPFeedTabVisibility",
+    "rootDefinitionId": "com.apple.managedclient.preferences_configurentpfeedtabvisibility",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_configurentpfeedtabvisibility",
+    "description": "This policy configures whether the Discover or Work feed tabs are shown on the Copilot new tab page. By default, both Work and Discover tabs are enabled.\n\nIf you set this policy to 'EnableBothWorkDiscover' (0) or don't configure this policy, Microsoft Edge shows both the Work and Discover feed tabs on the Copilot new tab page.\n\nIf you set this policy to 'EnableOnlyWork' (1), Microsoft Edge shows only the Work feed tab on the Copilot new tab page.\n\nIf you set this policy to 'EnableOnlyDiscover' (2), Microsoft Edge shows only the Discover feed tab on the Copilot new tab page.\n\nPolicy options mapping:\n\n* EnableBothWorkDiscover (0) = Enable both Work and Discover tabs\n\n* EnableOnlyWork (1) = Enable only Work tab\n\n* EnableOnlyDiscover (2) = Enable only Discover tab\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "ConfigureNTPFeedTabVisibility",
+    "displayName": "Configure whether the Discover or Work feed tabs are shown on the Copilot new tab page.",
+    "defaultOptionId": "com.apple.managedclient.preferences_configurentpfeedtabvisibility_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_configurentpfeedtabvisibility_0",
+            "description": null,
+            "helpText": null,
+            "name": "Enable both Work and Discover tabs",
+            "displayName": "Enable both Work and Discover tabs",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_configurentpfeedtabvisibility_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enable only Work tab",
+            "displayName": "Enable only Work tab",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_configurentpfeedtabvisibility_2",
+            "description": null,
+            "helpText": null,
+            "name": "Enable only Discover tab",
+            "displayName": "Enable only Discover tab",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

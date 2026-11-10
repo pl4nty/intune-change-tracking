@@ -1,0 +1,51 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Extensible SSO"
+    ],
+    "infoUrls": [],
+    "occurrence": null,
+    "baseUri": "",
+    "offsetUri": "PlatformSSO/AdditionalHTTPHeaders",
+    "rootDefinitionId": "extsso_extensiblesso",
+    "categoryId": "63ce76b9-0ac3-4561-9ca4-ad87a08322d7",
+    "settingUsage": "configuration",
+    "uxBehavior": "contextPane",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "extsso_platformsso_additionalhttpheaders",
+    "description": "A dictionary with keys and values that are strings. The keys are HTTP header names, and the values are HTTP header values. The device adds these headers to nonce, pre-authentication, login, key and key exchange requests for Platform SSO. The device limits the number of headers to 20, the length of the header name to 128 characters, and the length of the header value to 2048 characters.",
+    "helpText": null,
+    "name": "PlatformSSO_AdditionalHTTPHeaders",
+    "displayName": "Additional HTTP Headers",
+    "childIds": [
+        "extsso_platformsso_additionalhttpheaders_generickey",
+        "extsso_platformsso_additionalhttpheaders_generickey_keytobereplaced"
+    ],
+    "maximumCount": 20,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "dependentOn": [
+        {
+            "dependentOn": "extsso_platformsso",
+            "parentSettingId": "extsso_platformsso"
+        }
+    ],
+    "dependedOnBy": [
+        {
+            "dependedOnBy": "extsso_platformsso_additionalhttpheaders_generickey",
+            "required": false
+        },
+        {
+            "dependedOnBy": "extsso_platformsso_additionalhttpheaders_generickey_keytobereplaced",
+            "required": true
+        }
+    ]
+}

@@ -1,0 +1,76 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#defaultidledetectionsetting"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "DefaultIdleDetectionSetting",
+    "rootDefinitionId": "com.apple.managedclient.preferences_defaultidledetectionsetting",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_defaultidledetectionsetting",
+    "description": "Setting this policy to 1 - AllowIdleDetection allows websites to use the Idle Detection API without requesting user permission.\n\nSetting this policy to 2 - BlockIdleDetection prevents websites from using the Idle Detection API.\n\nSetting this policy to 3 - AskIdleDetection requires websites to request user permission each time before using the Idle Detection API.\n\nIf you do not configure this policy, users can decide whether to allow the Idle Detection API and can change this setting themselves.\n\nPolicy options mapping:\n\n* AllowIdleDetection (1) = Allow sites to detect idle state without asking the user\n\n* BlockIdleDetection (2) = Do not allow any site to detect the user's idle state\n\n* AskIdleDetection (3) = Ask every time a site wants to detect the user's idle state\n\nUse the preceding information when configuring this policy.",
+    "helpText": null,
+    "name": "DefaultIdleDetectionSetting",
+    "displayName": "Default idle detection setting",
+    "defaultOptionId": "com.apple.managedclient.preferences_defaultidledetectionsetting_0",
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultidledetectionsetting_0",
+            "description": null,
+            "helpText": null,
+            "name": "Allow sites to detect idle state without asking the user",
+            "displayName": "Allow sites to detect idle state without asking the user",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultidledetectionsetting_1",
+            "description": null,
+            "helpText": null,
+            "name": "Do not allow any site to detect the user's idle state",
+            "displayName": "Do not allow any site to detect the user's idle state",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 2
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "com.apple.managedclient.preferences_defaultidledetectionsetting_2",
+            "description": null,
+            "helpText": null,
+            "name": "Ask every time a site wants to detect the user's idle state",
+            "displayName": "Ask every time a site wants to detect the user's idle state",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 3
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        }
+    ]
+}

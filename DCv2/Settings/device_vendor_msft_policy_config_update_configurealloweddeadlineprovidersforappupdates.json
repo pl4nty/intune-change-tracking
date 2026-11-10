@@ -1,0 +1,77 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingCollectionDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Configure Allowed Deadline Providers For App Updates",
+        "Update",
+        "Windows Update For Business",
+        "Windows update client policy"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/policy-csp-Update#configurealloweddeadlineprovidersforappupdates"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/Update/ConfigureAllowedDeadlineProvidersForAppUpdates",
+    "rootDefinitionId": "device_vendor_msft_policy_config_update_appsdeadlineenabled",
+    "categoryId": "0e6c9053-73d6-4c56-9147-53513f6eefd8",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_update_configurealloweddeadlineprovidersforappupdates",
+    "description": "Specifies the list of first-party providers for which the app updates policies will be applicable.\r\n This setting is only available to Windows Insiders",
+    "helpText": "",
+    "name": "ConfigureAllowedDeadlineProvidersForAppUpdates",
+    "displayName": "Configure Allowed Deadline Providers For App Updates (Windows Insiders only)",
+    "defaultOptionId": "device_vendor_msft_policy_config_update_configurealloweddeadlineprovidersforappupdates_microsoft.windows.update.automaticappupdater",
+    "maximumCount": 100,
+    "minimumCount": 0,
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "11.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.25272",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsEducation",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_update_configurealloweddeadlineprovidersforappupdates_microsoft.windows.update.automaticappupdater",
+            "description": "AutomaticAppUpdater",
+            "helpText": null,
+            "name": "AutomaticAppUpdater",
+            "displayName": "Automatic App Updater",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "Microsoft.Windows.Update.AutomaticAppUpdater"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_policy_config_update_appsdeadlineenabled_1",
+                    "parentSettingId": "device_vendor_msft_policy_config_update_appsdeadlineenabled"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

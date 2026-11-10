@@ -1,0 +1,49 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "Microsoft Edge"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/deployedge/microsoft-edge-policies#browsingwithcopilotallowlist"
+    ],
+    "occurrence": null,
+    "baseUri": "PayloadContent/com.microsoft.Edge/Forced/[0]/mcx_preference_settings",
+    "offsetUri": "BrowsingWithCopilotAllowList",
+    "rootDefinitionId": "com.apple.managedclient.preferences_browsingwithcopilotallowlist",
+    "categoryId": "9d14bbed-327d-4c38-ac02-6b916909bdd9",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "com.apple.managedclient.preferences_browsingwithcopilotallowlist",
+    "description": "Allows you to define a list of URLs where browsing with Copilot is available. Users cannot modify this list.\n\nIf you enable this policy, browsing with Copilot is available only on the sites specified in the list. To allow a broader set of sites while blocking specific exceptions, configure this policy together with the \"BrowsingWithCopilotBlockList\" policy. For example, you can include '*' to allow all sites, and then use the block list to restrict access to specific URLs.\n\nYou can define exceptions based on schemes, subdomains, ports, or origins. When multiple filters apply, the most specific match determines whether a URL is allowed or blocked. The block list takes precedence over the allow list.\n\nIf you disable or do not configure this policy, browsing with Copilot is unavailable on all sites, even if the \"AllowBrowsingWithCopilot\" policy is enabled.\n\nBrowsing with Copilot supports only HTTP and HTTPS protocols. Wildcards (*) are supported, and subdomains are matched even without wildcards. This policy applies only to the site origin; any path specified in the URL pattern is ignored. For guidance on formatting URL patterns, see https://go.microsoft.com/fwlink/?linkid=2095322.",
+    "helpText": null,
+    "name": "BrowsingWithCopilotAllowList",
+    "displayName": "Browsing with Copilot Allowed URLs",
+    "maximumCount": 600,
+    "minimumCount": 1,
+    "applicability": {
+        "description": null,
+        "platform": "macOS",
+        "deviceMode": "none",
+        "technologies": "mdm,appleRemoteManagement"
+    },
+    "referredSettingInformationList": [],
+    "valueDefinition": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition",
+        "format": "none",
+        "inputValidationSchema": null,
+        "maximumLength": 1032,
+        "minimumLength": 0,
+        "isSecret": false,
+        "fileTypes": []
+    },
+    "defaultValue": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+        "settingValueTemplateReference": null,
+        "value": ""
+    },
+    "dependentOn": [],
+    "dependedOnBy": []
+}

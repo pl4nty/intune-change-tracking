@@ -1,0 +1,95 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "add,delete,get,replace",
+    "keywords": [
+        "Ensure Version Compliance",
+        "App Update"
+    ],
+    "infoUrls": [
+        "https://docs.microsoft.com/windows/client-management/mdm/AppUpdate-csp/"
+    ],
+    "baseUri": "./Device/Vendor/MSFT/AppUpdate",
+    "offsetUri": "/Apps/{0}/EnsureVersionCompliance",
+    "rootDefinitionId": "device_vendor_msft_appupdate_apps_{appid}",
+    "categoryId": "f62a9ae3-5ad4-4a12-867f-e3b4acfe920a",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_appupdate_apps_{appid}_ensureversioncompliance",
+    "description": "When enabled with MinimumRequiredVersion, activate version compliance and bypass deferral only while the installed version is below the handler-native minimum. Equality satisfies the minimum, and selected targets must meet it. An incomplete pair does not activate compliance or alter ordinary update selection. Global disable, per-app disable and pause remain effective. Update CSP execution dispatch is separate and is not implemented here.\r\n This setting is only available to Windows Insiders",
+    "helpText": "",
+    "name": "EnsureVersionCompliance",
+    "displayName": "Ensure Version Compliance (Windows Insiders only)",
+    "defaultOptionId": "device_vendor_msft_appupdate_apps_{appid}_ensureversioncompliance_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "1.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": "10.0.25272",
+        "windowsSkus": [
+            "windowsEnterprise",
+            "windowsProfessional",
+            "windowsHome",
+            "windowsEducation",
+            "holographicForBusiness",
+            "windowsMultiSession",
+            "iotEnterprise",
+            "windowsCloudN",
+            "windows11SE",
+            "iotEnterpriseSEval",
+            "windowsCPC"
+        ],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 0,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_appupdate_apps_{appid}_ensureversioncompliance_0",
+            "description": "Do not request compliance evaluation.",
+            "helpText": null,
+            "name": "Do not request compliance evaluation.",
+            "displayName": "Do not request compliance evaluation.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_appupdate_apps_{appid}",
+                    "parentSettingId": "device_vendor_msft_appupdate_apps_{appid}"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_appupdate_apps_{appid}_ensureversioncompliance_1",
+            "description": "Request compliance evaluation.",
+            "helpText": null,
+            "name": "Request compliance evaluation.",
+            "displayName": "Request compliance evaluation.",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "device_vendor_msft_appupdate_apps_{appid}",
+                    "parentSettingId": "device_vendor_msft_appupdate_apps_{appid}"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}
