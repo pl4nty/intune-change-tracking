@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "AllHttpAuthSchemesAllowedForProxies",
+        "List of proxy servers that allow all HTTP authentication schemes",
+        "\\Microsoft Edge\\HTTP authentication",
+        "Both",
+        "Software\\Policies\\Microsoft\\Edge",
+        "HTTP authentication"
+    ],
+    "infoUrls": [],
+    "baseUri": "./Device/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edge~Policy~microsoft_edge~HTTPAuthentication/AllHttpAuthSchemesAllowedForProxies",
+    "rootDefinitionId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~httpauthentication_allhttpauthschemesallowedforproxies",
+    "categoryId": "d17b08e6-de3b-445b-ab14-1d47e62efdcf",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~httpauthentication_allhttpauthschemesallowedforproxies",
+    "description": "Set this policy to specify which proxy servers allow all the HTTP authentication schemes Microsoft Edge supports, regardless of the 'AuthSchemes' (Supported authentication schemes) policy.\n\nFormat the proxy server pattern according to the URL blocklist filter format (https://go.microsoft.com/fwlink/?linkid=2095322). Up to 1,000 exceptions can be defined. Invalid patterns are ignored.\nWildcards are allowed for the host component (for example, '*:8080' matches all proxies on port 8080). A hostname (for example, 'proxy.example.com') also matches its subdomains. To match a host exactly and exclude its subdomains, prepend it with a dot (for example, '.proxy.example.com').\n\nIf you configure this policy with an empty list, no exceptions apply to proxy authentication.\n\nIf you don't configure this policy, in versions earlier than 161, exceptions in 'AllHttpAuthSchemesAllowedForOrigins' (List of origins that allow all HTTP authentication) also apply to proxy authentication. Starting in version 161, those exceptions don't apply to proxy authentication.\n\nFor proxy servers that match an applicable exception, all supported HTTP authentication schemes are allowed. For proxy servers that don't match an applicable exception, only the schemes specified in 'AuthSchemes' are supported. If that policy isn't configured, the default schemes are supported instead.\n\nExample value:\n\nhttps://proxy.example.com:8443\nproxy.example.com:8080\n*.corp.example.com:8080",
+    "helpText": "",
+    "name": "AllHttpAuthSchemesAllowedForProxies",
+    "displayName": "List of proxy servers that allow all HTTP authentication schemes",
+    "defaultOptionId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~httpauthentication_allhttpauthschemesallowedforproxies_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~httpauthentication_allhttpauthschemesallowedforproxies_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~httpauthentication_allhttpauthschemesallowedforproxies_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "device_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge~httpauthentication_allhttpauthschemesallowedforproxies_allhttpauthschemesallowedforproxiesdesc",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

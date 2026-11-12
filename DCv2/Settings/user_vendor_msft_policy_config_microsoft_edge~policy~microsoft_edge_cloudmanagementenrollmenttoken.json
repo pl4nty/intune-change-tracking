@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "CloudManagementEnrollmentToken",
+        "The enrollment token of cloud policy",
+        "\\Microsoft Edge",
+        "Both",
+        "Software\\Policies\\Microsoft\\Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edge~Policy~microsoft_edge/CloudManagementEnrollmentToken",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_cloudmanagementenrollmenttoken",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_cloudmanagementenrollmenttoken",
+    "description": "This policy lets you specify the enrollment token that Microsoft Edge uses to register with the Microsoft Edge management service and download the policies associated with that enrollment.\n\nMicrosoft Edge management service in the Microsoft 365 admin center provides a cloud-based management experience for configuring and deploying Microsoft Edge policies to managed users and devices.\n\nIf you enable this policy, Microsoft Edge attempts to use the specified enrollment token to register with the Microsoft Edge management service and download the published policies. The registration is performed for the device, so the downloaded policies apply to the browser without requiring a user to sign in.\n\nIf you disable or don't configure this policy, Microsoft Edge doesn't register with the Microsoft Edge management service. This prevents new registrations only. Browsers that already registered stay enrolled and continue to download policies, because the credential issued during registration takes precedence over the enrollment token.\n\nTo stop managing a browser that's already enrolled, remove or reset its device record in the Microsoft Edge management service. If the device record is removed, the browser stops downloading policies and doesn't register again on its own. If the device record is reset, the browser registers again the next time it starts, as long as this policy is still set to a valid enrollment token.\n\nChanges to this policy take effect only after Microsoft Edge is restarted.\n\nThis policy can only be set as a platform policy.\n\nExample value: AQIDBAUGBwgJCgsMDQ4PEBESExQVFhcYGRobHB0eHyAh",
+    "helpText": "",
+    "name": "CloudManagementEnrollmentToken",
+    "displayName": "The enrollment token of cloud policy (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_cloudmanagementenrollmenttoken_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_cloudmanagementenrollmenttoken_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_cloudmanagementenrollmenttoken_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_cloudmanagementenrollmenttoken_cloudmanagementenrollmenttoken",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}

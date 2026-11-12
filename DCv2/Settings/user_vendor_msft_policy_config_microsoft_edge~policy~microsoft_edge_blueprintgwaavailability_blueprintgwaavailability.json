@@ -1,0 +1,83 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "BlueprintGWAAvailability",
+        "Control Blueprint GWA availability",
+        "\\Microsoft Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edge~Policy~microsoft_edge/BlueprintGWAAvailability",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_blueprintgwaavailability",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "default",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_blueprintgwaavailability_blueprintgwaavailability",
+    "description": "",
+    "helpText": "",
+    "name": "BlueprintGWAAvailability",
+    "displayName": "Control Blueprint GWA availability (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_blueprintgwaavailability_blueprintgwaavailability_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_blueprintgwaavailability_blueprintgwaavailability_0",
+            "description": null,
+            "helpText": null,
+            "name": "GenerateWebApp (GWA) is unavailable",
+            "displayName": "GenerateWebApp (GWA) is unavailable",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "0"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_blueprintgwaavailability_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_blueprintgwaavailability"
+                }
+            ],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_blueprintgwaavailability_blueprintgwaavailability_1",
+            "description": null,
+            "helpText": null,
+            "name": "GenerateWebApp (GWA) is available for eligible users",
+            "displayName": "GenerateWebApp (GWA) is available for eligible users",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
+                "settingValueTemplateReference": null,
+                "value": "1"
+            },
+            "dependentOn": [
+                {
+                    "dependentOn": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_blueprintgwaavailability_1",
+                    "parentSettingId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_blueprintgwaavailability"
+                }
+            ],
+            "dependedOnBy": []
+        }
+    ]
+}

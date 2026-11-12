@@ -1,0 +1,80 @@
+{
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition",
+    "accessTypes": "none",
+    "keywords": [
+        "BlueprintGWAAvailability",
+        "Control Blueprint GWA availability",
+        "\\Microsoft Edge",
+        "Both",
+        "Software\\Policies\\Microsoft\\Edge",
+        "Microsoft Edge"
+    ],
+    "infoUrls": [],
+    "baseUri": "./User/Vendor/MSFT/Policy",
+    "offsetUri": "/Config/microsoft_edge~Policy~microsoft_edge/BlueprintGWAAvailability",
+    "rootDefinitionId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_blueprintgwaavailability",
+    "categoryId": "a25a7a02-4bac-411b-9d02-10cb3297cb17",
+    "settingUsage": "configuration",
+    "uxBehavior": "toggle",
+    "visibility": "settingsCatalog,template",
+    "riskLevel": "low",
+    "id": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_blueprintgwaavailability",
+    "description": "This policy controls whether users can send tab content to Copilot to create apps with GenerateWebApp (GWA) in Microsoft Edge.\n\nIf you set this policy to 0 ('Unavailable'), GWA entry points are hidden and users can't use this feature.\n\nIf you set this policy to 1 ('Available'), GWA is available when the feature is enabled and the user's profile is eligible.\n\nIf you don't configure this policy or set it to an unsupported value, GWA follows the Connected Feature Control (CFC) policies. It remains available when EdgeConnectedFeatureControl is unconfigured or set to Off (0), Basic (1), or Balanced (2). It is unavailable when EdgeConnectedFeatureControlStrict is enabled.\n\nA supported, explicitly configured value for this policy takes precedence over CFC for GWA. This policy doesn't override feature availability or sign-in requirements and doesn't control the Remix toolbar button.\n\n* 0 = GenerateWebApp (GWA) is unavailable\n\n* 1 = GenerateWebApp (GWA) is available for eligible users\n\nPolicy options mapping:\n\n* BlueprintGWAUnavailable (0) = GenerateWebApp (GWA) is unavailable\n\n* BlueprintGWAAvailable (1) = GenerateWebApp (GWA) is available for eligible users\n\nUse the preceding information when configuring this policy.",
+    "helpText": "",
+    "name": "BlueprintGWAAvailability",
+    "displayName": "Control Blueprint GWA availability (User)",
+    "defaultOptionId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_blueprintgwaavailability_0",
+    "applicability": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability",
+        "description": null,
+        "platform": "windows10",
+        "deviceMode": "none",
+        "technologies": "mdm",
+        "configurationServiceProviderVersion": "5.0",
+        "maximumSupportedVersion": null,
+        "minimumSupportedVersion": null,
+        "windowsSkus": [],
+        "requiresAzureAd": false,
+        "requiredAzureAdTrustType": "none"
+    },
+    "occurrence": {
+        "minDeviceOccurrence": 1,
+        "maxDeviceOccurrence": 1
+    },
+    "referredSettingInformationList": [],
+    "options": [
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_blueprintgwaavailability_0",
+            "description": null,
+            "helpText": null,
+            "name": "Disabled",
+            "displayName": "Disabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 0
+            },
+            "dependentOn": [],
+            "dependedOnBy": []
+        },
+        {
+            "itemId": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_blueprintgwaavailability_1",
+            "description": null,
+            "helpText": null,
+            "name": "Enabled",
+            "displayName": "Enabled",
+            "optionValue": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue",
+                "settingValueTemplateReference": null,
+                "value": 1
+            },
+            "dependentOn": [],
+            "dependedOnBy": [
+                {
+                    "dependedOnBy": "user_vendor_msft_policy_config_microsoft_edge~policy~microsoft_edge_blueprintgwaavailability_blueprintgwaavailability",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}
